@@ -6,7 +6,18 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import ImASlider from "../components/imASlider"
 
+
+
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+
+
+import shooluLogo from '../images/shoolu-logo.svg';
+import materialLogo from '../images/material-color-logo-text.svg';
+import bleedingLogo from '../images/BleedingCoffee-logo-white.svg';
+import harnerDesignsLogo from '../images/harner-designs-white.svg';
+
 
  
 const IndexPage = () => (
@@ -34,34 +45,25 @@ const IndexPage = () => (
         <header class="things__tabs">
           <div class="thing" data-target="#harnerdesigns-thing" style={{background: "#3e50b4"}}>
             <a href="https://harnerdesigns.com" target="_blank" rel="noopener" aria-label="Harner Designs">
-              <svg viewbox="0 0 300 200">
-							<image width="300" height="200"
-                  href="https://harnerdesigns.com/wp-content/themes/Harner-Designs/assets/svg/harner-designs-white.svg" />
-						</svg>
+							<img src={harnerDesignsLogo} />
             </a>
           </div>
           <div class="thing" data-target="#materialcolor-thing" style={{background: "#fff"}}>
             <a href="https://materialcolor.xyz" target="_blank" rel="noopener" aria-label="Material Color">
-              <svg viewbox="0 0 300 200">
-							<image width="300" height="200" href="img/material-color-logo-text.svg" />
-						</svg>
+              
+                <img src={materialLogo} />
             </a>
           </div>
           <div class="thing" data-target="#shoolu-thing" style={{background: "#0fb681"}}>
             <a href="https://shoolu.com" target="_blank" rel="noopener" aria-label="Shoolu">
-              <svg viewbox="0 0 300 200">
-							<image width="300" height="200" href="img/shoolu-logo.svg" />
-						</svg>
+              <img src={shooluLogo} />
             </a>
           </div>
 
 
           <div class="thing" data-target="#bleedingcoffee-thing" style={{background: "#4b2c20"}}>
             <a href="https://bleedingcoffee.com" target="_blank" rel="noopener" aria-label="Bleeding Coffee">
-              <svg viewbox="0 0 300 200">
-							<image width="300" height="200"
-                  href="https://bleedingcoffee.com/wp-content/uploads/2018/07/BleedingCoffee-logo-white.svg" />
-						</svg>
+              <img src={bleedingLogo} />
             </a>
           </div>
 
@@ -122,27 +124,28 @@ const IndexPage = () => (
       <h2>Let's Chat</h2>
       <section class="socials">
         <a target="_blank" rel="noopener" href="https://twitter.com/jackharner" class="twitter">
-          <i class="fab fa-twitter"></i>Twitter
+          <FontAwesomeIcon icon={["fab","twitter"]} />Twitter
 			</a>
         <a target="_blank" rel="noopener" href="https://instagram.com/jackharner" class="instagram">
-          <i class="fab fa-instagram"></i>Instagram
+          <FontAwesomeIcon icon={["fab", "instagram"]} />Instagram
 			</a>
         <a target="_blank" rel="noopener" href="https://dribbble.com/jackharner" class="dribbble">
-          <i class="fab fa-dribbble"></i>Dribbble
+          <FontAwesomeIcon icon={["fab", "dribbble"]} />Dribbble
 			</a>
         <a target="_blank" rel="noopener" href="https://dev.to/jackharner" class="devto">
-          <i class="fab fa-dev"></i>Dev.to
+          <FontAwesomeIcon icon={["fab", "dev"]} />Dev.to
 			</a>
         <a target="_blank" rel="noopener" href="https://github.com/harnerdesigns" class="github">
-          <i class="fab fa-github"></i>GitHub
+          <FontAwesomeIcon icon={["fab", "github"]} />GitHub
 			</a>
         <a target="_blank" rel="noopener" href="https://www.producthunt.com/@jackharner" class="producthunt">
-          <i class="fab fa-product-hunt"></i>Product Hunt
+          <FontAwesomeIcon icon={["fab", "product-hunt"]} />Product Hunt
 			</a>
       </section>
     </container>
 
-    <a href="#followMe" id="followMeBanner" aria-label="Click here for my social accounts."><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1920"
+    <a href="#followMe" id="followMeBanner" aria-label="Click here for my social accounts.">
+      <svg id="followMeSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1920"
       fill="#fff">
       <path
         d="M305.888 1234.03c-10.314 10.314-14.454 21.944-12.421 34.891 2.033 12.95 8.96 25.332 20.777 37.149l29.81 29.81c11.895 11.896 24.372 18.839 37.431 20.833 13.061 1.995 24.747-2.163 35.061-12.478 10.01-10.01 14.001-21.528 11.969-34.552-2.032-13.021-8.993-25.479-20.89-37.375l-29.809-29.81c-11.744-11.743-24.145-18.612-37.206-20.607-13.06-1.993-24.635 2.052-34.722 12.139z" />

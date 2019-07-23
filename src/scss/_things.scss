@@ -188,11 +188,12 @@ h3.tagline {
     }
 
 
-    svg {
+    img {
         height: auto;
 
         transition: all 300ms;
         width: 100%;
+        display: block;
 
         &:hover {
             transform: scale(1.05);
