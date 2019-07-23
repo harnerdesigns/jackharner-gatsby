@@ -1,0 +1,52 @@
+.banner {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row!important;
+    @include breakpoint(mobileonly) {
+        flex-direction: column!important;
+    }
+
+    img {
+        max-height: 100vh;
+        width: auto;
+    }
+
+    .half {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        max-height: 80vh;
+
+        @include breakpoint(mobileonly) {
+        	align-self:center;
+        	width:80%;
+        }
+    }
+
+    .productImages {
+        width: 80%;
+        overflow: hidden;
+        max-height: 90vh;
+        flex-direction: row;
+        flex-wrap: wrap;
+        img {
+            width: 50%;
+            margin-top: -5em;
+        }
+
+        @include breakpoint(mobileonly) {
+        	width:100%;
+
+            max-height: none;
+            flex-wrap: nowrap;
+
+            img {
+                margin-top: 0;
+            }
+        }
+    }
+}

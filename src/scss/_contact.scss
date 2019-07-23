@@ -1,0 +1,36 @@
+#contact{
+	margin:2em 0;
+	width:50%;
+	font-size:2rem;
+
+	&:last-child{
+
+		margin-bottom: 0;
+	}
+
+
+	@include breakpoint(mobileonly) {
+		width:100%;
+		font-size:1.5rem;
+	}
+}
+
+input, textarea{
+	width:100%;
+	background:rgba(255,255,255,0.1);
+	border:0;
+	border-bottom: 2px solid #fff;
+	color:#fff;
+	font-size:1em;
+	margin-bottom:1em;
+	font-family:"Roboto", sans-serif;
+	padding: 0.25em;
+
+	
+} 
+
+input[type=submit]{
+	background:$pink;
+	border-bottom:0;
+	cursor:pointer;
+}

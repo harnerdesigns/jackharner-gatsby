@@ -1,0 +1,187 @@
+@import "reset";
+@import "vars";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  font-size: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+
+  @include breakpoint(laptop) {
+    font-size: 8rem;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: "Permanent Marker";
+
+  @include breakpoint(laptop) {
+    font-size: 5rem;
+  }
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+
+  font-weight: 300;
+
+  @include breakpoint(laptop) {
+    font-size: 3.5rem;
+  }
+}
+
+b {
+  font-weight: 900;
+}
+
+#scrollIndicator {
+  position: absolute;
+  bottom: 1rem;
+  font-size: 1em;
+  animation: fadeIn 1s 3s, bounce 7s infinite ease-out;
+  animation-fill-mode: backwards;
+  @include breakpoint(laptop) {
+    font-size: 3em;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    margin-bottom: 0;
+  }
+  25% {
+    margin-bottom: 0.25em;
+  }
+
+  50% {
+    margin-bottom: 0;
+  }
+  75% {
+    margin-bottom: 0.75em;
+  }
+  100% {
+    margin-bottom: 0;
+  }
+}
+
+.full {
+  width: 100vw;
+  padding: 1em;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @include breakpoint(mobileonly) {
+    align-items: flex-start;
+  }
+
+  &.black {
+    color: #fff;
+    background: #000;
+  }
+
+  &.pink {
+    background: $pink;
+    color: #fff;
+  }
+
+  &.white {
+    background: #fff;
+    color: #000;
+  }
+}
+
+.half {
+  @extend .full;
+
+  min-height: 50vh;
+}
+
+.slim {
+  @extend .full;
+  min-height: 10vh;
+}
+
+.title__box {
+  border-bottom: 2px solid #fff;
+  min-height: 1em;
+  min-width: 1em;
+  display: inline-flex;
+  vertical-align: top;
+  //   padding: 0.5em;
+}
+
+.title {
+  padding: 0 0.25em;
+  display: block;
+  min-width: 1em;
+  min-height: 1em;
+  font-family: "Permanent Marker";
+  color: $pink;
+  text-shadow: 1px 0 1px #000, 0 1px 1px #000, 1px 1px 1px #000, 2px 0 1px #000, 0 2px 1px #000, 2px 2px 1px #000,
+    -1px 0 1px #000, 0 -1px 1px #000, -1px -1px 1px #000, -2px 0 1px #000, 0 -2px 1px #000, -2px -2px 1px #000;
+  line-height: 0.9em;
+}
+
+.introduction {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // opacity: 0;
+
+  @include breakpoint(laptop) {
+    width: 70%;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+  }
+}
+
+@import "components/components";
+
+@import "things";
+@import "contact";
+@import "hireMe";
+@import "banners";
