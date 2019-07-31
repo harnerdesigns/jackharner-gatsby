@@ -32,13 +32,13 @@ const IndexPage = () => (
       <FontAwesomeIcon icon="caret-down" id="scrollIndicator" /> 
     </container>
     <container class="full pink">
-      <h2 class="tagline">I Develop Websites & Graphics for Individuals & Businesses of All Sizes.</h2>
-      <h3 class="tagline">I work mostly with <a href="https://harnerdesigns.com/project/tag/wordpress/">WordPress</a>, but I love me some good 'ole fashion HTML/CSS.</h3>
-      <h3 class="tagline">Now and then, I write about <a href="https://harnerdesigns.com/blog">Web Design</a> & <a
-        href="https://bleedingcoffee.com">Coffee</a>.</h3>
-      <h3 class="tagline"><a href="https://harnerdesigns.com/contact/">Want to work with me?</a></h3>
+      <h2 class="tagline">I Make Websites.</h2>
+      <p class="tagline">I work mostly with <a href="https://harnerdesigns.com/project/tag/wordpress/">WordPress</a>, PHP, & React, but I love me some good 'ole fashion HTML/CSS.</p>
+      <p class="tagline">Now and then, I write about <a href="https://harnerdesigns.com/blog">Web Design</a> & <a
+        href="https://bleedingcoffee.com">Coffee</a>.</p>
 
     </container>
+    
     <container class="full white">
       <h2>Recent Projects</h2>
       <div class="things">
@@ -114,12 +114,13 @@ const IndexPage = () => (
         </section>
       </div>
     </container>
-    <container class="full black" id="favoriteFont">
-      <h2>My Favorite Font Is</h2>
-      <h1>ROBOTO</h1>
-      <h3>If You Couldn't Already Tell</h3>
-    </container>
 
+    <container class="full pink">
+
+      <h3 class="tagline"><a href="https://harnerdesigns.com/contact/">Want to work with me?</a></h3>
+
+
+    </container>
     <container class="full white" id="followMe">
       <h2>Let's Chat</h2>
       <section class="socials">

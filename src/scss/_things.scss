@@ -1,27 +1,22 @@
 .tagline {
 
-    a {
-        font-weight: bold;
-        text-decoration: none;
-        color: inherit;
-
-
-
-        &:hover {
-            opacity: 0.6;
-        }
-    }
-}
-
-
-.tagline {
-
     width: 100%;
-
 
     @include breakpoint(laptop) {
 
         width: 70%;
+    }
+
+
+
+     a {
+        font-weight: bold;
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+            opacity: 0.6;
+        }
     }
 }
 
@@ -30,9 +25,10 @@ h1.tagline {
 
 }
 
-h3.tagline {
+p.tagline {
     text-align: left;
     margin-bottom: 0.5em;
+    font-size: 2em;
 
 }
 
@@ -90,7 +86,6 @@ h3.tagline {
 
     }
 
-    // font-size: 1.5em;
 
     & * {
         z-index: 3;
@@ -111,13 +106,11 @@ h3.tagline {
         }
 
         p {
-            font-size: 1em;
             line-height: 1.5em;
             margin-bottom: 0.5em;
 
             @include breakpoint(laptop) {
 
-                font-size: 1.5em;
             }
         }
 
@@ -275,44 +268,3 @@ $tabHeight: 7vw;
 }
 
 
-#favoriteFont {
-
-    h1,
-    h2,
-    h3 {
-        margin: 0;
-    }
-
-    h1 {
-        font-size: 12em;
-        font-weight: 900;
-    }
-
-    h2 {
-        font-family: "Permanent Marker";
-        font-size: 4em;
-
-    }
-
-    h3 {
-        font-size: 2em;
-        font-style: italic;
-        font-family: "Permanent Marker"
-    }
-
-    @include breakpoint(mobileonly) {
-        text-align: center;
-
-        h1 {
-            font-size: 5em;
-        }
-
-        h2 {
-            font-size: 1em;
-        }
-
-        h3 {
-            font-size: 1em;
-        }
-    }
-}
