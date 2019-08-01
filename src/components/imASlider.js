@@ -1,8 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
-
-import Layout from "../components/layout"
-import SEO from "../components/seo"
 import { Component } from "react"
 
 
@@ -13,11 +9,21 @@ class ImASlider extends Component {
         super(props);
         this.state = {
             currentTitle: "Web Developer",
+            titleQuantifier: "a",
             titles: ["Web Developer", "Problem Solver", "Photographer", "Graphic Designer", "Cat Lover", "Entrepreneur"]
         }
         this.loop = this.loop.bind(this);
     }
 
+    isVowel(term){
+
+        let firstLetter = term.slice(0,1);
+
+        var result;
+
+        result = firstLetter == "A" || firstLetter == "E" || firstLetter == "I" || firstLetter == "O" || firstLetter == "U";
+        return result;
+    }
 
 
     loop() {
@@ -32,10 +38,10 @@ class ImASlider extends Component {
              newIndex = currentIndex + 1;
         } else {
 
-             newIndex = 0;
+             newIndex = 0; 
 
         }
-        this.setState({ currentTitle: titles[newIndex] });
+        this.setState({ currentTitle: titles[newIndex], titleQuantifier: (this.isVowel(titles[newIndex]) ? "an" : "a") });
 
 
         return
@@ -58,7 +64,7 @@ class ImASlider extends Component {
         return (
 
             <>
-                <h3>I'm <span id="a">a</span> <span class="title__box">
+                <h3>I'm <span id="a">{this.state.titleQuantifier}</span> <span class="title__box">
                     <span class="title" data-splitting="">{this.state.currentTitle}</span>
                 </span>.</h3>
 
