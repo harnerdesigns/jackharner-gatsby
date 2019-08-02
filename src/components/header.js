@@ -2,33 +2,31 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+import Headroom from "react-headroom";
+
+import Icon from "../images/Icon.png";
+
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
+  <Headroom>
+  <header className="main_head"
+
   >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
+    <Link
+      to="/"
+      className="logo"
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
+      <img src={Icon} alt="Jack Harner Icon" />
+      <h1>
+        {siteTitle}
       </h1>
-    </div>
+    </Link>
+    <nav className="main_nav">
+      <Link to="/about">About</Link>
+      <Link to="/blog">Blog</Link>
+      <Link to="/contact">Contact</Link>
+    </nav>
   </header>
+  </Headroom>
 )
 
 Header.propTypes = {

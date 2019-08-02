@@ -28,6 +28,7 @@ const Layout = ({ children }) => {
   return (
     <>
   <div>
+    <Header siteTitle="Jack Harner"/>
         {children}
 
         <footer class="slim pink">
