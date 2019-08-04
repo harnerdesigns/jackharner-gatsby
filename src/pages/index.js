@@ -28,7 +28,7 @@ const IndexPage = () => (
     </container>
     <container class="full pink">
       <h2 class="tagline">I Make Websites.</h2>
-      <p class="tagline">I work mostly with <a href="https://harnerdesigns.com/project/tag/wordpress/">WordPress</a>, PHP, & React, but I love me some good 'ole fashion HTML/CSS.</p>
+      <p class="tagline">I work mostly with <a href="https://harnerdesigns.com/project/tag/wordpress/">WordPress</a>, PHP, & I'm currently learning React, but I love me some good 'ole fashion HTML/CSS.</p>
       <p class="tagline">Now and then, I write about <a href="https://harnerdesigns.com/blog">Web Design</a> & <a
         href="https://bleedingcoffee.com">Coffee</a>.</p>
 
@@ -46,7 +46,7 @@ const IndexPage = () => (
         <div class="or">OR</div>
         <div class="hire">
           <h3>Want To Hire Me?</h3>
-          <p>I'm looking for a Front End Developer role. I've worked extensively with WordPress/PHP, HTML/CSS, and React/Redux.</p><p>Check out my <a href="https://resume.jackharner.com">Resume</a>, <a href="https://harnerdesigns.com">Portfolio</a>, & <a href="https://github.com/harnerdesigns">Github</a> and <a href="mailto:jack@jackharner.com">Shoot Me An Email</a> if you think I'd be a good fit!</p>
+          <p>I'm looking for a Front End Developer role. I've worked extensively with WordPress/PHP, HTML/CSS, and a little React/Redux.</p><p>Check out my <a href="https://resume.jackharner.com">Resume</a>, <a href="https://harnerdesigns.com">Portfolio</a>, & <a href="https://github.com/harnerdesigns">Github</a> and <a href="mailto:jack@jackharner.com">Shoot Me An Email</a> if you think I'd be a good fit!</p>
         </div>
       </section>
 

@@ -12,11 +12,11 @@ import harnerDesignsLogo from '../images/harner-designs-white.svg';
 class ProjectTabs extends Component {
 
 
-    constructor(props){
+    constructor(props) {
 
         super(props);
 
-        this.state = {openTab: null};
+        this.state = { openTab: null };
     }
 
 
@@ -24,12 +24,12 @@ class ProjectTabs extends Component {
 
         e.preventDefault();
         let target = e.target.getAttribute('data-target');
-        if(this.state.openTab != target){
+        if (this.state.openTab != target) {
 
-            this.setState({ openTab: e.target.getAttribute('data-target')})
+            this.setState({ openTab: e.target.getAttribute('data-target') })
         } else {
 
-            this.setState({openTab: null})
+            this.setState({ openTab: null })
         }
     }
 
@@ -37,38 +37,38 @@ class ProjectTabs extends Component {
     render() {
 
         return (
-            <container className="full white">
+            <container className="slim white">
                 <h2>Recent Projects</h2>
                 <div className={"things " + (this.state.openTab != null ? "is-open" : "")}>
                     <header className="things__tabs">
-                        <div className={"thing " + (this.state.openTab != "#harnerdesigns-thing" ? "is-open" : "")} onClick={this.onClick} data-target="#harnerdesigns-thing" style={{ background: "#3e50b4" }}>
+                        <div className={"thing " + (this.state.openTab == "#harnerdesigns-thing" ? "is-open" : "")} onClick={this.onClick} data-target="#harnerdesigns-thing" style={{ background: "#3e50b4" }}>
                             <a href="https://harnerdesigns.com" target="_blank" rel="noopener" aria-label="Harner Designs">
-                                <img src={harnerDesignsLogo} />
+                                <img src={harnerDesignsLogo} data-target="#harnerdesigns-thing"/>
                             </a>
                         </div>
-                        <div className="thing" onClick={this.onClick} data-target="#materialcolor-thing" style={{ background: "#fff" }}>
+                        <div className={"thing " + (this.state.openTab == "#materialcolor-thing" ? "is-open" : "")} onClick={this.onClick} data-target="#materialcolor-thing" style={{ background: "#fff" }}>
                             <a href="https://materialcolor.xyz" target="_blank" rel="noopener" aria-label="Material Color">
 
-                                <img src={materialLogo} />
+                                <img src={materialLogo} data-target="#materialcolor-thing" />
                             </a>
                         </div>
-                        <div className="thing" onClick={this.onClick} data-target="#shoolu-thing" style={{ background: "#0fb681" }}>
+                        <div className={"thing " + (this.state.openTab == "#shoolu-thing" ? "is-open" : "")} onClick={this.onClick} data-target="#shoolu-thing" style={{ background: "#0fb681" }}>
                             <a href="https://shoolu.com" target="_blank" rel="noopener" aria-label="Shoolu">
-                                <img src={shooluLogo} />
+                                <img src={shooluLogo} data-target="#shoolu-thing" />
                             </a>
                         </div>
 
 
-                        <div className="thing" onClick={this.onClick} data-target="#bleedingcoffee-thing" style={{ background: "#4b2c20" }}>
+                        <div className={"thing " + (this.state.openTab == "#bleedingcoffee-thing" ? "is-open" : "")} onClick={this.onClick} data-target="#bleedingcoffee-thing" style={{ background: "#4b2c20" }}>
                             <a href="https://bleedingcoffee.com" target="_blank" rel="noopener" aria-label="Bleeding Coffee">
-                                <img src={bleedingLogo} />
+                                <img src={bleedingLogo} data-target="#bleedingcoffee-thing" />
                             </a>
                         </div>
 
                     </header>
 
                     <section className="things__body">
-                        <div className={"content " + (this.state.openTab === "#harnerdesigns-thing" ? "is-open" :"" )} id="harnerdesigns-thing">
+                        <div className={"content " + (this.state.openTab === "#harnerdesigns-thing" ? "is-open" : "")} id="harnerdesigns-thing">
                             <h3>Harner Designs</h3>
                             <p>This is the home of all of my Web Design / Development work and writing. It was born out of
                               nessecity for a portfolio website after I had lost the JackHarner.com domain. I'll save that

@@ -97,6 +97,15 @@ a {
   }
 
 
+  code{
+    font-family: monospace;
+    background: transparentize(#fff, 0.8);
+    font-size: 0.8em; 
+    padding: 0.2em;
+    letter-spacing: 0.05em;
+  }
+
+
 
 #scrollIndicator {
   position: absolute;
@@ -221,6 +230,20 @@ a {
   h2{
     font-size: 4em;
     font-weight: 100;
+  }
+}
+
+
+.page_body{
+  width: 80%;
+  background: #333;
+  min-height: 80vh;
+  color: #fff;
+  padding: 1em 10vw;
+  margin: 1em auto 0;
+
+  p{
+    font-size: 1.5em;
   }
 }
 

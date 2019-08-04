@@ -4,10 +4,10 @@ import React from "react"
 
 import Headroom from "react-headroom";
 
-import Icon from "../images/Icon.png";
+import Icon from "../images/icon.png";
 
 const Header = ({ siteTitle }) => (
-  <Headroom>
+  <Headroom calcHeightOnResize upTolerance={100}>
   <header className="main_head"
 
   >
