@@ -1,0 +1,49 @@
+.image-grid{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 1em;
+    margin: 5em -10vw;
+    
+    img{
+        width: 100%; 
+        margin: 0 auto;
+        height: auto;
+        transition: margin-top 300ms;
+        cursor: pointer;
+
+        &:hover{
+
+            margin-top: -10px;
+        }
+        
+
+
+        &.active-image{
+
+            max-height: 60vh;
+            width: auto;
+            grid-column: 1/-1;
+            order: -1;
+            transition: none;
+
+            &:hover{
+                margin-top: 0;
+            }
+        }
+    }
+
+
+    .zoom-text{
+        text-align: center;
+        grid-column: 1/-1;
+        width: 100%;
+        display: block;
+        opacity: 0.8;
+        font-size: 0.8em;
+        font-style: italic;
+        margin-bottom: 0;
+    }
+}

@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
 
         <footer class="slim pink">
 
-          <section class="copyright">&copy; 2019 Jack Harner</section>
+          <section class="copyright">&copy; 2019 Jack Harner | <a href="https://github.com/harnerdesigns/jackharner-gatsby"> Built With Gatsby</a></section>
         </footer>
       </div>
     </>
