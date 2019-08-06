@@ -8,9 +8,11 @@ class ImASlider extends Component {
 
         super(props);
         this.state = {
-            currentTitle: "Web Developer",
+            typedTitle: "",
+            currentTitle: "",
             titleQuantifier: "a",
-            titles: ["Web Developer", "Problem Solver", "Photographer", "Graphic Designer", "Cat Lover", "Entrepreneur"]
+            titles: ["Web Developer", "Problem Solver", "Photographer", "Graphic Designer", "Cat Lover", "Entrepreneur"],
+            typingSpeed: 10
         }
         this.loop = this.loop.bind(this);
     }
@@ -25,8 +27,61 @@ class ImASlider extends Component {
         return result;
     }
 
+    addLetter = (letter) =>{
 
-    loop() {
+        this.setState({typedTitle: this.state.typedTitle + letter})
+    }
+
+    removeLetter = () =>{
+
+        this.setState({typedTitle: this.state.typedTitle.slice(0, -1)})
+    }
+
+    removeWord = ( numberOfLetters ) => {
+
+
+
+        while(numberOfLetters > 0){
+
+            this.timeout = setTimeout(() => {
+                //search function
+                this.removeLetter();
+            }, this.state.typingSpeed);
+
+            numberOfLetters--;
+        }
+    } 
+
+    addWord = ( word ) => {
+
+        let letters = word.split("");
+
+        console.log(letters);
+
+        letters.forEach((letter ) => {
+
+            this.timeout2 = setTimeout(() => {
+                //search function
+                this.addLetter(letter)
+              }, this.state.typingSpeed);
+
+
+
+        });
+
+        this.timeout3 = setTimeout(() => {
+            //search function
+            this.removeWord(letters.length)
+          }, 2000);
+
+
+    }
+
+
+    
+
+
+    loop = () => {
 
         let { titles, currentTitle } = this.state;
 
@@ -43,6 +98,8 @@ class ImASlider extends Component {
         }
         this.setState({ currentTitle: titles[newIndex], titleQuantifier: (this.isVowel(titles[newIndex]) ? "an" : "a") });
 
+        this.addWord( this.state.currentTitle );
+
 
         return
 
@@ -56,6 +113,9 @@ class ImASlider extends Component {
 
     componentWillUnmount() {
         clearInterval(this.interval);
+        clearTimeout(this.timeout);
+        clearTimeout(this.timeout2);
+        clearTimeout(this.timeout3);
     }
 
 
@@ -65,7 +125,7 @@ class ImASlider extends Component {
 
             <>
                 <h3>I'm <span id="a">{this.state.titleQuantifier}</span> <span class="title__box">
-                    <span class="title" data-splitting="">{this.state.currentTitle}</span>
+                    <span class="title" data-splitting="">{this.state.typedTitle}</span>
                 </span>.</h3>
 
             </>

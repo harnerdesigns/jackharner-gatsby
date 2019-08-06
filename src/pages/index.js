@@ -1,8 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import ImASlider from "../components/imASlider"
 import ProjectTabs from "../components/projectTabs"
@@ -55,22 +53,22 @@ const IndexPage = () => (
     <container class="full white" id="followMe">
       <h2>Let's Chat</h2>
       <section class="socials">
-        <a target="_blank" rel="noopener" href="https://twitter.com/jackharner" class="twitter">
+        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/jackharner" class="twitter">
           <FontAwesomeIcon icon={["fab", "twitter"]} />Twitter
 			</a>
-        <a target="_blank" rel="noopener" href="https://instagram.com/jackharner" class="instagram">
+        <a target="_blank" rel="noopener noreferrer" href="https://instagram.com/jackharner" class="instagram">
           <FontAwesomeIcon icon={["fab", "instagram"]} />Instagram
 			</a>
-        <a target="_blank" rel="noopener" href="https://dribbble.com/jackharner" class="dribbble">
+        <a target="_blank" rel="noopener noreferrer" href="https://dribbble.com/jackharner" class="dribbble">
           <FontAwesomeIcon icon={["fab", "dribbble"]} />Dribbble
 			</a>
-        <a target="_blank" rel="noopener" href="https://dev.to/jackharner" class="devto">
+        <a target="_blank" rel="noopener noreferrer" href="https://dev.to/jackharner" class="devto">
           <FontAwesomeIcon icon={["fab", "dev"]} />Dev.to
 			</a>
-        <a target="_blank" rel="noopener" href="https://github.com/harnerdesigns" class="github">
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/harnerdesigns" class="github">
           <FontAwesomeIcon icon={["fab", "github"]} />GitHub
 			</a>
-        <a target="_blank" rel="noopener" href="https://www.producthunt.com/@jackharner" class="producthunt">
+        <a target="_blank" rel="noopener noreferrer" href="https://www.producthunt.com/@jackharner" class="producthunt">
           <FontAwesomeIcon icon={["fab", "product-hunt"]} />Product Hunt
 			</a>
       </section>

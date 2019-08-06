@@ -24,7 +24,7 @@ class ProjectTabs extends Component {
 
         e.preventDefault();
         let target = e.target.getAttribute('data-target');
-        if (this.state.openTab != target) {
+        if (this.state.openTab !== target) {
 
             this.setState({ openTab: e.target.getAttribute('data-target') })
         } else {
@@ -41,27 +41,27 @@ class ProjectTabs extends Component {
                 <h2>Recent Projects</h2>
                 <div className={"things " + (this.state.openTab != null ? "is-open" : "")}>
                     <header className="things__tabs">
-                        <div className={"thing " + (this.state.openTab == "#harnerdesigns-thing" ? "is-open" : "")} onClick={this.onClick} data-target="#harnerdesigns-thing" style={{ background: "#3e50b4" }}>
-                            <a href="https://harnerdesigns.com" target="_blank" rel="noopener" aria-label="Harner Designs">
-                                <img src={harnerDesignsLogo} data-target="#harnerdesigns-thing"/>
+                        <div className={"thing " + (this.state.openTab === "#harnerdesigns-thing" ? "is-open" : "")} onClick={this.onClick} data-target="#harnerdesigns-thing" style={{ background: "#3e50b4" }}>
+                            <a href="https://harnerdesigns.com" target="_blank" rel="noopener noreferrer"  aria-label="Harner Designs">
+                                <img src={harnerDesignsLogo} data-target="#harnerdesigns-thing" alt="Harner Designs Logo"/>
+                            </a>
+                        </div> 
+                        <div className={"thing " + (this.state.openTab === "#materialcolor-thing" ? "is-open" : "")} onClick={this.onClick} data-target="#materialcolor-thing" style={{ background: "#fff" }}>
+                            <a href="https://materialcolor.xyz" target="_blank" rel="noopener noreferrer"  aria-label="Material Color">
+
+                                <img src={materialLogo} data-target="#materialcolor-thing"  alt="Material Color Palette Logo"/>
                             </a>
                         </div>
-                        <div className={"thing " + (this.state.openTab == "#materialcolor-thing" ? "is-open" : "")} onClick={this.onClick} data-target="#materialcolor-thing" style={{ background: "#fff" }}>
-                            <a href="https://materialcolor.xyz" target="_blank" rel="noopener" aria-label="Material Color">
-
-                                <img src={materialLogo} data-target="#materialcolor-thing" />
-                            </a>
-                        </div>
-                        <div className={"thing " + (this.state.openTab == "#shoolu-thing" ? "is-open" : "")} onClick={this.onClick} data-target="#shoolu-thing" style={{ background: "#0fb681" }}>
-                            <a href="https://shoolu.com" target="_blank" rel="noopener" aria-label="Shoolu">
-                                <img src={shooluLogo} data-target="#shoolu-thing" />
+                        <div className={"thing " + (this.state.openTab === "#shoolu-thing" ? "is-open" : "")} onClick={this.onClick} data-target="#shoolu-thing" style={{ background: "#0fb681" }}>
+                            <a href="https://shoolu.com" target="_blank" rel="noopener noreferrer"  aria-label="Shoolu">
+                                <img src={shooluLogo} data-target="#shoolu-thing" alt="Shoolu Logo" />
                             </a>
                         </div>
 
 
-                        <div className={"thing " + (this.state.openTab == "#bleedingcoffee-thing" ? "is-open" : "")} onClick={this.onClick} data-target="#bleedingcoffee-thing" style={{ background: "#4b2c20" }}>
-                            <a href="https://bleedingcoffee.com" target="_blank" rel="noopener" aria-label="Bleeding Coffee">
-                                <img src={bleedingLogo} data-target="#bleedingcoffee-thing" />
+                        <div className={"thing " + (this.state.openTab === "#bleedingcoffee-thing" ? "is-open" : "")} onClick={this.onClick} data-target="#bleedingcoffee-thing" style={{ background: "#4b2c20" }}>
+                            <a href="https://bleedingcoffee.com" target="_blank" rel="noopener noreferrer"  aria-label="Bleeding Coffee">
+                                <img src={bleedingLogo} data-target="#bleedingcoffee-thing" alt="Bleeding Coffee Logo" />
                             </a>
                         </div>
 
