@@ -35,7 +35,7 @@ const About = () => (
       <h3>Maintaining and Updating the Website</h3>
       <p>Everything from Content Changes to totally redoing the navigation, if it has to do with the actual code powering the website, it's on me. Our store is powered by BigCommerce and uses a custom Stencil Theme, initially designed by Diztinct Inc, and then heavily customized by me.</p>
       <h3>Developing Internal and Customer Facing Tools</h3>
-      <p>One of the most used things is the <a href="https://returns.shoolu.com">Returns Portal</a>. It's the place to get all your return & exchange related questions answered. The portal helped us drastically cut down on Customer calls and vastly improved the UX of our returns process.</p>
+      <p>One of the most used things I made is the <a href="https://returns.shoolu.com">Returns Portal</a>. It's the place to get all your return & exchange related questions answered. The portal helped us drastically cut down on Customer calls and vastly improved the UX of our returns process.</p>
       <h3>Driving Traffic to the Site</h3>
       <p>PPC Campaigns, Social Media Marketing, Email Marketing, Email Automation Marketing, Content Marketing, Search Engine Optimization (SEO), Implementing the Rewards Program (coming soon), and more. Growing the site is really my job's main purpose, and everything else is just related to that. In my time here, we've continued to show year over year growth, an increase in organic visits, and an increase in sales.</p>
 
@@ -53,11 +53,11 @@ const About = () => (
 
       <h2>Outside The Internet</h2>
 
-      <p>When I'm not glued to the computer, I spend my time exploring the New Mexico Craft Beer scene (<a href="https://lacumbrebrewing.com" target="_blank" rel="noopener noreferrer">La Cumbre</a> is the spot to go), taking photos of my surroundings (Check me out on <a href="https://unsplash.com/@jackharner">Unsplash</a>), and enjoying Albuquerque's 360 Days of Sun per year. </p>
       <ImageGrid images={["https://images.unsplash.com/photo-1540333960012-30edd3e44290?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", "https://images.unsplash.com/photo-1530567422755-236c6c6d0ef4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=60", "https://images.unsplash.com/photo-1561438883-3b98f4f6393d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" ]} />
+      <p>When I'm not glued to the computer, I spend my time exploring the New Mexico Craft Beer scene (<a href="https://lacumbrebrewing.com" target="_blank" rel="noopener noreferrer">La Cumbre</a> is the spot to go), taking photos of my surroundings (Check me out on <a href="https://unsplash.com/@jackharner">Unsplash</a>), and enjoying Albuquerque's 360 Days of Sun per year. </p>
 
       <h2>If You Want More Of Me...</h2>
-      <p>Give me a follow on Twitter, <a href="https://twitter.com/jackharner">@JackHarner</a>, check out my <Link to="/blog">blog</Link>, or some of the <a href="https://harnerdesigns.com">work I've done</a>. </p>
+      <p>Give me a follow on Twitter, <a href="https://twitter.com/jackharner">@JackHarner</a>, check out my <Link to="/blog">Blog</Link>, or some of the <a href="https://harnerdesigns.com">work I've done</a>. </p>
     </main>
   </Layout>
 )
