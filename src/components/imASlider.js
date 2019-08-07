@@ -125,7 +125,7 @@ class ImASlider extends Component {
 
             <>
                 <h3>I'm <span id="a">{this.state.titleQuantifier}</span> <span class="title__box">
-                    <span class="title" data-splitting="">{this.state.typedTitle}</span>
+                    <span class="title">{this.state.typedTitle}</span>
                 </span>.</h3>
 
             </>
