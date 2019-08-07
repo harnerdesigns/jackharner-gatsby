@@ -23,7 +23,8 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-headroom": "^2.2.8",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "splitting": "^1.0.6"
   },
   "devDependencies": {
     "gh-pages": "^2.0.1",
