@@ -7,9 +7,13 @@ import SEO from "../components/seo"
 const Contact = () => (
   <Layout>
     <SEO title="Contact" />
-    <h1>Contact Coming Soon</h1>
-    <Link to="/">Go back to the homepage</Link>
+    <main className="page_body">
+
+      <h1>Contact Coming Soon</h1>
+
+    </main>
+
   </Layout>
 )
 
-export default Contact 
+export default Contact  

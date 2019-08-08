@@ -5,8 +5,15 @@ module.exports = {
     description: `Jack Harner is a freelance Web Developer & Graphic Designer.`,
     author: `@jackharner`,
   },
-  plugins: [
+  plugins: ["gatsby-plugin-catch-links",
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -20,6 +27,11 @@ module.exports = {
       trackingId: process.env.GA,
     }},
     `gatsby-transformer-sharp`,
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [], // just in case those previously mentioned remark plugins sound cool :)
+      },},
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
