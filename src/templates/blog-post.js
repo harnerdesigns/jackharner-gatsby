@@ -1,12 +1,15 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 // import '../css/blog-post.css';
 export default function Template({ data }) {
     const { markdownRemark: post } = data
     return (
-        <div className="blog-post-container">
-            <Helmet title={`Your Blog Name - ${post.frontmatter.title}`} />
+      <Layout>
+        <SEO title={post.frontmatter.title} />
+        <main className="page_body">
             <div className="blog-post">
                 <h1>{post.frontmatter.title}</h1>
                 <div
@@ -14,7 +17,8 @@ export default function Template({ data }) {
                     dangerouslySetInnerHTML={{ __html: post.html }}
                 />
             </div>
-        </div>
+        </main>
+      </Layout>
     )
 }
 export const pageQuery = graphql`
@@ -23,7 +27,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
-        path
         title
       }
     }
