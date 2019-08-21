@@ -242,10 +242,16 @@ a {
   min-height: 80vh;
   color: #fff;
   padding: 1em 10vw;
-  margin: 1em auto 0;
+  margin: 0 auto;
 
   p{
     font-size: 1.5em;
+  }
+
+
+  &--grid{
+    width: 100%;
+    background: none;
   }
 }
 

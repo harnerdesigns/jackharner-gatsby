@@ -2,8 +2,12 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
+import PageTitle from "../components/pageTitle"
 import SEO from "../components/seo"
 import ImageGrid from "../components/imageGrid"
+
+
+// Images
 
 import Sara from "../images/sara.jpg"
 import Chief from "../images/chief.jpg"
@@ -15,8 +19,8 @@ import ShooluSocial from "../images/Shoolu-social.jpg"
 const About = () => (
   <Layout>
     <SEO title="About" />
+      <PageTitle>About Me</PageTitle> 
     <main className="page_body">
-      <h1>About Me</h1>
       <p>My Name is Jack. I'm a Web Developer based in Albuquerque, NM. I like making stuff with WordPress, learning new things in Web Dev (these days it's React), playing Overwatch, &  spending time with my girlfriend and our three cats.</p>
 
 

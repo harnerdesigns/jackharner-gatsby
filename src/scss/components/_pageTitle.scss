@@ -1,0 +1,16 @@
+.page-title {
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+  background: $pink url("../images/waves.svg");
+
+
+  @include card(2);
+
+  h1 {
+    color: #fff;
+    font-weight: 900;
+    margin: 0;
+    z-index: 222;
+  }
+}
