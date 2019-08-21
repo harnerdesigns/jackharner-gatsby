@@ -3,36 +3,38 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import PageTitle from "../components/pageTitle"
+import BlogCard from "../components/blog/blogCard"
 
 const Blog = ({ data }) => {
-  
+
   const { edges: posts } = data.allMarkdownRemark
 
-  return(
-  
-  <Layout>
-    <SEO title="Blog" />
-      <main className="page_body">
+  return (
 
-      <div className="blog-posts">
-        {posts
-          .filter(post => post.node.frontmatter.title.length > 0)
-          .map(({ node: post }) => {
-            return (
-              <div className="blog-post-preview" key={post.id}>
-                <h1>
-                  <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-                </h1>
-              </div>
-            )
-          })}
-      </div>
+    <Layout>
+      <SEO title="Blog" />
+        <PageTitle>Blog</PageTitle>
+      <main className="page_body page_body--grid">
 
-    </main>
-  </Layout>
-)
+
+        <div className="blog-posts">
+          {posts
+            .filter(post => post.node.frontmatter.title.length > 0)
+            .map(({ node: post }) => {
+              return (
+                <div className="blog-post-preview" key={post.id}>
+                  <BlogCard post={post} />
+                </div>
+              )
+            })}
+        </div>
+
+      </main>
+    </Layout>
+  )
 }
-export default Blog 
+export default Blog
 
 
 export const pageQuery = graphql`
