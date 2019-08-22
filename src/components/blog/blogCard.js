@@ -8,8 +8,9 @@ import { Link } from "gatsby"
 const BlogCard = ({ post }) => (
 <article className="blog__card">
 
-        <h1><Link to={post.frontmatter.path}>{post.frontmatter.title}</Link></h1>
-
+        <h2><Link to={post.frontmatter.path}>{post.frontmatter.title}</Link></h2>
+        {(post.frontmatter.excerpt ? <p className="excerpt">{post.frontmatter.excerpt}</p> : "")}
+ 
 </article>
 )
 

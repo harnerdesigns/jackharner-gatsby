@@ -1,5 +1,7 @@
 $red: rgb(244, 67, 54);
 $pink: rgb(233, 30, 99);
+$black: #000;
+$gray: #333;
 
 @mixin breakpoint($point) {
   @if $point == desktop {

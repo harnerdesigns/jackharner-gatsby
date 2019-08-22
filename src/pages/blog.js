@@ -23,9 +23,7 @@ const Blog = ({ data }) => {
             .filter(post => post.node.frontmatter.title.length > 0)
             .map(({ node: post }) => {
               return (
-                <div className="blog-post-preview" key={post.id}>
                   <BlogCard post={post} />
-                </div>
               )
             })}
         </div>

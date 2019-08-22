@@ -1,6 +1,18 @@
+.blog-posts{
+  display: grid;
+  grid-gap: 0.5em;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .blog__card {
   @include card(2);
   font-size: 0.5rem;
   width: 100%;
   padding: 1em;
+  background: $pink;
+
+  h2{
+    margin: 0;
+  }
+
 }
