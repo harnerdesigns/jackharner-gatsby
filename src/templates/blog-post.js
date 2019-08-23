@@ -5,8 +5,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 // import '../css/blog-post.css';
 export default function Template({ data }) {
-    const { markdownRemark: post } = data
-    return (
+  const post = data.markdownRemark
+      return (
       <Layout>
         <SEO title={post.frontmatter.title} />
         <main className="page_body">
@@ -22,8 +22,8 @@ export default function Template({ data }) {
     )
 }
 export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query BlogPostByPath($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
