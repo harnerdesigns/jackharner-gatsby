@@ -30,7 +30,26 @@
   transition: 300ms;
   }
 
+  h2{
+    color: #fff;
+    text-shadow:  -1px -1px 1px #000,
+    -2px -2px 1px #000,  1px 1px 1px #000,
+    2px 2px 1px #000, 1px -1px 1px #000,
+    2px -2px 1px #000,  -1px 1px 1px #000,
+    -2px 2px 1px #000;
+  }
+
 
   &:hover{
   }
+}
+
+
+
+.blog-title{
+
+  @extend .page-title;
+
+  background: none;
+  padding: 3em;
 }
