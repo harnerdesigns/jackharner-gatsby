@@ -12,7 +12,7 @@ class ImASlider extends Component {
             currentTitle: "",
             titleQuantifier: "a",
             titles: ["Web Developer", "Problem Solver", "Photographer", "Graphic Designer", "Cat Lover", "Entrepreneur"],
-            typingSpeed: 10
+            typingSpeed: 50
         }
         this.loop = this.loop.bind(this);
     }
@@ -46,7 +46,7 @@ class ImASlider extends Component {
             this.timeout = setTimeout(() => {
                 //search function
                 this.removeLetter();
-            }, this.state.typingSpeed);
+            }, this.state.typingSpeed * numberOfLetters);
 
             numberOfLetters--;
         }
@@ -55,15 +55,12 @@ class ImASlider extends Component {
     addWord = ( word ) => {
 
         let letters = word.split("");
-
-        console.log(letters);
-
-        letters.forEach((letter ) => {
+        letters.forEach((letter, i ) => {
 
             this.timeout2 = setTimeout(() => {
                 //search function
                 this.addLetter(letter)
-              }, this.state.typingSpeed);
+            }, this.state.typingSpeed * i);
 
 
 
@@ -71,8 +68,8 @@ class ImASlider extends Component {
 
         this.timeout3 = setTimeout(() => {
             //search function
-            this.removeWord(letters.length)
-          }, 2000);
+            this.removeWord(this.state.typedTitle.length)
+          }, 1500);
 
 
     }
@@ -108,7 +105,8 @@ class ImASlider extends Component {
 
 
     componentDidMount() {
-        this.interval = setInterval(()=>{this.loop()}, 3000);
+        this.interval = setInterval(()=>{this.loop()}, 
+        3000);
     }
 
     componentWillUnmount() {

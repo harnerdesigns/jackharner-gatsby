@@ -12,6 +12,7 @@ export default function Template({ data }) {
         <main className="page_body">
             <div className="blog-post">
                 <h1>{post.frontmatter.title}</h1>
+                <h2>{post.frontmatter.subtitle}</h2>
                 <div
                     className="blog-post-content"
                     dangerouslySetInnerHTML={{ __html: post.html }}
@@ -28,6 +29,7 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
+        subtitle
       }
     }
   }

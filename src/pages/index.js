@@ -26,7 +26,7 @@ const IndexPage = () => (
     </container>
     <container class="full pink">
       <h2 class="tagline">I Make Websites.</h2>
-      <p class="tagline">I work mostly with <a href="https://harnerdesigns.com/project/tag/wordpress/">WordPress</a>, PHP, & I'm currently learning React, but I love me some good 'ole fashion HTML/CSS.</p>
+      <p class="tagline">I work mostly with <a href="https://harnerdesigns.com/project/tag/wordpress/">WordPress</a>, PHP, & I'm currently learning React, but I love me some good 'ole fashioned HTML/CSS.</p>
       <p class="tagline">Now and then, I write about <a href="https://harnerdesigns.com/blog">Web Design</a> & <a
         href="https://bleedingcoffee.com">Coffee</a>.</p>
 

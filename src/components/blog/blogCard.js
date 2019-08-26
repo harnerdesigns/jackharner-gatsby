@@ -6,12 +6,17 @@ import { Link } from "gatsby"
 
 
 const BlogCard = ({ post }) => (
-<article className="blog__card">
+    <Link to={post.fields.slug}>
+        <article className="blog__card">
 
-        <h2><Link to={post.fields.slug}>{post.frontmatter.title}</Link></h2>
-        {(post.frontmatter.excerpt ? <p className="excerpt">{post.frontmatter.excerpt}</p> : "")}
- 
-</article>
+            <h2 className="post__title">{post.frontmatter.title}</h2>
+            {(post.frontmatter.subtitle ? <h3 className="post__subtitle">{post.frontmatter.subtitle}</h3> : "")}
+
+            {(post.excerpt ? <p className="post__excerpt">{post.excerpt}</p> : "")}
+
+        </article>
+
+    </Link>
 )
 
 BlogCard.propTypes = {
