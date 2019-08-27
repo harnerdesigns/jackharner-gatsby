@@ -6,16 +6,10 @@ subtitle: "And everything I love about it"
 
 ## Welcome
 
-Oooooh-weeee, my first blog post! I need to type out a bunch of random shit to push this article over 250 characters so I can see what happens with the trim. Who knows what this is going to look like. 
+Every day we struggle as creatives to find that spark to ignite the creativity inside.
 
-Looks like I need more space.
-trim trim trim something along the lines of ... and an ellipsis.
+I'm currently sitting in a Satellite Coffee just north of UNM while I wait for my girlfriend to get out of class and for some reason I feel compelled to write. I've been meaning to start this blog for a while. I'm not entirely sure what it's going to become, but hopefully it'll be something.
 
+While I sit here, sipping on my White Chocolate Mocha, the sounds of long lost friends reuniting dance across my ears. Most of this specific coffee shop's clientele are health care workers, which makes sense seeing as it's right next to the hospital. There's a paramedic, at lest 2 nurses, a doctor who stopped in for a "Greenie Breakfast Panini", and several administration workers.
 
-```
-Something
-
-
-
-
-```
+I'm not sure what it is, but simply being here is boosting my productivity and my creativity. Maybe it's the smell of the coffee, or maybe it's the fact that I'm not home. Either way, I feel like I've been stuck in a bit of a rut lately and spending more time enjoying delicious coffee is the boost I need to get my creative juices flowing.
