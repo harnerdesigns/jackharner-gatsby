@@ -1,8 +1,8 @@
-.mood__container{
+.mood__container {
 
     min-height: 70vh;
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
     border-bottom: 10px solid #fff;
     font-family: serif;
@@ -10,12 +10,12 @@
 
 
 
-#goesRight{
+#goesRight {
 
     color: #fff;
 
 
-    h1{
+    h1 {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -23,11 +23,12 @@
         font-weight: 100;
     }
 
-    .strikeThrough{
+    .strikeThrough {
         position: relative;
         display: inline-block;
         color: transparentize($color: #fff, $amount: 0.5);
-        &:after, &:before{
+
+        &:after {
 
             content: '';
             width: 110%;
@@ -37,42 +38,39 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%) rotate(15deg);
+            transform: translate(-50%, -50%) rotate(5deg);
             box-shadow: 0 3px 5px #000;
             z-index: 2;
         }
 
-        &:after{
-            transform: translate(-50%, -50%) rotate(-15deg);
-            
-        }
+   
 
-        .char{
+        .char {
 
-            animation: rotate 3s infinite alternate;
+            animation: rotate 7s infinite alternate;
             transform-origin: 50% 0%;
             display: inline-block;
 
-            &:nth-of-type(1){
+            &:nth-of-type(1) {
 
                 transform: rotate(15deg);
                 animation-delay: 1s;
             }
 
 
-            &:nth-of-type(2){
+            &:nth-of-type(2) {
 
                 transform: rotate(25deg);
                 animation-delay: 2s;
             }
 
-            &:nth-of-type(3){
+            &:nth-of-type(3) {
 
                 transform: rotate(3deg);
-                animation-delay: -3.25s;
+                animation-delay: 3.25s;
             }
 
-            &:nth-of-type(4){
+            &:nth-of-type(4) {
 
                 transform: rotate(3deg);
                 animation-delay: 5s;
@@ -81,11 +79,12 @@
     }
 
 
-    .right{
+    .right {
         font-weight: 900;
         position: relative;
         font-size: 2em;
-        &:after{
+
+        &:after {
             content: "Right?";
             position: absolute;
             top: 0;
@@ -93,6 +92,8 @@
             right: 0;
             bottom: 0;
             animation: glow 10s infinite;
+
+            transform-origin: 0% 50%;
         }
     }
 }
@@ -100,49 +101,79 @@
 
 @keyframes glow {
 
-    0%{
+    0% {
         transform: scale(1);
         opacity: 0.8
     }
 
-    10%{
+    10% {
         transform: scale(1.2);
         opacity: 0;
     }
 
-    100%{
+    100% {
         transform: scale(1.2);
         opacity: 0;
     }
 }
 
 
-@keyframes rotate{
+@keyframes rotate {
 
 
-    0%{
+    0% {
         transform: rotate(0deg);
     }
 
-    25%{
+    10% {
         transform: rotate(15deg);
 
     }
 
-    50%{
+    20% {
         transform: rotate(-12deg);
     }
 
 
-    75%{
-        transform: rotate(6deg);
+    30% {
+        transform: rotate(8deg);
+    }
+
+    40% {
+        transform: rotate(-6deg);
+    }
+
+    50% {
+        transform: rotate(3deg);
+
+    }
+
+    60% {
+        transform: rotate(-2deg);
+    }
+
+
+    70% {
+        transform: rotate(1deg);
+    }
+
+    80% {
+
+        transform: rotate(-1deg);
+
+    }
+
+    90% {
+
+        transform: rotate(-1deg);
+
     }
 
 
 
 
 
-    100%{
+    100% {
         transform: rotate(0deg);
     }
 

@@ -1,7 +1,8 @@
 ---
 date: 2017-07-12T17:12:33.962Z
 title: "My First Gatsby Post" 
-subtitle: "And everything I love about it"
+subtitle: ""
+featuredImage: "./featured-image.jpg"
 ---
 
 ## Welcome

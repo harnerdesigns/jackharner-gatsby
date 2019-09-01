@@ -50,6 +50,18 @@
 
   @extend .page-title;
 
-  background: none;
-  padding: 3em;
+  padding: 17vh 0;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  @include card(-3);
+  // background-color: $pink;
+  // background-blend-mode: screen ;
+
+  h1, h2{
+    background: transparentize(#000, 0.5);
+    margin: 0;
+    padding: 0.1em 1em;
+
+  }
 }

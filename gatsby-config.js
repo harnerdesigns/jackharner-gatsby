@@ -29,17 +29,31 @@ module.exports = {
         path: `${__dirname}/src/content/blog`,
       },
     },
- {   resolve: `gatsby-plugin-google-analytics`,
-    options: {
-      // replace "UA-XXXXXXXXX-X" with your own Tracking ID
-      trackingId: process.env.GA,
-    }},
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: process.env.GA,
+      }
+    },
     `gatsby-transformer-sharp`,
     {
       resolve: "gatsby-transformer-remark",
       options: {
-        plugins: [], // just in case those previously mentioned remark plugins sound cool :)
-      },},
+        plugins: [{
+          resolve: `gatsby-remark-images`,
+          options: {
+            maxWidth: 590,
+          },
+        },
+        {
+          resolve: `gatsby-remark-responsive-iframe`,
+          options: {
+            wrapperStyle: `margin-bottom: 1.0725rem`,
+          },
+        }], // just in case those previously mentioned remark plugins sound cool :)
+      },
+    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
