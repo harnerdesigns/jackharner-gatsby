@@ -50,7 +50,7 @@ const IndexPage = () => (
       </section>
 
     </container>
-    <container class="full white" id="followMe">
+    <container class="full black" id="followMe">
       <h2>Let's Chat</h2>
       <section class="socials">
         <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/jackharner" class="twitter">

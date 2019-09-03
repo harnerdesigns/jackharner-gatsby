@@ -25,19 +25,18 @@
 
 .blog__card {
   @include card(2);
-  // font-size: 0.5rem;
   width: 100%;
-  // padding: 1em;
   background: $pink;
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 2fr;
   align-items: center;
   justify-content: flex-start;
 
   .featuredImage {
     grid-row: 1 / -1;
 
-    height: 100%;
+    width: 100%;
+    height: auto;
 
     img {
       margin-right: -3em;
