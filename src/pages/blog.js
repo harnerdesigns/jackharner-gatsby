@@ -23,9 +23,9 @@ const Blog = ({ data }) => {
         <div className="blog-posts">
           {posts
             .filter(post => post.node.frontmatter.title.length > 0)
-            .map(({ node: post }) => {
+            .map(({ node: post }, index) => {
               return (
-                <BlogCard post={post} />
+                <BlogCard post={post} index={index} />
               )
             })}
         </div>
@@ -50,7 +50,7 @@ query IndexQuery {
           date(formatString: "MMMM DD, YYYY")
           featuredImage {
             childImageSharp {
-              resize(width: 200, height: 200, cropFocus: CENTER) {
+              resize(width: 500, height: 500, cropFocus: CENTER) {
                 src
               }
             }

@@ -1,7 +1,7 @@
 ---
-date: 2017-07-12T17:12:33.962Z
+date: 2017-07-20T17:12:33.962Z
 title: "My First Gatsby Post" 
-subtitle: ""
+subtitle: "blah blah blah"
 featuredImage: "./featured-image.jpg"
 ---
 

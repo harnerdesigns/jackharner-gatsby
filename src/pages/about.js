@@ -21,7 +21,7 @@ const About = () => (
     <SEO title="About" />
       <PageTitle>About Me</PageTitle> 
     <main className="page_body">
-      <p>My Name is Jack. I'm a Web Developer based in Albuquerque, NM. I like making stuff with WordPress, learning new things in Web Dev (these days it's React), playing Overwatch, &  spending time with my girlfriend and our three cats.</p>
+      <h2>Hi! My Name is Jack.</h2><p>I'm a Web Developer based in Albuquerque, NM. I like making stuff with WordPress, learning new things in Web Dev (these days it's React), playing Overwatch, &  spending time with my girlfriend and our three cats.</p>
 
 
       <ImageGrid images={[Chief, Sara, BabyKitty]} />
