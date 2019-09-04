@@ -1,7 +1,7 @@
 .main_head {
   width: 100%;
   padding: 1em;
-    position:relative;
+  position: relative;
   display: flex;
 
   align-items: center;
@@ -16,16 +16,17 @@
     align-items: center;
     justify-content: center;
     grid-gap: 0.5em;
-    
+
 
     color: #fff;
-    
+
     h1 {
-        font-weight: 900;
-        margin: 0;
-    font-size: 3em;
+      font-weight: 900;
+      margin: 0;
+      font-size: 3em;
+    }
   }
-  }
+
   img {
     height: auto;
     width: 100%;
@@ -35,22 +36,51 @@
   }
 
 
+  .main_nav {
+    margin-left: auto;
+  }
+
+  #colorSwitcher {
+    border: none;
+    color: #fff;
+    filter: drop-shadow(2px 2px 0 var(--color));
+    font-size: 1.5em;
+    background: none;
+    cursor: pointer;
+    transition: 300ms;
+
+    &:hover {
+
+      color: var(--color);
+      filter: drop-shadow(2px 2px 0 #fff);
+    }
+
+
+  }
+
+  .photoshop-picker {
+    input {
+      color: #333;
+    }
+  }
+
 }
 
 
 
 
-.main_nav{
+.main_nav {
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    a{
-        color: #fff;
-        padding: 0.5em;
-        &:hover{
-            background: transparentize($color: #fff, $amount: 0.8);
-        }
+  a {
+    color: #fff;
+    padding: 0.5em;
+
+    &:hover {
+      background: transparentize($color: #fff, $amount: 0.8);
     }
+  }
 }
