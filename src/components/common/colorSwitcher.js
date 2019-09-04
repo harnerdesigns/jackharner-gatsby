@@ -18,21 +18,22 @@ let styles = {
     left: 0,
     right: 0,
     bottom: 0,
-    width: '100vw',
+    width: '100%',
     height: '100vh',
     display: 'flex',
     alignItems: "center",
     justifyContent: "center"
   },
   cover: {
-    backgroundColor: "rgba(0,0,0,0.8)",
-    height: "100%",
+    background: "radial-gradient(#fff, rgba(0,0,0,0.4) 60%)",
+    height: "100vh",
     width: "100%",
     position: "fixed",
     top: 0,
     left: 0,
     right: 0,
     bottom: 0, 
+    zIndex: -1
   }
 }
 
