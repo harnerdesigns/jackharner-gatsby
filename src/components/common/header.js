@@ -4,7 +4,9 @@ import React from "react"
 
 import Headroom from "react-headroom";
 
-import Icon from "../images/icon.png";
+import Icon from "../../images/icon.png";
+import MainMenu from "./mainMenu";
+import ColorSwitcher from "./colorSwitcher";
 
 const Header = ({ siteTitle }) => (
   <Headroom calcHeightOnResize upTolerance={100}>
@@ -20,12 +22,8 @@ const Header = ({ siteTitle }) => (
         {siteTitle}
       </h1>
     </Link>
-    <nav className="main_nav">
-      <Link to="/about">About</Link>
-      <Link to="/blog">Blog</Link>
-      <Link to="/mood">Mood</Link>
-      <Link to="/contact">Contact</Link>
-    </nav>
+<MainMenu />
+<ColorSwitcher />
   </header>
   </Headroom>
 )
