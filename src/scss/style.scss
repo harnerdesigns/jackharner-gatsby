@@ -167,7 +167,7 @@ a {
   }
 
   &.pink {
-    background: $pink;
+    background: var( --color );
     color: #fff;
   }
 
@@ -204,7 +204,7 @@ a {
   min-height: 1em;
   font-family: "Roboto Slab";
   font-weight: 900;
-  color: $pink;
+  color: var( --color );
   text-shadow: 1px 0 1px #000, 0 1px 1px #000, 1px 1px 1px #000, 2px 0 1px #000, 0 2px 1px #000, 2px 2px 1px #000,
     -1px 0 1px #000, 0 -1px 1px #000, -1px -1px 1px #000, -2px 0 1px #000, 0 -2px 1px #000, -2px -2px 1px #000;
   line-height: 0.9em;

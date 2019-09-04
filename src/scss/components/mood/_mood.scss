@@ -33,7 +33,7 @@
             content: '';
             width: 110%;
             height: 10px;
-            background: $pink;
+            background: var( --color );
             display: block;
             position: absolute;
             top: 50%;

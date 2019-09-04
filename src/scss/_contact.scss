@@ -30,7 +30,7 @@ input, textarea{
 } 
 
 input[type=submit]{
-	background:$pink;
+	background:var( --color );
 	border-bottom:0;
 	cursor:pointer;
 }
