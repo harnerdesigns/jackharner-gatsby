@@ -32,7 +32,7 @@ let styles = {
     top: 0,
     left: 0,
     right: 0,
-    bottom: 0, zIndex: 1
+    bottom: 0, 
   }
 }
 
@@ -42,7 +42,7 @@ export default class ColorSwitcher extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { color: '#E91E63', selected_color: '#E91E63' };
+    this.state = { color: '#E91E63', selected_color: cookies.get('paletteColor') };
 
     if(cookies.get('paletteColor')){
       this.setColor(cookies.get('paletteColor'))
