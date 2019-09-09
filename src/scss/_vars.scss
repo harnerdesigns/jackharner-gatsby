@@ -1,9 +1,10 @@
 :root {
   --color: #E91E63;
-
-  --darkerColor: darken(#E91E63, 20);
-
   --text-color: white;
+
+  
+  --darkerColor: darken(#E91E63, 20);
+  --darker-text-color: white
 }
 
 $red: #f44336;
