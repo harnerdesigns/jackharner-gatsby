@@ -8,7 +8,11 @@ import { PhotoshopPicker } from 'react-color';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 
+
 const cookies = new Cookies();
+
+
+
 
 let styles = {
 
@@ -43,13 +47,44 @@ export default class ColorSwitcher extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { color: '#E91E63', selected_color: cookies.get('paletteColor') };
 
-    if(cookies.get('paletteColor')){
-      this.setColor(cookies.get('paletteColor'))
+
+
+    if (cookies.get('paletteColor')) {
+      const cookieColor = cookies.get('paletteColor');
+      this.state = {
+        color: cookieColor,
+        selected_color: cookieColor,
+        selected_color_rgb: this.hexToRgb(cookieColor)
+      };
+      this.setColorVars(cookieColor)
+
+    } else {
+      this.state = { color: '#E91E63', selected_color: '#E91E63',
+      selected_color_rgb: this.hexToRgb('#E91E63')
+    };
     }
 
+
   }
+
+  hexToRgb = (hex) => {
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+      r: parseInt(result[1], 16),
+      g: parseInt(result[2], 16),
+      b: parseInt(result[3], 16)
+    } : null;
+  }
+
+
+  getTextColor = (c) => {
+
+    let o = Math.round(((parseInt(c.r) * 299) + (parseInt(c.g) * 587) + (parseInt(c.b) * 114)) / 1000);
+    return ((o > 125) ? ('black') : ('white'));
+  }
+
+
 
   toggleModal = () => {
     this.setState({
@@ -57,30 +92,36 @@ export default class ColorSwitcher extends Component {
     });
   }
 
+
+
   onChangeColors = (color) => {
     // update the state with the new array of colors
-    this.setState({ selected_color: color.hex })
+    this.setState({ selected_color: color.hex, selected_color_rgb: color.rgb })
+
 
   }
 
-  setColor = (color) => {
-    this.setState({ color: color, selected_color: color})
-
-    document.documentElement.style.setProperty('--color', color);
-
-  }
-
-  onAcceptColor = (color = "") => {
-
-
-
-    // update the state with the new array of colors
-    this.setState({ color: this.state.selected_color, isColorPickerOpen: !this.state.isColorPickerOpen })
+  setColorVars = () => {
 
     document.documentElement.style.setProperty('--color', this.state.selected_color);
 
+    document.documentElement.style.setProperty('--text-color', this.getTextColor(this.state.selected_color_rgb));
 
-cookies.set('paletteColor', this.state.selected_color, { path: '/' });
+
+
+  }
+
+  onAcceptColor = () => {
+
+
+
+    // update the state with the new array of colors
+    this.setState({ color: this.state.selected_color, isColorPickerOpen: !this.state.isColorPickerOpen, selected_color_rgb: this.hexToRgb(this.state.selected_color) })
+
+this.setColorVars();
+
+
+    cookies.set('paletteColor', this.state.selected_color, { path: '/' });
 
 
 

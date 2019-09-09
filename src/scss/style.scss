@@ -168,7 +168,7 @@ a {
 
   &.pink {
     background: var( --color );
-    color: #fff;
+    color: var(--text-color);
   }
 
   &.white {
