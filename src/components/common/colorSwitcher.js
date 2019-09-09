@@ -54,14 +54,34 @@ export default class ColorSwitcher extends Component {
       this.state = {
         color: cookieColor,
         selected_color: cookieColor,
-        selected_color_rgb: this.hexToRgb(cookieColor)
       };
-      this.setColorVars(cookieColor)
+      this.setColorVars()
 
     } else {
-      this.state = { color: '#E91E63', selected_color: '#E91E63',
-      selected_color_rgb: this.hexToRgb('#E91E63')
-    };
+      this.state = {
+        color: {
+          hex: '#E91E63',
+          rgb: {
+            r: "100",
+            g: '100',
+            b: "100"
+          }
+        },
+        selected_color: {
+          hex: '#E91E63',
+          rgb: {
+            r: "233",
+            g: '30',
+            b: "99"
+          },
+          hsl: {
+            "h": 339.60591133004925,
+            "s": 0.8218623481781375,
+            "l": 0.5156862745098039,
+            "a": 1
+          }
+        },
+      };
     }
 
 
@@ -83,6 +103,27 @@ export default class ColorSwitcher extends Component {
     return ((o > 125) ? ('black') : ('white'));
   }
 
+  darkenHSL(hsl, amount) {
+    console.log({ hsl: hsl });
+
+    let newL = (hsl.l * 100) - amount;
+    return "hsl(" + hsl.h + ", " + (hsl.s * 100) + "%, " + newL + "%)"
+  }
+
+
+
+  setColorVars = () => {
+
+    document.documentElement.style.setProperty('--color', this.state.selected_color.hex);
+
+    document.documentElement.style.setProperty('--text-color', this.getTextColor(this.state.selected_color.rgb));
+
+
+    document.documentElement.style.setProperty('--darkerColor', this.darkenHSL(this.state.selected_color.hsl, 2));
+
+
+
+  }
 
 
   toggleModal = () => {
@@ -95,45 +136,29 @@ export default class ColorSwitcher extends Component {
 
   onChangeColors = (color) => {
     // update the state with the new array of colors
-    this.setState({ selected_color: color.hex, selected_color_rgb: color.rgb })
-
-
-  }
-
-  setColorVars = () => {
-
-    document.documentElement.style.setProperty('--color', this.state.selected_color);
-
-    document.documentElement.style.setProperty('--text-color', this.getTextColor(this.state.selected_color_rgb));
-
-
+    this.setState({ selected_color: color })
 
   }
+
+
 
   onAcceptColor = () => {
 
 
 
     // update the state with the new array of colors
-    this.setState({ color: this.state.selected_color, isColorPickerOpen: !this.state.isColorPickerOpen, selected_color_rgb: this.hexToRgb(this.state.selected_color) })
+    this.setState({ color: this.state.selected_color, isColorPickerOpen: !this.state.isColorPickerOpen })
 
-this.setColorVars();
+    this.setColorVars();
 
 
     cookies.set('paletteColor', this.state.selected_color, { path: '/' });
-
-
-
   }
 
 
   onCancelColor = () => {
-
-
     // update the state with the new array of colors
     this.setState({ current_color: "#ffffff", isColorPickerOpen: false })
-
-
 
   }
 
