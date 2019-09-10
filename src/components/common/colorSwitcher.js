@@ -6,6 +6,7 @@ import Cookies from 'universal-cookie';
 
 import { PhotoshopPicker } from 'react-color';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Button from "../atoms/button";
 
 
 
@@ -26,7 +27,8 @@ let styles = {
     height: '100vh',
     display: 'flex',
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    flexDirection: "column"
   },
   cover: {
     background: "radial-gradient(#fff, rgba(0,0,0,0.4) 60%)",
@@ -196,6 +198,38 @@ export default class ColorSwitcher extends Component {
 
   }
 
+  onReset = () => {
+    //delete cookie and reset variables. 
+    this.setState({
+      color: {
+        hex: '#E91E63',
+        rgb: {
+          r: "100",
+          g: '100',
+          b: "100"
+        }
+      },
+      selected_color: {
+        hex: '#E91E63',
+        rgb: {
+          r: "233",
+          g: '30',
+          b: "99"
+        },
+        hsl: {
+          "h": 339.60591133004925,
+          "s": 0.8218623481781375,
+          "l": 0.5156862745098039,
+          "a": 1
+        }
+      },
+      isColorPickerOpen: !this.state.isColorPickerOpen
+    }, () => this.setColorVars())
+
+    cookies.remove('paletteColorObj');
+
+  }
+
   render() {
     return (
 
@@ -209,8 +243,9 @@ export default class ColorSwitcher extends Component {
               onAccept={this.onAcceptColor}
               onCancel={this.onCancelColor}
               onChangeComplete={this.onChangeColors}
-              color={this.state.selected_color} />
-
+              color={this.state.selected_color}  />
+  <Button label="Reset To Default" onClick={this.onReset}
+  extraStyle={{background: "#E91E63", color: "#ffffff"}}/>
           </div>
           :
           null}
