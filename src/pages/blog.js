@@ -6,8 +6,6 @@ import SEO from "../components/seo"
 import PageTitle from "../components/pageTitle"
 import BlogCard from "../components/blog/blogCard"
 
-import Img from 'gatsby-image'
-
 const Blog = ({ data }) => {
 
   const { edges: posts } = data.allMarkdownRemark

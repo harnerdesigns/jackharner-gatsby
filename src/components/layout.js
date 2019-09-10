@@ -11,7 +11,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import "./fontawesome";
 import Header from "./common/header"
 import "../scss/style.scss"
-import MainMenu from "./common/mainMenu";
 import Footer from "./common/footer";
 
 

@@ -23,7 +23,7 @@ class ImASlider extends Component {
 
         var result;
 
-        result = firstLetter == "A" || firstLetter == "E" || firstLetter == "I" || firstLetter == "O" || firstLetter == "U";
+        result = firstLetter === "A" || firstLetter === "E" || firstLetter === "I" || firstLetter === "O" || firstLetter === "U";
         return result;
     }
 

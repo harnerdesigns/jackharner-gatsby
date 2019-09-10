@@ -19,7 +19,7 @@ export default class ImageGrid extends Component {
         console.log(index);
 
 
-        if(this.state.activeImage != index){
+        if(this.state.activeImage !== index){
 
             this.setState({
                 activeImage: index
@@ -40,7 +40,7 @@ export default class ImageGrid extends Component {
 
        return (images.map((image, index ) => {
 
-            return (<img id={index} src={image} className={(this.state.activeImage == index ? "active-image" : "")} key={index} onClick={(e)=>{this.onClick(index)}}  />)
+            return (<img alt="" id={index} src={image} className={(this.state.activeImage === index ? "active-image" : "")} key={index} onClick={(e)=>{this.onClick(index)}}  />)
 
         }))
     }
