@@ -40,18 +40,35 @@ module.exports = {
     {
       resolve: "gatsby-transformer-remark",
       options: {
-        plugins: [{
-          resolve: `gatsby-remark-images`,
-          options: {
-            maxWidth: 590,
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {'js': 'javascript'},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+              languageExtensions: [],
+              prompt: {
+                user: "jack",
+                host: "localhost",
+                global: false,
+              },
+            },
           },
-        },
-        {
-          resolve: `gatsby-remark-responsive-iframe`,
-          options: {
-            wrapperStyle: `margin-bottom: 1.0725rem`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
           },
-        }], // just in case those previously mentioned remark plugins sound cool :)
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
+          }], // just in case those previously mentioned remark plugins sound cool :)
       },
     },
     `gatsby-plugin-sharp`,
