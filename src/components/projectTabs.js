@@ -81,7 +81,7 @@ class ProjectTabs extends Component {
                             <p>A Chrome & Firefox extension I developed that puts the Material Design color codes right at your
                               fingertips. Click to copy HEX, #HEX, RGB, RGBA, HSL, & HSLA for whatever format color code you
 						need.</p>
-                            <p>I got tired of looking up the documentation every time I needed a color code. With over 1,000
+                            <p>I got tired of looking up the documentation every time I needed a color code. With over 1,700 weekly
                               users across both browsers, quick access to one of the most popular color palettes was needed.
 					</p>
                             <div className="buttons"><a href="https://materialcolor.xyz" className="button button--large">Get The Extension »</a><a
