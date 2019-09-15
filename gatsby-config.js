@@ -40,7 +40,7 @@ module.exports = {
     {
       resolve: "gatsby-transformer-remark",
       options: {
-        plugins: [
+        plugins: ["gatsby-remark-unwrap-images",
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
@@ -60,7 +60,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 1200,
+              linkImagesToOriginal: false
             },
           },
           {
