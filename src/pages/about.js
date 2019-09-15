@@ -20,7 +20,7 @@ const About = () => (
   <Layout>
     <SEO title="About" />
     <PageTitle>About Me</PageTitle>
-    <container className="full black">
+    <container className="full content black">
       <h2>Hi! My Name is Jack.</h2><h3>I'm a Web Developer based in Albuquerque, NM.</h3>
       <p>I like making stuff with WordPress, learning new things in Web Dev (these days it's React), playing Overwatch, &  spending time with my girlfriend and our three cats.</p>
 
@@ -28,20 +28,20 @@ const About = () => (
       <ImageGrid images={[Chief, Sara, BabyKitty]} />
     </container>
 
-    <container className="slim pink">
+    <container className="content slim pink">
       <h2>In The Beginning</h2>
       <p>I got my start in web development a really long time ago in a far off land called NeoPets. They would give you a single HTML file to play with, and play with it I did. I learned the basics of Typography, Layout, complete with way to many <code>&lt;blink&gt;</code> & <code>&lt;marquee&gt;</code> tags. </p>
     </container>
     <container className="full pink">
 
       <h2>A long time later...</h2></container>
-    <container className="slim pink">
+    <container className="content slim pink">
 
-      <p>In the time that it took you to scroll down, I've developed a passion for clean, responsive design. I made the pretty natural progression from HTML/CSS to learning about Javascript and the DOM, and then on to more of the backend side of things with WordPress/PHP.</p>
+      <p>In the time that it took you to scroll down, I developed a passion for clean, responsive design. I made the pretty natural progression from HTML/CSS to learning about Javascript and the DOM, and then on to more of the backend side of things with WordPress/PHP.</p>
       <p><em>Finally</em>, I was able to build full websites and totally custom applications with a friendly user interface for adding and updating content for all levels of tech-savvy users.</p>
     </container>
 
-    <container className="full white">
+    <container className="content full white">
 
       <h2>Powering an E-Commerce Retail Store</h2>
 
@@ -59,7 +59,7 @@ const About = () => (
       <ImageGrid images={[Shoolu, Returns, ShooluSocial]} />
     </container>
 
-    <container className="full black">
+    <container className="content full black">
       <h2>Lifetime Learner</h2>
 
       <p>The internet is ever changing. The tech used to build things on the web is ever changing. So as developers, we're never really done learning. I like the idea that if you can explain the subject to someone else in a concise helpful manner, then you at least <em>k i n d of</em>  know what you're talking about. </p>
@@ -67,7 +67,7 @@ const About = () => (
 
       <p>I <a href="https://harnerdesigns.com/blog">blog</a> about pretty much everything I learn down this path. Mostly as a reference for myself for later, but also with the hopes of helping someone after me working through the same problems.</p>
     </container>
-    <container className="full white">
+    <container className="content full white">
 
       <h2>Outside The Internet</h2>
 
