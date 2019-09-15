@@ -107,6 +107,12 @@ a {
     letter-spacing: 0.05em;
   }
 
+  ul{
+    list-style: initial;
+    margin-bottom: 0.5em;
+  }
+
+
 
 
 #scrollIndicator {
@@ -175,6 +181,11 @@ a {
     background: #fff;
     color: #000;
   }
+
+  p{
+    font-size: 1.5em;
+    max-width: 50%;
+  }
 }
 
 .half {
@@ -238,7 +249,7 @@ a {
 
 .page_body{
   width: 80%;
-  background: #333;
+  background: $gray;
   min-height: 80vh;
   color: #fff;
   padding: 1em 10vw;

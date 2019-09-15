@@ -41,7 +41,7 @@ const IndexPage = () => (
           <h3>Want To Work With Me?</h3>
           <p>I'm currently available for freelance work. Need help fixing some WordPress bugs, a whole new website, or just a quick refresh on your exisiting online presence? I'm your guy.</p><p>Hit me up on Twitter <a href="https://twitter.com/jackharner">@JackHarner</a> or <a href="mailto:jack@jackharner.com">Shoot Me An Email</a>.</p>
         </div>
-        <div class="or">OR</div>
+        <div class="or tall">OR</div>
         <div class="hire">
           <h3>Want To Hire Me?</h3>
           <p>I'm looking for a Front End Developer role. I've worked extensively with WordPress/PHP, HTML/CSS, and a little React/Redux. I also make really good coffee.</p>
