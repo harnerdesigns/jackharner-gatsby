@@ -28,7 +28,8 @@ let styles = {
     display: 'flex',
     alignItems: "center",
     justifyContent: "center",
-    flexDirection: "column"
+    flexDirection: "column",
+    zIndex: 9999
   },
   cover: {
     background: "radial-gradient(#fff, rgba(0,0,0,0.4) 60%)",
@@ -226,7 +227,7 @@ export default class ColorSwitcher extends Component {
       isColorPickerOpen: !this.state.isColorPickerOpen
     }, () => this.setColorVars())
 
-    cookies.remove('paletteColorObj');
+    cookies.remove('paletteColorObj',  { path: '/' });
 
   }
 
