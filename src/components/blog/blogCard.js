@@ -13,7 +13,7 @@ const BlogCard = ({ post, index }) => (
         <div className="card__titles">
             <h2 className="post__title">{post.frontmatter.title}</h2>
             {(post.frontmatter.subtitle ? <h3 className="post__subtitle">{post.frontmatter.subtitle}</h3> : "")}
-            {(index === 0 ? <p className="post__excerpt">{post.excerpt} <Link to={post.fields.slug}>Read More &raquo;</Link></p> : "" )}
+            {(index === 0 ? <p className="post__excerpt">{post.excerpt} <Link to={post.fields.slug}>Read&nbsp;More&nbsp;&raquo;</Link></p> : "" )}
             </div>
 
  

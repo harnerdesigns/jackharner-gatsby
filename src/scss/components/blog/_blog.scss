@@ -149,16 +149,33 @@
 
 
 .post__body{
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: column;
 
   h2{
     margin-bottom: 0.5em;
+    text-align: center;
   }
 
   p{
     line-height: 1.666em;
+    margin:0 auto 1.5em;
+    width: 100%;
+  }
+
+  .gatsby-highlight{
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .gatsby-resp-image-wrapper{
+
+    width: 100%;
+    max-width: 1200px;
+    margin:0 auto 1.5em;
+
   }
 }

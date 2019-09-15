@@ -5,7 +5,7 @@ subtitle: ""
 featuredImage: "./featuredImage.jpg"
 ---
 
-JackHarner.com hasn't always been this beautiful piece of web design history you see today. It most certainly has not. 
+JackHarner.com hasn't always been this beautiful piece of web design history you see today. It most certainly has not. It was the first domain I ever bought and it's gone through a myriad of changes over the years. 
 
 Thanks to the WayBack Machine, here's the earliest iteration of this site I ever created from back in 2013:
 
@@ -55,7 +55,7 @@ The site's no longer just a single HTML page. It's generated with Gatsby, the Re
 
 One of my favorite things to build was the Color Picker and integrating it with the CSS variables used to theme the site. 
 
-It uses a pretty simple but kind of math heavy script to calculate the appropriate text color for the chose color:
+It uses a pretty simple but kind of math heavy script to calculate the appropriate text color for the chosen color:
 
 ```js
   getTextColor = (c) => {
