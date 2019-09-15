@@ -146,3 +146,19 @@
 
   }
 }
+
+
+.post__body{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  h2{
+    margin-bottom: 0.5em;
+  }
+
+  p{
+    line-height: 1.666em;
+  }
+}

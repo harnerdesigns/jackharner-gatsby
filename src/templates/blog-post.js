@@ -10,14 +10,12 @@ export default function Template({ data }) {
     <Layout>
       <SEO title={post.frontmatter.title} />
       <BlogTitle post={post} />
-      <main className="page_body">
-        <div className="blog-post">
-          <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: post.html }}
-          />
-        </div>
-      </main>
+      <container className="full black content">
+        <main className="post__body" dangerouslySetInnerHTML={{ __html: post.html }}>
+          
+        </main>
+        
+        </container>
     </Layout>
   )
 }
