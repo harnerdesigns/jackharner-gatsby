@@ -1,0 +1,22 @@
+.task-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+    margin: 1em auto;
+
+    p {
+        max-width: 80%;
+        display: block;
+        margin: 3em auto;
+    }
+
+    h3{
+        border-bottom: 1px solid #ccc;
+
+        &:last-child{
+            border-bottom: none;
+            grid-column: 1 / -1;
+            text-align: center;
+        }
+    }
+}
