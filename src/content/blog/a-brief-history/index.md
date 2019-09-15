@@ -51,9 +51,19 @@ I threw together a pretty quick 1 page HTML/CSS site to celebrate getting the do
 
 There's a good chance you can see the resemblance to that first revision, but there are some pretty massive changes under the hood. 
 
-The site's no longer just a single HTML page. It's generated with Gatsby, the React framework. I'm really enjoying learning and playing with Gatsby and React and I can't wait to look forward to what else I can build with it. 
+The site's no longer just a single HTML page. It's generated with Gatsby, the React framework. I'm really enjoying learning and playing with Gatsby and React and I  look forward to seeing what else I can build with it. 
 
 One of my favorite things to build was the Color Picker and integrating it with the CSS variables used to theme the site. 
+
+It uses a pretty simple but kind of math heavy script to calculate the appropriate text color for the chose color:
+
+```js
+  getTextColor = (c) => {
+
+    let o = Math.round(((parseInt(c.r) * 299) + (parseInt(c.g) * 587) + (parseInt(c.b) * 114)) / 1000);
+    return ((o > 125) ? ('black') : ('white'));
+  }
+  ```
 
 ## Around The World In 2 Years.
 
