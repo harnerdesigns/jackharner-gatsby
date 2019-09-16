@@ -1,9 +1,15 @@
 .buttons {
-    width: 80%;
+    width: 100%;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     align-items: center;
     justify-content: center;
+    
+
+    @include breakpoint(laptop){
+        width: 80%;
+    }
 
 }
 
@@ -27,13 +33,33 @@
 
     &.tall {
 
+        position:relative;
+        z-index: 3; 
 
+        &:before {
+            width: 200%;
+            height: 3px;
+            border-radius: 3px;
+            content: '';
+            background: var(--text-color);
+            position: absolute;
+            z-index: -1;
+
+        }
+
+        @include breakpoint(laptop){
         &:before {
             width: 3px;
             height: 70%;
             content: '';
+            border-radius: 3px;
+
             background: var(--text-color);
             position: absolute;
+        }
+
+
+            
         }
 
     }

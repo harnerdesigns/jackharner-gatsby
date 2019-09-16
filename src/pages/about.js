@@ -34,7 +34,8 @@ const About = () => (
     </container>
     <container className="full pink">
 
-      <h2>A long time later...</h2></container>
+      <h2>A long time later...</h2>
+      </container>
     <container className="content slim pink">
 
       <p>In the time that it took you to scroll down, I developed a passion for clean, responsive design. I made the pretty natural progression from HTML/CSS to learning about Javascript and the DOM, and then on to more of the backend side of things with WordPress/PHP.</p>
