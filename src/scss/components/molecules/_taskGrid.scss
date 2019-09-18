@@ -16,7 +16,6 @@
         margin: 1em auto;
 
         @include breakpoint(laptop) {
-            max-width: 80%;
 
             margin: 3em auto;
         }
@@ -25,6 +24,12 @@
     h3 {
         border-bottom: 1px solid #ccc;
         font-weight: 900;
+        text-align: center;
+        padding-bottom: 0.25em;
+
+        @include breakpoint(laptop){
+            text-align: left;
+        }
 
         &:last-child {
             border-bottom: none;
