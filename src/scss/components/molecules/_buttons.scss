@@ -1,13 +1,17 @@
 .buttons {
-    width: 100%;
-    margin: 0 auto;
+    width: 95%;
+    margin: 1em auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     align-items: center;
     justify-content: center;
-    
 
-    @include breakpoint(laptop){
+
+    grid-template-columns: 1fr;
+
+    @include breakpoint(laptop) {
+    grid-template-rows: 1fr;
+
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
         width: 80%;
     }
 
@@ -27,14 +31,14 @@
     background: var(--text-color);
     align-self: center;
     justify-self: center;
-    margin: 1em;
+    margin: 0;
     user-select: none;
 
 
     &.tall {
 
-        position:relative;
-        z-index: 3; 
+        position: relative;
+        z-index: 3;
 
         &:before {
             width: 200%;
@@ -47,26 +51,26 @@
 
         }
 
-        @include breakpoint(laptop){
-        &:before {
-            width: 3px;
-            height: 70%;
-            content: '';
-            border-radius: 3px;
+        @include breakpoint(laptop) {
+            &:before {
+                width: 3px;
+                height: 70%;
+                content: '';
+                border-radius: 3px;
 
-            background: var(--text-color);
-            position: absolute;
-        }
+                background: var(--text-color);
+                position: absolute;
+            }
 
 
-            
+
         }
 
     }
 
     &.wide {
-        position:relative;
-        z-index: 3; 
+        position: relative;
+        z-index: 3;
 
 
         &:before {
