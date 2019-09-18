@@ -25,4 +25,4 @@ BlogTitle.defaultProps = {
     post: {},
 }
 
-export default BlogTitle
+export default BlogTitle 
