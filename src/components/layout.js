@@ -9,8 +9,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import "./fontawesome";
-import Header from "./header"
+import Header from "./common/header"
 import "../scss/style.scss"
+import Footer from "./common/footer";
 
 
 
@@ -34,10 +35,7 @@ const Layout = ({ children }) => {
 
         {children}
 
-        <footer class="slim pink">
-
-          <section class="copyright">&copy; 2019 Jack Harner | <a href="https://github.com/harnerdesigns/jackharner-gatsby"> Built With Gatsby</a></section>
-        </footer>
+        <Footer />
       </div>
     </>
   )

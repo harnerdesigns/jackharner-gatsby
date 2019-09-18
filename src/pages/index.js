@@ -26,7 +26,7 @@ const IndexPage = () => (
     </container>
     <container class="full pink">
       <h2 class="tagline">I Make Websites.</h2>
-      <p class="tagline">I work mostly with <a href="https://harnerdesigns.com/project/tag/wordpress/">WordPress</a>, PHP, & I'm currently learning React, but I love me some good 'ole fashion HTML/CSS.</p>
+      <p class="tagline">I work mostly with <a href="https://harnerdesigns.com/project/tag/wordpress/">WordPress</a>, PHP, & I'm currently learning React, but I love me some good 'ole fashioned HTML/CSS.</p>
       <p class="tagline">Now and then, I write about <a href="https://harnerdesigns.com/blog">Web Design</a> & <a
         href="https://bleedingcoffee.com">Coffee</a>.</p>
 
@@ -41,7 +41,7 @@ const IndexPage = () => (
           <h3>Want To Work With Me?</h3>
           <p>I'm currently available for freelance work. Need help fixing some WordPress bugs, a whole new website, or just a quick refresh on your exisiting online presence? I'm your guy.</p><p>Hit me up on Twitter <a href="https://twitter.com/jackharner">@JackHarner</a> or <a href="mailto:jack@jackharner.com">Shoot Me An Email</a>.</p>
         </div>
-        <div class="or">OR</div>
+        <div class="or tall">OR</div>
         <div class="hire">
           <h3>Want To Hire Me?</h3>
           <p>I'm looking for a Front End Developer role. I've worked extensively with WordPress/PHP, HTML/CSS, and a little React/Redux. I also make really good coffee.</p>
@@ -50,7 +50,7 @@ const IndexPage = () => (
       </section>
 
     </container>
-    <container class="full white" id="followMe">
+    <container class="full black" id="followMe">
       <h2>Let's Chat</h2>
       <section class="socials">
         <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/jackharner" class="twitter">

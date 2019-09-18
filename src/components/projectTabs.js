@@ -73,7 +73,7 @@ class ProjectTabs extends Component {
                             <p>This is the home of all of my Web Design / Development work and writing. It was born out of
                               nessecity for a portfolio website after I had lost the JackHarner.com domain. I'll save that
 						story for another time.</p>
-                            <div className="buttons"><a href="https://harnerdesigns.com" className="button">Check Out My Work »</a>
+                            <div className="buttons"><a href="https://harnerdesigns.com" className="button button--large">Check Out My Work »</a>
                             </div>
                         </div>
                         <div className={"content " + (this.state.openTab === "#materialcolor-thing" ? "is-open" : "")} id="materialcolor-thing">
@@ -81,11 +81,11 @@ class ProjectTabs extends Component {
                             <p>A Chrome & Firefox extension I developed that puts the Material Design color codes right at your
                               fingertips. Click to copy HEX, #HEX, RGB, RGBA, HSL, & HSLA for whatever format color code you
 						need.</p>
-                            <p>I got tired of looking up the documentation every time I needed a color code. With over 1,000
+                            <p>I got tired of looking up the documentation every time I needed a color code. With over 1,700 weekly
                               users across both browsers, quick access to one of the most popular color palettes was needed.
 					</p>
-                            <div className="buttons"><a href="https://materialcolor.xyz" className="button">Get The Extension »</a><a
-                                href="https://github.com/harnerdesigns/material-color" className="button">See The Code »</a>
+                            <div className="buttons"><a href="https://materialcolor.xyz" className="button button--large">Get The Extension »</a><a
+                                href="https://github.com/harnerdesigns/material-color" className="button button--large">See The Code »</a>
                             </div>
 
                         </div>
@@ -96,8 +96,8 @@ class ProjectTabs extends Component {
                             <p>This included maintaining and updating the website, developing internal and customer facing
                               tools, designing and developing email marketing campaigns, managing paid advertising campaigns,
 						developing social media content and more.</p>
-                            <div className="buttons"><a href="https://shoolu.com" className="button">Check Out The Site »</a><a
-                                href="https://harnerdesigns.com/clients/shoolu" className="button">More Shoolu Projects »</a>
+                            <div className="buttons"><a href="https://shoolu.com" className="button button--large">Check Out The Site »</a><a
+                                href="https://harnerdesigns.com/clients/shoolu" className="button button--large">More Shoolu Projects »</a>
                             </div>
 
                         </div>
@@ -106,7 +106,7 @@ class ProjectTabs extends Component {
                             <p>I like Coffee. A lot.</p>
                             <p>So I created a blog about coffee to help fund my caffeine addiction. Learn how to use a French
 						Press, what all the different kinds of coffee drinks are and more!</p>
-                            <div className="buttons"><a href="https://bleedingcoffee.com" className="button">It's Coffee Time »</a>
+                            <div className="buttons"><a href="https://bleedingcoffee.com" className="button button--large">It's Coffee Time »</a>
                             </div>
                         </div>
                     </section>

@@ -1,15 +1,64 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import PageTitle from "../components/pageTitle"
+import BlogCard from "../components/blog/blogCard"
 
-const Blog = () => (
-  <Layout>
-    <SEO title="Blog" />
-    <h1>Blog Coming Soon</h1>
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
-)
+const Blog = ({ data }) => {
 
-export default Blog 
+  const { edges: posts } = data.allMarkdownRemark
+
+  return (
+
+    <Layout>
+      <SEO title="Blog" />
+      <PageTitle>Blog</PageTitle>
+      <main className="page_body page_body--grid">
+
+
+        <div className="blog-posts">
+          {posts
+            .filter(post => post.node.frontmatter.title.length > 0)
+            .map(({ node: post }, index) => {
+              return (
+                <BlogCard post={post} index={index} />
+              )
+            })}
+        </div>
+
+      </main>
+    </Layout>
+  )
+} 
+export default Blog
+
+ 
+export const pageQuery = graphql`
+query IndexQuery {
+  allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}) {
+    edges {
+      node {
+        excerpt(pruneLength: 250)
+        id
+        frontmatter {
+          title
+          subtitle
+          date(formatString: "MMMM DD, YYYY")
+          featuredImage {
+            childImageSharp {
+              resize(width: 500, height: 500, cropFocus: CENTER) {
+                src
+              }
+            }
+          }
+        }
+        fields {
+          slug
+        }
+      }
+    }
+  }
+}
+` 
