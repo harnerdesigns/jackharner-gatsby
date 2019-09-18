@@ -194,12 +194,17 @@ ul {
 
   &.content {
     p {
-      max-width: 50%;
+    font-size: 1em;
+
+      @include breakpoint(laptop) {
+        max-width: 50%;
+      }
+
     }
   }
 
-  h2{
-    @include breakpoint(mobileonly){
+  h2 {
+    @include breakpoint(mobileonly) {
 
       text-align: center;
     }
@@ -233,7 +238,10 @@ ul {
   vertical-align: top;
   //   padding: 0.5em;
 
-  &:after{content: "."; margin-right: -0.1em;}
+  &:after {
+    content: ".";
+    margin-right: -0.1em;
+  }
 }
 
 .title {
@@ -275,8 +283,8 @@ ul {
     font-weight: 100;
   }
 
-  h3{
-    @include breakpoint(mobileonly){
+  h3 {
+    @include breakpoint(mobileonly) {
       display: flex;
       flex-direction: column;
       align-items: center;

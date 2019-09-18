@@ -1,19 +1,32 @@
 .task-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 80%;
+    grid-template-columns: 1fr;
+    width: 95%;
     margin: 1em auto;
 
-    p {
-        max-width: 80%;
-        display: block;
-        margin: 3em auto;
+    @include breakpoint(laptop) {
+        width: 80%;
+
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    h3{
-        border-bottom: 1px solid #ccc;
+    p {
+        max-width: 90%;
+        display: block;
+        margin: 1em auto;
 
-        &:last-child{
+        @include breakpoint(laptop) {
+            max-width: 80%;
+
+            margin: 3em auto;
+        }
+    }
+
+    h3 {
+        border-bottom: 1px solid #ccc;
+        font-weight: 900;
+
+        &:last-child {
             border-bottom: none;
             grid-column: 1 / -1;
             text-align: center;
