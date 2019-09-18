@@ -30,7 +30,7 @@ const About = () => (
 
     <container className="content slim pink">
       <h2>In The Beginning</h2>
-      <p>I got my start in web development a really long time ago in a far off land called NeoPets. They would give you a single HTML file to play with, and play with it I did. I learned the basics of Typography, Layout, complete with way to many <code>&lt;blink&gt;</code> & <code>&lt;marquee&gt;</code> tags. </p>
+      <p>I got my start in web development a really long time ago in a far off land called NeoPets. They would give you a single HTML file to play with, and play with it I did. I learned the basics of Typography, Layout, complete with way too many <code>&lt;blink&gt;</code> & <code>&lt;marquee&gt;</code> tags. </p>
     </container>
     <container className="full pink">
 
