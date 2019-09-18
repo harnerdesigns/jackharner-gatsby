@@ -33,6 +33,7 @@ query BlogPostByPath($slug: String!) {
           sizes {
             ...GatsbyImageSharpSizes
             src
+            originalImg
           }
         }
       }

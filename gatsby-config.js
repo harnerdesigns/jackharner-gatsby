@@ -37,11 +37,12 @@ module.exports = {
       }
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+
     {
       resolve: "gatsby-transformer-remark",
       options: {
-        plugins: ["gatsby-remark-unwrap-images",
-          {
+        plugins: [{
             resolve: `gatsby-remark-prismjs`,
             options: {
               classPrefix: "language-",
@@ -61,7 +62,8 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1200,
-              linkImagesToOriginal: false
+              linkImagesToOriginal: false,
+
             },
           },
           {
@@ -72,7 +74,6 @@ module.exports = {
           }], // just in case those previously mentioned remark plugins sound cool :)
       },
     },
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -86,8 +87,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+
   ],
 }
