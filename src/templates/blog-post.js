@@ -8,7 +8,7 @@ export default function Template({ data }) {
   const post = data.markdownRemark
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} />
+      <SEO title={post.frontmatter.title} image={post.frontmatter.featuredImage.childImageSharp.sizes.src} />
       <BlogTitle post={post} />
       <container className="full black content">
         <main className="post__body" dangerouslySetInnerHTML={{ __html: post.html }}>

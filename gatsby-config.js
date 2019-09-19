@@ -4,6 +4,7 @@ module.exports = {
     title: `Jack Harner`,
     description: `Jack Harner is a freelance Web Developer & Graphic Designer.`,
     author: `@jackharner`,
+    siteUrl: 'http://jackharner.com/'
   },
   plugins: ["gatsby-plugin-catch-links",
     `gatsby-plugin-react-helmet`,
@@ -77,8 +78,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Jack-Harner`,
+        short_name: `JackHarner`,
         start_url: `/`,
         background_color: `#E91E63`,
         theme_color: `#E91E63`,

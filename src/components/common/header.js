@@ -15,7 +15,7 @@ const Header = ({ siteTitle }) => (
       to="/"
       className="logo"
     >
-      <svg viewbox="0 0 100 100" width="100" height="100" id="logo-icon">
+      <svg viewBox="0 0 100 100" width="100" height="100" id="logo-icon">
         <circle cx="50" cy="50" r="50" />
       </svg>
       <h1>Jack Harner</h1>
