@@ -4,7 +4,7 @@ module.exports = {
     title: `Jack Harner`,
     description: `Jack Harner is a freelance Web Developer & Graphic Designer.`,
     author: `@jackharner`,
-    siteUrl: 'http://jackharner.com/'
+    siteUrl: 'https://jackharner.com'
   },
   plugins: ["gatsby-plugin-catch-links",
     `gatsby-plugin-react-helmet`,
@@ -88,6 +88,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
+    `gatsby-plugin-offline`
 
   ],
 }
