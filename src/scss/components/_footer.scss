@@ -1,9 +1,11 @@
-footer{
-.main_nav{
-
-    a{
-        color: var(--text-color);
+footer.main_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  .main_nav {
+    a {
+      color: var(--text-color);
     }
-}
-
+  }
 }
