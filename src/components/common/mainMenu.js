@@ -10,6 +10,8 @@ import ColorSwitcher from "./colorSwitcher";
 
 const MainMenu = () => (
     <nav className="main_nav">
+        <Link to="/portfolio">Portfolio</Link>
+        <a href="https://resume.jackharner.com">Resumé</a>
         <Link to="/about">About</Link>
         <Link to="/blog">Blog</Link>
         {/* <Link to="/mood">Mood</Link> */}

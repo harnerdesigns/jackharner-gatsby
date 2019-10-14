@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PageTitle from "../components/pageTitle"
-import BlogCard from "../components/blog/blogCard"
+import ProjectCard from "../components/portfolio/projectCard"
 
 const Blog = ({ data }) => {
 
@@ -13,17 +13,17 @@ const Blog = ({ data }) => {
   return (
 
     <Layout>
-      <SEO title="Blog" />
-      <PageTitle>Blog</PageTitle>
+      <SEO title="Portfolio" />
+      <PageTitle>Portfolio</PageTitle>
       <main className="page_body page_body--grid">
 
 
-        <div className="blog-posts">
-          {posts.filter(post => post.node.fields.collection === "blog")
+        <div className="projects">
+          {posts.filter(post => post.node.fields.collection === "portfolio")
             .filter(post => post.node.frontmatter.title.length > 0)
             .map(({ node: post }, index) => {
               return (
-                <BlogCard post={post} index={index} />
+                <ProjectCard post={post} index={index} />
               )
             })}
         </div>
@@ -36,7 +36,7 @@ export default Blog
 
  
 export const pageQuery = graphql`
-query IndexQuery {
+query AllBlogsQuery {
   allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}) {
     edges {
       node {
@@ -44,15 +44,14 @@ query IndexQuery {
         id
         frontmatter {
           title
-          subtitle
+          description
+          color
           date(formatString: "MMMM DD, YYYY")
-          featuredImage {
-            childImageSharp {
-              resize(width: 500, height: 500, cropFocus: CENTER) {
-                src
-              }
-            }
-          }
+          tags
+        logo {
+          extension
+          publicURL
+        }
         }
         fields {
           slug

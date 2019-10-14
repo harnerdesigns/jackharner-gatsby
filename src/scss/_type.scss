@@ -128,7 +128,7 @@ ul{
   margin: 0 auto;
 
   @include breakpoint(laptop){
-    width: 50%;
-    font-size: 1.5em;
+    width: 80%;
+    font-size: 1em;
   }
 }

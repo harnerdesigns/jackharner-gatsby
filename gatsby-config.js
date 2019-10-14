@@ -8,7 +8,6 @@ module.exports = {
   },
   plugins: ["gatsby-plugin-catch-links",
     `gatsby-plugin-react-helmet`,
-    'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -29,6 +28,13 @@ module.exports = {
       options: {
         name: `blog`,
         path: `${__dirname}/src/content/blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `portfolio`,
+        path: `${__dirname}/src/content/portfolio`,
       },
     },
     {
@@ -88,6 +94,8 @@ module.exports = {
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
+    'gatsby-plugin-sitemap',
+
   ],
 }
