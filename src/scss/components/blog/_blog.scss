@@ -191,9 +191,14 @@
     width: 100%;
   }
 
+
+  ul{
+    max-width: 40%;
+  }
   .gatsby-highlight {
-    max-width: 80%;
-    margin: 0 auto;
+    max-width: 40%;
+    width: 100%;
+    margin: 0 auto 1.5em;
   }
 
   .gatsby-resp-image-wrapper {
