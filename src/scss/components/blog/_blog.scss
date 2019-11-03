@@ -39,7 +39,7 @@
   width: 100%;
   background: var(--color);
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 5fr;
   align-items: center;
   justify-content: flex-start;
 
@@ -49,14 +49,22 @@
 
   }
 
-  .featuredImage {
+  .featuredImage__wrapper {
     grid-row: 1 / -1;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     width: 100%;
-    height: auto;
+    height: 100%;
+    overflow: hidden;
 
-    img {
-      margin-right: -3em;
+    @include card(-1); 
+    img{
+      width:auto;
+      height: 100%;
+      display: block;
     }
   }
 
@@ -133,25 +141,23 @@
 
 
   &--0 {
+    @include breakpoint(laptop){
 
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 2;
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2;
+    }
 
     .blog__card {
 
-      grid-template-columns: auto 1fr;
-      min-height: 50vh;
+      grid-template-columns: 1fr;      min-height: 50vh;
       @include breakpoint(laptop) {
+        grid-template-columns: auto 1fr;
 
         grid-template-rows: 5fr;
       }
 
 
-      .featuredImage {
-        grid-row: 1 / -1;
-        align-self: flex-start;
-        @include card(-1); 
-      }
+      
 
       .post__title {
         @include breakpoint(laptop) {
@@ -191,9 +197,26 @@
     width: 100%;
   }
 
+
+  ul{
+    max-width: 80%;
+    
+    @include breakpoint(laptop){
+      
+      max-width: 40%;
+
+    }
+  }
   .gatsby-highlight {
     max-width: 80%;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0 auto 1.5em;
+
+    @include breakpoint(laptop){
+      
+      max-width: 40%;
+
+    }
   }
 
   .gatsby-resp-image-wrapper {

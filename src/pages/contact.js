@@ -26,6 +26,30 @@ const Contact = () => (
 
 </container>
 
+<container class="full black" id="followMe">
+      <h2>Other Places You Can Find Me:</h2>
+      <section class="socials">
+        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/jackharner" class="twitter">
+          <FontAwesomeIcon icon={["fab", "twitter"]} />Twitter
+			</a>
+        <a target="_blank" rel="noopener noreferrer" href="https://instagram.com/jackharner" class="instagram">
+          <FontAwesomeIcon icon={["fab", "instagram"]} />Instagram
+			</a>
+        <a target="_blank" rel="noopener noreferrer" href="https://dribbble.com/jackharner" class="dribbble">
+          <FontAwesomeIcon icon={["fab", "dribbble"]} />Dribbble
+			</a>
+        <a target="_blank" rel="noopener noreferrer" href="https://dev.to/jackharner" class="devto">
+          <FontAwesomeIcon icon={["fab", "dev"]} />Dev.to
+			</a>
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/harnerdesigns" class="github">
+          <FontAwesomeIcon icon={["fab", "github"]} />GitHub
+			</a>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.producthunt.com/@jackharner" class="producthunt">
+          <FontAwesomeIcon icon={["fab", "product-hunt"]} />Product Hunt
+			</a>
+      </section>
+    </container>
+
   </Layout>
 )
 

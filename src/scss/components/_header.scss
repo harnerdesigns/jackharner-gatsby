@@ -5,12 +5,17 @@
   display: grid;
 
   align-items: center;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
 
 
   background: #000;
   z-index: 99999;
   @include card(4);
+
+  @include breakpoint(laptop){
+  grid-template-columns: 1fr 2fr 1fr;
+
+  }
 
   .logo {
     display: grid;
@@ -96,19 +101,3 @@
 
 
 
-.main_nav {
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  grid-column-start: 3;
-
-  a {
-    color: #fff;
-    padding: 0.5em;
-
-    &:hover {
-      background: transparentize($color: #fff, $amount: 0.8);
-    }
-  }
-}

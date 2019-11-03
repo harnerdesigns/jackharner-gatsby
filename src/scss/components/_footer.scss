@@ -2,7 +2,12 @@ footer.main_footer {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  flex-direction: row;
+  flex-direction: column;
+  color: var(--text-color);
+
+  @include breakpoint(laptop){
+    flex-direction:column;
+  }
   .main_nav {
     a {
       color: var(--text-color);

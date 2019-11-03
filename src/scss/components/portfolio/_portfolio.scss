@@ -1,0 +1,148 @@
+.page_body--grid {
+
+    .projects {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: stretch;
+        justify-content: flex-start;
+        grid-gap: 2em;
+
+        @include breakpoint(laptop) {
+            grid-template-columns: repeat(2, 1fr);
+
+
+        }
+    }
+}
+
+
+.project__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project__card {
+    width: 100%;
+    padding: 1em 3em 3em;
+
+    .logo {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1em;
+    }
+
+    .card__titles {
+        background: #fff;
+        padding: 0.5em;
+        margin: 0 -3em -3em -3em;
+
+        @include card(-2);
+
+
+        .project__title {
+            color: #333;
+            text-align: center;
+            margin: 0;
+        }
+
+        .project__description {
+            color: #666;
+            text-align: center;
+            margin: 0;
+        }
+
+        .project__tags {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 1em;
+            font-weight: 100;
+
+            li {
+                list-style: none;
+                padding: 0.15em;
+
+                &:after {
+                    content: ',';
+                }
+
+                &:last-child {
+
+                    &:after {
+                        content: none;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+.project--bleedingCoffee {
+
+    .logo {
+        margin: -10% 0 -20%;
+    }
+}
+
+
+
+
+.project__logo {
+
+    margin-bottom: 1em;
+    width: 100%;
+
+    .project__link {
+        margin-bottom: 1em;
+    }
+
+    .project__card {
+        padding: 1em 30vw 1em;
+
+        .card__titles{
+            @include card(2);
+        }
+    }
+}
+
+
+.project__body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: flex-start;
+
+
+
+    .project__images {
+        position: sticky;
+        top: 3em;
+        display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+flex-direction: column;
+        img {
+            margin: 3em;
+        }
+    }
+
+
+    .project__content {
+
+        margin: 3em 1em;
+
+
+        p {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}
