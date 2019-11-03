@@ -3,6 +3,7 @@ date: 2019-07-20T17:12:33.962Z
 title: "A Brief History Of JackHarner.com" 
 subtitle: ""
 featuredImage: "./featuredImage.jpg"
+tags: ['history']
 ---
 
 JackHarner.com hasn't always been this beautiful piece of web design history you see today. It most certainly has not. It was the first domain I ever bought and it's gone through a myriad of changes over the years. 
