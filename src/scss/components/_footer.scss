@@ -6,7 +6,7 @@ footer.main_footer {
   color: var(--text-color);
 
   @include breakpoint(laptop){
-    flex-direction:row;
+    flex-direction:column;
   }
   .main_nav {
     a {

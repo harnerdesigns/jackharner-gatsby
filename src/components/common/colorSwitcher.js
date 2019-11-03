@@ -191,11 +191,11 @@ export default class ColorSwitcher extends Component {
 
     cookies.set('paletteColorObj', this.state.selected_color, { path: '/' });
 
-    ReactGA.event({
-      category: 'Color',
-      action: 'Picked Color',
-      label: this.state.selected_color
-    });
+    // ReactGA.event({
+    //   category: 'Color',
+    //   action: 'Picked Color',
+    //   label: this.state.selected_color
+    // });
   }
 
 
@@ -234,10 +234,10 @@ export default class ColorSwitcher extends Component {
     }, () => this.setColorVars())
 
     cookies.remove('paletteColorObj',  { path: '/' });
-    ReactGA.event({
-      category: 'Color',
-      action: 'Reset Color'
-    });
+    // ReactGA.event({
+    //   category: 'Color',
+    //   action: 'Reset Color'
+    // });
 
   }
 
