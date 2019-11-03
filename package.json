@@ -1,9 +1,9 @@
 {
   "name": "jackharner-gatsby",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "JackHarner.com",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Jack Harner <jack@jackharner.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-brands-svg-icons": "^5.9.0",
@@ -56,8 +56,8 @@
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "preDeploy": "gatsby build --prefix-paths",
-    "deploy": "gatsby build && gh-pages -d ./public"
-  },
+    "deploy": "npm run preDeploy && gh-pages -d public"
+    },
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
