@@ -123,12 +123,9 @@ blockquote {
 
 
 ul{
-  width: 80%;
-  font-size: 1.25em;
   margin: 0 auto;
 
   @include breakpoint(laptop){
-    width: 80%;
     font-size: 1em;
   }
 }
