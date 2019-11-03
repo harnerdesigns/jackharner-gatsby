@@ -1,0 +1,115 @@
+.main_head {
+    .main_nav {
+        display: none;
+
+        &.is-open {
+
+            display: flex;
+            position: absolute;
+            bottom: 0;
+            flex-direction: column;
+            width: 100%;
+            transform: translateY(100%);
+            background: #333;
+        }
+
+        @include breakpoint(laptop) {
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            grid-column-start: 3;
+            position: relative;
+
+
+        }
+
+        a {
+            color: #fff;
+            padding: 0.5em;
+
+            &:hover {
+                background: transparentize($color: #fff, $amount: 0.8);
+            }
+
+            @include breakpoint(mobileonly) {
+
+                font-size: 1.25em;
+                border-bottom: 1px solid #ccc;
+            }
+        }
+
+
+        #colorSwitcher{
+            padding: 0.5em;
+            margin-right: auto;
+        }
+
+
+
+    }
+
+    #mobileMenuToggle {
+
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: none;
+        color: #fff;
+        border: none;
+        width: auto;
+
+        svg {
+            font-size: 2em;
+        }
+
+        &:after {
+            content: "MENU";
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+        }
+
+        @include breakpoint(laptop) {
+
+            display: none;
+        }
+    }
+}
+
+.main_footer{
+
+    .main_nav{
+        
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        margin: 1em auto;
+
+        @include breakpoint(laptop){
+            display: flex;
+            
+        }
+
+        a {
+            color: #fff;
+            padding: 0.5em;
+            text-align: center;
+
+            &:hover {
+                background: transparentize($color: #fff, $amount: 0.8);
+            }
+
+        }
+
+
+
+    }
+
+    #mobileMenuToggle{
+        display: none;
+    }
+}

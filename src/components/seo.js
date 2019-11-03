@@ -10,8 +10,9 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import favicon from '../images/icon.png';
+import defaultOGImage from '../images/Jack-Harner-Open-Graph--large.jpg'
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, image }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -20,6 +21,7 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            siteUrl
           }
         }
       }
@@ -27,8 +29,20 @@ function SEO({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const siteUrl = site.siteMetadata.siteUrl
+  let imageUrl = "";
+  if (image){
 
-  return (
+    imageUrl = siteUrl + image;
+
+  }
+  else {
+    imageUrl = siteUrl + defaultOGImage;
+
+
+  }
+
+  return ( 
     <Helmet
       htmlAttributes={{
         lang,
@@ -49,12 +63,16 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
+          property: `og:image`,
+          content: imageUrl,
+        },
+        {
           property: `og:type`,
           content: `website`,
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,

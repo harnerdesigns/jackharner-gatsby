@@ -5,7 +5,14 @@
     align-items: center;
     justify-content: center;
     grid-gap: 1em;
-    margin: 5em -10vw;
+
+    margin: 2em auto;
+    @include breakpoint(laptop){
+
+        margin: 5em 0;
+        width: 80%;
+    }
+
     
     img{
         width: 100%; 
@@ -23,10 +30,14 @@
 
         &.active-image{
 
-            max-height: 60vh;
-            width: auto;
-            grid-column: 1/-1;
-            order: -1;
+            @include breakpoint(laptop){
+
+                
+                max-height: 60vh;
+                width: auto;
+            }
+                grid-column: 1/-1;
+                order: -1;
             transition: none;
 
             &:hover{

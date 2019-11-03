@@ -5,171 +5,163 @@ $dribbble: #ea4c89;
 $github: #111;
 $behance: #1769ff;
 $devto: #000;
-$producthunt: #DA552F;
-
-
+$producthunt: #da552f;
 
 @mixin gradient($color) {
-    background: $color;
+  background: $color;
 }
 
-
 .socials {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
 
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 80%;
-    align-items: center;
+  @include breakpoint(mobileonly) {
+    width: 100%;
     justify-content: center;
+    flex-direction: column;
+  }
+
+  a {
+    text-decoration: none;
+
+    display: block;
 
     @include breakpoint(mobileonly) {
-        width: 100%;
-        justify-content: center;
-        flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  a {
+    box-shadow: 0 2px 3px transparentize(#000, 0.7);
+    width: 33vmin;
+    height: 33vmin;
+    margin: 1vw;
+    background: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    transition: background 300ms;
+
+    @include breakpoint(mobileonly) {
+      flex-direction: row;
+      width: 100%;
+      font-size: 1em;
+      height: auto;
+      justify-content: flex-start;
+      margin: 1vw 0;
     }
 
-    a {
-        text-decoration: none;
+    svg {
+      transition: all 300ms;
+      font-size: 4em;
+      margin-bottom: 0.25em;
 
-        display: block;
+      @include breakpoint(mobileonly) {
+        font-size: 2em;
+        margin: 0.5em;
+      }
+    }
+
+    &.devto svg {
+      height: 1em;
+      width: auto;
+    }
+
+    &.facebook {
+      color: $facebook;
+
+      &:hover {
+        @include gradient($facebook);
+      }
+    }
+
+    &.producthunt {
+      color: $producthunt;
+
+      &:hover {
+        @include gradient($producthunt);
+      }
+    }
+
+    &.twitter {
+      color: $twitter;
+
+      &:before {
+        content: "My Favorite";
+        font-size: 0.6em;
+        color: #aaa;
 
         @include breakpoint(mobileonly) {
-
-            width: 100%;
+          display: none;
         }
+      }
+
+      &:hover {
+        @include gradient($twitter);
+
+        &:before {
+          color: #fff;
+        }
+      }
     }
 
-    a {
-        box-shadow: 0 2px 3px transparentize(#000, 0.7);
-        width: 33vmin;
-        height: 33vmin;
-        margin: 1vw;
+    &.instagram {
+      color: $instagram;
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-
-        font-size: 1.5em;
-        font-weight: 400;
-        text-transform: uppercase;
-        letter-spacing: 0.25em;
-        transition: background 300ms;
-
-        @include breakpoint(mobileonly) {
-
-            flex-direction: row;
-            width: 100%;
-            font-size: 1em;
-            height: auto;
-            justify-content: flex-start;
-        }
-
-        svg {
-            transition: all 300ms;
-            font-size: 4em;
-            margin-bottom: 0.25em;
-
-
-            @include breakpoint(mobileonly) {
-                font-size: 2em;
-                margin: 0.5em;
-            }
-        }
-
-        &.devto svg {
-            height: 1em;
-            width: auto;
-        }
-
-
-        &.facebook {
-            color: $facebook;
-
-            &:hover {
-                @include gradient($facebook);
-            }
-        }
-
-        &.producthunt {
-            color: $producthunt;
-
-            &:hover {
-                @include gradient($producthunt);
-            }
-        }
-
-        &.twitter {
-            color: $twitter;
-
-            &:before {
-                content: "My Favorite";
-                font-size: 0.6em;
-                color: #aaa;
-
-                @include breakpoint(mobileonly) {
-                    display: none;
-                }
-            }
-
-            &:hover {
-                @include gradient($twitter);
-
-                &:before {
-                    color: #fff;
-                }
-            }
-        }
-
-        &.instagram {
-            color: $instagram;
-
-            &:hover {
-                @include gradient($instagram);
-            }
-        }
-
-        &.dribbble {
-            color: $dribbble;
-
-            &:hover {
-                @include gradient($dribbble);
-            }
-        }
-
-        &.github {
-            color: $github;
-
-            &:hover {
-                @include gradient($github);
-            }
-        }
-
-        &.behance {
-            color: $behance;
-
-            &:hover {
-                @include gradient($behance);
-            }
-        }
-
-        &.devto {
-            color: $devto;
-
-            &:hover {
-                @include gradient($devto);
-            }
-        }
-
-
-        &:hover {
-            opacity: 1;
-            color: #fff;
-
-            svg {
-                fill: #fff;
-            }
-        }
+      &:hover {
+        @include gradient($instagram);
+      }
     }
+
+    &.dribbble {
+      color: $dribbble;
+
+      &:hover {
+        @include gradient($dribbble);
+      }
+    }
+
+    &.github {
+      color: $github;
+
+      &:hover {
+        @include gradient($github);
+      }
+    }
+
+    &.behance {
+      color: $behance;
+
+      &:hover {
+        @include gradient($behance);
+      }
+    }
+
+    &.devto {
+      color: $devto;
+
+      &:hover {
+        @include gradient($devto);
+      }
+    }
+
+    &:hover {
+      opacity: 1;
+      color: #fff;
+
+      svg {
+        fill: #fff;
+      }
+    }
+  }
 }

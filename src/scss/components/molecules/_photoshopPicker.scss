@@ -1,0 +1,9 @@
+.photoshop-picker {
+
+    width: 90%!important;
+    max-width: 513px;
+
+    & + .button{
+        width: auto;
+    }
+}

@@ -4,7 +4,7 @@ import React from "react"
 
 import Headroom from "react-headroom";
 
-import Icon from "../images/icon.png";
+import MainMenu from "./mainMenu";
 
 const Header = ({ siteTitle }) => (
   <Headroom calcHeightOnResize upTolerance={100}>
@@ -15,17 +15,12 @@ const Header = ({ siteTitle }) => (
       to="/"
       className="logo"
     >
-      <img src={Icon} alt="Jack Harner Icon" />
-      <h1>
-        {siteTitle}
-      </h1>
+      <svg viewBox="0 0 100 100" width="100" height="100" id="logo-icon">
+        <circle cx="50" cy="50" r="50" />
+      </svg>
+      <h1>Jack Harner</h1>
     </Link>
-    <nav className="main_nav">
-      <Link to="/about">About</Link>
-      <Link to="/blog">Blog</Link>
-      <Link to="/mood">Mood</Link>
-      <Link to="/contact">Contact</Link>
-    </nav>
+<MainMenu />
   </header>
   </Headroom>
 )
