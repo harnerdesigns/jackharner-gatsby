@@ -1,11 +1,15 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BlogTitle from "../components/blog/blogTitle";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
 // import '../css/blog-post.css';
-export default function Template({ data }) {
-  const post = data.markdownRemark
+export default function Template(props) {
+  const post = props.data.markdownRemark
+  const { previous, next } = props.pageContext
+  console.log(previous);
   return (
     <Layout>
       <SEO title={post.frontmatter.title} image={post.frontmatter.featuredImage.childImageSharp.sizes.src} />
@@ -16,6 +20,34 @@ export default function Template({ data }) {
         </main>
         
         </container>
+      <nav class="postNavigation">
+        <ul
+          style={{
+            display: `flex`,
+            flexWrap: `wrap`,
+            justifyContent: `space-between`,
+            listStyle: `none`,
+            padding: 0,
+          }}
+        >
+          <li>
+            {previous && (
+              <Link to={previous.fields.slug} rel="prev">
+                <FontAwesomeIcon icon="arrow-left"></FontAwesomeIcon> {previous.frontmatter.title}
+              </Link>
+            )}
+          </li>
+          <li><h3>More Posts by Jack Harner</h3></li>
+          <li>
+            {next && (
+              <Link to={next.fields.slug} rel="next">
+                {next.frontmatter.title} <FontAwesomeIcon icon="arrow-right"></FontAwesomeIcon>
+
+                </Link>
+            )}
+          </li>
+        </ul>
+      </nav>
     </Layout>
   )
 }

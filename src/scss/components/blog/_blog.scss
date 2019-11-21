@@ -227,3 +227,37 @@
 
   }
 }
+
+
+nav.postNavigation{
+
+  width: 65%;
+  color: #fff;
+  margin: 1em auto;
+
+h3{
+  text-align: center;
+}
+
+  li{
+    margin: 0;
+    
+    a{
+      background: var(--color);
+      text: var(--text-color);
+      color: inherit;
+      padding: 0.5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg{
+        font-size: 1.5em;
+        margin: 0 0.25em;
+      }
+    }
+    h3{
+      margin: 0;
+    }
+  }
+}

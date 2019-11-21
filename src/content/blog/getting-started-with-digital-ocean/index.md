@@ -25,11 +25,11 @@ In the upper right hand corner of the page, click on your little profile picture
 
 Click on "Create A Team".
 
-{{ Menu Screenshot }}
+![Create A Team Menu Item](./create-a-team.jpg)
 
-### It's All In The Name
+### It's All In The Name 
 
-{{ Team Name Screenshot }}
+![Setting the Team Name](./team-name.jpg)
 
 Type in your team name and either change or verify the "Team Contact Email". That email is where all the team related billing and alert emails will go. 
 
@@ -41,14 +41,18 @@ Click on "Create Team"
 
 ### Dolla Dolla Bills Y'all
 
-{{ Payment Info Screenshot }}
+![Adding Payment Info](./payment.jpg)
 
 On the next page select (or add) your preferred Payment Method for the Team. This payment method will be used for all charges accrued on the team, but members of the team _will NOT_ have access to your payment info. 
 
 ### Invite Time
 
-{{ Invite Screenshot }}
+![Add emails to invite](./invite.jpg)
 
 The next page is where you can invite everyone you want to give access. Enter in 1 Email per line. Those emails will get an invite to either create a Digital Ocean account, or connect an existing one to the team. 
 
 > **REMEMBER** - Anybody you invite to your team can spin up and destroy servers or anything in the account. Be careful who you give access. 
+
+## That's All Folks
+
+Now that you have your DigitalOcean Team set up you can add Droplets to your team, invite more team members, and everything else DigitalOcean has to offer. 

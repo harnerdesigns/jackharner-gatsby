@@ -3,14 +3,15 @@ footer.main_footer {
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-  color: var(--text-color);
+  color: var(--darker-text-color);
+  background: var(--darkerColor);
 
   @include breakpoint(laptop){
     flex-direction:column;
   }
   .main_nav {
     a {
-      color: var(--text-color);
+      color: var(--darker-text-color);
     }
   }
 }

@@ -67,7 +67,6 @@ class ImASlider extends Component {
     });
 
     this.timeout3 = setTimeout(() => {
-      //search function
       this.removeWord(this.state.typedTitle.length)
     }, 1500);
 

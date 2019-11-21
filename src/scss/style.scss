@@ -263,6 +263,11 @@ ul {
   }
 }
 
+.headroom-wrapper + container{
+  min-height: 70vh;
+  position: relative;
+}
+
 .title {
   padding: 0 0.25em;
   display: block;

@@ -3,7 +3,7 @@ date: 2019-07-20T17:12:33.962Z
 title: "Shoolu" 
 logo: "./shoolu-logo.svg"
 description: "E-Commerce Design & More"
-color: "#0fb681"
+color: "#02a974"
 tags: ["HTML", "BigCommerce", "Webpack"]
 images: ["./New-Shoolu-Home.png"]
 ---
@@ -27,7 +27,7 @@ This includes:
 
 On top of that, it's a very small company so occasionally I help out with: 
 
-* Developing internal & customer-facing tools. <a href="https://returns.shoolu.com">Shoolu's Returns Portal</a> streamlined the return process for our customers, reducing support tickets and customer calls. 
+* Developing internal & customer-facing tools. <a href="https://returns.shoolu.com" target="_blank" rel="noopener">Shoolu's Returns Portal</a> streamlined the return process for our customers, reducing support tickets and customer calls. 
 * Tracking down or taking & processing product photos to meet Amazon's requirements. I've automated large portions of this task with Photoshop Actions, Powershell, & Python.
 * Responding to customer support issues including processing exchanges, fixing shipping errors, & answering general questions. 
 

@@ -41,6 +41,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               slug
               collection
             }
+            frontmatter {
+                  title
+              }
           }
         }
       }
