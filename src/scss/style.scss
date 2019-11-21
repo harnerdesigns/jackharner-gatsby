@@ -203,6 +203,25 @@ ul {
     }
   }
 
+  &.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+    padding: 10vw 1em;
+    
+    @include breakpoint(laptop){
+      padding: 10vw;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: stretch;
+
+    }
+
+    > h1{
+      grid-column: 1 / -1;
+      text-align: center;
+    }
+  }
+
   h2 {
     @include breakpoint(mobileonly) {
 

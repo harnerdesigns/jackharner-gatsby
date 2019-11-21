@@ -37,7 +37,7 @@
         padding: 0.5em;
         margin: 0 -3em -3em -3em;
 
-        @include card(-2);
+        // @include card(-2);
 
 
         .project__title {
@@ -59,10 +59,12 @@
             color: #999;
             font-size: 1em;
             font-weight: 100;
+            margin: 0.5em;
 
             li {
                 list-style: none;
                 padding: 0.15em;
+                margin: 0;
 
                 &:after {
                     content: ',';
@@ -85,7 +87,7 @@
 .project--bleedingCoffee {
 
     .logo {
-        margin: -10% 0 -20%;
+        margin: -20% 0 -20%;
     }
 }
 
@@ -102,10 +104,16 @@
     }
 
     .project__card {
-        padding: 1em 30vw 1em;
 
-        .card__titles{
+        @include breakpoint(laptop){
+
+            padding: 1em 30vw 1em;
+        }
+
+        .card__titles {
             @include card(2);
+            // width: 100%;
+
         }
     }
 }
@@ -113,36 +121,71 @@
 
 .project__body {
     display: grid;
-    grid-template-columns: 1fr 1fr;
 
     align-items: flex-start;
+
+    grid-template-columns: 1fr 2fr;
+
+
+    @include breakpoint(laptop) {
+
+        grid-template-columns: 2fr 4fr;
+
+    }
 
 
 
     .project__images {
-        position: sticky;
-        top: 3em;
+
         display: flex;
 
-align-items: center;
+        align-items: center;
 
-justify-content: center;
+        justify-content: center;
 
-flex-direction: column;
+        flex-direction: column;
+
         img {
+            margin: 1em;
+            width: 100%;
+        }
+
+        position: relative;
+
+
+        @include breakpoint(laptop) {
+            position: sticky;
+            top: 3em;
             margin: 3em;
+
         }
     }
 
 
     .project__content {
 
-        margin: 3em 1em;
+        margin: 1em;
 
+        @include breakpoint(laptop) {
+
+            margin: 3em 1em;
+        }
 
         p {
             width: 100%;
             max-width: 100%;
+            line-height: 1.8;
+            margin: 1.5em auto;
+        }
+        ul{
+            width: 95%;
+
+        }
+
+        li{
+            margin-bottom: 0.35em;
+            line-height: 1.8;
+
         }
     }
 }

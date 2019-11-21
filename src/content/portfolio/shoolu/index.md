@@ -24,6 +24,7 @@ This includes:
 * Develop Social Media Marketing materials and content
 * Generate Email campaigns and maintain the marketing automation
 
+
 On top of that, it's a very small company so occasionally I help out with: 
 
 * Developing internal & customer-facing tools. <a href="https://returns.shoolu.com">Shoolu's Returns Portal</a> streamlined the return process for our customers, reducing support tickets and customer calls. 
@@ -41,7 +42,7 @@ Shoolu is built on BigCommerce and the front end is built using BigCommerce's St
 My improvements to the site include: 
 
 * Updating the Mobile experience of the site, specifically the Header area. The header is essential to the site with direct access to customer support, as well as the search, cart, account info and our main categories. 
-* Implementing our soon to launch Rewards Program, including dynamic multiple Calls to action around the site to get people to sign up and (hopefully) drive more repeat purchases. 
+* Implementing our soon to launch Rewards Program, including multiple dynamic Calls to action around the site to get people to sign up and (hopefully) drive more repeat purchases. 
 * Numerous tweaks and adjustments to the UI, UX, Copy, Content, & Graphics.
-* Needed a feature that got 
-* BigCommerce does not have a way to query specific categories of products and display them programmatically. To deal with this issue, I built an external API that takes in a Category ID, How many products to fetch, and a few other parameters, then returns with the specific products you need to display. The front end then hits the API with AJAX and displays the returned products. Unnecessarily complex, but highly useful for showcasing specific products around the site. 
+* Requested a feature that got implemented into BigCommerce (Thanks Karen!). Being able to submit a url as part of the POST request when logging in to redirect users after successful login. I added a dropdown login form to our header and wanted to be able to log users in and send them back to the same page they were on. I added a hidden field populated with the current URL, and the user is able to seamlessly login and go right back to shopping.
+* BigCommerce does not have a way to query specific categories of products and display them programmatically. To deal with this issue, I built an external API that takes in a Category ID, How many products to fetch, and a few other parameters, then returns with the specific products you need to display. The front end then hits the API with AJAX and displays the returned products. Unnecessarily complex, but highly useful for showcasing specific products around the site. At least until BigCommerce expands their Querying capabilities (I hear GraphQL is coming?).

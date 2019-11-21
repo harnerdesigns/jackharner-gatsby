@@ -2,7 +2,22 @@ body {
   font-size: 125%;
 }
 
-body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6 {
+body,
+caption,
+th,
+td,
+input,
+textarea,
+select,
+option,
+legend,
+fieldset,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size-adjust: 0.5;
 }
 
@@ -122,10 +137,14 @@ blockquote {
 }
 
 
-ul{
-  margin: 0 auto;
+ul {
+  margin: 1em auto;
 
-  @include breakpoint(laptop){
+  @include breakpoint(laptop) {
     font-size: 1em;
+  }
+
+  li {
+    margin-left: 1em;
   }
 }

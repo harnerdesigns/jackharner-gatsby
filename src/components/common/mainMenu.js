@@ -28,9 +28,9 @@ export default class MainMenu extends Component {
     return(<>
         <nav className={"main_nav" + (this.state.isOpen ? " is-open" : "")}>
             <Link to="/portfolio">Portfolio</Link>
-            <a href="https://resume.jackharner.com">Resumé</a>
             <Link to="/blog">Blog</Link>
             <Link to="/about">About</Link>
+            <a href="https://resume.jackharner.com">Resumé</a>
             {/* <Link to="/mood">Mood</Link> */}
             <Link to="/contact">Contact</Link>
             <ColorSwitcher />
