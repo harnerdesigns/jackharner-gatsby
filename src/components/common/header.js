@@ -5,6 +5,7 @@ import React from "react"
 import Headroom from "react-headroom";
 
 import MainMenu from "./mainMenu";
+import logo from "./../../images/jackharner-logo-white-text.svg";
 
 const Header = ({ siteTitle }) => (
   <Headroom calcHeightOnResize upTolerance={100}>
@@ -15,10 +16,7 @@ const Header = ({ siteTitle }) => (
       to="/"
       className="logo"
     >
-      <svg viewBox="0 0 100 100" width="100" height="100" id="logo-icon">
-        <circle cx="50" cy="50" r="50" />
-      </svg>
-      <h1>Jack Harner</h1>
+        <img src={logo} alt="Jack Harner Logo"/>
     </Link>
 <MainMenu />
   </header>

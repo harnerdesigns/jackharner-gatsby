@@ -91,7 +91,7 @@ module.exports = {
         background_color: `#E91E63`,
         theme_color: `#E91E63`,
         display: `minimal-ui`,
-        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/jackharner-icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-sass`,
