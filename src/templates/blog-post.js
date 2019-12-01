@@ -24,15 +24,7 @@ export default function Template(props) {
 
       </container>
       <nav class="postNavigation">
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
+        <ul>
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
@@ -40,7 +32,7 @@ export default function Template(props) {
               </Link>
             )}
           </li>
-          <li><h3>More Posts by Jack Harner</h3></li>
+          <li className="title"><h3>More Posts by Jack Harner</h3></li>
           <li>
             {next && (
               <Link to={next.fields.slug} rel="next">
