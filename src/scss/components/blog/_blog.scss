@@ -146,11 +146,11 @@
   // First Blog Card In Grid
 
 
-  &--0 {
+  &--0, &--3 {
     @include breakpoint(laptop){
 
       grid-column: 1 / span 2;
-      grid-row: 1 / span 2;
+      // grid-row: 1 / span 2;
     }
 
     .blog__card {

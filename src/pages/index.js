@@ -44,7 +44,7 @@ const IndexPage = ({ data }) => {
               <Link to={post.fields.slug} className="blog--link">
                 {post.frontmatter.title}
                 <span className="subtitle">{post.frontmatter.subtitle}</span>
-                {(post.fields.externalLink ? <FontAwesomeIcon icon="external-link-alt" className="external-link__icon"></FontAwesomeIcon> : "")}
+                {(post.fields.externalLink ?  <a className="external-link__icon" href={post.fields.externalLink}><FontAwesomeIcon icon="external-link-alt" ></FontAwesomeIcon></a> : "")}
               </Link>
             </>
           )
