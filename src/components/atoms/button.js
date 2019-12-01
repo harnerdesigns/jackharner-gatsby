@@ -12,13 +12,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 
 
-const Button = ({ label, onClick, type, extraStyle, icon, href }) => {
+const Button = ({ label, onClick, type, extraStyle, icon, href, ...others }) => {
 
 
 
   if (href) {
 
-   return( <a href={href} style={extraStyle} className={"button button--" + type} >
+   return( <a href={href} style={extraStyle} className={"button button--" + type} {...others}>
 
 {(icon ? <FontAwesomeIcon icon={icon} /> : "")}
           <span className="label" dangerouslySetInnerHTML={label}>
@@ -32,7 +32,7 @@ const Button = ({ label, onClick, type, extraStyle, icon, href }) => {
 
 
     return (
-      <button onClick={onClick} style={extraStyle} className={"button button--" + type} >
+      <button onClick={onClick} style={extraStyle} className={"button button--" + type} {...others}>
           {(icon ? <FontAwesomeIcon icon={icon} /> : "")}
           <span className="label" dangerouslySetInnerHTML={label}>
 

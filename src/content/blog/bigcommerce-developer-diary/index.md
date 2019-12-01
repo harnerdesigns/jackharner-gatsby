@@ -1,7 +1,7 @@
 ---
 date: 2019-11-22T17:14:33.962Z
 title: "BigCommerce Developer Diary" 
-subtitle: ""
+subtitle: "A Week In My Work Life"
 featuredImage: "./featuredImage.jpg"
 tags: ['BigCommerce']
 externalLink: "https://medium.com/bigcommerce-developer-blog/developer-diary-jack-harner-shoolu-com-ad163caeda35"

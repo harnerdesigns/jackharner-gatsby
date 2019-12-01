@@ -16,7 +16,7 @@ export default function Template(props) {
       <SEO title={post.frontmatter.title} image={post.frontmatter.featuredImage.childImageSharp.sizes.src} />
       <BlogTitle post={post} />
       <container className="half black content">
-        {(post.fields.externalLink ? <Button href={post.fields.externalLink} icon="external-link-alt" label={{__html:  " <strong>See Full Post</strong> @ " + (new URL(post.fields.externalLink)).hostname}}type="large" extraStyle={{width: '80%'}} />
+        {(post.fields.externalLink ? <Button href={post.fields.externalLink} target="_blank" rel="noopener noreferrer" icon="external-link-alt" label={{__html:  " <strong>See Full Post</strong> @ " + (new URL(post.fields.externalLink)).hostname}}type="large" extraStyle={{width: '80%'}} />
            : "")}
         <main className="post__body" dangerouslySetInnerHTML={{ __html: post.html }}>
 
