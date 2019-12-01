@@ -7,22 +7,43 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 
 
-const Button = ({ label, onClick, type, extraStyle }) => {
+
+const Button = ({ label, onClick, type, extraStyle, icon, href }) => {
 
 
-  return (
-    <button onClick={onClick} style={extraStyle} className={"button button--" + type}>
- 
-      {label}
 
-     
-    </button>
+  if (href) {
+
+   return( <a href={href} style={extraStyle} className={"button button--" + type} >
+
+{(icon ? <FontAwesomeIcon icon={icon} /> : "")}
+          <span className="label" dangerouslySetInnerHTML={label}>
+
+          </span>
+
+</a>)
 
 
-  )
+  } else {
+
+
+    return (
+      <button onClick={onClick} style={extraStyle} className={"button button--" + type} >
+          {(icon ? <FontAwesomeIcon icon={icon} /> : "")}
+          <span className="label" dangerouslySetInnerHTML={label}>
+
+          </span>
+
+
+      </button>
+
+
+    )
+  }
 }
 
 Button.propTypes = {
