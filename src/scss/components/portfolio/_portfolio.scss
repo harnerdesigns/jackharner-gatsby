@@ -20,6 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .project__card {
@@ -187,5 +188,15 @@
             line-height: 1.8;
 
         }
+    }
+}
+
+
+.recent-projects{
+    @extend .latest-posts;
+    margin: 3em auto 3em;
+
+    .project__title{
+        font-size: 1.5em;
     }
 }

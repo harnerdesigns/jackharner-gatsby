@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BlogTitle from "../components/blog/blogTitle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Button from "../components/atoms/button";
 
 // import '../css/blog-post.css';
 export default function Template(props) {
@@ -14,22 +15,16 @@ export default function Template(props) {
     <Layout>
       <SEO title={post.frontmatter.title} image={post.frontmatter.featuredImage.childImageSharp.sizes.src} />
       <BlogTitle post={post} />
-      <container className="full black content">
+      <container className="half black content">
+        {(post.fields.externalLink ? <Button href={post.fields.externalLink} target="_blank" rel="noopener noreferrer" icon="external-link-alt" label={{__html:  " <strong>See Full Post</strong> @ " + (new URL(post.fields.externalLink)).hostname}}type="large" extraStyle={{width: '80%'}} />
+           : "")}
         <main className="post__body" dangerouslySetInnerHTML={{ __html: post.html }}>
-          
+
         </main>
-        
-        </container>
+
+      </container>
       <nav class="postNavigation">
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
+        <ul>
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
@@ -43,7 +38,7 @@ export default function Template(props) {
               <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title} <FontAwesomeIcon icon="arrow-right"></FontAwesomeIcon>
 
-                </Link>
+              </Link>
             )}
           </li>
         </ul>
@@ -69,6 +64,9 @@ query BlogPostByPath($slug: String!) {
           }
         }
       }
+    }
+    fields{
+      externalLink
     }
   }
 }

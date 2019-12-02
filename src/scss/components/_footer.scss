@@ -3,15 +3,15 @@ footer.main_footer {
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-  color: var(--darker-text-color);
-  background: var(--darkerColor);
+  color: var(--text-color);
+  background: radial-gradient(circle at 50% 0, var(--color), var(--darkerColor));
 
   @include breakpoint(laptop){
     flex-direction:column;
   }
   .main_nav {
     a {
-      color: var(--darker-text-color);
+      color: var(--text-color);
     }
   }
 }

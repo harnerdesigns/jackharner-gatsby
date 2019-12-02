@@ -14,7 +14,14 @@ p.tagline {
   text-align: left;
   margin-bottom: 0.5em;
   // font-size: 2em;
+
+
+  &.sub-tagline {
+    font-size: 1em;
+    margin-bottom: 3em;
+  }
 }
+
 
 .things {
   width: 100%;
