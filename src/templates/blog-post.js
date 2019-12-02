@@ -37,7 +37,7 @@ export default function Template(props) {
               </Link>
             )}
           </li>
-          <li><h3>More Posts by Jack Harner</h3></li>
+          <li><h3>Read More</h3></li>
           <li>
             {next && (
               <Link to={next.fields.slug} rel="next">
