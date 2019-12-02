@@ -1,21 +1,48 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BlogTitle from "../components/blog/blogTitle";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Button from "../components/atoms/button";
+
 // import '../css/blog-post.css';
-export default function Template({ data }) {
-  const post = data.markdownRemark
+export default function Template(props) {
+  const post = props.data.markdownRemark
+  const { previous, next } = props.pageContext
+  console.log(previous);
   return (
     <Layout>
       <SEO title={post.frontmatter.title} image={post.frontmatter.featuredImage.childImageSharp.sizes.src} />
       <BlogTitle post={post} />
-      <container className="full black content">
+      <container className="half black content">
+        {(post.fields.externalLink ? <Button href={post.fields.externalLink} target="_blank" rel="noopener noreferrer" icon="external-link-alt" label={{__html:  " <strong>See Full Post</strong> @ " + (new URL(post.fields.externalLink)).hostname}}type="large" extraStyle={{width: '80%'}} />
+           : "")}
         <main className="post__body" dangerouslySetInnerHTML={{ __html: post.html }}>
-          
+
         </main>
-        
-        </container>
+
+      </container>
+      <nav class="postNavigation">
+        <ul>
+          <li>
+            {previous && (
+              <Link to={previous.fields.slug} rel="prev">
+                <FontAwesomeIcon icon="arrow-left"></FontAwesomeIcon> {previous.frontmatter.title}
+              </Link>
+            )}
+          </li>
+          <li><h3>Read More</h3></li>
+          <li>
+            {next && (
+              <Link to={next.fields.slug} rel="next">
+                {next.frontmatter.title} <FontAwesomeIcon icon="arrow-right"></FontAwesomeIcon>
+
+              </Link>
+            )}
+          </li>
+        </ul>
+      </nav>
     </Layout>
   )
 }
@@ -37,6 +64,9 @@ query BlogPostByPath($slug: String!) {
           }
         }
       }
+    }
+    fields{
+      externalLink
     }
   }
 }

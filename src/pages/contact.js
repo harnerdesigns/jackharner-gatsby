@@ -15,7 +15,7 @@ const Contact = () => (
       <section className="buttons">
 <a href="https://twitter.com/jackharner" className="button button--large"><FontAwesomeIcon icon={["fab", "twitter"]} /> Twitter DM</a>      
 <div class="or wide">OR</div>
-<a href="mailto:jack@jackharner.com" className="button button--large"><FontAwesomeIcon icon="envelope"/> Email</a>      
+<a href="mailto:hello@jackharner.com" className="button button--large"><FontAwesomeIcon icon="envelope"/> Email</a>      
       </section>
       <h3>Please Reach Out If You Are:</h3>
       <ul>

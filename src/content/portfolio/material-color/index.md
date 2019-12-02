@@ -3,7 +3,7 @@ date: 2019-07-20T17:12:33.962Z
 title: "Material Color Palette" 
 logo: "./material-color-logo-text.svg"
 description: "Chrome & Firefox Extension"
-color: "#fff"
+color: "#efefef"
 tags: ["HTML", "Material Design"]
 images: ["./Material-Color-Picker.jpg"]
 ---

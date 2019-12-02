@@ -2,10 +2,25 @@ const _ = require("lodash");
 const path = require("path");
 
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const { attachFields } = require(`gatsby-plugin-node-fields`)
+
 
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
+
+  const descriptors = [
+    {
+      predicate: isArticleNode,
+      fields: [
+        {
+          name: 'externalLink',
+          getter: node => node.frontmatter.externalLink,
+          defaultValue: '',
+        },
+      ]
+    }
+  ]
 
   if (_.get(node, "internal.type") === `MarkdownRemark`) {
     // Get the parent node
@@ -23,6 +38,10 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       name: "collection",
       value: _.get(parent, "sourceInstanceName")
     });
+
+
+  attachFields(node, actions, getNode, descriptors)
+
   }
 };
 
@@ -41,6 +60,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               slug
               collection
             }
+            frontmatter {
+                  title
+              }
           }
         }
       }
@@ -92,3 +114,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
 }
 
+
+
+
+
+
+function isArticleNode(node) {
+  if (node.internal.type !== "MarkdownRemark") {
+    return false;
+  }
+
+
+  return true; 
+}

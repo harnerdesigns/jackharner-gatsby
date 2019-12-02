@@ -7,26 +7,33 @@
     color: var(--text-color);
     border-radius: 4px;
     text-decoration: none;
-    margin:0.5em 0;
-    box-shadow:0 1px 2px transparentize(#000, 0.8);
-border: none;
+    margin: 0.5em 0;
+    box-shadow: 0 1px 2px transparentize(#000, 0.8);
+    border: none;
     transition: all 300ms;
 
-    &:hover{
-    	transform:scale(1.05);
-    	box-shadow: 0 2px 5px transparentize(#000, 0.9);
+    text-transform: capitalize;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 2px 5px transparentize(#000, 0.9);
     }
 
 
-    @include breakpoint(mobileonly){
+    @include breakpoint(mobileonly) {
 
-        width:95%;
-        font-size:1em;
+        width: 95%;
+        font-size: 1em;
     }
 
-    &--large{
+    strong {
+        font-weight: 900;
+    }
+
+    &--large {
         font-size: 1.5em;
-        @include breakpoint(laptop){
+
+        @include breakpoint(laptop) {
             font-size: 2em;
         }
     }
@@ -40,12 +47,15 @@ border: none;
     }
 }
 
-.full{
+.full {
 
-	&.pink{
+    &.pink {
 
-		.button{background:#fff; color:#000;}
-	}
+        .button {
+            background: #fff;
+            color: #000;
+        }
+    }
 
 
 

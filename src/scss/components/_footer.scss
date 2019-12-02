@@ -4,6 +4,7 @@ footer.main_footer {
   justify-content: space-around;
   flex-direction: column;
   color: var(--text-color);
+  background: radial-gradient(circle at 50% 0, var(--color), var(--darkerColor));
 
   @include breakpoint(laptop){
     flex-direction:column;

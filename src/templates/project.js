@@ -21,7 +21,7 @@ export default function Template({ data }) {
 
               (image, index) => {
                 return (
-                  <img src={image.childImageSharp.sizes.src}></img>
+                  <img src={image.childImageSharp.sizes.src} alt=""></img>
                 )
               }
             )}

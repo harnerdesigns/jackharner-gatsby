@@ -2,7 +2,22 @@ body {
   font-size: 125%;
 }
 
-body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6 {
+body,
+caption,
+th,
+td,
+input,
+textarea,
+select,
+option,
+legend,
+fieldset,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size-adjust: 0.5;
 }
 
@@ -106,26 +121,30 @@ h4 {
 }
 
 blockquote {
-  font-size: 1.25em;
-  /* 20px / 16px */
-  line-height: 1.25;
-  /* 25px / 20px */
-}
+  border-left: 15px solid var(--color);
+  width: 80%;
+  margin-bottom: 1em;
+  padding: 1em;
 
-@media (min-width: 43.75em) {
-  blockquote {
-    font-size: 1.5em;
-    /* 24px / 16px = */
-    line-height: 1.45833333;
-    /* 35px / 24px */
+  @include breakpoint(laptop) {
+    width: 40%;
+  }
+
+  p {
+    max-width: 100% !important;
+    width: 100%;
+    margin: 0!important;
   }
 }
 
+ul {
+  margin: 1em auto;
 
-ul{
-  margin: 0 auto;
-
-  @include breakpoint(laptop){
+  @include breakpoint(laptop) {
     font-size: 1em;
+  }
+
+  li {
+    margin-left: 1em;
   }
 }

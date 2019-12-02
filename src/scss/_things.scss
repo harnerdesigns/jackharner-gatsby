@@ -14,7 +14,14 @@ p.tagline {
   text-align: left;
   margin-bottom: 0.5em;
   // font-size: 2em;
+
+
+  &.sub-tagline {
+    font-size: 1em;
+    margin-bottom: 3em;
+  }
 }
+
 
 .things {
   width: 100%;
@@ -227,7 +234,7 @@ $tabHeight: 7vw;
 
 .workOrHire {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: space-between;
   position: relative;
   width: 100%;
@@ -248,7 +255,7 @@ $tabHeight: 7vw;
     transition: 300ms;
 
     background: #fff;
-    border-radius: 10px;
+    // border-radius: 1px;
     box-shadow: 0 2px 3px transparentize(#000, 0.7);
     color: #000;
 
@@ -258,6 +265,7 @@ $tabHeight: 7vw;
     }
 
     p {
+      font-size: 1em;
 
       &:last-of-type {
 

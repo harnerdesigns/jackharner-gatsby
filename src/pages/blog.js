@@ -57,6 +57,7 @@ query IndexQuery {
         fields {
           slug
           collection
+          externalLink
         }
       }
     }

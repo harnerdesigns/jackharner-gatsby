@@ -203,6 +203,25 @@ ul {
     }
   }
 
+  &.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+    padding: 10vw 1em;
+    
+    @include breakpoint(laptop){
+      padding: 10vw;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: stretch;
+
+    }
+
+    > h1{
+      grid-column: 1 / -1;
+      text-align: center;
+    }
+  }
+
   h2 {
     @include breakpoint(mobileonly) {
 
@@ -242,6 +261,11 @@ ul {
     content: ".";
     margin-right: -0.1em;
   }
+}
+
+.headroom-wrapper + container{
+  min-height: 70vh;
+  position: relative;
 }
 
 .title {
@@ -313,9 +337,9 @@ ul {
   }
 }
 
-@import "components/components";
 
 @import "things";
 @import "contact";
 @import "hireMe";
 @import "banners";
+@import "components/components";
