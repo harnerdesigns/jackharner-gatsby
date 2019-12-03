@@ -35,20 +35,23 @@ const IndexPage = ({ data }) => {
       <p class="tagline">I work mostly with <a href="https://harnerdesigns.com/project/tag/wordpress/">WordPress</a> & PHP with an emphasis on clean, responsive design. I love me some good 'ole fashioned HTML/CSS.</p>
       <p class="tagline sub-tagline recent-projects">Recent Projects:
       {portfolioPosts.filter(post => post.node.frontmatter.title.length > 0)
-        .map(({ node: post }, index) => {
-          return (
-            <ProjectCard post={post} index={index} />
-          )
-        })}
+          .map(({ node: post }, index) => {
+            if (index <= 2) {
+
+              return (
+                <ProjectCard post={post} index={index} />
+              )
+            }
+          })}
       </p>
       <p class="tagline">I'm currently learning all things React.</p>
-      
+
 
     </container>
     <container class="half white">
-    <h1 class="tagline">I Write Down What I Learn.</h1>
+      <h1 class="tagline">I Write Down What I Learn.</h1>
 
-    <p class="tagline">Now and then, I write about <Link to="/blog">Web Development</Link> & <a
+      <p class="tagline">Now and then, I write about <Link to="/blog">Web Development</Link> & <a
         href="https://bleedingcoffee.com">Coffee</a>. By sharing my understanding of a particular topic, I give the people learning after me a fresh take on a problem. Plus it gives me the added bonus of proving I know at least sort-of what I'm talking about.</p>
       <p class="tagline sub-tagline latest-posts">Latest Posts:&nbsp;
         {blogPosts.map(({ node: post }, index) => {
@@ -59,7 +62,7 @@ const IndexPage = ({ data }) => {
               <Link to={post.fields.slug} className="blog--link">
                 {post.frontmatter.title}
                 <span className="subtitle">{post.frontmatter.subtitle}</span>
-                {(post.fields.externalLink ? <a className="external-link__icon" href={post.fields.externalLink}><FontAwesomeIcon icon="external-link-alt" fixedWidth ></FontAwesomeIcon></a> : "")}
+                {(post.fields.externalLink ? <span className="external-link__icon"><FontAwesomeIcon icon="external-link-alt" fixedWidth ></FontAwesomeIcon></span> : "")}
               </Link>
             </>
           )
