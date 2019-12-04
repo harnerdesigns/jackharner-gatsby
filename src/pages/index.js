@@ -44,7 +44,7 @@ const IndexPage = ({ data }) => {
             }
           })}
       </p>
-      <p class="tagline">I'm currently learning all things React.</p>
+      <p class="tagline">I'm currently learning all things React. JackHarner.com is <a href="https://github.com/harnerdesigns/jackharner-gatsby">Built With Gatsby!</a></p>
 
 
     </container>
