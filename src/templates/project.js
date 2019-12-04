@@ -12,7 +12,7 @@ export default function Template({ data }) {
         <section class="project__logo">
           <ProjectCard post={post} />
         </section>
-      <container className="full black content">
+      <container className="half black content">
 
         <main className="project__body">
 
