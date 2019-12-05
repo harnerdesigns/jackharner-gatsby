@@ -18,6 +18,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
           getter: node => node.frontmatter.externalLink,
           defaultValue: '',
         },
+        {
+          name: 'published',
+          getter: node => node.frontmatter.published,
+          defaultValue: false,
+        },
       ]
     }
   ]
@@ -40,7 +45,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     });
 
 
-  attachFields(node, actions, getNode, descriptors)
+    attachFields(node, actions, getNode, descriptors)
 
   }
 };
@@ -62,6 +67,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             }
             frontmatter {
                   title
+                  published
               }
           }
         }
@@ -76,6 +82,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
 
   const allEdges = result.data.allMarkdownRemark.edges;
+
+
 
   const blogEdges = allEdges.filter(
     edge => edge.node.fields.collection === `blog`
@@ -125,5 +133,5 @@ function isArticleNode(node) {
   }
 
 
-  return true; 
+  return true;
 }

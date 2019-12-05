@@ -4,7 +4,7 @@ title: "I've Forked The Repo, Now What?"
 subtitle: "Syncing Your Repo With the Upstream Repo"
 featuredImage: "./featuredImage.jpg"
 tags: ['git', 'Open Source']
-status: "published"
+published: true
 
 ---
 

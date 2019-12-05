@@ -4,6 +4,6 @@ title: "BigCommerce Currency Conversion Broke My Google Ads"
 subtitle: ""
 featuredImage: "./featuredImage.jpg"
 tags: ['BigCommerce']
-status: "draft"
+published: false
 ---
 # Coming Soon!

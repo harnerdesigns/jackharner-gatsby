@@ -4,7 +4,7 @@ title: "Getting Started With Digital Ocean"
 subtitle: "Setting Up A Team & Sharing Access"
 featuredImage: "./featuredImage.jpg"
 tags: ['tutorial']
-status: "published"
+published: true
 
 ---
 

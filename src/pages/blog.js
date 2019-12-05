@@ -21,6 +21,7 @@ const Blog = ({ data }) => {
         <div className="blog-posts">
           {posts.filter(post => post.node.fields.collection === "blog")
             .filter(post => post.node.frontmatter.title.length > 0)
+            .filter(post => post.node.fields.published === true)
             .map(({ node: post }, index) => {
               return (
                 <BlogCard post={post} index={index} />
@@ -58,6 +59,7 @@ query IndexQuery {
           slug
           collection
           externalLink
+          published
         }
       }
     }

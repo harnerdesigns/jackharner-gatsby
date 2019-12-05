@@ -5,7 +5,7 @@ subtitle: "A Week In My Work Life"
 featuredImage: "./featuredImage.jpg"
 tags: ['BigCommerce']
 externalLink: "https://medium.com/bigcommerce-developer-blog/developer-diary-jack-harner-shoolu-com-ad163caeda35"
-status: "published"
+published: true
 
 ---
 ## Read My Diary 😉
