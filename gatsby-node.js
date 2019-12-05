@@ -21,11 +21,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         {
           name: 'published',
           getter: node => node.frontmatter.published,
-          defaultValue: false,
+          defaultValue: (process.env.NODE_ENV === "development" ? true : false),
         },
       ]
     }
   ]
+
 
   if (_.get(node, "internal.type") === `MarkdownRemark`) {
     // Get the parent node
@@ -64,10 +65,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             fields {
               slug
               collection
+              published
             }
             frontmatter {
                   title
-                  published
+                published
+
               }
           }
         }
@@ -87,11 +90,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const blogEdges = allEdges.filter(
     edge => edge.node.fields.collection === `blog`
-  );
+  ).filter(edge => edge.node.fields.published === true);
+
   const portfolioEdges = allEdges.filter(
     edge => edge.node.fields.collection === `portfolio`
   );
 
+
+  // Make Blog Pages
   _.each(blogEdges, (edge, index) => {
     const previous =
       index === blogEdges.length - 1 ? null : blogEdges[index + 1].node;
@@ -107,6 +113,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       }
     });
   });
+
+
+
+  // Make Portfolio Pages
+
   _.each(portfolioEdges, (edge, index) => {
     createPage({
       path: `${edge.node.fields.slug}`,
