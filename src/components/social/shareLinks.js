@@ -1,43 +1,43 @@
-import PropTypes from "prop-types"
-import React from "react"
+import React, {Component} from "react"
 
-import { Link } from "gatsby"
-import FontAwesomeIcon from "@fortawesome/react-fontawesome"
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 
 
-const ShareLinks = ({ post }) => (
+export default class ShareLinks extends Component{ 
 
-    <aside class="share-buttons">
-        <h4 class="shareThis"><FontAwesomeIcon icon="share-alt"/>&nbsp;Share This Post:</h4>
-
-        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $url ?>"
-            class="share-button facebook"
-            target="_blank" title="Share ${title} on Facebook" alt="Share ${title} on Facebook"><i class="fab fa-facebook-f"></i></a>
-
-
-        <a href="https://twitter.com/intent/tweet?url=<?php echo $url ?>&text=${title}&via=harnerdesigns&hashtags=HarnerDesigns"
-            class="share-button twitter" title="Share ${title} on Twitter" alt="Share ${title} on Twitter"
-            target="_blank"><i class="fab fa-twitter"></i></a>
-
-        <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url ?>&description=${title}%20-%20Harner%20Designs&media=<?php echo $imageUrl; ?>"
-            class="share-button pinterest" title="Share ${title} on Pinterest"
-            target="_blank"><i class="fab fa-pinterest"></i></a>
-
-        <a href="https://tumblr.com/widgets/share/tool?canonicalUrl=<?php echo $url; ?>&tags=HarnerDesigns&caption=${title}%20-%20Harner%20Designs"
-            class="share-button tumblr" title="Share ${title} on Tumblr"
-            target="_blank"><i class="fab fa-tumblr"></i></a>
-
-        <a href="https://reddit.com/submit?url=<?php echo $url; ?>&title=${title}%20-%20Harner%20Designs&resubmit=true"
-            class="share-button reddit" title="Share ${title} on Reddit"
-            target="_blank"><i class="fab fa-reddit"></i></a>
-    </aside>
-)
-
-ShareLinks.propTypes = {
-}
-
-ShareLinks.defaultProps = {
+    constructor(props){
+        super(props);
+        this.post = props.post;
+    }
     
-}
+    render(){
+        let postPermalink = "https://jackharner.com/" + this.post.fields.slug;
+        let postImage = "https://jackharner.com/" + this.post.frontmatter.featuredImage.childImageSharp.sizes.src
+        return(
 
-export default ShareLinks
+
+    <aside className="share-buttons">
+        <h4 className="shareThis"><FontAwesomeIcon icon="share-alt"/>&nbsp;Share This Post:</h4>
+
+        <a href={"https://www.facebook.com/sharer/sharer.php?u=" + postPermalink}
+            className="share-button facebook"
+            target="_blank" rel="noopener noreferrer" title={"Share "+this.post.frontmatter.title+" on Facebook"} alt={"Share "+this.post.frontmatter.title+" on Facebook"}><FontAwesomeIcon icon={["fab", "facebook"]} /> Facebook</a>
+
+
+        <a href={"https://twitter.com/intent/tweet?url=" + postPermalink + "&text="+this.post.frontmatter.title+"&via=jackharner"}
+            className="share-button twitter" title={"Share "+this.post.frontmatter.title+" on Twitter"} alt={"Share "+this.post.frontmatter.title+" on Twitter"}
+            target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fab", "twitter"]} /> Twitter</a>
+
+        <a href={"https://pinterest.com/pin/create/button/?url="+postPermalink+"&description="+this.post.frontmatter.title+"%20-%20Jack%20Harner&media="+postImage}
+            className="share-button pinterest" title={"Share "+this.post.frontmatter.title+" on Pinterest"}
+            target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fab", "pinterest"]} /> Pinterest</a>
+
+        <a href={"https://tumblr.com/widgets/share/tool?canonicalUrl="+postPermalink+"&tags=HarnerDesigns&caption="+this.post.frontmatter.title+"%20-%20Jack%20Harner"}
+            className="share-button tumblr" title={"Share "+this.post.frontmatter.title+" on Tumblr"}
+            target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fab", "tumblr"]} /> Tumblr</a>
+
+        <a href={"https://reddit.com/submit?url="+postPermalink+"&title="+this.post.frontmatter.title+"%20-%20Jack%20Harner&resubmit=true"}
+            className="share-button reddit" title={"Share "+this.post.frontmatter.title+" on Reddit"}
+            target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fab", "reddit"]} /> Reddit</a>
+    </aside>
+)}}
