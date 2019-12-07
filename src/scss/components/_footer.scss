@@ -5,6 +5,8 @@ footer.main_footer {
   flex-direction: column;
   color: var(--text-color);
   background: radial-gradient(circle at 50% 0, var(--color), var(--darkerColor));
+  border-top: 15px solid var(--darkerColor);
+  border-bottom: 15px solid var(--color);
 
   @include breakpoint(laptop){
     flex-direction:column;

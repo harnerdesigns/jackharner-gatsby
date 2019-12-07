@@ -81,6 +81,21 @@
         }
     }
 
+
+
+    &--small {
+        .card__titles {
+
+            .project__title {
+                font-size: 2rem;
+            }
+
+            .project__tags {
+                display: none;
+            }
+        }
+    }
+
 }
 
 
@@ -106,7 +121,7 @@
 
     .project__card {
 
-        @include breakpoint(laptop){
+        @include breakpoint(laptop) {
 
             padding: 1em 30vw 1em;
         }
@@ -125,12 +140,13 @@
 
     align-items: flex-start;
 
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr;
 
 
     @include breakpoint(laptop) {
 
         grid-template-columns: 2fr 4fr;
+        max-width: 80%;
 
     }
 
@@ -165,11 +181,16 @@
 
     .project__content {
 
-        margin: 1em;
+        margin: 1em auto;
+        width: 90%;
+        display: flex; align-items: center;
+        flex-direction: column;
 
         @include breakpoint(laptop) {
 
-            margin: 3em 1em;
+            margin: 3em auto;
+            width: 100%;
+
         }
 
         p {
@@ -178,12 +199,14 @@
             line-height: 1.8;
             margin: 1.5em auto;
         }
-        ul{
+
+        ul {
             width: 95%;
+            margin: 1em 0;
 
         }
 
-        li{
+        li {
             margin-bottom: 0.35em;
             line-height: 1.8;
 
@@ -192,11 +215,47 @@
 }
 
 
-.recent-projects{
+.recent-projects {
     @extend .latest-posts;
     margin: 3em auto 3em;
 
-    .project__title{
+    .project__title {
         font-size: 1.5em;
+    }
+}
+
+
+.projectNavigation {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 50vw;
+    width: 95%;
+    margin: 3em auto;
+    border-top: 10px solid var(--color);
+
+    @include breakpoint(laptop){
+        max-width: 70vw;
+
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+
+        @include breakpoint(laptop) {
+
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        li {
+            list-style: none;
+
+            margin: 0;
+
+        }
     }
 }

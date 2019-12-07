@@ -22,7 +22,7 @@ const About = () => (
     <PageTitle>About Me</PageTitle>
     <container className="full content black">
       <h2>Hi! My Name is Jack.</h2><h3>I'm a Web Developer based in Albuquerque, NM.</h3>
-      <p>I like making stuff with WordPress, learning new things in Web Dev (these days it's React), playing Overwatch, &  spending time with my girlfriend and our three cats.</p>
+      <p>I like making stuff with WordPress, learning new things in Web Dev (these days it's React), playing Overwatch, &  spending time with my girlfriend and our four cats.</p>
 
 
       <ImageGrid images={[Chief, Sara, BabyKitty]} />

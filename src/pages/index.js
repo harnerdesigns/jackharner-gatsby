@@ -39,16 +39,16 @@ const IndexPage = ({ data }) => {
             if (index <= 2) {
 
               return (
-                <ProjectCard post={post} index={index} />
+                <ProjectCard post={post} index={index} small />
               )
-            }
+            } else {return false}
           })}
       </p>
       <p class="tagline">I'm currently learning all things React. JackHarner.com is <a href="https://github.com/harnerdesigns/jackharner-gatsby">Built With Gatsby!</a></p>
 
 
     </container>
-    <container class="half white">
+    <container class="full white">
       <h1 class="tagline">I Write Down What I Learn.</h1>
 
       <p class="tagline">Now and then, I write about <Link to="/blog">Web Development</Link> & <a
