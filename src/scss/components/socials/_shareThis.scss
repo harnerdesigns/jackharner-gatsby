@@ -1,0 +1,137 @@
+.share-buttons {
+    width: 95%;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: var(--text-color);
+
+    @include breakpoint(laptop) {
+        width: 70%;
+    }
+
+
+    h4.shareThis {
+        color: var(--color);
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        padding: 0.5em;
+
+
+        @include breakpoint(laptop) {
+            width: auto;
+            padding: 0;
+        }
+    }
+
+    a {
+        color: var(--text-color);
+        padding: 0.5em;
+        margin: 0.5em;
+        background: var(--color);
+
+    }
+}
+
+
+.share-button.facebook {
+    background-color: #4a66b7;
+    color: #fff
+}
+
+.share-button.facebook:hover {
+    background-color: lighten(#4a66b7, 10);
+
+    &:after {
+        background-color: lighten(#4a66b7, 10);
+    }
+}
+
+.share-button.twitter {
+    background-color: #1b95e0;
+    color: #fff
+
+}
+
+.share-button.twitter:hover {
+    background-color: lighten(#1b95e0, 10);
+
+    &:after {
+        background-color: lighten(#1b95e0, 10);
+    }
+}
+
+.share-button.pinterest {
+    background-color: #c92228;
+    color: #fff
+
+}
+
+.share-button.pinterest:hover {
+    background-color: lighten(#c92228, 10);
+
+    &:after {
+        background-color: lighten(#c92228, 10);
+    }
+}
+
+.share-button.linkedin {
+    background-color: #0077b5;
+    color: #fff
+
+}
+
+.share-button.linkedin:hover {
+    background-color: lighten(#0077b5, 10);
+
+    &:after {
+        background-color: lighten(#0077b5, 10);
+    }
+}
+
+.share-button.reddit {
+    background-color: #ff5700;
+    color: #fff
+
+}
+
+.share-button.reddit:hover {
+    background-color: lighten(#ff5700, 10);
+
+
+}
+
+.share-button.tumblr {
+    background-color: #35465c;
+    color: #fff
+
+}
+
+.share-button.tumblr:hover {
+    background-color: lighten(#35465c, 10);
+
+
+}
+
+.share-button.hacker-news {
+    background-color: #ff6600;
+    color: #fff
+
+}
+
+.share-button.hacker-news:hover {
+    background-color: lighten(#ff6600, 10);
+}
+
+.share-button.designer-news {
+    background-color: #2d72d9;
+    color: #fff
+
+}
+
+.share-button.designer-news:hover {
+    background-color: lighten(#2d72d9, 10);
+}

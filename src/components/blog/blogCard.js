@@ -9,8 +9,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 
 
-const BlogCard = ({ post, index }) => (
-    <Link to={"/" + post.fields.slug} className={"blog__link blog__link--" + index + " blog__link--" + (post.fields.externalLink ? "external" : "")}>
+const BlogCard = ({ post, index, small }) => (
+    <Link to={"/" + post.fields.slug} className={"blog__link" + (index !== null ? " blog__link--" + index : "") + (post.fields.externalLink ? " blog__link--external" : "") + (small ? " blog__link--small" : "")}>
         <article className="blog__card">
             <div className="featuredImage__wrapper">
                 <img src={post.frontmatter.featuredImage.childImageSharp.resize.src} className="featuredImage" alt={post.frontmatter.title} />

@@ -4,6 +4,8 @@ title: "Getting Started With Digital Ocean"
 subtitle: "Setting Up A Team & Sharing Access"
 featuredImage: "./featuredImage.jpg"
 tags: ['tutorial']
+published: true
+
 ---
 
 [Digital Ocean](https://m.do.co/c/66cca12b82bc) is a cloud infrastructure company based in New York City. They have blazing fast data centers all over the world and are my personal favorite hosting provider. I point all of my clients there and anytime I need a server or any kind of hosting, Digital Ocean is where I go. Spin up servers in a couple of clicks and you're on your way! 

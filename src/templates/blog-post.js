@@ -5,12 +5,13 @@ import SEO from "../components/seo"
 import BlogTitle from "../components/blog/blogTitle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Button from "../components/atoms/button";
+import BlogCard from "../components/blog/blogCard";
+import ShareLinks from "../components/social/shareLinks";
 
 // import '../css/blog-post.css';
 export default function Template(props) {
   const post = props.data.markdownRemark
-  const { previous, next } = props.pageContext
-  console.log(previous);
+  const { related } = props.pageContext
   return (
     <Layout>
       <SEO title={post.frontmatter.title} image={post.frontmatter.featuredImage.childImageSharp.sizes.src} />
@@ -23,24 +24,13 @@ export default function Template(props) {
         </main>
 
       </container>
+      <ShareLinks post={post} />
       <nav class="postNavigation">
+        <h3>Related Posts</h3> 
         <ul>
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                <FontAwesomeIcon icon="arrow-left"></FontAwesomeIcon> {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li><h3>Read More</h3></li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} <FontAwesomeIcon icon="arrow-right"></FontAwesomeIcon>
-
-              </Link>
-            )}
-          </li>
+        {related.map((post, index)=>{
+              return <li><BlogCard post={post} small/></li>
+            })}
         </ul>
       </nav>
     </Layout>
@@ -67,6 +57,7 @@ query BlogPostByPath($slug: String!) {
     }
     fields{
       externalLink
+      slug
     }
   }
 }

@@ -4,6 +4,8 @@ title: "I've Forked The Repo, Now What?"
 subtitle: "Syncing Your Repo With the Upstream Repo"
 featuredImage: "./featuredImage.jpg"
 tags: ['git', 'Open Source']
+published: true
+
 ---
 
 So, you want to make some changes to an Open Source Repo? Good for you. That's the beauty of Open Source, even just fixing typos in the documentation makes a difference. Today I'm going to walk you through keeping your copy of a repo up to date with changes pushed to the original repo. 

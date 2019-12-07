@@ -4,14 +4,16 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ProjectCard from "../components/portfolio/projectCard";
 // import '../css/blog-post.css';
-export default function Template({ data }) {
-  const post = data.markdownRemark
+export default function Template(props) {
+  const post = props.data.markdownRemark
+  const { related } = props.pageContext
+
   return (
     <Layout>
       <SEO title={post.frontmatter.title} image={post.frontmatter.logo.publicURL} />
-        <section class="project__logo">
-          <ProjectCard post={post} />
-        </section>
+      <section class="project__logo">
+        <ProjectCard post={post} />
+      </section>
       <container className="half black content">
 
         <main className="project__body">
@@ -29,7 +31,20 @@ export default function Template({ data }) {
 
           <section className="project__content" dangerouslySetInnerHTML={{ __html: post.html }} />
 
+
+
         </main>
+
+        <nav class="projectNavigation">
+          <h3>More Projects</h3>
+          <ul>
+
+            {related.map((post, index)=>{
+              return <li><ProjectCard post={post} small/></li>
+            })}
+
+          </ul>
+        </nav>
 
       </container>
     </Layout>

@@ -280,7 +280,31 @@
 
   &--external {
 
-    position: relative;
+    .blog__card{
+
+      position: relative;
+    }
+  }
+
+
+  &--small{
+
+    .blog__card{
+      .post__title{
+        font-size: 1.5rem;
+      }
+      .post__subtitle {
+        font-size: 1.2rem;
+      }
+
+      .post__excerpt{
+        display: none;
+      }
+
+      .external-link__icon{
+        font-size: 1.5rem;
+      }
+    }
   }
 }
 
@@ -341,25 +365,32 @@ nav.postNavigation {
   width: 95%;
   color: #fff;
   margin: 1em auto;
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: center;
+  min-width: 50vw;
+  
+  margin: 3em auto;
+  border-top: 10px solid var(--color);
+
+
+  @include breakpoint(laptop){
+
+    max-width: 70vw;
+
+
+  }
+
 
   h3,
   .title {
     text-align: center;
     color: #fff;
-    grid-row: 1;
-    grid-column: 1 / span 2;
-
-    @include breakpoint(laptop){
-      grid-column: 2;
-    }
   }
 
   ul {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     grid-gap: 1em;
     list-style: none;
@@ -369,28 +400,10 @@ nav.postNavigation {
     @include breakpoint(laptop){
       grid-template-columns: 1fr 1fr 1fr;
     }
-  }
 
-  li {
-    margin: 0;
-
-    a {
-      background: var(--color);
-      text: var(--text-color);
-      color: inherit;
-      padding: 0.5em;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      svg {
-        font-size: 1.5em;
-        margin: 0 0.25em;
-      }
-    }
-
-    h3 {
+    li{
       margin: 0;
     }
   }
+
 }
