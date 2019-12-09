@@ -54,7 +54,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
-  function randomNum(min, max, currentIndex = null) {
+  const randomNum = (min, max, currentIndex = null) => {
     var n = [];
     var i = 0;
     while (i < 3) {
@@ -207,6 +207,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       }
 
     });
+    
   });
 
 
