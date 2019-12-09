@@ -5,6 +5,29 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 const { attachFields } = require(`gatsby-plugin-node-fields`)
 
 
+function isArticleNode(node) {
+  if (node.internal.type !== "MarkdownRemark") {
+    return false;
+  }
+
+
+  return true;
+}
+
+function randomNum(min, max, currentIndex = null) {
+  var n = [];
+  var i = 0;
+  while (i < 3) {
+    var num = Math.floor(Math.random() * max) + min;
+    if (num !== currentIndex && n.indexOf(num) === -1) {
+      n.push(num);
+      i++;
+    }
+  }
+  return n;
+}
+
+
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
@@ -61,150 +84,129 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
-  // Blog Pages //
+  const docTemplate = path.resolve('src/templates/docTemplate.js');
+  const blogTemplate = path.resolve('src/templates/blogTemplate.js');
 
-  const blogQuery = await graphql(`
-    {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
-      ) {
-        edges {
-          node {
-            excerpt(pruneLength: 250)
-            id
-            frontmatter {
-              title
-              subtitle
-              date(formatString: "MMMM DD, YYYY")
-              featuredImage {
-                childImageSharp {
-                  resize(width: 500, height: 500, cropFocus: CENTER) {
-                    src
-                  }
-                }
+
+  return graphql(`
+  {
+  blog: allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {fileAbsolutePath: {glob: "**/src/content/blog/**/*.md"}}, limit: 1000) {
+    edges {
+      node {
+        excerpt(pruneLength: 250)
+        id
+        frontmatter {
+          title
+          subtitle
+          date(formatString: "MMMM DD, YYYY")
+          featuredImage {
+            childImageSharp {
+              resize(width: 500, height: 500, cropFocus: CENTER) {
+                src
               }
-            }
-            fields {
-              slug
-              collection
-              externalLink
-              published
             }
           }
         }
+        fields {
+          slug
+          collection
+          externalLink
+          published
+        }
       }
     }
-  `)
-
-  if (blogQuery.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`)
-    return
   }
-
-
-  const allBlogEdges = blogQuery.data.allMarkdownRemark.edges;
-
-
-
-  const blogEdges = allBlogEdges.filter(
-    edge => edge.node.fields.collection === `blog` && edge.node.fields.published === true
-  );
-  // Make Blog Pages
-  _.each(blogEdges, (edge, index) => {
-    const edgeCount = blogEdges.length
-    const relatedIndexes = randomNum(0, edgeCount, index);
-
-    const related = [blogEdges[relatedIndexes[0]].node,
-    blogEdges[relatedIndexes[1]].node,
-    blogEdges[relatedIndexes[2]].node]
-
-    createPage({
-      path: `${edge.node.fields.slug}`,
-      component: path.resolve("./src/templates/blog-post.js"),
-      context: {
-        slug: edge.node.fields.slug,
-        related
-      }
-    });
-  });
-
-
-
-
-  // Portfolio Pages //
-
-  const portfolioQuery = await graphql(`
-  {
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      limit: 1000
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-            collection
-            published
-          }
-          frontmatter {
-            title
-            description
-            color
-            date(formatString: "MMMM DD, YYYY")
-            tags
-            images{
-              childImageSharp {
-                sizes {
-                  src
-                }
+  portfolio: allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {fileAbsolutePath: {glob: "**/src/content/portfolio/**/*.md"}}, limit: 1000) {
+    edges {
+      node {
+        fields {
+          slug
+          collection
+          published
+        }
+        frontmatter {
+          title
+          description
+          color
+          date(formatString: "MMMM DD, YYYY")
+          tags
+          images {
+            childImageSharp {
+              sizes {
+                src
               }
             }
+          }
           logo {
             extension
             publicURL
           }
-          }
         }
       }
     }
   }
-`)
+}
+  `).then(result => {
 
-  if (portfolioQuery.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`);
-    return
-  }
 
-  const portfolioEdges = portfolioQuery.data.allMarkdownRemark.edges.filter(
-    edge => edge.node.fields.collection === `portfolio`
-  );
+    if (result.errors) {
+      reporter.panicOnBuild(`Error while running GraphQL query.`)
+      return
+    }
 
-  // Make Portfolio Pages
 
-  _.each(portfolioEdges, (edge, index) => {
-    const edgeCount = portfolioEdges.length
-    const relatedPortfolioIndexes = randomNum(0, edgeCount, index);
+    _.each(result.data.blog.edges, (edge, index) => {
+      const edgeCount = result.data.blog.edges.length
+      const relatedIndexes = randomNum(0, edgeCount, index);
 
-    const related = [portfolioEdges[relatedPortfolioIndexes[0]].node,
-    portfolioEdges[relatedPortfolioIndexes[1]].node,
-    portfolioEdges[relatedPortfolioIndexes[2]].node]
+      const related = [result.data.blog.edges[relatedIndexes[0]].node,
+      result.data.blog.edges[relatedIndexes[1]].node,
+      result.data.blog.edges[relatedIndexes[2]].node]
 
-    createPage({
-      path: `${edge.node.fields.slug}`,
-      component: path.resolve("./src/templates/project.js"),
-      context: {
-        slug: edge.node.fields.slug,
-        related
-      }
+      createPage({
+        path: `${edge.node.fields.slug}`,
+        component: path.resolve("./src/templates/blog-post.js"),
+        context: {
+          slug: edge.node.fields.slug,
+          related
+        }
+      });
 
     });
+
+    _.each(result.data.portfolio.edges, (edge, index) => {
+      const edgeCount = result.data.portfolio.edges.length
+      const relatedPortfolioIndexes = randomNum(0, edgeCount, index);
+
+      const related = [result.data.portfolio.edges[relatedPortfolioIndexes[0]].node,
+      result.data.portfolio.edges[relatedPortfolioIndexes[1]].node,
+      result.data.portfolio.edges[relatedPortfolioIndexes[2]].node]
+
+      createPage({
+        path: `${edge.node.fields.slug}`,
+        component: path.resolve("./src/templates/project.js"),
+        context: {
+          slug: edge.node.fields.slug,
+          related
+        }
+
+      });
+
+
+    });
+
+
+
+
+
 
   });
 
 
 
 
+
+
 }
 
 
@@ -212,24 +214,3 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
 
 
-function isArticleNode(node) {
-  if (node.internal.type !== "MarkdownRemark") {
-    return false;
-  }
-
-
-  return true;
-}
-
-function randomNum(min, max, currentIndex = null){
-  var n = [];
-  var i = 0;
-  while (i < 3) {
-    var num = Math.floor(Math.random() * max) + min;
-    if (num !== currentIndex && n.indexOf(num) === -1) {
-      n.push(num);
-      i++;
-    }
-  }
-  return n;
-}
