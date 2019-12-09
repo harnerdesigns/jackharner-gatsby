@@ -61,21 +61,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
-  const randomNum = (min, max, currentIndex = null) => {
-    var n = [];
-    var i = 0;
-    while (i < 3) {
-      var num = Math.floor(Math.random() * max) + min;
-      if (num !== currentIndex && n.indexOf(num) === -1) {
-        n.push(num);
-        i++;
-      }
-    }
-    return n;
-  }
-
-
-
   // Blog Pages //
 
   const blogQuery = await graphql(`
@@ -187,7 +172,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 `)
 
   if (portfolioQuery.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    reporter.panicOnBuild(`Error while running GraphQL query.`);
     return
   }
 
@@ -234,4 +219,17 @@ function isArticleNode(node) {
 
 
   return true;
+}
+
+function randomNum(min, max, currentIndex = null){
+  var n = [];
+  var i = 0;
+  while (i < 3) {
+    var num = Math.floor(Math.random() * max) + min;
+    if (num !== currentIndex && n.indexOf(num) === -1) {
+      n.push(num);
+      i++;
+    }
+  }
+  return n;
 }
