@@ -21,7 +21,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         {
           name: 'published',
           getter: node => node.frontmatter.published,
-          defaultValue: (process.env.NODE_ENV === "development" ? true : false),
+          defaultValue: false,
         },
       ]
     }
@@ -51,6 +51,13 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 };
 
+
+
+
+
+
+
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
@@ -66,6 +73,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
     return n;
   }
+
+
+
+  // Blog Pages //
 
   const blogQuery = await graphql(`
     {
@@ -112,13 +123,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
 
   const blogEdges = allBlogEdges.filter(
-    edge => edge.node.fields.collection === `blog`
-  ).filter(edge => edge.node.fields.published === true);
+    edge => edge.node.fields.collection === `blog` && edge.node.fields.published === true
+  );
   // Make Blog Pages
   _.each(blogEdges, (edge, index) => {
     const edgeCount = blogEdges.length
     const relatedIndexes = randomNum(0, edgeCount, index);
-    
+
     const related = [blogEdges[relatedIndexes[0]].node,
     blogEdges[relatedIndexes[1]].node,
     blogEdges[relatedIndexes[2]].node]
@@ -134,6 +145,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   });
 
 
+
+
+  // Portfolio Pages //
 
   const portfolioQuery = await graphql(`
   {
@@ -181,22 +195,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     edge => edge.node.fields.collection === `portfolio`
   );
 
-
-
-
-
-
-
-
   // Make Portfolio Pages
 
   _.each(portfolioEdges, (edge, index) => {
     const edgeCount = portfolioEdges.length
-    const relatedIndexes = randomNum(0, edgeCount, index);
-    
-    const related = [portfolioEdges[relatedIndexes[0]].node,
-    portfolioEdges[relatedIndexes[1]].node,
-    portfolioEdges[relatedIndexes[2]].node]
+    const relatedPortfolioIndexes = randomNum(0, edgeCount, index);
+
+    const related = [portfolioEdges[relatedPortfolioIndexes[0]].node,
+    portfolioEdges[relatedPortfolioIndexes[1]].node,
+    portfolioEdges[relatedPortfolioIndexes[2]].node]
 
     createPage({
       path: `${edge.node.fields.slug}`,
@@ -207,7 +214,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       }
 
     });
-    
+
   });
 
 
