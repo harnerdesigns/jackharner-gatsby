@@ -148,6 +148,12 @@
         grid-template-columns: 2fr 4fr;
         max-width: 80%;
 
+
+        &--no-images{
+
+            grid-template-columns: 1fr;
+        }
+
     }
 
 

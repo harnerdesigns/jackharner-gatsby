@@ -16,7 +16,7 @@ export default function Template(props) {
       </section>
       <container className="half black content">
 
-        <main className="project__body">
+        <main className={post.frontmatter.images ? "project__body" : "project__body project__body--no-images"} >
 
           {post.frontmatter.images ? <section className="project__images">
             {post.frontmatter.images.map(
