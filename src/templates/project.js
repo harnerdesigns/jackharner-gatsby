@@ -12,7 +12,7 @@ export default function Template(props) {
     <Layout>
       <SEO title={post.frontmatter.title} image={post.frontmatter.logo.publicURL} />
       <section class="project__logo">
-        <ProjectCard post={post} />
+        <ProjectCard post={post} nolink />
       </section>
       <container className="half black content">
 

@@ -1,9 +1,8 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BlogTitle from "../components/blog/blogTitle";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Button from "../components/atoms/button";
 import BlogCard from "../components/blog/blogCard";
 import ShareLinks from "../components/social/shareLinks";

@@ -7,8 +7,10 @@ import { Link } from "gatsby"
 
 
 
-const ProjectCard = ({ post, index, small }) => (
-    <Link to={post.fields.slug} className={"project__link project__link--" + index} style={{background: post.frontmatter.color, }}>
+const ProjectCard = ({ post, index, small, nolink }) => {
+    return(
+    
+    <Link to={post.fields.slug} className={"project__link project__link--" + index} style={{background: post.frontmatter.color, }}> 
         <article className={"project__card project--" + _.camelCase(post.frontmatter.title) + (small ? " project__card--small" : "")}>
             <img src={post.frontmatter.logo.publicURL} className="logo" alt={post.frontmatter.title} />
             <div className="card__titles">
@@ -34,8 +36,8 @@ const ProjectCard = ({ post, index, small }) => (
 
         </article>
 
-    </Link>
-)
+    </Link>)
+}
 
 ProjectCard.propTypes = {
     post: PropTypes.object,
