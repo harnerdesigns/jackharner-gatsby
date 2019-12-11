@@ -90,7 +90,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   return graphql(`
   {
-  blog: allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {fileAbsolutePath: {glob: "**/src/content/blog/**/*.md"}}, limit: 1000) {
+  blog: allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {fileAbsolutePath: {glob: "**/src/content/blog/**/*.md"}, frontmatter: {published: {eq: true}}}, limit: 1000) {
     edges {
       node {
         excerpt(pruneLength: 250)
@@ -116,7 +116,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       }
     }
   }
-  portfolio: allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {fileAbsolutePath: {glob: "**/src/content/portfolio/**/*.md"}}, limit: 1000) {
+  portfolio: allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {fileAbsolutePath: {glob: "**/src/content/portfolio/**/*.md"}, frontmatter: {published: {eq: true}}}, limit: 1000) {
     edges {
       node {
         fields {
