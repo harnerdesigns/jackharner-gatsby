@@ -6,6 +6,7 @@ description: "E-Commerce Design & More"
 color: "#02a974"
 tags: ["HTML", "BigCommerce", "Webpack"]
 images: ["./New-Shoolu-Home.png"]
+weight: 9
 ---
 ### The Title:
 # Marketing Director
