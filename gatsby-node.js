@@ -46,6 +46,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
           getter: node => node.frontmatter.published,
           defaultValue: false,
         },
+        {
+          name: 'weight',
+          getter: node => node.frontmatter.weight,
+          defaultValue: 0,
+        },
       ]
     }
   ]
@@ -90,7 +95,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   return graphql(`
   {
-  blog: allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {fileAbsolutePath: {glob: "**/src/content/blog/**/*.md"}}, limit: 1000) {
+  blog: allMarkdownRemark(sort: {order: DESC, fields: [fields___weight, frontmatter___date]}, filter: {fileAbsolutePath: {glob: "**/src/content/blog/**/*.md"}}, limit: 1000) {
     edges {
       node {
         excerpt(pruneLength: 250)

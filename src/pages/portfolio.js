@@ -37,7 +37,7 @@ export default Blog
  
 export const pageQuery = graphql`
 query AllBlogsQuery {
-  allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}) {
+  allMarkdownRemark(sort: {order: [DESC, DESC], fields: [fields___weight, frontmatter___date]}) {
     edges {
       node {
         excerpt(pruneLength: 250)

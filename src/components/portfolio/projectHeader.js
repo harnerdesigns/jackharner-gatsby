@@ -7,16 +7,18 @@ import { Link } from "gatsby"
 
 
 
-const ProjectCard = ({ post, index, small, nolink }) => {
+const ProjectHeader = ({ post, index, small, nolink }) => {
     return (
 
-        <Link to={(!nolink ? post.fields.slug : "")} className={"project__link project__link--" + index} style={{ background: post.frontmatter.color, }}>
-            <article className={"project__card project--" + _.camelCase(post.frontmatter.title) + (small ? " project__card--small" : "")}>
+
+        <header className={"project__header project--" + _.camelCase(post.frontmatter.title)} style={{ background: post.frontmatter.color, }}>
                 <img src={post.frontmatter.logo.publicURL} className="logo" alt={post.frontmatter.title} />
-                <div className="card__titles">
+                <div className="header__titles">
+                <Link to={post.fields.slug}>
                     <h2 className="project__title">
                         {post.frontmatter.title}
                     </h2>
+                </Link>
 
                     {post.frontmatter.description != null ? <h4 className="project__description">
                         {post.frontmatter.description}
@@ -30,19 +32,17 @@ const ProjectCard = ({ post, index, small, nolink }) => {
                         }
                     </ul>
                 </div>
-            </article>
-
-        </Link>
+            </header>
 
     )
 }
 
-ProjectCard.propTypes = {
+ProjectHeader.propTypes = {
     post: PropTypes.object,
 }
 
-ProjectCard.defaultProps = {
+ProjectHeader.defaultProps = {
     post: {},
 }
 
-export default ProjectCard 
+export default ProjectHeader 

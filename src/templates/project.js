@@ -3,20 +3,19 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ProjectCard from "../components/portfolio/projectCard";
-// import '../css/blog-post.css';
+import ProjectHeader from "../components/portfolio/projectHeader";
+
 export default function Template(props) {
   const post = props.data.markdownRemark
   const { related } = props.pageContext
 
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} image={post.frontmatter.logo.publicURL} />
-      <section class="project__logo">
-        <ProjectCard post={post} />
-      </section>
+      <SEO title={post.frontmatter.title + " » " + post.frontmatter.description} description={post.frontmatter.title + " - " + post.frontmatter.description + " By Jack Harner."} image={post.frontmatter.logo.publicURL} />      
+        <ProjectHeader post={post} />
       <container className="half black content">
 
-        <main className="project__body">
+        <main className={post.frontmatter.images ? "project__body" : "project__body project__body--no-images"} >
 
           {post.frontmatter.images ? <section className="project__images">
             {post.frontmatter.images.map(
@@ -30,8 +29,6 @@ export default function Template(props) {
           </section> : ""}
 
           <section className="project__content" dangerouslySetInnerHTML={{ __html: post.html }} />
-
-
 
         </main>
 

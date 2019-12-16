@@ -44,7 +44,7 @@ const IndexPage = ({ data }) => {
             } else {return false}
           })}
       </p>
-      <p class="tagline">I'm currently learning all things React. JackHarner.com is <a href="https://github.com/harnerdesigns/jackharner-gatsby">Built With Gatsby!</a></p>
+      <p class="tagline">I'm currently learning all things React, Accessibility, & Modern Web Development. JackHarner.com is <a href="https://github.com/harnerdesigns/jackharner-gatsby">Built With Gatsby!</a></p>
 
 
     </container>
@@ -102,7 +102,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
 query HomePageQuery {
-  allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}) {
+  allMarkdownRemark(sort: {fields: [fields___weight, frontmatter___date], order: [DESC, DESC]}) {
     edges {
       node {
         excerpt(pruneLength: 250)
