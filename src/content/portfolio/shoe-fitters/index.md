@@ -1,7 +1,7 @@
 ---
 date: 2019-07-20T17:12:33.962Z
 title: "Shoe Fitters" 
-logo: "./shoe-fitters-logo.png"
+logo: "./shoefitters-logo.svg"
 description: "WordPress Site"
 color: "#0c5644"
 tags: ["WordPress", "HTML", "PHP"]
