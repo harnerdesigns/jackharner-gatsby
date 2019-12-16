@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: `/jackharner-gatsby`,
   siteMetadata: {
     title: `Jack Harner`,
-    description: `Jack Harner is a freelance Web Developer & Graphic Designer.`,
+    description: `Jack Harner is a freelance Web Developer & Graphic Designer based in Albuquerque, New Mexico. He Specializes in WordPress development for small to medium sized businesses.`,
     author: `@jackharner`,
     siteUrl: 'https://jackharner.com'
   },
@@ -85,13 +85,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Jack-Harner`,
+        name: `Jack Harner`,
         short_name: `JackHarner`,
         start_url: `/`,
         background_color: `#E91E63`,
         theme_color: `#E91E63`,
         display: `minimal-ui`,
-        icon: `src/images/jackharner-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/jackharner-icon.svg`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-sass`,

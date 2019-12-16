@@ -8,7 +8,7 @@ tags: ["WordPress", "HTML", "PHP"]
 images: ["./Shoe-fitters-landing-page.png"]
 weight: 0
 ---
-Shoe Fitters Inc. is the parent company of [Shoolu](../shoolu). One of my first tasks upon getting hired was to refresh the web precesnce of our brick & mortar stores, Shoe Fitters. I built it on WordPress it's simplicity and familiarity. 
+Shoe Fitters Inc. is the parent company of [Shoolu](../shoolu). One of my first tasks upon getting hired was to refresh the web presence of our brick & mortar stores, Shoe Fitters. I built it on WordPress for it's simplicity and familiarity. 
 
 The main goal of the refresh was to provide a faster, easier way for customers to find information about the stores. Things like the location and hours of the stores, what brands they carry, and places to contact in case of issue. 
 
