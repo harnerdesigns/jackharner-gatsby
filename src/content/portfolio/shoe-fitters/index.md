@@ -2,7 +2,7 @@
 date: 2019-07-20T17:12:33.962Z
 title: "Shoe Fitters" 
 logo: "./shoe-fitters-logo.png"
-description: "WordPress Site"
+description: "Brick & Mortor Informational Site"
 color: "#0c5644"
 tags: ["WordPress", "HTML", "PHP"]
 images: ["./Shoe-fitters-landing-page.png"]
