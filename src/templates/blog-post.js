@@ -44,6 +44,7 @@ query BlogPostByPath($slug: String!) {
       date(formatString: "MMMM DD, YYYY")
       title
       subtitle
+      tags
       featuredImage {
         absolutePath
         childImageSharp {

@@ -1,6 +1,6 @@
 var readline = require('readline-sync');
 var ncp = require('ncp').ncp;
-const replace = require('replace-in-file');
+var replace = require('replace-in-file');
 
 var postTitle = readline.question("What is the title? ");
 var slug = readline.question("Slug? [Default: '"+ string_to_slug(postTitle) +"'] ", {defaultInput: string_to_slug(postTitle)});
@@ -13,12 +13,10 @@ var replaceOptions = {
     files:[destPath + "/index.md"],
     from: [/\$title/g, /\$date/g],
     to: [postTitle, date],
-}
-
-console.log(postTitle + " | " + slug + " | " + date );
+} 
 
 
-ncp(sourcePath, destPath, function (err) {
+ncp(sourcePath, destPath, (err) => {
     if (err) {
       return console.error(err);
     }

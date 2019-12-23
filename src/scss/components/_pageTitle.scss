@@ -2,8 +2,7 @@
   width: 100%;
   padding: 1em;
   text-align: center;
-  background: var( --color ) url("../images/waves.svg");
-
+  background: var(--color) url("../images/waves.svg");
 
   @include card(2);
 
@@ -13,48 +12,29 @@
     margin: 0;
     z-index: 222;
 
-    text-shadow: 
-    -1px -1px 0 #000,
-    -2px -2px 0 #000,
-    1px 1px 0 #000, 
-    2px 2px 0 #000, 
-    3px 3px 0 #000, 
-    4px 4px 0 var( --color ), 
-    5px 5px 0 #000, 
-    6px 6px 0 #000,
-    7px 7px 0 #000, 
-    8px 8px 0 #000, 
-    9px 9px 0 #000, 
-    10px 10px 0 #000, 
-  11px 11px 0 #000;
-  transition: 300ms;
+    text-shadow: -1px -1px 0 #000, -2px -2px 0 #000, 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000,
+      4px 4px 0 var(--color), 5px 5px 0 #000, 6px 6px 0 #000, 7px 7px 0 #000, 8px 8px 0 #000, 9px 9px 0 #000,
+      10px 10px 0 #000, 11px 11px 0 #000;
+    transition: 300ms;
 
-  font-size: 2.5em;
+    font-size: 2.5em;
 
-  @include breakpoint(laptop){
-    font-size: 4em;
-
-  }
+    @include breakpoint(laptop) {
+      font-size: 4em;
+    }
   }
 
-  h2{
+  h2 {
     color: #fff;
-    text-shadow:  -1px -1px 1px #000,
-    -2px -2px 1px #000,  1px 1px 1px #000,
-    2px 2px 1px #000, 1px -1px 1px #000,
-    2px -2px 1px #000,  -1px 1px 1px #000,
-    -2px 2px 1px #000;
+    text-shadow: -1px -1px 1px #000, -2px -2px 1px #000, 1px 1px 1px #000, 2px 2px 1px #000, 1px -1px 1px #000,
+      2px -2px 1px #000, -1px 1px 1px #000, -2px 2px 1px #000;
   }
 
-
-  &:hover{
+  &:hover {
   }
 }
 
-
-
-.blog-title{
-
+.blog-title {
   @extend .page-title;
 
   padding: 17vh 0;
@@ -65,10 +45,34 @@
   // background-color: var( --color );
   // background-blend-mode: screen ;
 
-  h1, h2{
+  h1,
+  h2,
+  h4 {
+    background: transparentize(#000, 0.5);
+    margin: 0;
+    padding: 0.1em 1em;
+  }
+
+  .post__meta {
     background: transparentize(#000, 0.5);
     margin: 0;
     padding: 0.1em 1em;
 
+    color: #fff;
+    font-size: 1em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .post__tags, .post__date{
+      padding: 0 0.5em;
+      svg{
+        filter: drop-shadow(1px 1px 0 var(--color));
+      }
+      &:last-child{
+        border-left: 1px solid #ccc;
+      }
+    }
   }
 }
