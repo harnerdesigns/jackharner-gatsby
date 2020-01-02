@@ -14,7 +14,8 @@ const BlogTitle = ({ post }) => (
         {(post.frontmatter.subtitle ? <h2 className="post__subtitle">{post.frontmatter.subtitle}</h2> : "")}
         <div className="post__meta">
         {(post.frontmatter.tags ? <div className="post__tags"><FontAwesomeIcon icon="tag"/> {post.frontmatter.tags.map((tag, i) => { return tag + (i === post.frontmatter.tags.length - 1 ? "" : ", ") })}</div> : "")}
-            {(post.frontmatter.date ? <div className="post__date"><FontAwesomeIcon icon="clock" /> {post.frontmatter.date}</div> : "")}
+            {(post.frontmatter.date ? <div className="post__date"><FontAwesomeIcon icon="calendar" /> {post.frontmatter.date}</div> : "")}
+            <div className="post__time"><FontAwesomeIcon icon="stopwatch" /> {(Math.round(post.wordCount.words / 200) > 0 ? "~" + Math.round(post.wordCount.words / 200) : "< 1")} Min To Read</div> 
         </div>
 
 

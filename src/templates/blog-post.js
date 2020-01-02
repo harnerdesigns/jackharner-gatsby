@@ -13,7 +13,7 @@ export default function Template(props) {
   const { related } = props.pageContext
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} description= {post.excerpt} image={post.frontmatter.featuredImage.childImageSharp.sizes.src} />
+      <SEO title={post.frontmatter.title} description= {post.excerpt} image={(post.fields.ogImage ? post.fields.ogImage : post.frontmatter.featuredImage.childImageSharp.sizes.src)} />
       <BlogTitle post={post} />
       <container className="half black content">
         {(post.fields.externalLink ? <Button href={post.fields.externalLink} target="_blank" rel="noopener noreferrer" icon="external-link-alt" label={{ __html: " <strong>See Full Post</strong> @ " + (post.fields.externalLink.match(/^https?\:\/\/([^\/?#]+)(?:[\/?#]|$)/i)[1])}}type="large" extraStyle={{width: '80%'}} />
@@ -40,6 +40,9 @@ query BlogPostByPath($slug: String!) {
   markdownRemark(fields: {slug: {eq: $slug}}) {
     html
     excerpt(pruneLength: 150)
+    wordCount {
+      words
+    }
     frontmatter {
       date(formatString: "MMMM DD, YYYY")
       title
@@ -59,6 +62,7 @@ query BlogPostByPath($slug: String!) {
     fields{
       externalLink
       slug
+      ogImage
     }
   }
 }

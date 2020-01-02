@@ -64,14 +64,27 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 
-    .post__tags, .post__date{
+    .post__tags, .post__date, .post__time{
       padding: 0 0.5em;
       svg{
         filter: drop-shadow(1px 1px 0 var(--color));
       }
+      
+    }
+
+
+    @include breakpoint(laptop){
+       div {
+
+
+        border-right: 1px solid #ccc;
+
       &:last-child{
-        border-left: 1px solid #ccc;
+        border-right: none;
+      }
       }
     }
   }

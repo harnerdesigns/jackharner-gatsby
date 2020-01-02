@@ -8,7 +8,13 @@ externalLink: ""
 published: true
 ---
 
-JackHarner.com is built with Gatsby, a framework based on React that makes blazing fast websites. I have my Blog and Portfolio content setup as a couple of directories with subdirectories for the individual posts. Like so: 
+
+
+JackHarner.com is built with Gatsby, a framework based on React that makes blazing fast websites. 
+
+![Gatsby Logo](./gatsby-logo.svg)
+
+I have my Blog and Portfolio content setup as a couple of directories with subdirectories for the individual posts. Like so: 
 ```
 src/
 | ...
@@ -42,14 +48,14 @@ published: true
 ```
 All of these folders and files are then parsed at build time to generate the pages and the content throughout the site. 
 
-As some of you may know, I'm very lazy. But Lazy in the good way where I don't like doing repetitive tasks more than once or twice. I've automated tons of simple tasks in my day to day at [Shoolu](../../portfolio/shoolu). Things like Running Reports, and processing product photos are all now 1-2 click tasks, when they used to take hours out of my day every week.
+As some of you may know, I'm very lazy, but Lazy in the good way where I don't like doing repetitive tasks more than once or twice. I've automated tons of simple tasks in my day to day at [Shoolu](../../portfolio/shoolu). Things like Running Reports, and processing product photos are all now 1-2 click tasks, when they used to take hours out of my day every week.
 
-I wanted getting started on a new blog post or portfolio piece to be as simple as possible, and with this I've gotten it down to:
+I wanted starting a new blog post or portfolio piece to be as simple as possible, and with this I've gotten it down to:
 
 ```bash
-npm run newPost
+npm run newBlog
 ```
-Let's look at how I did it and how you can also speed up a small part of updating your Gatsby Blog.
+Let's look at how I did it and how you can speed up a small part of updating your Gatsby site with Node.
 
 ## Create the Template Directory
 
@@ -74,7 +80,7 @@ src/
 
 ## Get Template-ing
 
-Now this is where you'll need to customize this tutorial to fit with your site and preexisting content. Inside your `/src/content/templates/<post-type>` directory, create versions of the files you will need every time you create a post. For me, that includes an `index.md` file with some custom frontmatter, and a `featuredImage.png`.
+This is where you'll need to customize this tutorial to fit with your site and preexisting content. Inside your `/src/content/templates/<post-type>` directory, create versions of the files you will need every time you create a post. For me, that includes an `index.md` file with some custom frontmatter, and a `featuredImage.png`.
 
 Take a look at my `templates/blog/index.md`:
 
@@ -95,7 +101,7 @@ My default Featured Image is just a solid pink image to match the branding of th
 
 ![Default Featured Image](./defaultFeaturedImage.png)
 
-The Featured Image is pretty much always going to be changed down the line. However, having the default allows me to put off deciding before I even write the post, and it allows me to not have to remember "featuredImage.png" when saving the updated image (I can just overwrite the default). 
+The Featured Image is pretty much always going to be changed down the line. One problem I've run into is that Gatsby, as far as I know, doesn't allow you to set default Frontmatter values. However, having the default allows me to not have to remember "featuredImage.png" when saving the updated image (I can just overwrite the default). 
 
 
 ## Script All The Things!
@@ -109,9 +115,9 @@ npm i --save-dev readline-sync ncp replace-in-file
 ```
 * `readline-sync` allows for super simple Node CLI Prompts to take in user input.
 * `ncp` is a tool to help Node copy folders recursively.
-* `replace-in-file` makes it really easy to substitue values for defined variables in the copied version of the file.
+* `replace-in-file` makes it really easy to substitute values for defined variables in the copied version of the file.
 
-Now in the root folder for the project, create a new directory called `tools/` and in that a new file called `newBlog.js`
+In the root folder for the project, create a new directory called `tools/` and in that a new file called `newBlog.js`
 
 At the top of `newBlog.js` declare all of the dependencies we'll need:
 
@@ -160,7 +166,7 @@ It takes in a string, removes whitespace, converts non url-encoded characters, a
 
 ## Time To Copy
 
-Now that everything is set up, it's time to copy the directory. We use `ncp` which is a Node package to replicate Linux's `cp` command. It takes in the Source Folder, the Destination Folder, and a Callback as arguments. 
+Since everything is set up, it's time to copy the directory. We use `ncp` which is a Node package to replicate Linux's `cp` command. It takes in the Source Folder, the Destination Folder, and a Callback as arguments. 
 
 ```js
 ncp(sourcePath, destPath, (err) => {
@@ -190,9 +196,9 @@ var replaceOptions = {
 } 
 ```
 
-Define the files to search in, the keys to search for (can be Regex or just a string), & what to replace them with then `replace-in-file` does all the heavy lifting.  If you pass in an array to both `from` and `to` it will replace the first key in the `from` array to the first value in the `to` array, allowing you to replace multiple things in one go.
+Define the files to search in, the keys to search for (can be Regex or just a string), & what to replace them with then `replace-in-file` does all the heavy lifting.  If you pass in an array to both `from` and `to` it will replace the first key in the `from` array to the first value in the `to` array, and so on, allowing you to replace multiple things in one go.
 
-All that's left is to pass in our options and the callback. 
+All that's left is to pass in our options and the callback function. 
 
 ```js
 replace(replaceOptions, (error, changedFiles) => {
@@ -208,11 +214,21 @@ replace(replaceOptions, (error, changedFiles) => {
 You have two options when it comes to actually running the script. 
 
 * Just run the script with Node: `$ node tools/newBlog.js`
-* Add `node tools/newBlog.js` to your `package.json` as a script and run it through NPM.
+* Add `node tools/newBlog.js` to your `package.json` as a script and run it through NPM (i.e. `$ npm run newBlog`).
 
 Then enter a title, optionally pick a slug and away we go! 
 
-## Here's the full script: 
+## Where To Go From Here?
+
+If you wanted to take this script a few steps further, here are some ideas to get you started.
+
+* Duplicate your `tools/newBlog.js` file for every other post type, modifying as necessary. 
+* Refactor the script to be able to handle any post type you throw at it. `readline-sync` has a whole lot of options for taking in user input. 
+* Create as much content as possible, and automate as many things as possible.
+
+[Hit me up on Twitter](https://twitter.com/jackharner) if you implement this script in your Gatsby site! I'd love to hear your suggestions.
+
+## If You're Lazy, Here's the full script: 
 
 ```js
 var readline = require('readline-sync');
