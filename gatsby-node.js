@@ -51,6 +51,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
           getter: node => node.frontmatter.weight,
           defaultValue: 0,
         },
+        {
+          name: 'ogImage',
+          getter: node => node.frontmatter.ogImage,
+          defaultValue: ''
+        }
       ]
     }
   ]

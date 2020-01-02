@@ -1,19 +1,26 @@
 import PropTypes from "prop-types"
 import React from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 
 
 
 
 const BlogTitle = ({ post }) => (
-        <header className="blog-title" style={{
-            backgroundImage: 'url(' + post.frontmatter.featuredImage.childImageSharp.sizes.originalImg + ')'
-        }}>
-            <h1 className="post__title">{post.frontmatter.title}</h1>
-            {(post.frontmatter.subtitle ? <h2 className="post__subtitle">{post.frontmatter.subtitle}</h2> : "")}
+    <header className="blog-title" style={{
+        backgroundImage: 'url(' + post.frontmatter.featuredImage.childImageSharp.sizes.originalImg + ')'
+    }}>
+        <h1 className="post__title">{post.frontmatter.title}</h1>
+        {(post.frontmatter.subtitle ? <h2 className="post__subtitle">{post.frontmatter.subtitle}</h2> : "")}
+        <div className="post__meta">
+        {(post.frontmatter.tags ? <div className="post__tags"><FontAwesomeIcon icon="tag"/> {post.frontmatter.tags.map((tag, i) => { return tag + (i === post.frontmatter.tags.length - 1 ? "" : ", ") })}</div> : "")}
+            {(post.frontmatter.date ? <div className="post__date"><FontAwesomeIcon icon="calendar" /> {post.frontmatter.date}</div> : "")}
+            <div className="post__time"><FontAwesomeIcon icon="stopwatch" /> {(Math.round(post.wordCount.words / 200) > 0 ? "~" + Math.round(post.wordCount.words / 200) : "< 1")} Min To Read</div> 
+        </div>
 
 
-        </header>
+
+    </header>
 
 )
 

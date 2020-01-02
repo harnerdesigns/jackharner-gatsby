@@ -8,7 +8,7 @@ const Footer = ({ siteTitle }) => (
   
   <footer className="slim main_footer" >
 
-    <section className="copyright">&copy; 2019 Jack Harner | <a href="https://github.com/harnerdesigns/jackharner-gatsby"> Built With Gatsby</a></section>
+    <section className="copyright">&copy; 2020 Jack Harner | <a href="https://github.com/harnerdesigns/jackharner-gatsby"> Built With Gatsby</a></section>
     <MainMenu />
 
   </footer >
