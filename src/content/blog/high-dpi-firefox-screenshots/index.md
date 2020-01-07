@@ -5,7 +5,7 @@ subtitle: "Perfect for Showing Off Your Work"
 featuredImage: "./featuredImage.jpg"
 tags: ['']
 externalLink: ""
-published: true
+published: false
 ---
 There are several ways to take a screenshot in Firefox. 
 
@@ -17,4 +17,9 @@ If you want a higher resolution screenshot than your monitor can provide, you ne
 
 ```
 :screenshot --dpr 2
+```
+If you need to screenshot the full page, you just need to add the `--fullpage` flag. 
+
+```
+:screenshot --dpr 2 --fullpage
 ```
