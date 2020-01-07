@@ -44,6 +44,7 @@
     "readline-sync": "^1.4.10",
     "replace-in-file": "^5.0.2",
     "splitting": "^1.0.6",
+    "styled-components": "^4.4.1",
     "universal-cookie": "^4.0.2"
   },
   "devDependencies": {
