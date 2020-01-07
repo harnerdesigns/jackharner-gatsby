@@ -17,7 +17,7 @@ import { Link, graphql } from "gatsby";
 const IndexPage = ({ data }) => {
 
   const { edges: posts } = data.allMarkdownRemark;
-  let blogPosts = posts.filter(post => post.node.fields.collection === "blog").filter(edge => edge.node.fields.published === true);;
+  let blogPosts = posts.filter(post => post.node.fields.collection === "blog").filter(edge => edge.node.fields.published === true);
   let portfolioPosts = posts.filter(post => post.node.fields.collection === "portfolio");
 
   return (<Layout>

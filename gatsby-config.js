@@ -51,36 +51,36 @@ module.exports = {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [{
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              classPrefix: "language-",
-              inlineCodeMarker: '±',
-              aliases: {'js': 'javascript'},
-              showLineNumbers: false,
-              noInlineHighlight: false,
-              languageExtensions: [],
-              prompt: {
-                user: "jack",
-                host: "localhost",
-                global: true,
-              },
+          resolve: `gatsby-remark-prismjs`,
+          options: {
+            classPrefix: "language-",
+            inlineCodeMarker: '±',
+            aliases: { 'js': 'javascript' },
+            showLineNumbers: false,
+            noInlineHighlight: false,
+            languageExtensions: [],
+            prompt: {
+              user: "jack",
+              host: "localhost",
+              global: true,
             },
           },
+        },
           `gatsby-remark-copy-linked-files`,
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 1200,
-              linkImagesToOriginal: false,
+        {
+          resolve: `gatsby-remark-images`,
+          options: {
+            maxWidth: 1200,
+            linkImagesToOriginal: false,
 
-            },
           },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
-          }], // just in case those previously mentioned remark plugins sound cool :)
+        },
+        {
+          resolve: `gatsby-remark-responsive-iframe`,
+          options: {
+            wrapperStyle: `margin-bottom: 1.0725rem`,
+          },
+        }], // just in case those previously mentioned remark plugins sound cool :)
       },
     },
     {
@@ -97,8 +97,70 @@ module.exports = {
     },
     'gatsby-plugin-sass',
     'gatsby-plugin-advanced-sitemap',
-    'gatsby-plugin-feed'
-    
+    {
+      resolve: 'gatsby-plugin-feed',
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
+                })
+              })
+            },
+            query: `{
+              allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {fileAbsolutePath: {glob: "**/src/content/blog/**/*.md"}, frontmatter: {published: {eq: true}}}, limit: 1000) {
+          edges {
+            node {
+              excerpt(pruneLength: 250)
+              id
+              html
+                            frontmatter {
+                title
+                subtitle
+                date(formatString: "MMMM DD, YYYY")
+                featuredImage {
+                  childImageSharp {
+                    resize(width: 500, height: 500, cropFocus: CENTER) {
+                      src
+                    }
+                  }
+                }
+              }
+              fields {
+                slug
+                collection
+                externalLink
+                published
+              }
+            }
+          }
+        }
+      }`,
+            output: "/rss.xml",
+            title: "Jack Harner's Blog RSS Feed",
+          },
+        ],
+      }
+    }
+
 
   ],
 }
