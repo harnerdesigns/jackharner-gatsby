@@ -25,9 +25,10 @@
   padding: 1.5em;
 
   .logo {
-    width: 100%;
-    height: auto;
-    margin-bottom: 1em;
+      margin-bottom: 1em;
+    
+      height: 8em;
+      width: 100%;
   }
 
   .card__titles {
@@ -78,6 +79,11 @@
 
   &--small {
     padding: 0.5em;
+
+    .logo{
+      height: 4em;
+      width: 100%;
+    }
     .card__titles {
       .project__title {
         font-size: 2rem;
@@ -122,7 +128,7 @@
   grid-template-columns: 1fr;
 
   @include breakpoint(laptop) {
-    grid-template-columns: 2fr 4fr;
+    grid-template-columns: 2fr 3fr;
     max-width: 80%;
 
     &--no-images {
@@ -149,7 +155,7 @@
     @include breakpoint(laptop) {
       position: sticky;
       top: 3em;
-      margin: 3em;
+      margin: 2em;
     }
   }
 
@@ -161,7 +167,7 @@
     flex-direction: column;
 
     @include breakpoint(laptop) {
-      margin: 3em auto;
+      margin: 2em auto;
       width: 100%;
     }
 
@@ -235,8 +241,9 @@
   grid-template-columns: 1fr;
 
   @include breakpoint(laptop) {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 2fr;
     grid-gap: 3em;
+    padding: 1em 10vw;
   }
 
   .logo {

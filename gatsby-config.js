@@ -95,8 +95,9 @@ module.exports = {
         icon: `src/images/jackharner-icon.svg`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-sass`,
+    'gatsby-plugin-sass',
     'gatsby-plugin-advanced-sitemap',
+    'gatsby-plugin-feed'
     
 
   ],
