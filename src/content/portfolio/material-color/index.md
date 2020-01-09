@@ -6,6 +6,7 @@ description: "Chrome & Firefox Extension"
 color: "#efefef"
 tags: ["HTML", "Material Design"]
 images: ["./Material-Color-Picker.jpg"]
+published: true
 ---
 ## Click To Copy Material Design Color Codes
 

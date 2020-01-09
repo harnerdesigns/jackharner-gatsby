@@ -5,7 +5,6 @@ subtitle: "Perfect for Showing Off Your Work"
 featuredImage: "./featuredImage.jpg"
 tags: ['']
 externalLink: ""
-published: false
 ---
 There are several ways to take a screenshot in Firefox. 
 

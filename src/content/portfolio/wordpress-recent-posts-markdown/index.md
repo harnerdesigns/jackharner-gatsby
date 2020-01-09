@@ -6,7 +6,7 @@ description: "WordPress Plugin"
 color: "#500ba4"
 tags: ["WordPress", "PHP", "Markdown"]
 images: ["./plugin-screenshot.png"]
-
+published: true
 --- 
 ## Generate A Markdown List of your Recent WordPress Posts
 <div class="buttons">

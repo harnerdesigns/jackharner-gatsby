@@ -21,7 +21,6 @@ const Blog = ({ data }) => {
         <div className="blog-posts">
           {posts.filter(post => post.node.fields.collection === "blog")
             .filter(post => post.node.frontmatter.title.length > 0)
-            .filter(edge => edge.node.fields.published !== false)
             .map(({ node: post }, index) => {
               return (
                 <BlogCard post={post} index={index} />
@@ -32,13 +31,13 @@ const Blog = ({ data }) => {
       </main>
     </Layout>
   )
-} 
+}
 export default Blog
 
- 
+
 export const pageQuery = graphql`
 query IndexQuery {
-  allMarkdownRemark(sort: {order: [DESC, DESC], fields: [fields___weight, frontmatter___date]}) {
+  allMarkdownRemark(sort: {order: [DESC, DESC], fields: [fields___weight, frontmatter___date]}, filter: {fields:{published:{eq:true}}}) {
     edges {
       node {
         excerpt(pruneLength: 250)

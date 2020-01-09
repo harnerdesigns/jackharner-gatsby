@@ -7,6 +7,7 @@ color: "#02a974"
 tags: ["HTML", "BigCommerce", "Webpack"]
 images: ["./New-Shoolu-Home.png", "./New-Shoolu-Product.png"]
 weight: 9
+published: true
 ---
 ### The Title:
 # Marketing Director
