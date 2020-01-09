@@ -43,7 +43,7 @@ const descriptors = [
       {
         name: 'published',
         getter: node => node.frontmatter.published,
-        defaultValue: () => {console.log(NODE_ENV); (NODE_ENV === "development" ? true : false)},
+        defaultValue: false
       },
       {
         name: 'weight',
