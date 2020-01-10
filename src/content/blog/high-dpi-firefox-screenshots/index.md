@@ -5,8 +5,15 @@ subtitle: "Perfect for Showing Off Your Work"
 featuredImage: "./featuredImage.jpg"
 tags: ['']
 externalLink: ""
+published: true
 ---
 There are several ways to take a screenshot in Firefox. 
+
+## Right Click Context Menu
+
+
+## Inspect Element
+
 
 ## JS Console
 
