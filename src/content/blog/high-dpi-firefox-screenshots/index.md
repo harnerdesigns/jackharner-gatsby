@@ -11,6 +11,9 @@ There are several ways to take a screenshot in Firefox.
 
 ## Right Click Context Menu
 
+First up you want to Right Click anywhere on the page and select "Take a Screenshot"
+
+![Right Click Anywhere and select "Take A Screenshot"](./screenshot.png)
 
 ## Inspect Element
 
@@ -28,4 +31,4 @@ If you need to screenshot the full page, you just need to add the `--fullpage` f
 
 ```
 :screenshot --dpr 2 --fullpage
-```
+``` 
