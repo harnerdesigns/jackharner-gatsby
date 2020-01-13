@@ -122,7 +122,9 @@ h4 {
 
 blockquote {
   border-left: 15px solid var(--color);
-  width: 80%;
+  border-right: 15px solid var(--color);
+
+  width: 90%;
   margin-bottom: 1em;
   padding: 1em;
 
