@@ -5,6 +5,7 @@ logo: "./BleedingCoffee-logo-white.svg"
 description: "WordPress Affiliate Blog"
 color: "rgb(75, 44, 32)"
 tags: ["WordPress", "HTML", "PHP"]
+published: true
 --- 
 
 ## I Love Coffee. A Lot.

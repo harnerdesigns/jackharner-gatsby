@@ -7,7 +7,9 @@ color: "#0fb681"
 tags: ["HTML", "CSS"]
 images: ["./shoolu-returns-full-page.png", "./shoolu-returns-exchange-form.png"]
 weight: -1
+published: true
 ---
+
 
 [Shoolu.com](../shoolu) needed a place for customers to find the process and policies surrounding returns and exchanges.
 

@@ -17,7 +17,7 @@ import { Link, graphql } from "gatsby";
 const IndexPage = ({ data }) => {
 
   const { edges: posts } = data.allMarkdownRemark;
-  let blogPosts = posts.filter(post => post.node.fields.collection === "blog").filter(edge => edge.node.fields.published === true);
+  let blogPosts = posts.filter(post => post.node.fields.collection === "blog");
   let portfolioPosts = posts.filter(post => post.node.fields.collection === "portfolio");
 
   return (<Layout>
@@ -102,7 +102,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
 query HomePageQuery {
-  allMarkdownRemark(sort: {fields: [fields___weight, frontmatter___date], order: [DESC, DESC]}) {
+  allMarkdownRemark(sort: {fields: [fields___weight, frontmatter___date], order: [DESC, DESC]}, filter: {fields:{published:{eq:true}}}) {
     edges {
       node {
         excerpt(pruneLength: 250)

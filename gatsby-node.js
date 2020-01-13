@@ -4,6 +4,10 @@ const path = require("path");
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const { attachFields } = require(`gatsby-plugin-node-fields`)
 
+const { NODE_ENV } = process.env
+
+console.log(NODE_ENV);
+
 
 function isArticleNode(node) {
   if (node.internal.type !== "MarkdownRemark") {
@@ -27,38 +31,39 @@ function randomNum(min, max, currentIndex = null) {
   return n;
 }
 
+const descriptors = [
+  {
+    predicate: isArticleNode,
+    fields: [
+      {
+        name: 'externalLink',
+        getter: node => node.frontmatter.externalLink,
+        defaultValue: '',
+      },
+      {
+        name: 'published',
+        getter: node => node.frontmatter.published,
+        defaultValue: false
+      },
+      {
+        name: 'weight',
+        getter: node => node.frontmatter.weight,
+        defaultValue: 0,
+      },
+      {
+        name: 'ogImage',
+        getter: node => node.frontmatter.ogImage,
+        defaultValue: ''
+      }
+    ]
+  }
+]
+
+
 
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions;
-
-  const descriptors = [
-    {
-      predicate: isArticleNode,
-      fields: [
-        {
-          name: 'externalLink',
-          getter: node => node.frontmatter.externalLink,
-          defaultValue: '',
-        },
-        {
-          name: 'published',
-          getter: node => node.frontmatter.published,
-          defaultValue: false,
-        },
-        {
-          name: 'weight',
-          getter: node => node.frontmatter.weight,
-          defaultValue: 0,
-        },
-        {
-          name: 'ogImage',
-          getter: node => node.frontmatter.ogImage,
-          defaultValue: ''
-        }
-      ]
-    }
-  ]
+  const { createNodeField, deleteNode } = actions;
 
 
   if (_.get(node, "internal.type") === `MarkdownRemark`) {
@@ -82,6 +87,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     attachFields(node, actions, getNode, descriptors)
 
   }
+
 };
 
 
@@ -100,7 +106,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   return graphql(`
   {
-  blog: allMarkdownRemark(sort: {order: DESC, fields: [fields___weight, frontmatter___date]}, filter: {fileAbsolutePath: {glob: "**/src/content/blog/**/*.md"}}, limit: 1000) {
+  blog: allMarkdownRemark(sort: {order: DESC, fields: [fields___weight, frontmatter___date]}, filter: {fileAbsolutePath: {glob: "**/src/content/blog/**/*.md"}, fields: {published: {eq: true}}}, limit: 1000) {
     edges {
       node {
         excerpt(pruneLength: 250)
@@ -126,7 +132,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       }
     }
   }
-  portfolio: allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {fileAbsolutePath: {glob: "**/src/content/portfolio/**/*.md"}}, limit: 1000) {
+  portfolio: allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {fileAbsolutePath: {glob: "**/src/content/portfolio/**/*.md"}, fields: {published: {eq: true}}}, limit: 1000) {
     edges {
       node {
         fields {
@@ -199,24 +205,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           slug: edge.node.fields.slug,
           related
         }
-
       });
-
-
     });
-
-
-
-
-
-
   });
-
-
-
-
-
-
 }
 
 
