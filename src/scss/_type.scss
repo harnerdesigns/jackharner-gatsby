@@ -121,14 +121,16 @@ h4 {
 }
 
 blockquote {
-  border-left: 15px solid var(--color);
-  border-right: 15px solid var(--color);
-
+  border-left: 10px solid var(--color);
+  border-right: 10px solid var(--color);
+  
   width: 90%;
-  margin-bottom: 1em;
+  margin: 0 auto 1em;
   padding: 1em;
-
+  
   @include breakpoint(laptop) {
+    border-left: 15px solid var(--color);
+    border-right: 15px solid var(--color);
     width: 40%;
   }
 
