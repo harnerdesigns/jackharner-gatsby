@@ -114,6 +114,12 @@ module.exports = {
         `,
         feeds: [
           {
+            output: "/rss.xml",
+            title: "Jack Harner's Web Dev Blog",
+            custom_namespaces: {"webfeeds": "http://webfeeds.org/rss/1.0" },
+            custom_elements: [
+              { "webfeeds:accentColor": "#E91E63" },
+              { "webfeeds:logo": "./src/images/jackharenr-logo-white.svg" }],
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
@@ -154,8 +160,7 @@ module.exports = {
           }
         }
       }`,
-            output: "/rss.xml",
-            title: "Jack Harner's Blog RSS Feed",
+
           },
         ],
       }
