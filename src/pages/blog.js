@@ -6,6 +6,8 @@ import SEO from "../components/seo"
 import PageTitle from "../components/pageTitle"
 import BlogCard from "../components/blog/blogCard"
 
+import RssCard from "../components/blog/rssCard"
+
 const Blog = ({ data }) => {
 
   const { edges: posts } = data.allMarkdownRemark
@@ -22,10 +24,14 @@ const Blog = ({ data }) => {
           {posts.filter(post => post.node.fields.collection === "blog")
             .filter(post => post.node.frontmatter.title.length > 0)
             .map(({ node: post }, index) => {
+              const ShowCard = (index === 2 ? <RssCard /> : "")
               return (
+                <>
                 <BlogCard post={post} index={index} />
+                {ShowCard}
+              </>
               )
-            })}
+          })}
         </div>
 
       </main>

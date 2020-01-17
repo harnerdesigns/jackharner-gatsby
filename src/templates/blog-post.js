@@ -6,6 +6,7 @@ import BlogTitle from "../components/blog/blogTitle";
 import Button from "../components/atoms/button";
 import BlogCard from "../components/blog/blogCard";
 import ShareLinks from "../components/social/shareLinks";
+import RssCard from "../components/blog/rssCard";
 
 // import '../css/blog-post.css';
 export default function Template(props) {
@@ -24,6 +25,7 @@ export default function Template(props) {
 
       </container>
       <ShareLinks post={post} />
+      <RssCard/>
       <nav class="postNavigation">
         <h3>Related Posts</h3> 
         <ul>

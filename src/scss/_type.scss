@@ -131,7 +131,7 @@ blockquote {
   @include breakpoint(laptop) {
     border-left: 15px solid var(--color);
     border-right: 15px solid var(--color);
-    width: 40%;
+    width: 70%;
   }
 
   p {

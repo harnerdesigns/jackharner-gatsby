@@ -2,7 +2,7 @@
 date: 2020-01-06T23:24:33.045Z
 title: "Shoolu Returns Portal" 
 logo: "./shoolu-logo.svg"
-description: "Making Returns As Simple As Possible"
+description: "Returns As Simple As Possible"
 color: "#0fb681"
 tags: ["HTML", "CSS"]
 images: ["./shoolu-returns-full-page.png", "./shoolu-returns-exchange-form.png"]
