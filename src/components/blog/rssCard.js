@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 const RssCard = () => (
     <Link to={"/rss"} className={"rss__link-card"}>
 
-        <h3><FontAwesomeIcon icon="rss"/> Subscribe Via RSS</h3>
+        <h3><FontAwesomeIcon icon="rss"/> Subscribe Via RSS »</h3>
 
 
     </Link>

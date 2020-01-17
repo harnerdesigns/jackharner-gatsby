@@ -314,21 +314,28 @@
   }
 }
 
-nav.postNavigation {
+
+.post__post-content{
+
   width: 95%;
+
+  @include breakpoint(laptop){
+
+    width: 80%;
+  }
+
+}
+
+nav.postNavigation {
+  width: 100%;
   color: #fff;
-  margin: 1em auto;
   display: grid;
   align-items: center;
   justify-content: center;
   min-width: 50vw;
 
-  margin: 3em auto;
+  margin: 1em auto 1em;
   border-top: 10px solid var(--color);
-
-  @include breakpoint(laptop) {
-    max-width: 70vw;
-  }
 
   h3,
   .title {
@@ -370,7 +377,7 @@ nav.postNavigation {
 
   @include breakpoint(laptop){
 
-    width: 70%;
+    width: 100%;
   }
 
   &:hover{
