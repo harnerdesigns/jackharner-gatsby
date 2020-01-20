@@ -133,33 +133,34 @@ module.exports = {
             },
             query: `{
               allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {fileAbsolutePath: {glob: "**/src/content/blog/**/*.md"}, frontmatter: {published: {eq: true}}}, limit: 1000) {
-          edges {
-            node {
-              excerpt(pruneLength: 250)
-              id
-              html
-                            frontmatter {
-                title
-                subtitle
-                date(formatString: "MMMM DD, YYYY")
-                featuredImage {
-                  childImageSharp {
-                    resize(width: 500, height: 500, cropFocus: CENTER) {
-                      src
+                edges {
+                  node {
+                    excerpt(pruneLength: 250)
+                    id
+                    html
+                    frontmatter {
+                      title
+                      subtitle
+                      date(formatString: "MMMM DD, YYYY")
+                      featuredImage {
+                        childImageSharp {
+                          resize(width: 500, height: 500, cropFocus: CENTER) {
+                            src
+                          }
+                        }
+                      }
+                    }
+                    fields {
+                      slug
+                      collection
+                      externalLink
+                      published
                     }
                   }
                 }
               }
-              fields {
-                slug
-                collection
-                externalLink
-                published
-              }
             }
-          }
-        }
-      }`,
+            `,
 
           },
         ],
