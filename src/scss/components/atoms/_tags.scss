@@ -28,9 +28,14 @@
   }
 
   h4 {
-    text-align: left;
+    text-align: center;
     margin-inline-start: auto;
     margin-inline-end: 1rem;
+
+    @include breakpoint(laptop){
+        text-align: left;
+
+    }
   }
 
   .tag__post-preview {

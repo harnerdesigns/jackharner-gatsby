@@ -42,7 +42,7 @@ const Blog = ({ data }) => {
       <main className="page_body page_body--grid">
 
         <div className="top-tags">
-          Top&nbsp;<Link to="/tags">Blog Tags</Link>: <ul>
+          Top&nbsp;<Link to="/tags">Blog&nbsp;Tags</Link>: <ul>
             {topTags.map((tag, i) => {
               const tagLink = `/tags/${_.kebabCase(tag)}/`
               if (i < 6) {
