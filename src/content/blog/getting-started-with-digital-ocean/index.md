@@ -3,7 +3,7 @@ date: 2019-11-20T17:12:33.962Z
 title: "Getting Started With Digital Ocean" 
 subtitle: "Setting Up A Team & Sharing Access"
 featuredImage: "./featuredImage.jpg"
-tags: ['tutorial']
+tags: ['Tutorial']
 published: true
 
 ---

@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -8,9 +8,31 @@ import BlogCard from "../components/blog/blogCard"
 
 import RssCard from "../components/blog/rssCard"
 
+const _ = require("lodash");
+
+
 const Blog = ({ data }) => {
 
   const { edges: posts } = data.allMarkdownRemark
+  let tags = []
+  // Iterate through each post, putting all found tags into `tags`
+  _.forEach(posts, ({ node: post }) => {
+
+    tags = tags.concat(post.frontmatter.tags)
+    console.log(post.frontmatter.tags)
+
+  })
+
+  var map = tags.reduce(function (p, c) {
+    p[c] = (p[c] || 0) + 1;
+    return p;
+  }, {});
+  var topTags = Object.keys(map).sort(function (a, b) {
+
+    return map[a] < map[b];
+  });
+
+
 
   return (
 
@@ -18,6 +40,19 @@ const Blog = ({ data }) => {
       <SEO title="Blog" />
       <PageTitle>Blog</PageTitle>
       <main className="page_body page_body--grid">
+
+        <div className="top-tags">
+          Top&nbsp;<Link to="/tags">Blog Tags</Link>: <ul>
+            {topTags.map((tag, i) => {
+              const tagLink = `/tags/${_.kebabCase(tag)}/`
+              if (i < 6) {
+
+                return (<li><Link to={tagLink}>{tag}</Link></li>)
+              }
+            })
+            }
+          </ul>
+        </div>
 
 
         <div className="blog-posts">
@@ -27,11 +62,11 @@ const Blog = ({ data }) => {
               const ShowCard = (index === 2 ? <RssCard /> : "")
               return (
                 <>
-                <BlogCard post={post} index={index} />
-                {ShowCard}
-              </>
+                  <BlogCard post={post} index={index} />
+                  {ShowCard}
+                </>
               )
-          })}
+            })}
         </div>
 
       </main>
@@ -43,7 +78,7 @@ export default Blog
 
 export const pageQuery = graphql`
 query IndexQuery {
-  allMarkdownRemark(sort: {order: [DESC, DESC], fields: [fields___weight, frontmatter___date]}, filter: {fields:{published:{eq:true}}}) {
+  allMarkdownRemark(sort: {order: [DESC, DESC], fields: [fields___weight, frontmatter___date]}, filter: {fields:{published:{eq:true}, collection: {eq: "blog"}}}) {
     edges {
       node {
         excerpt(pruneLength: 250)
@@ -52,6 +87,7 @@ query IndexQuery {
           title
           subtitle
           date(formatString: "MMMM DD, YYYY")
+          tags
           featuredImage {
             childImageSharp {
               resize(width: 500, height: 500, cropFocus: CENTER) {

@@ -363,6 +363,24 @@ nav.postNavigation {
 }
 
 
+.top-tags{
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      ul{
+
+        @extend .top-tags;
+        margin: 1em;
+      }
+
+      li{
+        list-style: none;
+      }
+    }
+
+
 .rss__link-card{
 
   background: #f99000;
