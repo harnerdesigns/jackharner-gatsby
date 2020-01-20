@@ -3,7 +3,7 @@ date: 2020-01-07T17:21:21.524Z
 title: "Take High-DPI Screenshots In Firefox" 
 subtitle: "Perfect for Showing Off Your Work"
 featuredImage: "./featuredImage.jpg"
-tags: ['Life Hacks, Firefox']
+tags: ['Life Hacks','Firefox', 'Tutorial']
 externalLink: ""
 published: true
 ---

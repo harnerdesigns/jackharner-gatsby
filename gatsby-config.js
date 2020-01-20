@@ -114,6 +114,12 @@ module.exports = {
         `,
         feeds: [
           {
+            output: "/rss.xml",
+            title: "Jack Harner's Web Dev Blog",
+            custom_namespaces: {"webfeeds": "http://webfeeds.org/rss/1.0" },
+            custom_elements: [
+              { "webfeeds:accentColor": "#E91E63" },
+              { "webfeeds:logo": "./src/images/jackharenr-logo-white.svg" }],
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
@@ -127,35 +133,35 @@ module.exports = {
             },
             query: `{
               allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {fileAbsolutePath: {glob: "**/src/content/blog/**/*.md"}, frontmatter: {published: {eq: true}}}, limit: 1000) {
-          edges {
-            node {
-              excerpt(pruneLength: 250)
-              id
-              html
-                            frontmatter {
-                title
-                subtitle
-                date(formatString: "MMMM DD, YYYY")
-                featuredImage {
-                  childImageSharp {
-                    resize(width: 500, height: 500, cropFocus: CENTER) {
-                      src
+                edges {
+                  node {
+                    excerpt(pruneLength: 250)
+                    id
+                    html
+                    frontmatter {
+                      title
+                      subtitle
+                      date(formatString: "MMMM DD, YYYY")
+                      featuredImage {
+                        childImageSharp {
+                          resize(width: 500, height: 500, cropFocus: CENTER) {
+                            src
+                          }
+                        }
+                      }
+                    }
+                    fields {
+                      slug
+                      collection
+                      externalLink
+                      published
                     }
                   }
                 }
               }
-              fields {
-                slug
-                collection
-                externalLink
-                published
-              }
             }
-          }
-        }
-      }`,
-            output: "/rss.xml",
-            title: "Jack Harner's Blog RSS Feed",
+            `,
+
           },
         ],
       }
