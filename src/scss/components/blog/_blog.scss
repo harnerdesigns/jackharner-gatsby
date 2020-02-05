@@ -293,7 +293,18 @@
     max-width: 80%;
 
     @include breakpoint(laptop) {
-      max-width: 40%;
+      max-width: 75%;
+      width: 100%;
+    }
+
+    li > p {
+      margin-bottom: 0;
+    }
+    li > ul {
+      margin: 0;
+      li{
+        list-style: circle;
+      }
     }
   }
 

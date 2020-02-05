@@ -49,7 +49,7 @@ const IndexPage = ({ data }) => {
 
     </container>
     <container class="full white">
-      <h1 class="tagline">I Write Down What I Learn.</h1>
+      <h1 class="tagline">Learn In Public.</h1>
 
       <p class="tagline">Now and then, I write about <Link to="/blog">Web Development</Link> & <a
         href="https://bleedingcoffee.com">Coffee</a>. By sharing my understanding of a particular topic, I give the people learning after me a fresh take on a problem. Plus it gives me the added bonus of proving I know at least sort-of what I'm talking about.</p>
