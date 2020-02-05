@@ -100,10 +100,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
-  const docTemplate = path.resolve('src/templates/docTemplate.js');
-  const blogTemplate = path.resolve('src/templates/blogTemplate.js');
-
-
   return graphql(`
   {
   blog: allMarkdownRemark(sort: {order: DESC, fields: [fields___weight, frontmatter___date]}, filter: {fileAbsolutePath: {glob: "**/src/content/blog/**/*.md"}, fields: {published: {eq: true}}}, limit: 1000) {
@@ -120,7 +116,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         frontmatter{
           title
           subtitle
-          
+          tags          
           featuredImage {
             childImageSharp {
               resize(width: 500, height: 500, cropFocus: CENTER) {
@@ -207,18 +203,32 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         tags = tags.concat(edge.node.frontmatter.tags)
       }
     })
-    // Eliminate duplicate tags
+    console.log(tags)
 
+    // Count Tags To Get Top Tags
+    var topTags = tags.reduce(function (p, c) {
+      p[c] = (p[c] || 0) + 1;
+      return p;
+    }, {});
+    
+    console.log(topTags)
+
+    tags = _.uniq(tags)
+
+
+    // Create All Tags Page
     createPage({
       path: "/tags/",
       component: path.resolve(`src/templates/tags.js`),
       context: {
-        tags
+        topTags
       }
     })
 
-    tags = _.uniq(tags)
+
     // Make tag pages
+
+
     tags.forEach(tag => {
       const tagPath = `/tags/${_.kebabCase(tag)}/`
 
@@ -227,6 +237,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         component: path.resolve(`src/templates/tag.js`),
         context: {
           tag,
+          topTags
         },
       })
     })

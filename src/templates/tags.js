@@ -10,7 +10,7 @@ const _ = require("lodash");
 class TagRoute extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
-    const tags = this.props.pageContext.tags
+    const tags = this.props.pageContext.topTags
 
     const tagIcons = {
       "git": ['fab', "git-alt"],
@@ -23,15 +23,12 @@ class TagRoute extends React.Component {
       "Gatsby": "glass-martini-alt"
     }
     
-    var map = tags.reduce(function (p, c) {
-      p[c] = (p[c] || 0) + 1;
-      return p;
-    }, {});
-    console.log(map);
-    var sortedTags = Object.keys(map).sort(function (a, b) {
+    var sortedTags = Object.keys(tags).sort(function (a, b) {
   
-      return map[a] < map[b];
+      return tags[a] < tags[b];
     });
+
+    console.log(sortedTags)
 
 
     return (
@@ -47,7 +44,7 @@ class TagRoute extends React.Component {
             <div className="blog-posts">
               {sortedTags.map((tag, index) => {
                 const tagLink = `/tags/${_.kebabCase(tag)}/`
-                return (<Link to={tagLink} className="tag__card"><h2><FontAwesomeIcon fixedWidth icon={tagIcons[tag]} />{tag}</h2> <h4>{map[tag]} Post{(map[tag] > 1 ? "s" :"")}</h4>
+                return (<Link to={tagLink} className="tag__card"><h2><FontAwesomeIcon fixedWidth icon={tagIcons[tag]} />{tag}</h2> <h4>{tags[tag]} Post{(tags[tag] > 1 ? "s" :"")}</h4>
                 <div className="tag__post-preview">
                   {
                   

@@ -300,7 +300,7 @@
     }
     li > ul {
       margin: 0;
-      li{
+      li {
         list-style: circle;
       }
     }
@@ -311,7 +311,7 @@
 
     li {
       margin-bottom: 0.25em;
-      p{
+      p {
         margin: 0;
       }
       & > ol {
@@ -384,19 +384,24 @@ nav.postNavigation {
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 80%;
+  margin: 0 auto;
 
   ul {
-    @extend .top-tags;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
 
     @include breakpoint(laptop) {
-      margin: 1em;
+      margin: 0.5em 0.5em 0.5em auto;
     }
   }
 
   li {
     list-style: none;
+    margin: 0;
+    padding: 0 0 0 0.5em;
   }
 }
 
