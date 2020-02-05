@@ -44,7 +44,7 @@ const IndexPage = ({ data }) => {
             } else {return false}
           })}
       </p>
-      <p class="tagline">I'm currently learning all things React, Accessibility, & Modern Web Development. JackHarner.com is <a href="https://github.com/harnerdesigns/jackharner-gatsby">Built With Gatsby!</a></p>
+      <p class="tagline">I'm currently learning all things React, Gatsby, Accessibility, & Modern Web Development.</p>
 
 
     </container>
@@ -52,7 +52,7 @@ const IndexPage = ({ data }) => {
       <h1 class="tagline">Learn In Public.</h1>
 
       <p class="tagline">Now and then, I write about <Link to="/blog">Web Development</Link> & <a
-        href="https://bleedingcoffee.com">Coffee</a>. By sharing my understanding of a particular topic, I give the people learning after me a fresh take on a problem. Plus it gives me the added bonus of proving I know at least sort-of what I'm talking about.</p>
+        href="https://bleedingcoffee.com">Coffee</a>. By sharing my understanding of a particular topic, I give the people learning after me a fresh take on a problem.</p>
       <p class="tagline sub-tagline latest-posts">Latest Posts:&nbsp;
         {blogPosts.map(({ node: post }, index) => {
         if (index <= 2) {

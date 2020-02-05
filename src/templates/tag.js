@@ -21,7 +21,7 @@ class TagRoute extends React.Component {
     const totalCount = this.props.data.allMarkdownRemark.totalCount
     const tagHeader = `${totalCount} Post${
       totalCount === 1 ? '' : 's'
-    } Tagged “${tag}”`
+      } Tagged “${tag}”`
 
     return (
       <Layout>
@@ -33,19 +33,23 @@ class TagRoute extends React.Component {
 
           <main className="page_body page_body--grid">
 
-          <div className="blog-posts">
-          {posts.filter(post => post.node.frontmatter.title.length > 0)
-            .map(({ node: post }, index) => {
-              const ShowCard = (index === 2 ? <RssCard /> : "")
-              return (
-                <>
-                <BlogCard post={post} index={index} />
-                {ShowCard}
-              </>
-              )
-          })}
-        </div>
-        </main>
+            <div className="top-tags">
+              <Link to="/blog">&laquo; Back to All Posts</Link>
+            </div>
+
+            <div className="blog-posts">
+              {posts.filter(post => post.node.frontmatter.title.length > 0)
+                .map(({ node: post }, index) => {
+                  const ShowCard = (index === 2 ? <RssCard /> : "")
+                  return (
+                    <>
+                      <BlogCard post={post} index={index} />
+                      {ShowCard}
+                    </>
+                  )
+                })}
+            </div>
+          </main>
         </section>
       </Layout>
     )
