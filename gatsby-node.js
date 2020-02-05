@@ -109,13 +109,18 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   blog: allMarkdownRemark(sort: {order: DESC, fields: [fields___weight, frontmatter___date]}, filter: {fileAbsolutePath: {glob: "**/src/content/blog/**/*.md"}, fields: {published: {eq: true}}}, limit: 1000) {
     edges {
       node {
-        excerpt(pruneLength: 250)
         id
-        frontmatter {
+        excerpt
+        fields {
+          slug
+          collection
+          published
+          externalLink
+        }
+        frontmatter{
           title
           subtitle
-          date(formatString: "MMMM DD, YYYY")
-          tags
+          
           featuredImage {
             childImageSharp {
               resize(width: 500, height: 500, cropFocus: CENTER) {
@@ -123,12 +128,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               }
             }
           }
-        }
-        fields {
-          slug
-          collection
-          externalLink
-          published
         }
       }
     }
@@ -141,21 +140,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           collection
           published
         }
-        frontmatter {
+        frontmatter{
+          color
           title
           description
-          color
-          date(formatString: "MMMM DD, YYYY")
           tags
-          images {
-            childImageSharp {
-              sizes {
-                src
-              }
-            }
-          }
-          logo {
-            extension
+          logo{
             publicURL
           }
         }
@@ -213,12 +203,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     // Iterate through each post, putting all found tags into `tags`
     result.data.blog.edges.forEach(edge => {
       if (_.get(edge, `node.frontmatter.tags`)) {
-        
+
         tags = tags.concat(edge.node.frontmatter.tags)
       }
     })
     // Eliminate duplicate tags
-    
+
     createPage({
       path: "/tags/",
       component: path.resolve(`src/templates/tags.js`),
@@ -226,12 +216,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         tags
       }
     })
-    
+
     tags = _.uniq(tags)
     // Make tag pages
     tags.forEach(tag => {
       const tagPath = `/tags/${_.kebabCase(tag)}/`
-  
+
       createPage({
         path: tagPath,
         component: path.resolve(`src/templates/tag.js`),
