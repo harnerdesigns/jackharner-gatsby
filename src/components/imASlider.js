@@ -1,142 +1,34 @@
 import React from "react"
 import { Component } from "react"
-
+import Typing from "./Typing"
 
 class ImASlider extends Component {
-
   constructor(props) {
-
-    super(props);
+    super(props)
     this.state = {
-      typedTitle: "",
-      currentTitle: "",
-      titleQuantifier: "a",
-      titles: ["Web Developer", "Problem Solver", "Photographer", "Graphic Designer", "Cat Lover", "Entrepreneur"],
-      typingSpeed: 50
-    }
-    this.loop = this.loop.bind(this);
-  }
-
-  isVowel(term) {
-
-    let firstLetter = term.slice(0, 1);
-
-    var result;
-
-    result = firstLetter === "A" || firstLetter === "E" || firstLetter === "I" || firstLetter === "O" || firstLetter === "U";
-    return result;
-  }
-
-  addLetter = (letter) => {
-
-    this.setState({ typedTitle: this.state.typedTitle + letter })
-  }
-
-  removeLetter = () => {
-
-    this.setState({ typedTitle: this.state.typedTitle.slice(0, -1) })
-  }
-
-  removeWord = (numberOfLetters) => {
-
-
-
-    while (numberOfLetters > 0) {
-
-      this.timeout = setTimeout(() => {
-        //search function
-        this.removeLetter();
-      }, this.state.typingSpeed * numberOfLetters);
-
-      numberOfLetters--;
+      titles: [
+        "Web Developer",
+        "Problem Solver",
+        "Photographer",
+        "Graphic Designer",
+        "Cat Lover",
+        "Entrepreneur",
+      ],
     }
   }
-
-  addWord = (word) => {
-
-    let letters = word.split("");
-    letters.forEach((letter, i) => {
-
-      this.timeout2 = setTimeout(() => {
-        //search function
-        this.addLetter(letter)
-      }, this.state.typingSpeed * i);
-
-
-
-    });
-
-    this.timeout3 = setTimeout(() => {
-      this.removeWord(this.state.typedTitle.length)
-    }, 1500);
-
-
-  }
-
-
-
-
-
-  loop = () => {
-
-    let { titles, currentTitle } = this.state;
-
-    let currentIndex = titles.indexOf(currentTitle);
-    let newIndex;
-
-    if (currentIndex < 5) {
-
-      newIndex = currentIndex + 1;
-    } else {
-
-      newIndex = 0;
-
-    }
-    this.setState({ currentTitle: titles[newIndex], titleQuantifier: (this.isVowel(titles[newIndex]) ? "an" : "a") });
-
-    this.addWord(this.state.currentTitle);
-
-
-    return
-
-
-  }
-
-
-  componentDidMount() {
-    this.interval = setInterval(() => { this.loop() },
-      3000);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.interval);
-    clearTimeout(this.timeout);
-    clearTimeout(this.timeout2);
-    clearTimeout(this.timeout3);
-  }
-
-
 
   render() {
     return (
-
       <>
         <h3>
-          <span>
-            I'm <span id="a">{this.state.titleQuantifier}</span>
-          </span>
+          <span>I'm a&nbsp;</span>
           <span class="title__box">
-            <span class="imaslider__title">
-              {this.state.typedTitle}
-            </span>
+            <Typing words={this.state.titles} />
           </span>
         </h3>
-
       </>
     )
   }
-
-
 }
 
 export default ImASlider
