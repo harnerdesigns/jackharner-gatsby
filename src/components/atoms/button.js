@@ -93,6 +93,7 @@ const StyledLink = styled(Link)`
   &:hover {
     color: var(--darker-text-color);
     background: var(--darker-color);
+    opacity: 1;
   }
 
   &:focus {
@@ -109,6 +110,7 @@ const StyledLink = styled(Link)`
   &.button--white {
     border: 1px solid #fff;
     background: none;
+    color: #fff;
 
     &:hover {
       background: rgba(255, 255, 255, 0.2);

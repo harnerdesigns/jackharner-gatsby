@@ -30,7 +30,7 @@ class TagRoute extends React.Component {
       return topTags[a] < topTags[b];
       
     });
-    let filteredTags = topTags.filter(topTag => topTag != tag)
+    let filteredTags = topTags.filter(topTag => topTag !== tag)
 
     const tagHeader = `${totalCount} Post${
       totalCount === 1 ? '' : 's'

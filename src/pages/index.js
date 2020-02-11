@@ -111,15 +111,6 @@ const IndexPage = ({ data }) => {
           })}
         </p>
       </container>
-
-      <container class="half black">
-        <h2>Let's Make Something Awesome!</h2>
-        <p class="tagline">
-          I'm looking for new freelance clients and/or a Front End Developer
-          Role.
-        </p>
-        <Button label={{ __html: "Let's Chat" }} href="/contact" size="large" />
-      </container>
     </Layout>
   )
 }

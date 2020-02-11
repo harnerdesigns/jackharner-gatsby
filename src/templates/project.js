@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ProjectCard from "../components/portfolio/projectCard";
 import ProjectHeader from "../components/portfolio/projectHeader";
+import Button from "../components/atoms/button";
 
 export default function Template(props) {
   const post = props.data.markdownRemark
@@ -22,13 +23,16 @@ export default function Template(props) {
 
               (image, index) => {
                 return (
-                  <img src={image.childImageSharp.sizes.src} alt=""></img>
+                  <img src={image.childImageSharp.sizes.src} alt="" />
                 )
               }
             )}
           </section> : ""}
 
-          <section className="project__content" dangerouslySetInnerHTML={{ __html: post.html }} />
+          <section className="project__content" >
+              {post.fields.externalLink && <Button label="Check It Out »" href={post.fields.externalLink} />}
+              <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          </section>
 
         </main>
 
@@ -48,33 +52,33 @@ export default function Template(props) {
   )
 }
 export const pageQuery = graphql`
-query ProjectByPath($slug: String!) {
-  markdownRemark(fields: {slug: {eq: $slug}}) {
- 
-        id
-        html
-        frontmatter {
-          title
-          description
-          color
-          date(formatString: "MMMM DD, YYYY")
-          tags
-          images{
-            childImageSharp {
-              sizes {
-                src
-              }
-            }
-          }
-        logo {
-          extension
-          publicURL
-        }
-        }
-        fields {
-          slug
-          collection
-        }
-      }
-    }
-`
+         query ProjectByPath($slug: String!) {
+           markdownRemark(fields: { slug: { eq: $slug } }) {
+             id
+             html
+             frontmatter {
+               title
+               description
+               color
+               date(formatString: "MMMM DD, YYYY")
+               tags
+               images {
+                 childImageSharp {
+                   sizes {
+                     src
+                   }
+                 }
+               }
+               logo {
+                 extension
+                 publicURL
+               }
+             }
+             fields {
+               slug
+               collection
+               externalLink
+             }
+           }
+         }
+       `
