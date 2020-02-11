@@ -20,6 +20,7 @@
   justify-content: center;
   width: 100%;
   margin: 0.5em auto;
+  @include card(1);
 }
 
 .project__card {
