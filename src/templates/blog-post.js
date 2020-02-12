@@ -8,7 +8,6 @@ import BlogCard from "../components/blog/blogCard";
 import ShareLinks from "../components/social/shareLinks";
 import RssCard from "../components/blog/rssCard";
 
-// import '../css/blog-post.css';
 export default function Template(props) {
   const post = props.data.markdownRemark
   const { related } = props.pageContext
@@ -17,7 +16,7 @@ export default function Template(props) {
       <SEO title={post.frontmatter.title} description={post.excerpt} image={(post.fields.ogImage ? post.fields.ogImage : post.frontmatter.featuredImage.childImageSharp.sizes.src)} />
       <BlogTitle post={post} />
       <container className="half black content">
-        {(post.fields.externalLink ? <Button href={post.fields.externalLink} target="_blank" rel="noopener noreferrer" icon="external-link-alt" label={{ __html: " <strong>See Full Post</strong> @ " + (post.fields.externalLink.match(/^https?\:\/\/([^\/?#]+)(?:[\/?#]|$)/i)[1]) }} type="large" extraStyle={{ width: '80%' }} />
+        {(post.fields.externalLink ? <Button href={post.fields.externalLink} target="_blank" rel="noopener noreferrer" icon="external-link-alt" label={{ __html: " <strong>See Full Post</strong> @ " + (post.fields.externalLink.match(/^https?:\/\/([^\/?#]+)(?:[\/?#]|$)/i)[1]) }} size="large" extraStyle={{ width: '80%' }} />
           : "")}
         <main className="post__body" dangerouslySetInnerHTML={{ __html: post.html }}>
 

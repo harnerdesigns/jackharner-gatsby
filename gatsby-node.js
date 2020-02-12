@@ -100,22 +100,23 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
-  const docTemplate = path.resolve('src/templates/docTemplate.js');
-  const blogTemplate = path.resolve('src/templates/blogTemplate.js');
-
-
   return graphql(`
   {
   blog: allMarkdownRemark(sort: {order: DESC, fields: [fields___weight, frontmatter___date]}, filter: {fileAbsolutePath: {glob: "**/src/content/blog/**/*.md"}, fields: {published: {eq: true}}}, limit: 1000) {
     edges {
       node {
-        excerpt(pruneLength: 250)
         id
-        frontmatter {
+        excerpt
+        fields {
+          slug
+          collection
+          published
+          externalLink
+        }
+        frontmatter{
           title
           subtitle
-          date(formatString: "MMMM DD, YYYY")
-          tags
+          tags          
           featuredImage {
             childImageSharp {
               resize(width: 500, height: 500, cropFocus: CENTER) {
@@ -123,12 +124,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               }
             }
           }
-        }
-        fields {
-          slug
-          collection
-          externalLink
-          published
         }
       }
     }
@@ -141,21 +136,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           collection
           published
         }
-        frontmatter {
+        frontmatter{
+          color
           title
           description
-          color
-          date(formatString: "MMMM DD, YYYY")
           tags
-          images {
-            childImageSharp {
-              sizes {
-                src
-              }
-            }
-          }
-          logo {
-            extension
+          logo{
             publicURL
           }
         }
@@ -213,30 +199,45 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     // Iterate through each post, putting all found tags into `tags`
     result.data.blog.edges.forEach(edge => {
       if (_.get(edge, `node.frontmatter.tags`)) {
-        
+
         tags = tags.concat(edge.node.frontmatter.tags)
       }
     })
-    // Eliminate duplicate tags
+    console.log(tags)
+
+    // Count Tags To Get Top Tags
+    var topTags = tags.reduce(function (p, c) {
+      p[c] = (p[c] || 0) + 1;
+      return p;
+    }, {});
     
+    console.log(topTags)
+
+    tags = _.uniq(tags)
+
+
+    // Create All Tags Page
     createPage({
       path: "/tags/",
       component: path.resolve(`src/templates/tags.js`),
       context: {
-        tags
+        topTags
       }
     })
-    
-    tags = _.uniq(tags)
+
+
     // Make tag pages
+
+
     tags.forEach(tag => {
       const tagPath = `/tags/${_.kebabCase(tag)}/`
-  
+
       createPage({
         path: tagPath,
         component: path.resolve(`src/templates/tag.js`),
         context: {
           tag,
+          topTags
         },
       })
     })

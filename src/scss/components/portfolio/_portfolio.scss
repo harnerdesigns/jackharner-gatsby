@@ -5,9 +5,11 @@
     align-items: stretch;
     justify-content: flex-start;
     grid-gap: 2em;
-
+    
     @include breakpoint(laptop) {
       grid-template-columns: repeat(2, 1fr);
+      max-width: 1280px;
+      margin: 0 auto;
     }
   }
 }
@@ -18,6 +20,7 @@
   justify-content: center;
   width: 100%;
   margin: 0.5em auto;
+  @include card(1);
 }
 
 .project__card {

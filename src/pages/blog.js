@@ -18,8 +18,8 @@ const Blog = ({ data }) => {
   // Iterate through each post, putting all found tags into `tags`
   _.forEach(posts, ({ node: post }) => {
 
-    tags = tags.concat(post.frontmatter.tags)
-    console.log(post.frontmatter.tags)
+    return tags = tags.concat(post.frontmatter.tags)
+    
 
   })
 
@@ -30,6 +30,7 @@ const Blog = ({ data }) => {
   var topTags = Object.keys(map).sort(function (a, b) {
 
     return map[a] < map[b];
+
   });
 
 
@@ -42,16 +43,19 @@ const Blog = ({ data }) => {
       <main className="page_body page_body--grid">
 
         <div className="top-tags">
-          Top&nbsp;<Link to="/tags">Blog&nbsp;Tags</Link>: <ul>
+          <ul>
+            <li>Top&nbsp;<Link to="/tags">Blog&nbsp;Tags</Link>:</li>
             {topTags.map((tag, i) => {
               const tagLink = `/tags/${_.kebabCase(tag)}/`
               if (i < 6) {
 
                 return (<li><Link to={tagLink}>{tag}</Link></li>)
+
               }
             })
             }
           </ul>
+
         </div>
 
 

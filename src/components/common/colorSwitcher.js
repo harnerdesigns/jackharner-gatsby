@@ -149,12 +149,15 @@ export default class ColorSwitcher extends Component {
 
   setColorVars = () => {
 
+    var textColor = this.getTextColor(this.state.selected_color.rgb)
+
     document.documentElement.style.setProperty('--color', this.state.selected_color.hex);
 
-    document.documentElement.style.setProperty('--text-color', this.getTextColor(this.state.selected_color.rgb));
+    
+    document.documentElement.style.setProperty('--text-color', textColor);
+    document.documentElement.style.setProperty('--text-color--inverted', (textColor === "white" ? "black" : "white"));
 
-
-    document.documentElement.style.setProperty('--darkerColor', this.darkenHSL(this.state.selected_color.hsl, 15, true));
+    document.documentElement.style.setProperty('--darker-color', this.darkenHSL(this.state.selected_color.hsl, 15, true));
     let darkerColor = this.darkenHSL(this.state.selected_color.hsl, 15);
     console.log({ lighter: this.state.selected_color.hsl, darker: darkerColor });
     document.documentElement.style.setProperty('--darker-text-color', this.getTextColor(this.hslToRgb(darkerColor.h, darkerColor.s, darkerColor.l)));

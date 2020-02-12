@@ -6,6 +6,9 @@ import BlogCard from '../components/blog/blogCard'
 import RssCard from '../components/blog/rssCard'
 import PageTitle from '../components/pageTitle'
 
+const _ = require("lodash");
+
+
 class TagRoute extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
@@ -19,33 +22,61 @@ class TagRoute extends React.Component {
     const tag = this.props.pageContext.tag
     const title = this.props.data.site.siteMetadata.title
     const totalCount = this.props.data.allMarkdownRemark.totalCount
+    let topTags = this.props.pageContext.topTags
+
+    
+    topTags = Object.keys(topTags).sort(function (a, b) {
+      
+      return topTags[a] < topTags[b];
+      
+    });
+    let filteredTags = topTags.filter(topTag => topTag !== tag)
+
     const tagHeader = `${totalCount} Post${
       totalCount === 1 ? '' : 's'
-    } Tagged “${tag}”`
+      } Tagged “${tag}”`
 
     return (
       <Layout>
         <section className="section">
-          <Helmet title={`${tag} | ${title}`} />
+          <Helmet title={`${tag} Blog Posts | ${title}`} />
 
           <PageTitle>{tagHeader}</PageTitle>
 
 
           <main className="page_body page_body--grid">
 
-          <div className="blog-posts">
-          {posts.filter(post => post.node.frontmatter.title.length > 0)
-            .map(({ node: post }, index) => {
-              const ShowCard = (index === 2 ? <RssCard /> : "")
-              return (
-                <>
-                <BlogCard post={post} index={index} />
-                {ShowCard}
-              </>
-              )
-          })}
-        </div>
-        </main>
+            <div className="top-tags">
+              <Link to="/blog" style={{ margin: "0 auto 0 0.5em" }}>&laquo; Back to All Posts</Link>
+
+              <ul>
+                <li>Top&nbsp;<Link to="/tags">Blog&nbsp;Tags</Link>:</li>
+                {filteredTags.map((tag, i) => {
+                  const tagLink = `/tags/${_.kebabCase(tag)}/`
+                  if (i < 6) {
+
+                    return (<li><Link to={tagLink}>{tag}</Link></li>)
+
+                  }
+                })
+                }
+              </ul>
+
+            </div>
+
+            <div className="blog-posts">
+              {posts.filter(post => post.node.frontmatter.title.length > 0)
+                .map(({ node: post }, index) => {
+                  const ShowCard = (index === 2 ? <RssCard /> : "")
+                  return (
+                    <>
+                      <BlogCard post={post} index={index} />
+                      {ShowCard}
+                    </>
+                  )
+                })}
+            </div>
+          </main>
         </section>
       </Layout>
     )

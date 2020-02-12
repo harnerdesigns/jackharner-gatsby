@@ -8,12 +8,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import "./fontawesome";
+import "./fontawesome"
 import Header from "./common/header"
 import "../scss/style.scss"
-import Footer from "./common/footer";
-
-
+import Footer from "./common/footer"
+import FooterCTA from "./common/FooterCTA"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -27,11 +26,12 @@ const Layout = ({ children }) => {
   `)
   return (
     <>
-  <div>
-    <Header siteTitle={data.site.siteMetadata.title}/>
+      <div>
+        <Header siteTitle={data.site.siteMetadata.title} />
 
         {children}
 
+        <FooterCTA />
         <Footer />
       </div>
     </>
