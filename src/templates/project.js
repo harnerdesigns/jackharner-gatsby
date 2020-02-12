@@ -31,7 +31,7 @@ export default function Template(props) {
 
           <section className="project__content" >
               {post.fields.externalLink && <Button label="Check It Out »" href={post.fields.externalLink} />}
-              <div dangerouslySetInnerHTML={{ __html: post.html }} />
+              {post.html && <div dangerouslySetInnerHTML={{ __html: post.html }} />}
           </section>
 
         </main>
