@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import PageTitle from "../components/pageTitle"
 import Button from "../components/atoms/button"
+import { Link } from "gatsby"
 
 const Contact = () => (
   <Layout>
@@ -38,7 +39,7 @@ const Contact = () => (
       <ul>
         <li>
           Looking for a Freelance Web Developer (
-          <a href="https://harnerdesigns.com">Here's My Portfolio</a>)
+          <Link to="/portfolio">Here's My Portfolio</Link>)
         </li>
         <li>
           Hiring for a Front-End Developer Position (

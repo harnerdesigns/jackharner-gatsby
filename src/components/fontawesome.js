@@ -1,7 +1,58 @@
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { fab } from "@fortawesome/free-brands-svg-icons"
+import {
+  faCheckSquare,
+  faTag,
+  faEnvelope,
+  faCoffee,
+  faCaretDown,
+  faPalette,
+  faBars,
+  faArrowLeft,
+  faArrowRight,
+  faExternalLinkAlt,
+  faUndoAlt,
+  faShareAlt,
+  faClock,
+  faStopwatch,
+  faCalendar,
+  faRss,
+  faShoppingCart,
+  faCogs,
+  faLightbulb,
+  faFolderOpen,
+  faGlassMartiniAlt,
+  faProjectDiagram,
+  faCloudDownloadAlt,
+  faHammer,
+  faBox
+} from "@fortawesome/free-solid-svg-icons"
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faCheckSquare, faTag, faEnvelope, faCoffee, faCaretDown, faPalette, faBars, faArrowLeft, faArrowRight, faExternalLinkAlt, faUndoAlt, faShareAlt, faClock, faStopwatch, faCalendar, faRss, faShoppingCart, faCogs, faLightbulb, faFolderOpen, faGlassMartiniAlt } from '@fortawesome/free-solid-svg-icons'
-
-
-library.add(fab, faCheckSquare, faEnvelope, faCoffee, faCaretDown, faPalette, faBars, faArrowLeft, faArrowRight, faExternalLinkAlt, faUndoAlt, faShareAlt, faTag, faClock, faStopwatch, faCalendar, faRss, faShoppingCart, faCogs, faLightbulb, faFolderOpen, faGlassMartiniAlt)
+library.add(
+  fab,
+  faCheckSquare,
+  faEnvelope,
+  faCoffee,
+  faCaretDown,
+  faPalette,
+  faBars,
+  faArrowLeft,
+  faArrowRight,
+  faExternalLinkAlt,
+  faUndoAlt,
+  faShareAlt,
+  faTag,
+  faClock,
+  faStopwatch,
+  faCalendar,
+  faRss,
+  faShoppingCart,
+  faCogs,
+  faLightbulb,
+  faFolderOpen,
+  faGlassMartiniAlt,
+  faProjectDiagram,
+  faCloudDownloadAlt,
+  faHammer,
+  faBox
+)
