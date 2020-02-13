@@ -13,14 +13,41 @@ export default function Template(props) {
   const { related } = props.pageContext
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} description={post.excerpt} image={(post.fields.ogImage ? post.fields.ogImage : post.frontmatter.featuredImage.childImageSharp.sizes.src)} />
+      <SEO
+        title={post.frontmatter.title}
+        description={post.excerpt}
+        image={
+          post.fields.ogImage
+            ? post.fields.ogImage
+            : post.frontmatter.featuredImage.childImageSharp.sizes.src
+        }
+      />
       <BlogTitle post={post} />
       <container className="half black content">
-        {(post.fields.externalLink ? <Button href={post.fields.externalLink} target="_blank" rel="noopener noreferrer" icon="external-link-alt" label={" <strong>See Full Post</strong> @ " + (post.fields.externalLink.match(/^https?:\/\/([^\/?#]+)(?:[\/?#]|$)/i)[1]) } size="large" extraStyle={{ width: '80%' }} />
-          : "")}
-        <main className="post__body" dangerouslySetInnerHTML={{ __html: post.html }}>
-
-        </main>
+        {post.fields.externalLink ? (
+          <Button
+            href={post.fields.externalLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            icon="external-link-alt"
+            label={
+              " <strong>See Full Post</strong> @ " +
+              post.fields.externalLink.match(
+                /^https?:\/\/([^\/?#]+)(?:[\/?#]|$)/i
+              )[1]
+            }
+            size="large"
+            extraStyle={{ width: "80%" }}
+          />
+        ) : (
+          ""
+        )}
+        <main
+          className="post__body"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        ></main>
+      </container>
+      <container class="slim black">
         <section className="post__post-content">
           <ShareLinks post={post} />
           <RssCard />
@@ -28,7 +55,11 @@ export default function Template(props) {
             <h3>Related Posts</h3>
             <ul>
               {related.map((post, index) => {
-                return <li><BlogCard post={post} small /></li>
+                return (
+                  <li>
+                    <BlogCard post={post} small />
+                  </li>
+                )
               })}
             </ul>
           </nav>
