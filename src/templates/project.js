@@ -14,7 +14,7 @@ export default function Template(props) {
     <Layout>
       <SEO title={post.frontmatter.title + " » " + post.frontmatter.description} description={post.frontmatter.title + " - " + post.frontmatter.description + " By Jack Harner."} image={post.frontmatter.logo.publicURL} />      
         <ProjectHeader post={post} />
-      <container className="half black content">
+      <container className="half black">
 
         <main className={post.frontmatter.images ? "project__body" : "project__body project__body--no-images"} >
 
