@@ -7,9 +7,9 @@ import { breakpoints } from "../breakpoints"
 const FooterCTA = () => (
   <StyledFooterCTA>
     <CtaContainer>
-      <h3>Let's Make Something Awesome!</h3>
+      <h3>Let's Work</h3>
       <p>
-        I'm looking for new freelance clients and/or a Front End Developer Role.
+        I'm always looking for my next project. Want to work with me?
       </p>
       <Button label={{ __html: "Let's Chat »" }} href="/contact" size="medium" />
     </CtaContainer>
@@ -23,7 +23,8 @@ const StyledFooterCTA = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: -5rem;
+  margin-bottom: 1em;
 `
 
 const CtaContainer = styled.div`
@@ -52,8 +53,7 @@ const CtaContainer = styled.div`
     grid-gap: 1em;
     align-items: center;
     justify-content: center;
-    margin-top: -1em;
-    margin-bottom: -1em;
+
     border-radius: 1em;
   }
 `

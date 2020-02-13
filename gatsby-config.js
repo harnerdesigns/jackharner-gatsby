@@ -45,6 +45,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `photoRoll`,
+        path: `${__dirname}/src/content/photos`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // replace "UA-XXXXXXXXX-X" with your own Tracking ID

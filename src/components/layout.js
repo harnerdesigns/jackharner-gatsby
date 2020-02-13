@@ -12,7 +12,6 @@ import "./fontawesome"
 import Header from "./common/header"
 import "../scss/style.scss"
 import Footer from "./common/footer"
-import FooterCTA from "./common/FooterCTA"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -31,7 +30,6 @@ const Layout = ({ children }) => {
 
         {children}
 
-        <FooterCTA />
         <Footer />
       </div>
     </>

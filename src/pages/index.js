@@ -3,7 +3,6 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ImASlider from "../components/imASlider"
-import Typing from "../components/Typing"
 import ProjectCard from "../components/portfolio/projectCard";
 
 
@@ -12,6 +11,7 @@ import ProjectCard from "../components/portfolio/projectCard";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link, graphql } from "gatsby";
 import Button from "../components/atoms/button";
+import PhotoRoll from "../components/PhotoRoll";
 
 
 
@@ -19,6 +19,7 @@ import Button from "../components/atoms/button";
 const IndexPage = ({ data }) => {
 
   const { edges: posts } = data.allMarkdownRemark;
+  const { photos } = data.photoRoll.frontmatter;
   let blogPosts = posts.filter(post => post.node.fields.collection === "blog");
   let portfolioPosts = posts.filter(post => post.node.fields.collection === "portfolio");
 
@@ -111,6 +112,7 @@ const IndexPage = ({ data }) => {
           })}
         </p>
       </container>
+      <PhotoRoll photos={photos} />
     </Layout>
   )
 }
@@ -142,6 +144,24 @@ query HomePageQuery {
           externalLink
           published
         }
+      }
+    }
+  }
+  photoRoll: markdownRemark(frontmatter: {title: {eq: "Photo Roll"}}) {
+    fields {
+      slug
+    }
+    frontmatter {
+      title
+      photos {
+        photo {
+          childImageSharp {
+            fluid(maxWidth: 1200) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        link
       }
     }
   }

@@ -128,6 +128,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       }
     }
   }
+
+
+
+
   portfolio: allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {fileAbsolutePath: {glob: "**/src/content/portfolio/**/*.md"}, fields: {published: {eq: true}}}, limit: 1000) {
     edges {
       node {
