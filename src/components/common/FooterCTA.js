@@ -7,7 +7,7 @@ import { breakpoints } from "../breakpoints"
 const FooterCTA = () => (
   <StyledFooterCTA>
     <CtaContainer>
-      <h3>Let's Work</h3>
+      <h3>How Can I Help?</h3>
       <p>
         I'm always looking for my next project. Want to work with me?
       </p>
@@ -39,11 +39,14 @@ const CtaContainer = styled.div`
   0 1px 8px rgba(0, 0, 0, 0.12);
 
   h3{
+    margin: 0;
       color: var(--color);
   }
 
   p{
       color: var(--text-color--inverted);
+      margin-bottom: 0;
+      font-size: 1em!important;
   }
   
   @media ${breakpoints.laptop} {

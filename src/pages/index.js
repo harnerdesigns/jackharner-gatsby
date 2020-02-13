@@ -112,7 +112,23 @@ const IndexPage = ({ data }) => {
           })}
         </p>
       </container>
+      <container className="half black">
+        <h1
+          style={{
+            padding: "1rem",
+            textAlign: "center",
+            alignSelf: "center",
+          }}
+        >
+          I Take Photos, Too!
+        </h1>
+        <p>
+          Landscapes, Food, Products, and My Cats. <a href="https://unsplash.com/@jackharner">
+            Follow Me on Unsplash &raquo;
+          </a>
+        </p>
       <PhotoRoll photos={photos} />
+      </container>
     </Layout>
   )
 }

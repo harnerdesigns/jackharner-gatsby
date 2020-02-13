@@ -320,6 +320,21 @@
       & > ol {
         margin: 0.5em 1em 0.5em 3em;
       }
+    } 
+  }
+
+  table{
+    width: 80%;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 1rem;
+    thead{
+      border-bottom: 2px solid #fff;
+      text-align: left;
+      font-weight: bold;
+    }
+    tr > td{
+      border-bottom: 1px solid #ccc;
+      padding: 0.25em;
     }
   }
 
