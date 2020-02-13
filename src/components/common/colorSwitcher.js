@@ -257,7 +257,7 @@ export default class ColorSwitcher extends Component {
               onCancel={this.onCancelColor}
               onChangeComplete={this.onChangeColors}
               color={this.state.selected_color} />
-            <Button icon="undo-alt" label={{ __html: "Reset To Default" }} onClick={this.onReset}
+            <Button icon="undo-alt" label={"Reset To Default"} onClick={this.onReset}
               extraStyle={{ background: "#E91E63", color: "#ffffff" }} />
           </div>
           :

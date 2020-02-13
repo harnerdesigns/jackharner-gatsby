@@ -38,7 +38,7 @@ const Button = ({
         {...others}
       >
         {icon ? <FontAwesomeIcon icon={icon} /> : ""}
-        <span className="label" dangerouslySetInnerHTML={label}></span>
+        <span className="label" dangerouslySetInnerHTML={{__html: label}}></span>
       </StyledA>
     )
   } else if (onClick) {
@@ -50,7 +50,10 @@ const Button = ({
         {...others}
       >
         {icon ? <FontAwesomeIcon icon={icon} /> : ""}
-        <span className="label" dangerouslySetInnerHTML={label}></span>
+        <span
+          className="label"
+          dangerouslySetInnerHTML={{ __html: label }}
+        ></span>
       </StyledButton>
     )
   } else if (to) {
@@ -62,7 +65,10 @@ const Button = ({
         {...others}
       >
         {icon ? <FontAwesomeIcon icon={icon} /> : ""}
-        <span className="label" dangerouslySetInnerHTML={label}></span>
+        <span
+          className="label"
+          dangerouslySetInnerHTML={{ __html: label }}
+        ></span>
       </StyledLink>
     )
   }

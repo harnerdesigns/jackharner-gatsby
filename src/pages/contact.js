@@ -19,9 +19,7 @@ const Contact = () => (
           target="_blank"
           rel="noopener noreferrer"
           icon={["fab", "twitter"]}
-          label={{
-            __html: "Twitter DM",
-          }}
+          label={"Twitter DM"}
           size="large"
           extraStyle={{ width: "80%" }}
         />
@@ -31,9 +29,7 @@ const Contact = () => (
           target="_blank"
           rel="noopener noreferrer"
           icon="envelope"
-          label={{
-            __html: "Email",
-          }}
+          label={ "Email"}
           size="large"
           extraStyle={{ width: "80%" }}
         />

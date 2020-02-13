@@ -11,7 +11,7 @@ const FooterCTA = () => (
       <p>
         I'm always looking for my next project. Want to work with me?
       </p>
-      <Button label={{ __html: "Let's Chat »" }} href="/contact" size="medium" />
+      <Button label={"Let's Chat »"} href="/contact" size="medium" />
     </CtaContainer>
   </StyledFooterCTA>
 )

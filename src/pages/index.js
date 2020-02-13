@@ -35,12 +35,12 @@ const IndexPage = ({ data }) => {
           <ImASlider />
           <div className="buttons" style={{width: "50%"}}>
             <Button
-              label={{ __html: "See My Work" }}
+              label={"See My Work" }
               href="/portfolio"
               white
             />
             <Button
-              label={{ __html: "Let's Chat »" }}
+              label={ "Let's Chat »" }
               href="/contact"
             />
           </div>
