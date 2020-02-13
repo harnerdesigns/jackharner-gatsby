@@ -111,6 +111,8 @@ module.exports = {
     },
     'gatsby-plugin-sass',
     'gatsby-plugin-advanced-sitemap',
+    'gatsby-plugin-styled-components',
+
     {
       resolve: 'gatsby-plugin-feed',
       options: {
