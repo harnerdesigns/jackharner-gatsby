@@ -129,9 +129,10 @@ const StyledLink = styled(Link)`
     font-size: 1rem;
     width: 100%;
     font-weight: 900;
+    margin: 0 auto;
 
+    font-size: 1.5rem;
     @media ${breakpoints.laptop} {
-      font-size: 1.5em;
       padding: 0.5rem 2rem;
     }
   }

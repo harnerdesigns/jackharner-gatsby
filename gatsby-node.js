@@ -1,34 +1,32 @@
-const _ = require("lodash");
-const path = require("path");
+const _ = require("lodash")
+const path = require("path")
 
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const { attachFields } = require(`gatsby-plugin-node-fields`)
 
 const { NODE_ENV } = process.env
 
-console.log(NODE_ENV);
-
+console.log(NODE_ENV)
 
 function isArticleNode(node) {
   if (node.internal.type !== "MarkdownRemark") {
-    return false;
+    return false
   }
 
-
-  return true;
+  return true
 }
 
 function randomNum(min, max, currentIndex = null) {
-  var n = [];
-  var i = 0;
+  var n = []
+  var i = 0
   while (i < 3) {
-    var num = Math.floor(Math.random() * max) + min;
+    var num = Math.floor(Math.random() * max) + min
     if (num !== currentIndex && n.indexOf(num) === -1) {
-      n.push(num);
-      i++;
+      n.push(num)
+      i++
     }
   }
-  return n;
+  return n
 }
 
 const descriptors = [
@@ -36,39 +34,40 @@ const descriptors = [
     predicate: isArticleNode,
     fields: [
       {
-        name: 'externalLink',
+        name: "externalLink",
         getter: node => node.frontmatter.externalLink,
-        defaultValue: '',
+        defaultValue: "",
       },
       {
-        name: 'published',
+        name: "externalLinkLabel",
+        getter: node => node.frontmatter.externalLinkLabel,
+        defaultValue: "Check It Out »",
+      },
+      {
+        name: "published",
         getter: node => node.frontmatter.published,
-        defaultValue: false
+        defaultValue: false,
       },
       {
-        name: 'weight',
+        name: "weight",
         getter: node => node.frontmatter.weight,
         defaultValue: 0,
       },
       {
-        name: 'ogImage',
+        name: "ogImage",
         getter: node => node.frontmatter.ogImage,
-        defaultValue: ''
-      }
-    ]
-  }
+        defaultValue: "",
+      },
+    ],
+  },
 ]
 
-
-
-
 exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField, deleteNode } = actions;
-
+  const { createNodeField, deleteNode } = actions
 
   if (_.get(node, "internal.type") === `MarkdownRemark`) {
     // Get the parent node
-    const parent = getNode(_.get(node, "parent"));
+    const parent = getNode(_.get(node, "parent"))
 
     const slug = createFilePath({ node, getNode, basePath: `src/content/blog` })
     createNodeField({
@@ -80,181 +79,223 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       node,
       name: "collection",
-      value: _.get(parent, "sourceInstanceName")
-    });
-
+      value: _.get(parent, "sourceInstanceName"),
+    })
 
     attachFields(node, actions, getNode, descriptors)
-
   }
-
-};
-
-
-
-
-
-
-
+}
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
-  const { createPage } = actions;
+  const { createPage } = actions
 
   return graphql(`
-  {
-  blog: allMarkdownRemark(sort: {order: DESC, fields: [fields___weight, frontmatter___date]}, filter: {fileAbsolutePath: {glob: "**/src/content/blog/**/*.md"}, fields: {published: {eq: true}}}, limit: 1000) {
-    edges {
-      node {
-        id
-        excerpt
-        fields {
-          slug
-          collection
-          published
-          externalLink
+    {
+      blog: allMarkdownRemark(
+        sort: { order: DESC, fields: [fields___weight, frontmatter___date] }
+        filter: {
+          fileAbsolutePath: { glob: "**/src/content/blog/**/*.md" }
+          fields: { published: { eq: true } }
         }
-        frontmatter{
-          title
-          subtitle
-          tags          
-          featuredImage {
-            childImageSharp {
-              resize(width: 500, height: 500, cropFocus: CENTER) {
-                src
+        limit: 1000
+      ) {
+        edges {
+          node {
+            id
+            excerpt
+            fields {
+              slug
+              collection
+              published
+              externalLink
+            }
+            frontmatter {
+              title
+              subtitle
+              tags
+              featuredImage {
+                childImageSharp {
+                  resize(width: 500, height: 500, cropFocus: CENTER) {
+                    src
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      portfolio: allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        filter: {
+          fileAbsolutePath: { glob: "**/src/content/portfolio/**/*.md" }
+          fields: { published: { eq: true } }
+        }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+              collection
+              published
+            }
+            frontmatter {
+              color
+              title
+              description
+              tags
+              logo {
+                publicURL
               }
             }
           }
         }
       }
     }
-  }
-
-
-
-
-  portfolio: allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {fileAbsolutePath: {glob: "**/src/content/portfolio/**/*.md"}, fields: {published: {eq: true}}}, limit: 1000) {
-    edges {
-      node {
-        fields {
-          slug
-          collection
-          published
-        }
-        frontmatter{
-          color
-          title
-          description
-          tags
-          logo{
-            publicURL
-          }
-        }
-      }
-    }
-  }
-}
   `).then(result => {
-
-
     if (result.errors) {
-      reporter.panicOnBuild(`Error while running GraphQL query.` + result.errors)
+      reporter.panicOnBuild(
+        `Error while running GraphQL query.` + result.errors
+      )
       return
     }
 
+    //////////////////////
+    //    Blog Pages   //
+    ////////////////////
 
     _.each(result.data.blog.edges, (edge, index) => {
       const edgeCount = result.data.blog.edges.length
-      const relatedIndexes = randomNum(0, edgeCount, index);
+      const relatedIndexes = randomNum(0, edgeCount, index)
 
-      const related = [result.data.blog.edges[relatedIndexes[0]].node,
-      result.data.blog.edges[relatedIndexes[1]].node,
-      result.data.blog.edges[relatedIndexes[2]].node]
+      const related = [
+        result.data.blog.edges[relatedIndexes[0]].node,
+        result.data.blog.edges[relatedIndexes[1]].node,
+        result.data.blog.edges[relatedIndexes[2]].node,
+      ]
 
       createPage({
         path: `${edge.node.fields.slug}`,
         component: path.resolve("./src/templates/blog-post.js"),
         context: {
           slug: edge.node.fields.slug,
-          related
-        }
-      });
+          related,
+        },
+      })
+    })
 
-    });
-
-    _.each(result.data.portfolio.edges, (edge, index) => {
-      const edgeCount = result.data.portfolio.edges.length
-      const relatedPortfolioIndexes = randomNum(0, edgeCount, index);
-
-      const related = [result.data.portfolio.edges[relatedPortfolioIndexes[0]].node,
-      result.data.portfolio.edges[relatedPortfolioIndexes[1]].node,
-      result.data.portfolio.edges[relatedPortfolioIndexes[2]].node]
-
-      createPage({
-        path: `${edge.node.fields.slug}`,
-        component: path.resolve("./src/templates/project.js"),
-        context: {
-          slug: edge.node.fields.slug,
-          related
-        }
-      });
-    });
     // Tag pages:
-    let tags = []
+    let blogTags = []
     // Iterate through each post, putting all found tags into `tags`
     result.data.blog.edges.forEach(edge => {
       if (_.get(edge, `node.frontmatter.tags`)) {
-
-        tags = tags.concat(edge.node.frontmatter.tags)
+        blogTags = blogTags.concat(edge.node.frontmatter.tags)
       }
     })
-    console.log(tags)
+    console.log(blogTags)
 
     // Count Tags To Get Top Tags
-    var topTags = tags.reduce(function (p, c) {
-      p[c] = (p[c] || 0) + 1;
-      return p;
-    }, {});
-    
-    console.log(topTags)
+    var topBlogTags = blogTags.reduce(function(p, c) {
+      p[c] = (p[c] || 0) + 1
+      return p
+    }, {})
 
-    tags = _.uniq(tags)
+    console.log(topBlogTags)
 
+    blogTags = _.uniq(blogTags)
 
     // Create All Tags Page
     createPage({
-      path: "/tags/",
-      component: path.resolve(`src/templates/tags.js`),
+      path: "/blog/tags/",
+      component: path.resolve(`src/templates/tags/blog-tags.js`),
       context: {
-        topTags
-      }
+        topTags: topBlogTags,
+      },
     })
-
 
     // Make tag pages
 
-
-    tags.forEach(tag => {
-      const tagPath = `/tags/${_.kebabCase(tag)}/`
+    blogTags.forEach(tag => {
+      const tagPath = `/blog/tags/${_.kebabCase(tag)}/`
 
       createPage({
         path: tagPath,
         component: path.resolve(`src/templates/tag.js`),
         context: {
           tag,
-          topTags
+          topTags: topBlogTags,
+          postType: "blog",
         },
       })
     })
-  });
 
+    //////////////////////
+    // Portfolio Pages //
+    ////////////////////
 
+    _.each(result.data.portfolio.edges, (edge, index) => {
+      const edgeCount = result.data.portfolio.edges.length
+      const relatedPortfolioIndexes = randomNum(0, edgeCount, index)
 
+      const related = [
+        result.data.portfolio.edges[relatedPortfolioIndexes[0]].node,
+        result.data.portfolio.edges[relatedPortfolioIndexes[1]].node,
+        result.data.portfolio.edges[relatedPortfolioIndexes[2]].node,
+      ]
 
+      createPage({
+        path: `${edge.node.fields.slug}`,
+        component: path.resolve("./src/templates/project.js"),
+        context: {
+          slug: edge.node.fields.slug,
+          related,
+        },
+      })
+    })
+    // Tag pages:
+    let portfolioTags = []
+    // Iterate through each post, putting all found tags into `tags`
+    result.data.portfolio.edges.forEach(edge => {
+      if (_.get(edge, `node.frontmatter.tags`)) {
+        portfolioTags = portfolioTags.concat(edge.node.frontmatter.tags)
+      }
+    })
+    console.log(portfolioTags)
 
+    // Count Tags To Get Top Tags
+    var topPortfolioTags = portfolioTags.reduce(function(p, c) {
+      p[c] = (p[c] || 0) + 1
+      return p
+    }, {})
+
+    console.log(topPortfolioTags)
+
+    portfolioTags = _.uniq(portfolioTags)
+
+    // Create All Tags Page
+    createPage({
+      path: "/portfolio/tags/",
+      component: path.resolve(`src/templates/tags/portfolio-tags.js`),
+      context: {
+        topTags: topPortfolioTags,
+      },
+    })
+
+    // Make tag pages
+
+    portfolioTags.forEach(tag => {
+      const tagPath = `/portfolio/tags/${_.kebabCase(tag)}/`
+
+      createPage({
+        path: tagPath,
+        component: path.resolve(`src/templates/tag.js`),
+        context: {
+          tag,
+          topTags: topPortfolioTags,
+          postType: "portfolio",
+        },
+      })
+    })
+  })
 }
-
-
-
-
-
-

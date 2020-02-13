@@ -1,13 +1,13 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import { Link, graphql } from 'gatsby'
-import Layout from '../components/layout'
-import BlogCard from '../components/blog/blogCard'
-import RssCard from '../components/blog/rssCard'
-import PageTitle from '../components/pageTitle'
+import React from "react"
+import Helmet from "react-helmet"
+import { Link, graphql } from "gatsby"
+import Layout from "../components/layout"
+import BlogCard from "../components/blog/blogCard"
+import RssCard from "../components/blog/rssCard"
+import PageTitle from "../components/pageTitle"
+import ProjectCard from "../components/portfolio/projectCard"
 
-const _ = require("lodash");
-
+const _ = require("lodash")
 
 class TagRoute extends React.Component {
   render() {
@@ -22,58 +22,69 @@ class TagRoute extends React.Component {
     const tag = this.props.pageContext.tag
     const title = this.props.data.site.siteMetadata.title
     const totalCount = this.props.data.allMarkdownRemark.totalCount
-    let topTags = this.props.pageContext.topTags
+    const postType = this.props.pageContext.postType
 
-    
-    topTags = Object.keys(topTags).sort(function (a, b) {
-      
-      return topTags[a] < topTags[b];
-      
-    });
+    const postTypeLabels =
+      postType === "portfolio"
+        ? { single: "Project", plural: "Projects", type: "Project" }
+        : { single: "Blog Post", plural: "Blog Posts", type: "Blog" }
+
+    let topTags = this.props.pageContext.topTags
+    topTags = Object.keys(topTags).sort(function(a, b) {
+      return topTags[a] < topTags[b]
+    })
     let filteredTags = topTags.filter(topTag => topTag !== tag)
 
-    const tagHeader = `${totalCount} Post${
-      totalCount === 1 ? '' : 's'
-      } Tagged “${tag}”`
+    const tagHeader = `${totalCount} ${
+      totalCount === 1 ? postTypeLabels.single : postTypeLabels.plural
+    } Tagged “${tag}”`
 
     return (
       <Layout>
         <section className="section">
-          <Helmet title={`${tag} Blog Posts | ${title}`} />
+          <Helmet title={`${tag} ${postTypeLabels.plural} | ${title}`} />
 
           <PageTitle>{tagHeader}</PageTitle>
 
-
           <main className="page_body page_body--grid">
-
             <div className="top-tags">
-              <Link to="/blog" style={{ margin: "0 auto 0 0.5em" }}>&laquo; Back to All Posts</Link>
+              <Link to={`/${postType}`} style={{ margin: "0 auto 0 0.5em" }}>
+                &laquo; Back to All {postTypeLabels.plural}
+              </Link>
 
               <ul>
-                <li>Top&nbsp;<Link to="/tags">Blog&nbsp;Tags</Link>:</li>
+                <li>
+                  Top&nbsp;
+                  <Link to={`/${postType}/tags`}>
+                    {postTypeLabels.type}&nbsp;Tags
+                  </Link>
+                  :
+                </li>
                 {filteredTags.map((tag, i) => {
-                  const tagLink = `/tags/${_.kebabCase(tag)}/`
+                  const tagLink = `/${postType}/tags/${_.kebabCase(tag)}/`
                   if (i < 6) {
-
-                    return (<li><Link to={tagLink}>{tag}</Link></li>)
-
+                    return (
+                      <li>
+                        <Link to={tagLink}>{tag}</Link>
+                      </li>
+                    )
                   }
-                })
-                }
+                })}
               </ul>
-
             </div>
 
             <div className="blog-posts">
-              {posts.filter(post => post.node.frontmatter.title.length > 0)
+              {posts
+                .filter(post => post.node.frontmatter.title.length > 0)
                 .map(({ node: post }, index) => {
-                  const ShowCard = (index === 2 ? <RssCard /> : "")
-                  return (
-                    <>
+                  let card =
+                    postType === "portfolio" ? (
+                      <ProjectCard post={post} index={index} />
+                    ) : (
                       <BlogCard post={post} index={index} />
-                      {ShowCard}
-                    </>
-                  )
+                    )
+
+                  return <>{card}</>
                 })}
             </div>
           </main>
@@ -86,39 +97,50 @@ class TagRoute extends React.Component {
 export default TagRoute
 
 export const tagPageQuery = graphql`
-query TagPage($tag: String) {
-  site {
-    siteMetadata {
-      title
+  query SingleTagPage($tag: String, $postType: String) {
+    site {
+      siteMetadata {
+        title
+      }
     }
-  }
-  allMarkdownRemark(limit: 1000, sort: {fields: [frontmatter___date], order: DESC}, filter: {frontmatter: {tags: {in: [$tag]}}, fields: {published: {eq: true}, collection: {eq: "blog"}}}) {
-    totalCount
-    edges {
-      node {
-        excerpt(pruneLength: 250)
-        id
-        frontmatter {
-          title
-          subtitle
-          date(formatString: "MMMM DD, YYYY")
-          featuredImage {
-            childImageSharp {
-              resize(width: 500, height: 500, cropFocus: CENTER) {
-                src
+    allMarkdownRemark(
+      limit: 1000
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: {
+        frontmatter: { tags: { in: [$tag] } }
+        fields: { published: { eq: true }, collection: { eq: $postType } }
+      }
+    ) {
+      totalCount
+      edges {
+        node {
+          excerpt(pruneLength: 250)
+          id
+          frontmatter {
+            title
+            subtitle
+            date(formatString: "MMMM DD, YYYY")
+            featuredImage {
+              childImageSharp {
+                resize(width: 500, height: 500, cropFocus: CENTER) {
+                  src
+                }
               }
             }
+            logo {
+              publicURL
+            }
+            tags
+            color
           }
-        }
-        fields {
-          slug
-          collection
-          externalLink
-          published
+          fields {
+            slug
+            collection
+            externalLink
+            published
+          }
         }
       }
     }
   }
-}
-
 `

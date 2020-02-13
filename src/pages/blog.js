@@ -36,34 +36,34 @@ const Blog = ({ data }) => {
 
 
   return (
-
     <Layout>
       <SEO title="Blog" />
       <PageTitle>Blog</PageTitle>
       <main className="page_body page_body--grid">
-
         <div className="top-tags">
           <ul>
-            <li>Top&nbsp;<Link to="/tags">Blog&nbsp;Tags</Link>:</li>
+            <li>
+              Top&nbsp;<Link to="/blog/tags">Blog&nbsp;Tags</Link>:
+            </li>
             {topTags.map((tag, i) => {
-              const tagLink = `/tags/${_.kebabCase(tag)}/`
+              const tagLink = `/blog/tags/${_.kebabCase(tag)}/`
               if (i < 6) {
-
-                return (<li><Link to={tagLink}>{tag}</Link></li>)
-
+                return (
+                  <li>
+                    <Link to={tagLink}>{tag}</Link>
+                  </li>
+                )
               }
-            })
-            }
+            })}
           </ul>
-
         </div>
 
-
         <div className="blog-posts">
-          {posts.filter(post => post.node.fields.collection === "blog")
+          {posts
+            .filter(post => post.node.fields.collection === "blog")
             .filter(post => post.node.frontmatter.title.length > 0)
             .map(({ node: post }, index) => {
-              const ShowCard = (index === 2 ? <RssCard /> : "")
+              const ShowCard = index === 2 ? <RssCard /> : ""
               return (
                 <>
                   <BlogCard post={post} index={index} />
@@ -72,7 +72,6 @@ const Blog = ({ data }) => {
               )
             })}
         </div>
-
       </main>
     </Layout>
   )
