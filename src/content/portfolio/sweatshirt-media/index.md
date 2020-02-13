@@ -2,7 +2,7 @@
 date: 2020-02-05T18:05:22.553Z
 title: "Sweatshirt Media" 
 logo: "./logo.svg"
-description: "Web Development"
+description: "Portfolio Design"
 color: "#a29bfe"
 tags: ["Gatsby", "React", "Netlify"]
 images: ["./sweatshirt-home.png"]

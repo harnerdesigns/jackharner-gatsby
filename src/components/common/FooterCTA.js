@@ -7,9 +7,9 @@ import { breakpoints } from "../breakpoints"
 const FooterCTA = () => (
   <StyledFooterCTA>
     <CtaContainer>
-      <h3>Let's Make Something Awesome!</h3>
+      <h3>How Can I Help?</h3>
       <p>
-        I'm looking for new freelance clients and/or a Front End Developer Role.
+        I'm always looking for my next project. Want to work with me?
       </p>
       <Button label={"Let's Chat »"} href="/contact" size="medium" />
     </CtaContainer>
@@ -23,7 +23,8 @@ const StyledFooterCTA = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: -5rem;
+  margin-bottom: 1em;
 `
 
 const CtaContainer = styled.div`
@@ -38,11 +39,14 @@ const CtaContainer = styled.div`
   0 1px 8px rgba(0, 0, 0, 0.12);
 
   h3{
+    margin: 0;
       color: var(--color);
   }
 
   p{
       color: var(--text-color--inverted);
+      margin-bottom: 0;
+      font-size: 1em!important;
   }
   
   @media ${breakpoints.laptop} {
@@ -52,8 +56,7 @@ const CtaContainer = styled.div`
     grid-gap: 1em;
     align-items: center;
     justify-content: center;
-    margin-top: -1em;
-    margin-bottom: -1em;
+
     border-radius: 1em;
   }
 `

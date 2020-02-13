@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import PageTitle from "../components/pageTitle"
 import SEO from "../components/seo"
 import ImageGrid from "../components/imageGrid"
+import PhotoRoll from "../components/PhotoRoll"
 
 
 // Images
@@ -16,7 +17,12 @@ import Returns from "../images/Shoolu-Returns-Portal-exchange.png"
 import Shoolu from "../images/shoolu.png"
 import ShooluSocial from "../images/Shoolu-social.jpg"
 
-const About = () => (
+const About = ({ data }) => {
+
+  const { photos } = data.photoRoll.frontmatter;
+
+  
+  return(
   <Layout>
     <SEO title="About" />
     <PageTitle>About Me</PageTitle>
@@ -32,7 +38,7 @@ const About = () => (
       <h2>In The Beginning</h2>
       <p>I got my start in web development a really long time ago in a far off land called NeoPets. They would give you a single HTML file to play with, and play with it I did. I learned the basics of Typography, Layout, complete with way too many <code>&lt;blink&gt;</code> & <code>&lt;marquee&gt;</code> tags. </p>
     </container>
-    <container className="full pink">
+    <container className="half pink">
 
       <h2>A long time later...</h2>
       </container>
@@ -73,13 +79,39 @@ const About = () => (
       <h2>Outside The Internet</h2>
 
       <p>When I'm not glued to the computer, I spend my time exploring the New Mexico Craft Beer scene (<a href="https://lacumbrebrewing.com" target="_blank" rel="noopener noreferrer">La Cumbre</a> is the spot to go), taking photos of my surroundings (Check me out on <a href="https://unsplash.com/@jackharner">Unsplash</a>), and enjoying Albuquerque's 360 Days of Sun per year. </p>
-      <ImageGrid images={["https://images.unsplash.com/photo-1540333960012-30edd3e44290?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", "https://images.unsplash.com/photo-1530567422755-236c6c6d0ef4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=60", "https://images.unsplash.com/photo-1561438883-3b98f4f6393d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"]} />
+      {/* <ImageGrid images={["https://images.unsplash.com/photo-1540333960012-30edd3e44290?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", "https://images.unsplash.com/photo-1530567422755-236c6c6d0ef4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=60", "https://images.unsplash.com/photo-1561438883-3b98f4f6393d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"]} /> */}
+
+      <PhotoRoll photos={photos} />
 
       <h2>If You Want More Of Me...</h2>
       <p>Give me a follow on Twitter, <a href="https://twitter.com/jackharner">@JackHarner</a>, check out my <Link to="/blog">Blog</Link>, or some of the <a href="https://harnerdesigns.com">work I've done</a>. </p>
     </container>
 
   </Layout>
-)
+)}
 
 export default About 
+
+
+export const pageQuery = graphql`
+query AboutPageQuery {
+  photoRoll: markdownRemark(frontmatter: {title: {eq: "Photo Roll"}}) {
+    fields {
+      slug
+    }
+    frontmatter {
+      title
+      photos {
+        photo {
+          childImageSharp {
+            fluid(maxWidth: 1200) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        link
+      }
+    }
+  }
+}
+` 
