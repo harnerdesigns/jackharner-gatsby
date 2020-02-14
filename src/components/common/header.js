@@ -8,7 +8,7 @@ import MainMenu from "./mainMenu";
 import logo from "./../../images/jackharner-logo-white-text.svg";
 
 const Header = ({ siteTitle }) => (
-  <Headroom calcHeightOnResize upTolerance={100}>
+  <Headroom calcHeightOnResize upTolerance={50}>
   <header className="main_head"
 
   >

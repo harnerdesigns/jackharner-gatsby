@@ -178,6 +178,7 @@ query HomePageQuery {
           }
         }
         link
+        tag
       }
     }
   }
