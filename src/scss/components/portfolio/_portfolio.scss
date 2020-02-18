@@ -138,6 +138,8 @@
   @include breakpoint(laptop) {
     grid-template-columns: 2fr 3fr;
     max-width: 80%;
+    max-width: 1280px;
+
 
     &--no-images {
       grid-template-columns: 1fr;
@@ -256,10 +258,13 @@
     padding: 1em 10vw;
   }
 
+  .logo__wrapper{
+    margin: 1em auto;
+  }
   .logo {
     @include breakpoint(laptop) {
       max-width: 100%;
-      margin: 1em auto;
+      margin: 0 auto;
     }
   }
 

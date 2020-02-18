@@ -24,7 +24,7 @@ const StyledFooterCTA = styled.section`
   align-items: center;
   justify-content: center;
   margin-top: -5rem;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 `
 
 const CtaContainer = styled.div`
