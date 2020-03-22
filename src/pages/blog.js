@@ -7,6 +7,8 @@ import PageTitle from "../components/pageTitle"
 import BlogCard from "../components/blog/blogCard"
 
 import RssCard from "../components/blog/rssCard"
+import tagIcons from "../templates/tags/tag-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const _ = require("lodash");
 
@@ -50,7 +52,8 @@ const Blog = ({ data }) => {
               if (i < 6) {
                 return (
                   <li>
-                    <Link to={tagLink}>{tag}</Link>
+                    <Link to={tagLink}>                      <FontAwesomeIcon fixedWidth icon={tagIcons[tag]} />&nbsp;
+{tag}</Link>
                   </li>
                 )
               }

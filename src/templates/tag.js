@@ -5,6 +5,8 @@ import Layout from "../components/layout"
 import BlogCard from "../components/blog/blogCard"
 import PageTitle from "../components/pageTitle"
 import ProjectCard from "../components/portfolio/projectCard"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import tagIcons from "./tags/tag-icons"
 
 const _ = require("lodash")
 
@@ -57,7 +59,7 @@ class TagRoute extends React.Component {
                   if (i < 6) {
                     return (
                       <li>
-                        <Link to={tagLink}>{tag}</Link>
+                        <Link to={tagLink}><FontAwesomeIcon fixedWidth icon={tagIcons[tag]} />&nbsp;{tag}</Link>
                       </li>
                     )
                   }
