@@ -11,6 +11,9 @@ import RssCard from "../components/blog/rssCard";
 export default function Template(props) {
   const post = props.data.markdownRemark
   const { related } = props.pageContext
+  let postContent = post.html
+  postContent = postContent.replace("</p>",'</p><script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CE7ITK7W&placement=jackharnercom" id="_carbonads_js"></script>')
+  console.log(postContent)
   return (
     <Layout>
       <SEO
@@ -42,10 +45,14 @@ export default function Template(props) {
         ) : (
           ""
         )}
+
+        
         <main
           className="post__body"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        ></main>
+          dangerouslySetInnerHTML={{ __html: postContent }}
+        >
+
+        </main>
       </container>
       <container class="slim black">
         <section className="post__post-content">
