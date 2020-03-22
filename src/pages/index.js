@@ -50,15 +50,15 @@ const IndexPage = ({ data }) => {
       <container class="full pink">
         <h1 class="tagline">I Make Websites.</h1>
         <p class="tagline">
-          I work mostly with{" "}
-          <a href="https://harnerdesigns.com/project/tag/wordpress/">
+          I work primarily with{" "}
+          <Link to="/portfolio/tags/word-press/">
             WordPress
-          </a>{" "}
-          & PHP with an emphasis on clean, responsive design. I love me some
-          good 'ole fashioned HTML/CSS.
+          </Link>{" "}
+          & <Link to="/portfolio/tags/php/">PHP</Link> with an emphasis on clean, responsive design. On the flip side, I do love me some
+          good 'ole fashioned <Link to="/portfolio/tags/html/">HTML</Link>/<Link to="/portfolio/tags/css/">CSS</Link>.
         </p>
         <p class="tagline">
-          I'm currently learning all things React, Gatsby, Accessibility, &
+          I'm currently diving in to all things React, Gatsby, Accessibility, &
           Modern Web Development.
         </p>
 
@@ -120,7 +120,7 @@ const IndexPage = ({ data }) => {
             alignSelf: "center",
           }}
         >
-          I Take Photos, Too!
+          I Like Taking Photos, Too!
         </h1>
         <p>
           Landscapes, Food, Products, and My Cats. <a href="https://unsplash.com/@jackharner">
@@ -178,6 +178,7 @@ query HomePageQuery {
           }
         }
         link
+        tag
       }
     }
   }

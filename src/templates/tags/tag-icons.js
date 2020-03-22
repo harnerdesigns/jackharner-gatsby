@@ -17,7 +17,8 @@ const tagIcons = {
   AJAX: "cloud-download-alt",
   "Life Hacks": "hammer",
   "Material Design": "palette",
-  Webpack: "box"
+  Webpack: "box",
+  Photography: "camera"
 }
 
 export default tagIcons

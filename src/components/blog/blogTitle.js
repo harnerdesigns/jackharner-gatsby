@@ -19,7 +19,7 @@ const BlogTitle = ({ post }) => {
         {(post.frontmatter.tags ? <div className="post__tags"><FontAwesomeIcon icon="tag"/> 
         {
         post.frontmatter.tags.map((tag, i) => {
-            const tagLink = `/tags/${_.kebabCase(tag)}/`
+            const tagLink = `/blog/tags/${_.kebabCase(tag)}/`
              return (<><Link to={tagLink}>{tag}</Link>{i < post.frontmatter.tags.length - 1 ? ", ": ""}</>)
              })
              }</div> : "")}
