@@ -12,7 +12,7 @@ export default function Template(props) {
   const post = props.data.markdownRemark
   const { related } = props.pageContext
   let postContent = post.html
-  postContent = postContent.replace("</p>",'</p><script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CE7ITK7W&placement=jackharnercom" id="_carbonads_js"></script>')
+  postContent = postContent.replace("</p>",'</p><script async="true" type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CE7ITK7W&placement=jackharnercom" id="_carbonads_js"></script>')
   console.log(postContent)
   return (
     <Layout>
