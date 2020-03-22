@@ -90,11 +90,6 @@ function SEO({ description, lang, meta, title, image }) {
       link={[
         { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }
       ]}
-      script={[{
-        src: "//cdn.carbonads.com/carbon.js?serve=CE7ITK7W&placement=jackharnercom",
-        async: true,
-        id: "_carbonads_js"
-      }]}
     />
   )
 }
