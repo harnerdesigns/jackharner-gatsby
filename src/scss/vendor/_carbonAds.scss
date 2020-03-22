@@ -6,17 +6,40 @@
   #carbonads {
     display: flex;
     max-width: 330px;
-    background-color: hsl(0, 0%, 98%);
+    background: var(--darker-color);
+
     box-shadow: 0 1px 4px 1px hsla(0, 0%, 0%, .1);
+    position: relative;
+    margin: 2rem auto;
+
+    &:after{
+        content: "Pardon The Ad Break";
+        position: absolute;
+        color: #fff;
+        top: -2em;
+        font-size: 0.8rem;
+        background: $black; padding: 0 0.25em 0 0;
+        display: block;
+    }
+
+    &:before{
+        content: "";
+        position: absolute;
+        color: #fff;
+        top: -1.35em;
+        font-size: 0.8rem;
+        width: 100%; background: #fff;
+        height: 3px;
+    }
   }
   
   #carbonads a {
-    color: inherit;
+    color: var(--text-color);
     text-decoration: none;
   }
   
   #carbonads a:hover {
-    color: inherit;
+    color: var(--text-color)
   }
   
   #carbonads span {
@@ -27,6 +50,7 @@
   
   #carbonads .carbon-wrap {
     display: flex;
+    background: var(--color);
   }
   
   .carbon-img {
