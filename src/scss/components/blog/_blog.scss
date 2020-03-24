@@ -311,10 +311,8 @@
   }
 
   ol {
-
     @extend ul;
     list-style: number;
-
 
     li {
       margin-bottom: 0.25em;
@@ -324,19 +322,19 @@
       & > ol {
         margin: 0.5em 1em 0.5em 3em;
       }
-    } 
+    }
   }
 
-  table{
+  table {
     width: 80%;
     border-bottom: 2px solid #fff;
     margin-bottom: 1rem;
-    thead{
+    thead {
       border-bottom: 2px solid #fff;
       text-align: left;
       font-weight: bold;
     }
-    tr > td{
+    tr > td {
       border-bottom: 1px solid #ccc;
       padding: 0.25em;
     }
@@ -410,6 +408,11 @@ nav.postNavigation {
   max-width: 1280px;
   margin: 0 auto;
 
+  flex-direction: column;
+
+  @include breakpoint(laptop) {
+    flex-direction: row;
+  }
   ul {
     display: flex;
     align-items: center;
@@ -425,6 +428,14 @@ nav.postNavigation {
     list-style: none;
     margin: 0;
     padding: 0 0 0 0.5em;
+
+    @include breakpoint(mobileonly) {
+
+      &:nth-of-type(1n + 5){
+        display: none;
+      }
+
+    }
   }
 }
 
