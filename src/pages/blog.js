@@ -10,32 +10,23 @@ import RssCard from "../components/blog/rssCard"
 import tagIcons from "../templates/tags/tag-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-const _ = require("lodash");
-
+const _ = require("lodash")
 
 const Blog = ({ data }) => {
-
   const { edges: posts } = data.allMarkdownRemark
   let tags = []
   // Iterate through each post, putting all found tags into `tags`
   _.forEach(posts, ({ node: post }) => {
-
-    return tags = tags.concat(post.frontmatter.tags)
-    
-
+    return (tags = tags.concat(post.frontmatter.tags))
   })
 
-  var map = tags.reduce(function (p, c) {
-    p[c] = (p[c] || 0) + 1;
-    return p;
-  }, {});
-  var topTags = Object.keys(map).sort(function (a, b) {
-
-    return map[a] < map[b];
-
-  });
-
-
+  var map = tags.reduce(function(p, c) {
+    p[c] = (p[c] || 0) + 1
+    return p
+  }, {})
+  var topTags = Object.keys(map).sort(function(a, b) {
+    return map[a] < map[b]
+  })
 
   return (
     <Layout>
@@ -52,8 +43,11 @@ const Blog = ({ data }) => {
               if (i < 6) {
                 return (
                   <li>
-                    <Link to={tagLink}>                      <FontAwesomeIcon fixedWidth icon={tagIcons[tag]} />&nbsp;
-{tag}</Link>
+                    <Link to={tagLink}>
+                      <FontAwesomeIcon fixedWidth icon={tagIcons[tag]} />
+                      &nbsp;
+                      {tag}
+                    </Link>
                   </li>
                 )
               }
@@ -81,35 +75,42 @@ const Blog = ({ data }) => {
 }
 export default Blog
 
-
 export const pageQuery = graphql`
-query IndexQuery {
-  allMarkdownRemark(sort: {order: [DESC, DESC], fields: [fields___weight, frontmatter___date]}, filter: {fields:{published:{eq:true}, collection: {eq: "blog"}}}) {
-    edges {
-      node {
-        excerpt(pruneLength: 250)
-        id
-        frontmatter {
-          title
-          subtitle
-          date(formatString: "MMMM DD, YYYY")
-          tags
-          featuredImage {
-            childImageSharp {
-              resize(width: 500, height: 500, cropFocus: CENTER) {
-                src
+  query IndexQuery {
+    allMarkdownRemark(
+      sort: {
+        order: [DESC, DESC]
+        fields: [fields___weight, frontmatter___date]
+      }
+      filter: {
+        fields: { published: { eq: true }, collection: { eq: "blog" } }
+      }
+    ) {
+      edges {
+        node {
+          excerpt(pruneLength: 250)
+          id
+          frontmatter {
+            title
+            subtitle
+            date(formatString: "MMMM DD, YYYY")
+            tags
+            featuredImage {
+              childImageSharp {
+                resize(width: 500, height: 500, cropFocus: CENTER) {
+                  src
+                }
               }
             }
           }
-        }
-        fields {
-          slug
-          collection
-          externalLink
-          published
+          fields {
+            slug
+            collection
+            externalLink
+            published
+          }
         }
       }
     }
   }
-}
-` 
+`
