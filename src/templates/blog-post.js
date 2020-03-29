@@ -47,7 +47,7 @@ export default function Template(props) {
 
         
         <main
-          className="post__body"
+          className={"post__body " + post.fields.slug}
           dangerouslySetInnerHTML={{ __html: postContent }}
         >
 

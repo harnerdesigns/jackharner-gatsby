@@ -1,51 +1,57 @@
 ---
 date: 2020-03-28T17:02:50.298Z
-title: "Pausing CSS Animations on Hover" 
+title: "Pausing CSS Animations on Hover"
 subtitle: "Without Any JavaScript"
 featuredImage: "./erwan-hesry-IqB5MPcQp6k-unsplash.jpg"
-tags: ['CSS', 'Animation']
+tags: ["CSS", "Animation"]
 externalLink: ""
 published: true
 ---
 
-CSS Animations are an easy, lightweight way to add a little motion and excitement to a page. 
+CSS Animations are an easy, lightweight way to add a little motion and excitement to a page. You definitely don't want to overdo it, though. One of the most frustrating things as a user is when you go to click on something, it moves, and you miss. Today I'm going to show you how to pause your CSS animations when someone goes to click on them.
 
-One of my favorite simple animations is the Pulse: 
+## The Animation
+
+We'll start with one of my favorite simple animations, the Pulse:
 
 ```css
 @keyframes pulse {
-    0%{
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
+  }
 
-    50% {
-        transform: scale(1.1);
-    }
+  50% {
+    transform: scale(1.1);
+  }
 
-    100% {
-        transform: scale(1);
-    }
+  100% {
+    transform: scale(1);
+  }
 }
 ```
 
-Which looks like: <span style=" display:inline-block; background: var(--color); height: 2em; width: 2em; border-radius: 10px; animation: pulse 3s infinite;vertical-align: middle; margin: 0 0.5em;"></span>
+Which looks like: <span class="box1"></span>
 
-I've used that animation as a way to emphasize a discount, bring focus to the best deal on a Pricing page, or even just to make a beating heart.
+I've used that animation many times to emphasize a discount, bring focus to the best deal on a Pricing page, or even just to make a beating heart.
 
-## Avoid Moving Targets
+## Treat Your Users Like Stormtroopers - Avoid Moving Targets
 
-If there are clickable things inside the thing you're animating, you don't want you users to have to click on moving targets. Luckily, there's a really simple way to pause CSS Animations in CSS without JavaScript. The key to it all is the `animation-play-state` property. Let's see it in (SCSS) action: 
+If there are clickable things inside the thing you're animating, you don't want your users to have to click on moving targets. It's so frustrating to click and miss, let alone click, miss, and click on something else. Luckily, there's a really simple way to pause CSS Animations in CSS without JavaScript. The key to it all is the `animation-play-state` property. Let's see it in (SCSS) action:
 
 ```scss
-.box{
-    animation: pulse 3s infinite;
+.box {
+  animation: pulse 3s infinite;
 
-    &:hover{
-        animation-play-state: paused;
-    }
+  &:hover {
+    animation-play-state: paused;
+  }
 }
 ```
 
-By setting the `animation-play-state` to `paused` on hover, the animation will pause, your click targets will stop moving and your users will be happy. I had experimented with basically removing the animation on hover but that caused lots of jumps and skips. `animation-play-state` literally just pauses the animation and unpauses when you stop hovering. 
+Which looks like: <span class="box2"></span>
 
-Super Simple way to have some more user-friendly animations on your site. 
+As you can see, it starts and stops the animation when you hover your mouse in and out of it.
+
+By setting the `animation-play-state` to `paused` on hover, the animation will pause, your click targets will stop moving, and your users will be happy. I had experimented with basically removing the animation on hover but that caused lots of jumps and skips. `animation-play-state` literally just pauses the animation and un-pauses when you stop hovering.
+
+Super simple way to have more user-friendly animations on your site.
