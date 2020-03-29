@@ -18,7 +18,8 @@ const tagIcons = {
   "Life Hacks": "hammer",
   "Material Design": "palette",
   Webpack: "box",
-  Photography: "camera"
+  Photography: "camera",
+  Animation: "circle-notch"
 }
 
 export default tagIcons

@@ -68,3 +68,18 @@ $gray: #212121;
     box-shadow: bottom-shadow($depth, $color), top-shadow($depth, $color);
   }
 }
+
+
+@keyframes pulse {
+  0%{
+      transform: scale(1);
+  }
+
+  50% {
+      transform: scale(1.25);
+  }
+
+  100% {
+      transform: scale(1);
+  }
+}

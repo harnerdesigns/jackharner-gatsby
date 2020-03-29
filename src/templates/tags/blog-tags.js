@@ -33,7 +33,7 @@ class TagRoute extends React.Component {
                 return (
                   <Link to={tagLink} className="tag__card">
                     <h2>
-                      <FontAwesomeIcon fixedWidth icon={tagIcons[tag]} />
+                      <FontAwesomeIcon fixedWidth icon={tagIcons[tag]} spin={(tag === "Animation" ? true : false)} />
                       {tag}
                     </h2>{" "}
                     <h4>

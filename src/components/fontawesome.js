@@ -26,7 +26,8 @@ import {
   faCloudDownloadAlt,
   faHammer,
   faBox,
-  faCamera
+  faCamera,
+  faCircleNotch
 } from "@fortawesome/free-solid-svg-icons"
 
 library.add(
@@ -56,5 +57,6 @@ library.add(
   faCloudDownloadAlt,
   faHammer,
   faBox,
-  faCamera
+  faCamera,
+  faCircleNotch
 )
