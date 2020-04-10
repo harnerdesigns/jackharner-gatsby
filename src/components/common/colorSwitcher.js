@@ -263,7 +263,7 @@ export default class ColorSwitcher extends Component {
           :
           null}
 
-        <button onClick={this.toggleModal} id="colorSwitcher" type={"button"}>
+        <button onClick={this.toggleModal} aria-label="Change Site Color" id="colorSwitcher" type={"button"}>
           <FontAwesomeIcon icon="palette"></FontAwesomeIcon>
         </button>
 

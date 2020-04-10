@@ -37,7 +37,7 @@ export default class MainMenu extends Component {
 
         </nav>
 
-        <button id="mobileMenuToggle" onClick={this.toggleMenu} type={"button"}>
+        <button id="mobileMenuToggle" aria-label="Menu" onClick={this.toggleMenu} type={"button"}>
             <FontAwesomeIcon icon="bars"></FontAwesomeIcon>
         </button>
     </>)
