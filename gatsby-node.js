@@ -89,6 +89,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
+  var sortedTopPortfolioTags = {}
+  var sortedTopBlogTags = {}
+
   return graphql(`
     {
       blog: allMarkdownRemark(
@@ -201,7 +204,22 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       return p
     }, {})
 
-    console.log(topBlogTags)
+    console.log({ topBlogTags: topBlogTags })
+
+    var sortedTopBlogTagsArray = []
+    for (var tag in topBlogTags) {
+      sortedTopBlogTagsArray.push([tag, topBlogTags[tag]])
+    }
+
+    sortedTopBlogTagsArray.sort(function(a, b) {
+      return b[1] - a[1]
+    })
+
+    sortedTopBlogTagsArray.forEach(function(item) {
+      sortedTopBlogTags[item[0]] = item[1]
+    })
+
+    console.log({ sortedTopBlogTags: sortedTopBlogTags })
 
     blogTags = _.uniq(blogTags)
 
@@ -210,8 +228,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       path: "/blog/tags/",
       component: path.resolve(`src/templates/tags/blog-tags.js`),
       context: {
-        topTags: topBlogTags,
+        topTags: sortedTopBlogTags,
       },
+    })
+
+    createPage({
+      path: "/blog/",
+      component: path.resolve(`src/templates/blog.js`),
+      context: {
+        topTags: sortedTopBlogTags
+      }
     })
 
     // Make tag pages
@@ -224,7 +250,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         component: path.resolve(`src/templates/tag.js`),
         context: {
           tag,
-          topTags: topBlogTags,
+          topTags: sortedTopBlogTags,
           postType: "blog",
         },
       })
@@ -269,7 +295,22 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       return p
     }, {})
 
-    console.log(topPortfolioTags)
+    console.log({ topPortfolioTags: topPortfolioTags })
+
+    var sortedTopPortfolioTagsArray = []
+    for (var tag in topPortfolioTags) {
+      sortedTopPortfolioTagsArray.push([tag, topPortfolioTags[tag]])
+    }
+
+    sortedTopPortfolioTagsArray.sort(function(a, b) {
+      return b[1] - a[1]
+    })
+
+    sortedTopPortfolioTagsArray.forEach(function(item) {
+      sortedTopPortfolioTags[item[0]] = item[1]
+    })
+
+    console.log({ sortedTopPortfolioTags: sortedTopPortfolioTags })
 
     portfolioTags = _.uniq(portfolioTags)
 
@@ -278,8 +319,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       path: "/portfolio/tags/",
       component: path.resolve(`src/templates/tags/portfolio-tags.js`),
       context: {
-        topTags: topPortfolioTags,
+        topTags: sortedTopPortfolioTags,
       },
+    })
+
+    createPage({
+      path: "/portfolio/",
+      component: path.resolve(`src/templates/portfolio.js`),
+      context: {
+        topTags: sortedTopPortfolioTags
+      }
     })
 
     // Make tag pages
@@ -292,7 +341,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         component: path.resolve(`src/templates/tag.js`),
         context: {
           tag,
-          topTags: topPortfolioTags,
+          topTags: sortedTopPortfolioTags,
           postType: "portfolio",
         },
       })

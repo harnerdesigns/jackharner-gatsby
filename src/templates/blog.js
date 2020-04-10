@@ -7,25 +7,17 @@ import PageTitle from "../components/pageTitle"
 import BlogCard from "../components/blog/blogCard"
 
 import RssCard from "../components/blog/rssCard"
-import tagIcons from "../templates/tags/tag-icons"
+import tagIcons from "./tags/tag-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const _ = require("lodash")
 
-const Blog = ({ data }) => {
+const Blog = ({ data, pageContext }) => {
   const { edges: posts } = data.allMarkdownRemark
-  let tags = []
-  // Iterate through each post, putting all found tags into `tags`
-  _.forEach(posts, ({ node: post }) => {
-    return (tags = tags.concat(post.frontmatter.tags))
-  })
-
-  var map = tags.reduce(function(p, c) {
-    p[c] = (p[c] || 0) + 1
-    return p
-  }, {})
-  var topTags = Object.keys(map).sort(function(a, b) {
-    return map[a] < map[b]
+  const tags = pageContext.topTags
+    // Iterate through each post, putting all found tags into `tags`
+  var topTags = Object.keys(tags).sort(function(a, b) {
+    return tags[a] < tags[b]
   })
 
   return (

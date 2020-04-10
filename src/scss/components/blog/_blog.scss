@@ -55,6 +55,9 @@
       width: auto;
       height: 100%;
       display: block;
+
+      object-fit: cover;
+
     }
   }
 
@@ -239,6 +242,11 @@
 
   &--small {
     .blog__card {
+
+      .featuredImage{
+        height: auto;
+        width: 100%;
+      }
       .post__title {
         font-size: 1.5rem;
       }
