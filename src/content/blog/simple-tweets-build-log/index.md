@@ -1,20 +1,20 @@
 ---
 date: 2020-04-30T03:33:30.612Z
 title: "Schedule Tweets Without Thinking About It"
-subtitle: "Day 12 : Wednesday, April 29th, 2020" 
-series: "Simple Tweets - Build Log"
-order: 12
+subtitle: "Simple Tweets Build Log" 
 featuredImage: "./featuredImage.png"
 tags: ['Build Log', 'Node']
 externalLink: ""
 published: false
 ---
 
-# Better Late Than Never, Right?
+
+# Day 12 : Wednesday, April 29th, 2020
+## Better Late Than Never, Right?
 
 I'm starting this build log off a little bit after I started the project (currently titled Simple Tweets, but probably going to change). I didn't really have the idea to write down the whole process till I was well into an MVP. Either way, better late than never, right? According to GitHub the very first commit was on April 17, 2020, so that makes this Day 12.
 
-My vision for Simple Tweets is a tool you can use to schedule tweets without thinking about it. You decide the maximum times it will tweet for you per day, whether you want it random or on a schedule, and then scheduling tweets is as simple as typing it out and hit schedule. 
+My vision for Simple Tweets is a tool you can use to schedule tweets without thinking about it. You decide the max times it will tweet for you per day, whether you want it random or on a schedule, and then scheduling tweets is as simple as typing it out and hitting schedule. 
 
 I'm not really sure if this is something Twitter users really _need_ per se, but it's been a massive learning opportunity for me so far. For now, that's all I really care about. 
 
@@ -41,7 +41,9 @@ const validateTweet = (tweet) => {
   };
 ```
 
-Very simple for now, but essentially checks if the tweet length is greater than 0 and less than 280. 
+Very simple for now, but essentially checks if the tweet length is greater than 0 and less than 280. After a few days of back and forth, I eventually settled on going with a minimal light theme instead of dark. I'll probably add a toggle for that down the line, but for now I don't really care. 
+
+{{{CURRENT IMAGE OF SIMPLE TWEETS}}}
 
 
 ## oAuth Is Pretty Cool, Now That I Have A Better Grasp 
@@ -51,3 +53,4 @@ Since the tool is entirely focused on Twitter, the only way my users can login i
 The backend is based around Express, and MongoDB. I'm using [Passport.js](http://www.passportjs.org/) for Authentication and the beautifully put together [passport-twitter](https://github.com/jaredhanson/passport-twitter) package to handle the Authentication. 
 
 One of the first big roadblocks I ran into was the fact that I had set up a virtual host so that `simple-tweets.local` would resolve to my `localhost:3000`, but I was having weird issues with the cookies being set to the wrong domain somewhere in the oAuth loop. Lots of googling and hair ripping later, I reset every path in the project to use http://127.0.0.1 as well as in the Twitter Developer tools. Once we have it live on a server with a domain pointing to it, we shouldn't have this problem, but now I'll know what to look for. 
+
