@@ -2,7 +2,7 @@
 date: 2020-04-30T03:33:30.612Z
 title: "Schedule Tweets Without Thinking About It"
 subtitle: "Simple Tweets Build Log" 
-featuredImage: "./simple-tweets-now.jpg"
+featuredImage: "./og-photo.png"
 tags: ['Build Log', 'Node']
 externalLink: ""
 published: true 
