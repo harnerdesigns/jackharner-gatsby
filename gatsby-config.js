@@ -94,7 +94,9 @@ module.exports = {
           options: {
             wrapperStyle: `margin-bottom: 1.0725rem`,
           },
-        }], // just in case those previously mentioned remark plugins sound cool :)
+        }
+      
+      ], // just in case those previously mentioned remark plugins sound cool :)
       },
     },
     {

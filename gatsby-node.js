@@ -47,6 +47,7 @@ const descriptors = [
         name: "published",
         getter: node => node.frontmatter.published,
         defaultValue: false,
+        transformer: value => NODE_ENV !== "development" ? value : true
       },
       {
         name: "weight",
