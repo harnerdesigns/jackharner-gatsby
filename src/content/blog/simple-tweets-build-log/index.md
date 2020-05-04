@@ -2,10 +2,10 @@
 date: 2020-04-30T03:33:30.612Z
 title: "Schedule Tweets Without Thinking About It"
 subtitle: "Simple Tweets Build Log" 
-featuredImage: "./featuredImage.png"
+featuredImage: "./simple-tweets-now.jpg"
 tags: ['Build Log', 'Node']
 externalLink: ""
-published: false
+published: true 
 ---
 
 
@@ -33,7 +33,7 @@ The first thing I threw together was the React frontend. Had a lot of fun just r
 ```js
 const validateTweet = (tweet) => {
     let tweetCharCount = tweet.length;
-
+{{{CURRENT IMAGE OF SIMPLE TWEETS}}}
     if (tweetCharCount <= 0) return false;
     if (tweetCharCount > tweetCharLimit) return false;
 
@@ -43,7 +43,7 @@ const validateTweet = (tweet) => {
 
 Very simple for now, but essentially checks if the tweet length is greater than 0 and less than 280. After a few days of back and forth, I eventually settled on going with a minimal light theme instead of dark. I'll probably add a toggle for that down the line, but for now I don't really care. 
 
-{{{CURRENT IMAGE OF SIMPLE TWEETS}}}
+![Simple Tweets Now](simple-tweets-now.jpg)
 
 
 ## oAuth Is Pretty Cool, Now That I Have A Better Grasp 
@@ -54,3 +54,4 @@ The backend is based around Express, and MongoDB. I'm using [Passport.js](http:/
 
 One of the first big roadblocks I ran into was the fact that I had set up a virtual host so that `simple-tweets.local` would resolve to my `localhost:3000`, but I was having weird issues with the cookies being set to the wrong domain somewhere in the oAuth loop. Lots of googling and hair ripping later, I reset every path in the project to use http://127.0.0.1 as well as in the Twitter Developer tools. Once we have it live on a server with a domain pointing to it, we shouldn't have this problem, but now I'll know what to look for. 
 
+I'll contine to update this post as the project progresses. 
