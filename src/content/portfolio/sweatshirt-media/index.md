@@ -5,7 +5,9 @@ logo: "./logo.svg"
 description: "Portfolio Design"
 color: "#a29bfe"
 tags: ["Gatsby", "React", "Netlify"]
-images: ["./sweatshirt-home.png"]
+images: 
+    - "./new-sweatshirt-home.png"
+    - "./sweatshirt-portfolio.png"
 weight: 0
 published: true
 externalLink: https://sweatshirtmedia.com
