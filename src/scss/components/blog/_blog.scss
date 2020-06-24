@@ -136,7 +136,8 @@
     display: grid;
     grid-template-columns: 3fr 3fr 3fr;
     grid-gap: 1em;
-    align-items: center;
+    align-items: flex-start;
+    margin-top: 3rem;
   }
 }
 
@@ -163,7 +164,7 @@
   @include breakpoint(laptop) {
     width: 100%;
     flex: 1 0;
-    margin: 0 0.5em;
+    margin: 0;
     display: inline-flex;
     align-items: flex-start;
     border-bottom: none;
