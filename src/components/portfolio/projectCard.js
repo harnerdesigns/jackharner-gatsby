@@ -18,13 +18,15 @@ const ProjectCard = ({ post, index, small, nolink }) => {
           (small ? " project__card--small" : "")
         }
       >
+
+        {post.frontmatter.logo &&
         <div class="logo__wrapper">
           <img
             src={post.frontmatter.logo.publicURL}
             className="logo"
             alt={post.frontmatter.title}
           />
-        </div>
+        </div>}
         <div className="card__titles">
           <h2 className="project__title">{post.frontmatter.title}</h2>
 
