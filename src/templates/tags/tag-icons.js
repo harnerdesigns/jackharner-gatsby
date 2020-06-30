@@ -12,6 +12,7 @@ const tagIcons = {
   Gatsby: "glass-martini-alt",
   PHP: ["fab", "php"],
   CSS: ["fab", "css3-alt"],
+  CodePen: ["fab", "codepen"],
   Markdown: ["fab", "markdown"],
   Netlify: "project-diagram",
   AJAX: "cloud-download-alt",

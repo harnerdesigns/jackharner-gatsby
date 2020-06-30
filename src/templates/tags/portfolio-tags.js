@@ -12,7 +12,6 @@ class TagRoute extends React.Component {
     const posts = this.props.data.allMarkdownRemark.edges
     const tags = this.props.pageContext.topTags
 
-
     var sortedTags = Object.keys(tags).sort(function(a, b) {
       return tags[a] < tags[b]
     })
@@ -43,27 +42,30 @@ class TagRoute extends React.Component {
                       {posts
                         .filter(({ node: post }) =>
                           post.frontmatter.tags.includes(tag)
-                        ).slice(0,3)
+                        )
+                        .slice(0, 3)
                         .map(({ node: post }) => {
-                          return (
-                            <div style={{background: post.frontmatter.color}} >
-                            <img
-                              src={
-                                post.frontmatter.logo.publicURL
-                              }
-                              alt={
-                                post.frontmatter.title +
-                                " | " +
-                                post.frontmatter.subtitle
-                              }
-                              title={
-                                post.frontmatter.title +
-                                " | " +
-                                post.frontmatter.subtitle
-                              }
-                            />
-                            </div>
-                          )
+                          if (post.frontmatter.logo) {
+                            return (
+                              <div
+                                style={{ background: post.frontmatter.color }}
+                              >
+                                <img
+                                  src={post.frontmatter.logo.publicURL}
+                                  alt={
+                                    post.frontmatter.title +
+                                    " | " +
+                                    post.frontmatter.subtitle
+                                  }
+                                  title={
+                                    post.frontmatter.title +
+                                    " | " +
+                                    post.frontmatter.subtitle
+                                  }
+                                />
+                              </div>
+                            )
+                          }
                         })}
                     </div>
                   </Link>

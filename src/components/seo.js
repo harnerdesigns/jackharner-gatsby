@@ -90,6 +90,9 @@ function SEO({ description, lang, meta, title, image }) {
       link={[
         { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }
       ]}
+      script={[
+        {src: 'https://static.codepen.io/assets/embed/ei.js'}
+      ]}
     />
   )
 }
