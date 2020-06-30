@@ -8,7 +8,7 @@ const ProjectHeader = ({ post, index, small, nolink }) => {
   return (
     <header
       className={
-        "project__header project--" + _.camelCase(post.frontmatter.title)
+        "project__header project--" + _.camelCase(post.frontmatter.title) + ` ${post.frontmatter.logo ? "project__header--logo" : "project__header--no-logo"}`
       }
       style={{ background: post.frontmatter.color }}
     >

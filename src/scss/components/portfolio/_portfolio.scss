@@ -138,10 +138,10 @@
   @include breakpoint(laptop) {
     grid-template-columns: 2fr 3fr;
     max-width: 80%;
-    max-width: 1280px;
-
-
+  width: 100%;    
+    
     &--no-images {
+      max-width: 1280px;
       grid-template-columns: 1fr;
     }
   }
@@ -256,6 +256,10 @@
     grid-template-columns: 3fr 2fr;
     grid-gap: 3em;
     padding: 1em 10vw;
+
+    &--no-logo{
+      grid-template-columns: 1fr;
+    }
   }
 
   .logo__wrapper{

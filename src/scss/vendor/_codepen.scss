@@ -1,0 +1,13 @@
+.full{
+
+    .cp_embed_wrapper {
+        width: 95%;
+        height: 50vh;
+
+        @include breakpoint(laptop){
+        height: 80vh;
+        width: 80%;
+
+        }
+    }
+}

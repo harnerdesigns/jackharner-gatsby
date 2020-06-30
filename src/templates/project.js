@@ -7,7 +7,6 @@ import ProjectHeader from "../components/portfolio/projectHeader"
 import Button from "../components/atoms/button"
 import defaultOGImage from "../images/Jack-Harner-Open-Graph--large.jpg"
 
-
 export default function Template(props) {
   const post = props.data.markdownRemark
   const { related } = props.pageContext
@@ -22,13 +21,41 @@ export default function Template(props) {
           post.frontmatter.description +
           " By Jack Harner."
         }
-        image={post.frontmatter.logo ? post.frontmatter.logo.publicURL : defaultOGImage }
+        image={
+          post.frontmatter.logo
+            ? post.frontmatter.logo.publicURL
+            : defaultOGImage
+        }
       />
       <ProjectHeader post={post} />
+
+      {post.fields.externalLink.includes("codepen") && (
+              <container className="full black">
+                <p
+                  class="codepen"
+                  data-height="100%"
+                  data-theme-id="17675"
+                  data-default-tab="result"
+                  data-user="jackharner"
+                  data-slug-hash="jPmKGe"
+                  style={{height: "100vh", boxSizing: 'border-box', display: 'flex', alignItems: 'center', justifyContent:' center', border: '2px solid', margin:" 1em 0", padding: "1em"}}
+                  data-pen-title="OS X"
+                >
+                  <span>
+                    See the Pen{" "}
+                    <a href="https://codepen.io/jackharner/pen/jPmKGe">OS X</a>{" "}
+                    by Jack Harner (
+                    <a href="https://codepen.io/jackharner">@jackharner</a>) on{" "}
+                    <a href="https://codepen.io">CodePen</a>.
+                  </span>
+                </p>
+
+              </container>
+            )}
       <container className="half black">
         <main
           className={
-            post.frontmatter.images
+            post.frontmatter.images && post.frontmatter.images.length > 0
               ? "project__body"
               : "project__body project__body--no-images"
           }
@@ -36,7 +63,11 @@ export default function Template(props) {
           {post.frontmatter.images && post.frontmatter.images.length > 0 ? (
             <section className="project__images">
               {post.frontmatter.images.map((image, index) => {
-                return image ? <img src={image.childImageSharp.sizes.src} alt="" /> : ""
+                return image ? (
+                  <img src={image.childImageSharp.sizes.src} alt="" />
+                ) : (
+                  ""
+                )
               })}
             </section>
           ) : (
@@ -44,6 +75,7 @@ export default function Template(props) {
           )}
 
           <section className="project__content">
+
             {post.html && (
               <div dangerouslySetInnerHTML={{ __html: post.html }} />
             )}
