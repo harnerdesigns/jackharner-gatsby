@@ -7,7 +7,7 @@ color: "#7D7D7D"
 tags: ["HTML", "CSS", "CodePen"]
 images: 
 weight: 0
-published: false
+published: true
 externalLink: "https://codepen.io/jackharner/full/jPmKGe"
 externalLinkLabel: "View On CodePen »"
 ---
