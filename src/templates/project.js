@@ -5,6 +5,8 @@ import SEO from "../components/seo"
 import ProjectCard from "../components/portfolio/projectCard"
 import ProjectHeader from "../components/portfolio/projectHeader"
 import Button from "../components/atoms/button"
+import defaultOGImage from "../images/Jack-Harner-Open-Graph--large.jpg"
+
 
 export default function Template(props) {
   const post = props.data.markdownRemark
@@ -20,7 +22,7 @@ export default function Template(props) {
           post.frontmatter.description +
           " By Jack Harner."
         }
-        image={post.frontmatter.logo.publicURL}
+        image={post.frontmatter.logo ? post.frontmatter.logo.publicURL : defaultOGImage }
       />
       <ProjectHeader post={post} />
       <container className="half black">
@@ -31,10 +33,10 @@ export default function Template(props) {
               : "project__body project__body--no-images"
           }
         >
-          {post.frontmatter.images ? (
+          {post.frontmatter.images && post.frontmatter.images.length > 0 ? (
             <section className="project__images">
               {post.frontmatter.images.map((image, index) => {
-                return <img src={image.childImageSharp.sizes.src} alt="" />
+                return image ? <img src={image.childImageSharp.sizes.src} alt="" /> : ""
               })}
             </section>
           ) : (

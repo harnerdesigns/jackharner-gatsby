@@ -74,7 +74,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       node,
       name: `slug`,
-      value: `${_.get(parent, "sourceInstanceName")}${slug}`,
+      value: `/${_.get(parent, "sourceInstanceName")}${slug}`,
     })
 
     createNodeField({

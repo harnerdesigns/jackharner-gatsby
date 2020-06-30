@@ -12,13 +12,15 @@ const ProjectHeader = ({ post, index, small, nolink }) => {
       }
       style={{ background: post.frontmatter.color }}
     >
-      <div class="logo__wrapper">
-        <img
-          src={post.frontmatter.logo.publicURL}
-          className="logo"
-          alt={post.frontmatter.title}
-        />
-      </div>
+      {post.frontmatter.logo && (
+        <div class="logo__wrapper">
+          <img
+            src={post.frontmatter.logo.publicURL}
+            className="logo"
+            alt={post.frontmatter.title}
+          />
+        </div>
+      )}
       <div className="header__titles">
         <Link to={post.fields.slug}>
           <h2 className="project__title">{post.frontmatter.title}</h2>

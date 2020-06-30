@@ -1,7 +1,7 @@
 ---
 date: 2020-06-09T16:35:09.669Z
 title: "Custom Fields By Name"
-subtitle: "Inside BigCommerce Stencil Themes"
+subtitle: "In BigCommerce Stencil Themes"
 featuredImage: "./featured-image.jpg"
 tags: ["BigCommerce", "Tutorial"]
 externalLink: ""
