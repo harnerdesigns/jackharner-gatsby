@@ -20,7 +20,7 @@ export default function Template(props) {
         description={post.excerpt}
         image={
           post.fields.ogImage
-            ? post.fields.ogImage
+            ? post.frontmatter.ogImage.childImageSharp.sizes.src
             : post.frontmatter.featuredImage.childImageSharp.sizes.src
         }
       />
@@ -88,6 +88,17 @@ query BlogPostByPath($slug: String!) {
       subtitle
       tags
       featuredImage {
+        absolutePath
+        childImageSharp {
+          sizes {
+            ...GatsbyImageSharpSizes
+            src
+            originalImg
+          }
+        }
+      }
+
+      ogImage {
         absolutePath
         childImageSharp {
           sizes {
