@@ -114,6 +114,7 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-advanced-sitemap',
     'gatsby-plugin-styled-components',
+    `gatsby-plugin-twitter`,
 
     {
       resolve: 'gatsby-plugin-feed',
