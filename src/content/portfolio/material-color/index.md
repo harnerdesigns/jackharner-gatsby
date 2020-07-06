@@ -7,6 +7,8 @@ color: "#efefef"
 tags: ["HTML", "Material Design"]
 images: ["./Material-Color-Picker.jpg"]
 published: true
+weight: 8
+
 ---
 ## Click To Copy Material Design Color Codes
 

@@ -6,7 +6,7 @@ description: "Built From Scratch CSS"
 color: "#7D7D7D"
 tags: ["HTML", "CSS", "CodePen"]
 images: 
-weight: 0
+weight: -1
 published: true
 externalLink: "https://codepen.io/jackharner/full/jPmKGe"
 externalLinkLabel: "View On CodePen »"

@@ -36,9 +36,25 @@ const IndexPage = ({ data }) => {
         </section>
         <FontAwesomeIcon icon="caret-down" id="scrollIndicator" />
       </container>
-      <container class="full pink">
-        <h1 class="tagline">I Make Websites.</h1>
-        <p class="tagline">
+      <container class="half pink row">
+
+        <div class="recent-projects">
+          {portfolioPosts
+            .filter(post => post.node.frontmatter.title.length > 0)
+            .map(({ node: post }, index) => {
+              if (index <= 3) {
+                return <ProjectCard post={post} index={index} small />
+              } else {
+                return false
+              }
+            })}
+          <Link to="/portfolio" className="more-link">My Full Portfolio &raquo;</Link>
+
+        </div>
+        <div class="column">
+
+        <h1 >I Make Websites.</h1>
+        <p >
           I work primarily with{" "}
           <Link to="/portfolio/tags/word-press/">WordPress</Link> &{" "}
           <Link to="/portfolio/tags/php/">PHP</Link> with an emphasis on clean,
@@ -46,32 +62,25 @@ const IndexPage = ({ data }) => {
           fashioned <Link to="/portfolio/tags/html/">HTML</Link>/
           <Link to="/portfolio/tags/css/">CSS</Link>.
         </p>
-        <p class="tagline">
+        <p>
           I'm currently diving in to all things React, Gatsby, Accessibility, &
           Modern Web Development.
         </p>
+        </div>
 
-        <p class="tagline sub-tagline recent-projects">
-          {portfolioPosts
-            .filter(post => post.node.frontmatter.title.length > 0)
-            .map(({ node: post }, index) => {
-              if (index <= 2) {
-                return <ProjectCard post={post} index={index} small />
-              } else {
-                return false
-              }
-            })}
-        </p>
       </container>
-      <container class="full white">
-        <h1 class="tagline">Learn In Public.</h1>
+      <container class="full white row">
+        <div class="column">
 
-        <p class="tagline">
+        <h1>Learn In Public.</h1>
+
+        <p>
           Now and then, I write about <Link to="/blog">Web Development</Link> &{" "}
           <a href="https://bleedingcoffee.com">Coffee</a>. By sharing my
           understanding of a particular topic, I can possibly give the people learning after
           me a fresh perspective on a problem and possible solutions.
         </p>
+        </div>
         <div className="blog-posts">
           {blogPosts.map(({ node: post }, index) => {
             if (index <= 2) {
@@ -80,6 +89,7 @@ const IndexPage = ({ data }) => {
               return false
             }
           })}
+          <Link to="/blog"  className="more-link">See The Blog &raquo;</Link>
         </div>
       </container>
       <container className="half black">

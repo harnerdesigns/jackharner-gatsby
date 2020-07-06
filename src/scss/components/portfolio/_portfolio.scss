@@ -21,6 +21,8 @@
   width: 100%;
   margin: 0.5em auto;
   @include card(1);
+  border-radius: 10px;
+
 }
 
 .project__card {
@@ -204,7 +206,9 @@
 
 .recent-projects {
   @extend .latest-posts;
-  margin: 3em auto 3em;
+  @include breakpoint(laptop){
+    width: 50%;
+  }
 
   .project__title {
     font-size: 1.5em;
