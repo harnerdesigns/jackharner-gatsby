@@ -2,7 +2,7 @@
 
 ## Jack Of All Trades. Master of Some.
 
+Built With Gatsby. Check it out: [JackHarner.com](https://jackharner.com)
 
-
-
-![](https://travis-ci.com/harnerdesigns/jackharner-gatsby.svg?token=iCmkehuPghKJYCy4YqsS&branch=master)
+---
+![Gatsby Publish](https://github.com/harnerdesigns/jackharner-gatsby/workflows/Gatsby%20Publish/badge.svg)

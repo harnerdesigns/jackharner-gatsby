@@ -1,0 +1,54 @@
+.vert{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    align-self: center;
+
+    border: 2px solid #fff;
+    border-left: none;
+    border-right: none;
+
+    p{
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+
+    &--with-icon{
+        display: grid; grid-template-columns: 1fr 3fr;
+        grid-gap: 1rem;
+        padding: 1rem;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    a.button{
+        grid-column: 1 / -1;
+        background: var(--color);
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+}
+
+
+
+.post__post-content{
+
+    .vert{
+        width: 60%;
+        margin: 1em auto 3em;
+        padding: 3em;
+    }
+
+}
+
+.blog-posts{
+    .vert{
+        grid-column: 1 / -1;
+    }
+}

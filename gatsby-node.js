@@ -117,6 +117,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               title
               subtitle
               tags
+              published
               featuredImage {
                 childImageSharp {
                   resize(width: 500, height: 500, cropFocus: CENTER) {

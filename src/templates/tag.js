@@ -114,6 +114,7 @@ export const tagPageQuery = graphql`
             title
             subtitle
             date(formatString: "MMMM DD, YYYY")
+            published
             featuredImage {
               childImageSharp {
                 resize(width: 500, height: 500, cropFocus: CENTER) {

@@ -16,6 +16,7 @@ const BlogCard = ({ post, index, small }) => (
                 <img src={post.frontmatter.featuredImage.childImageSharp.resize.src} className="featuredImage" alt={post.frontmatter.title} />
             </div>
             <div className="card__titles">
+                {post.frontmatter.published !== true && <h5 class='notice notice--draft' title="Won't be published on build">DRAFT</h5>}
                 <h2 className="post__title">{post.frontmatter.title}</h2>
                 {(post.frontmatter.subtitle ? <h3 className="post__subtitle">{post.frontmatter.subtitle}</h3> : "")}
                 {(index === 0 ? <p className="post__excerpt">{post.excerpt} <Link to={post.fields.slug}>Read&nbsp;More&nbsp;&raquo;</Link></p> : "")}
