@@ -9,6 +9,7 @@ import BlogCard from "../components/blog/blogCard"
 import RssCard from "../components/blog/rssCard"
 import tagIcons from "./tags/tag-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Brave from "../components/verts/brave"
 
 const _ = require("lodash")
 
@@ -52,7 +53,10 @@ const Blog = ({ data, pageContext }) => {
             .filter(post => post.node.fields.collection === "blog")
             .filter(post => post.node.frontmatter.title.length > 0)
             .map(({ node: post }, index) => {
-              const ShowCard = index === 2 ? <RssCard /> : ""
+              let ShowCard;
+              
+              if(index === 2) {ShowCard = <RssCard />}
+              if(index === 5) {ShowCard = <Brave />}
               return (
                 <>
                   <BlogCard post={post} index={index} />
@@ -87,6 +91,7 @@ export const pageQuery = graphql`
             subtitle
             date(formatString: "MMMM DD, YYYY")
             tags
+            published
             featuredImage {
               childImageSharp {
                 resize(width: 500, height: 500, cropFocus: CENTER) {

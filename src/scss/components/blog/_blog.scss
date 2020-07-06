@@ -33,9 +33,23 @@
   grid-template-columns: 1fr 3fr;
   align-items: center;
   justify-content: flex-start;
+  position: relative;
 
   @include breakpoint(laptop) {
     grid-template-columns: 1fr 2fr;
+  }
+
+  .notice--draft{
+    background: var(--text-color);
+    color: var(--color);padding: 0.25em 0.5em;
+    position: absolute;
+    top: 0; left: 0;
+    border-radius: 0 0 0.5em; 
+    border: 5px solid var(--color);
+    border-left: none;
+    border-top: none;
+    font-weight: 900;
+    margin: 0;
   }
 
   .featuredImage__wrapper {
@@ -205,7 +219,11 @@
   // First Blog Card In Grid
 
   &--0,
-  &--3 {
+  &--3,
+  &--6,
+  &--9,
+  &--12,
+  &--15 {
     @include breakpoint(laptop) {
       grid-column: 1 / span 2;
       // grid-row: 1 / span 2;

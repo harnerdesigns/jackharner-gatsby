@@ -7,6 +7,7 @@ import Button from "../components/atoms/button";
 import BlogCard from "../components/blog/blogCard";
 import ShareLinks from "../components/social/shareLinks";
 import RssCard from "../components/blog/rssCard";
+import Brave from "../components/verts/brave";
 
 export default function Template(props) {
   const post = props.data.markdownRemark
@@ -55,6 +56,7 @@ export default function Template(props) {
       </container>
       <container class="slim black">
         <section className="post__post-content">
+          <Brave />
           <ShareLinks post={post} />
           <RssCard />
           <nav class="postNavigation">

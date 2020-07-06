@@ -183,7 +183,7 @@ ul {
     padding: 2em;
 
     @include breakpoint(laptop){
-      padding: 5vw 25vw;
+      padding: 5vw 25vw 2rem;
     }
     p {
       font-size: 1em;
