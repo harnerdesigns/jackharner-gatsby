@@ -2,7 +2,7 @@
 date: 2020-06-02T04:42:04.774Z
 title: "Simple Tweets"
 logo: "./simple-tweets-logo--white.svg"
-description: "Schedule Tweets Without Thinking About It"
+description: "Tweet Without Thinking About It"
 color: "#00acee"
 tags: ["Node", "Twitter", "React"]
 weight: 0

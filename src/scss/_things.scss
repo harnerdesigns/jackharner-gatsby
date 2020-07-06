@@ -285,3 +285,13 @@ $tabHeight: 7vw;
 
 
 }
+
+.more-link{
+  text-align: right;
+  font-size: 1.5rem;
+  margin: 0;
+
+  @include breakpoint(laptop){
+    grid-column: 1 / -1;
+  }
+}

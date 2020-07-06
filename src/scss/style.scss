@@ -54,6 +54,7 @@ h5 {
 h1 {
   margin-top: 0;
   font-size: 4.594em;
+  font-weight: 900;
 
   @include breakpoint(laptop) {
     font-size: 7.594em;
@@ -176,6 +177,28 @@ ul {
   &.white {
     background: #fff;
     color: #000;
+  }
+
+  &.row{
+    flex-direction: column;
+
+    @include breakpoint(laptop){
+
+      flex-direction: row;
+    }
+
+    .column{
+      width: 100%;
+      align-self: flex-start;
+      @include breakpoint(laptop){
+        
+        position: sticky;
+        top: 25px;
+      width: 60%;
+      padding: 0.5rem 2rem;
+
+    }
+    }
   }
 
   &.content {

@@ -8,7 +8,7 @@ tags: ["Gatsby", "React", "Netlify"]
 images: 
     - "./new-sweatshirt-home.png"
     - "./sweatshirt-portfolio.png"
-weight: 0
+weight: 10
 published: true
 externalLink: https://sweatshirtmedia.com
 ---
