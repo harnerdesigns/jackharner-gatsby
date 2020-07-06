@@ -13,11 +13,11 @@ const Brave = () => {
       <img src={braveIcon} />
       <p>
         Want to support your favorite content creators (including me!) just by
-        browsing the web? Check out <a href="https://brave.com/har491">Brave</a>
+        browsing the web? Check out <a href="https://brave.com/jac948">Brave</a>
         , a private, secure and fast web browser that pays YOU to browse.
       </p>
 
-      <a class="button" href="https://brave.com/har491">
+      <a class="button" href="https://brave.com/jac948">
         Learn More &raquo;
       </a>
     </section>
