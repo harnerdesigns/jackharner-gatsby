@@ -7,6 +7,7 @@ import PageTitle from "../components/pageTitle"
 import ProjectCard from "../components/portfolio/projectCard"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import tagIcons from "./tags/tag-icons"
+import TopTags from "../components/common/topTags"
 
 const _ = require("lodash")
 
@@ -41,31 +42,8 @@ class TagRoute extends React.Component {
           <PageTitle>{tagHeader}</PageTitle>
 
           <main className="page_body page_body--grid">
-            <div className="top-tags">
-              <Link to={`/${postType}`} style={{ margin: "0 auto 0 0.5em" }}>
-                &laquo; Back to All {postTypeLabels.plural}
-              </Link>
-
-              <ul>
-                <li>
-                  Top&nbsp;
-                  <Link to={`/${postType}/tags`}>
-                    {postTypeLabels.type}&nbsp;Tags
-                  </Link>
-                  :
-                </li>
-                {filteredTags.map((tag, i) => {
-                  const tagLink = `/${postType}/tags/${_.kebabCase(tag)}/`
-                  if (i < 6) {
-                    return (
-                      <li>
-                        <Link to={tagLink}><FontAwesomeIcon fixedWidth icon={tagIcons[tag]} />&nbsp;{tag}</Link>
-                      </li>
-                    )
-                  }
-                })}
-              </ul>
-            </div>
+      <TopTags topTags={topTags} postType={postType} back={true} exclude={tag} />
+            
 
             <div className="blog-posts">
               {posts
