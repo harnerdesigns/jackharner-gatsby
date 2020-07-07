@@ -52,7 +52,7 @@ const CtaContainer = styled.div`
   @media ${breakpoints.laptop} {
     width: 65%;
 
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr ;
     grid-gap: 1em;
     align-items: center;
     justify-content: center;

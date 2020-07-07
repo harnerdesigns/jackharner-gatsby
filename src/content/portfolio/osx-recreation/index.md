@@ -1,7 +1,7 @@
 ---
 date: 2020-06-30T05:13:44.291Z
 title: "OS X Recreation" 
-logo: ""
+logo: "./osx-logo.svg"
 description: "Built From Scratch CSS"
 color: "#7D7D7D"
 tags: ["HTML", "CSS", "CodePen"]
