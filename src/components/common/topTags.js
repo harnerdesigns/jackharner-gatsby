@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 const _ = require("lodash")
 
 
-const TopTags = ({topTags = [], postType = null, back=false, exclude=null}) => {
+const TopTags = ({topTags = [], postType = null, back=false, exclude=null, limit=6}) => {
 
     const postTypeLabels =
       postType === "portfolio"
@@ -31,9 +31,9 @@ const TopTags = ({topTags = [], postType = null, back=false, exclude=null}) => {
             </li>
             {topTags && topTags.map((tag, i) => {
               const tagLink = `/${postType}/tags/${_.kebabCase(tag)}/`
-              if (i < 6 && tag !== exclude) {
+              if (i < limit && tag !== exclude) {
                 return (
-                  <li>
+                  <li class="top-tag">
                     <Link to={tagLink}>
                       <FontAwesomeIcon fixedWidth icon={tagIcons[tag]} />
                       &nbsp;

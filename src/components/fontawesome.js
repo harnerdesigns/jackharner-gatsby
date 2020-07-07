@@ -27,7 +27,8 @@ import {
   faHammer,
   faBox,
   faCamera,
-  faCircleNotch
+  faCircleNotch,
+  faTools
 } from "@fortawesome/free-solid-svg-icons"
 
 config.autoAddCss = false
@@ -60,5 +61,6 @@ library.add(
   faHammer,
   faBox,
   faCamera,
-  faCircleNotch
+  faCircleNotch,
+  faTools
 )

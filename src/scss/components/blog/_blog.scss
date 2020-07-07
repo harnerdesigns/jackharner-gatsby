@@ -427,45 +427,6 @@ nav.postNavigation {
   }
 }
 
-.top-tags {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 80%;
-  max-width: 1280px;
-  margin: 0 auto;
-
-  flex-direction: column;
-
-  @include breakpoint(laptop) {
-    flex-direction: row;
-  }
-  ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    @include breakpoint(laptop) {
-      margin: 0.5em 0.5em 0.5em auto;
-    }
-  }
-
-  li {
-    list-style: none;
-    margin: 0;
-    padding: 0 0 0 0.5em;
-
-    @include breakpoint(mobileonly) {
-
-      &:nth-of-type(1n + 5){
-        display: none;
-      }
-
-    }
-  }
-}
-
 .rss__link-card {
   background: #f99000;
 
