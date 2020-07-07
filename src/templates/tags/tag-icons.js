@@ -6,6 +6,12 @@ const tagIcons = {
   Firefox: ["fab", "firefox-browser"],
   WordPress: ["fab", "wordpress"],
   React: ["fab", "react"],
+  Twitter: ["fab", "twitter"],
+  "Raspberry Pi": ["fab", "raspberry-pi"],
+  Linux: ["fab", "linux"],
+  "#DevDiscuss": ["fab", "dev"],
+  JavaScript: ["fab", "js"],
+  "Build Log": "tools",
   Automation: "cogs",
   Tutorial: "lightbulb",
   "Open Source": "folder-open",
@@ -20,7 +26,8 @@ const tagIcons = {
   "Material Design": "palette",
   Webpack: "box",
   Photography: "camera",
-  Animation: "circle-notch"
+  Animation: "circle-notch",
+  History: "calendar"
 }
 
 export default tagIcons

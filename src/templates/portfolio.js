@@ -7,6 +7,7 @@ import PageTitle from "../components/pageTitle"
 import ProjectCard from "../components/portfolio/projectCard"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import tagIcons from "./tags/tag-icons"
+import TopTags from "../components/common/topTags"
 
 const _ = require("lodash")
 
@@ -24,23 +25,8 @@ const Blog = ({ data, pageContext }) => {
       <SEO title="Portfolio" />
       <PageTitle>Portfolio</PageTitle>
       <main className="page_body page_body--grid">
-        <div className="top-tags">
-          <ul>
-            <li>
-              Top&nbsp;<Link to="/portfolio/tags">Project&nbsp;Tags</Link>:
-            </li>
-            {topTags.map((tag, i) => {
-              const tagLink = `/portfolio/tags/${_.kebabCase(tag)}/`
-              if (i < 6) {
-                return (
-                  <li>
-                    <Link to={tagLink}><FontAwesomeIcon fixedWidth icon={tagIcons[tag]} />&nbsp;{tag}</Link>
-                  </li>
-                )
-              }
-            })}
-          </ul>
-        </div>
+      <TopTags topTags={topTags} postType='portfolio' />
+        
 
         <div className="projects">
           {posts

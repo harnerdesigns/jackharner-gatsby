@@ -208,21 +208,14 @@ export default class ColorSwitcher extends Component {
   }
 
   onReset = () => {
+    alert("RESET");
     //delete cookie and reset variables. 
     this.setState({
       color: {
         hex: '#E91E63',
         rgb: {
-          r: "100",
-          g: '100',
-          b: "100"
-        }
-      },
-      selected_color: {
-        hex: '#E91E63',
-        rgb: {
           r: "233",
-          g: '30',
+          g: "30",
           b: "99"
         },
         hsl: {
@@ -232,8 +225,24 @@ export default class ColorSwitcher extends Component {
           "a": 1
         }
       },
-      isColorPickerOpen: !this.state.isColorPickerOpen
+      selected_color: {
+        hex: '#E91E63',
+        rgb: {
+          r: "233",
+          g: "30",
+          b: "99"
+        },
+        hsl: {
+          "h": 339.60591133004925,
+          "s": 0.8218623481781375,
+          "l": 0.5156862745098039,
+          "a": 1
+        }
+      },
+      isColorPickerOpen: false
+      
     }, () => this.setColorVars())
+    console.log(this.state);
 
     cookies.remove('paletteColorObj', { path: '/' });
     // ReactGA.event({
@@ -257,7 +266,7 @@ export default class ColorSwitcher extends Component {
               onCancel={this.onCancelColor}
               onChangeComplete={this.onChangeColors}
               color={this.state.selected_color} />
-            <Button icon="undo-alt" label={"Reset To Default"} onClick={this.onReset}
+            <Button icon="undo-alt" label={"Reset To Default"} onClick={()=>{this.onReset()}}
               extraStyle={{ background: "#E91E63", color: "#ffffff" }} />
           </div>
           :

@@ -10,6 +10,7 @@ import RssCard from "../components/blog/rssCard"
 import tagIcons from "./tags/tag-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Brave from "../components/verts/brave"
+import TopTags from "../components/common/topTags"
 
 const _ = require("lodash")
 
@@ -26,27 +27,8 @@ const Blog = ({ data, pageContext }) => {
       <SEO title="Blog" />
       <PageTitle>Blog</PageTitle>
       <main className="page_body page_body--grid">
-        <div className="top-tags">
-          <ul>
-            <li>
-              Top&nbsp;<Link to="/blog/tags">Blog&nbsp;Tags</Link>:
-            </li>
-            {topTags.map((tag, i) => {
-              const tagLink = `/blog/tags/${_.kebabCase(tag)}/`
-              if (i < 6) {
-                return (
-                  <li>
-                    <Link to={tagLink}>
-                      <FontAwesomeIcon fixedWidth icon={tagIcons[tag]} />
-                      &nbsp;
-                      {tag}
-                    </Link>
-                  </li>
-                )
-              }
-            })}
-          </ul>
-        </div>
+        
+        <TopTags topTags={topTags} postType='blog' />
 
         <div className="blog-posts">
           {posts

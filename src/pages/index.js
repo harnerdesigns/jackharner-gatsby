@@ -11,7 +11,7 @@ import { Link, graphql } from "gatsby"
 import Button from "../components/atoms/button"
 import PhotoRoll from "../components/PhotoRoll"
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data, pageContext }) => {
   const { edges: posts } = data.allMarkdownRemark
   const { photos } = data.photoRoll.frontmatter
   let blogPosts = posts.filter(post => post.node.fields.collection === "blog")
