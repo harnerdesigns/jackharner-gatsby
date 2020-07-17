@@ -11,7 +11,7 @@ const TopTags = ({topTags = [], postType = null, back=false, exclude=null, limit
     const postTypeLabels =
       postType === "portfolio"
         ? { single: "Project", plural: "Projects", type: "Project" }
-        : { single: "Blog Post", plural: "Blog Posts", type: "Blog" };
+        : { single: "Blog", plural: "Blog", type: "Blog" };
 
 
        if(exclude != null && topTags.indexOf(exclude) > -1){ topTags.splice(topTags.indexOf(exclude), 1) } 
