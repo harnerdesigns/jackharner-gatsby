@@ -9,6 +9,7 @@ import RssCard from "../components/blog/rssCard"
 import Brave from "../components/verts/brave"
 import PageTitle from "../components/pageTitle"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import PageSubtitle from "../components/pageSubtitle"
 
 export default function Template(props) {
   const post = props.data.markdownRemark
@@ -21,20 +22,24 @@ export default function Template(props) {
   return (
     <Layout>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
-      <PageTitle>{post.frontmatter.title}</PageTitle>
+      <PageTitle subtitle={post.frontmatter.subtitle}>
+        {post.frontmatter.title}
+      </PageTitle>
       <container className="half black content">
-        <h4>
-          <FontAwesomeIcon icon="envelope" />{" "}
-          <Link to="/newsletter">Sign Up For My Newsletter</Link> & Get Early
-          Access To These Posts.
-        </h4>
+        <Link to="/newsletter" className="newsletter-signup">
+          <FontAwesomeIcon icon="envelope" /> Sign Up For My Newsletter & Get
+          Early Access To These Posts.
+        </Link>
         <main
           className={"post__body " + post.fields.slug}
           dangerouslySetInnerHTML={{ __html: postContent }}
         ></main>
+        <Link to="/newsletter" className="newsletter-signup">
+          <FontAwesomeIcon icon="envelope" /> Sign Up For My Newsletter & Get
+          Early Access To These Posts.
+        </Link>
         <nav class="newsletterNavigation">
-
-        {next ? (
+          {next ? (
             <Link to={next.fields.slug} className="next-post">
               <FontAwesomeIcon icon="arrow-left" /> {next.frontmatter.title}
             </Link>
@@ -50,7 +55,6 @@ export default function Template(props) {
           ) : (
             ""
           )}
-
         </nav>
       </container>
       <container class="slim black">

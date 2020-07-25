@@ -17,17 +17,20 @@ const About = ({ data, pageContext }) => {
       </container>
 
       <container className="slim pink">
-        <h2>I only send EXPERTLY CRAFTED EMAILS like:</h2>
+        <h2>I only send <span title="For Legal Reasons, This Is A JOKE.">EXPERTLY CRAFTED EMAILS</span> like:</h2>
 
         <div class="recentEmails">
           {recentEmails.map(({ node: email }) => {
             return (
               <Link to={email.fields.slug} className="newsletter__card">
-                {email.frontmatter.title}
+                <h3>{email.frontmatter.title}</h3>
+                {email.frontmatter.subtitle && <h4>{email.frontmatter.subtitle}</h4>}
               </Link>
             )
           })}
         </div>
+        <h2>Get them before anyone else by signing up!</h2>
+
       </container>
     </Layout>
   )

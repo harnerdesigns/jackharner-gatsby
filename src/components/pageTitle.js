@@ -8,20 +8,13 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-
-
-const PageTitle = ({ children}) => {
-
-
+const PageTitle = ({ children, subtitle = "" }) => {
   return (
     <header className="page-title">
-
       <h1>{children}</h1>
 
-     
+      {subtitle && <h2>{subtitle}</h2>}
     </header>
-
-
   )
 }
 
