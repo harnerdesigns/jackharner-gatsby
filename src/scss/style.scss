@@ -262,13 +262,20 @@ ul {
   vertical-align: top;
   //   padding: 0.5em;
 
-  &:after {
-    content: ".";
-    margin-right: -0.1em;
+
+  .Cursor--blinking{
+
+    animation: blink 1s step-start infinite;
+
   }
 }
 
-.headroom-wrapper + container {
+@keyframes blink{
+ 50%{
+   opacity: 0;
+ }
+}
+.headroom-wrapper ~ container.intro {
   min-height: 85vh;
   position: relative;
 }

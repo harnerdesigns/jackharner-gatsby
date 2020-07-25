@@ -3,15 +3,12 @@ import Button from "../atoms/button"
 import styled from "styled-components"
 
 import { breakpoints } from "../breakpoints"
+import { NewsletterForm } from "./NewsletterForm"
 
 const FooterCTA = () => (
   <StyledFooterCTA>
     <CtaContainer>
-      <h3>How Can I Help?</h3>
-      <p>
-        I'm always looking for my next project. Want to work with me?
-      </p>
-      <Button label={"Let's Chat »"} href="/contact" size="medium" />
+      <NewsletterForm />
     </CtaContainer>
   </StyledFooterCTA>
 )
@@ -37,7 +34,16 @@ const CtaContainer = styled.div`
   text-align: center;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24),
   0 1px 8px rgba(0, 0, 0, 0.12);
+  .title__box{
+    border-bottom:5px solid #333;
 
+    font-weight: 900;
+
+    .Cursor{
+      color: #333;
+      font-weight: 100;
+    }
+  }
   h3{
     margin: 0;
       color: var(--color);
