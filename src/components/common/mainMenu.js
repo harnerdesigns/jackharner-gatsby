@@ -30,8 +30,7 @@ export default class MainMenu extends Component {
             <Link to="/portfolio">Portfolio</Link>
             <Link to="/blog">Blog</Link>
             <Link to="/about">About</Link>
-            <a href="https://resume.jackharner.com">Resumé</a>
-            {/* <Link to="/mood">Mood</Link> */}
+            <Link to="/newsletter">Newsletter</Link>
             <Link to="/contact">Contact</Link>
             <ColorSwitcher />
 

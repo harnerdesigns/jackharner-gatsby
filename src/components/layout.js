@@ -13,7 +13,7 @@ import Header from "./common/header"
 import "../scss/style.scss"
 import Footer from "./common/footer"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, footerCTA }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
 
         {children}
 
-        <Footer />
+        <Footer footerCTA={footerCTA} />
       </div>
     </>
   )

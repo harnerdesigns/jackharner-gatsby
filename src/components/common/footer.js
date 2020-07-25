@@ -6,10 +6,10 @@ import FooterCTA from "./FooterCTA"
 
 import MainMenu from "./mainMenu";
 
-const Footer = ({ siteTitle }) => (
+const Footer = ({ siteTitle, footerCTA = true }) => (
   
   <footer className="slim main_footer" >
-        <FooterCTA />
+        {footerCTA && <FooterCTA />}
 
 
     <section className="copyright">&copy; 2020 Jack Harner | <a href="https://github.com/harnerdesigns/jackharner-gatsby"> Built With Gatsby</a></section>

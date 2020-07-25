@@ -22,7 +22,7 @@ const IndexPage = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title="Jack Harner" />
-      <container class="full black">
+      <container class="full black intro">
         <section class="introduction">
           <h1>
             Hi, I'm <b>Jack&nbsp;Harner</b>
