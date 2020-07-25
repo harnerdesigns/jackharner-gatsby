@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 
 
 
-const PageTitle = ({ children }) => {
+const PageTitle = ({ children}) => {
 
 
   return (

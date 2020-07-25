@@ -2,6 +2,9 @@ import React, {Component} from "react"
 
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 
+import defaultOGImage from '../../images/Jack-Harner-Open-Graph--large.jpg'
+
+
 
 export default class ShareLinks extends Component{ 
 
@@ -12,7 +15,7 @@ export default class ShareLinks extends Component{
     
     render(){
         let postPermalink = "https://jackharner.com" + this.post.fields.slug;
-        let postImage = "https://jackharner.com" + this.post.frontmatter.featuredImage.childImageSharp.sizes.src
+        let postImage = "https://jackharner.com" + (this.post.frontmatter.featuredImage ? this.post.frontmatter.featuredImage.childImageSharp.sizes.src : defaultOGImage)
         return(
 
 

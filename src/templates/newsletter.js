@@ -6,16 +6,28 @@ import PageTitle from "../components/pageTitle"
 import SEO from "../components/seo"
 import { NewsletterForm } from "../components/common/NewsletterForm"
 
-
-const About = ({ data }) => {
-  const { photos } = data.photoRoll.frontmatter
-
+const About = ({ data, pageContext }) => {
+  const { recentEmails } = pageContext
+  console.log(recentEmails)
   return (
     <Layout footerCTA={false}>
-      <SEO title="About" />
-      <container className="full white">
-      <NewsletterForm />
+      <SEO title="Jack's Newsletter" />
+      <container className="half white">
+        <NewsletterForm />
+      </container>
 
+      <container className="slim pink">
+        <h2>I only send EXPERTLY CRAFTED EMAILS like:</h2>
+
+        <div class="recentEmails">
+          {recentEmails.map(({ node: email }) => {
+            return (
+              <Link to={email.fields.slug} className="newsletter__card">
+                {email.frontmatter.title}
+              </Link>
+            )
+          })}
+        </div>
       </container>
     </Layout>
   )
