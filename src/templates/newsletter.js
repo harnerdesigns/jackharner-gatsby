@@ -11,7 +11,7 @@ const About = ({ data, pageContext }) => {
   console.log(recentEmails)
   return (
     <Layout footerCTA={false}>
-      <SEO title="Jack's Newsletter" />
+      <SEO title="Learn _____ With Me" />
       <container className="half white">
         <NewsletterForm />
       </container>
