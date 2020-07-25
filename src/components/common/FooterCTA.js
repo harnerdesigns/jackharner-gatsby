@@ -37,8 +37,6 @@ const CtaContainer = styled.div`
   .title__box{
     border-bottom:5px solid #333;
 
-    font-weight: 900;
-
     .Cursor{
       color: #333;
       font-weight: 100;
