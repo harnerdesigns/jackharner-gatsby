@@ -5,13 +5,14 @@ import Layout from "../components/layout"
 import PageTitle from "../components/pageTitle"
 import SEO from "../components/seo"
 import { NewsletterForm } from "../components/common/NewsletterForm"
+import  ogImage from "../images/Learn-With-Me-OG-Image.jpg"
 
 const About = ({ data, pageContext }) => {
   const { recentEmails } = pageContext
   console.log(recentEmails)
   return (
     <Layout footerCTA={false}>
-      <SEO title="Learn _____ With Me" />
+      <SEO title="Learn _____ With Me" image={ogImage} description="Sign Up for my newsletter and learn about Web Development, Graphic Design, Automation, & More!" />
       <container className="half white">
         <NewsletterForm />
       </container>
