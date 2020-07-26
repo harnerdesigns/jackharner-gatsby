@@ -8,8 +8,33 @@ const { NODE_ENV } = process.env
 
 console.log(NODE_ENV)
 
-function isArticleNode(node) {
+function isBlogNode(node) {
   if (node.internal.type !== "MarkdownRemark") {
+    return false
+  }
+  if(node.fields.collection !== "blog"){
+    return false
+  }
+
+  return true
+}
+
+function isNewsletterNode(node) {
+  if (node.internal.type !== "MarkdownRemark") {
+    return false
+  }
+  if(node.fields.collection !== "newsletter"){
+    return false
+  }
+
+  return true
+}
+
+function isPortfolioNode(node) {
+  if (node.internal.type !== "MarkdownRemark") {
+    return false
+  }
+  if(node.fields.collection !== "portfolio"){
     return false
   }
 
@@ -31,7 +56,7 @@ function randomNum(min, max, currentIndex = null) {
 
 const descriptors = [
   {
-    predicate: isArticleNode,
+    predicate: isBlogNode,
     fields: [
       {
         name: "externalLink",
@@ -59,6 +84,51 @@ const descriptors = [
         getter: node => node.frontmatter.ogImage,
         defaultValue: "",
       },
+    ],
+  },
+
+  {
+    predicate: isPortfolioNode,
+    fields: [
+      {
+        name: "externalLink",
+        getter: node => node.frontmatter.externalLink,
+        defaultValue: "",
+      },
+      {
+        name: "externalLinkLabel",
+        getter: node => node.frontmatter.externalLinkLabel,
+        defaultValue: "Check It Out »",
+      },
+      {
+        name: "published",
+        getter: node => node.frontmatter.published,
+        defaultValue: false,
+        transformer: value => NODE_ENV !== "development" ? value : true
+      },
+      {
+        name: "weight",
+        getter: node => node.frontmatter.weight,
+        defaultValue: 0,
+      },
+      {
+        name: "ogImage",
+        getter: node => node.frontmatter.ogImage,
+        defaultValue: "",
+      },
+    ],
+  },
+
+  {
+    predicate: isNewsletterNode,
+    fields: [
+      {
+        name: "published",
+        getter: node => node.frontmatter.published,
+        defaultValue: false,
+        transformer: value => NODE_ENV !== "development" ? value : true
+      },
+
     ],
   },
 ]
@@ -153,6 +223,29 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               logo {
                 publicURL
               }
+            }
+          }
+        }
+      },
+      newsletter: allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        filter: {
+          fileAbsolutePath: { glob: "**/src/content/newsletter/**/*.md" }
+          fields: { published: { eq: true } }
+        }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+              collection
+              published
+            }
+            frontmatter {
+              title
+              subtitle
+              tags
             }
           }
         }
@@ -348,5 +441,48 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         },
       })
     })
+
+
+    _.each(result.data.newsletter.edges, (edge, index) => {
+      const edgeCount = result.data.newsletter.edges.length
+      var next;
+      var previous;
+      
+      if (index > 0) next = result.data.newsletter.edges[index - 1].node;
+      if (index < edgeCount - 1) previous = result.data.newsletter.edges[index + 1].node
+      
+
+      createPage({
+        path: `${edge.node.fields.slug}`,
+        component: path.resolve("./src/templates/newsletter-single.js"),
+        context: {
+          slug: edge.node.fields.slug,
+          next: next,
+          previous: previous
+        },
+      })
+    })
+
+    let recent3 = result.data.newsletter.edges.filter((edge, index) => { 
+
+      if (index > 2) return false;
+
+      if (edge.node.fields.published && edge.node.fields.published !== 'unlisted'){
+        return true;
+      }
+
+    })
+
+    createPage({
+      path: "/newsletter/",
+      component: path.resolve(`src/templates/newsletter.js`),
+      context: {
+        recentEmails: recent3
+      }
+    })
   })
 }
+
+
+
+

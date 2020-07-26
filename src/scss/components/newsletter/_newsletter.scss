@@ -1,0 +1,71 @@
+nav.newsletterNavigation {
+    @extend nav.postNavigation;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+        padding: 1rem;
+    }
+
+    h4 {
+        grid-column: 2;
+        text-align: center;
+        padding: 1rem;
+        margin: 0;
+    }
+
+    .previous-post {
+        margin-left: auto;
+    }
+
+    .next-post {
+        margin-right: auto;
+    }
+}
+
+.recentEmails {
+    display: flex;
+    align-items: flex-start;
+    @include breakpoint(laptop) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+        width: 50%;
+    }
+}
+
+.newsletter__card {
+    @include card(1);
+    padding: 1em;
+
+    background: var(--darker-color);
+    color: var(--darker-text-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+    h3{
+        margin: 0;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    h4{
+        margin: 0;
+        text-align: center;
+        font-size: 1rem;
+    }
+}
+
+
+a.newsletter-signup{
+    margin: 1rem auto;
+    background: var(--color);
+    color: var(--text-color);
+    padding: 1rem;
+}

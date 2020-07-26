@@ -72,14 +72,15 @@ const IndexPage = ({ data, pageContext }) => {
       <container class="full white row">
         <div class="column">
 
-        <h1>Learn In Public.</h1>
+        <h1>I Learn In Public.</h1>
 
         <p>
-          Now and then, I write about <Link to="/blog">Web Development</Link> &{" "}
+          Now and then, I write about <Link to="/blog">Web Development</Link>, <Link to="/blog/tags/automation/">Automation</Link> &{" "}
           <a href="https://bleedingcoffee.com">Coffee</a>. By sharing my
           understanding of a particular topic, I can possibly give the people learning after
           me a fresh perspective on a problem and possible solutions.
         </p>
+        <p><Link to="/newsletter">Sign Up For My Newsletter</Link> and Learn With Me. I send out weekly emails to help you level up your programming. <Link to="/newsletter">Sign Up Now</Link>!</p>
         </div>
         <div className="blog-posts">
           {blogPosts.map(({ node: post }, index) => {
