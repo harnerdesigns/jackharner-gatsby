@@ -115,6 +115,7 @@ query BlogPostByPath($slug: String!) {
       externalLink
       slug
       ogImage
+      date(formatString: "MMMM DD, YYYY")
     }
   }
 }

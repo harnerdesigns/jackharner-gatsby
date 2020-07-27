@@ -1,5 +1,6 @@
 ---
 date: 2020-04-30T03:33:30.612Z
+updated: 2020-07-26T16:42:08Z
 title: "Schedule Tweets Without Thinking About It"
 subtitle: "Simple Tweets Build Log" 
 featuredImage: "./og-photo.png"
@@ -8,6 +9,23 @@ externalLink: ""
 published: true 
 ---
 
+# Day 99 : Saturday, July 26th, 2020
+## Long Time No Talk.
+
+It's been a while. I've, thankfully, been working the whole time through the pandemic, both on some client work and my 9-5. I opened the project back up because I'm making a point to be more active on Twitter and that was the whole reason I started building Simple Tweets in the first place. 
+
+Boot it up with:
+
+```bash
+npm run startBoth
+```
+which runs both the Frontend React code as well as the backend Node server. Everything loads fine, but I try to sign in with Twitter and it doesn't work. It just sits spinning on the Twitter oAuth page, waiting for my server to respond then after a minute, it kicks back an Error 500: Service Unavailable.
+
+I thought maybe it was a lingering Cookie issue, so I cleared all those out, but still no response on the login.
+
+I check the server logs and it comes back with "Login Successful" but never redirects the user to be logged in. 
+
+I'm perplexed but tired, it's late so I just shut it down and go to bed. I'll revisit in a few days probably.
 
 # Day 12 : Wednesday, April 29th, 2020
 ## Better Late Than Never, Right?

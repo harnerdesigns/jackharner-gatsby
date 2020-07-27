@@ -58,7 +58,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       sort: {
         order: [DESC, DESC]
-        fields: [fields___weight, frontmatter___date]
+        fields: [fields___weight, fields___date]
       }
       filter: {
         fields: { published: { eq: true }, collection: { eq: "blog" } }
@@ -87,6 +87,8 @@ export const pageQuery = graphql`
             collection
             externalLink
             published
+            date(formatString: "MMMM DD, YYYY")
+
           }
         }
       }
