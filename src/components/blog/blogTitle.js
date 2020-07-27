@@ -23,7 +23,7 @@ const BlogTitle = ({ post }) => {
              return (<><Link to={tagLink}>{tag}</Link>{i < post.frontmatter.tags.length - 1 ? ", ": ""}</>)
              })
              }</div> : "")}
-            {(post.frontmatter.date ? <div className="post__date"><FontAwesomeIcon icon="calendar" /> {post.frontmatter.date}</div> : "")}
+            {(post.fields.date ? <div className="post__date"><FontAwesomeIcon icon="calendar" /> {post.fields.date}</div> : "")}
             <div className="post__time"><FontAwesomeIcon icon="stopwatch" /> {(Math.round(post.wordCount.words / 200) > 0 ? "~" + Math.round(post.wordCount.words / 200) : "< 1")} Min To Read</div> 
         </div>
 

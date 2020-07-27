@@ -84,6 +84,11 @@ const descriptors = [
         getter: node => node.frontmatter.ogImage,
         defaultValue: "",
       },
+      {
+        name: "date",
+        getter: node => node.frontmatter.updated ? node.frontmatter.updated : node.frontmatter.date,
+        defaultValue: "",
+      }
     ],
   },
 
@@ -166,7 +171,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   return graphql(`
     {
       blog: allMarkdownRemark(
-        sort: { order: DESC, fields: [fields___weight, frontmatter___date] }
+        sort: { order: DESC, fields: [fields___weight, fields___date] }
         filter: {
           fileAbsolutePath: { glob: "**/src/content/blog/**/*.md" }
           fields: { published: { eq: true } }

@@ -1,6 +1,6 @@
 ---
 date: 2020-04-30T03:33:30.612Z
-updated: 
+updated: 2020-07-26T16:42:08Z
 title: "Schedule Tweets Without Thinking About It"
 subtitle: "Simple Tweets Build Log" 
 featuredImage: "./og-photo.png"
