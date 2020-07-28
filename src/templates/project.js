@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import ProjectCard from "../components/portfolio/projectCard"
 import ProjectHeader from "../components/portfolio/projectHeader"
 import Button from "../components/atoms/button"
-import defaultOGImage from "../images/Jack-Harner-Open-Graph--large.jpg"
+import defaultOGImage from "../images/jackHarner-default-OG.jpg"
 
 export default function Template(props) {
   const post = props.data.markdownRemark
