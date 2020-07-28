@@ -55,9 +55,9 @@ on:
 ```
 The `on` option allows you to specify when to run the workflow. There are about 25 different events that you can configure workflows for, [check out the full list](https://docs.github.com/en/actions/reference/events-that-trigger-workflows). 
 
-## Get A JOB You BUM!
+### Get A JOB You BUM!
 
-The next thing we need to do is create the Job, where all the magic happens, inside the Workflow.
+The next thing we need to do is create the Job. This is where all the magic happens inside the Workflow.
 
 ```yml
 jobs:
@@ -71,6 +71,8 @@ Let's break that block down even further.
 2. `build:` - This is the ID for the job we are setting up. You can use the ID to reference jobs from other jobs, for example, to check if the first job exited a specific way. 
 3. `name: Stencil Push` - Pretty self-explanatory. Defines the name of the job. 
 4. `runs-on: ubuntu-latest` - This allows you to configure the OS of the computer that will be processing your Job. You can choose between Linux, Windows, And Mac Operating Systems, depending on your needs. 
+
+### STEP It Up
 
 
 
