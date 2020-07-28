@@ -2,7 +2,7 @@ import React, {Component} from "react"
 
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 
-import defaultOGImage from '../../images/Jack-Harner-Open-Graph--large.jpg'
+import defaultOGImage from '../../images/jackHarner-default-OG.jpg'
 
 
 
