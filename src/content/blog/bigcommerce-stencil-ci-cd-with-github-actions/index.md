@@ -3,7 +3,7 @@ date: 2020-07-17T20:29:24.067Z
 title: "BigCommerce Stencil CI/CD with GitHub Actions" 
 subtitle: "Publish Your Theme on Every Commit to Master"
 featuredImage: "./martin-adams-a_PDPUPuNZ8-unsplash.jpg"
-tags: ['BigCommerce', 'git', 'Automation']
+tags: ['BigCommerce', 'git', 'Automation', 'Newsletter']
 externalLink: ""
 published: false
 ---

@@ -1,13 +1,21 @@
 var readline = require("readline-sync")
 var ncp = require("ncp").ncp
 var replace = require("replace-in-file")
+
+
 var postTypes = ["newsletter", "blog", "portfolio"];
+var tags = [];
 var postType = readline.keyInSelect(
   postTypes,
   "Select Post Type"
 )
 
 postType = postTypes[postType];
+
+if (postType === "newsletter"){
+  postType = "blog"
+  tags = "['Newsletter']"
+}
 
 var postTitle = readline.question("What is the title? ")
 var slug = readline.question(
@@ -21,8 +29,8 @@ var destPath = `./src/content/${postType}/${slug}`
 
 var replaceOptions = {
   files: [destPath + "/index.md"],
-  from: [/\$title/g, /\$date/g],
-  to: [postTitle, date],
+  from: [/\$title/g, /\$date/g, /\$tags/g],
+  to: [postTitle, date, tags],
 }
 
 ncp(sourcePath, destPath, err => {
