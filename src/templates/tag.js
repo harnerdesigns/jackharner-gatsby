@@ -53,7 +53,7 @@ class TagRoute extends React.Component {
                     postType === "portfolio" ? (
                       <ProjectCard post={post} index={index} />
                     ) : (
-                      <BlogCard post={post} index={index} />
+                      <BlogCard post={post} index={index} large={(index + 1) % 3 === 0 || index === 0} />
                     )
 
                   return <>{card}</>

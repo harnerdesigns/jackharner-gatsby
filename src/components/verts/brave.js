@@ -9,7 +9,7 @@ import braveIcon from "../../images/brave_lion_alt.png"
 
 const Brave = () => {
   return (
-    <section class="vert vert--brave vert--with-icon">
+    <section className="vert vert--brave vert--with-icon">
       <img src={braveIcon} />
       <p>
         Want to support your favorite content creators (including me!) just by
@@ -17,7 +17,7 @@ const Brave = () => {
         , a private, secure and fast web browser that pays YOU to browse.
       </p>
 
-      <a class="button" href="https://brave.com/jac948">
+      <a className="button" href="https://brave.com/jac948">
         Learn More &raquo;
       </a>
     </section>

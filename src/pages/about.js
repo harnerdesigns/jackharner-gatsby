@@ -72,7 +72,7 @@ const About = ({ data }) => {
         </p>
       </container>
       <container className="slim white">
-        <section class="task-grid">
+        <section className="task-grid">
           <h3>Maintaining and Updating the Website</h3>
           <p>
             Everything from Content Changes to totally redoing the navigation,

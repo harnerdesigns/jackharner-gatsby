@@ -82,23 +82,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 80%;
-  max-width: 1280px;
-  margin: 0 auto;
+  margin: 1rem auto;
+  width: 100%;
 
   flex-direction: column;
 
   @include breakpoint(laptop) {
+    max-width: 95%;
     flex-direction: row;
   }
   ul {
+    margin: 0.5em auto;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-
+    justify-content: space-between;
     @include breakpoint(laptop) {
-      margin: 0.5em 0.5em 0.5em auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+      place-items: center;
     }
   }
 
@@ -107,7 +109,7 @@
     margin: 0;
     padding: 0 0 0 0.5em;
 
-    &:first-of-type{
+    &:first-of-type {
       padding: 0;
     }
 
@@ -115,13 +117,34 @@
       &:nth-of-type(1n + 5) {
         display: none;
       }
+
+      &:last-of-type{
+        display: flex;
+      }
     }
 
-    &.top-tag a {
+    &.top-tag {a {
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
+
+      font-size: 0.8rem;
+
+
+      @include breakpoint(laptop) {
+        font-size: 1.5rem;
+      }
+
+      svg {
+        font-size: 3em;
+        margin: 0.5rem;
+      }
+    }}
+
+    &.more-tags{
+
+      @extend .top-tag;
     }
   }
 }

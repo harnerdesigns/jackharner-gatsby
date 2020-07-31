@@ -6,30 +6,38 @@ import Link from "../atoms/maybeExternal";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
+const _ = require("lodash");
 
 
 
-const BlogCard = ({ post, index, small }) => (
-    <Link to={ post.fields.slug} className={"blog__link" + (index !== null ? " blog__link--" + index : "") + (post.fields.externalLink ? " blog__link--external" : "") + (small ? " blog__link--small" : "")}>
-        <article className="blog__card">
-            <div className="featuredImage__wrapper">
-                <img src={post.frontmatter.featuredImage.childImageSharp.resize.src} className="featuredImage" alt={post.frontmatter.title} />
-            </div>
-            <div className="card__titles">
-                {post.frontmatter.published !== true && <h5 class='notice notice--draft' title="Won't be published on build">DRAFT</h5>}
-                <h2 className="post__title">{post.frontmatter.title}</h2>
-                {(post.frontmatter.subtitle ? <h3 className="post__subtitle">{post.frontmatter.subtitle}</h3> : "")}
-                {(index === 0 ? <p className="post__excerpt">{post.excerpt} <Link to={post.fields.slug}>Read&nbsp;More&nbsp;&raquo;</Link></p> : "")}
-            </div>
 
-            {(post.fields.externalLink ?  <a className="external-link__icon" href={post.fields.externalLink}><FontAwesomeIcon icon="external-link-alt" ></FontAwesomeIcon></a> : "")}
+const BlogCard = ({ post, index, small, large }) => {
+    let filterTags = post.frontmatter.tags.filter((tag, i) => (i < 3 ? true : false))
+    let tags = <div className="tags"><FontAwesomeIcon icon="tag" /> {filterTags.map((tag, i) => {
+        const tagLink = `/blog/tags/${_.kebabCase(tag)}/`
+        return (<>{tag}{i < filterTags.length - 1 ? ", " : (filterTags.length < post.frontmatter.tags.length ? ", \+ " + (post.frontmatter.tags.length - filterTags.length) : "")}</>)
+    })}</div>;
+    return (
+        <Link key={index} to={post.fields.slug} className={"blog__link" + (index !== null ? " blog__link--" + index : "") + (post.fields.externalLink ? " blog__link--external" : "") + (small ? " blog__link--small" : "") + (large ? " blog__link--large" : "")}>
+            <article className="blog__card">
+                <div className="featuredImage__wrapper">
+                    <img src={post.frontmatter.featuredImage.childImageSharp.resize.src} className="featuredImage" alt={post.frontmatter.title} />
+                </div>
+                <div className="card__titles">
+                    {post.frontmatter.published !== true && <h5 className='notice notice--draft' title="Won't be published on build">DRAFT</h5>}
+                    <h2 className="post__title">{post.frontmatter.title}</h2>
+                    {(post.frontmatter.subtitle ? <h3 className="post__subtitle">{post.frontmatter.subtitle}</h3> : "")}
+                    {/* {(index === 0 ? <p className="post__excerpt">{post.excerpt} <Link to={post.fields.slug}>Read&nbsp;More&nbsp;&raquo;</Link></p> : "")} */}
+                    <div className="card__meta">
 
+                        {tags}
+                    </div>
+                </div>
+            </article>
 
-
-        </article>
-
-    </Link>
-)
+        </Link>
+    )
+}
 
 BlogCard.propTypes = {
     post: PropTypes.object,
@@ -39,7 +47,7 @@ BlogCard.defaultProps = {
     post: {},
 }
 
-export default BlogCard 
+export default BlogCard
 
 
 

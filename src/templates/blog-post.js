@@ -54,12 +54,12 @@ export default function Template(props) {
 
         </main>
       </container>
-      <container class="slim black">
+      <container className="slim black">
         <section className="post__post-content">
           <Brave />
           <ShareLinks post={post} />
           <RssCard />
-          <nav class="postNavigation">
+          <nav className="postNavigation">
             <h3>Related Posts</h3>
             <ul>
               {related.map((post, index) => {

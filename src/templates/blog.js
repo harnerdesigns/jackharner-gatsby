@@ -11,6 +11,7 @@ import tagIcons from "./tags/tag-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Brave from "../components/verts/brave"
 import TopTags from "../components/common/topTags"
+import Vert from "../components/verts/vert"
 
 const _ = require("lodash")
 
@@ -37,11 +38,10 @@ const Blog = ({ data, pageContext }) => {
             .map(({ node: post }, index) => {
               let ShowCard;
               
-              if(index === 2) {ShowCard = <RssCard />}
-              if(index === 5) {ShowCard = <Brave />}
+              if((index + 1) % 6 ===  0) {ShowCard = <Vert index={(index + 1) / 6} />}
               return (
                 <>
-                  <BlogCard post={post} index={index} />
+                  <BlogCard post={post} index={index} large={(index + 1) % 5 === 0 || index === 0} />
                   {ShowCard}
                 </>
               )
@@ -76,7 +76,7 @@ export const pageQuery = graphql`
             published
             featuredImage {
               childImageSharp {
-                resize(width: 500, height: 500, cropFocus: CENTER) {
+                resize(width: 1000, height: 1000, cropFocus: CENTER) {
                   src
                 }
               }

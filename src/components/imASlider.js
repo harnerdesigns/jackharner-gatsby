@@ -22,7 +22,7 @@ class ImASlider extends Component {
       <>
         <h3>
           <span>I'm a&nbsp;</span>
-          <span class="title__box">
+          <span className="title__box">
             <Typing words={this.state.titles} />
           </span>
         </h3>

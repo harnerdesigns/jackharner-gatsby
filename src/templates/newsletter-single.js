@@ -38,7 +38,7 @@ export default function Template(props) {
           <FontAwesomeIcon icon="envelope" /> Sign Up For My Newsletter & Get
           Early Access To These Posts.
         </Link>
-        <nav class="newsletterNavigation">
+        <nav className="newsletterNavigation">
           {next ? (
             <Link to={next.fields.slug} className="next-post">
               <FontAwesomeIcon icon="arrow-left" /> {next.frontmatter.title}
@@ -57,7 +57,7 @@ export default function Template(props) {
           )}
         </nav>
       </container>
-      <container class="slim black">
+      <container className="slim black">
         <section className="post__post-content">
           <Brave />
           <ShareLinks post={post} />

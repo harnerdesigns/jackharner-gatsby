@@ -32,7 +32,7 @@ export default function Template(props) {
       {post.fields.externalLink.includes("codepen") && (
               <container className="full black">
                 <p
-                  class="codepen"
+                  className="codepen"
                   data-height="100%"
                   data-theme-id="17675"
                   data-default-tab="result"
@@ -89,7 +89,7 @@ export default function Template(props) {
           </section>
         </main>
 
-        <nav class="projectNavigation">
+        <nav className="projectNavigation">
           <h3>More Projects</h3>
           <ul>
             {related.map((post, index) => {
