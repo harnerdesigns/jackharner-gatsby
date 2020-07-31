@@ -6,7 +6,6 @@ import Link from "../atoms/maybeExternal";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-const _ = require("lodash");
 
 
 
@@ -14,8 +13,7 @@ const _ = require("lodash");
 const BlogCard = ({ post, index, small, large }) => {
     let filterTags = post.frontmatter.tags.filter((tag, i) => (i < 3 ? true : false))
     let tags = <div className="tags"><FontAwesomeIcon icon="tag" /> {filterTags.map((tag, i) => {
-        const tagLink = `/blog/tags/${_.kebabCase(tag)}/`
-        return (<>{tag}{i < filterTags.length - 1 ? ", " : (filterTags.length < post.frontmatter.tags.length ? ", \+ " + (post.frontmatter.tags.length - filterTags.length) : "")}</>)
+        return (<>{tag}{i < filterTags.length - 1 ? ", " : (filterTags.length < post.frontmatter.tags.length ? ", + " + (post.frontmatter.tags.length - filterTags.length) : "")}</>)
     })}</div>;
     return (
         <Link key={index} to={post.fields.slug} className={"blog__link" + (index !== null ? " blog__link--" + index : "") + (post.fields.externalLink ? " blog__link--external" : "") + (small ? " blog__link--small" : "") + (large ? " blog__link--large" : "")}>

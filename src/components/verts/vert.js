@@ -1,13 +1,9 @@
 import React from "react"
-import PropTypes from "prop-types"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-import styled from "styled-components"
-import { Link } from "gatsby"
-import { breakpoints } from "../breakpoints"
-import braveIcon from "../../images/brave_lion_alt.png"
 import Brave from "./brave"
 import Newsletter from "./newsletter"
+import RssCard from "../../components/blog/rssCard"
+
 
 const Vert = ({index}) => {
 
@@ -16,6 +12,8 @@ const Vert = ({index}) => {
       return(<Newsletter />)    
     case 2: 
       return(<Brave />)
+    case 3:
+      return(<RssCard />)
     default:
       return(null)
   }

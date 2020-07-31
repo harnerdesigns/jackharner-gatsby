@@ -1,19 +1,13 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PageTitle from "../components/pageTitle"
 import BlogCard from "../components/blog/blogCard"
 
-import RssCard from "../components/blog/rssCard"
-import tagIcons from "./tags/tag-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import Brave from "../components/verts/brave"
 import TopTags from "../components/common/topTags"
 import Vert from "../components/verts/vert"
-
-const _ = require("lodash")
 
 const Blog = ({ data, pageContext }) => {
   const { edges: posts } = data.allMarkdownRemark

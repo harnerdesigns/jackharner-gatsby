@@ -36,7 +36,7 @@ export default function Template(props) {
             label={
               " <strong>See Full Post</strong> @ " +
               post.fields.externalLink.match(
-                /^https?:\/\/([^\/?#]+)(?:[\/?#]|$)/i
+                /^https?:\/\/([^/?#]+)(?:[/?#]|$)/i
               )[1]
             }
             size="large"

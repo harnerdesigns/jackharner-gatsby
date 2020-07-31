@@ -41,7 +41,7 @@ const TopTags = ({ topTags = [], postType = null, back = false, exclude = null, 
                 </Link>
               </li>
             )
-          }
+          } else {return null}
         })}
         <li className="more-tags">
 

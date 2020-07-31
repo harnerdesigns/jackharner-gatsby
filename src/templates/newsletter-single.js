@@ -2,14 +2,11 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Button from "../components/atoms/button"
-import BlogCard from "../components/blog/blogCard"
 import ShareLinks from "../components/social/shareLinks"
 import RssCard from "../components/blog/rssCard"
 import Brave from "../components/verts/brave"
 import PageTitle from "../components/pageTitle"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import PageSubtitle from "../components/pageSubtitle"
 
 export default function Template(props) {
   const post = props.data.markdownRemark

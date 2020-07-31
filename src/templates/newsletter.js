@@ -2,7 +2,6 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import PageTitle from "../components/pageTitle"
 import SEO from "../components/seo"
 import { NewsletterForm } from "../components/common/NewsletterForm"
 import  ogImage from "../images/Learn-With-Me-OG-Image.jpg"
