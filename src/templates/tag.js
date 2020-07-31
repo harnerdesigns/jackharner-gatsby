@@ -1,16 +1,11 @@
 import React from "react"
 import Helmet from "react-helmet"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import BlogCard from "../components/blog/blogCard"
 import PageTitle from "../components/pageTitle"
 import ProjectCard from "../components/portfolio/projectCard"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import tagIcons from "./tags/tag-icons"
 import TopTags from "../components/common/topTags"
-
-const _ = require("lodash")
-
 class TagRoute extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
@@ -28,7 +23,6 @@ class TagRoute extends React.Component {
     topTags = Object.keys(topTags).sort(function(a, b) {
       return topTags[a] < topTags[b]
     })
-    let filteredTags = topTags.filter(topTag => topTag !== tag)
 
     const tagHeader = `${totalCount} ${
       totalCount === 1 ? postTypeLabels.single : postTypeLabels.plural
@@ -53,7 +47,7 @@ class TagRoute extends React.Component {
                     postType === "portfolio" ? (
                       <ProjectCard post={post} index={index} />
                     ) : (
-                      <BlogCard post={post} index={index} />
+                      <BlogCard post={post} index={index} large={(index + 1) % 5 === 0 || index === 0} />
                     )
 
                   return <>{card}</>

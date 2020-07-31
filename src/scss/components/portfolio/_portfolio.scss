@@ -7,8 +7,8 @@
     grid-gap: 2em;
     
     @include breakpoint(laptop) {
-      grid-template-columns: repeat(2, 1fr);
-      max-width: 1280px;
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 95%;
       margin: 0 auto;
     }
   }

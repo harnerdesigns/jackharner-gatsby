@@ -47,13 +47,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `newsletter`,
-        path: `${__dirname}/src/content/newsletter`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         name: `photoRoll`,
         path: `${__dirname}/src/content/photos`,
       },

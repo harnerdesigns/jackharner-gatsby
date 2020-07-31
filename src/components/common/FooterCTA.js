@@ -1,5 +1,4 @@
 import React from "react"
-import Button from "../atoms/button"
 import styled from "styled-components"
 
 import { breakpoints } from "../breakpoints"

@@ -1,3 +1,4 @@
+/* eslint-disable */
 
 import React, { Component } from "react"
 
@@ -258,7 +259,7 @@ export default class ColorSwitcher extends Component {
       <>
         {this.state.isColorPickerOpen ?
           <div style={styles.popover} >
-            <div style={styles.cover} onClick={this.handleClose} />
+          <div style={styles.cover} onClick={this.handleClose} /> 
             <PhotoshopPicker
               id="color__add"
               header="Pick An Accent Color"

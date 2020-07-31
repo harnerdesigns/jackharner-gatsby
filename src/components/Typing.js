@@ -7,9 +7,6 @@ import Typist from "react-typist"
 import uuid from "uuid"
 
 class Typing extends Component {
-  constructor(props) {
-    super(props)
-  }
 
   static propTypes = {
     words: PropTypes.array.isRequired,

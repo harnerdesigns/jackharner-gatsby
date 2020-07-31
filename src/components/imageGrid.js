@@ -39,8 +39,7 @@ export default class ImageGrid extends Component {
     mapImages(images){
 
        return (images.map((image, index ) => {
-
-            return (<img alt="" id={index} src={image} className={(this.state.activeImage === index ? "active-image" : "")} key={index} onClick={(e)=>{this.onClick(index)}}  />)
+            return (<img alt="" id={index} src={image} className={(this.state.activeImage === index ? "active-image" : "")} key={index} onClick={(e)=>{this.onClick(index)}}  />) // eslint-disable-line
 
         }))
     }

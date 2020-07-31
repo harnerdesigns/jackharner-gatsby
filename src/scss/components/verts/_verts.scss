@@ -48,6 +48,24 @@
 
 .blog-posts {
     .vert {
-        grid-column: 1 / -1;
+        grid-column: auto / span 3;
+        margin: 0 auto 3rem;
+
+        @include breakpoint(laptop){
+            margin: 3rem auto;
+        }
+    }
+}
+
+
+.vert--newsletter{
+    background: #fff;
+    // width: 70%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    padding: 1rem;
+
+    .title__box{
+        border-bottom-color: var(--text-color--inverted);
     }
 }

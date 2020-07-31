@@ -12,7 +12,7 @@ const Contact = () => (
     <SEO title="Contact" />
 
     <PageTitle>Get In Touch</PageTitle>
-    <container class="half black">
+    <container className="half black">
       <h2>The best ways to get a hold of me are:</h2>
       <section className="buttons">
         <Button
@@ -24,7 +24,7 @@ const Contact = () => (
           size="large"
           extraStyle={{ width: "80%" }}
         />
-        <div class="or wide">OR</div>
+        <div className="or wide">OR</div>
         <Button
           href="mailto:hello@jackharner.com"
           target="_blank"
@@ -52,14 +52,14 @@ const Contact = () => (
       </ul>
     </container>
 
-    <container class="full black" id="followMe">
+    <container className="full black" id="followMe">
       <h2>Other Places You Can Find Me:</h2>
-      <section class="socials">
+      <section className="socials">
         <a
           target="_blank"
           rel="noopener noreferrer"
           href="https://twitter.com/jackharner"
-          class="twitter"
+          className="twitter"
         >
           <FontAwesomeIcon icon={["fab", "twitter"]} />
           Twitter
@@ -68,7 +68,7 @@ const Contact = () => (
           target="_blank"
           rel="noopener noreferrer"
           href="https://instagram.com/jackharner"
-          class="instagram"
+          className="instagram"
         >
           <FontAwesomeIcon icon={["fab", "instagram"]} />
           Instagram
@@ -77,7 +77,7 @@ const Contact = () => (
           target="_blank"
           rel="noopener noreferrer"
           href="https://dribbble.com/jackharner"
-          class="dribbble"
+          className="dribbble"
         >
           <FontAwesomeIcon icon={["fab", "dribbble"]} />
           Dribbble
@@ -86,7 +86,7 @@ const Contact = () => (
           target="_blank"
           rel="noopener noreferrer"
           href="https://dev.to/jackharner"
-          class="devto"
+          className="devto"
         >
           <FontAwesomeIcon icon={["fab", "dev"]} />
           Dev.to
@@ -95,7 +95,7 @@ const Contact = () => (
           target="_blank"
           rel="noopener noreferrer"
           href="https://github.com/harnerdesigns"
-          class="github"
+          className="github"
         >
           <FontAwesomeIcon icon={["fab", "github"]} />
           GitHub
@@ -104,7 +104,7 @@ const Contact = () => (
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.producthunt.com/@jackharner"
-          class="producthunt"
+          className="producthunt"
         >
           <FontAwesomeIcon icon={["fab", "product-hunt"]} />
           Product Hunt

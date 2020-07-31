@@ -2,7 +2,6 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import PageTitle from "../components/pageTitle"
 import SEO from "../components/seo"
 import { NewsletterForm } from "../components/common/NewsletterForm"
 import  ogImage from "../images/Learn-With-Me-OG-Image.jpg"
@@ -20,7 +19,7 @@ const About = ({ data, pageContext }) => {
       <container className="slim pink">
         <h2>I only send <span title="For Legal Reasons, This Is A JOKE.">EXPERTLY CRAFTED EMAILS</span> like:</h2>
 
-        <div class="recentEmails">
+        <div className="recentEmails">
           {recentEmails.map(({ node: email }) => {
             return (
               <Link to={email.fields.slug} className="newsletter__card">

@@ -22,8 +22,8 @@ const IndexPage = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title="Jack Harner" />
-      <container class="full black intro">
-        <section class="introduction">
+      <container className="full black intro">
+        <section className="introduction">
           <h1>
             Hi, I'm <b>Jack&nbsp;Harner</b>
           </h1>
@@ -36,9 +36,9 @@ const IndexPage = ({ data, pageContext }) => {
         </section>
         <FontAwesomeIcon icon="caret-down" id="scrollIndicator" />
       </container>
-      <container class="half pink row">
+      <container className="half pink row">
 
-        <div class="recent-projects">
+        <div className="recent-projects">
           {portfolioPosts
             .filter(post => post.node.frontmatter.title.length > 0)
             .map(({ node: post }, index) => {
@@ -51,7 +51,7 @@ const IndexPage = ({ data, pageContext }) => {
           <Link to="/portfolio" className="more-link">My Full Portfolio &raquo;</Link>
 
         </div>
-        <div class="column">
+        <div className="column">
 
         <h1 >I Make Websites.</h1>
         <p >
@@ -69,8 +69,8 @@ const IndexPage = ({ data, pageContext }) => {
         </div>
 
       </container>
-      <container class="full white row">
-        <div class="column">
+      <container className="full white row">
+        <div className="column">
 
         <h1>I Learn In Public.</h1>
 

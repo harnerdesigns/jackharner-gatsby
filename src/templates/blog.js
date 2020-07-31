@@ -1,18 +1,13 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PageTitle from "../components/pageTitle"
 import BlogCard from "../components/blog/blogCard"
 
-import RssCard from "../components/blog/rssCard"
-import tagIcons from "./tags/tag-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import Brave from "../components/verts/brave"
 import TopTags from "../components/common/topTags"
-
-const _ = require("lodash")
+import Vert from "../components/verts/vert"
 
 const Blog = ({ data, pageContext }) => {
   const { edges: posts } = data.allMarkdownRemark
@@ -37,11 +32,10 @@ const Blog = ({ data, pageContext }) => {
             .map(({ node: post }, index) => {
               let ShowCard;
               
-              if(index === 2) {ShowCard = <RssCard />}
-              if(index === 5) {ShowCard = <Brave />}
+              if((index + 1) % 6 ===  0) {ShowCard = <Vert index={(index + 1) / 6} />}
               return (
                 <>
-                  <BlogCard post={post} index={index} />
+                  <BlogCard post={post} index={index} large={(index + 1) % 5 === 0 || index === 0} />
                   {ShowCard}
                 </>
               )
@@ -76,7 +70,7 @@ export const pageQuery = graphql`
             published
             featuredImage {
               childImageSharp {
-                resize(width: 500, height: 500, cropFocus: CENTER) {
+                resize(width: 1000, height: 1000, cropFocus: CENTER) {
                   src
                 }
               }

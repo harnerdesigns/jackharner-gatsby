@@ -235,8 +235,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       newsletter: allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
         filter: {
-          fileAbsolutePath: { glob: "**/src/content/newsletter/**/*.md" }
-          fields: { published: { eq: true } }
+          fileAbsolutePath: { glob: "**/src/content/blog/**/*.md" }
+          fields: { published: { eq: true },  }
+          frontmatter: { tags: {in: "Newsletter"}}
         }
         limit: 1000
       ) {

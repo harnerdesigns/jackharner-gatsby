@@ -27,7 +27,8 @@ const tagIcons = {
   Webpack: "box",
   Photography: "camera",
   Animation: "circle-notch",
-  History: "calendar"
+  History: "calendar",
+  Newsletter: "envelope"
 }
 
 export default tagIcons

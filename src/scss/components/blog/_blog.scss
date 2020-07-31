@@ -1,26 +1,25 @@
 .blog-posts {
-  display: grid;
-  grid-gap: 2em;
-  grid-template-columns: 1fr;
-  align-items: stretch;
   margin: 2em auto;
   max-width: 95%;
 
-  @include breakpoint(laptop) {
-    max-width: 80%;
-    max-width: 1280px;
+  display: flex;
+  flex-direction: column;
 
-    grid-template-columns: repeat(2, 1fr);
+  @include breakpoint(laptop) {
+    display: grid;
+    grid-gap: 2em;
+    align-items: flex-start;
+
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .blog__link {
     display: flex;
-    align-items: stretch;
+    align-self: flex-start;
     width: 100%;
 
     &:hover {
-      margin-top: -10px;
-      margin-bottom: 10px;
     }
   }
 }
@@ -28,6 +27,7 @@
 .blog__card {
   @include card(2);
   width: 100%;
+  height: 100%;
   background: var(--color);
   display: grid;
   grid-template-columns: 1fr 3fr;
@@ -36,15 +36,17 @@
   position: relative;
 
   @include breakpoint(laptop) {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr;
   }
 
-  .notice--draft{
+  .notice--draft {
     background: var(--text-color);
-    color: var(--color);padding: 0.25em 0.5em;
+    color: var(--color);
+    padding: 0.25em 0.5em;
     position: absolute;
-    top: 0; left: 0;
-    border-radius: 0 0 0.5em; 
+    top: 0;
+    left: 0;
+    border-radius: 0 0 0.5em;
     border: 5px solid var(--color);
     border-left: none;
     border-top: none;
@@ -61,7 +63,10 @@
 
     width: 100%;
     height: 100%;
-    overflow: hidden;
+
+    @include breakpoint(laptop) {
+      height: 30vh;
+    }
 
     @include card(-1);
 
@@ -71,7 +76,6 @@
       display: block;
 
       object-fit: cover;
-
     }
   }
 
@@ -83,19 +87,49 @@
     height: 100%;
     background: var(--color);
     color: var(--text-color);
+
+    @include breakpoint(laptop) {
+      justify-content: flex-start;
+    }
+  }
+
+  .card__meta {
+    width: 100%;
+    padding: 0 1rem 1rem 1rem;
+    display: flex;
+    align-items: flex-end;
+
+    .tags {
+      margin-left: auto;
+      text-align: left;
+      font-weight: 100;
+
+      a{font-weight: 100;}
+
+      @include breakpoint(laptop) {
+        margin-left: 0;
+        margin-right: auto;
+        text-align: right;
+      }
+    }
   }
 
   .post__title,
   .post__subtitle {
     width: 100%;
     color: var(--text-color);
+
+    text-align: right;
+
+    @include breakpoint(laptop) {
+      text-align: left;
+    }
   }
 
   .post__title {
     margin: 0;
     font-weight: 900;
     padding: 1rem;
-    text-align: center;
     grid-column: 2;
     font-size: 1.5em;
 
@@ -107,19 +141,14 @@
 
   .post__subtitle {
     margin: 0;
-    padding: 0.25em 1rem;
+    padding: 0 1rem 1rem 1rem;
     font-style: italic;
 
-    text-align: center;
     grid-column: 2;
-    background-color: var(--darker-color);
-    color: var(--darker-text-color);
     font-size: 1em;
 
-    @include card(2);
-
     @include breakpoint(laptop) {
-      font-size: 2em;
+      font-size: 1em;
     }
   }
 
@@ -150,7 +179,8 @@
   align-items: flex-start;
   justify-content: center;
   @include breakpoint(laptop) {
-    grid-template-columns: repeat(2, 1fr);    align-items: stretch;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
     margin-top: 3rem;
   }
 }
@@ -218,30 +248,51 @@
 .blog__link {
   // First Blog Card In Grid
 
-  &--0,
-  &--3,
-  &--6,
-  &--9,
-  &--12,
-  &--15 {
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+
+  &--large {
     @include breakpoint(laptop) {
-      grid-column: 1 / span 2;
-      // grid-row: 1 / span 2;
+      grid-column: auto / span 2;
+      // grid-row: auto / span 2;
+      justify-self: stretch;
+      align-self: stretch !important;
     }
+
 
     .blog__card {
       grid-template-columns: 1fr;
       min-height: 50vh;
 
       @include breakpoint(laptop) {
-        grid-template-columns: auto 1fr;
+        grid-template-columns: 1fr 1fr;
 
         grid-template-rows: 5fr;
       }
 
+      .featuredImage__wrapper {
+        height: 100%;
+      }
+
+      .card__titles{
+        justify-content: center;
+      }
+
+      .card__meta {
+        @include breakpoint(laptop) {
+          font-size: 1.5em;
+        }
+      }
+
       .post__title {
         @include breakpoint(laptop) {
-          font-size: 4em;
+          font-size: 3em;
+        }
+      }
+      .post__subtitle {
+        @include breakpoint(laptop) {
+          font-size: 2em;
         }
       }
 
@@ -261,16 +312,15 @@
 
   &--small {
     .blog__card {
-
-      .featuredImage{
-        height: auto;
+      .featuredImage {
+        height: 100%;
         width: 100%;
       }
       .post__title {
         font-size: 1.5rem;
       }
       .post__subtitle {
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
 
       .post__excerpt {
@@ -452,6 +502,5 @@ nav.postNavigation {
     margin: 0.25em;
   }
 }
-
 
 @import "customBlogCSS";

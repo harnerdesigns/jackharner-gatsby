@@ -20,7 +20,7 @@ const ProjectCard = ({ post, index, small, nolink }) => {
       >
 
         {post.frontmatter.logo &&
-        <div class="logo__wrapper">
+        <div className="logo__wrapper">
           <img
             src={post.frontmatter.logo.publicURL}
             className="logo"
@@ -38,7 +38,7 @@ const ProjectCard = ({ post, index, small, nolink }) => {
             ""
           )}
 
-          <ul class="project__tags">
+          <ul className="project__tags">
             {post.frontmatter.tags.map((tag, index) => {
               return <li>{tag}</li>
             })}

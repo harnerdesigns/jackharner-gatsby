@@ -2,7 +2,8 @@
 date: 2020-07-25T19:42:25.402Z
 title: "Let's Make A Newsletter" 
 subtitle: "Mailing Lists Are King"
-tags: [""]
+featuredImage: "./liam-truong-oeDH20DVb2A-unsplash.jpg"
+tags: ['Newsletter']
 published: true
 ---
 
