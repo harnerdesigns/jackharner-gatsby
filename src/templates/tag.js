@@ -24,9 +24,9 @@ class TagRoute extends React.Component {
       return topTags[a] < topTags[b]
     })
 
-    const tagHeader = `${totalCount} ${
+    const tagHeader = `${totalCount} ${tag} ${
       totalCount === 1 ? postTypeLabels.single : postTypeLabels.plural
-    } Tagged “${tag}”`
+    }`
 
     return (
       <Layout>

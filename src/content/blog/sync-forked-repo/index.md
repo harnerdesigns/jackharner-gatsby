@@ -3,7 +3,7 @@ date: 2019-11-02T17:12:33.962Z
 title: "I've Forked The Repo, Now What?" 
 subtitle: "Syncing Your Repo With the Upstream Repo"
 featuredImage: "./featuredImage.jpg"
-tags: ['git', 'Open Source']
+tags: ['Git', 'Open Source']
 published: true
 
 ---

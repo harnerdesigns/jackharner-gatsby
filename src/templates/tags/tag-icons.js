@@ -1,5 +1,5 @@
 const tagIcons = {
-  git: ["fab", "git-alt"],
+  Git: ["fab", "git-alt"],
   BigCommerce: "shopping-cart",
   Node: ["fab", "node-js"],
   HTML: ["fab", "html5"],

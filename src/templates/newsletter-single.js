@@ -5,8 +5,8 @@ import SEO from "../components/seo"
 import ShareLinks from "../components/social/shareLinks"
 import RssCard from "../components/blog/rssCard"
 import Brave from "../components/verts/brave"
-import PageTitle from "../components/pageTitle"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import BlogTitle from "../components/blog/blogTitle"
 
 export default function Template(props) {
   const post = props.data.markdownRemark
@@ -19,9 +19,7 @@ export default function Template(props) {
   return (
     <Layout>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
-      <PageTitle subtitle={post.frontmatter.subtitle}>
-        {post.frontmatter.title}
-      </PageTitle>
+      <BlogTitle post={post} /> 
       <container className="half black content">
         <Link to="/newsletter" className="newsletter-signup">
           <FontAwesomeIcon icon="envelope" /> Sign Up For My Newsletter & Get
@@ -77,10 +75,32 @@ export const pageQuery = graphql`
         title
         subtitle
         tags
+        featuredImage {
+          absolutePath
+          childImageSharp {
+            sizes {
+              ...GatsbyImageSharpSizes
+              src
+              originalImg
+            }
+          }
+        }
+  
+        ogImage {
+          absolutePath
+          childImageSharp {
+            sizes {
+              ...GatsbyImageSharpSizes
+              src
+              originalImg
+            }
+          }
+        }
       }
       fields {
         slug
         ogImage
+        collection
       }
     }
   }

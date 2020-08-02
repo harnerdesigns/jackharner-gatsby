@@ -10,8 +10,8 @@ const _ = require("lodash");
 
 const BlogTitle = ({ post }) => {
 
-    return(<header className="blog-title" style={{
-        backgroundImage: 'url(' + post.frontmatter.featuredImage.childImageSharp.sizes.originalImg + ')'
+    return(<header className={"blog-title " + post.fields.collection} style={{
+        backgroundImage:(post.frontmatter.featuredImage ?  'url(' + post.frontmatter.featuredImage.childImageSharp.sizes.originalImg + ')' : '')
     }}>
         <h1 className="post__title">{post.frontmatter.title}</h1>
         {(post.frontmatter.subtitle ? <h2 className="post__subtitle">{post.frontmatter.subtitle}</h2> : "")}
