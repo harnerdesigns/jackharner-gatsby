@@ -42,7 +42,7 @@ class TagRoute extends React.Component {
                     <div className="tag__post-preview">
                       {posts
                         .filter(({ node: post }) =>
-                          post.frontmatter.tags.includes(tag)
+                          (post.frontmatter.tags ?  post.frontmatter.tags.includes(tag) : false)
                         )
                         .map(({ node: post }) => {
                           return (
@@ -89,7 +89,7 @@ export const tagPageQuery = graphql`
       limit: 1000
       sort: { fields: [frontmatter___date], order: DESC }
       filter: {
-        fields: { published: { eq: true }, collection: { eq: "blog" } }
+        fields: { published: { eq: true }, unlisted: { eq: false }, collection: { eq: "blog" } }
       }
     ) {
       totalCount
@@ -102,7 +102,7 @@ export const tagPageQuery = graphql`
             subtitle
             featuredImage {
               childImageSharp {
-                resize(width: 200, height: 200, cropFocus: CENTER) {
+                resize(width: 150, height: 150, cropFocus: CENTER) {
                   src
                 }
               }
@@ -110,6 +110,7 @@ export const tagPageQuery = graphql`
           }
           fields {
             published
+            unlisted
           }
         }
       }

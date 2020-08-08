@@ -6,6 +6,7 @@ import BlogCard from "../components/blog/blogCard"
 import PageTitle from "../components/pageTitle"
 import ProjectCard from "../components/portfolio/projectCard"
 import TopTags from "../components/common/topTags"
+import Vert from "../components/verts/vert"
 class TagRoute extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
@@ -20,13 +21,13 @@ class TagRoute extends React.Component {
         : { single: "Blog Post", plural: "Blog Posts", type: "Blog" }
 
     let topTags = this.props.pageContext.topTags
-    topTags = Object.keys(topTags).sort(function(a, b) {
+    topTags = Object.keys(topTags).sort(function (a, b) {
       return topTags[a] < topTags[b]
     })
 
     const tagHeader = `${totalCount} ${tag} ${
       totalCount === 1 ? postTypeLabels.single : postTypeLabels.plural
-    }`
+      }`
 
     return (
       <Layout>
@@ -36,19 +37,25 @@ class TagRoute extends React.Component {
           <PageTitle>{tagHeader}</PageTitle>
 
           <main className="page_body page_body--grid">
-      <TopTags topTags={topTags} postType={postType} back={true} exclude={tag} />
-            
+            <TopTags topTags={topTags} postType={postType} back={true} exclude={tag} />
+
 
             <div className="blog-posts">
               {posts
                 .filter(post => post.node.frontmatter.title.length > 0)
                 .map(({ node: post }, index) => {
+                  let ShowCard;
+
+                  if ((index + 1) % 6 === 0) { ShowCard = <Vert index={(index + 1) / 6} /> }
+
                   let card =
                     postType === "portfolio" ? (
                       <ProjectCard post={post} index={index} />
                     ) : (
-                      <BlogCard post={post} index={index} large={(index + 1) % 5 === 0 || index === 0} />
-                    )
+                        <><BlogCard post={post} index={index} large={(index + 1) % 5 === 0 || index === 0} />
+                          {ShowCard}</>
+
+                      )
 
                   return <>{card}</>
                 })}
@@ -105,6 +112,7 @@ export const tagPageQuery = graphql`
             collection
             externalLink
             published
+            unlisted
           }
         }
       }

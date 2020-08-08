@@ -5,7 +5,8 @@ subtitle: "Publish Your Theme on Every Commit to Main"
 featuredImage: "./martin-adams-a_PDPUPuNZ8-unsplash.jpg"
 tags: ['BigCommerce', 'Git', 'Automation', 'Newsletter']
 externalLink: ""
-published: false
+published: true
+unlisted: false
 ---
 
 Back in November 2019, GitHub released GitHub Actions. An ["API for cause and effect"](https://github.blog/2019-08-08-github-actions-now-supports-ci-cd/) they called it. 

@@ -28,7 +28,8 @@ const tagIcons = {
   Photography: "camera",
   Animation: "circle-notch",
   History: "calendar",
-  Newsletter: "envelope"
+  Newsletter: "envelope",
+  Python: ["fab", "python"]
 }
 
 export default tagIcons

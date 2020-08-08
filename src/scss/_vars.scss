@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 :root {
   --color: #E91E63;
   --text-color: white;
@@ -82,4 +84,24 @@ $gray: #212121;
   100% {
       transform: scale(1);
   }
+}
+
+
+@mixin hardShadow($distance, $color){
+  $shadow: '';
+  @for $i from 1 through $distance {
+   @if $i == $distance{
+      $shadow: #{$shadow} #{$i}px #{$i}px 0 #{$color};
+    }
+    
+    @else {
+
+      $shadow: #{$shadow} #{$i}px #{$i}px 0 #{$color}  , \a ;
+
+
+    }
+
+
+  }
+  box-shadow: $shadow;
 }

@@ -25,6 +25,10 @@ const BlogTitle = ({ post }) => {
              }</div> : "")}
             {(post.fields.date ? <div className="post__date"><FontAwesomeIcon icon="calendar" /> {post.fields.date}</div> : "")}
             <div className="post__time"><FontAwesomeIcon icon="stopwatch" /> {(Math.round(post.wordCount.words / 200) > 0 ? "~" + Math.round(post.wordCount.words / 200) : "< 1")} Min To Read</div> 
+
+            {(post.fields.unlisted ? <div className="post__unlisted"><FontAwesomeIcon icon={['fab', "android"]} /> Unlisted</div> : "")}
+
+
         </div>
 
 

@@ -55,7 +55,7 @@ export const pageQuery = graphql`
         fields: [fields___weight, fields___date]
       }
       filter: {
-        fields: { published: { eq: true }, collection: { eq: "blog" } }
+        fields: { published: { eq: true },  unlisted: { eq: false }, collection: { eq: "blog" } }
       }
     ) {
       edges {

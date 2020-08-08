@@ -53,20 +53,23 @@ const IndexPage = ({ data, pageContext }) => {
         </div>
         <div className="column">
 
-        <h1 >I Make Websites.</h1>
-        <p >
-          I work primarily with{" "}
-          <Link to="/portfolio/tags/word-press/">WordPress</Link> &{" "}
+        <h1>I Build Websites.</h1>
+        <h2>Simple Blogs, E-Commerce Stores, Custom Business Applications & More.</h2> 
+        <p>If you access it through a web browser, I can build it.</p> 
+        <p>
+          I work with{" "}
+          <Link to="/portfolio/tags/word-press/">WordPress</Link>{" "}
           <Link to="/portfolio/tags/php/">PHP</Link> with an emphasis on clean,
           responsive design. On the flip side, I do love me some good 'ole
           fashioned <Link to="/portfolio/tags/html/">HTML</Link>/
           <Link to="/portfolio/tags/css/">CSS</Link>.
         </p>
-        <p>
-          I'm currently diving in to all things React, Gatsby, Accessibility, &
-          Modern Web Development.
-        </p>
         </div>
+
+      </container>
+      <container className="half black">
+      <h1>Don't Just Take My Word For It.</h1>
+
 
       </container>
       <container className="full white row">

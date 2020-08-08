@@ -116,6 +116,7 @@ query BlogPostByPath($slug: String!) {
       slug
       ogImage
       date(formatString: "MMMM DD, YYYY")
+      unlisted
     }
   }
 }

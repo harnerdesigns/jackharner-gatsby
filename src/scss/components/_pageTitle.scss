@@ -67,7 +67,7 @@
     flex-direction: row;
     flex-wrap: wrap;
 
-    .post__tags, .post__date, .post__time{
+    .post__tags, .post__date, .post__time, .post__unlisted{
       padding: 0 0.5em;
       svg{
         filter: drop-shadow(1px 1px 0 var(--color));

@@ -253,6 +253,10 @@
   border-radius: 10px;
   overflow: hidden;
 
+  &:hover{
+    @include hardShadow(20, var(--darker-color));
+  }
+
   &--large {
     @include breakpoint(laptop) {
       grid-column: auto / span 2;

@@ -75,6 +75,11 @@ const descriptors = [
         transformer: value => NODE_ENV !== "development" ? value : true
       },
       {
+        name: "unlisted",
+        getter: node => node.frontmatter.unlisted,
+        defaultValue: false,
+      },
+      {
         name: "weight",
         getter: node => node.frontmatter.weight,
         defaultValue: 0,
@@ -270,13 +275,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     ////////////////////
 
     _.each(result.data.blog.edges, (edge, index) => {
-      const edgeCount = result.data.blog.edges.length
+
+      let listedPosts = result.data.blog.edges.filter(({ node }) => (node.fields.unlisted ? false : true ))
+      const edgeCount = listedPosts.length
       const relatedIndexes = randomNum(0, edgeCount, index)
 
       const related = [
-        result.data.blog.edges[relatedIndexes[0]].node,
-        result.data.blog.edges[relatedIndexes[1]].node,
-        result.data.blog.edges[relatedIndexes[2]].node,
+        listedPosts[relatedIndexes[0]].node,
+        listedPosts[relatedIndexes[1]].node,
+        listedPosts[relatedIndexes[2]].node,
       ]
 
       createPage({
