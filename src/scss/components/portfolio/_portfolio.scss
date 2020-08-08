@@ -24,7 +24,7 @@
   border-radius: 1rem;
 
   &:hover{
-    @include hardShadow(15, rgba(255,255,255,0.1));
+    @include hardShadow(15, #fff);
   }
 
 }

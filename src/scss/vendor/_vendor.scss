@@ -2,4 +2,9 @@
 @import "carbonAds";
 @import "codepen";
 
-@import 'node_modules/@fortawesome/fontawesome-svg-core/styles'
+@import 'node_modules/@fortawesome/fontawesome-svg-core/styles';
+
+.slick-slider{
+    max-width: 100%;
+
+}

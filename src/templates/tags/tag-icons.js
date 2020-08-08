@@ -29,7 +29,9 @@ const tagIcons = {
   Animation: "circle-notch",
   History: "calendar",
   Newsletter: "envelope",
-  Python: ["fab", "python"]
+  Python: ["fab", "python"],
+  Shopify: ["fab", "shopify"],
+  "E-Commerce": 'shopping-bag'
 }
 
 export default tagIcons

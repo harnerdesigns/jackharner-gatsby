@@ -1,0 +1,26 @@
+.quote__slider{
+    width: 80%;
+    margin: 1rem auto;
+}
+
+
+.quote__card{
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    background: var(--text-color);
+    color: var(--text-color--inverted);
+    border-radius: 1rem;
+
+    @include breakpoint(laptop){
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+.quote__quote{
+    font-weight: 900;
+}
+.quote__by{
+    text-align: right;
+}

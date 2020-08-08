@@ -10,10 +10,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link, graphql } from "gatsby"
 import Button from "../components/atoms/button"
 import PhotoRoll from "../components/PhotoRoll"
+import Quotes from "../components/testimonies/quotes"
 
 const IndexPage = ({ data, pageContext }) => {
   const { edges: posts } = data.allMarkdownRemark
   const { photos } = data.photoRoll.frontmatter
+  const { quotes } = data.testimonies.frontmatter
   let blogPosts = posts.filter(post => post.node.fields.collection === "blog")
   let portfolioPosts = posts.filter(
     post => post.node.fields.collection === "portfolio"
@@ -68,8 +70,9 @@ const IndexPage = ({ data, pageContext }) => {
 
       </container>
       <container className="half black">
-      <h1>Don't Just Take My Word For It.</h1>
+      <h1>Don't Just Take My Word For It:</h1>
 
+      <Quotes quotes={quotes} />
 
       </container>
       <container className="full white row">
@@ -178,6 +181,19 @@ export const pageQuery = graphql`
           }
           link
           tag
+        }
+      }
+    }
+    testimonies: markdownRemark(frontmatter: { title: { eq: "Testimonies" } }) {
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+        quotes {
+          quote
+          link
+          by
         }
       }
     }

@@ -209,7 +209,7 @@ export default class ColorSwitcher extends Component {
   }
 
   onReset = () => {
-    alert("RESET");
+    // alert("RESET");
     //delete cookie and reset variables. 
     this.setState({
       color: {
