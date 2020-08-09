@@ -5,7 +5,7 @@ subtitle: "Meet MkDocs"
 featuredImage: "./maarten-van-den-heuvel-8EzNkvLQosk-unsplash.jpg"
 tags: ['Automation', 'Markdown', 'Python', 'Newsletter']
 externalLink: ""
-published: false
+published: true
 unlisted: true
 ---
 
