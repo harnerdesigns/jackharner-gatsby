@@ -19,16 +19,6 @@ function isBlogNode(node) {
   return true
 }
 
-function isNewsletterNode(node) {
-  if (node.internal.type !== "MarkdownRemark") {
-    return false
-  }
-  if(node.fields.collection !== "newsletter"){
-    return false
-  }
-
-  return true
-}
 
 function isPortfolioNode(node) {
   if (node.internal.type !== "MarkdownRemark") {
@@ -73,6 +63,11 @@ const descriptors = [
         getter: node => node.frontmatter.published,
         defaultValue: false,
         transformer: value => NODE_ENV !== "development" ? value : true
+      },
+      {
+        name: "unlisted",
+        getter: node => node.frontmatter.unlisted,
+        defaultValue: false,
       },
       {
         name: "weight",
@@ -121,19 +116,6 @@ const descriptors = [
         getter: node => node.frontmatter.ogImage,
         defaultValue: "",
       },
-    ],
-  },
-
-  {
-    predicate: isNewsletterNode,
-    fields: [
-      {
-        name: "published",
-        getter: node => node.frontmatter.published,
-        defaultValue: false,
-        transformer: value => NODE_ENV !== "development" ? value : true
-      },
-
     ],
   },
 ]
@@ -270,13 +252,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     ////////////////////
 
     _.each(result.data.blog.edges, (edge, index) => {
-      const edgeCount = result.data.blog.edges.length
+
+      let listedPosts = result.data.blog.edges.filter(({ node }) => (node.fields.unlisted ? false : true ))
+      const edgeCount = listedPosts.length
       const relatedIndexes = randomNum(0, edgeCount, index)
 
       const related = [
-        result.data.blog.edges[relatedIndexes[0]].node,
-        result.data.blog.edges[relatedIndexes[1]].node,
-        result.data.blog.edges[relatedIndexes[2]].node,
+        listedPosts[relatedIndexes[0]].node,
+        listedPosts[relatedIndexes[1]].node,
+        listedPosts[relatedIndexes[2]].node,
       ]
 
       createPage({

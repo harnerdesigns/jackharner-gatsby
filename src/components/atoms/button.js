@@ -75,7 +75,7 @@ const Button = ({
 }
 
 Button.propTypes = {
-  children: PropTypes.node.isRequired,
+  // children: PropTypes.node.isRequired,
 }
 
 export default Button
@@ -145,7 +145,9 @@ const StyledA = styled(StyledLink).attrs({
   cursor: pointer;
 `
 
-const StyledButton = styled(StyledLink)`
+const StyledButton = styled(StyledLink).attrs({
+  as: "button",
+})`
   border: none;
   cursor: pointer;
 `

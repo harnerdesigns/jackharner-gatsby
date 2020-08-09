@@ -1,5 +1,5 @@
 const tagIcons = {
-  git: ["fab", "git-alt"],
+  Git: ["fab", "git-alt"],
   BigCommerce: "shopping-cart",
   Node: ["fab", "node-js"],
   HTML: ["fab", "html5"],
@@ -28,7 +28,10 @@ const tagIcons = {
   Photography: "camera",
   Animation: "circle-notch",
   History: "calendar",
-  Newsletter: "envelope"
+  Newsletter: "envelope",
+  Python: ["fab", "python"],
+  Shopify: ["fab", "shopify"],
+  "E-Commerce": 'shopping-bag'
 }
 
 export default tagIcons

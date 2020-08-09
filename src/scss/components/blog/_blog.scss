@@ -110,6 +110,7 @@
         margin-left: 0;
         margin-right: auto;
         text-align: right;
+        font-size: 1.25rem;
       }
     }
   }
@@ -251,6 +252,10 @@
   margin-bottom: 2rem;
   border-radius: 10px;
   overflow: hidden;
+
+  &:hover{
+    @include hardShadow(20, var(--darker-color));
+  }
 
   &--large {
     @include breakpoint(laptop) {

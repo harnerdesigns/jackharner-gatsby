@@ -10,8 +10,8 @@ const _ = require("lodash");
 
 const BlogTitle = ({ post }) => {
 
-    return(<header className="blog-title" style={{
-        backgroundImage: 'url(' + post.frontmatter.featuredImage.childImageSharp.sizes.originalImg + ')'
+    return(<header className={"blog-title " + post.fields.collection} style={{
+        backgroundImage:(post.frontmatter.featuredImage ?  'url(' + post.frontmatter.featuredImage.childImageSharp.sizes.originalImg + ')' : '')
     }}>
         <h1 className="post__title">{post.frontmatter.title}</h1>
         {(post.frontmatter.subtitle ? <h2 className="post__subtitle">{post.frontmatter.subtitle}</h2> : "")}
@@ -25,6 +25,10 @@ const BlogTitle = ({ post }) => {
              }</div> : "")}
             {(post.fields.date ? <div className="post__date"><FontAwesomeIcon icon="calendar" /> {post.fields.date}</div> : "")}
             <div className="post__time"><FontAwesomeIcon icon="stopwatch" /> {(Math.round(post.wordCount.words / 200) > 0 ? "~" + Math.round(post.wordCount.words / 200) : "< 1")} Min To Read</div> 
+
+            {(post.fields.unlisted ? <div className="post__unlisted"><FontAwesomeIcon icon={['fab', "android"]} /> Unlisted</div> : "")}
+
+
         </div>
 
 

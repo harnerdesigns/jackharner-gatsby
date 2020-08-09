@@ -51,6 +51,14 @@ module.exports = {
         path: `${__dirname}/src/content/photos`,
       },
     },
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `testimonies`,
+        path: `${__dirname}/src/content/testimonies`,
+      },
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

@@ -21,7 +21,11 @@
   width: 100%;
   margin: 0.5em auto;
   @include card(1);
-  border-radius: 10px;
+  border-radius: 1rem;
+
+  &:hover{
+    @include hardShadow(15, #fff);
+  }
 
 }
 

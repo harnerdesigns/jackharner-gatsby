@@ -2,15 +2,15 @@
     max-width: 80%;
     width: 100%;
     margin: 0 auto 2em;
-    border-radius: 1em;
+    border-radius: 1rem;
     padding: 0.5em !important;
     background: #2d2d2d;
-    filter: drop-shadow( 0 2px 0 var(--text-color)) drop-shadow(0 5px 0 var(--color));
+    @include hardShadow(15, var(--darker-color));
     
     @include breakpoint(laptop) {
       padding: 1em !important;
       margin: 0 auto 3em;
-      filter: drop-shadow(2px 2px 0 var(--text-color)) drop-shadow(5px 5px 0 var(--color)) drop-shadow(10px 10px 0 var(--color));
+      @include hardShadow(15, var(--darker-color));
     }
   
 

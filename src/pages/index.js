@@ -10,10 +10,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link, graphql } from "gatsby"
 import Button from "../components/atoms/button"
 import PhotoRoll from "../components/PhotoRoll"
+import Quotes from "../components/testimonies/quotes"
 
 const IndexPage = ({ data, pageContext }) => {
   const { edges: posts } = data.allMarkdownRemark
   const { photos } = data.photoRoll.frontmatter
+  const { quotes } = data.testimonies.frontmatter
   let blogPosts = posts.filter(post => post.node.fields.collection === "blog")
   let portfolioPosts = posts.filter(
     post => post.node.fields.collection === "portfolio"
@@ -21,7 +23,7 @@ const IndexPage = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <SEO title="Jack Harner" />
+      <SEO title="Jack Of All Trades, Master Of Some" />
       <container className="full black intro">
         <section className="introduction">
           <h1>
@@ -53,20 +55,24 @@ const IndexPage = ({ data, pageContext }) => {
         </div>
         <div className="column">
 
-        <h1 >I Make Websites.</h1>
-        <p >
-          I work primarily with{" "}
-          <Link to="/portfolio/tags/word-press/">WordPress</Link> &{" "}
+        <h1>I Build Websites.</h1>
+        <h2>Simple Blogs, E-Commerce Stores, Custom Business Applications & More.</h2> 
+        <p>If you access it through a web browser, I can build it.</p> 
+        <p>
+          I work with{" "}
+          <Link to="/portfolio/tags/word-press/">WordPress</Link>{" "}
           <Link to="/portfolio/tags/php/">PHP</Link> with an emphasis on clean,
           responsive design. On the flip side, I do love me some good 'ole
           fashioned <Link to="/portfolio/tags/html/">HTML</Link>/
           <Link to="/portfolio/tags/css/">CSS</Link>.
         </p>
-        <p>
-          I'm currently diving in to all things React, Gatsby, Accessibility, &
-          Modern Web Development.
-        </p>
         </div>
+
+      </container>
+      <container className="half black">
+      <h1>Don't Just Take My Word For It:</h1>
+
+      <Quotes quotes={quotes} />
 
       </container>
       <container className="full white row">
@@ -80,7 +86,7 @@ const IndexPage = ({ data, pageContext }) => {
           understanding of a particular topic, I can possibly give the people learning after
           me a fresh perspective on a problem and possible solutions.
         </p>
-        <p><Link to="/newsletter">Sign Up For My Newsletter</Link> and Learn With Me. I send out weekly emails to help you level up your programming. <Link to="/newsletter">Sign Up Now</Link>!</p>
+        <p><Link to="/newsletter">Sign Up For My Newsletter</Link> and Learn With Me. I send out weekly-ish emails to help you level up your programming. <Link to="/newsletter">Sign Up Now</Link>!</p>
         </div>
         <div className="blog-posts">
           {blogPosts.map(({ node: post }, index) => {
@@ -175,6 +181,19 @@ export const pageQuery = graphql`
           }
           link
           tag
+        }
+      }
+    }
+    testimonies: markdownRemark(frontmatter: { title: { eq: "Testimonies" } }) {
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+        quotes {
+          quote
+          link
+          by
         }
       }
     }

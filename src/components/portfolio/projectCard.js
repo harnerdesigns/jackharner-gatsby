@@ -9,6 +9,7 @@ const ProjectCard = ({ post, index, small, nolink }) => {
     <Link
       to={!nolink ? post.fields.slug : ""}
       className={"project__link project__link--" + index}
+      data-color={post.frontmatter.color}
       style={{ background: post.frontmatter.color }}
     >
       <article
@@ -18,6 +19,7 @@ const ProjectCard = ({ post, index, small, nolink }) => {
           (small ? " project__card--small" : "")
         }
       >
+        
 
         {post.frontmatter.logo &&
         <div className="logo__wrapper">
