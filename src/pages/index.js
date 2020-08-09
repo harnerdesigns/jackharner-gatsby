@@ -130,7 +130,7 @@ export const pageQuery = graphql`
         fields: [fields___weight, frontmatter___date]
         order: [DESC, DESC]
       }
-      filter: { fields: { published: { eq: true } } }
+      filter: { fields: { published: { eq: true }, unlisted: { eq: false } } }
     ) {
       edges {
         node {
