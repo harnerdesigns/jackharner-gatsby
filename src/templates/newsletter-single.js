@@ -100,6 +100,7 @@ export const pageQuery = graphql`
       fields {
         slug
         ogImage
+        date(formatString: "MMMM DD, YYYY")
         collection
         unlisted
       }

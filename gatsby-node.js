@@ -19,16 +19,6 @@ function isBlogNode(node) {
   return true
 }
 
-function isNewsletterNode(node) {
-  if (node.internal.type !== "MarkdownRemark") {
-    return false
-  }
-  if(node.fields.collection !== "newsletter"){
-    return false
-  }
-
-  return true
-}
 
 function isPortfolioNode(node) {
   if (node.internal.type !== "MarkdownRemark") {
@@ -126,19 +116,6 @@ const descriptors = [
         getter: node => node.frontmatter.ogImage,
         defaultValue: "",
       },
-    ],
-  },
-
-  {
-    predicate: isNewsletterNode,
-    fields: [
-      {
-        name: "published",
-        getter: node => node.frontmatter.published,
-        defaultValue: false,
-        transformer: value => NODE_ENV !== "development" ? value : true
-      },
-
     ],
   },
 ]
