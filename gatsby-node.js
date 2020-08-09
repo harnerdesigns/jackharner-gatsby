@@ -218,7 +218,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         sort: { order: DESC, fields: [frontmatter___date] }
         filter: {
           fileAbsolutePath: { glob: "**/src/content/blog/**/*.md" }
-          fields: { published: { eq: true },  }
+          fields: { published: { eq: true }, unlisted: {eq: false}  }
           frontmatter: { tags: {in: "Newsletter"}}
         }
         limit: 1000
