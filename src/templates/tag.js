@@ -81,7 +81,7 @@ export const tagPageQuery = graphql`
       sort: { fields: [frontmatter___date], order: DESC }
       filter: {
         frontmatter: { tags: { in: [$tag] } }
-        fields: { published: { eq: true }, collection: { eq: $postType } }
+        fields: { published: { eq: true }, unlisted: { eq: false }, collection: { eq: $postType } }
       }
     ) {
       totalCount
