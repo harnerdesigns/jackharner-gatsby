@@ -92,7 +92,9 @@ const StyledLink = styled(Link)`
   color: var(--text-color);
   background: var(--color);
 
-  svg{
+  border: 1px solid var(--color);
+
+  svg {
     margin-right: 0.5em;
   }
 
