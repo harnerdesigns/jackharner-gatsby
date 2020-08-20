@@ -85,7 +85,7 @@ const IndexPage = ({ data, pageContext }) => {
           <p>
             <Link to="/newsletter">Sign Up For My Newsletter</Link> and Learn
             With Me. I send out weekly-ish emails to help you level up your
-            programming. <Link to="/newsletter">Sign Up Now</Link>!
+            programming while I'm leveling up mine. <Link to="/newsletter">Sign Up Now</Link>!
           </p>
         </div>
         <div className="blog-posts" style={{ gridTemplateColumns: "1fr 1fr" }}>
