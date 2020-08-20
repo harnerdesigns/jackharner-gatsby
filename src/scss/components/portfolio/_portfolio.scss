@@ -21,7 +21,7 @@
   width: 100%;
   margin: 0.5em auto;
   @include card(1);
-  border-radius: 1rem;
+  border-radius: var(--border-radius);
 
   &:hover{
     @include hardShadow(15, #fff);
@@ -49,6 +49,7 @@
     background: #fff;
     padding: 0.5em;
     margin: 0;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
 
     // @include card(-2);
 

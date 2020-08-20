@@ -10,7 +10,7 @@
     text-align: center;
     background: var(--text-color);
     color: var(--text-color--inverted);
-    border-radius: 1rem;
+    border-radius: var(--border-radius);
 
     @include breakpoint(laptop){
         width: 80%;

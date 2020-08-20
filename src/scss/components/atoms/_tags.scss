@@ -7,6 +7,11 @@
   grid-gap: 1rem;
   align-items: center;
   justify-content: center;
+  border-radius: var(--border-radius);
+  transition: 300ms;
+  &:hover {
+    @include hardShadow(15, var(--darker-color));
+  }
 
   h2 {
     margin: 0.5rem;
@@ -20,7 +25,7 @@
       height: 1em;
       padding: 0.15em;
       background: var(--color);
-      border-radius: 10px;
+      border-radius: var(--border-radius);
       color: var(--text-color);
       vertical-align: middle;
       transform: scale(1.25);
@@ -46,6 +51,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
     padding: 0 1rem;
+    border-radius: var(--border-radius);
     align-items: center;
     justify-content: center;
     margin-bottom: 1em;
@@ -107,7 +113,10 @@
   li {
     list-style: none;
     margin: 0;
-    padding: 0 0 0 0.5em;
+    width: 100%;
+    transition: filter 300ms linear;
+    will-change: filter;
+    filter: none;
 
     &:first-of-type {
       padding: 0;
@@ -118,32 +127,46 @@
         display: none;
       }
 
-      &:last-of-type{
+      &:last-of-type {
         display: flex;
       }
     }
 
-    &.top-tag {a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
+    &.top-tag {
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
 
-      font-size: 0.8rem;
+        font-size: 0.8rem;
 
+        @include breakpoint(laptop) {
+          font-size: 1.5rem;
+        }
 
-      @include breakpoint(laptop) {
-        font-size: 1.5rem;
+        svg {
+          font-size: 3em;
+          margin: 0.5rem;
+          position: relative;
+          top: 0;
+          transition: top 300ms cubic-bezier(0.175, 0.885, 0.32, 1) 100ms;
+        }
       }
+    }
 
-      svg {
-        font-size: 3em;
-        margin: 0.5rem;
+    &:hover {
+      @include hardShadow(3, var(--darker-color), true);
+      a {
+        svg {
+          position: relative;
+          top: -5px;
+          transition: top 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 100ms;
+        }
       }
-    }}
+    }
 
-    &.more-tags{
-
+    &.more-tags {
       @extend .top-tag;
     }
   }
