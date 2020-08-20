@@ -3,6 +3,7 @@ date: 2020-08-09T11:53:35Z
 title: "Generate Documentation From Markdown AUTOMATICALLY" 
 subtitle: "Meet MkDocs"
 featuredImage: "./maarten-van-den-heuvel-8EzNkvLQosk-unsplash.jpg"
+ogImage: "./docs-site-og.jpg"
 tags: ['Automation', 'Markdown', 'Python', 'Newsletter']
 externalLink: ""
 published: true
