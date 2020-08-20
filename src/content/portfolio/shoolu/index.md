@@ -4,7 +4,7 @@ title: "Shoolu"
 logo: "./shoolu-logo.svg"
 description: "E-Commerce Design & More"
 color: "#02a974"
-tags: ["HTML", "BigCommerce", "Webpack"]
+tags: ["HTML", "BigCommerce", "E-Commerce"]
 images: ["./New-Shoolu-Home.png", "./New-Shoolu-Product.png"]
 weight: 9
 published: true

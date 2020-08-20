@@ -1,15 +1,17 @@
 @use 'sass:math';
 
 :root {
-  --color: #E91E63;
+  --color: #e91e63;
   --text-color: white;
   --text-color--inverted: black;
   --darker-color: #aa1145;
-  --darker-text-color: white
+  --darker-text-color: white;
+
+  --border-radius: 10px;
 }
 
 $red: #f44336;
-$pink: var(--color, #E91E63);
+$pink: var(--color, #e91e63);
 $black: #000;
 $gray: #212121;
 
@@ -71,37 +73,46 @@ $gray: #212121;
   }
 }
 
-
 @keyframes pulse {
-  0%{
-      transform: scale(1);
+  0% {
+    transform: scale(1);
   }
 
   50% {
-      transform: scale(1.25);
+    transform: scale(1.25);
   }
 
   100% {
-      transform: scale(1);
+    transform: scale(1);
   }
 }
 
-
-@mixin hardShadow($distance, $color){
-  $shadow: '';
+@mixin hardShadow($distance, $color, $filter: false) {
+  $shadow: "";
   @for $i from 1 through $distance {
-   @if $i == $distance{
-      $shadow: #{$shadow} #{$i}px #{$i}px 0 #{$color};
+    @if $i == $distance {
+      @if $filter == true {
+        $shadow: #{$shadow} drop-shadow(#{$i / 3}px #{$i / 3}px 0 #{$color});
+      } @else {
+        $shadow: #{$shadow} #{$i}px #{$i}px 0 #{$color};
+      }
+    } @else {
+      @if $filter == true {
+      $shadow: #{$shadow} drop-shadow(#{$i}px #{$i}px 0 #{$color}) \a;
+
+      } @else {
+
+      $shadow: #{$shadow} #{$i}px #{$i}px 0 #{$color}, \a;
+
+
+      }
     }
-    
-    @else {
-
-      $shadow: #{$shadow} #{$i}px #{$i}px 0 #{$color}  , \a ;
-
-
-    }
-
-
   }
-  box-shadow: $shadow;
+
+  @if $filter == true {
+    filter: $shadow;
+  }
+  @else {
+    box-shadow: $shadow;
+  }
 }

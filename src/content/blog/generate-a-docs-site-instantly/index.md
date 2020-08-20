@@ -6,7 +6,7 @@ featuredImage: "./maarten-van-den-heuvel-8EzNkvLQosk-unsplash.jpg"
 tags: ['Automation', 'Markdown', 'Python', 'Newsletter']
 externalLink: ""
 published: true
-unlisted: true
+unlisted: false
 ---
 
 [MkDocs](https://www.mkdocs.org/) is a "fast, simple and downright gorgeous" static site generator for turning a collection of Markdown files into a documentation site. Today, I'm going to walk you through how to get MkDocs setup (which isn't hard).

@@ -84,7 +84,7 @@ const StyledLink = styled(Link)`
   color: inherit;
   text-decoration: none;
   padding: 0.5em;
-  border-radius: var(--borderRadius);
+  border-radius: var(--border-radius);
 
   width: 100%;
   text-align: center;
@@ -92,7 +92,9 @@ const StyledLink = styled(Link)`
   color: var(--text-color);
   background: var(--color);
 
-  svg{
+  border: 1px solid var(--color);
+
+  svg {
     margin-right: 0.5em;
   }
 
@@ -104,13 +106,14 @@ const StyledLink = styled(Link)`
 
   &:focus {
     outline: 1px dotted #000;
-    color: inherit;
+    color: var(--darker-text-color);
+
   }
 
   &:active {
     background: var(--darker-color);
     opacity: 0.8;
-    color: inherit;
+    color: var(--darker-text-color);
   }
 
   &.button--white {

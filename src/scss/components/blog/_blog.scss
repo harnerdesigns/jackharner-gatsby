@@ -250,7 +250,7 @@
   // First Blog Card In Grid
 
   margin-bottom: 2rem;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   overflow: hidden;
 
   &:hover{
@@ -427,7 +427,7 @@
     max-width: 100vw !important;
     margin: 0 auto 1.5em;
     border: 20px solid #fff;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
   }
 
   p > img {

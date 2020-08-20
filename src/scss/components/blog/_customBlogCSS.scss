@@ -5,7 +5,7 @@
     color: var(--text-color);
     height: 4em;
     width: 4em;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     animation: pulse 3s infinite;
     vertical-align: middle;
     margin: 0 0.5em;
