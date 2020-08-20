@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: jackharner.com
+Token: 6dd877d77576b84325c8c8efd3923110e5f4d1a2859bd322386fbba141bf3094

@@ -1,0 +1,1146 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:webfeeds="http://webfeeds.org/rss/1.0"><channel><title><![CDATA[Jack Harner's Web Dev Blog]]></title><description><![CDATA[Jack Harner is a freelance Web Developer & Graphic Designer based in Albuquerque, New Mexico. He Specializes in WordPress development for small to medium sized businesses.]]></description><link>https://jackharner.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 20 Aug 2020 06:18:19 GMT</lastBuildDate><webfeeds:accentColor>#E91E63</webfeeds:accentColor><webfeeds:logo>./src/images/jackharenr-logo-white.svg</webfeeds:logo><item><title><![CDATA[Generate Documentation From Markdown AUTOMATICALLY]]></title><description><![CDATA[MkDocs is a "fast, simple and downright gorgeous" static site generator for turning a collection of Markdown files into a documentation site. Today, I'm going to walk you through how to get MkDocs setup (which isn't hard). What's The Need? I stumbled…]]></description><link>https://jackharner.com//blog/generate-a-docs-site-instantly/</link><guid isPermaLink="false">https://jackharner.com//blog/generate-a-docs-site-instantly/</guid><pubDate>Sun, 09 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://www.mkdocs.org/&quot;&gt;MkDocs&lt;/a&gt; is a &quot;fast, simple and downright gorgeous&quot; static site generator for turning a collection of Markdown files into a documentation site. Today, I&apos;m going to walk you through how to get MkDocs setup (which isn&apos;t hard).&lt;/p&gt;
+&lt;h2&gt;What&apos;s The Need?&lt;/h2&gt;
+&lt;p&gt;I stumbled across MkDocs because we had some major staffing changes at work, and I wanted a way to keep track of various processes and SOPs for running the day to day. I initially started just with a folder of markdown files on my computer that I would add to as I came across things that needed documenting. &lt;/p&gt;
+&lt;p&gt;This worked for a little while but then I needed to be able to share things in the docs with other people at work. I didn&apos;t want to have to a lot of time building something. I&apos;m pretty sure I just googled &quot;simple Markdown to HTML&quot; and MkDocs was the first thing that popped up. It was everything I wanted: Simple. Clean. Automatic. Input Markdown Directory. Output HTML Directory. Perfect. &lt;/p&gt;
+&lt;h2&gt;Setting It Up.&lt;/h2&gt;
+&lt;p&gt;Enough rambling on the &lt;strong&gt;why&lt;/strong&gt;, let&apos;s talk about the &lt;strong&gt;how&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Installation is super easy. They have tons of packages in most of the package managers (apt-get, dnf, homebrew, yum, chocolatey). If you don&apos;t use one of those package managers the manual install is also pretty easy. &lt;/p&gt;
+&lt;p&gt;MkDocs is built with Python and it supports Python versions 3.5, 3.6, 3.7, 3.8, and pypy3. So make sure you have one of those versions installed along with the appropriate version of pip (python&apos;s package manager), and then run: &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;command-line-prompt&quot;&gt;&lt;span data-user=jack data-host=localhost&gt;&lt;/span&gt;&lt;/span&gt;pip &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; mkdocs&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Verify it installed correctly with: &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber 0&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;command-line-prompt&quot;&gt;&lt;span data-user=jack data-host=localhost&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;mkdocs --version
+mkdocs, version &lt;span class=&quot;token number&quot;&gt;0.15&lt;/span&gt;.3&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Directory Setup&lt;/h2&gt;
+&lt;p&gt;If you&apos;re starting fresh, you can just run:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;command-line-prompt&quot;&gt;&lt;span data-user=jack data-host=localhost&gt;&lt;/span&gt;&lt;span data-user=jack data-host=localhost&gt;&lt;/span&gt;&lt;/span&gt;mkdocs new &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;procject-name&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;project-name&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If you already have a directory of Markdown files you want to use MkDocs on, you have 2 options. You can either: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Run the &lt;code class=&quot;language-text&quot;&gt;mkdocs new &amp;lt;project-name&amp;gt;&lt;/code&gt; command above and just copy your markdown into the &lt;code class=&quot;language-text&quot;&gt;&amp;lt;project-name&amp;gt;/docs&lt;/code&gt; folder it created&lt;/li&gt;
+&lt;li&gt;Create your own &lt;code class=&quot;language-text&quot;&gt;docs&lt;/code&gt; folder in your existing directory and move everything into it that way. Then at the root of your project folder create a &lt;code class=&quot;language-text&quot;&gt;mkdocs.yml&lt;/code&gt; file, and configure it yourself. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Fire This Bad Boy Up&lt;/h2&gt;
+&lt;p&gt;MkDocs installs with a dev server you can use while updating everything. Make sure your shell is in the &lt;code class=&quot;language-text&quot;&gt;&amp;lt;project-name&amp;gt;&lt;/code&gt; folder and run: &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;command-line-prompt&quot;&gt;&lt;span data-user=jack data-host=localhost&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;mkdocs serve
+INFO    -  Building documentation&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+INFO    -  Cleaning site directory
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;I &lt;span class=&quot;token number&quot;&gt;160402&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;15&lt;/span&gt;:50:43 server:271&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; Serving on http://127.0.0.1:8000
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;I &lt;span class=&quot;token number&quot;&gt;160402&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;15&lt;/span&gt;:50:43 handlers:58&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; Start watching changes
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;I &lt;span class=&quot;token number&quot;&gt;160402&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;15&lt;/span&gt;:50:43 handlers:60&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; Start detecting changes&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;MkDocs is now watching your directory for changes and building those changes to &lt;code class=&quot;language-text&quot;&gt;http://127.0.0.1:8000&lt;/code&gt;. Visit that url in your browser and you&apos;re greeted with this: &lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 53%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAA6ElEQVQoz62R624CIRCFeXE10aYP1thEfYr+M6llF1hWhr1wnHVDg7qoMZ7kC5ccDjMglhuFgRXzuSkwW0vMvyUWzHz9hwUz+/o9r6N34GPL/p262BsQQMCogL3U+NlLGK1hVQlTHFAbnhuF4N2/Lw8guj4gUlOD2nmQ5/HoIIsCurJMjaMjpN4cIoSASCoiglIaVVXBML5pxvoS/xQiDUmDrbUoy5JHDvOEhgO99xe0bYtridxNXdedQ4gcnHP8DGNAyuC5qTAXGNX3PR9kAiZ1t+Vc+/F37138sOXJw094shW+qrcHngAl3lfBUsC1FgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;MkDocs Landing Page&quot;
+        title=&quot;MkDocs Landing Page&quot;
+        src=&quot;/static/49888bda40049aa01d25c355a5033402/c1b63/Welcome-to-mkdocs.png&quot;
+        srcset=&quot;/static/49888bda40049aa01d25c355a5033402/5a46d/Welcome-to-mkdocs.png 300w,
+/static/49888bda40049aa01d25c355a5033402/0a47e/Welcome-to-mkdocs.png 600w,
+/static/49888bda40049aa01d25c355a5033402/c1b63/Welcome-to-mkdocs.png 1200w,
+/static/49888bda40049aa01d25c355a5033402/d61c2/Welcome-to-mkdocs.png 1800w,
+/static/49888bda40049aa01d25c355a5033402/a95f7/Welcome-to-mkdocs.png 1853w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;Configure Your Site&lt;/h2&gt;
+&lt;p&gt;Everything you can configure for your Docs Site goes into the &lt;code class=&quot;language-text&quot;&gt;mkdocs.yml&lt;/code&gt; file in the root of the project. &lt;/p&gt;
+&lt;p&gt;There are about a billion different configuration options for MkDocs, so rather than go through them all I&apos;m going to just link you to the &lt;a href=&quot;https://www.mkdocs.org/user-guide/configuration/&quot;&gt;docs site for MkDocs (conveniently built with MkDocs)&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Fill it&lt;/h2&gt;
+&lt;p&gt;Inside your projects &lt;code class=&quot;language-text&quot;&gt;docs&lt;/code&gt; folder is where all your Markdown files go. &lt;code class=&quot;language-text&quot;&gt;mkdocs new&lt;/code&gt; creates an &lt;code class=&quot;language-text&quot;&gt;index.md&lt;/code&gt; file that&apos;s converted into the landing page. Include instructions about the docs site here. Telling users what kind of information they&apos;ll find here. &lt;/p&gt;
+&lt;p&gt;Depending on the complexity of your documentation you can add more Markdown files into the &lt;code class=&quot;language-text&quot;&gt;docs&lt;/code&gt; folder, or if you need you can create sub-folders, for example &lt;code class=&quot;language-text&quot;&gt;docs/test/&lt;/code&gt;. &lt;/p&gt;
+&lt;h2&gt;Custom Navigation&lt;/h2&gt;
+&lt;p&gt;As you flush out your &lt;code class=&quot;language-text&quot;&gt;docs&lt;/code&gt; folder, you&apos;ll notice the navigation bar at the header is automatically generated: &lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 385px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 16%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAoElEQVQI102LQQ6CMBBFOZNrtSJRgUYTo25deDhDW0RUXBgPI0vaolf4digmLl5e53Um4LJGnNUgL7JXB71TUSMR1Ny/8DP1pO/85797IogKg8Pzg929xf7xRlpaDI4NtlWL5cWCO+Kz6fr6ZrG6WgylRpibrjNlsKksmJvpLmCqAS81ZieNuNCYO49kg2nuichuJ+yhNlEe6kz6HfLY8QXClqq2+LUTiwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;MkDocs Generated Navigation&quot;
+        title=&quot;MkDocs Generated Navigation&quot;
+        src=&quot;/static/52e3efbd36c2e0a0d36c007e8ae95aed/409e6/Nav.png&quot;
+        srcset=&quot;/static/52e3efbd36c2e0a0d36c007e8ae95aed/5a46d/Nav.png 300w,
+/static/52e3efbd36c2e0a0d36c007e8ae95aed/409e6/Nav.png 385w&quot;
+        sizes=&quot;(max-width: 385px) 100vw, 385px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;MkDocs automatically turns Folders into dropdowns, and top level files into links. If you want specific selections in your nav you can configure that in your &lt;code class=&quot;language-text&quot;&gt;mkdocs.yml&lt;/code&gt; file by adding the nav option:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yml&quot;&gt;&lt;pre class=&quot;language-yml&quot;&gt;&lt;code class=&quot;language-yml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;site_name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; MkDocs Test Site
+&lt;span class=&quot;token key atrule&quot;&gt;nav&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;Home&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;../&apos;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &apos;User Guide&apos;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;user-guide.md&apos;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &apos;Test Folder&apos;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;/test/&apos;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &apos;External Link&apos;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;https://jackharner.com&apos;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can link to specific files, folders, or even external links. However, configuring the &lt;code class=&quot;language-text&quot;&gt;nav&lt;/code&gt; option will stop MkDocs from automatically generating the nav, so you will have to add any new pages to the menu that you create. &lt;/p&gt;
+&lt;h2&gt;Build It&lt;/h2&gt;
+&lt;p&gt;When you&apos;re done updating the content and you&apos;re ready to deploy, you just run &lt;code class=&quot;language-text&quot;&gt;mkdocs build&lt;/code&gt; in the root of your project. Mkdocs generates the files in the &lt;code class=&quot;language-text&quot;&gt;&amp;lt;project-name&amp;gt;/site&lt;/code&gt; folder. Copy the entire &lt;code class=&quot;language-text&quot;&gt;site&lt;/code&gt; folder somewhere online and you will have a fully featured docs site up and running! Wasn&apos;t that easy?! &lt;/p&gt;
+&lt;p&gt;Since all it uses is Python, it&apos;s probably super simple to combine MkDocs with GitHub Actions &amp;#x26; GitHub Pages to automatically publish any new changes to the docs site as they get pushed to the repo. (That&apos;s a post for another day.)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;Let me know what you think about MkDocs&lt;/h3&gt;
+&lt;p&gt;Send me the Docs sites you setup over on Twitter: &lt;a href=&quot;https://twitter.com/jackharner&quot;&gt;@JackHarner&lt;/a&gt;. I&apos;d love to see them!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[BigCommerce Stencil CI/CD with GitHub Actions]]></title><description><![CDATA[Back in November 2019, GitHub released GitHub Actions. An "API for cause and effect" they called it.  Basically, GitHub Actions allow you to program things to happen when other things happen to your repo. For example, running tests on Pull Requests…]]></description><link>https://jackharner.com//blog/bigcommerce-stencil-ci-cd-with-github-actions/</link><guid isPermaLink="false">https://jackharner.com//blog/bigcommerce-stencil-ci-cd-with-github-actions/</guid><pubDate>Sat, 01 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Back in November 2019, GitHub released GitHub Actions. An &lt;a href=&quot;https://github.blog/2019-08-08-github-actions-now-supports-ci-cd/&quot;&gt;&quot;API for cause and effect&quot;&lt;/a&gt; they called it. &lt;/p&gt;
+&lt;p&gt;Basically, GitHub Actions allow you to program things to happen when other things happen to your repo. For example, running tests on Pull Requests as they come in, or &lt;a href=&quot;https://dev.to/gautamkrishnar/show-your-latest-dev-to-posts-automatically-in-your-github-profile-readme-3nk8&quot;&gt;updating your GitHub Profile Readme with your latest DEV posts&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Today I&apos;m going to walk you through using GitHub Actions to publish your BigCommerce Stencil Theme automatically.&lt;/p&gt;
+&lt;h2&gt;What is CI/CD?&lt;/h2&gt;
+&lt;p&gt;CI/CD stands for Continuous Integration / Continuous Delivery. CI/CD is a coding philosophy that allows teams to publish changes often, without the daunting task of pushing to production manually.  Setting up a solid CI/CD Pipeline will save you and your team plenty of hours over the course of the project to make up for the initial time setting it up. &lt;/p&gt;
+&lt;h2&gt;Bye Bye Bitbucket Pipelines.&lt;/h2&gt;
+&lt;p&gt;The first iteration I tried for CI/CD on my Stencil Theme came from &lt;a href=&quot;https://medium.com/bigcommerce-developer-blog/how-to-level-up-your-development-workflow-with-continuous-delivery-3a6493cc1d13&quot;&gt;this article&lt;/a&gt; from BigCommerce. It talks about how to utilize BitBucket Pipelines to Auto-deploy your theme. I was storing our theme on BitBucket anyway because this was before GitHub offered free private repos, so it ended up working perfectly.&lt;/p&gt;
+&lt;p&gt;Once GitHub allowed Free Private Repos for individuals (and eventually teams), I decided to move all of our repos back. I still wanted the CI/CD benefits of BitBucket Pipelines so I dove into GitHub Actions to see if I could make it work.  &lt;/p&gt;
+&lt;h2&gt;Folder Structure&lt;/h2&gt;
+&lt;p&gt;The first thing you need to do to setup GitHub Actions is create a folder called &lt;code class=&quot;language-text&quot;&gt;.github&lt;/code&gt; (note the period at the beginning) in the root of your theme. Inside that folder create one more folder called &lt;code class=&quot;language-text&quot;&gt;workflows&lt;/code&gt;. Now create a file in &lt;code class=&quot;language-text&quot;&gt;/.github/workflows/&lt;/code&gt; called &lt;code class=&quot;language-text&quot;&gt;main.yml&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This YAML (a recursive acronym that stands for YAML Ain&apos;t Markup Language) file is what tells GitHub what to do, when to do it, &amp;#x26; what to do it with.&lt;/p&gt;
+&lt;h2&gt;Configuration&lt;/h2&gt;
+&lt;p&gt;I&apos;ve included the full code down below, but I&apos;m going to walk through each piece so you understand what&apos;s happening and how to adjust it for your specific use case.&lt;/p&gt;
+&lt;h3&gt;Name It&lt;/h3&gt;
+&lt;p&gt;First things first, we&apos;ve got to name this bad boi. Start your &lt;code class=&quot;language-text&quot;&gt;main.yml&lt;/code&gt; file off with the following: &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yml&quot;&gt;&lt;pre class=&quot;language-yml&quot;&gt;&lt;code class=&quot;language-yml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Push Stencil Theme To BigCommerce.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This defines the name of the Workflow that you are creating and shows up on GitHub each time the workflow runs.&lt;/p&gt;
+&lt;h3&gt;Main Branch Only&lt;/h3&gt;
+&lt;p&gt;In order to save build minutes, we only want to run the workflow when something is Pushed to the Main branch. For that, add the following:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yml&quot;&gt;&lt;pre class=&quot;language-yml&quot;&gt;&lt;code class=&quot;language-yml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;branches&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; main&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The &lt;code class=&quot;language-text&quot;&gt;on&lt;/code&gt; option allows you to specify when to run the workflow. There are about 25 different events that you can configure workflows for, &lt;a href=&quot;https://docs.github.com/en/actions/reference/events-that-trigger-workflows&quot;&gt;check out the full list here&lt;/a&gt;. &lt;/p&gt;
+&lt;h3&gt;Get A JOB You BUM!&lt;/h3&gt;
+&lt;p&gt;The next thing we need to do is create the Job. This is where all the magic happens inside the Workflow.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yml&quot;&gt;&lt;pre class=&quot;language-yml&quot;&gt;&lt;code class=&quot;language-yml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;jobs&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Stencil Push
+    &lt;span class=&quot;token key atrule&quot;&gt;runs-on&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; ubuntu&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;latest
+    &lt;span class=&quot;token key atrule&quot;&gt;steps&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Let&apos;s break that block down even further. &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;jobs:&lt;/code&gt; - This line defines an array so you can run multiple different jobs at a time.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;build:&lt;/code&gt; - This is the ID for the job we are setting up. You can use the ID to reference jobs from other jobs, for example, to check if the first job exited a specific way. &lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;name: Stencil Push&lt;/code&gt; - Pretty self-explanatory. Defines the name of the job. &lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;runs-on: ubuntu-latest&lt;/code&gt; - This allows you to configure the OS of the computer that will be processing your Job. You can choose between Linux, Windows, And Mac Operating Systems, depending on your needs. &lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;steps:&lt;/code&gt;  This starts the Steps array where you configure everything that happens inside the job. &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;STEP It Up&lt;/h3&gt;
+&lt;p&gt;Jobs have multiple steps, just like workflows can have multiple jobs. The big difference is that steps run sequentially, waiting for one to finish before the next step starts.&lt;/p&gt;
+&lt;h4&gt;Check It Out.&lt;/h4&gt;
+&lt;p&gt;First things first we have to checkout the repository. If you&apos;re unfamiliar with Docker, basically you&apos;re spinning up a new blank virtual machine every time your job runs. In order to manipulate the files you need to get them first. Luckily, GitHub Actions comes with a pre-configured set of tools to do simple things like that:&lt;/p&gt;
+&lt;p&gt;Start off your &lt;code class=&quot;language-text&quot;&gt;steps&lt;/code&gt; array with &lt;strong&gt;Step 1&lt;/strong&gt;: &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yml&quot;&gt;&lt;pre class=&quot;language-yml&quot;&gt;&lt;code class=&quot;language-yml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;steps&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Checkout Repository
+        &lt;span class=&quot;token key atrule&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; actions/checkout@v1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The &lt;code class=&quot;language-text&quot;&gt;uses&lt;/code&gt; attribute in this step allows you to run other GitHub Actions inside your Action. This allows things to be modular and reusable. Check out &lt;a href=&quot;https://github.com/actions&quot;&gt;GitHub.com/actions&lt;/a&gt; for more info.&lt;/p&gt;
+&lt;h4&gt;Node v10 Only&lt;/h4&gt;
+&lt;p&gt;Since BigCommerce stencil still requires Node 10, &lt;strong&gt;Step 2&lt;/strong&gt; involves installing the specific version of node we need:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yml&quot;&gt;&lt;pre class=&quot;language-yml&quot;&gt;&lt;code class=&quot;language-yml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;steps&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  
+  &lt;span class=&quot;token punctuation&quot;&gt;...&lt;/span&gt;
+
+  &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Set Node version to 10
+    &lt;span class=&quot;token key atrule&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; actions/setup&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;node@v1
+    &lt;span class=&quot;token key atrule&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;node-version&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;On this step we now have the &lt;code class=&quot;language-text&quot;&gt;with&lt;/code&gt; attribute. This allows you to pass configuration options to your &quot;Used&quot; actions. In this case we define &lt;code class=&quot;language-text&quot;&gt;node-version&lt;/code&gt; as &lt;code class=&quot;language-text&quot;&gt;10&lt;/code&gt; since that&apos;s what we need for the Stencil CLI to work. &lt;/p&gt;
+&lt;h4&gt;Install Dependencies&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Step 3&lt;/strong&gt; is kind of a 2 for 1 deal. With the &lt;code class=&quot;language-text&quot;&gt;run&lt;/code&gt; attribute on the step you can run console commands. The pipe &lt;code class=&quot;language-text&quot;&gt;|&lt;/code&gt; is used to start off a multi line command. Install the Stencil Cli first, and then run whichever package manager you use. In my case it&apos;s Yarn. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yml&quot;&gt;&lt;pre class=&quot;language-yml&quot;&gt;&lt;code class=&quot;language-yml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;steps&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  
+  &lt;span class=&quot;token punctuation&quot;&gt;...&lt;/span&gt;
+  
+  &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Install Dependencies
+    &lt;span class=&quot;token key atrule&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;token scalar string&quot;&gt;
+      npm install -g @bigcommerce/stencil-cli
+      yarn&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;Configure Stencil CLI&lt;/h4&gt;
+&lt;p&gt;As far as &lt;strong&gt;Step 4&lt;/strong&gt; goes, I tried a few different approaches and I&apos;m not sure if this is the best way, but it works for me. What you need to do is pass in your BigCommerce API Token and basically everything in your Stencil CLI-generated &lt;code class=&quot;language-text&quot;&gt;.stencil&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;I tried running &lt;code class=&quot;language-text&quot;&gt;stencil init&lt;/code&gt; which generates the file, but it&apos;s not set up to be run without  user input. It gets hung up on asking which goes against the core of CI/CD. Things need to be automatic. Maybe they&apos;ll add that like they did with &lt;code class=&quot;language-text&quot;&gt;stencil push&lt;/code&gt; with the &lt;code class=&quot;language-text&quot;&gt;-a&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;-d&lt;/code&gt; flags.&lt;/p&gt;
+&lt;p&gt;The bitbucket pipeline recommends just checking in your &lt;code class=&quot;language-text&quot;&gt;.stencil&lt;/code&gt; to your repo and leaving it private. In order to not check in your keys to GitHub you should take advantage of GitHub Secrets. &lt;/p&gt;
+&lt;p&gt;Open up your Repo and click Settings &gt; Secrets &gt; New secret. Name it &lt;code class=&quot;language-text&quot;&gt;STENCIL&lt;/code&gt; and paste in your entire &lt;code class=&quot;language-text&quot;&gt;.stencil&lt;/code&gt; file as the value. GitHub Secrets allow you to use sensitive data in your Actions without exposing it to the world at all. &lt;/p&gt;
+&lt;p&gt;Now you can just copy the STENCIL secret to an env variable for the shell command &lt;code class=&quot;language-text&quot;&gt;echo &amp;quot;$STENCIL&amp;quot; &amp;gt; .stencil&lt;/code&gt;. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yml&quot;&gt;&lt;pre class=&quot;language-yml&quot;&gt;&lt;code class=&quot;language-yml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;steps&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+
+  &lt;span class=&quot;token punctuation&quot;&gt;...&lt;/span&gt;
+
+  &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;echo &quot;$STENCIL&quot; &gt; .stencil&apos;&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;shell&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; bash
+    &lt;span class=&quot;token key atrule&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;STENCIL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; $&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;secrets.STENCIL&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;Push It Gurl&lt;/h4&gt;
+&lt;p&gt;The last thing to do is push the theme with the Stencil CLI. We use the aforementioned &lt;code class=&quot;language-text&quot;&gt;-a&lt;/code&gt; &amp;#x26; &lt;code class=&quot;language-text&quot;&gt;-d&lt;/code&gt; flags to &lt;strong&gt;A&lt;/strong&gt;ctivate a specific variation of the theme and to &lt;strong&gt;D&lt;/strong&gt;elete the oldest unused theme (there is a limit to how many themes you can have uploaded to BigCommerce at one time).&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yml&quot;&gt;&lt;pre class=&quot;language-yml&quot;&gt;&lt;code class=&quot;language-yml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;steps&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+
+  &lt;span class=&quot;token punctuation&quot;&gt;...&lt;/span&gt;
+
+  &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Push Theme
+    &lt;span class=&quot;token key atrule&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;token scalar string&quot;&gt;
+      stencil push -a Light -d&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;That&apos;s All Folks&lt;/h2&gt;
+&lt;p&gt;After that all you have to do is commit the workflow file to your repo and push it up to Github. As soon as it&apos;s in there, github will take that commit and run your Workflow against it. &lt;/p&gt;
+&lt;p&gt;Be Careful Though, because at this point anything you push to your &lt;code class=&quot;language-text&quot;&gt;main&lt;/code&gt; branch will get automatically pushed to your live site. Make sure to follow good Git practices and only commit to the &lt;code class=&quot;language-text&quot;&gt;main&lt;/code&gt; branch PRODUCTION READY CODE. That is the beauty of using Git in your CI/CD Workflow because if you break something it&apos;s super simple to roll back the &lt;code class=&quot;language-text&quot;&gt;main&lt;/code&gt; branch to the previous commit, make your fixes and try again. &lt;/p&gt;
+&lt;h2&gt;The Full Code&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yml&quot;&gt;&lt;pre class=&quot;language-yml&quot;&gt;&lt;code class=&quot;language-yml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Push Stencil Theme To BigCommerce
+&lt;span class=&quot;token comment&quot;&gt;# This workflow is triggered on pushes to the Main Branch only.&lt;/span&gt;
+&lt;span class=&quot;token key atrule&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;branches&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; main
+
+&lt;span class=&quot;token key atrule&quot;&gt;jobs&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Stencil Push
+    &lt;span class=&quot;token key atrule&quot;&gt;runs-on&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; ubuntu&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;latest
+    &lt;span class=&quot;token key atrule&quot;&gt;steps&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Checkout Repository
+        &lt;span class=&quot;token key atrule&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; actions/checkout@v1
+
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Set Node version to 10
+        &lt;span class=&quot;token key atrule&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; actions/setup&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;node@v1
+        &lt;span class=&quot;token key atrule&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;token key atrule&quot;&gt;node-version&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;
+
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Install Dependencies
+        &lt;span class=&quot;token key atrule&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;token scalar string&quot;&gt;
+          npm install -g @bigcommerce/stencil-cli
+          yarn&lt;/span&gt;
+
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;echo &quot;$STENCIL&quot; &gt; .stencil&apos;&lt;/span&gt;
+        &lt;span class=&quot;token key atrule&quot;&gt;shell&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; bash
+        &lt;span class=&quot;token key atrule&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;token key atrule&quot;&gt;STENCIL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; $&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;secrets.STENCIL&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Push Theme
+        &lt;span class=&quot;token key atrule&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;token scalar string&quot;&gt;
+          stencil push -a Light -d&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span&gt;Featured Image by &lt;a href=&quot;https://unsplash.com/@martinadams?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Martin Adams&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/piping?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[Let's Make A Newsletter]]></title><description><![CDATA[I read this great article from @swizec about how he made almost $400k over 5 years on the side through books, courses and other digital media sales. His path to success sparked my curiosity to see if I could do it to. I've got several ideas for…]]></description><link>https://jackharner.com//blog/lets-make-a-newsletter/</link><guid isPermaLink="false">https://jackharner.com//blog/lets-make-a-newsletter/</guid><pubDate>Sat, 25 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;&amp;quot;Lots of noise, nothing to sell. Not even a mailing list to subscribe.&amp;quot; &lt;br&gt;&lt;br&gt;👇🏽 Great read 👇🏽 &lt;a href=&quot;https://t.co/61my4iobiy&quot;&gt;https://t.co/61my4iobiy&lt;/a&gt;&lt;/p&gt;&amp;mdash; Jack Harner 🚀 (@JackHarner) &lt;a href=&quot;https://twitter.com/JackHarner/status/1285622502602027009?ref_src=twsrc%5Etfw&quot;&gt;July 21, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;p&gt;I read this great article from &lt;a href=&quot;https://twitter.com/Swizec&quot;&gt;@swizec&lt;/a&gt; about how he made almost &lt;a href=&quot;https://swizec.com/blog/5-years-of-books-courses-or-how-i-made-369000-on-the-side/swizec/9453&quot;&gt;$400k over 5 years on the side&lt;/a&gt; through books, courses and other digital media sales. His path to success sparked my curiosity to see if I could do it to. I&apos;ve got several ideas for digital learning materials to sell because of his article. I&apos;ll definitely keep you all updated along the way.&lt;/p&gt;
+&lt;p&gt;This quote stood out from that article: &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;That was my biggest mistake back when I first started blogging successfully. Lots of noise, nothing to sell. &lt;strong&gt;Not even a mailing list to subscribe.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I don&apos;t even have a mailing list either. I decided to fix that &amp;#x26; signed up for &lt;a href=&quot;https://app.convertkit.com/referrals/l/42366c0e-990d-4f0e-8893-4f55cecf18f6&quot;&gt;ConvertKit&lt;/a&gt; almost immediately. &lt;/p&gt;
+&lt;p&gt;Let&apos;s talk about why, if you make anything, you should also start a mailing list.&lt;/p&gt;
+&lt;h2&gt;A Passionate Audience Is The Best Investment in 2020.&lt;/h2&gt;
+&lt;p&gt;Look at practically any celebrity these days. They can sell literally ANYTHING and their rabid fan base will eat it up and break the internet. For example, Tesla selling booty shorts; basically any YouTube Star&apos;s makeup line; countless books, cereals, beverages, or any kind of endorsement deal. &lt;/p&gt;
+&lt;p&gt;All of these products launch and sell out instantly not because they&apos;re superior products or a better deal, but purely because the customers love whoever is on the packaging. &lt;/p&gt;
+&lt;p&gt;My goal as a creator is to create a small but passionate audience by supporting and encouraging other creators through their journey as well as teaching others about Web Development, Productivity, Automation &amp;#x26; More.&lt;/p&gt;
+&lt;h2&gt;Only True Way To Own Your Customer List&lt;/h2&gt;
+&lt;p&gt;Having tons followers on social media is great and can be a massive driver of success, but what happens when the platform you&apos;re popular on just up and dies? (Looking at you VINE). Suddenly those thousands of followers cease to exist. What happens if your account gets deleted? Now you&apos;ve lost all access to your customers. &lt;/p&gt;
+&lt;p&gt;&amp;#x3C; Email List Has Entered The Chat &gt;&lt;/p&gt;
+&lt;p&gt;Email is not going away any time soon, and unless your target audience is like 12 year olds, they probably check it every day. Getting that kind of access to your customers is priceless. &lt;/p&gt;
+&lt;p&gt;As long as you back up your list outside of any platform regularly, nobody can block you from sending to it. Social networks come and go, but email is forever.&lt;/p&gt;
+&lt;h2&gt;Learn In Public, Together&lt;/h2&gt;
+&lt;p&gt;I&apos;ve always been a fan of learning in public, or in other words, sharing the things I learn as I learn them. It helps solidify the knowledge for me, gives me a reference to look back to, and possibly helps other people down the line as they&apos;re going through the same thing. &lt;/p&gt;
+&lt;p&gt;I hope to use this platform to spread my knowledge and use my experience to help other people level up as web developers and creatives.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Thanks for reading!&lt;/h2&gt;
+&lt;p&gt;I really appreciate it.&lt;/p&gt;
+&lt;p&gt;I plan on re-posting every email I send on JackHarner.com 7 days after it gets sent to the list. Make sure to sign up to get my posts as soon as possible.&lt;/p&gt;
+&lt;p&gt;If you have any questions feel free to respond to this email or hit me up on Twitter: &lt;a href=&quot;https://twitter.com/jackharner&quot;&gt;@JackHarner&lt;/a&gt;. Happy Coding!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Productivity = Automation]]></title><description><![CDATA[I'm Lazy. BUT I'm the good kind of lazy that works really hard to do as little actual work as possible. If I have to do anything more than twice, I'm going to think about automating it. From scripts to download & process product photos, to hours…]]></description><link>https://jackharner.com//blog/productivity-equals-automation/</link><guid isPermaLink="false">https://jackharner.com//blog/productivity-equals-automation/</guid><pubDate>Wed, 01 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Time for &lt;a href=&quot;https://twitter.com/hashtag/DevDiscuss?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#DevDiscuss&lt;/a&gt;&lt;br&gt;&lt;br&gt;Tonight&amp;#39;s topic is... Productivity tools 🛠&lt;br&gt;&lt;br&gt;Let&amp;#39;s start with some questions&lt;br&gt;&lt;br&gt;- What does it mean to be productive?&lt;br&gt;- How does your view on tools evolve over time?&lt;br&gt;- Recommend some tools! &lt;a href=&quot;https://t.co/Wyc84CYx6A&quot;&gt;pic.twitter.com/Wyc84CYx6A&lt;/a&gt;&lt;/p&gt;&amp;mdash; DEV Community 👩‍💻👨‍💻 (@ThePracticalDev) &lt;a href=&quot;https://twitter.com/ThePracticalDev/status/1278131605878562818?ref_src=twsrc%5Etfw&quot;&gt;July 1, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;h2&gt;I&apos;m Lazy.&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;BUT&lt;/strong&gt; I&apos;m the good kind of lazy that works really hard to do as little actual work as possible. If I have to do anything more than twice, I&apos;m going to think about automating it. From scripts to download &amp;#x26; process product photos, to hours-saving spreadsheet combiners, there&apos;s not much in my job and life that isn&apos;t at least partially fueled by automation. &lt;/p&gt;
+&lt;h2&gt;My Automation Toolkit&lt;/h2&gt;
+&lt;p&gt;Smarter minds than me can probably go into the depths of Pros and Cons between all of these methods, but I&apos;m not going to. This is just a list of some of the things I&apos;ve used over the years to speed up mundane tasks. Everything here was used to solve a super specific problem, so think about things in your work day that can be sped up with the help of our friendly &lt;del&gt;overlords&lt;/del&gt; computers. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h3&gt;If It&apos;s Repetitive, You Can Probably Get a Computer to Do It For You.&lt;/h3&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Python&lt;/h3&gt;
+&lt;p&gt;Python is often reached for when starting to learn programming. It&apos;s simple, it&apos;s easy to read, and you don&apos;t get lost in a sea of brackets and semi-colons. At the same time it&apos;s insanely powerful and I&apos;m sure a very large chunk of the online world is run with python. &lt;/p&gt;
+&lt;p&gt;Need to process or combine large spreadsheets on a recurring basis? Check out Pandas. &lt;/p&gt;
+&lt;p&gt;Want to automate certain mundane tasks online? Check out Selenium (more on that later 👇). &lt;/p&gt;
+&lt;p&gt;Want to make Generative Art or play with fractals? &lt;a href=&quot;https://simpleprogrammer.com/python-generative-art-math/&quot;&gt;Python can do that too&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Selenium&lt;/h3&gt;
+&lt;p&gt;Need to submit the same form on a webpage over and over again? Time to bust out Selenium. Selenium is a tool you can use with Python (or Java) to write code to make a browser do things to itself 😉. Python is super verbose and easy to read so you&apos;re just telling the browser: &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&quot;Go Here, type XYZ into that Form, click on this checkbox and then click on that submit button&quot;&lt;/p&gt;
+&lt;h3&gt;&quot;Now do it 999 more times&quot;&lt;/h3&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;With Great Scripting Power Comes Great Responsibility&lt;/strong&gt;. Don&apos;t accidentally (or &lt;strong&gt;intentionally&lt;/strong&gt;) DoS anybody by bombarding their site with requests. Build in exits and control the timing of requests. All That Fun Stuff.&lt;/p&gt;
+&lt;h3&gt;PowerShell / Bash Scripts&lt;/h3&gt;
+&lt;p&gt;PowerShell was  my first introduction to scripting. I started with simple &quot;move files around&quot; type scripts and built more stuff from there as the need came up. I wrote a PowerShell script that could fetch product images by SKU from specific sources, crop/resize and rename the files, then upload them over FTP to our web server. What used to be a manual hour long process is now 5-10 minutes tops. &lt;/p&gt;
+&lt;p&gt;Bash Scripts are basically the Linux version of PowerShell (or the other way around, I don&apos;t know). Super useful for processing things server side. Mixed with Cron, you can automate reports and file fetching fairly simply, back up and maintain your servers automatically, and more. Definitely spend some time learning Bash scripting if you do anything on Linux Servers.&lt;/p&gt;
+&lt;h3&gt;AutoHotkey&lt;/h3&gt;
+&lt;p&gt;If your on Windows I highly recommend &lt;a href=&quot;https://www.autohotkey.com/&quot;&gt;AutoHotkey&lt;/a&gt;. It allows you to configure almost anything as a keyboard shortcut. &lt;/p&gt;
+&lt;p&gt;Some of my most used shortcuts: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;]j&lt;/code&gt; will output &lt;code class=&quot;language-text&quot;&gt;- Jack &amp;lt;mm/dd/yyyy&amp;gt;&lt;/code&gt; with the current date. &lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Ctrl + Pause&lt;/code&gt; starts and stops Spotify, while &lt;code class=&quot;language-text&quot;&gt;Ctrl + &amp;lt;Scoll Lock / Print&amp;gt;&lt;/code&gt; will switch tracks.&lt;/li&gt;
+&lt;li&gt;Tapping &lt;code class=&quot;language-text&quot;&gt;Caps Lock&lt;/code&gt; doesn&apos;t do anything. Double Tapping &lt;code class=&quot;language-text&quot;&gt;Caps Lock&lt;/code&gt; toggles Caps Lock. I&apos;ve wasted way too much time backing up when I accidentally hit it AND eVERYTHING sTARTS tYPING lIKE tHIS.&lt;/li&gt;
+&lt;li&gt;I use an older mechanical keyboard that doesn&apos;t have a Windows key, that I got for $2. I also religiously use Windows Virtual Desktops and the keyboard shortcuts for those are controlled with the Windows Key (Specifically &lt;code class=&quot;language-text&quot;&gt;Windows + Tab&lt;/code&gt; brings up the overview). Google was my friend and I was able to rebind &lt;code class=&quot;language-text&quot;&gt;Caps + Tab&lt;/code&gt; to open up the overview, and &lt;code class=&quot;language-text&quot;&gt;Caps + &amp;lt;A/S&amp;gt;&lt;/code&gt; to switch between desktops. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Keyboard Shortcuts -- Learn &apos;Em. Love &apos;em. Live &apos;em.&lt;/h2&gt;
+&lt;p&gt;On top of everything I&apos;ve configured for AutoHotkey, I swear by keyboard shortcuts. Why waste time reaching for the mouse and then moving it all the way across the screen to dig through 3 levels of menus to click on something, when you can just memorize the keyboard shortcut and be done with it. &lt;/p&gt;
+&lt;p&gt;This is doubly true for Photoshop and Illustrator. All of the tools you&apos;re using have keyboard shortcuts to flip through them. &lt;/p&gt;
+&lt;p&gt;You&apos;ll save so much time in the long run and you don&apos;t have to move your hand back and forth to the mouse as much. It&apos;s a win-win. &lt;/p&gt;
+&lt;h1&gt;Go Forth And Automate!&lt;/h1&gt;
+&lt;center&gt;&lt;span&gt;Banner Image by &lt;a href=&quot;https://unsplash.com/@franckinjapan?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Franck V.&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/automation?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;&lt;/span&gt;&lt;/center&gt;</content:encoded></item><item><title><![CDATA[Custom Fields By Name]]></title><description><![CDATA[At Shoolu, we take advantage of Custom Fields on products in BigCommerce all the time. Our inventory software runs some rules against the product data and sets various fields as various values we use to enhance the product pages across the site. The…]]></description><link>https://jackharner.com//blog/get-custom-field-by-name-bigcommerce-stencil/</link><guid isPermaLink="false">https://jackharner.com//blog/get-custom-field-by-name-bigcommerce-stencil/</guid><pubDate>Tue, 09 Jun 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;At &lt;a href=&quot;/portfolio/shoolu&quot;&gt;Shoolu&lt;/a&gt;, we take advantage of Custom Fields on products in BigCommerce all the time. Our inventory software runs some rules against the product data and sets various fields as various values we use to enhance the product pages across the site.&lt;/p&gt;
+&lt;h2&gt;The Problem&lt;/h2&gt;
+&lt;p&gt;When the theme templates are processed, the custom fields are passed to the frontend as an array of objects:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &apos;product&apos;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+        &apos;custom_fields&apos;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&apos;name&apos;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &apos;Property&apos;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &apos;value&apos;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &apos;Property Value&apos;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&apos;name&apos;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &apos;Property&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&apos;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &apos;value&apos;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &apos;Property&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt; Value&apos;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            
+            &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Unfortunately, due to whatever technical limitations or &quot;for security purposes&quot; this doesn&apos;t work: &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;{{#if product.custom_fields.Property2}}
+
+... do something
+
+{{/if}}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Why can&apos;t they just build &lt;code class=&quot;language-text&quot;&gt;custom_fields&lt;/code&gt; as an object with the custom field names as keys? Require the name to be something that works as a JSON key with a max length and build it that way. &lt;/p&gt;
+&lt;h2&gt;The &lt;del&gt;Solution&lt;/del&gt; Workaround&lt;/h2&gt;
+&lt;p&gt;There&apos;s a Handlebars block tag available called &lt;code class=&quot;language-text&quot;&gt;filter&lt;/code&gt; which allows you to filter an array of objects down by a specific property of the object. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;{{#filter product.custom_fields &amp;#39;&amp;lt;FieldName&amp;gt;&amp;#39; property=&amp;#39;name&amp;#39; }}
+    {{#if value &amp;#39;==&amp;#39; &amp;#39;True&amp;#39;}}
+        Just Do It.
+    {{/if}}
+{{/filter}}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Biggest downside is trying to do things around your theme based on that value, you have to wrap your &lt;code class=&quot;language-text&quot;&gt;{{#if}}&lt;/code&gt; blocks in the &lt;code class=&quot;language-text&quot;&gt;{{#filter}}&lt;/code&gt; block. It doesn&apos;t look very intuitive and feels very hacky, but it works so it&apos;s what we get. &lt;/p&gt;
+&lt;p&gt;If you have a better way of doing this, please please please let me know on &lt;a href=&quot;https://twitter.com/jackharner&quot;&gt;Twitter&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[I Just Got A Raspberry Pi]]></title><description><![CDATA[After wanting one for some time, I finally caved and bought a Raspberry Pi. I got the Pi 4 Model B, the latest and greatest. It boasts the ability to replace your desktop computer, with two micro-HDMI outs as well as on-board wi-fi and 4 USBs. Seeing…]]></description><link>https://jackharner.com//blog/i-just-got-a-raspberry-pi/</link><guid isPermaLink="false">https://jackharner.com//blog/i-just-got-a-raspberry-pi/</guid><pubDate>Sat, 30 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;After wanting one for some time, I finally caved and bought a &lt;a href=&quot;https://www.raspberrypi.org/&quot;&gt;Raspberry Pi&lt;/a&gt;. I got the Pi 4 Model B, the latest and greatest. It boasts the ability to replace your desktop computer, with two micro-HDMI outs as well as on-board wi-fi and 4 USBs. Seeing as a lot of stuff I do needs a lot of processing power, I doubt it will be replacing mine, but I&apos;m excited to see what I can do with it!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/769a478461bbe84d9a9ac61cf6cece3d/raspberry-pi.webp&quot; alt=&quot;Raspberry Pi 4B&quot;&gt;&lt;/p&gt;
+&lt;h2&gt;PiHole - Block ALL THE ADS.. Sort of..&lt;/h2&gt;
+&lt;p&gt;If you&apos;re not familiar, &lt;a href=&quot;https://pi-hole.net/&quot;&gt;PiHole&lt;/a&gt; is a lovely piece of software that can act as a network-wide ad-block for your entire house. Hypothetically super simple to set up: Install Raspberry Pi, Run a Bash Script, Set your router to use your Pi as the DNS server, and you&apos;re done. &lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 51%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAACUUlEQVQoz5WS20uTYRzH33+ilO7KkYVlZGWGFkVBhwsh6CICu4igqwgquogsOhAlHcSl1FJaw6ajYUWomRlEGhEyT9O15hT34vbumO7d0R0+PZtT6rIvfPj9fs/5eb6PVHPmAlV1Vzh0r5n9plfsetHKtufN1BrfcfSNnZ0mKxWdVqo7xnjUaeBJ202adPU81N0Q6Ll/R0fbXS266w00NeqRKso0aEo2carhMnUjzRwZuM2BD1e5NvyWizMZjk2oHB5XOTnsIzaqhU8nyPbWEu4+jtrTyMKDWwTqzzN/6SyuZ4+RymsOsnZ9Ka0GIzlF1BjpdJZUOkNyaQlEFA1kBImUIA2JzDJk81NIipgS8XckKhbcs48icUJjp3m5N10YVVAwoZLJ/tu2okG/nX6vNZ8r8QVGFCfSlt01rNOUoTXo+apMYXYM0SNb6JVH6HVZ6LINMuS2MRGcYzwwi8Xv5LvXjlXUTYNm6r+8FJuGMc9847UYK5VVVlO0oZQW/UvkcIAfszZG56cZc88wLnB4ZOyKwCvzS/BTca2iKL48kwEZm9eFNxhE2lq1l2LNZvTtHfmjpxIp/luFF4kl08sLrhGmGDtMqDlTciYUlMtk4UIms+JA5i+ydPuTmJREPp+Lp7GE4kgbt1dSLK6s1Rvp8cYwT7n46HTT7/TQN+OhxRGiyxPjczDBQDBJXyDJe188X5+zqZyeDONQk+jkGAY5glRSviP/hk/17USX0rj9ITyhxTxKLi5GcYXjzAmmg2JyYHG19kXiBKMJFDWORxAQX+4PgVuY9f3tiIkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;PiHole Dashboard&quot;
+        title=&quot;PiHole Dashboard&quot;
+        src=&quot;/static/c1ab75e9b134942067ffa3dbc7283707/c1b63/pihole-dashboard.png&quot;
+        srcset=&quot;/static/c1ab75e9b134942067ffa3dbc7283707/5a46d/pihole-dashboard.png 300w,
+/static/c1ab75e9b134942067ffa3dbc7283707/0a47e/pihole-dashboard.png 600w,
+/static/c1ab75e9b134942067ffa3dbc7283707/c1b63/pihole-dashboard.png 1200w,
+/static/c1ab75e9b134942067ffa3dbc7283707/d61c2/pihole-dashboard.png 1800w,
+/static/c1ab75e9b134942067ffa3dbc7283707/29114/pihole-dashboard.png 1920w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;For me, it turned out not as simple. I use the stock Router/Modem Combo provided to me by Comcast. Turns out, they don&apos;t allow you to set custom DNS servers for the network. Great. So now I have to go around and configure each device manually to use the Pi as it&apos;s DNS server to get it to work. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h2&gt;It&apos;s Always DNS.&lt;/h2&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I&apos;ve been meaning to buy my own router/modem for a while now, and this might be what finally pushes me over the edge. &lt;/p&gt;
+&lt;h2&gt;What&apos;s Next&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;I&apos;ve got a couple different &lt;a href=&quot;https://twitter.com/git_shit&quot;&gt;Twitter bots&lt;/a&gt; and such running on different servers that I might try to consolidate to the Pi. I got the 2Gb Memory version so it&apos;s not SUPER powerful, but for simple cron tasks and things it could save me some money.&lt;/li&gt;
+&lt;li&gt;Buy a new Modem/Router combo. &lt;/li&gt;
+&lt;li&gt;Buy a set of &lt;a href=&quot;https://www.amazon.com/Raspberry-iUniker-30x30x7mm-Brushless-RetroFlag/dp/B076H3TKBP/ref=as_li_ss_tl?crid=1UZQNS98RC9CW&amp;#x26;dchild=1&amp;#x26;keywords=raspberry+pi+4+fan&amp;#x26;qid=1590980965&amp;#x26;sprefix=raspberr,aps,211&amp;#x26;sr=8-3&amp;#x26;linkCode=ll1&amp;#x26;tag=jharner-20&amp;#x26;linkId=88de087ae5089f3b764b5d3775643efc&amp;#x26;language=en_US&quot;&gt;Raspberry Pi Fans&lt;/a&gt; to help deal with the heat. It hovers right around 66°C. with just PiHole running, but I&apos;m sure that will jump up once I start using it for other things.&lt;/li&gt;
+&lt;li&gt;I also had an idea for a lightweight web app that I could host on the Pi and use QR codes to track how often I water my plants. This one&apos;s probably way down the line, but could be a cool open source project to work on. &lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Schedule Tweets Without Thinking About It]]></title><description><![CDATA[Day 99 : Saturday, July 26th, 2020 Long Time No Talk. It's been a while. I've, thankfully, been working the whole time through the pandemic, both on some client work and my 9-5. I opened the project back up because I'm making a point to be more…]]></description><link>https://jackharner.com//blog/simple-tweets-build-log/</link><guid isPermaLink="false">https://jackharner.com//blog/simple-tweets-build-log/</guid><pubDate>Thu, 30 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Day 99 : Saturday, July 26th, 2020&lt;/h1&gt;
+&lt;h2&gt;Long Time No Talk.&lt;/h2&gt;
+&lt;p&gt;It&apos;s been a while. I&apos;ve, thankfully, been working the whole time through the pandemic, both on some client work and my 9-5. I opened the project back up because I&apos;m making a point to be more active on Twitter and that was the whole reason I started building Simple Tweets in the first place. &lt;/p&gt;
+&lt;p&gt;Boot it up with:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;command-line-prompt&quot;&gt;&lt;span data-user=jack data-host=localhost&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; run startBoth&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;which runs both the Frontend React code as well as the backend Node server. Everything loads fine, but I try to sign in with Twitter and it doesn&apos;t work. It just sits spinning on the Twitter oAuth page, waiting for my server to respond then after a minute, it kicks back an Error 500: Service Unavailable.&lt;/p&gt;
+&lt;p&gt;I thought maybe it was a lingering Cookie issue, so I cleared all those out, but still no response on the login.&lt;/p&gt;
+&lt;p&gt;I check the server logs and it comes back with &quot;Login Successful&quot; but never redirects the user to be logged in. &lt;/p&gt;
+&lt;p&gt;I&apos;m perplexed but tired, it&apos;s late so I just shut it down and go to bed. I&apos;ll revisit in a few days probably.&lt;/p&gt;
+&lt;h1&gt;Day 12 : Wednesday, April 29th, 2020&lt;/h1&gt;
+&lt;h2&gt;Better Late Than Never, Right?&lt;/h2&gt;
+&lt;p&gt;I&apos;m starting this build log off a little bit after I started the project (currently titled Simple Tweets, but probably going to change). I didn&apos;t really have the idea to write down the whole process till I was well into an MVP. Either way, better late than never, right? According to GitHub the very first commit was on April 17, 2020, so that makes this Day 12.&lt;/p&gt;
+&lt;p&gt;My vision for Simple Tweets is a tool you can use to schedule tweets without thinking about it. You decide the max times it will tweet for you per day, whether you want it random or on a schedule, and then scheduling tweets is as simple as typing it out and hitting schedule. &lt;/p&gt;
+&lt;p&gt;I&apos;m not really sure if this is something Twitter users really &lt;em&gt;need&lt;/em&gt; per se, but it&apos;s been a massive learning opportunity for me so far. For now, that&apos;s all I really care about. &lt;/p&gt;
+&lt;h2&gt;Design To Prototype&lt;/h2&gt;
+&lt;p&gt;The idea had initially popped into my head a while back (way back in February, now that I looked it up) for a &quot;minimalist tweeter&quot;. I wanted something where I could just spam the tweet box without actually spamming Twitter. I threw together this mockup in Illustrator shortly after having the idea.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 80%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAIAAACZeshMAAAACXBIWXMAAAsSAAALEgHS3X78AAACwUlEQVQoz2OQm/dWL7FRPyzfPKHSIa3OLavJOaPBPqXWLqXGKb3eILIYD2KAa7ZIqPIpaPMrbPfObwUir9wWl8xG/YhiNIRFs2FEgV54EcQ2+9Rax/Q6IGkYVWISUwZCsVDSNLbMKLoUXbNBeIFBZIlNUjXQNufMRhCZ0eCc2QAiMxqcQGSjQ3qjU0aTTXKNfkQRqs3hBWBXFSG7CmiJcXSpfVqdd26TRW6vcctWi85d+sVzITah+Nk8vgIYYHaptUASiIDONoou0QcbAXStYUy5YUKdcWK9QWwVlgCzTKzyK2j3L+zwzG0BIt+CNqBO7dACINIJK9ALK9QPKzAILzRAch2SsyOLgYp0QgusEqvs00BRBTEFGP6uWY1AZJ1UhT2qgJr1Ior1IoqA3jaOKTWLKwe6P6ikC+iQkLIeYBQARUxiQOGMHC4M8vPe6IOdbZ1U7ZrVBLQQGE+64YUq/tlKfllApOibqRqQrRqQAxQ0jS0H+t8YFlsMUvM/gqMq3yS2PLVpasWkhdVTluZ2zk5vnpbZOiOjdXpm24z0lunpLUDu9ILuuXF1kxA2W029aJTUALTZMLais2/mleNH7j16fOvWrTt37z14+PDe/fv37j8Asm/dvnP79p1/v3/uO31ZKyQfmH7AmvOnGsVWgDwTlu9bPSN97oGYqdsjp+xImLErcuqO5Fm7Y6ftiJi0LWHmnuj2RWnNUwKKO/XgiUQvLA8a+tGlWfX9c5avX733xPIdh1buOrJ8x+EVO4+s339y/YHTGw6eXrfv5JbDZ1rnrtENKzSEaDYAOwCIDKNLmycuOHHu2uWnH87df3nx0Zszd19cevT6/sdfT77+f/z1/8M3nz9+/LR69zFgzEOdDfN9CTDRGaa1WZbPMy+eYVw0w6x4plHhDOuyWUYF0wzyppgWzdRNajaOKjKEWQZEAHHDmc/zPyGmAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Simple Tweets First Mockup&quot;
+        title=&quot;Simple Tweets First Mockup&quot;
+        src=&quot;/static/e16682f5cd5c32de32c7c25b52135e35/c1b63/Tweet-Scheduler-mockup.png&quot;
+        srcset=&quot;/static/e16682f5cd5c32de32c7c25b52135e35/5a46d/Tweet-Scheduler-mockup.png 300w,
+/static/e16682f5cd5c32de32c7c25b52135e35/0a47e/Tweet-Scheduler-mockup.png 600w,
+/static/e16682f5cd5c32de32c7c25b52135e35/c1b63/Tweet-Scheduler-mockup.png 1200w,
+/static/e16682f5cd5c32de32c7c25b52135e35/21b4d/Tweet-Scheduler-mockup.png 1280w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Two months go by, and I finally decide to build the thing. I knew I wanted to build the thing with React, and I had dabbled with a project using a MongoDB, Express, React &amp;#x26; Node (MERN) stack earlier so that&apos;s what I chose for this project. &lt;/p&gt;
+&lt;h2&gt;Time To React&lt;/h2&gt;
+&lt;p&gt;The first thing I threw together was the React frontend. Had a lot of fun just recreating the mockup but with code (honestly my favorite part of any project). I started off with the fixed sidebar, and the tweet box. Used state to set the Tweet character limit, track the tweet as you&apos;re typing and validate the current entry. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;validateTweet&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;tweet&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; tweetCharCount &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; tweet&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;CURRENT&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;IMAGE&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;OF&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;SIMPLE&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;TWEETS&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;tweetCharCount &lt;span class=&quot;token operator&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;tweetCharCount &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; tweetCharLimit&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Very simple for now, but essentially checks if the tweet length is greater than 0 and less than 280. After a few days of back and forth, I eventually settled on going with a minimal light theme instead of dark. I&apos;ll probably add a toggle for that down the line, but for now I don&apos;t really care. &lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBAgX/xAAUAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHcuuEaAP8A/8QAGhAAAAcAAAAAAAAAAAAAAAAAAAECEDEyQ//aAAgBAQABBQJNWzKR/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQMBAT8BJ//EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAECAQE/AWf/xAAWEAEBAQAAAAAAAAAAAAAAAAAQAYH/2gAIAQEABj8Cjj//xAAaEAEAAQUAAAAAAAAAAAAAAAABEAARITGh/9oACAEBAAE/Ieck0o2zMf/aAAwDAQACAAMAAAAQs8//xAAWEQADAAAAAAAAAAAAAAAAAAABEDH/2gAIAQMBAT8QgL//xAAVEQEBAAAAAAAAAAAAAAAAAAAQMf/aAAgBAgEBPxCj/8QAHRABAAEDBQAAAAAAAAAAAAAAAREAECExQXGx8f/aAAgBAQABPxATn8qhtrdwdUwFRzb/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Simple Tweets Now&quot;
+        title=&quot;Simple Tweets Now&quot;
+        src=&quot;/static/283464ec872683937c1feb9b6d40de05/e5166/simple-tweets-now.jpg&quot;
+        srcset=&quot;/static/283464ec872683937c1feb9b6d40de05/f93b5/simple-tweets-now.jpg 300w,
+/static/283464ec872683937c1feb9b6d40de05/b4294/simple-tweets-now.jpg 600w,
+/static/283464ec872683937c1feb9b6d40de05/e5166/simple-tweets-now.jpg 1200w,
+/static/283464ec872683937c1feb9b6d40de05/d9c39/simple-tweets-now.jpg 1800w,
+/static/283464ec872683937c1feb9b6d40de05/0a188/simple-tweets-now.jpg 1908w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;oAuth Is Pretty Cool, Now That I Have A Better Grasp&lt;/h2&gt;
+&lt;p&gt;Since the tool is entirely focused on Twitter, the only way my users can login is with Twitter. Makes Sense. That just meant I had to figure out oAuth. It&apos;s been a pretty big beast for me that I&apos;ve yet to attempt to tackle, but now is the time. &lt;/p&gt;
+&lt;p&gt;The backend is based around Express, and MongoDB. I&apos;m using &lt;a href=&quot;http://www.passportjs.org/&quot;&gt;Passport.js&lt;/a&gt; for Authentication and the beautifully put together &lt;a href=&quot;https://github.com/jaredhanson/passport-twitter&quot;&gt;passport-twitter&lt;/a&gt; package to handle the Authentication. &lt;/p&gt;
+&lt;p&gt;One of the first big roadblocks I ran into was the fact that I had set up a virtual host so that &lt;code class=&quot;language-text&quot;&gt;simple-tweets.local&lt;/code&gt; would resolve to my &lt;code class=&quot;language-text&quot;&gt;localhost:3000&lt;/code&gt;, but I was having weird issues with the cookies being set to the wrong domain somewhere in the oAuth loop. Lots of googling and hair ripping later, I reset every path in the project to use &lt;a href=&quot;http://127.0.0.1&quot;&gt;http://127.0.0.1&lt;/a&gt; as well as in the Twitter Developer tools. Once we have it live on a server with a domain pointing to it, we shouldn&apos;t have this problem, but now I&apos;ll know what to look for. &lt;/p&gt;
+&lt;p&gt;I&apos;ll contine to update this post as the project progresses. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Pausing CSS Animations on Hover]]></title><description><![CDATA[CSS Animations are an easy, lightweight way to add a little motion and excitement to a page. You definitely don't want to overdo it, though. One of the most frustrating things as a user is when you go to click on something, it moves, and you miss…]]></description><link>https://jackharner.com//blog/pausing-css-animations-on-hover/</link><guid isPermaLink="false">https://jackharner.com//blog/pausing-css-animations-on-hover/</guid><pubDate>Sat, 28 Mar 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;CSS Animations are an easy, lightweight way to add a little motion and excitement to a page. You definitely don&apos;t want to overdo it, though. One of the most frustrating things as a user is when you go to click on something, it moves, and you miss. Today I&apos;m going to show you how to pause your CSS animations when someone goes to click on them.&lt;/p&gt;
+&lt;h2&gt;The Animation&lt;/h2&gt;
+&lt;p&gt;We&apos;ll start with one of my favorite simple animations, the Pulse:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token atrule&quot;&gt;&lt;span class=&quot;token rule&quot;&gt;@keyframes&lt;/span&gt; pulse&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token selector&quot;&gt;0%&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;1&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;token selector&quot;&gt;50%&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;1.1&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;token selector&quot;&gt;100%&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;1&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Which looks like: &lt;span class=&quot;box1&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;I&apos;ve used that animation many times to emphasize a discount, bring focus to the best deal on a Pricing page, or even just to make a beating heart.&lt;/p&gt;
+&lt;h2&gt;Treat Your Users Like Stormtroopers - Avoid Moving Targets&lt;/h2&gt;
+&lt;p&gt;If there are clickable things inside the thing you&apos;re animating, you don&apos;t want your users to have to click on moving targets. It&apos;s so frustrating to click and miss, let alone click, miss, and click on something else. Luckily, there&apos;s a really simple way to pause CSS Animations in CSS without JavaScript. The key to it all is the &lt;code class=&quot;language-text&quot;&gt;animation-play-state&lt;/code&gt; property. Let&apos;s see it in (SCSS) action:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;scss&quot;&gt;&lt;pre class=&quot;language-scss&quot;&gt;&lt;code class=&quot;language-scss&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;.box &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;animation&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; pulse 3s infinite&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token selector&quot;&gt;&lt;span class=&quot;token parent important&quot;&gt;&amp;amp;&lt;/span&gt;:hover &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;animation-play-state&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; paused&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Which looks like: &lt;span class=&quot;box2&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;As you can see, it starts and stops the animation when you hover your mouse in and out of it.&lt;/p&gt;
+&lt;p&gt;By setting the &lt;code class=&quot;language-text&quot;&gt;animation-play-state&lt;/code&gt; to &lt;code class=&quot;language-text&quot;&gt;paused&lt;/code&gt; on hover, the animation will pause, your click targets will stop moving, and your users will be happy. I had experimented with basically removing the animation on hover but that caused lots of jumps and skips. &lt;code class=&quot;language-text&quot;&gt;animation-play-state&lt;/code&gt; literally just pauses the animation and un-pauses when you stop hovering.&lt;/p&gt;
+&lt;p&gt;Super simple way to have more user-friendly animations on your site.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Why I Post On Unsplash]]></title><description><![CDATA[My first Unsplash photo was posted on August 18, 2016. In that time I've accumulated almost 3 Million Views, and over 12,000 downloads across 30+ photos.  This Is Why I Post On Unsplash For someone with such a small following where most of my…]]></description><link>https://jackharner.com//blog/why-i-post-on-unsplash/</link><guid isPermaLink="false">https://jackharner.com//blog/why-i-post-on-unsplash/</guid><pubDate>Fri, 14 Feb 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;My &lt;a href=&quot;https://unsplash.com/photos/UB1PLnqNAyY&quot;&gt;first Unsplash photo&lt;/a&gt; was posted on August 18, 2016. In that time I&apos;ve accumulated almost 3 Million Views, and over 12,000 downloads across 30+ photos.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 22.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAEABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAX/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAG+AD//xAAUEAEAAAAAAAAAAAAAAAAAAAAQ/9oACAEBAAEFAn//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAQ/9oACAEBAAY/An//xAAXEAADAQAAAAAAAAAAAAAAAAAAEBFh/9oACAEBAAE/IZDV/9oADAMBAAIAAwAAABADz//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABkQAAIDAQAAAAAAAAAAAAAAAAERACFREP/aAAgBAQABPxAAyd6XFejz/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;~3 Million Views, and 12,000+ downloads across 30+ photos&quot;
+        title=&quot;~3 Million Views, and 12,000+ downloads across 30+ photos&quot;
+        src=&quot;/static/de09b957acb088501c93fa845e1202ab/e5166/unsplash-stats.jpg&quot;
+        srcset=&quot;/static/de09b957acb088501c93fa845e1202ab/f93b5/unsplash-stats.jpg 300w,
+/static/de09b957acb088501c93fa845e1202ab/b4294/unsplash-stats.jpg 600w,
+/static/de09b957acb088501c93fa845e1202ab/e5166/unsplash-stats.jpg 1200w,
+/static/de09b957acb088501c93fa845e1202ab/12406/unsplash-stats.jpg 1348w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h1&gt;This Is Why I Post On Unsplash&lt;/h1&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;For someone with such a small following where most of my interactions across social media are confined to people I know in real life, getting 3 Million Views on &lt;em&gt;anything&lt;/em&gt; is &lt;strong&gt;AMAZING&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;A lot of people complain about Unsplash &quot;ruining the professional photography market&quot;, but I say F*ck &apos;em. If your business is being &quot;ruined&quot; by people offering up photos for free, then you&apos;re probably in the wrong line of work. &lt;/p&gt;
+&lt;h2&gt;FREE Does Not Mean BAD&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQBBQb/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAfPrCRqB3dNTBc//xAAcEAABAwUAAAAAAAAAAAAAAAAAAQMRBBATFEH/2gAIAQEAAQUCvquC07pgcOwQf//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BH//EABURAQEAAAAAAAAAAAAAAAAAABEg/9oACAECAQE/ASP/xAAbEAABBAMAAAAAAAAAAAAAAAAAECAxMkGRof/aAAgBAQAGPwJcbI6VZ//EABoQAAMAAwEAAAAAAAAAAAAAAAABERAxYUH/2gAIAQEAAT8hGmtqY4h6qHWN6EMk/9oADAMBAAIAAwAAABBsOIP/xAAXEQADAQAAAAAAAAAAAAAAAAAAAREQ/9oACAEDAQE/EKirIj//xAAXEQADAQAAAAAAAAAAAAAAAAAAAREQ/9oACAECAQE/EKI8p//EAB0QAQEAAgIDAQAAAAAAAAAAAAERACFBgRAxUaH/2gAIAQEAAT8QyLSilPZ98aL+TNBCSGjrEGPXHJCCOcgxV5O8/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Freely Available NASA Photos on Unsplash&quot;
+        title=&quot;Freely Available NASA Photos on Unsplash&quot;
+        src=&quot;/static/5555421cf590f29885c06a903e2d73f5/e5166/nasa-Yj1M5riCKk4-unsplash.jpg&quot;
+        srcset=&quot;/static/5555421cf590f29885c06a903e2d73f5/f93b5/nasa-Yj1M5riCKk4-unsplash.jpg 300w,
+/static/5555421cf590f29885c06a903e2d73f5/b4294/nasa-Yj1M5riCKk4-unsplash.jpg 600w,
+/static/5555421cf590f29885c06a903e2d73f5/e5166/nasa-Yj1M5riCKk4-unsplash.jpg 1200w,
+/static/5555421cf590f29885c06a903e2d73f5/d9c39/nasa-Yj1M5riCKk4-unsplash.jpg 1800w,
+/static/5555421cf590f29885c06a903e2d73f5/df51d/nasa-Yj1M5riCKk4-unsplash.jpg 2400w,
+/static/5555421cf590f29885c06a903e2d73f5/314c6/nasa-Yj1M5riCKk4-unsplash.jpg 5735w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Some of my favorite photos on the internet are freely available on Unsplash. Even &lt;a href=&quot;https://unsplash.com/@nasa&quot;&gt;NASA&lt;/a&gt; is on Unsplash. Hubble Space Telescope photos are freely available for anyone to use for any reason. That is INSANE. Unfortunately they did strip out the EXIF data on the Hubble photos (Camera Type: $4.7 billion Space Telescope, Aperature: f3.4 Meters). &lt;/p&gt;
+&lt;p&gt;There are some &lt;em&gt;really&lt;/em&gt; high quality photos available and the fact that you don&apos;t have to pay a dime for them is pretty amazing. &lt;/p&gt;
+&lt;h2&gt;All Ships Rise With The Tide&lt;/h2&gt;
+&lt;p&gt;Unsplash has been doing a lot to push forward the photography industry as a whole. They recently launched &lt;a href=&quot;https://unsplash.com/brands&quot;&gt;Unsplash for Brands&lt;/a&gt; which was there way of bringing Branded stock photos to the site. For example, one of the first Brands brought on was Square. The partnership looks like this: &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;They hire photographers from the Unsplash community to make branded stock photos of their cash register and payment processing products. &lt;/li&gt;
+&lt;li&gt;These photos then show up on Unsplash for searches like &quot;Cash Register&quot; &lt;/li&gt;
+&lt;li&gt;Then eventually proliferate out to the greater internet through blog posts and other mediums. &lt;/li&gt;
+&lt;li&gt;Creating exposure for the brands, revenue for Unsplash, and nice little payday for some Unsplash contributors. &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIFAwT/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhADEAAAAdOtHyzSmT//xAAaEAADAQADAAAAAAAAAAAAAAABAhEDABIi/9oACAEBAAEFAstLxl7BrUAD6GBPSf/EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAEDAQE/AVf/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAaEAEAAgMBAAAAAAAAAAAAAAABABEQITFR/9oACAEBAAY/AqOk24QKqEH2f//EABsQAQACAwEBAAAAAAAAAAAAAAEAESExUUHx/9oACAEBAAE/IXKGSss2FZyH4QYY49mmDbUomaXP/9oADAMBAAIAAwAAABC/L//EABcRAAMBAAAAAAAAAAAAAAAAAAABETH/2gAIAQMBAT8QamEH/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAR/9oACAECAQE/EB2xv//EABwQAQACAgMBAAAAAAAAAAAAAAEAETFRIUFxwf/aAAgBAQABPxB41R6nvGeMSgqbHF7SYdQ9b8g7tApyntcrFokvjql+ShgRQdT/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Square Sponsored Photo From Unsplash&quot;
+        title=&quot;Square Sponsored Photo From Unsplash&quot;
+        src=&quot;/static/fef525c5e04489b5790a35ecb0b02bdc/e5166/clay-banks-XvS-uKUoUao-unsplash.jpg&quot;
+        srcset=&quot;/static/fef525c5e04489b5790a35ecb0b02bdc/f93b5/clay-banks-XvS-uKUoUao-unsplash.jpg 300w,
+/static/fef525c5e04489b5790a35ecb0b02bdc/b4294/clay-banks-XvS-uKUoUao-unsplash.jpg 600w,
+/static/fef525c5e04489b5790a35ecb0b02bdc/e5166/clay-banks-XvS-uKUoUao-unsplash.jpg 1200w,
+/static/fef525c5e04489b5790a35ecb0b02bdc/d9c39/clay-banks-XvS-uKUoUao-unsplash.jpg 1800w,
+/static/fef525c5e04489b5790a35ecb0b02bdc/df51d/clay-banks-XvS-uKUoUao-unsplash.jpg 2400w,
+/static/fef525c5e04489b5790a35ecb0b02bdc/12609/clay-banks-XvS-uKUoUao-unsplash.jpg 3000w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Unsplash gets paid so it can remain free, Brands get their products in front of a massive audience, and they &lt;em&gt;have&lt;/em&gt; to hire photographers from the Unsplash community to take the photos. It&apos;s a win-win-win for everybody!&lt;/p&gt;
+&lt;h2&gt;Take A Penny, Leave A Penny&lt;/h2&gt;
+&lt;p&gt;I contribute to Unsplash because without it, I wouldn&apos;t have been able to use and download 100s of fantastic quality photos for use in both personal and professional projects. &lt;/p&gt;
+&lt;p&gt;I contribute to Unsplash because without it, there&apos;s no way 12,000+ people would have used my photos.&lt;/p&gt;
+&lt;p&gt;I contribute to Unsplash because without it, my sites and campaigns would be way uglier or I would&apos;ve spent a fortune on Stock Photos.&lt;/p&gt;
+&lt;p&gt;I contribute to Unsplash because I use the site almost daily, and it&apos;s my way of giving back to the people who gave first.&lt;/p&gt;
+&lt;p&gt;Check me out on &lt;a href=&quot;https://unsplash.com/@jackharner&quot;&gt;Unsplash&lt;/a&gt;, or give me a follow on &lt;a href=&quot;https://twitter.com/jackharner&quot;&gt;Twitter&lt;/a&gt; and let me know if you&apos;ve used on of my photos or hit me with your Unsplash username and I&apos;ll give you a follow!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Yarn vs. NPM]]></title><description><![CDATA[NPM (Node Package Manager) and Yarn are both JavaScript based package managers for ease of installing 3rd Party Tools & Libraries into your modern web development workflow. They revolutionized the way people shared code. Instead of having to…]]></description><link>https://jackharner.com//blog/yarn-vs-npm/</link><guid isPermaLink="false">https://jackharner.com//blog/yarn-vs-npm/</guid><pubDate>Sun, 19 Jan 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;NPM (Node Package Manager) and Yarn are both JavaScript based package managers for ease of installing 3rd Party Tools &amp;#x26; Libraries into your modern web development workflow. They revolutionized the way people shared code. Instead of having to tediously copy and paste, or even worse, link to a hosted version of the library, now you fetch a library or module and store it locally in your project. Yarn and NPM work fairly similarly, but have a few key differences in how they operate.&lt;/p&gt;
+&lt;h2&gt;Major Differences Between Yarn &amp;#x26; NPM&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;NPM was developed as an open source project in 2009. Yarn was released by Facebook in 2016 as an improvement upon the foundation that NPM laid.&lt;/li&gt;
+&lt;li&gt;Yarn uses &lt;code class=&quot;language-text&quot;&gt;yarn add&lt;/code&gt; while NPM uses &lt;code class=&quot;language-text&quot;&gt;npm install&lt;/code&gt; (Can be confusing when switching between the two.)&lt;/li&gt;
+&lt;li&gt;Yarn keeps a copy of packages you download stored locally. I&apos;ll explain why in a little bit.&lt;/li&gt;
+&lt;li&gt;Both Yarn and NPM use the &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt; file to get the packages to install. However, Yarn uses &lt;code class=&quot;language-text&quot;&gt;yarn.lock&lt;/code&gt; and NPM uses &lt;code class=&quot;language-text&quot;&gt;package-lock.json&lt;/code&gt; to more explicitly state which package version to get.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;A Breif History of NPM&lt;/h2&gt;
+&lt;p&gt;NPM was originally released back in January 2010 by Isaac Z. Schlueter and took the JavaScript world by storm. It was the inspiration for Yarn, developed by Facebook in 2016, PHP&apos;s package manager Composer, and more. Due to the popularity of the project they eventually incorporated as npm, inc in order to manage enterprise level relationships to ensure the success of the project and the JavaScript community as a whole.&lt;/p&gt;
+&lt;h2&gt;Yarn Module Cache&lt;/h2&gt;
+&lt;p&gt;Every time you install a new package with Yarn, it stores a copy of it locally on your computer. This way when multiple projects require the same package, Yarn doesn&apos;t have to go download the required package again, it just grabs it off your hard drive and puts it in the project you&apos;re installing, saving you time and bandwidth.&lt;/p&gt;
+&lt;h2&gt;Blazing Saddles: Package Manager Boogalo&lt;/h2&gt;
+&lt;p&gt;According to a test done by &lt;a href=&quot;https://github.com/appleboy/npm-vs-yarn&quot;&gt;GitHub user appleboy&lt;/a&gt; that you can reproduce yourself, Yarn both with and without it&apos;s cache is significantly faster at installing modules, and even installs without internet! (assuming you&apos;ve cached the package you&apos;re installing).&lt;/p&gt;
+&lt;p&gt;Here are the results of their test comparing NPM to Yarn:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Test&lt;/th&gt;
+&lt;th&gt;npm install&lt;/th&gt;
+&lt;th&gt;npm ci&lt;/th&gt;
+&lt;th&gt;yarn&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;install without cache (without node_modules)&lt;/td&gt;
+&lt;td&gt;3m&lt;/td&gt;
+&lt;td&gt;3m&lt;/td&gt;
+&lt;td&gt;1m&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;install with cache (without node_modules)&lt;/td&gt;
+&lt;td&gt;1m&lt;/td&gt;
+&lt;td&gt;18s&lt;/td&gt;
+&lt;td&gt;30s&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;install with cache (with node_modules)&lt;/td&gt;
+&lt;td&gt;54s&lt;/td&gt;
+&lt;td&gt;21s&lt;/td&gt;
+&lt;td&gt;2s&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;install without internet (with node_modules)&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;2s&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Blazing Fast! Even without using a cache, Yarn is 200% faster than NPM.&lt;/p&gt;
+&lt;h2&gt;How To Install Yarn&lt;/h2&gt;
+&lt;p&gt;After doing the research for this post I&apos;m definitely sticking to Yarn for projects moving forward. Here&apos;s how you can install Yarn and see for yourself just how fast it is and get started integrating it into your workflow.&lt;/p&gt;
+&lt;h3&gt;Windows&lt;/h3&gt;
+&lt;p&gt;Go to the &lt;a href=&quot;https://classic.yarnpkg.com/en/docs/install&quot;&gt;Yarn Installation Page&lt;/a&gt;, make your you have Node.js installed, download the version you want and run the installer. Yarn goes through and installs for you.&lt;/p&gt;
+&lt;h3&gt;macOS&lt;/h3&gt;
+&lt;p&gt;You can install Yarn with HomeBrew:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;command-line-prompt&quot;&gt;&lt;span data-user=jack data-host=localhost&gt;&lt;/span&gt;&lt;/span&gt;brew &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;yarn&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Ubuntu / Linux&lt;/h3&gt;
+&lt;p&gt;Go to the &lt;a href=&quot;https://classic.yarnpkg.com/en/docs/install&quot;&gt;Yarn Installation Page&lt;/a&gt; and follow the steps. You&apos;ll have to add Yarn&apos;s repo to APT and then install through there.&lt;/p&gt;
+&lt;h3&gt;NPM - Don&apos;t Do This&lt;/h3&gt;
+&lt;p&gt;You can even install Yarn with NPM:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;command-line-prompt&quot;&gt;&lt;span data-user=jack data-host=localhost&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; --global &lt;span class=&quot;token function&quot;&gt;yarn&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Although, for security reasons that I don&apos;t fully understand they recommend NOT installing Yarn through NPM and instead installing Yarn based on your specific operating system (&lt;a href=&quot;https://classic.yarnpkg.com/en/docs/install#debian-stable&quot;&gt;Ubuntu/Debian&lt;/a&gt;, &lt;a href=&quot;https://classic.yarnpkg.com/en/docs/install#mac-stable&quot;&gt;Mac&lt;/a&gt;, &lt;a href=&quot;https://classic.yarnpkg.com/en/docs/install#windows-stable&quot;&gt;Windows&lt;/a&gt;).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Are you going to make the switch?&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Let me know on twitter &lt;a href=&quot;https://twitter.com/jackharner&quot;&gt;@JackHarner&lt;/a&gt; if you do and which package manager you prefer! Thanks for reading!!&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[Take High-DPI Screenshots In Firefox]]></title><description><![CDATA[There are several ways to take a screenshot in Firefox.  Right Click Context Menu First up you want to Right Click anywhere on the page and select "Take a Screenshot".  This will pop up Firefox's built in screenshot tool. It allows you to select…]]></description><link>https://jackharner.com//blog/high-dpi-firefox-screenshots/</link><guid isPermaLink="false">https://jackharner.com//blog/high-dpi-firefox-screenshots/</guid><pubDate>Tue, 07 Jan 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;There are several ways to take a screenshot in Firefox. &lt;/p&gt;
+&lt;h2&gt;Right Click Context Menu&lt;/h2&gt;
+&lt;p&gt;First up you want to Right Click anywhere on the page and select &quot;Take a Screenshot&quot;.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 35.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAA7DAAAOwwHHb6hkAAABC0lEQVQoz62Rz0qFQBTGR51xvOaf0NJUBG9X6QruJO8rCFG5aNHarWsXEUHQvfgqtm7bs/XlCEUturVo4MfHOcx858w5pOs69H2Ptm1RFAUIIX9ClmXYtg3DMGFZ1syR44I4joMkSRDHMTzPmy9KkvTtsYi/8pGnlEJRlFkFjDGRJ/hnyFxFaNM0GMcRdV1DmjoNwgBhGCJf5yjLEptqg6o6n75p7DcU7QrdbbcQZxgGqKqKKIom0xCrLMMyXeEsXyNNU/i+D13Xfze8u3/A22T4+LSbYzH0IDjB0j5GduDi1HTBKYO2WEDTtJ8NxSKEXl5c4/nlFVc3t5+b5JzDZByHVINFOWQi7Z3hOzlFre7o+03DAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Right Click Anywhere and select &amp;quot;Take A Screenshot&amp;quot;&quot;
+        title=&quot;Right Click Anywhere and select &amp;quot;Take A Screenshot&amp;quot;&quot;
+        src=&quot;/static/abf870b0b6bf850accecc41e605cd133/c1b63/screenshot.png&quot;
+        srcset=&quot;/static/abf870b0b6bf850accecc41e605cd133/5a46d/screenshot.png 300w,
+/static/abf870b0b6bf850accecc41e605cd133/0a47e/screenshot.png 600w,
+/static/abf870b0b6bf850accecc41e605cd133/c1b63/screenshot.png 1200w,
+/static/abf870b0b6bf850accecc41e605cd133/d61c2/screenshot.png 1800w,
+/static/abf870b0b6bf850accecc41e605cd133/111fd/screenshot.png 1831w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;This will pop up Firefox&apos;s built in screenshot tool. It allows you to select specific elements, just what&apos;s visible on the page, or the full page. Highly useful for taking screenshots of specific components or if you just need a quick capture. &lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 53.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABMUlEQVQoz62QS1KDQBCGB1AhksSKCyjeCVAuLLYQQoQFQjaK5/ECbrLIcTyLnuZ3ekisWCaWWll81e+/p4fNZjPYto3RaATG2K9RFAUXqir85/Uar2/veNlswEiI0HUdkiR9DpB/jF1dlmUwbjUuPOTzWr+A4cT02wzDgOM4sCxLfEEQBPA8D9PpFFEUIQxDYSlPPQT1775q77o+SJIEeZ4jyzJhy7IU3DcNuq5DXddouF9VFebzOdI0xWKxEMsPvpAEqZEoikKINluxpwfiEXfLJa/nok6C1HNYkGOapjjR5WcQdI7nuojDCLfxDUIvEDnXcbfWge/7GI/H3wVPiiYp0KQzDH5geK7iUj5e7zV6WDvw0WoeWnUPiin/D5gYnkRYXcdYTWJh26vwq+gfFnwA830TA6DXakEAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Firefox&amp;#39;s In Browser Screenshot Tool In Action&quot;
+        title=&quot;Firefox&amp;#39;s In Browser Screenshot Tool In Action&quot;
+        src=&quot;/static/6d55df3ccfbd18c0d8363ae0680701e9/c1b63/right-click__screenshot.png&quot;
+        srcset=&quot;/static/6d55df3ccfbd18c0d8363ae0680701e9/5a46d/right-click__screenshot.png 300w,
+/static/6d55df3ccfbd18c0d8363ae0680701e9/0a47e/right-click__screenshot.png 600w,
+/static/6d55df3ccfbd18c0d8363ae0680701e9/c1b63/right-click__screenshot.png 1200w,
+/static/6d55df3ccfbd18c0d8363ae0680701e9/d61c2/right-click__screenshot.png 1800w,
+/static/6d55df3ccfbd18c0d8363ae0680701e9/84a78/right-click__screenshot.png 1832w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;Developer Tools&lt;/h2&gt;
+&lt;p&gt;The second way you can take Screenshots in Firefox is through the Developer Tools. The first thing you&apos;ll need to do for this one is turn the Screenshot button on in the Settings. &lt;/p&gt;
+&lt;p&gt;Open the Developer Tools with &lt;code class=&quot;language-text&quot;&gt;F12&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;Ctrl + Shift + I&lt;/code&gt; and click on the three dots in the upper right hand corner.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 941px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAA7DAAAOwwHHb6hkAAACQUlEQVQ4y62RW2sTURDHN+QbBFPf7CfINxBfBKsfQhQVNJEKaTRRo9EnaR8tacE3JZCkLSI1RSF98EURL1RMaVzTYknbTZrmtvfL2c3+e/YsrY2CCDrwZ+acM/NjZg7HcRz+lwKBgOf9w+lTJ3Hp8hXE4xOIRmNIpW7jxvg4YrHrSCWTuHM3janJSaopPMzcRybzAOl7aSQSCZofRSQSOQD7wIXiHHQAHc2FomowTALTsqHpJottx4VJvWbY0AmYWRahslicSNz8CQyFQlguv4atGSCiDBATsGmiqcExFRobtISAaCKE5h7aPRnNRgMb6xuo17cYMJfLIRgM+sBw+BgePS3jzTcVpQ+7yH9UUPwkY2FFReGzhPkvCp5XTLziLfQlGaaho9vtoiEI6HQ6DDg3N4/AAdDTs+IL9OnMte0uVjfbqAl97PRMNEUCgfpd2cGebKNPJ+j1JbRaLWzR7gQK9Sw7PT28w8XFl+zBIRadlo44cOhpgGEbQFI0iIqBdqcLYUdgnXr2JJtF8CiwtLTkAx3nsNx1Pbm+PNxgAJV+km7aMDSddSmKIsudmZ31OwxwAR9YKrEHQggr/FXuwIVt25AVlf28LCuQeiIkSWJ1E/H4MHC5XMbfmEG30KQMotBJiHt4n7yVHN7h45ks+M06KtUqqt/537RGxdd4vP3Ko1R+j8q7FfA/1rFaXcN2s4HzFy/4wHz4DDwVwmPIj5xF8fifVWA551D0/MjR+zHG4bTRa/Ckjl6FeuIfROs9zj5ZneiJxRG+DwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;inspector settings&quot;
+        title=&quot;inspector settings&quot;
+        src=&quot;/static/512b76729b193327f4c9728da43aa224/a8417/inspector-settings.png&quot;
+        srcset=&quot;/static/512b76729b193327f4c9728da43aa224/5a46d/inspector-settings.png 300w,
+/static/512b76729b193327f4c9728da43aa224/0a47e/inspector-settings.png 600w,
+/static/512b76729b193327f4c9728da43aa224/a8417/inspector-settings.png 941w&quot;
+        sizes=&quot;(max-width: 941px) 100vw, 941px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Once you have the settings open you&apos;ll need to enable &quot;Take a screenshot of the entire page&quot; under &quot;Available Toolbox Buttons&quot;.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1180px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 54.666666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABt0lEQVQoz32Sy07CYBCFm6hxIaA73Ll0ayLIygcgUd9ANyQIitwewMhzKgIJEAKUXqC09HacmVIEo05y0nT+zjdz5q9ysL+HwsM9np8reCqXUS6VUSqVUCwWUam8oNlsolarkepoNBqo1+uSY8Xv/KxWq0in01ASiQSG/T7CEHBXLraDc6zfYkXf/jzL5XJQUqkU3j8+YBgGXNeF7/sIgkC0XC4xn883Oc/zEIQBTNPEaDSSsyDwJc/fZDKZCPjZbktxSC1jcXCBrutyxsA4b9s2VHVG4KhZnM9msxGw0+nAcZy1zXCnUNN0KlZhWdbGWgRUYVJDT4DBNzCZTAqQp/A8f2cnPIGmaXDJ0nYjhk8mU5reELs7EzKwTZbZ2nSqCoQn4I0vFguMx2PJs7U4uHkMZDi745UI8Jgsd7tduRSGWgsL1npnHl0Sw1dcsLUrm86nBDQNU2QQ2LEdXDHwMHmEXq+HudjT5RkSnP4L/BUrOpvNZnJp8e45LrKXUM5PTtHr8ITmZvk+TcbT8X7+FE3seq78anEun7uGMjgrYJB/xfCuhcHNW6TbFob/aLDWbu4N/fNHfAGiZfEDOXKfHAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;take screenshot setting&quot;
+        title=&quot;take screenshot setting&quot;
+        src=&quot;/static/ad33a20ee81f7a173452081ea131a3af/c83ae/take-screenshot-setting.png&quot;
+        srcset=&quot;/static/ad33a20ee81f7a173452081ea131a3af/5a46d/take-screenshot-setting.png 300w,
+/static/ad33a20ee81f7a173452081ea131a3af/0a47e/take-screenshot-setting.png 600w,
+/static/ad33a20ee81f7a173452081ea131a3af/c83ae/take-screenshot-setting.png 1180w&quot;
+        sizes=&quot;(max-width: 1180px) 100vw, 1180px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;What that does is adds a Camera button to the Developer Tools Toolbox Buttons, next to the settings button you used earlier. Click on it and it will take a Full Page screenshot of whatever page you opened the Developer Tools for. It saves the files in your default Download folder with the current timestamp.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1161px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.666666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAB40lEQVQoz5WSzW7TQBDHfSsvEA4UJwdegWsiYseOnTtPwGsgEKIPwodUOHBFSBQKQlw4woECgkIAp4mpa68/d+1d/xkvUdUDpWKk3854dvav8ewa5zY2cGU0gmU7sCwLtmXDticYj8eYTBx4no/p1CN/Eh+zmQ/f9wgfXgfle70ejIG5iR/zAKukQpmn4EWGiujimpeQtYAi2qaGFByNqHRNnBaI4gwpY8ijI2RpBnc6hbF50cTe/hKLgCEIKywOOearHD+jEqu0xpIJotZ03x0HcYVfUYI0y1GWJdKEIUkS/YfG+Qsmdt6FeP0+xqM3IR6/TfB0L8POhwLPP5aaZxTvfqrw8ovAi88Cr/YFDpMMjLrLSDTLc3DOMaLRGYO+qdvV1gpaFM62VncXsQJFXoJXFeq6xnA4hGGaJvKi0GWqbQlA0nIael8qlJVAwxsoKdE05JXSF6kFuzloQUq2JNqh+1jHJ/mzocAKjigTYBGDqLhuxnVdGH2zfyz4N4HTRMNcYv6NQeXieBCu46w77GZIdapu6HnIf6JqSYUSy1jg65yeVljofHfemXSCgz4K/L8dEdH6CuU658w8GE8uXcX363ew3HqIcGubeHAmq9vbWNy8h4Nb97UPbtxFQPHu5Wv4DVU675Sag2DDAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;screenshot button&quot;
+        title=&quot;screenshot button&quot;
+        src=&quot;/static/af65b90f3e0d5ffbe9852372fe9a283c/129e9/screenshot-button.png&quot;
+        srcset=&quot;/static/af65b90f3e0d5ffbe9852372fe9a283c/5a46d/screenshot-button.png 300w,
+/static/af65b90f3e0d5ffbe9852372fe9a283c/0a47e/screenshot-button.png 600w,
+/static/af65b90f3e0d5ffbe9852372fe9a283c/129e9/screenshot-button.png 1161w&quot;
+        sizes=&quot;(max-width: 1161px) 100vw, 1161px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;Bust Out The Big Guns&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Need to take some massive (&gt;2,000px wide) screenshots? &lt;/p&gt;
+&lt;p&gt;Well then, &lt;em&gt;&lt;strong&gt;It&apos;s Console Time!&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Hit &lt;code class=&quot;language-text&quot;&gt;Ctrl + Shift + K&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;F12&lt;/code&gt; to open up the Firefox JavaScript Console. Firefox has a decent set of commands that you can run that interact with the Browser itself instead of the webpage. &lt;code class=&quot;language-text&quot;&gt;:screenshot&lt;/code&gt; is one of them.  If you type &lt;code class=&quot;language-text&quot;&gt;:screenshot&lt;/code&gt; into the console and hit &lt;code class=&quot;language-text&quot;&gt;Enter&lt;/code&gt; it will take a snapshot of the currently visible viewpoint.&lt;/p&gt;
+&lt;p&gt;If you want a higher resolution screenshot than your monitor can provide, you need to set the &lt;code class=&quot;language-text&quot;&gt;--dpr&lt;/code&gt; flag. DPR Stands for Device Pixel Ratio, so setting &lt;code class=&quot;language-text&quot;&gt;--dpr 2&lt;/code&gt; tells Firefox to capture the image at 2x the resolution of the viewport (2x your monitor resolution, basically).&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;:screenshot --dpr 2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Be careful, setting the &lt;code class=&quot;language-text&quot;&gt;--dpr&lt;/code&gt; flag to anything higher than &lt;code class=&quot;language-text&quot;&gt;3&lt;/code&gt; will generate &lt;strong&gt;MASSIVE&lt;/strong&gt; screenshots and will take a while and a lot of hard drive space.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you need to screenshot the full page, you just need to add the &lt;code class=&quot;language-text&quot;&gt;--fullpage&lt;/code&gt; flag. &lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;:screenshot --dpr 2 --fullpage&lt;/code&gt; will take a full page screenshot of the current page at 2x the resolution it is displayed at. &lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&quot;https://media.giphy.com/media/26DOs997h6fgsCthu/giphy.gif&quot; alt=&quot;Show Me What You Got&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Go get them nice &amp;#x26; fat portfolio screenshots of your work and send me a link on Twitter, &lt;a href=&quot;https://twitter.com/jackharner&quot;&gt;@JackHarner&lt;/a&gt;. I&apos;d love to see what you&apos;re working on!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Auto-Generate Content Folders In Gatsby]]></title><description><![CDATA[JackHarner.com is built with Gatsby, a framework based on React that makes blazing fast websites.  Gatsby Logo I have my Blog and Portfolio content setup as a couple of directories with subdirectories for the individual posts. Like so:  Each of the…]]></description><link>https://jackharner.com//blog/auto-generate-content-gatsby/</link><guid isPermaLink="false">https://jackharner.com//blog/auto-generate-content-gatsby/</guid><pubDate>Sun, 22 Dec 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;JackHarner.com is built with Gatsby, a framework based on React that makes blazing fast websites. &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/820ea87f3049eb9b2b311f03873a0118/gatsby-logo.svg&quot; alt=&quot;Gatsby Logo&quot;&gt;&lt;/p&gt;
+&lt;p&gt;I have my Blog and Portfolio content setup as a couple of directories with subdirectories for the individual posts. Like so: &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;src/
+| ...
+| content/
+  | blog/
+    | blog-post/
+      | index.md
+      | featuredImage.png
+      | ...
+    | blog-post-2/
+      | index.md
+      | featuredImage.png
+      | ...
+    | ...
+  | portfolio/
+    | ...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Each of the &lt;code class=&quot;language-text&quot;&gt;index.md&lt;/code&gt; files contains a block of frontmatter dsecribing attributes about the post.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;---
+date: 2019-12-22T18:23:53.017Z
+title: &amp;quot;Auto-Generate Content Folders In Gatsby&amp;quot; 
+subtitle: &amp;quot;Preformat Your Frontmatter &amp;amp; More&amp;quot;
+featuredImage: &amp;quot;./featuredImage.png&amp;quot;
+tags: [&amp;#39;Gatsby&amp;#39;, &amp;#39;Node&amp;#39;]
+externalLink: &amp;quot;&amp;quot;
+published: true
+---&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;All of these folders and files are then parsed at build time to generate the pages and the content throughout the site. &lt;/p&gt;
+&lt;p&gt;As some of you may know, I&apos;m very lazy, but Lazy in the good way where I don&apos;t like doing repetitive tasks more than once or twice. I&apos;ve automated tons of simple tasks in my day to day at &lt;a href=&quot;../../portfolio/shoolu&quot;&gt;Shoolu&lt;/a&gt;. Things like Running Reports, and processing product photos are all now 1-2 click tasks, when they used to take hours out of my day every week.&lt;/p&gt;
+&lt;p&gt;I wanted starting a new blog post or portfolio piece to be as simple as possible, and with this I&apos;ve gotten it down to:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;command-line-prompt&quot;&gt;&lt;span data-user=jack data-host=localhost&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; run newBlog&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Let&apos;s look at how I did it and how you can speed up a small part of updating your Gatsby site with Node.&lt;/p&gt;
+&lt;h2&gt;Create the Template Directory&lt;/h2&gt;
+&lt;p&gt;Create a new directory in your &lt;code class=&quot;language-text&quot;&gt;/src/content/&lt;/code&gt; folder called &lt;code class=&quot;language-text&quot;&gt;templates/&lt;/code&gt;. Inside your new &lt;code class=&quot;language-text&quot;&gt;templates/&lt;/code&gt; directory create a new directory for every post type you want to automate. In my case it will be &lt;code class=&quot;language-text&quot;&gt;blog/&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;portfolio/&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Now your project should look a little something like this:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;src/
+| ...
+| content/
+  | blog/
+    | ...
+  | portfolio/
+    | ...
+  | templates/
+    | blog/
+      | &amp;lt;empty folder&amp;gt;
+    | portfolio/
+      | &amp;lt;empty folder&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Get Template-ing&lt;/h2&gt;
+&lt;p&gt;This is where you&apos;ll need to customize this tutorial to fit with your site and preexisting content. Inside your &lt;code class=&quot;language-text&quot;&gt;/src/content/templates/&amp;lt;post-type&amp;gt;&lt;/code&gt; directory, create versions of the files you will need every time you create a post. For me, that includes an &lt;code class=&quot;language-text&quot;&gt;index.md&lt;/code&gt; file with some custom frontmatter, and a &lt;code class=&quot;language-text&quot;&gt;featuredImage.png&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Take a look at my &lt;code class=&quot;language-text&quot;&gt;templates/blog/index.md&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token hr punctuation&quot;&gt;---&lt;/span&gt;
+date: $date
+title: &quot;$title&quot; 
+subtitle: &quot;&quot;
+featuredImage: &quot;./featuredImage.png&quot;
+tags: [&apos;&apos;]
+externalLink: &quot;&quot;
+&lt;span class=&quot;token title important&quot;&gt;published: false
+&lt;span class=&quot;token punctuation&quot;&gt;---&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Notice the &lt;code class=&quot;language-text&quot;&gt;$date&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;$title&lt;/code&gt; variables in the frontmatter. We will be replacing those variables down the line. &lt;/p&gt;
+&lt;p&gt;My default Featured Image is just a solid pink image to match the branding of the site: &lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 51%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAAAF0lEQVQoz2N4KZf8n5qYYdTAUQOHo4EAkbziGJZmILkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Default Featured Image&quot;
+        title=&quot;Default Featured Image&quot;
+        src=&quot;/static/124be52bbf346d8c60c354150e3cbdd7/c1b63/defaultFeaturedImage.png&quot;
+        srcset=&quot;/static/124be52bbf346d8c60c354150e3cbdd7/5a46d/defaultFeaturedImage.png 300w,
+/static/124be52bbf346d8c60c354150e3cbdd7/0a47e/defaultFeaturedImage.png 600w,
+/static/124be52bbf346d8c60c354150e3cbdd7/c1b63/defaultFeaturedImage.png 1200w,
+/static/124be52bbf346d8c60c354150e3cbdd7/d61c2/defaultFeaturedImage.png 1800w,
+/static/124be52bbf346d8c60c354150e3cbdd7/81ebd/defaultFeaturedImage.png 1868w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The Featured Image is pretty much always going to be changed down the line. One problem I&apos;ve run into is that Gatsby, as far as I know, doesn&apos;t allow you to set default Frontmatter values. However, having the default allows me to not have to remember &quot;featuredImage.png&quot; when saving the updated image (I can just overwrite the default). &lt;/p&gt;
+&lt;h2&gt;Script All The Things!&lt;/h2&gt;
+&lt;p&gt;Now that we&apos;ve got our template, we&apos;re going to write a Node script that copies the folder and replaces some variables with user input. &lt;/p&gt;
+&lt;p&gt;We do need a few dependencies so run this command in your projects root folder:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;command-line-prompt&quot;&gt;&lt;span data-user=jack data-host=localhost&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; i --save-dev readline-sync ncp replace-in-file&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;readline-sync&lt;/code&gt; allows for super simple Node CLI Prompts to take in user input.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;ncp&lt;/code&gt; is a tool to help Node copy folders recursively.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;replace-in-file&lt;/code&gt; makes it really easy to substitute values for defined variables in the copied version of the file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In the root folder for the project, create a new directory called &lt;code class=&quot;language-text&quot;&gt;tools/&lt;/code&gt; and in that a new file called &lt;code class=&quot;language-text&quot;&gt;newBlog.js&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;At the top of &lt;code class=&quot;language-text&quot;&gt;newBlog.js&lt;/code&gt; declare all of the dependencies we&apos;ll need:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; readline &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;readline-sync&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; ncp &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;ncp&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ncp&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; replace &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;replace-in-file&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Next up is to define some variables we are going to use and take in the User Input for Title &amp;#x26; Slug:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; postTitle &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; readline&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;question&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;What is the title? &quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; slug &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; readline&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;question&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Slug? [Default: &apos;&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;string_to_slug&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;postTitle&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&apos;] &quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;defaultInput&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;string_to_slug&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;postTitle&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; date &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toISOString&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; sourcePath &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;./src/content/templates/blog/&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; destPath &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;./src/content/blog/&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; slug&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;By setting a default value for the Slug allows me to set the slug to something other than the default, if I want to. Otherwise it just sets it to a url-encoded version of the title. &lt;/p&gt;
+&lt;p&gt;Generating the default slug from the given title is done with the following function:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;string_to_slug&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    str &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; str&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token regex&quot;&gt;/^\s+|\s+$/g&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// trim&lt;/span&gt;
+    str &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; str&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toLowerCase&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  
+    &lt;span class=&quot;token comment&quot;&gt;// remove accents, swap ñ for n, etc&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;àáäâèéëêìíïîòóöôùúüûñç·/_,:;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; to   &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;aaaaeeeeiiiioooouuuunc------&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; i&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; l&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;l &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        str &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; str&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;RegExp&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;g&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; to&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    str &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; str&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token regex&quot;&gt;/[^a-z0-9 -]/g&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// remove invalid chars&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token regex&quot;&gt;/\s+/g&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;-&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// collapse whitespace and replace by -&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token regex&quot;&gt;/-+/g&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;-&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// collapse dashes&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; str
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It takes in a string, removes whitespace, converts non url-encoded characters, and replaces spaces with &lt;code class=&quot;language-text&quot;&gt;-&lt;/code&gt; dashes. (&quot;What&apos;s Up Fool?&quot; -&gt; &quot;whats-up-fool&quot;). &lt;/p&gt;
+&lt;h2&gt;Time To Copy&lt;/h2&gt;
+&lt;p&gt;Since everything is set up, it&apos;s time to copy the directory. We use &lt;code class=&quot;language-text&quot;&gt;ncp&lt;/code&gt; which is a Node package to replicate Linux&apos;s &lt;code class=&quot;language-text&quot;&gt;cp&lt;/code&gt; command. It takes in the Source Folder, the Destination Folder, and a Callback as arguments. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token function&quot;&gt;ncp&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;sourcePath&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; destPath&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;err&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;err&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Done Copying&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;// ... Do Stuff After Copying Is Done&lt;/span&gt;
+   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Replace The Template Variables&lt;/h2&gt;
+&lt;p&gt;Remember the &lt;code class=&quot;language-text&quot;&gt;$date&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;$title&lt;/code&gt; variables from earlier? Now it&apos;s time to swap those out for real values. Using the &lt;code class=&quot;language-text&quot;&gt;replace-in-file&lt;/code&gt; Node Package makes this super simple. &lt;/p&gt;
+&lt;p&gt;The &lt;code class=&quot;language-text&quot;&gt;replace()&lt;/code&gt; function takes in an Options Object and a callback. Here&apos;s our Options Object:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; replaceOptions &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    files&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;destPath &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/index.md&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token regex&quot;&gt;/\$title/g&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token regex&quot;&gt;/\$date/g&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    to&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;postTitle&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; date&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Define the files to search in, the keys to search for (can be Regex or just a string), &amp;#x26; what to replace them with then &lt;code class=&quot;language-text&quot;&gt;replace-in-file&lt;/code&gt; does all the heavy lifting.  If you pass in an array to both &lt;code class=&quot;language-text&quot;&gt;from&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;to&lt;/code&gt; it will replace the first key in the &lt;code class=&quot;language-text&quot;&gt;from&lt;/code&gt; array to the first value in the &lt;code class=&quot;language-text&quot;&gt;to&lt;/code&gt; array, and so on, allowing you to replace multiple things in one go.&lt;/p&gt;
+&lt;p&gt;All that&apos;s left is to pass in our options and the callback function. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token function&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;replaceOptions&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;error&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; changedFiles&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;error&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Error occurred:&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; error&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Modified files:&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; changedFiles&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;, &apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Code, Comments, ACTION!&lt;/h2&gt;
+&lt;p&gt;You have two options when it comes to actually running the script. &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Just run the script with Node: &lt;code class=&quot;language-text&quot;&gt;$ node tools/newBlog.js&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code class=&quot;language-text&quot;&gt;node tools/newBlog.js&lt;/code&gt; to your &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt; as a script and run it through NPM (i.e. &lt;code class=&quot;language-text&quot;&gt;$ npm run newBlog&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Then enter a title, optionally pick a slug and away we go! &lt;/p&gt;
+&lt;h2&gt;Where To Go From Here?&lt;/h2&gt;
+&lt;p&gt;If you wanted to take this script a few steps further, here are some ideas to get you started.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Duplicate your &lt;code class=&quot;language-text&quot;&gt;tools/newBlog.js&lt;/code&gt; file for every other post type, modifying as necessary. &lt;/li&gt;
+&lt;li&gt;Refactor the script to be able to handle any post type you throw at it. &lt;code class=&quot;language-text&quot;&gt;readline-sync&lt;/code&gt; has a whole lot of options for taking in user input. &lt;/li&gt;
+&lt;li&gt;Create as much content as possible, and automate as many things as possible.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/jackharner&quot;&gt;Hit me up on Twitter&lt;/a&gt; if you implement this script in your Gatsby site! I&apos;d love to hear your suggestions.&lt;/p&gt;
+&lt;h2&gt;If You&apos;re Lazy, Here&apos;s the full script:&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; readline &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;readline-sync&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; ncp &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;ncp&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ncp&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; replace &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;replace-in-file&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; postTitle &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; readline&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;question&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;What is the title? &quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; slug &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; readline&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;question&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Slug? [Default: &apos;&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;string_to_slug&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;postTitle&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&apos;] &quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;defaultInput&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;string_to_slug&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;postTitle&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; date &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toISOString&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; sourcePath &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;./src/content/templates/blog/&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; destPath &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;./src/content/blog/&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; slug&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; replaceOptions &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    files&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;destPath &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/index.md&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token regex&quot;&gt;/\$title/g&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token regex&quot;&gt;/\$date/g&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    to&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;postTitle&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; date&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; 
+
+
+&lt;span class=&quot;token function&quot;&gt;ncp&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;sourcePath&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; destPath&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;err&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;err&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Done Copying&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;replaceOptions&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;error&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; changedFiles&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;error&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Error occurred:&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; error&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Modified files:&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; changedFiles&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;, &apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+
+
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;string_to_slug&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    str &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; str&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token regex&quot;&gt;/^\s+|\s+$/g&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// trim&lt;/span&gt;
+    str &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; str&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toLowerCase&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  
+    &lt;span class=&quot;token comment&quot;&gt;// remove accents, swap ñ for n, etc&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;àáäâèéëêìíïîòóöôùúüûñç·/_,:;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; to   &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;aaaaeeeeiiiioooouuuunc------&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; i&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; l&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;l &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        str &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; str&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;RegExp&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;g&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; to&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    str &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; str&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token regex&quot;&gt;/[^a-z0-9 -]/g&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// remove invalid chars&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token regex&quot;&gt;/\s+/g&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;-&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// collapse whitespace and replace by -&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token regex&quot;&gt;/-+/g&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;-&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// collapse dashes&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; str&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[BigCommerce Developer Diary]]></title><description><![CDATA[Read My Diary 😉 I was asked to guest post on the BigCommerce Developer blog as part of their Developer Diaries series. The series looks at the general day to day of different people working in the e-commerce/BigCommerce space. I provided a look at…]]></description><link>https://jackharner.com//blog/bigcommerce-developer-diary/</link><guid isPermaLink="false">https://jackharner.com//blog/bigcommerce-developer-diary/</guid><pubDate>Fri, 22 Nov 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Read My Diary 😉&lt;/h2&gt;
+&lt;p&gt;I was asked to guest post on the BigCommerce Developer blog as part of their Developer Diaries series. The series looks at the general day to day of different people working in the e-commerce/BigCommerce space. I provided a look at my week working at &lt;a href=&quot;/portfolio/shoolu&quot;&gt;Shoolu&lt;/a&gt; and all the various things I do (and all the coffee I drink).&lt;/p&gt;
+&lt;h4&gt;Thanks Karen and Laruen for inviting me on!&lt;/h4&gt;</content:encoded></item><item><title><![CDATA[Getting Started With Digital Ocean]]></title><description><![CDATA[Digital Ocean is a cloud infrastructure company based in New York City. They have blazing fast data centers all over the world and are my personal favorite hosting provider. I point all of my clients there and anytime I need a server or any kind of…]]></description><link>https://jackharner.com//blog/getting-started-with-digital-ocean/</link><guid isPermaLink="false">https://jackharner.com//blog/getting-started-with-digital-ocean/</guid><pubDate>Wed, 20 Nov 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://m.do.co/c/66cca12b82bc&quot;&gt;Digital Ocean&lt;/a&gt; is a cloud infrastructure company based in New York City. They have blazing fast data centers all over the world and are my personal favorite hosting provider. I point all of my clients there and anytime I need a server or any kind of hosting, Digital Ocean is where I go. Spin up servers in a couple of clicks and you&apos;re on your way! &lt;/p&gt;
+&lt;h2&gt;Creating A Team&lt;/h2&gt;
+&lt;p&gt;Digital Ocean comes with the ability to create Teams. Teams allow you to share Droplets, Domains, Images, Volumes and pretty much everything else with multiple people, all while keeping the payment info stored securely in the owner&apos;s account. &lt;/p&gt;
+&lt;h3&gt;Prerequisites&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A Digital Ocean Account (&lt;a href=&quot;https://m.do.co/c/66cca12b82bc&quot;&gt;Sign Up Here&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;A credit card attached to your Digital Ocean account. &lt;/li&gt;
+&lt;li&gt;People you want to share access to your Droplets with.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Let&apos;s Just Jump Into It.&lt;/h3&gt;
+&lt;p&gt;The first step is to log in to your Digital Ocean account. &lt;/p&gt;
+&lt;p&gt;In the upper right hand corner of the page, click on your little profile picture (or whatever default icon you got). &lt;/p&gt;
+&lt;p&gt;Click on &quot;Create A Team&quot;.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1121px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 51.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFAf/EABQBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAX6E99A0H//EABYQAAMAAAAAAAAAAAAAAAAAAAQQNP/aAAgBAQABBQIKZBTL/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQIBAT8BZ//EABYQAQEBAAAAAAAAAAAAAAAAAAIQgf/aAAgBAQAGPwI7Tf/EABgQAQADAQAAAAAAAAAAAAAAAAEQobEA/9oACAEBAAE/IbOoA627P//aAAwDAQACAAMAAAAQ58//xAAWEQADAAAAAAAAAAAAAAAAAAABEDH/2gAIAQMBAT8QEX//xAAWEQADAAAAAAAAAAAAAAAAAAABEDH/2gAIAQIBAT8Qor//xAAcEAEAAgIDAQAAAAAAAAAAAAABABFRcRBBgfD/2gAIAQEAAT8QostYNpZBFUPk+XnO3fH/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Create A Team Menu Item&quot;
+        title=&quot;Create A Team Menu Item&quot;
+        src=&quot;/static/545d0372a95244da99ee57c7aa6a6288/f279f/create-a-team.jpg&quot;
+        srcset=&quot;/static/545d0372a95244da99ee57c7aa6a6288/f93b5/create-a-team.jpg 300w,
+/static/545d0372a95244da99ee57c7aa6a6288/b4294/create-a-team.jpg 600w,
+/static/545d0372a95244da99ee57c7aa6a6288/f279f/create-a-team.jpg 1121w&quot;
+        sizes=&quot;(max-width: 1121px) 100vw, 1121px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;It&apos;s All In The Name&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 51.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQBBf/EABQBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAehZHehof//EABgQAAMBAQAAAAAAAAAAAAAAAAEEEDQC/9oACAEBAAEFAkcw6ERzT//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAECAQE/AWf/xAAYEAADAQEAAAAAAAAAAAAAAAABEIEAMf/aAAgBAQAGPwIXdQr/AP/EABoQAAEFAQAAAAAAAAAAAAAAAAEAEBGhsXH/2gAIAQEAAT8hs6RBiHGt6f8A/9oADAMBAAIAAwAAABBfD//EABYRAAMAAAAAAAAAAAAAAAAAAAEQMf/aAAgBAwEBPxARf//EABYRAAMAAAAAAAAAAAAAAAAAAAEQMf/aAAgBAgEBPxCiv//EABsQAAEFAQEAAAAAAAAAAAAAAAEAESEx8BBR/9oACAEBAAE/EJbpJhjE05MDYCxvXf/Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Setting the Team Name&quot;
+        title=&quot;Setting the Team Name&quot;
+        src=&quot;/static/a438323069bd4f9a2e731db90fcbc257/e5166/team-name.jpg&quot;
+        srcset=&quot;/static/a438323069bd4f9a2e731db90fcbc257/f93b5/team-name.jpg 300w,
+/static/a438323069bd4f9a2e731db90fcbc257/b4294/team-name.jpg 600w,
+/static/a438323069bd4f9a2e731db90fcbc257/e5166/team-name.jpg 1200w,
+/static/a438323069bd4f9a2e731db90fcbc257/d9c39/team-name.jpg 1800w,
+/static/a438323069bd4f9a2e731db90fcbc257/d9786/team-name.jpg 1852w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Type in your team name and either change or verify the &quot;Team Contact Email&quot;. That email is where all the team related billing and alert emails will go. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;ONLY&lt;/strong&gt; Select &quot;Convert ____ Into A Team&quot; If you already have another Digital Ocean account to invite to the team or you may lose access to the account.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you&apos;d like to require all users on the team to use 2FA or some other form of secure login, check the box under &quot;Secure Login&quot;.&lt;/p&gt;
+&lt;p&gt;Click on &quot;Create Team&quot;&lt;/p&gt;
+&lt;h3&gt;Dolla Dolla Bills Y&apos;all&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 51.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAEEBf/EABQBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAdC2LQRDB//EABcQAAMBAAAAAAAAAAAAAAAAAAQQNBH/2gAIAQEAAQUCBm1AzL//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAgEBPwFn/8QAGBAAAwEBAAAAAAAAAAAAAAAAARCBAEH/2gAIAQEABj8CF3UK/wD/xAAbEAABBAMAAAAAAAAAAAAAAAABABChsRExkf/aAAgBAQABPyGTZDM64aXZ/wD/2gAMAwEAAgADAAAAEAcP/8QAFhEAAwAAAAAAAAAAAAAAAAAAARAx/9oACAEDAQE/EBF//8QAFhEAAwAAAAAAAAAAAAAAAAAAARAx/9oACAECAQE/EKK//8QAGxABAAEFAQAAAAAAAAAAAAAAAQAQESFR8DH/2gAIAQEAAT8Qy7soQFhdsJYfQnG2r//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Adding Payment Info&quot;
+        title=&quot;Adding Payment Info&quot;
+        src=&quot;/static/11f28e7f16d775a3b011d3694d2af24f/e5166/payment.jpg&quot;
+        srcset=&quot;/static/11f28e7f16d775a3b011d3694d2af24f/f93b5/payment.jpg 300w,
+/static/11f28e7f16d775a3b011d3694d2af24f/b4294/payment.jpg 600w,
+/static/11f28e7f16d775a3b011d3694d2af24f/e5166/payment.jpg 1200w,
+/static/11f28e7f16d775a3b011d3694d2af24f/d9c39/payment.jpg 1800w,
+/static/11f28e7f16d775a3b011d3694d2af24f/d9786/payment.jpg 1852w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;On the next page select (or add) your preferred Payment Method for the Team. This payment method will be used for all charges accrued on the team, but members of the team &lt;em&gt;will NOT&lt;/em&gt; have access to your payment info. &lt;/p&gt;
+&lt;h3&gt;Invite Time&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 51.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAEEBf/EABQBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAdC+DQRDB//EABYQAAMAAAAAAAAAAAAAAAAAAAQQNP/aAAgBAQABBQIGZAzL/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFhEAAwAAAAAAAAAAAAAAAAAAARAx/9oACAECAQE/ATV//8QAFhAAAwAAAAAAAAAAAAAAAAAAARCB/9oACAEBAAY/AhWK/wD/xAAYEAADAQEAAAAAAAAAAAAAAAAQobEAQf/aAAgBAQABPyFmt0N0f//aAAwDAQACAAMAAAAQBw//xAAWEQADAAAAAAAAAAAAAAAAAAABEDH/2gAIAQMBAT8QEX//xAAVEQEBAAAAAAAAAAAAAAAAAAAQMf/aAAgBAgEBPxCh/8QAHRAAAQMFAQAAAAAAAAAAAAAAAQARIRAxQVHwof/aAAgBAQABPxCXdJB8vEwNwFxtq//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Add emails to invite&quot;
+        title=&quot;Add emails to invite&quot;
+        src=&quot;/static/447de7b94138bdfee97012bd62da9d35/e5166/invite.jpg&quot;
+        srcset=&quot;/static/447de7b94138bdfee97012bd62da9d35/f93b5/invite.jpg 300w,
+/static/447de7b94138bdfee97012bd62da9d35/b4294/invite.jpg 600w,
+/static/447de7b94138bdfee97012bd62da9d35/e5166/invite.jpg 1200w,
+/static/447de7b94138bdfee97012bd62da9d35/d9c39/invite.jpg 1800w,
+/static/447de7b94138bdfee97012bd62da9d35/d9786/invite.jpg 1852w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The next page is where you can invite everyone you want to give access. Enter in 1 Email per line. Those emails will get an invite to either create a Digital Ocean account, or connect an existing one to the team. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;REMEMBER&lt;/strong&gt; - Anybody you invite to your team can spin up and destroy servers or anything in the account. Be careful who you give access. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;That&apos;s All Folks&lt;/h2&gt;
+&lt;p&gt;Now that you have your DigitalOcean Team set up you can add Droplets to your team, invite more team members, and everything else DigitalOcean has to offer. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[I've Forked The Repo, Now What?]]></title><description><![CDATA[So, you want to make some changes to an Open Source Repo? Good for you. That's the beauty of Open Source, even just fixing typos in the documentation makes a difference. Today I'm going to walk you through keeping your copy of a repo up to date with…]]></description><link>https://jackharner.com//blog/sync-forked-repo/</link><guid isPermaLink="false">https://jackharner.com//blog/sync-forked-repo/</guid><pubDate>Sat, 02 Nov 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;So, you want to make some changes to an Open Source Repo? Good for you. That&apos;s the beauty of Open Source, even just fixing typos in the documentation makes a difference. Today I&apos;m going to walk you through keeping your copy of a repo up to date with changes pushed to the original repo. &lt;/p&gt;
+&lt;p&gt;This tutorial assumes: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You have a basic understanding of git&lt;/li&gt;
+&lt;li&gt;You have a forked repo&lt;/li&gt;
+&lt;li&gt;The original repo has changes that you want in your forked repo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Setting Up The Remote&lt;/h2&gt;
+&lt;p&gt;The first thing you want to do is add the Original Repo as a remote of your Forked Repo. From the command line you want to move into your project directory and add the Original Repo&apos;s clone URL as the &lt;code class=&quot;language-text&quot;&gt;upstream&lt;/code&gt; remote.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;command-line-prompt&quot;&gt;&lt;span data-user=jack data-host=localhost&gt;&lt;/span&gt;&lt;span data-user=jack data-host=localhost&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;project_name&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; remote &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; upstream &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;original_repo_url&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The Repo URL can be found on the Repo page on Github. Click on the &lt;code class=&quot;language-text&quot;&gt;Clone or download&lt;/code&gt; button and make sure it says &quot;Clone with HTTPS&quot; since you don&apos;t have write access to the Original Repo.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1013px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAIBAwX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAB3JGKxxP/xAAWEAADAAAAAAAAAAAAAAAAAAAQESD/2gAIAQEAAQUCDj//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAWEAADAAAAAAAAAAAAAAAAAAAQIDH/2gAIAQEABj8CET//xAAaEAACAgMAAAAAAAAAAAAAAAAAEQEgIUHx/9oACAEBAAE/IScaY3dP/9oADAMBAAIAAwAAABCDH//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABwQAQABBAMAAAAAAAAAAAAAAAEAESExYVFxsf/aAAgBAQABPxAplE3Gg9oLW8vwlbHbA0xyz//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Original Repo URL&quot;
+        title=&quot;Original Repo URL&quot;
+        src=&quot;/static/efd0463e84375998e9b0a448e26f1237/326df/remote_url.jpg&quot;
+        srcset=&quot;/static/efd0463e84375998e9b0a448e26f1237/f93b5/remote_url.jpg 300w,
+/static/efd0463e84375998e9b0a448e26f1237/b4294/remote_url.jpg 600w,
+/static/efd0463e84375998e9b0a448e26f1237/326df/remote_url.jpg 1013w&quot;
+        sizes=&quot;(max-width: 1013px) 100vw, 1013px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;You can verify your remotes with:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;command-line-prompt&quot;&gt;&lt;span data-user=jack data-host=localhost&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; remote -v&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;which should output:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;origin	git@github.com:{{you}}/{{project_name}}.git (fetch)
+origin	git@github.com:{{you}}/{{project_name}}.git (push)
+upstream	https://github.com/{{owner}}/{{project_name}}.git (fetch)
+upstream	https://github.com/{{owner}}/{{project_name}}.git (push)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Go Get That Code!&lt;/h2&gt;
+&lt;p&gt;Now that we&apos;ve associated our Original Repo with our local Forked Repo, it&apos;s time to go get the new code. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;command-line-prompt&quot;&gt;&lt;span data-user=jack data-host=localhost&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; fetch upstream&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Running &lt;code class=&quot;language-text&quot;&gt;git fetch&lt;/code&gt; gets the changes to the remote repo without changing any of the files in your local version. It essentially lets you see what everyone else has done to the code without making any changes to yours. You should see it pull down a bunch of different branches, tags, and some file changes. &lt;/p&gt;
+&lt;p&gt;To apply the new changes to your repo make sure you&apos;re on the branch you want to pull in (in our case &lt;code class=&quot;language-text&quot;&gt;master&lt;/code&gt;): &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;command-line-prompt&quot;&gt;&lt;span data-user=jack data-host=localhost&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; checkout master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;and then pull the matching branch from the &lt;code class=&quot;language-text&quot;&gt;upstream&lt;/code&gt; remote:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;command-line-prompt&quot;&gt;&lt;span data-user=jack data-host=localhost&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; pull upstream master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It will asks you for a message for the merge commit. You can usually just leave the default and just save with &lt;code class=&quot;language-text&quot;&gt;CTRL + X&lt;/code&gt;. Git finishes up the merge commit, and your Local Repo is now up to date with the Original. &lt;/p&gt;
+&lt;h2&gt;Seal The Deal&lt;/h2&gt;
+&lt;p&gt;Finish off your changes by pushing them back up to your Forked Repo&apos;s &lt;code class=&quot;language-text&quot;&gt;origin&lt;/code&gt; remote that you have write access to. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;command-line-prompt&quot;&gt;&lt;span data-user=jack data-host=localhost&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; push origin master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ta da! You just refreshed your forked repo. Make, test, commit and push your changes and you&apos;ll be all set to create a pull request back to the Original Repo. You&apos;re ready to start changing the world of Open Source Software one pull request at a time! &lt;/p&gt;</content:encoded></item></channel></rss>
