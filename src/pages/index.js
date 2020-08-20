@@ -38,7 +38,7 @@ const IndexPage = ({ data, pageContext }) => {
         </section>
         <FontAwesomeIcon icon="caret-down" id="scrollIndicator" />
       </container>
-      <container className="half pink row">
+      <container className="half white row">
         <div className="recent-projects">
           {portfolioPosts
             .filter(post => post.node.frontmatter.title.length > 0)
@@ -53,26 +53,19 @@ const IndexPage = ({ data, pageContext }) => {
             to="/portfolio"
             extraStyle={{ gridColumn: "1 / -1" }}
             label="My Full Portfolio »"
-            white
           />
         </div>
         <div className="column">
-          <h1>I Build Websites.</h1>
-          <h2>
-            Simple Blogs, E-Commerce Stores, Custom Business Applications &
-            More.
-          </h2>
-          <p>If you access it through a web browser, I can build it.</p>
+          <h1>I'm a Full Stack Web Developer.</h1>
+          <p>From E-Commerce Stores to Custom Business Applications &
+            Everything In Between. If you access it through a web browser, I can build it with an emphasis on
+            clean, responsive design.</p>
           <p>
-            I work with <Link to="/portfolio/tags/word-press/">WordPress</Link>{" "}
-            <Link to="/portfolio/tags/php/">PHP</Link> with an emphasis on
-            clean, responsive design. On the flip side, I do love me some good
-            'ole fashioned <Link to="/portfolio/tags/html/">HTML</Link>/
-            <Link to="/portfolio/tags/css/">CSS</Link>.
+            I work with <Link to="/portfolio/tags/word-press/">WordPress</Link>, <Link to="/portfolio/tags/php/">PHP</Link>, React, Node, Python & More.
           </p>
         </div>
       </container>
-      <container className="half black">
+      <container className="half pink">
         <h1>A Man Of The People:</h1>
 
         <Quotes quotes={quotes} />
