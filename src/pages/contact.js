@@ -16,7 +16,7 @@ const Contact = () => (
       <h2>The best ways to get a hold of me are:</h2>
       <section className="buttons">
         <Button
-          href="https://twitter.com/jackharner"
+          href="https://twitter.com/messages/compose?recipient_id=246555108&text=Hi%20Jack!"
           target="_blank"
           rel="noopener noreferrer"
           icon={["fab", "twitter"]}
