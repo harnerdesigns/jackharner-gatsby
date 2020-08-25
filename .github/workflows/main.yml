@@ -14,3 +14,4 @@ jobs:
         with:
           access-token: ${{ secrets.PAT }}
           deploy-branch: gh-pages
+          ga: ${{secrets.GA}}
