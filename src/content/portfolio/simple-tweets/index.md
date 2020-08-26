@@ -1,7 +1,7 @@
 ---
 date: 2020-06-02T04:42:04.774Z
 title: "Simple Tweets"
-logo: "./simple-tweets-logo--white.svg"
+logo: "./simple-tweets-logo--white--text.svg"
 description: "Tweet Without Thinking About It"
 color: "#00acee"
 tags: ["Node", "Twitter", "React"]
@@ -19,4 +19,4 @@ You login with Twitter, select how many times per day you want to tweet, and sta
 
 Slowly but surely making progress. That's why they call them side projects, right?
 
-[Day 12](blog/simple-tweets-build-log/)
+[Day 12](/blog/simple-tweets-build-log/)

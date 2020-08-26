@@ -3,10 +3,11 @@ date: 2020-08-09T11:53:35Z
 title: "Generate Documentation From Markdown AUTOMATICALLY" 
 subtitle: "Meet MkDocs"
 featuredImage: "./maarten-van-den-heuvel-8EzNkvLQosk-unsplash.jpg"
+ogImage: "./docs-site-og.jpg"
 tags: ['Automation', 'Markdown', 'Python', 'Newsletter']
 externalLink: ""
 published: true
-unlisted: true
+unlisted: false
 ---
 
 [MkDocs](https://www.mkdocs.org/) is a "fast, simple and downright gorgeous" static site generator for turning a collection of Markdown files into a documentation site. Today, I'm going to walk you through how to get MkDocs setup (which isn't hard).

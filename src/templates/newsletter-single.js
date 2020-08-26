@@ -18,8 +18,15 @@ export default function Template(props) {
   )
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} description={post.excerpt} />
-      <BlogTitle post={post} /> 
+<SEO
+        title={post.frontmatter.title}
+        description={post.excerpt}
+        image={
+          post.fields.ogImage
+            ? post.frontmatter.ogImage.childImageSharp.sizes.src
+            : post.frontmatter.featuredImage.childImageSharp.sizes.src
+        }
+      />      <BlogTitle post={post} /> 
       <container className="half black content">
         <Link to="/newsletter" className="newsletter-signup">
           <FontAwesomeIcon icon="envelope" /> Sign Up For My Newsletter & Get

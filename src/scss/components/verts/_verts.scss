@@ -52,6 +52,7 @@
         margin: 0 auto 3rem;
 
         @include breakpoint(laptop){
+            width: 60%;
             margin: 3rem auto;
         }
     }
@@ -60,9 +61,9 @@
 
 .vert--newsletter{
     background: #fff;
-    // width: 70%;
+    width: 70%;
     margin: 0 auto;
-    border-radius: 1rem;
+    border-radius: var(--border-radius);
     padding: 1rem;
 
     .title__box{

@@ -36,8 +36,7 @@ const TopTags = ({ topTags = [], postType = null, back = false, exclude = null, 
               <li className="top-tag" key={i}>
                 <Link to={tagLink}>
                   <FontAwesomeIcon fixedWidth icon={tagIcons[tag]} />
-                      &nbsp;
-                      {tag}
+                                        {tag}
                 </Link>
               </li>
             )

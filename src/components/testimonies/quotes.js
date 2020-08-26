@@ -21,7 +21,6 @@ const Quotes = ({ quotes }) => {
         autoplaySpeed: 3500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        pauseOnHover: false
     };
 
     return (

@@ -21,7 +21,7 @@
   width: 100%;
   margin: 0.5em auto;
   @include card(1);
-  border-radius: 1rem;
+  border-radius: var(--border-radius);
 
   &:hover{
     @include hardShadow(15, #fff);
@@ -49,6 +49,7 @@
     background: #fff;
     padding: 0.5em;
     margin: 0;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
 
     // @include card(-2);
 
@@ -56,6 +57,8 @@
       color: #333;
       text-align: center;
       margin: 0;
+      font-size: 1.5rem;
+      font-weight: 900;
     }
 
     .project__description {
@@ -71,11 +74,11 @@
       color: #999;
       font-size: 1em;
       font-weight: 100;
-      margin: 0.5em;
+      margin: 0 0.5em ;
 
       li {
         list-style: none;
-        padding: 0.15em;
+        padding: 0 0.15em;
         margin: 0;
 
         &:after {
