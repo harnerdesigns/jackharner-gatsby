@@ -463,6 +463,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
     })
 
+    const subscriberCount = await getSubscriberCount(process.env.CONVERTKIT_SECRET);
+
     createPage({
       path: "/newsletter/",
       component: path.resolve(`src/templates/newsletter.js`),
@@ -473,6 +475,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
 }
 
+async function getSubscriberCount(convertkit_secret){
+
+  return fetch('https://api.convertkit.com/v3/subscribers?api_secret=' + convertkit_secret)
+  .then(response => response.json())
+  .then(data => {
+    console.log(data)
+  })
+  .catch(err => console.error(err));
+
+}
 
 
 
