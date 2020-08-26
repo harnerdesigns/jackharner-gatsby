@@ -1,12 +1,17 @@
 const _ = require("lodash")
 const path = require("path")
+const fetch = require("node-fetch")
 
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const { attachFields } = require(`gatsby-plugin-node-fields`)
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 
-const { NODE_ENV } = process.env
+const { NODE_ENV, CONVERTKIT_SECRET } = process.env
 
 console.log(NODE_ENV)
+
 
 function isBlogNode(node) {
   if (node.internal.type !== "MarkdownRemark") {
@@ -239,7 +244,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         }
       }
     }
-  `).then(result => {
+  `).then(async result => {
     if (result.errors) {
       reporter.panicOnBuild(
         `Error while running GraphQL query.` + result.errors
@@ -463,25 +468,24 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
     })
 
-    const subscriberCount = await getSubscriberCount(process.env.CONVERTKIT_SECRET);
+    const subscriberCount = await getSubscriberCount(CONVERTKIT_SECRET);
 
     createPage({
       path: "/newsletter/",
       component: path.resolve(`src/templates/newsletter.js`),
       context: {
-        recentEmails: recent3
+        recentEmails: recent3,
+        subscriberCount: subscriberCount
       }
     })
   })
 }
 
 async function getSubscriberCount(convertkit_secret){
-
   return fetch('https://api.convertkit.com/v3/subscribers?api_secret=' + convertkit_secret)
   .then(response => response.json())
   .then(data => {
-    console.log(data)
-  })
+    return data.total_subscribers;  })
   .catch(err => console.error(err));
 
 }

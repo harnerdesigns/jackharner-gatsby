@@ -7,7 +7,7 @@ import { NewsletterForm } from "../components/common/NewsletterForm"
 import  ogImage from "../images/Learn-With-Me-OG-Image.jpg"
 
 const About = ({ data, pageContext }) => {
-  const { recentEmails } = pageContext
+  const { recentEmails, subscriberCount } = pageContext
   console.log(recentEmails)
   return (
     <Layout footerCTA={false}>
@@ -30,6 +30,10 @@ const About = ({ data, pageContext }) => {
           })}
         </div>
         <h2>Get them before anyone else by signing up!</h2>
+
+      </container>
+      <container className="half black">
+          <h1>Join {subscriberCount} other subscribers today!</h1>
 
       </container>
     </Layout>
