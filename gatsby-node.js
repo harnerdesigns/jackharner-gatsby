@@ -8,7 +8,7 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-const { NODE_ENV, CONVERTKIT_SECRET } = process.env
+const { NODE_ENV, CONVERTKIT_SECRET, CONVERTKIT_KEY } = process.env
 
 console.log(NODE_ENV)
 
@@ -286,7 +286,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         blogTags = blogTags.concat(edge.node.frontmatter.tags)
       }
     })
-    console.log(blogTags)
+    // console.log(blogTags)
 
     // Count Tags To Get Top Tags
     var topBlogTags = blogTags.reduce(function(p, c) {
@@ -294,7 +294,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       return p
     }, {})
 
-    console.log({ topBlogTags: topBlogTags })
+    // console.log({ topBlogTags: topBlogTags })
 
     var sortedTopBlogTagsArray = []
     for (var tag in topBlogTags) {
@@ -377,7 +377,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         portfolioTags = portfolioTags.concat(edge.node.frontmatter.tags)
       }
     })
-    console.log(portfolioTags)
+    // console.log(portfolioTags)
 
     // Count Tags To Get Top Tags
     var topPortfolioTags = portfolioTags.reduce(function(p, c) {
@@ -385,7 +385,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       return p
     }, {})
 
-    console.log({ topPortfolioTags: topPortfolioTags })
+    // console.log({ topPortfolioTags: topPortfolioTags })
 
     var sortedTopPortfolioTagsArray = []
     for (var tag in topPortfolioTags) {
@@ -468,7 +468,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
     })
 
-    const subscriberCount = await getSubscriberCount(CONVERTKIT_SECRET);
+    const subscriberCount = await getSubscriberCount(CONVERTKIT_SECRET, CONVERTKIT_KEY);
 
     createPage({
       path: "/newsletter/",
@@ -481,10 +481,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
 }
 
-async function getSubscriberCount(convertkit_secret){
-  return fetch('https://api.convertkit.com/v3/subscribers?api_secret=' + convertkit_secret)
+async function getSubscriberCount(convertkit_secret, convertkit_key){
+  return fetch('https://api.convertkit.com/v3/subscribers?api_key='+convertkit_key+'&api_secret=' + convertkit_secret)
   .then(response => response.json())
-  .then(data => {
+  .then(data => { console.log({convertkitRes: data});
     return data.total_subscribers;  })
   .catch(err => console.error(err));
 

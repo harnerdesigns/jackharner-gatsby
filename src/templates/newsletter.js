@@ -6,6 +6,10 @@ import SEO from "../components/seo"
 import { NewsletterForm } from "../components/common/NewsletterForm"
 import  ogImage from "../images/Learn-With-Me-OG-Image.jpg"
 
+
+
+
+
 const About = ({ data, pageContext }) => {
   const { recentEmails, subscriberCount } = pageContext
   console.log(recentEmails)
@@ -13,6 +17,7 @@ const About = ({ data, pageContext }) => {
     <Layout footerCTA={false}>
       <SEO title="Learn _____ With Me" image={ogImage} description="Sign Up for my newsletter and learn about Web Development, Graphic Design, Automation, & More!" />
       <container className="half white">
+
         <NewsletterForm />
       </container>
 
@@ -33,6 +38,8 @@ const About = ({ data, pageContext }) => {
 
       </container>
       <container className="half black">
+
+
           <h1>Join {subscriberCount} other subscribers today!</h1>
 
       </container>
