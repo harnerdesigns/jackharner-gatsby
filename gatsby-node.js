@@ -439,21 +439,22 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
 
     _.each(result.data.newsletter.edges, (edge, index) => {
-      const edgeCount = result.data.newsletter.edges.length
-      var next;
-      var previous;
-      
-      if (index > 0) next = result.data.newsletter.edges[index - 1].node;
-      if (index < edgeCount - 1) previous = result.data.newsletter.edges[index + 1].node
+      const edgeCount = result.data.blog.edges.length
+      const relatedBlogIndexes = randomNum(0, edgeCount, index)
+
+      const related = [
+        result.data.blog.edges[relatedBlogIndexes[0]].node,
+        result.data.blog.edges[relatedBlogIndexes[1]].node,
+        result.data.blog.edges[relatedBlogIndexes[2]].node,
+      ]
       
 
       createPage({
         path: `${edge.node.fields.slug}`,
-        component: path.resolve("./src/templates/newsletter-single.js"),
+        component: path.resolve("./src/templates/blog-post.js"),
         context: {
           slug: edge.node.fields.slug,
-          next: next,
-          previous: previous
+          related: related
         },
       })
     })
