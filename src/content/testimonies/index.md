@@ -10,4 +10,7 @@ quotes:
   - quote: "i don’t know what any of this means but hire this man to build your website, dammit"
     by: Collin Duddy
     link: https://twitter.com/LoboExplosivo/status/1296262212152111110
+  - quote: "TYVM @JackHarner"
+    by: Jay Huffman
+    link: https://twitter.com/MisterJHuffman/status/1298069726715883520
 ---
