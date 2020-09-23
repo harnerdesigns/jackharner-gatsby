@@ -6,30 +6,28 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 const { attachFields } = require(`gatsby-plugin-node-fields`)
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
-});
+})
 
 const { NODE_ENV, CONVERTKIT_SECRET, CONVERTKIT_KEY } = process.env
 
 console.log(NODE_ENV)
 
-
 function isBlogNode(node) {
   if (node.internal.type !== "MarkdownRemark") {
     return false
   }
-  if(node.fields.collection !== "blog"){
+  if (node.fields.collection !== "blog") {
     return false
   }
 
   return true
 }
 
-
 function isPortfolioNode(node) {
   if (node.internal.type !== "MarkdownRemark") {
     return false
   }
-  if(node.fields.collection !== "portfolio"){
+  if (node.fields.collection !== "portfolio") {
     return false
   }
 
@@ -67,7 +65,7 @@ const descriptors = [
         name: "published",
         getter: node => node.frontmatter.published,
         defaultValue: false,
-        transformer: value => NODE_ENV !== "development" ? value : true
+        transformer: value => (NODE_ENV !== "development" ? value : true),
       },
       {
         name: "unlisted",
@@ -86,9 +84,12 @@ const descriptors = [
       },
       {
         name: "date",
-        getter: node => node.frontmatter.updated ? node.frontmatter.updated : node.frontmatter.date,
+        getter: node =>
+          node.frontmatter.updated
+            ? node.frontmatter.updated
+            : node.frontmatter.date,
         defaultValue: "",
-      }
+      },
     ],
   },
 
@@ -109,7 +110,7 @@ const descriptors = [
         name: "published",
         getter: node => node.frontmatter.published,
         defaultValue: false,
-        transformer: value => NODE_ENV !== "development" ? value : true
+        transformer: value => (NODE_ENV !== "development" ? value : true),
       },
       {
         name: "weight",
@@ -218,13 +219,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             }
           }
         }
-      },
+      }
       newsletter: allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
         filter: {
           fileAbsolutePath: { glob: "**/src/content/blog/**/*.md" }
-          fields: { published: { eq: true }, unlisted: {eq: false}  }
-          frontmatter: { tags: {in: "Newsletter"}}
+          fields: { published: { eq: true }, unlisted: { eq: false } }
+          frontmatter: { tags: { in: "Newsletter" } }
         }
         limit: 1000
       ) {
@@ -257,8 +258,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     ////////////////////
 
     _.each(result.data.blog.edges, (edge, index) => {
-
-      let listedPosts = result.data.blog.edges.filter(({ node }) => (node.fields.unlisted ? false : true ))
+      let listedPosts = result.data.blog.edges.filter(({ node }) =>
+        node.fields.unlisted ? false : true
+      )
       const edgeCount = listedPosts.length
       const relatedIndexes = randomNum(0, edgeCount, index)
 
@@ -326,8 +328,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       path: "/blog/",
       component: path.resolve(`src/templates/blog.js`),
       context: {
-        topTags: sortedTopBlogTags
-      }
+        topTags: sortedTopBlogTags,
+      },
     })
 
     // Make tag pages
@@ -417,8 +419,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       path: "/portfolio/",
       component: path.resolve(`src/templates/portfolio.js`),
       context: {
-        topTags: sortedTopPortfolioTags
-      }
+        topTags: sortedTopPortfolioTags,
+      },
     })
 
     // Make tag pages
@@ -437,7 +439,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       })
     })
 
-
     _.each(result.data.newsletter.edges, (edge, index) => {
       const edgeCount = result.data.blog.edges.length
       const relatedBlogIndexes = randomNum(0, edgeCount, index)
@@ -447,49 +448,55 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         result.data.blog.edges[relatedBlogIndexes[1]].node,
         result.data.blog.edges[relatedBlogIndexes[2]].node,
       ]
-      
 
       createPage({
         path: `${edge.node.fields.slug}`,
         component: path.resolve("./src/templates/blog-post.js"),
         context: {
           slug: edge.node.fields.slug,
-          related: related
+          related: related,
         },
       })
     })
 
-    let recent3 = result.data.newsletter.edges.filter((edge, index) => { 
+    let recent3 = result.data.newsletter.edges.filter((edge, index) => {
+      if (index > 2) return false
 
-      if (index > 2) return false;
-
-      if (edge.node.fields.published && edge.node.fields.published !== 'unlisted'){
-        return true;
+      if (
+        edge.node.fields.published &&
+        edge.node.fields.published !== "unlisted"
+      ) {
+        return true
       }
-
     })
 
-    const subscriberCount = await getSubscriberCount(CONVERTKIT_SECRET, CONVERTKIT_KEY);
+    const subscriberCount = await getSubscriberCount(
+      CONVERTKIT_SECRET,
+      CONVERTKIT_KEY
+    )
 
     createPage({
       path: "/newsletter/",
       component: path.resolve(`src/templates/newsletter.js`),
       context: {
         recentEmails: recent3,
-        subscriberCount: subscriberCount
-      }
+        subscriberCount: subscriberCount,
+      },
     })
   })
 }
 
-async function getSubscriberCount(convertkit_secret, convertkit_key){
-  return fetch('https://api.convertkit.com/v3/subscribers?api_key='+convertkit_key+'&api_secret=' + convertkit_secret)
-  .then(response => response.json())
-  .then(data => { console.log({convertkitRes: data});
-    return data.total_subscribers;  })
-  .catch(err => console.error(err));
-
+async function getSubscriberCount(convertkit_secret, convertkit_key) {
+  return fetch(
+    "https://api.convertkit.com/v3/subscribers?api_key=" +
+      convertkit_key +
+      "&api_secret=" +
+      convertkit_secret
+  )
+    .then(response => response.json())
+    .then(data => {
+      console.log({ convertkitRes: data })
+      return data.total_subscribers
+    })
+    .catch(err => console.error(err))
 }
-
-
-
