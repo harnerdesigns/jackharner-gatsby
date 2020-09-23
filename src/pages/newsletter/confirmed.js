@@ -20,26 +20,3 @@ return (
 
 export default Confirmed
 
-
-export const pageQuery = graphql`
-  query ConfirmedQuery {
-    photoRoll: markdownRemark(frontmatter: { title: { eq: "Photo Roll" } }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-        photos {
-          photo {
-            childImageSharp {
-              fluid(maxWidth: 1200) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          link
-        }
-      }
-    }
-  }
-`
