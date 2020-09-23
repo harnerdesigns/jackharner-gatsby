@@ -43,7 +43,7 @@ const About = ({ data, pageContext }) => {
       <container className="half black">
 
 
-          <h1>Join {subscriberCount} other subscribers today!</h1>
+          <h1>Join {subscriberCount} Other Subscribers Today!</h1>
           <Button onClick={() => {ref.current.focus()}} size="large" extraStyle={{width: "50%"}} label="Let's Go!!!"/>
 
       </container>
