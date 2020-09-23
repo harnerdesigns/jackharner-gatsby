@@ -11,6 +11,8 @@ footer.main_footer {
 
   @include breakpoint(laptop) {
     flex-direction: column;
+  margin-top: 0;
+
   }
   .main_nav {
     a {

@@ -75,10 +75,10 @@ const IndexPage = ({ data, pageContext }) => {
           <h1>I Learn In Public.</h1>
 
           <p>
-            Now and then, I write about <Link to="/blog">Web Development</Link>,{" "}
+            I write about <Link to="/blog">Web Development</Link>,{" "}
             <Link to="/blog/tags/automation/">Automation</Link> &{" "}
             <a href="https://bleedingcoffee.com">Coffee</a>. By sharing my
-            understanding of a particular topic, I can possibly give the people
+            understanding of a particular topic, I give the people
             learning after me a fresh perspective on a problem and possible
             solutions.
           </p>

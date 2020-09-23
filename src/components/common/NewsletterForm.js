@@ -1,13 +1,14 @@
 import React from "react"
 import Typing from "../Typing"
 
-export const NewsletterForm = () => {
+export const NewsletterForm = React.forwardRef((props, ref) => {
   return (
     <>
       <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
       <form
         action="https://app.convertkit.com/forms/1552450/subscriptions"
         className="seva-form formkit-form"
+        id="newsletterSignup"
         method="post"
         data-sv-form="1552450"
         data-uid="b4591383a4"
@@ -60,6 +61,7 @@ export const NewsletterForm = () => {
                 placeholder="Your email address"
                 required=""
                 type="email"
+                ref={ref}
               />
             </div>
             <button data-element="submit" className="formkit-submit formkit-submit">
@@ -78,4 +80,4 @@ export const NewsletterForm = () => {
       </form>
     </>
   )
-}
+})

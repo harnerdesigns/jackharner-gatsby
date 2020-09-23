@@ -58,10 +58,9 @@ A `/uses` page is a place for developers to share what tools, software, setups a
 * Illustrator and Photoshop are my top 2 out of the collection.
 * Closely followed by Premiere Pro & After Effects.
 * Adobe can pry my CS6 Master Collection from my cold dead hands.
-* Subscription Based Software is only there to milk companies for everything they have. 
 
 ## [WordMove](https://github.com/welaika/wordmove)
 
 * Great piece of software for developing WordPress sites locally. 
-  * Allows you to pull down the content, uploads, pages, and more so you're always working with the live content.
-  * Integrates into most CI/CD platforms for automating deploy's and such. 
+* Allows you to pull down the content, uploads, pages, and more so you're always working with the live content.
+* Integrates into most CI/CD platforms for automating deploy's and such. 

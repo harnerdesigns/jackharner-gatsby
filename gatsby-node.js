@@ -1,12 +1,17 @@
 const _ = require("lodash")
 const path = require("path")
+const fetch = require("node-fetch")
 
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const { attachFields } = require(`gatsby-plugin-node-fields`)
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 
-const { NODE_ENV } = process.env
+const { NODE_ENV, CONVERTKIT_SECRET, CONVERTKIT_KEY } = process.env
 
 console.log(NODE_ENV)
+
 
 function isBlogNode(node) {
   if (node.internal.type !== "MarkdownRemark") {
@@ -239,7 +244,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         }
       }
     }
-  `).then(result => {
+  `).then(async result => {
     if (result.errors) {
       reporter.panicOnBuild(
         `Error while running GraphQL query.` + result.errors
@@ -281,7 +286,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         blogTags = blogTags.concat(edge.node.frontmatter.tags)
       }
     })
-    console.log(blogTags)
+    // console.log(blogTags)
 
     // Count Tags To Get Top Tags
     var topBlogTags = blogTags.reduce(function(p, c) {
@@ -289,7 +294,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       return p
     }, {})
 
-    console.log({ topBlogTags: topBlogTags })
+    // console.log({ topBlogTags: topBlogTags })
 
     var sortedTopBlogTagsArray = []
     for (var tag in topBlogTags) {
@@ -372,7 +377,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         portfolioTags = portfolioTags.concat(edge.node.frontmatter.tags)
       }
     })
-    console.log(portfolioTags)
+    // console.log(portfolioTags)
 
     // Count Tags To Get Top Tags
     var topPortfolioTags = portfolioTags.reduce(function(p, c) {
@@ -380,7 +385,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       return p
     }, {})
 
-    console.log({ topPortfolioTags: topPortfolioTags })
+    // console.log({ topPortfolioTags: topPortfolioTags })
 
     var sortedTopPortfolioTagsArray = []
     for (var tag in topPortfolioTags) {
@@ -434,21 +439,22 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
 
     _.each(result.data.newsletter.edges, (edge, index) => {
-      const edgeCount = result.data.newsletter.edges.length
-      var next;
-      var previous;
-      
-      if (index > 0) next = result.data.newsletter.edges[index - 1].node;
-      if (index < edgeCount - 1) previous = result.data.newsletter.edges[index + 1].node
+      const edgeCount = result.data.blog.edges.length
+      const relatedBlogIndexes = randomNum(0, edgeCount, index)
+
+      const related = [
+        result.data.blog.edges[relatedBlogIndexes[0]].node,
+        result.data.blog.edges[relatedBlogIndexes[1]].node,
+        result.data.blog.edges[relatedBlogIndexes[2]].node,
+      ]
       
 
       createPage({
         path: `${edge.node.fields.slug}`,
-        component: path.resolve("./src/templates/newsletter-single.js"),
+        component: path.resolve("./src/templates/blog-post.js"),
         context: {
           slug: edge.node.fields.slug,
-          next: next,
-          previous: previous
+          related: related
         },
       })
     })
@@ -463,16 +469,27 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
     })
 
+    const subscriberCount = await getSubscriberCount(CONVERTKIT_SECRET, CONVERTKIT_KEY);
+
     createPage({
       path: "/newsletter/",
       component: path.resolve(`src/templates/newsletter.js`),
       context: {
-        recentEmails: recent3
+        recentEmails: recent3,
+        subscriberCount: subscriberCount
       }
     })
   })
 }
 
+async function getSubscriberCount(convertkit_secret, convertkit_key){
+  return fetch('https://api.convertkit.com/v3/subscribers?api_key='+convertkit_key+'&api_secret=' + convertkit_secret)
+  .then(response => response.json())
+  .then(data => { console.log({convertkitRes: data});
+    return data.total_subscribers;  })
+  .catch(err => console.error(err));
+
+}
 
 
 

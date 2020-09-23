@@ -7,10 +7,11 @@ import RssCard from "../components/blog/rssCard"
 import Brave from "../components/verts/brave"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import BlogTitle from "../components/blog/blogTitle"
+import BlogCard from "../components/blog/blogCard"
 
 export default function Template(props) {
   const post = props.data.markdownRemark
-  const { next, previous } = props.pageContext
+  const { related } = props.pageContext
   let postContent = post.html
   postContent = postContent.replace(
     "</p>",
@@ -40,24 +41,18 @@ export default function Template(props) {
           <FontAwesomeIcon icon="envelope" /> Sign Up For My Newsletter & Get
           Early Access To These Posts.
         </Link>
-        <nav className="newsletterNavigation">
-          {next ? (
-            <Link to={next.fields.slug} className="next-post">
-              <FontAwesomeIcon icon="arrow-left" /> {next.frontmatter.title}
-            </Link>
-          ) : (
-            ""
-          )}
-          <h4>Read More</h4>
-          {previous ? (
-            <Link to={previous.fields.slug} className="previous-post">
-              {previous.frontmatter.title}{" "}
-              <FontAwesomeIcon icon="arrow-right" />
-            </Link>
-          ) : (
-            ""
-          )}
-        </nav>
+        <nav className="postNavigation">
+            <h3>Related Posts</h3>
+            <ul>
+              {related.map((post, index) => {
+                return (
+                  <li>
+                    <BlogCard post={post} small />
+                  </li>
+                )
+              })}
+            </ul>
+          </nav>
       </container>
       <container className="slim black">
         <section className="post__post-content">
