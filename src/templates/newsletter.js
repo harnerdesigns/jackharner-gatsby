@@ -25,7 +25,7 @@ const About = ({ data, pageContext }) => {
       </container>
 
       <container className="slim pink">
-        <h2>I only send <span title="For Legal Reasons, This Is A JOKE.">EXPERTLY CRAFTED EMAILS</span> like:</h2>
+        <h2>I only send <span title="For Legal Reasons, This Is A JOKE.">EXPERTLY CRAFTED EMAILS</span> like:</h2> 
 
         <div className="recentEmails">
           {recentEmails.map(({ node: email }) => {
