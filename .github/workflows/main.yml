@@ -62,6 +62,8 @@ jobs:
           NODE_ENV: production
           ENVIRONMENT: ${{ contains(github.ref, 'master') && 'production' || 'staging'}}
           GA: ${{secrets.GA}}
+          CONVERTKIT_SECRET: ${{secrets.CONVERTKIT_SECRET}}
+          CONVERTKIT_KEY: ${{secrets.CONVERTKIT_KEY}}
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.5.9
         with:
