@@ -77,7 +77,7 @@ export default function Template(props) {
           <section className="project__content">
 
             {post.html && (
-              <div dangerouslySetInnerHTML={{ __html: post.html }} />
+              <div className="project__text" dangerouslySetInnerHTML={{ __html: post.html }} />
             )}
             {post.fields.externalLink && (
               <Button
