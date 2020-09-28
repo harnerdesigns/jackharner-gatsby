@@ -11,8 +11,8 @@ const Uses = ({data}) => {
     return(<Layout>
         <SEO title={post.frontmatter.title + " - /uses"} />
         <PageTitle>{post.frontmatter.title}</PageTitle>
-        <container className="slim content black">
-            <main className="post__body" dangerouslySetInnerHTML={{ __html: post.html }} />
+        <container className="slim black">
+            <main className="post__body uses-page" dangerouslySetInnerHTML={{ __html: post.html }} />
 
         </container>
 
