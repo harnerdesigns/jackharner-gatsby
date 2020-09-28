@@ -91,6 +91,7 @@ const StyledLink = styled(Link)`
   transition: 100ms;
   color: var(--text-color);
   background: var(--color);
+  white-space: nowrap;
 
   border: 1px solid var(--color);
 

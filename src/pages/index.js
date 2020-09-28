@@ -103,7 +103,7 @@ const IndexPage = ({ data, pageContext }) => {
           />
         </div>
       </container>
-      <container className="half black">
+      <container className="full black">
         <h1
           style={{
             padding: "1rem",

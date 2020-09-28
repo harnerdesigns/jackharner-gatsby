@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 
 import ColorSwitcher from "./colorSwitcher";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Button from "../atoms/button";
 
 
 
@@ -31,7 +32,7 @@ export default class MainMenu extends Component {
             <Link to="/blog">Blog</Link>
             <Link to="/newsletter">Newsletter</Link>
             <Link to="/about">About</Link>
-            <Link to="/contact">Contact</Link>
+            <Button to="/contact" className="button" label="Get In Touch"/>
             <ColorSwitcher />
 
         </nav>
