@@ -61,7 +61,7 @@ const IndexPage = ({ data, pageContext }) => {
             Everything In Between. If you access it through a web browser, I can build it with an emphasis on
             clean, responsive design.</p>
           <p>
-            I work with <Link to="/portfolio/tags/word-press/">WordPress</Link>, <Link to="/portfolio/tags/php/">PHP</Link>, React, Node, Python & More.
+            I work with <Link to="/portfolio/tags/word-press/">WordPress</Link>, <Link to="/portfolio/tags/php/">PHP</Link>, <Link to="/portfolio/tags/react/">React</Link>, <Link to="/portfolio/tags/node/">Node</Link>, Python & More.
           </p>
         </div>
       </container>
