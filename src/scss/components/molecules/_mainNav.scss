@@ -37,6 +37,13 @@
                 font-size: 1.25em;
                 border-bottom: 1px solid #ccc;
             }
+
+            &.button{
+                background: var(--color);
+                color: var(--text-color);
+                border-radius: var(--border-radius);
+                margin: 0 0.5rem;
+            }
         }
 
 
@@ -101,6 +108,15 @@
 
             &:hover {
                 background: transparentize($color: #fff, $amount: 0.8);
+            }
+
+            
+            &.button{
+                background: var(--text-color);
+                color: var(--color);
+                border-radius: var(--border-radius);
+                margin: 0 0.5rem;
+                width: auto;
             }
 
         }

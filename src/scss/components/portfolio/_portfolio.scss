@@ -208,6 +208,14 @@
       margin-bottom: 0.35em;
       line-height: 1.8;
     }
+
+
+    .project__text{
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }
 

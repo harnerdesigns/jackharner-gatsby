@@ -7,7 +7,8 @@ const Brave = () => {
       <img src={braveIcon} alt="Brave Browser Logo" />
       <p>
         Want to support your favorite content creators (including me!) just by
-        browsing the web? Check out <a href="https://brave.com/jac948">Brave</a>
+        browsing the web? <br />
+        Check out <a href="https://brave.com/jac948">Brave</a>
         , a private, secure and fast web browser that pays YOU to browse.
       </p>
 

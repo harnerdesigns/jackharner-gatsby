@@ -1,0 +1,35 @@
+.uses-page{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: flex-start;
+
+    @include breakpoint(laptop){
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+    }
+
+    .grid-intro{
+        grid-column: 1 / -1;
+
+        p{
+            max-width: 80%;
+            text-align: center;
+
+            @include breakpoint(laptop){
+                max-width: 50%;
+            }
+        }
+    }
+
+    .grid-item{
+        padding: 1rem; 
+        border: 2px dashed #fff;
+
+       h2, h3, h4{ 
+            margin: 0 auto 0.5em;
+            text-align: center;
+        }
+    }
+}

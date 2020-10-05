@@ -8,6 +8,7 @@ import BlogCard from "../components/blog/blogCard";
 import ShareLinks from "../components/social/shareLinks";
 import RssCard from "../components/blog/rssCard";
 import Brave from "../components/verts/brave";
+import Vert from "../components/verts/vert";
 
 export default function Template(props) {
   const post = props.data.markdownRemark
@@ -56,7 +57,7 @@ export default function Template(props) {
       </container>
       <container className="slim black">
         <section className="post__post-content">
-          <Brave />
+          <Vert />
           <ShareLinks post={post} />
           <RssCard />
           <nav className="postNavigation">
