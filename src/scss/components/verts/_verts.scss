@@ -41,7 +41,7 @@
         margin: 1em auto 3em;
         @include breakpoint(laptop) {
             padding: 3em;
-            width: 60%;
+            width: 80%;
         }
     }
 }
@@ -69,4 +69,61 @@
     .title__box{
         border-bottom-color: var(--text-color--inverted);
     }
+}
+
+
+.vert--gridgospel{
+
+    padding: 1rem;
+    align-items: center;
+    grid-template-rows: 7fr 1fr;
+    grid-template-columns: 3fr 4fr;
+    column-gap: 0;
+
+    background: #f6e048;
+    color: #333;
+    border-radius: var(--border-radius);
+
+    .vert__content{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        h1{
+            margin: 1rem auto;
+        }
+
+        h2{
+            margin: 0.25rem auto;
+        }
+
+        ul{
+            margin: 0 auto;
+        }
+
+    }
+
+    ul{
+        text-align:left;
+        max-width: 90%;
+    }
+
+    .vert__img-wrap{
+        border-radius: 10px;
+        grid-row: 1 / span 2;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        filter: drop-shadow(0 2px 3px rgba(0,0,0,0.4));
+
+    }
+
+    img{
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    a.button{ grid-column: 2;
+    background: #333; color: #fff;}
 }
