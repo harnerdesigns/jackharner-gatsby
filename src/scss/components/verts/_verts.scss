@@ -51,29 +51,26 @@
         grid-column: auto / span 3;
         margin: 0 auto 3rem;
 
-        @include breakpoint(laptop){
+        @include breakpoint(laptop) {
             width: 60%;
             margin: 3rem auto;
         }
     }
 }
 
-
-.vert--newsletter{
+.vert--newsletter {
     background: #fff;
     width: 70%;
     margin: 0 auto;
     border-radius: var(--border-radius);
     padding: 1rem;
 
-    .title__box{
+    .title__box {
         border-bottom-color: var(--text-color--inverted);
     }
 }
 
-
-.vert--gridgospel{
-
+.vert--gridgospel {
     padding: 1rem;
     align-items: center;
     grid-template-rows: 7fr 1fr;
@@ -84,46 +81,70 @@
     color: #333;
     border-radius: var(--border-radius);
 
-    .vert__content{
+    .vert__content {
         align-items: center;
         display: flex;
         flex-direction: column;
 
-        h1{
+        h1 {
             margin: 1rem auto;
         }
 
-        h2{
+        h2 {
             margin: 0.25rem auto;
         }
 
-        ul{
+        ul {
             margin: 0 auto;
         }
-
     }
 
-    ul{
-        text-align:left;
+    ul {
+        text-align: left;
         max-width: 90%;
     }
 
-    .vert__img-wrap{
+    .vert__img-wrap {
         border-radius: 10px;
         grid-row: 1 / span 2;
         width: 100%;
         height: 100%;
         display: flex;
-        filter: drop-shadow(0 2px 3px rgba(0,0,0,0.4));
-
+        filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.4));
     }
 
-    img{
+    img {
         width: 100%;
         height: auto;
         border-radius: 10px;
     }
 
-    a.button{ grid-column: 2;
-    background: #333; color: #fff;}
+    a.button {
+        grid-column: 2;
+        background: #333;
+        color: #fff;
+    }
+}
+
+.vert--moreWithLess {
+    background: #fff;
+    color: #333;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    grid-template-columns: 1fr 1fr;
+
+    .vert__img-wrap {
+        border-radius: 10px;
+        grid-row: 1 / span 2;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.4));
+    }
+
+    a.button {
+        grid-column: 2;
+        background: #333;
+        color: #fff;
+    }
 }
