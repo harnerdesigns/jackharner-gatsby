@@ -93,13 +93,8 @@ const StyledRollLink = styled.a`
   }
 
   &:hover {
-    grid-column: auto/ span 4;
+    grid-column: auto / span 4;
     box-shadow: 0 0 30px #000;
     z-index: 2;
-    .gatsby-image-wrapper {
-      img {
-        // transform: scale(1.3);
-      }
-    }
   }
 `
