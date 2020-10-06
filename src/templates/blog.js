@@ -40,6 +40,7 @@ const Blog = ({ data, pageContext }) => {
                 </>
               )
             })}
+            <Vert />
         </div>
       </main>
     </Layout>

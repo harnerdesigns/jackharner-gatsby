@@ -54,6 +54,7 @@
     "react-typist": "^2.0.5",
     "readline-sync": "^1.4.10",
     "replace-in-file": "^5.0.2",
+    "simple-react-lightbox": "^3.3.4-1",
     "slick-carousel": "^1.8.1",
     "splitting": "^1.0.6",
     "styled-components": "^4.4.1",

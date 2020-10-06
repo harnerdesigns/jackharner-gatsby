@@ -5,11 +5,12 @@ import Newsletter from "./newsletter"
 import GridGospel from "./gridGospel"
 import RssCard from "../../components/blog/rssCard"
 import { random } from "lodash"
+import HarnerDesigns from "./harnerDesigns"
 
 
 const Vert = ({index}) => {
 
-  let vertCount = 2;
+  let vertCount = 3;
 
   if(!index) {index = random(1, vertCount)}
 
@@ -18,6 +19,8 @@ const Vert = ({index}) => {
       return(<GridGospel />)   
     case 2: 
       return(<Brave />)
+    case 3: 
+      return(<HarnerDesigns />)
     default:
       return(null)
   }

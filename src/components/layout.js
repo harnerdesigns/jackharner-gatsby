@@ -12,6 +12,8 @@ import "./fontawesome"
 import Header from "./common/header"
 import "../scss/style.scss"
 import Footer from "./common/footer"
+import SimpleReactLightbox from "simple-react-lightbox";
+
 
 const Layout = ({ children, footerCTA }) => {
   const data = useStaticQuery(graphql`
@@ -24,7 +26,9 @@ const Layout = ({ children, footerCTA }) => {
     }
   `)
   return (
-    <>
+         <SimpleReactLightbox>
+
+    
       <div>
         <Header siteTitle={data.site.siteMetadata.title} />
 
@@ -32,7 +36,7 @@ const Layout = ({ children, footerCTA }) => {
 
         <Footer footerCTA={footerCTA} />
       </div>
-    </>
+    </SimpleReactLightbox>
   )
 }
 

@@ -6,6 +6,7 @@ import ProjectCard from "../components/portfolio/projectCard"
 import ProjectHeader from "../components/portfolio/projectHeader"
 import Button from "../components/atoms/button"
 import defaultOGImage from "../images/jackHarner-default-OG.jpg"
+import { SRLWrapper } from "simple-react-lightbox";
 
 export default function Template(props) {
   const post = props.data.markdownRemark
@@ -64,7 +65,11 @@ export default function Template(props) {
             <section className="project__images">
               {post.frontmatter.images.map((image, index) => {
                 return image ? (
+                  <SRLWrapper>
+
                   <img src={image.childImageSharp.sizes.src} alt="" />
+                  </SRLWrapper>
+
                 ) : (
                   ""
                 )

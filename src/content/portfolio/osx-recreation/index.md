@@ -4,7 +4,7 @@ title: "OS X Recreation"
 logo: "./osx-logo.svg"
 description: "Built From Scratch CSS"
 color: "#7D7D7D"
-tags: ["HTML", "CSS", "CodePen"]
+tags: ["HTML", "CSS", "CodePen", "Animation"]
 images: 
 weight: -1
 published: true
