@@ -3,8 +3,21 @@ import React from "react"
 import _ from "lodash"
 
 import { Link } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const ProjectHeader = ({ post, index, small, nolink }) => {
+  let filterTags, tags;
+
+  if(post.frontmatter.tags){
+
+    let filterTags = post.frontmatter.tags.filter((tag, i) => (i < 3 ? true : false))
+    tags = <div className="tags"><FontAwesomeIcon icon="tag" /> {filterTags.map((tag, i) => {
+      const tagLink = `/portfolio/tags/${_.kebabCase(tag)}/`
+
+        return (                <Link to={tagLink}>
+          {tag}{i < filterTags.length - 1 ? ", " : (filterTags.length < post.frontmatter.tags.length ? ", + " + (post.frontmatter.tags.length - filterTags.length) : "")}</Link>)
+    })}</div>;
+}
   return (
     <header
       className={
@@ -33,12 +46,7 @@ const ProjectHeader = ({ post, index, small, nolink }) => {
         ) : (
           ""
         )}
-
-        <ul className="project__tags">
-          {post.frontmatter.tags.map((tag, index) => {
-            return <li>{tag}</li>
-          })}
-        </ul>
+      {tags}
       </div>
     </header>
   )

@@ -62,12 +62,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
         trackingId: process.env.GA,
       }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-mdx`,
+
 
     {
       resolve: "gatsby-transformer-remark",

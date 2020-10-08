@@ -4,10 +4,11 @@ title: "Recent Posts Markdown Generator"
 logo: "./icon-line.svg"
 description: "WordPress Plugin"
 color: "#4e2ea1"
-tags: ["WordPress", "PHP"]
+tags: ["WordPress", "PHP", "Automation"]
 images: ["./screenshot-with-markdown.png"]
 weight: 0
-published: false
+published: true
+externalLink: https://wordpress.org/plugins/recent-posts-markdown/
 ---
 
 
