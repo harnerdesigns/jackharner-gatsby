@@ -38,13 +38,6 @@ a.button {
         }
     }
 
-
-    &:nth-child(2) {
-        background: none;
-        color: var(--color);
-        border: 2px solid var(--color);
-        font-weight: 400;
-    }
 }
 
 .full {
