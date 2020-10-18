@@ -27,7 +27,7 @@ export default class GoesRight extends Component {
 
         return (
 
-            <container className="mood__container" id="goesRight">
+            <section className="mood__section" id="goesRight">
 
                 <h1>What If It All Goes <span className="strikeThrough" >
                     <span className="char" data-char="W">W</span>
@@ -36,7 +36,7 @@ export default class GoesRight extends Component {
                     <span className="char" data-char="n">n</span>
                     <span className="char" data-char="g">g</span></span> <span className="right">Right?</span></h1>
 
-            </container>
+            </section>
         )
     }
 

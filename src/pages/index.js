@@ -24,7 +24,7 @@ const IndexPage = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title="Jack Of All Trades, Master Of Some" />
-      <container className="full black intro">
+      <section className="full black intro">
         <section className="introduction">
           <h1>
             Hi, I'm <b>Jack&nbsp;Harner</b>
@@ -37,8 +37,8 @@ const IndexPage = ({ data, pageContext }) => {
           </div>
         </section>
         <FontAwesomeIcon icon="caret-down" id="scrollIndicator" />
-      </container>
-      <container className="half white row">
+      </section>
+      <section className="half white row">
         <div className="recent-projects">
           {portfolioPosts
             .filter(post => post.node.frontmatter.title.length > 0)
@@ -64,13 +64,13 @@ const IndexPage = ({ data, pageContext }) => {
             I work with <Link to="/portfolio/tags/word-press/">WordPress</Link>, <Link to="/portfolio/tags/php/">PHP</Link>, <Link to="/portfolio/tags/react/">React</Link>, <Link to="/portfolio/tags/node/">Node</Link>, Python & More.
           </p>
         </div>
-      </container>
-      <container className="half pink">
+      </section>
+      <section className="half pink">
         <h1>A Man Of The People:</h1>
 
         <Quotes quotes={quotes} />
-      </container>
-      <container className="full white row">
+      </section>
+      <section className="full white row">
         <div className="column">
           <h1>I Learn In Public.</h1>
 
@@ -102,8 +102,8 @@ const IndexPage = ({ data, pageContext }) => {
             label="See The Blog »"
           />
         </div>
-      </container>
-      <container className="full black">
+      </section>
+      <section className="full black">
         <h1
           style={{
             padding: "1rem",
@@ -120,7 +120,7 @@ const IndexPage = ({ data, pageContext }) => {
           </a>
         </p>
         <PhotoRoll photos={photos} />
-      </container>
+      </section>
     </Layout>
   )
 }

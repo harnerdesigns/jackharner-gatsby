@@ -12,7 +12,7 @@ const Contact = () => (
     <SEO title="Contact" />
 
     <PageTitle>Get In Touch</PageTitle>
-    <container className="half black">
+    <section className="half black">
       <h2>The best ways to get a hold of me are:</h2>
       <section className="buttons">
         <Button
@@ -50,9 +50,9 @@ const Contact = () => (
           some stranger online
         </li>
       </ul>
-    </container>
+    </section>
 
-    <container className="full black" id="followMe">
+    <section className="full black" id="followMe">
       <h2>Other Places You Can Find Me:</h2>
       <section className="socials">
         <a
@@ -110,7 +110,7 @@ const Contact = () => (
           Product Hunt
         </a>
       </section>
-    </container>
+    </section>
   </Layout>
 )
 

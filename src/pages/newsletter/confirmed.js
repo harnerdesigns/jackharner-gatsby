@@ -10,10 +10,10 @@ const Confirmed = () => {
 return (
     <Layout footerCTA={false}>
       <SEO title="Thanks For Signing Up" />
-      <container className="half black">
+      <section className="half black">
         <FontAwesomeIcon icon="envelope" style={{fontSize: "15rem", margin: "4rem", color: "var(--color)"}} />
           <h1>Thanks For Being Real!</h1>
-      </container>
+      </section>
     </Layout>
   )
 }

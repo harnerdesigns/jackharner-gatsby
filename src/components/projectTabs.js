@@ -37,7 +37,7 @@ class ProjectTabs extends Component {
     render() {
 
         return (
-            <container className="slim white">
+            <section className="slim white">
                 <h2>Recent Projects</h2>
                 <div className={"things " + (this.state.openTab != null ? "is-open" : "")}>
                     <header className="things__tabs">
@@ -111,7 +111,7 @@ class ProjectTabs extends Component {
                         </div>
                     </section>
                 </div>
-            </container>
+            </section>
         )
     }
 

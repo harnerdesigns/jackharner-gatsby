@@ -31,7 +31,7 @@ export default function Template(props) {
       <ProjectHeader post={post} />
 
       {post.fields.externalLink.includes("codepen") && (
-              <container className="full black">
+              <section className="full black">
                 <p
                   className="codepen"
                   data-height="100%"
@@ -51,9 +51,9 @@ export default function Template(props) {
                   </span>
                 </p>
 
-              </container>
+              </section>
             )}
-      <container className="half black">
+      <section className="half black">
         <main
           className={
             post.frontmatter.images && post.frontmatter.images.length > 0
@@ -106,7 +106,7 @@ export default function Template(props) {
             })}
           </ul>
         </nav>
-      </container>
+      </section>
     </Layout>
   )
 }

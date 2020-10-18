@@ -27,7 +27,7 @@ export default function Template(props) {
         }
       />
       <BlogTitle post={post} />
-      <container className="half black content">
+      <section className="half black content">
         {post.fields.externalLink ? (
           <Button
             href={post.fields.externalLink}
@@ -54,8 +54,8 @@ export default function Template(props) {
         >
 
         </main>
-      </container>
-      <container className="slim black">
+      </section>
+      <section className="slim black">
         <section className="post__post-content">
           <Vert />
           <ShareLinks post={post} />
@@ -73,7 +73,7 @@ export default function Template(props) {
             </ul>
           </nav>
         </section>
-      </container>
+      </section>
     </Layout>
   )
 }
