@@ -3,7 +3,7 @@ date: 2020-10-18T02:53:15.461Z
 title: "Display ConvertKit Subscriber Count On Your Gatsby Site" 
 subtitle: "Use Social Proof To Drive More Newsletter Signups"
 featuredImage: "./nick-hillier-yD5rv8_WzxA-unsplash.jpg"
-ogImage: "./jackharner-convertkit-blog-og.jpg"
+ogImage: "./jackharner-convertkit-blog-og.png"
 tags: ['Gatsby', 'Automation', 'JavaScript']
 externalLink: ""
 published: true
