@@ -27,11 +27,11 @@ export default class DontWorry extends Component {
 
         return (
 
-            <container className="mood__container" id="DontWorry">
+            <section className="mood__section" id="DontWorry">
 
                 
 
-            </container>
+            </section>
         )
     }
 

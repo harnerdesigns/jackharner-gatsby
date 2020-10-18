@@ -20,11 +20,11 @@ const Newsletter = ({
         image={ogImage}
         description="Sign Up for my newsletter and learn about Web Development, Graphic Design, Automation, & More!"
       />
-      <container className="half white">
+      <section className="half white">
         <NewsletterForm ref={ref} />
-      </container>
+      </section>
 
-      <container className="slim pink">
+      <section className="slim pink">
         <h2>
           I only send{" "}
           <span title="For Legal Reasons, This Is A JOKE.">
@@ -57,7 +57,7 @@ const Newsletter = ({
           </a>
           !
         </h2>
-      </container>
+      </section>
       <section className="half black">
         <h1>Join {subscriberCount} Other Subscribers Today!</h1>
         <Button

@@ -23,18 +23,18 @@ const About = ({ data }) => {
     <Layout>
       <SEO title="About" />
       <PageTitle>About Me</PageTitle>
-      <container className="half content black">
+      <section className="half content black">
         <h2>Hi! My Name is Jack.</h2>
         <h3>I'm a Web Developer based in Albuquerque, NM.</h3>
         <p>
           I like making stuff with WordPress, learning new things in Web Dev
           (these days it's React), playing Overwatch, & spending time with my four cats.
         </p>
-      </container>
-      <container className="slim  black">
+      </section>
+      <section className="slim  black">
         <ImageGrid images={[Chief, Sara, BabyKitty]} />
-      </container>
-      <container className="content slim pink">
+      </section>
+      <section className="content slim pink">
         <h2>In The Beginning</h2>
         <p>
           I got my start in web development a really long time ago in a far off
@@ -43,11 +43,11 @@ const About = ({ data }) => {
           Layout, complete with way too many <code>&lt;blink&gt;</code> &{" "}
           <code>&lt;marquee&gt;</code> tags.{" "}
         </p>
-      </container>
-      <container className="half pink">
+      </section>
+      <section className="half pink">
         <h2>A long time later...</h2>
-      </container>
-      <container className="content slim pink">
+      </section>
+      <section className="content slim pink">
         <p>
           In the time that it took you to scroll down, I developed a passion for
           clean, responsive design. I made the pretty natural progression from
@@ -59,9 +59,9 @@ const About = ({ data }) => {
           applications with a friendly user interface for adding and updating
           content for all levels of tech-savvy users.
         </p>
-      </container>
+      </section>
 
-      <container className="content full white">
+      <section className="content full white">
         <h2>Powering an E-Commerce Retail Store</h2>
 
         <p>
@@ -70,8 +70,8 @@ const About = ({ data }) => {
           Marketing Director, but it's a small company so I wear a lot of hats.
           My day to day tasks include (but are not limited to):
         </p>
-      </container>
-      <container className="slim white">
+      </section>
+      <section className="slim white">
         <section className="task-grid">
           <h3>Maintaining and Updating the Website</h3>
           <p>
@@ -103,9 +103,9 @@ const About = ({ data }) => {
           <h3>And So Much More...</h3>
         </section>
         <ImageGrid images={[Shoolu, Returns, ShooluSocial]} />
-      </container>
+      </section>
 
-      <container className="content full black">
+      <section className="content full black">
         <h2>Lifetime Learner</h2>
 
         <p>
@@ -128,8 +128,8 @@ const About = ({ data }) => {
           for later, but also with the hopes of helping someone after me working
           through the same problems.
         </p>
-      </container>
-      <container className="content slim white">
+      </section>
+      <section className="content slim white">
         <h2>Outside The Internet</h2>
 
         <p>
@@ -146,12 +146,12 @@ const About = ({ data }) => {
           <a href="https://unsplash.com/@jackharner">Unsplash</a>), and enjoying
           Albuquerque's 360 Days of Sun per year.{" "}
         </p>
-      </container>
+      </section>
 
-      <container className="slim white">
+      <section className="slim white">
         <PhotoRoll photos={photos} />
-      </container>
-      <container className="content slim white">
+      </section>
+      <section className="content slim white">
         <h2>If You Want More Of Me...</h2>
         <p>
           Give me a follow on Twitter,{" "}
@@ -159,7 +159,7 @@ const About = ({ data }) => {
           <Link to="/blog">Blog</Link>, or some of the{" "}
           <a href="https://harnerdesigns.com">work I've done</a>.{" "}
         </p>
-      </container>
+      </section>
     </Layout>
   )
 }
