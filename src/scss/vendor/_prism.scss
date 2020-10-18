@@ -21,3 +21,14 @@
         border-right: 0;
     }
 }
+
+.gatsby-highlight-code-line {
+  background-color: rgba(255,255,255,0.1);
+  display: block;
+  margin-right: -1em;
+  margin-left: -1em;
+  padding-right: 1em;
+  padding-left: 0.75em;
+  border-left: 0.5em solid var(--color);
+  position: relative;
+}
