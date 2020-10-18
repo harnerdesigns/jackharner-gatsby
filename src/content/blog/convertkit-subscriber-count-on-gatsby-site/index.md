@@ -23,7 +23,7 @@ I'll leave the psychology to the psychologists, let's dive in.
 
 ## Get API Keys from [ConvertKit](https://convertkit.com?lmref=HnoQfg)
 
-The first thing you need to do is get your account's API keys from [ConvertKit](https://convertkit.com?lmref=HnoQfg). There located under `Account Settings > General`:
+The first thing you need to do is get your account's API keys from [ConvertKit](https://convertkit.com?lmref=HnoQfg). They're located under `Account Settings > General`:
 
 ![ConvertKit Keys Location](./ConvertKit-Keys.png)
 
@@ -87,6 +87,8 @@ async function getSubscriberCount(ck_secret, ck_key) {
 }
 ```
 
+Once we get a response from ConvertKit, we convert that response to a useable JSON Object, write the value to the Log for debugging purposes and then return the specific data we needed. 
+
 Now anytime you call the `getSubscriberCount()` function it will return your current subscriber count. You can then call this around your `gatsby-node.js` file as needed. 
 
 ## Pass The Subscriber Count To Your Pages
@@ -115,7 +117,7 @@ createPage({
 
 ## Using Page Context to Display Your Subscriber Count
 
-Now that our Newsletter page gets generated with access to our Subscriber count let's modify the page template to include. In my case it's `src/templates/newsletter.js` but pick whichever page your trying to use.
+Now that our Newsletter page gets generated with access to our Subscriber count let's modify the page template to include it. In my case the template file is `src/templates/newsletter.js` but pick whichever page your trying to modify.
 
 Page templates in Gatsby are just React Components that receive some data through Props and output JSX to be compiled to HTML at build time. 
 
@@ -202,6 +204,7 @@ Some suggestions for taking this tutorial further:
 * An alternative option to explore if you need that number _all over_ would be adding it as a node on your GraphQL tree instead of using Page Context. Then you could request it in any GraphQl Query you make.
 * Automate your CI/CD process to either rebuild the site daily or listen for a ConverKit Webhook to rebuild the site on every new subscriber.
 
+Let me know on Twitter [@JackHarner](https://twitter.com/jackharner) if you have any questions or implemented any part of this yourself! I'd love to see it!
 ---
 
 #### Featured Image by <a href="https://unsplash.com/@nhillier?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Nick Hillier</a> on <a href="https://unsplash.com/s/photos/number?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
