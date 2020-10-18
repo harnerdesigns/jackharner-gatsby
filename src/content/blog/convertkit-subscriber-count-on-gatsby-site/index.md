@@ -3,10 +3,10 @@ date: 2020-10-18T02:53:15.461Z
 title: "Display ConvertKit Subscriber Count On Your Gatsby Site" 
 subtitle: "Use Social Proof To Drive More Newsletter Signups"
 featuredImage: "./nick-hillier-yD5rv8_WzxA-unsplash.jpg"
-ogImage: ""
+ogImage: "./jackharner-convertkit-blog-og.jpg"
 tags: ['Gatsby', 'Automation', 'JavaScript']
 externalLink: ""
-published: false
+published: true
 ---
 
 # Do you want to include the Subscriber Count from your [ConvertKit](https://convertkit.com?lmref=HnoQfg) Newsletter on your Gatsby.js Site?
