@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BlogTitle from "../components/blog/blogTitle";
@@ -12,7 +12,7 @@ import Vert from "../components/verts/vert";
 
 export default function Template(props) {
   const post = props.data.markdownRemark
-  const { related } = props.pageContext
+  const { related, newsletter } = props.pageContext
   let postContent = post.html
   postContent = postContent.replace("</p>",'</p><script async="true" type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CE7ITK7W&placement=jackharnercom" id="_carbonads_js"></script>')
   return (
@@ -47,12 +47,13 @@ export default function Template(props) {
           ""
         )}
 
+{(newsletter ? <Link to="/newsletter"><h4 style={{padding: "1rem", background: "var(--color)", color: "var(--text-color)"}}>Originally Sent To My Newsletter. Get Posts Like This A Week Early By <span style={{fontWeight: 900}}>Signing Up &raquo;</span></h4></Link> : "")}
+
         
         <main
           className={"post__body " + post.fields.slug}
-          dangerouslySetInnerHTML={{ __html: postContent }}
+          dangerouslySetInnerHTML={{ __html:  postContent }}
         >
-
         </main>
       </section>
       <section className="slim black">
