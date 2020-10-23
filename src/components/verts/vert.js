@@ -1,29 +1,25 @@
 import React from "react"
 
-import Brave from "./brave"
-import Newsletter from "./newsletter"
-import GridGospel from "./gridGospel"
-import RssCard from "../../components/blog/rssCard"
-import { random } from "lodash"
-import HarnerDesigns from "./harnerDesigns"
+const Vert = ({ link, slug, children, image, buttonText }) => {
+  return (
+    <a
+      href={link}
+      target="_blank"
+      rel="noreferrer noopener"
+      className={`vert vert--${slug} vert--${
+        image ? "with-icon" : "withoug-icon"
+      }`}
+    >
+      <div className="vert__content">{children}</div>
+      {image && (
+        <div className="vert__img-wrap">
+          <img src={image} />
+        </div>
+      )}
 
-
-const Vert = ({index}) => {
-
-  let vertCount = 3;
-
-  if(!index) {index = random(1, vertCount)}
-
-  switch(index){
-    case 1: 
-      return(<GridGospel />)   
-    case 2: 
-      return(<Brave />)
-    case 3: 
-      return(<HarnerDesigns />)
-    default:
-      return(null)
-  }
+      {buttonText && <a className="button">{buttonText}</a>}
+    </a>
+  )
 }
 
 export default Vert

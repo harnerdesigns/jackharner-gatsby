@@ -4,7 +4,7 @@ title: "Display ConvertKit Subscriber Count On Your Gatsby Site"
 subtitle: "Use Social Proof To Drive More Newsletter Signups"
 featuredImage: "./nick-hillier-yD5rv8_WzxA-unsplash.jpg"
 ogImage: "./jackharner-convertkit-blog-og.png"
-tags: ['Gatsby', 'Automation', 'JavaScript']
+tags: ['Gatsby', 'Automation', 'JavaScript', 'Tutorial']
 externalLink: ""
 published: true
 ---

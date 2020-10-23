@@ -1,21 +1,23 @@
 import React from "react"
-import braveIcon from "../../images/brave_lion_alt.png"
+import braveIcon from "../../images/Brave-logo-monotone-reversed.svg"
+import Vert from "./vert"
 
 const Brave = () => {
+    const link = "https://brave.com/jac948"
   return (
-    <section className="vert vert--brave vert--with-icon">
-      <img src={braveIcon} alt="Brave Browser Logo" />
+
+    <Vert
+    link={link}
+    image={braveIcon}
+    slug="brave"
+    buttonText="Download Brave Today &raquo;"
+  >
       <p>
         Want to support your favorite content creators (including me!) just by
         browsing the web? <br />
-        Check out <a href="https://brave.com/jac948">Brave</a>
-        , a private, secure and fast web browser that pays YOU to browse.
       </p>
-
-      <a className="button" href="https://brave.com/jac948">
-        Learn More &raquo;
-      </a>
-    </section>
+        <h3>A private, secure and fast web browser that pays YOU to browse.</h3>
+    </Vert>
   )
 }
 
