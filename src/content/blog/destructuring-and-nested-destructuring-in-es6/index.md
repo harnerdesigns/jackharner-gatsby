@@ -72,7 +72,7 @@ const [first, second, third] = people
 console.log(second) // "Bon"
 ```
 
-It assigns the items in your array to the corresponding variable in the destructuring array. If you need to skip the first two items in the array you can do so with just a comma:
+It assigns the items in your array to the corresponding variable in the destructuring array. If, for whatever reason, you need to skip the first two items in the array you can do so with just a comma:
 
 ```js
 
@@ -88,7 +88,7 @@ console.log(third) // "Jovi"
 
 ## Nested Destructuring
 
-Let's take a look at a more complex example. 
+Let's take a look at a more complex object example. 
 
 ```js
 let person = {
@@ -116,7 +116,7 @@ With Nested Destructuring, you can cherry pick properties to get from how ever m
 
 Keep in mind, when you destructure down into a property, like the example above, it does not set the variable of the property you went down in to. 
 
-```js
+```js{3}
 let {married: {spouse: {name}}} = person
 
 console.log(spouse) // undefined

@@ -8,7 +8,7 @@ import BlogCard from "../components/blog/blogCard";
 import ShareLinks from "../components/social/shareLinks";
 import RssCard from "../components/blog/rssCard";
 import Brave from "../components/verts/brave";
-import Vert from "../components/verts/vert";
+import Vert from "../components/verts/shuffler";
 
 export default function Template(props) {
   const post = props.data.markdownRemark

@@ -1,23 +1,23 @@
 import React from "react"
 import MoreWithLess from "../../images/more-with-less.png"
+import Vert from "./vert"
 
 
 const HarnerDesigns = () => {
+    const link = "https://harnerdesigns.com/product/more-with-less/?utm_source=jackharner"
     return (
-        <section className="vert vert--moreWithLess vert--with-icon">
-            <a className="vert__img-wrap" href="https://harnerdesigns.com/product/more-with-less/?utm_source=jackharner">
-
-                <img src={MoreWithLess} alt="More With Less T Shirt" />
-            </a>
+        <Vert
+        link={link}
+        image={MoreWithLess}
+        slug="moreWithLess"
+        buttonText="Get This Shirt &raquo;"
+      >
             <div className="vert__content">
-                <h2>Why Do Less With More,</h2>
-                <h2>When You Can Do</h2>
-                <h1><a href="https://harnerdesigns.com/product/more-with-less/?utm_source=jackharner">More With Less?</a></h1>
+                <h3>Why Do Less With More,</h3>
+                <h3>When You Can Do</h3>
+                <h2>More With Less?</h2>
             </div>
-            <a className="button" href="https://harnerdesigns.com/product/more-with-less/?utm_source=jackharner">
-                Get This Shirt &raquo;
-      </a>
-        </section>
+        </Vert>
     )
 }
 

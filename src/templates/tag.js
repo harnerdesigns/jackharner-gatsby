@@ -6,7 +6,7 @@ import BlogCard from "../components/blog/blogCard"
 import PageTitle from "../components/pageTitle"
 import ProjectCard from "../components/portfolio/projectCard"
 import TopTags from "../components/common/topTags"
-import Vert from "../components/verts/vert"
+import Vert from "../components/verts/shuffler"
 class TagRoute extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
