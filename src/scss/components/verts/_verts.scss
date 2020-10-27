@@ -175,8 +175,8 @@
 
     a.button {
         grid-column: 2;
-        background: #333;
-        color: #fff;
+        background: var(--color);
+        color: var(--text-color);
     }
 }
 
