@@ -15,8 +15,7 @@ a.button {
     text-transform: capitalize;
 
     &:hover {
-        transform: scale(1.05);
-        box-shadow: 0 2px 5px transparentize(#000, 0.9);
+        @include hardShadow(5, var(--darker-color));
     }
 
 

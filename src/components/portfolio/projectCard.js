@@ -2,7 +2,11 @@ import PropTypes from "prop-types"
 import React from "react"
 import _ from "lodash"
 
+import tagIcons from "../../templates/tags/tag-icons"
+
+
 import { Link } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const ProjectCard = ({ post, index, small, nolink }) => {
   return (
@@ -30,7 +34,7 @@ const ProjectCard = ({ post, index, small, nolink }) => {
           />
         </div>}
         <div className="card__titles">
-          <h2 className="project__title">{post.frontmatter.title}</h2>
+          {/* <h2 className="project__title">{post.frontmatter.title}</h2> */}
 
           {post.frontmatter.description != null ? (
             <h4 className="project__description">
@@ -39,13 +43,13 @@ const ProjectCard = ({ post, index, small, nolink }) => {
           ) : (
             ""
           )}
-
-          <ul className="project__tags">
+        </div>
+        <ul className="project__tags">
             {post.frontmatter.tags.map((tag, index) => {
-              return <li>{tag}</li>
+              return <li>                  <FontAwesomeIcon fixedWidth icon={tagIcons[tag]} />
+               <span>{tag}</span></li>
             })}
           </ul>
-        </div>
       </article>
     </Link>
   )

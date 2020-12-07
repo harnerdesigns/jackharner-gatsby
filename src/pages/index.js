@@ -53,6 +53,7 @@ const IndexPage = ({ data, pageContext }) => {
             to="/portfolio"
             extraStyle={{ gridColumn: "1 / -1" }}
             label="My Full Portfolio »"
+            size="large"
           />
         </div>
         <div className="column">
@@ -100,6 +101,8 @@ const IndexPage = ({ data, pageContext }) => {
             to="/blog"
             extraStyle={{ gridColumn: "1 / -1" }}
             label="See The Blog »"
+            size="large"
+
           />
         </div>
       </section>

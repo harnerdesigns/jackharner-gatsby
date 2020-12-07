@@ -4,12 +4,12 @@
     grid-template-columns: 1fr;
     align-items: stretch;
     justify-content: flex-start;
-    grid-gap: 2em;
+    grid-gap: 4rem;
 
     @include breakpoint(laptop) {
       grid-template-columns: repeat(3, 1fr);
       max-width: 95%;
-      margin: 0 auto;
+      margin: 0 auto 5rem;
     }
   }
 }
@@ -48,7 +48,6 @@
     background: #fff;
     padding: 0.5em;
     margin: 0;
-    border-radius: 0 0 var(--border-radius) var(--border-radius);
 
     // @include card(-2);
 
@@ -61,33 +60,43 @@
     }
 
     .project__description {
-      color: #666;
+      color: #333;
       text-align: center;
       margin: 0;
+      font-size: 1.5rem;
     }
 
-    .project__tags {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #999;
-      font-size: 1em;
-      font-weight: 100;
-      margin: 0 0.5em;
+    
+  }
 
-      li {
-        list-style: none;
-        padding: 0 0.15em;
-        margin: 0;
+  .project__tags {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: rgba(0,0,0,0.2);
+    font-size: 1em;
+    font-weight: 100;
+    width: auto;
+    margin: 0 4rem;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
 
+
+    li {
+      list-style: none;
+      padding: 0 0.15em;
+      margin: 0;
+      span{
+        font-size: 0.8em;
+      }
+
+      &:after {
+        content: ",";
+      }
+
+      &:last-child {
         &:after {
-          content: ",";
-        }
-
-        &:last-child {
-          &:after {
-            content: none;
-          }
+          content: none;
         }
       }
     }
@@ -101,6 +110,9 @@
       width: 100%;
     }
     .card__titles {
+      display: grid;
+      align-items: center;
+      padding: 0.5rem;
       .project__title {
         font-size: 2rem;
       }
@@ -109,10 +121,17 @@
         font-size: 1.5rem;
       }
 
-      .project__tags {
-        display: none;
-      }
     }
+        .project__tags {
+          li{
+            &:after{
+              content: "";
+            }
+          }
+          span {
+            display: none;
+          }
+        }
   }
 }
 
