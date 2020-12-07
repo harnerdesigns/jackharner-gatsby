@@ -4,11 +4,11 @@ title: "The Grid Gospel"
 logo: "./Grid-Gospel-Text-Logo.svg" 
 description: "An Intro To CSS Grid"
 color: "#f6e048"
-tags: ["CSS"]
+tags: ["CSS", "Writing"]
 images: [ "The-Grid-Gospel-cover-image.jpg", "The-Grid-Gospel-Cover--final.jpg"]
 weight: 100
 published: true
-externalLink: https://gridgospel.com
+externalLink: https://gridgospel.com 
 ---
 
 CSS Grid is an insanely powerful new technology for the web. It's not really new, but a lot of people don't really understand fully how to use it. 

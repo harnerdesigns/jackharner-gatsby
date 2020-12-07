@@ -31,7 +31,8 @@ const tagIcons = {
   Newsletter: "envelope",
   Python: ["fab", "python"],
   Shopify: ["fab", "shopify"],
-  "E-Commerce": 'shopping-bag'
+  "E-Commerce": 'shopping-bag',
+  Writing: "pencil"
 }
 
 export default tagIcons
