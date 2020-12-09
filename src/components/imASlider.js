@@ -13,6 +13,7 @@ class ImASlider extends Component {
         "Graphic Designer",
         "Cat Lover",
         "Entrepreneur",
+        "Philanthropist"
       ],
     }
   }
