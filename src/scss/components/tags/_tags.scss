@@ -1,0 +1,13 @@
+.tag-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+
+    @include breakpoint(laptop){
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+
+        grid-gap: 2rem;
+        max-width: 80%;
+        margin: 4rem auto;
+    }
+}

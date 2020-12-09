@@ -26,7 +26,7 @@ class TagRoute extends React.Component {
           <PageTitle>Project Tags</PageTitle>
 
           <main className="page_body page_body--grid">
-            <div className="blog-posts">
+            <div className="tag-grid">
               {sortedTags.map((tag, index) => {
                 const tagLink = `/portfolio/tags/${_.kebabCase(tag)}/`
                 return (

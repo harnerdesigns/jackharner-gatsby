@@ -37,9 +37,10 @@ export default class MainMenu extends Component {
 
         </nav>
 
-        <button id="mobileMenuToggle" aria-label="Menu" onClick={this.toggleMenu} type={"button"}>
-            <FontAwesomeIcon icon="bars"></FontAwesomeIcon>
+        <button id="mobileMenuToggle" class={(this.state.isOpen ? "is-open" : "")} aria-label="Menu" onClick={this.toggleMenu} type={"button"}>
+            <FontAwesomeIcon fixedWidth icon={(this.state.isOpen ? "times" : "bars")}></FontAwesomeIcon>
         </button>
+        <div id="mobileMenuBG" class={(this.state.isOpen ? "is-open" : "")} onClick={this.toggleMenu}></div>
     </>)
     }
 

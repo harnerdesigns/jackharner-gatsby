@@ -31,7 +31,9 @@ import {
   faTools,
   faEllipsisH,
   faQuestionCircle, faShoppingBag,
-  faPencilAlt
+  faPencilAlt,
+  
+  faTimes
 } from "@fortawesome/free-solid-svg-icons"
 
 config.autoAddCss = false
@@ -68,5 +70,6 @@ library.add(
   faTools,
   faEllipsisH,
   faQuestionCircle, faShoppingBag,
-  faPencilAlt
+  faPencilAlt,
+  faTimes
 )
