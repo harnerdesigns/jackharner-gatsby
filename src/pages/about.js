@@ -28,7 +28,7 @@ const About = ({ data }) => {
         <h3>I'm a Web Developer based in Albuquerque, NM.</h3>
         <p>
           I like making stuff with WordPress, learning new things in Web Dev
-          (these days it's React), playing Overwatch, & spending time with my four cats.
+          (these days it's React), playing Overwatch / Valorant / Minecraft, & spending time with my three cats.
         </p>
       </section>
       <section className="slim  black">
