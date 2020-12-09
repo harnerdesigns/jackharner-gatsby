@@ -68,7 +68,7 @@ const About = ({ data }) => {
           I currently work for <a href="https://shoolu.com">Shoolu.com</a>, a
           rapidly growing E-Commerce Shoe Store. My title is technically
           Marketing Director, but it's a small company so I wear a lot of hats.
-          My day to day tasks include (but are not limited to):
+          My day to day tasks include (but are definitely not limited to):
         </p>
       </section>
       <section className="slim white">
