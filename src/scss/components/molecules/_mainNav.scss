@@ -44,13 +44,16 @@
                     width: 100%;
                     border-radius: 0;
                 }
+
+                &:hover {
+                    background: var(--darker-color);
+                }
             }
         }
 
         #colorSwitcher {
             padding: 0.5em;
             margin-right: auto;
-            
 
             @include breakpoint(mobileonly) {
                 width: 100%;
@@ -58,16 +61,22 @@
                 text-align: left;
                 font-size: 1em;
                 order: -1;
-                background: var(--text-color--inverted);
-                svg{ 
+                border-bottom: 1px solid #ccc;
+
+                svg {
                     font-size: 1.5em;
                     vertical-align: middle;
                 }
-            &:after{
-                content: "Pick A Color";
-                margin: 0 0 0 0.5rem;
-                font-size: 1.25em;
-            }
+                &:after {
+                    content: "Pick A Color";
+                    margin: 0 0 0 0.5rem;
+                    font-size: 1.25em;
+                    font-weight: 900;
+                }
+                &:hover{
+                    background: var(--color);
+                    color: var(--text-color);
+                }
             }
         }
     }

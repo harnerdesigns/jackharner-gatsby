@@ -8,7 +8,7 @@ tags:
     - Shopify
     - E-Commerce
     - Animation
-images: ["Presale-Landing-Page.png"]
+images: ["updated-landing-page.png"]
 weight: 999
 published: true
 externalLink: https://bottlerocketsauce.com
