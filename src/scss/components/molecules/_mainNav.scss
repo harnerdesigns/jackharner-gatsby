@@ -3,7 +3,6 @@
         display: none;
 
         &.is-open {
-
             display: flex;
             position: absolute;
             bottom: 0;
@@ -14,14 +13,11 @@
         }
 
         @include breakpoint(laptop) {
-
             display: flex;
             align-items: center;
             justify-content: space-between;
             grid-column-start: 3;
             position: relative;
-
-
         }
 
         a {
@@ -33,32 +29,59 @@
             }
 
             @include breakpoint(mobileonly) {
-
                 font-size: 1.25em;
                 border-bottom: 1px solid #ccc;
             }
 
-            &.button{
+            &.button {
                 background: var(--color);
                 color: var(--text-color);
                 border-radius: var(--border-radius);
                 margin: 0 0.5rem;
+
+                @include breakpoint(mobileonly) {
+                    margin: 0;
+                    width: 100%;
+                    border-radius: 0;
+                }
+
+                &:hover {
+                    background: var(--darker-color);
+                }
             }
         }
 
-
-        #colorSwitcher{
+        #colorSwitcher {
             padding: 0.5em;
             margin-right: auto;
+
+            @include breakpoint(mobileonly) {
+                width: 100%;
+                align-items: flex-start;
+                text-align: left;
+                font-size: 1em;
+                order: -1;
+                border-bottom: 1px solid #ccc;
+
+                svg {
+                    font-size: 1.5em;
+                    vertical-align: middle;
+                }
+                &:after {
+                    content: "Pick A Color";
+                    margin: 0 0 0 0.5rem;
+                    font-size: 1.25em;
+                    font-weight: 900;
+                }
+                &:hover{
+                    background: var(--color);
+                    color: var(--text-color);
+                }
+            }
         }
-
-
-
     }
 
     #mobileMenuToggle {
-
-
         display: flex;
         align-items: center;
         justify-content: center;
@@ -78,17 +101,41 @@
             font-size: 0.8rem;
         }
 
-        @include breakpoint(laptop) {
+        &.is-open{
+            &:after{
+                content: "CLOSE";
+            }
+        }
 
+        @include breakpoint(laptop) {
+            display: none;
+        }
+    }
+
+    #mobileMenuBG{
+        width: 100%;
+        background: linear-gradient(to top, var(--color), var(--darker-color), var(--color));
+        opacity: 1;
+        position: absolute;
+        top:0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        z-index:-1;
+        display: none;
+
+        &.is-open{
+            display: block;
+        }
+
+        @include breakpoint(laptop) {
             display: none;
         }
     }
 }
 
-.main_footer{
-
-    .main_nav{
-        
+.main_footer {
+    .main_nav {
         width: 80%;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -96,9 +143,8 @@
         justify-content: center;
         margin: 1em auto;
 
-        @include breakpoint(laptop){
+        @include breakpoint(laptop) {
             display: flex;
-            
         }
 
         a {
@@ -110,22 +156,17 @@
                 background: transparentize($color: #fff, $amount: 0.8);
             }
 
-            
-            &.button{
+            &.button {
                 background: var(--text-color);
                 color: var(--color);
                 border-radius: var(--border-radius);
                 margin: 0 0.5rem;
                 width: auto;
             }
-
         }
-
-
-
     }
 
-    #mobileMenuToggle{
+    #mobileMenuToggle {
         display: none;
     }
 }

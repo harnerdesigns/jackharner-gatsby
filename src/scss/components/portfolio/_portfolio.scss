@@ -184,7 +184,6 @@
     flex-direction: column;
 
     img {
-      margin: 1em;
       width: 100%;
     }
 
@@ -262,6 +261,7 @@
 
 .recent-projects {
   @extend .latest-posts;
+  width: 80%;
   @include breakpoint(laptop) {
     width: 50%;
   }

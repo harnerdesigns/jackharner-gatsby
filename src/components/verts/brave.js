@@ -16,7 +16,7 @@ const Brave = () => {
         Want to support your favorite content creators (including me!) just by
         browsing the web? <br />
       </p>
-        <h3>A private, secure and fast web browser that pays YOU to browse.</h3>
+        <h3>A private, secure, and fast web browser that pays YOU to browse.</h3>
     </Vert>
   )
 }

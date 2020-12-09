@@ -27,7 +27,7 @@ class TagRoute extends React.Component {
           <PageTitle>Blog Tags</PageTitle>
 
           <main className="page_body page_body--grid">
-            <div className="blog-posts">
+            <div className="tag-grid">
               {sortedTags.map((tag, index) => {
                 const tagLink = `/blog/tags/${_.kebabCase(tag)}/`
                 return (
@@ -44,7 +44,9 @@ class TagRoute extends React.Component {
                         .filter(({ node: post }) =>
                           (post.frontmatter.tags ?  post.frontmatter.tags.includes(tag) : false)
                         )
-                        .map(({ node: post }) => {
+                        .map(({ node: post }, i) => {
+                          if(i < 4){
+
                           return (
                             <img
                               src={
@@ -63,6 +65,8 @@ class TagRoute extends React.Component {
                               }
                             />
                           )
+                        }
+
                         })}
                     </div>
                   </Link>
