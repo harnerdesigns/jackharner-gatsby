@@ -160,7 +160,7 @@ module.exports = {
               })
             },
             query: `{
-              allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {fileAbsolutePath: {glob: "**/src/content/blog/**/*.md"}, frontmatter: {published: {eq: true}}}, limit: 1000) {
+              allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {fileAbsolutePath: {glob: "**/content/blog/**/*.md"}, frontmatter: {published: {eq: true}}}, limit: 1000) {
                 edges {
                   node {
                     excerpt(pruneLength: 250)

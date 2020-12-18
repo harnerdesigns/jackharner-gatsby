@@ -133,7 +133,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     // Get the parent node
     const parent = getNode(_.get(node, "parent"))
 
-    const slug = createFilePath({ node, getNode, basePath: `src/content/blog` })
+    const slug = createFilePath({ node, getNode, basePath: `content/blog` })
     createNodeField({
       node,
       name: `slug`,
@@ -161,7 +161,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       blog: allMarkdownRemark(
         sort: { order: DESC, fields: [fields___weight, fields___date] }
         filter: {
-          fileAbsolutePath: { glob: "**/src/content/blog/**/*.md" }
+          fileAbsolutePath: { glob: "**/content/blog/**/*.md" }
           fields: { published: { eq: true } }
         }
         limit: 1000
@@ -196,7 +196,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       portfolio: allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
         filter: {
-          fileAbsolutePath: { glob: "**/src/content/portfolio/**/*.md" }
+          fileAbsolutePath: { glob: "**/content/portfolio/**/*.md" }
           fields: { published: { eq: true } }
         }
         limit: 1000
@@ -223,7 +223,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       newsletter: allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
         filter: {
-          fileAbsolutePath: { glob: "**/src/content/blog/**/*.md" }
+          fileAbsolutePath: { glob: "**/content/blog/**/*.md" }
           fields: { published: { eq: true }, unlisted: { eq: false } }
           frontmatter: { tags: { in: "Newsletter" } }
         }

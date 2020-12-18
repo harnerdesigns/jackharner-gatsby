@@ -24,8 +24,8 @@ var slug = readline.question(
 )
 var date = new Date().toISOString()
 
-var sourcePath = `./src/content/templates/${postType}/`
-var destPath = `./src/content/${postType}/${slug}`
+var sourcePath = `./content/templates/${postType}/`
+var destPath = `./content/${postType}/${slug}`
 
 var replaceOptions = {
   files: [destPath + "/index.md"],
