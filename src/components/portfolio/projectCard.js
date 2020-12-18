@@ -25,28 +25,28 @@ const ProjectCard = ({ post, index, small, nolink }) => {
       >
         
 
-        {post.frontmatter.logo &&
+        
         <div className="logo__wrapper">
-          <img
+        {post.frontmatter.logo && <img
             src={post.frontmatter.logo.publicURL}
             className="logo"
             alt={post.frontmatter.title}
-          />
-        </div>}
+          />}
+          {!post.frontmatter.logo && <h2 className="project__title">{post.frontmatter.title}</h2>}
+        </div>
+
         <div className="card__titles">
           {/* <h2 className="project__title">{post.frontmatter.title}</h2> */}
 
-          {post.frontmatter.description != null ? (
+          {post.frontmatter.description && (
             <h4 className="project__description">
               {post.frontmatter.description}
             </h4>
-          ) : (
-            ""
           )}
         </div>
         <ul className="project__tags">
             {post.frontmatter.tags.map((tag, index) => {
-              return <li>                  <FontAwesomeIcon fixedWidth icon={tagIcons[tag]} />
+              return <li><FontAwesomeIcon fixedWidth icon={tagIcons[tag]} />
                <span>{tag}</span></li>
             })}
           </ul>

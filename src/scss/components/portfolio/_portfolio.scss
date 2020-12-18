@@ -36,11 +36,19 @@
     margin-bottom: 1em;
     height: 8em;
     width: 100%;
+    display: flex; align-items: center;
+    justify-content: center;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: contain;
+    }
+
+    .project__title{
+      text-align: center;
+      margin: 0 auto;
+      font-weight: 900;
     }
   }
 
@@ -98,6 +106,10 @@
         &:after {
           content: none;
         }
+      }
+
+      svg{
+        margin-right: 0.15em;
       }
     }
   }

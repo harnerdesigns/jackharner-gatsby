@@ -27,28 +27,28 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
-        path: `${__dirname}/src/content/blog`,
+        path: `${__dirname}/content/blog`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pageContent`,
-        path: `${__dirname}/src/content/pages`,
+        path: `${__dirname}/content/pages`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `portfolio`,
-        path: `${__dirname}/src/content/portfolio`,
+        path: `${__dirname}/content/portfolio`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `photoRoll`,
-        path: `${__dirname}/src/content/photos`,
+        path: `${__dirname}/content/photos`,
       },
     },
 
@@ -56,7 +56,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `testimonies`,
-        path: `${__dirname}/src/content/testimonies`,
+        path: `${__dirname}/content/testimonies`,
       },
     },
     {
@@ -160,7 +160,7 @@ module.exports = {
               })
             },
             query: `{
-              allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {fileAbsolutePath: {glob: "**/src/content/blog/**/*.md"}, frontmatter: {published: {eq: true}}}, limit: 1000) {
+              allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {fileAbsolutePath: {glob: "**/content/blog/**/*.md"}, frontmatter: {published: {eq: true}}}, limit: 1000) {
                 edges {
                   node {
                     excerpt(pruneLength: 250)

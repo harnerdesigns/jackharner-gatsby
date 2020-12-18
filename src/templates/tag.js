@@ -39,7 +39,7 @@ class TagRoute extends React.Component {
             <TopTags topTags={topTags} postType={postType} back={true} exclude={tag} />
 
 
-            <div className="blog-posts">
+            <div className={postType === "blog" ? "blog-posts" : "projects"}>
               {posts
                 .filter(post => post.node.frontmatter.title.length > 0)
                 .map(({ node: post }, index) => {
@@ -95,6 +95,7 @@ export const tagPageQuery = graphql`
             subtitle
             date(formatString: "MMMM DD, YYYY")
             published
+            description
             featuredImage {
               childImageSharp {
                 resize(width: 500, height: 500, cropFocus: CENTER) {

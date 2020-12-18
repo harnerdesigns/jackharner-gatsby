@@ -32,7 +32,7 @@ const tagIcons = {
   Python: ["fab", "python"],
   Shopify: ["fab", "shopify"],
   "E-Commerce": 'shopping-bag',
-  Writing: "pencil"
+  Writing: "pencil-alt"
 }
 
 export default tagIcons
