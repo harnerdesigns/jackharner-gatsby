@@ -27,28 +27,28 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
-        path: `${__dirname}/src/content/blog`,
+        path: `${__dirname}/content/blog`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pageContent`,
-        path: `${__dirname}/src/content/pages`,
+        path: `${__dirname}/content/pages`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `portfolio`,
-        path: `${__dirname}/src/content/portfolio`,
+        path: `${__dirname}/content/portfolio`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `photoRoll`,
-        path: `${__dirname}/src/content/photos`,
+        path: `${__dirname}/content/photos`,
       },
     },
 
@@ -56,7 +56,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `testimonies`,
-        path: `${__dirname}/src/content/testimonies`,
+        path: `${__dirname}/content/testimonies`,
       },
     },
     {

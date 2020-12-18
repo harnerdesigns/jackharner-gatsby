@@ -95,7 +95,7 @@ export default function Template(props) {
         </main>
 
         <nav className="projectNavigation">
-          <h3>More Projects</h3>
+          <h3>Related Projects</h3>
           <ul>
             {related.map((post, index) => {
               return (
