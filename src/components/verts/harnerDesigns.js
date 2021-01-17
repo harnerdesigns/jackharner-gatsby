@@ -12,9 +12,7 @@ const HarnerDesigns = () => {
         slug="moreWithLess"
         buttonText="Buy Now &raquo;"
       >
-          <h2 style={{color: "var(--color)"}}>!!!!!!!!!!!!!!!!!!!</h2>
                 <h2 style={{color: "var(--color)"}}>NEW SHIRT ALERT</h2>
-                <h2 style={{color: "var(--color)"}}>!!!!!!!!!!!!!!!!!!!</h2>
                 <h3>Why Do Less With More,</h3>
                 <h3>When You Can Do</h3>
                 <h2>More With Less?</h2>
