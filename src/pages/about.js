@@ -28,7 +28,7 @@ const About = ({ data }) => {
         <h3>I'm a Web Developer based in Albuquerque, NM.</h3>
         <p>
           I like making stuff with WordPress, learning new things in Web Dev
-          (these days it's React), playing Overwatch / Valorant / Minecraft, & spending time with my three cats.
+          (these days it's React), playing Overwatch / Valorant / Minecraft (<a href="https://twitch.tv/jackjackslaps" target="_blank">Follow Me on Twitch</a>), & spending time with my three cats.
         </p>
       </section>
       <section className="slim  black">
@@ -156,8 +156,8 @@ const About = ({ data }) => {
         <p>
           Give me a follow on Twitter,{" "}
           <a href="https://twitter.com/jackharner">@JackHarner</a>, check out my{" "}
-          <Link to="/blog">Blog</Link>, or some of the{" "}
-          <a href="https://harnerdesigns.com">work I've done</a>.{" "}
+          <Link to="/blog">Blog</Link>, or my{" "}
+          <a href="/portfolio">Portfolio</a>.{" "}
         </p>
       </section>
     </Layout>

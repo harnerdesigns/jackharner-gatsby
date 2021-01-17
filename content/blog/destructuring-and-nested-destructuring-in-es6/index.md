@@ -3,7 +3,6 @@ date: 2020-10-18T16:47:36.345Z
 title: "Destructuring and Nested Destructuring in ES6"
 subtitle: ""
 featuredImage: "./ricardo-gomez-angel-j5gCOKZdm6I-unsplash.jpg"
-ogImage: ""
 tags: ["JavaScript", "Newsletter"]
 externalLink: ""
 published: true
