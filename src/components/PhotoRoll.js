@@ -44,6 +44,8 @@ const StyledPhotoRoll = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
+  transition: 600ms !important;
+
 
   @media ${breakpoints.laptop} {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -53,7 +55,6 @@ const StyledPhotoRoll = styled.div`
 const PhotoTag = styled.span`
   color: #fff;
   font-size: 1rem;
-
   position: absolute;
   top: 0.5em;
   left: 50%;
@@ -71,7 +72,7 @@ const StyledRollLink = styled.a`
   width: 100%;
   height: 35vmax;
   position: relative;
-  transition: grid-column 600ms !important;
+  transition: 600ms !important;
 
 
   &:nth-of-type(n + 5) {
@@ -85,6 +86,8 @@ const StyledRollLink = styled.a`
   .gatsby-image-wrapper {
     width: 100%;
     height: 100%;
+  transition: 600ms !important;
+
 
     img {
       transition: transform 600ms !important;
