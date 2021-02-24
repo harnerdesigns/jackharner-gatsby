@@ -34,7 +34,6 @@ A `/uses` page is a place for developers to share what tools, software, setups a
 
 ### [ZSA Moonlander](https://www.zsa.io/moonlander/)
 
-            grid-template-columns: 1fr;
 * The craziest yet coolest keyboard I've ever experienced. 
 
 ### [Logitech G604 Mouse](https://amzn.to/2P1DF8l) 
