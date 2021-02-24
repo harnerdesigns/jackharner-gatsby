@@ -15,7 +15,8 @@ A `/uses` page is a place for developers to share what tools, software, setups a
 ### [Dell Optiplex 9020 MT](https://amzn.to/3cDotGn)
 
 * [Intel Core i7-4770 CPU](https://amzn.to/30fptLN)
-* 8 GB Ram
+* 14 GB Ram
+* ASUS GTX 550 TI
 * 1 TB 7200 RPM HDD
 * Dual Boot, Windows 10 Pro & Ubuntu 18.04
 
@@ -33,9 +34,10 @@ A `/uses` page is a place for developers to share what tools, software, setups a
 
 ### [ZSA Moonlander](https://www.zsa.io/moonlander/)
 
-* Coming Soon..
+            grid-template-columns: 1fr;
+* The craziest yet coolest keyboard I've ever experienced. 
 
-### [Logitech G602 Mouse](https://amzn.to/3jaaL0b) 
+### [Logitech G604 Mouse](https://amzn.to/2P1DF8l) 
 
 * It is a right handed mouse even though I mouse lefty.
 * Six thumb (in my case ring) keys.
@@ -44,7 +46,7 @@ A `/uses` page is a place for developers to share what tools, software, setups a
 
   * Cherry MX Blue switches
   * Love me that CLICK CLICK CLICK
-  
+
 ### [Chicony KB-5181](https://deskthority.net/wiki/Chicony_KB-5181) 
 
   * Got it for $3 at the Habitat for Humanity ReStore
