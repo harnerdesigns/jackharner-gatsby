@@ -31,10 +31,10 @@ class TagRoute extends React.Component {
                 const tagLink = `/portfolio/tags/${_.kebabCase(tag)}/`
                 return (
                   <Link to={tagLink} className="tag__card">
-                    <h2>
+                    <h3>
                       <FontAwesomeIcon fixedWidth icon={tagIcons[tag]} />
                       {tag}
-                    </h2>{" "}
+                    </h3>{" "}
                     <h4>
                       {tags[tag]} Project{tags[tag] > 1 ? "s" : ""}
                     </h4>
@@ -54,13 +54,13 @@ class TagRoute extends React.Component {
                                   src={post.frontmatter.logo.publicURL}
                                   alt={
                                     post.frontmatter.title +
-                                    " | " +
-                                    post.frontmatter.subtitle
+                                   (post.frontmatter.subtitle ? " | " +
+                                    post.frontmatter.subtitle : "")
                                   }
                                   title={
                                     post.frontmatter.title +
-                                    " | " +
-                                    post.frontmatter.subtitle
+                                    (post.frontmatter.subtitle ? " | " +
+                                     post.frontmatter.subtitle : "")
                                   }
                                 />
                               </div>
@@ -101,6 +101,7 @@ export const tagPageQuery = graphql`
           id
           frontmatter {
             title
+            subtitle
             description
             color
             date(formatString: "MMMM DD, YYYY")
