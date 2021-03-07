@@ -270,3 +270,61 @@
         }
     }
 }
+
+
+.vert--nordvpn {
+    $nordVPNBlue: #4687ff;
+    $darkerNordVPNBlue: darken($nordVPNBlue, 20);
+    color: #fff;
+    border: none;
+    grid-template-columns: 1fr;
+    @include breakpoint(desktop){
+    grid-template-columns: 1fr 2fr;
+
+    }
+
+    h2,
+    h3 {
+        margin: 0 0 0 auto;
+        width: 100%;
+        text-align: left;
+    }
+    a.button {
+        background: #fff;
+        margin: 0 auto;
+        width: 100%;
+        color: $nordVPNBlue;
+        @include breakpoint(desktop){
+            grid-column: 2;
+
+        }
+    }
+
+    .vert__content{
+        display: flex; 
+
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        align-self: center;
+    }
+
+    .vert__img-wrap {
+        background: #fff;
+        // @include hardShadow(10, $nordVPNBlue);
+        border: 10px solid $nordVPNBlue;
+        border-bottom-color: $darkerNordVPNBlue;
+        border-right-color: $darkerNordVPNBlue;
+        padding: 1rem;
+
+        border-radius: var(--border-radius);
+        grid-row: 1;
+        
+        @include breakpoint(desktop){
+            
+                    grid-row: 1 / span 2;
+                    grid-column: 1;
+
+        }
+    }
+}

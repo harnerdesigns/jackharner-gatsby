@@ -7,6 +7,7 @@ import DigitalOcean from "./digitalOcean"
 import RssCard from "../blog/rssCard"
 import { random } from "lodash"
 import HarnerDesigns from "./harnerDesigns"
+import NordVPN from "./nordvpn"
 
 
 const Vert = ({index}) => {
@@ -19,11 +20,11 @@ const Vert = ({index}) => {
     case 1: 
       return(<GridGospel />)   
     case 2: 
-      return(<Brave />)
-    case 3: 
       return(<HarnerDesigns />)
-    case 4:
+    case 3:
       return(<DigitalOcean />)
+    case 4:
+        return(<NordVPN />)
     default:
       return(null)
   }
