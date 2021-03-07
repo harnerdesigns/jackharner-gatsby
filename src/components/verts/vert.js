@@ -5,9 +5,9 @@ const Vert = ({ link, slug, children, image, buttonText }) => {
     <a
       href={link}
       target="_blank"
-      rel="noreferrer noopener"
+      rel="noopener"
       className={`vert vert--${slug} vert--${
-        image ? "with-icon" : "withoug-icon"
+        image ? "with-icon" : "without-icon"
       }`}
     >
       <div className="vert__content">{children}</div>
