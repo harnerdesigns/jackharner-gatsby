@@ -7,7 +7,7 @@ color: "#fee5d7"
 tags:
     - Shopify
     - E-Commerce
-images: ["./The-Papi-Shop.png"]
+images: ["./The-Papi-Shop.png", "./Papi-Shop-collection.png"]
 weight: 999
 published: true
 externalLink: "https://holapapi.com"
