@@ -10,7 +10,7 @@ import HarnerDesigns from "./harnerDesigns"
 import NordVPN from "./nordvpn"
 
 
-const Vert = ({index}) => {
+const Shuffler = ({index}) => {
 
   let vertCount = 4;
 
@@ -30,4 +30,4 @@ const Vert = ({index}) => {
   }
 }
 
-export default Vert
+export default Shuffler
