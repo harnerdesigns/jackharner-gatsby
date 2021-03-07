@@ -80,7 +80,13 @@ export default function Template(props) {
           )}
 
           <section className="project__content">
-
+          {post.fields.externalLink && post.wordCount.words > 60 && (
+              <Button
+                label={post.fields.externalLinkLabel}
+                href={post.fields.externalLink}
+                size="large"
+              />
+            )}
             {post.html && (
               <div className="project__text" dangerouslySetInnerHTML={{ __html: post.html }} />
             )}
@@ -115,6 +121,9 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
+      wordCount{
+        words
+      }
       frontmatter {
         title
         description

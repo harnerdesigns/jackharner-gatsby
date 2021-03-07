@@ -32,8 +32,8 @@ const IndexPage = ({ data, pageContext }) => {
           <h2>Jack of All Trades, Master of Some</h2>
           <ImASlider />
           <div className="buttons" style={{ width: "50%" }}>
-            <Button label={"See My Work"} href="/portfolio" white />
-            <Button label={"Let's Chat »"} href="/contact" />
+            <Button label={"See My Work"} to="/portfolio" white />
+            <Button label={"Let's Chat »"} to="/contact" />
           </div>
         </section>
         <FontAwesomeIcon icon="caret-down" id="scrollIndicator" />
@@ -52,7 +52,7 @@ const IndexPage = ({ data, pageContext }) => {
           <Button
             to="/portfolio"
             extraStyle={{ gridColumn: "1 / -1" }}
-            label="My Full Portfolio »"
+            label="See My Work »"
             size="large"
           />
         </div>
@@ -62,7 +62,7 @@ const IndexPage = ({ data, pageContext }) => {
             Everything In Between. If you access it through a web browser, I can build it with an emphasis on
             clean, responsive design.</p>
           <p>
-            I work with <Link to="/portfolio/tags/word-press/">WordPress</Link>, <Link to="/portfolio/tags/php/">PHP</Link>, <Link to="/portfolio/tags/react/">React</Link>, <Link to="/portfolio/tags/node/">Node</Link>, Python & More.
+            I work with <Link to="/portfolio/tags/shopify/">Shopify</Link>, <Link to="/portfolio/tags/word-press/">WordPress</Link>, <Link to="/portfolio/tags/php/">PHP</Link>, <Link to="/portfolio/tags/react/">React</Link>, <Link to="/portfolio/tags/node/">Node</Link>, Python & More.
           </p>
         </div>
       </section>

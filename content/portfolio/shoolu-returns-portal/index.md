@@ -8,6 +8,8 @@ tags: ["HTML", "CSS"]
 images: ["./shoolu-returns-full-page.png", "./shoolu-returns-exchange-form.png"]
 weight: -1
 published: true
+externalLink: "https://returns.shoolu.com"
+externalLinkLabel: "See The Return Portal"
 ---
 
 
@@ -18,7 +20,3 @@ I designed the page so that this form was large, front and center. Most of the p
 ### Self Service Is King. 
 
 People hate contacting companies and potentially having to sit on hold for hours on end. Creating this portal allowed more returns to get processed with less calls and less tickets opened, saving both the customer time and the business money.
-
-### Check it out:
-
-<div class="buttons"><a href="https://returns.shoolu.com" class="button button--large">Shoolu Returns Portal</a></div>

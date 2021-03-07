@@ -17,6 +17,7 @@ const verts = () => {
        <Vert index={2} />
        <Vert index={3} />
        <Vert index={4} />
+       <Vert index={5} />
       </section>
     </Layout>
   )

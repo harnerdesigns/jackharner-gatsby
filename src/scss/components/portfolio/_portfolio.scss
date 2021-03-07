@@ -92,24 +92,14 @@
 
     li {
       list-style: none;
-      padding: 0 0.15em;
+      padding: 0 0.25em;
       margin: 0;
       span{
         font-size: 0.8em;
       }
 
-      &:after {
-        content: ",";
-      }
-
-      &:last-child {
-        &:after {
-          content: none;
-        }
-      }
-
       svg{
-        margin-right: 0.15em;
+        margin-right: 0.07em;
       }
     }
   }
@@ -130,7 +120,7 @@
       }
 
       .project__description {
-        font-size: 1.5rem;
+        font-size: 1.15rem;
       }
 
     }

@@ -9,6 +9,8 @@ import ShareLinks from "../components/social/shareLinks";
 import RssCard from "../components/blog/rssCard";
 import Brave from "../components/verts/brave";
 import Vert from "../components/verts/shuffler";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import NewsletterLink from "../components/blog/NewsletterLink";
 
 export default function Template(props) {
   const post = props.data.markdownRemark
@@ -47,7 +49,7 @@ export default function Template(props) {
           ""
         )}
 
-{(newsletter ? <Link to="/newsletter"><h4 style={{padding: "1rem", background: "var(--color)", color: "var(--text-color)"}}>Originally Sent To My Newsletter. Get Posts Like This A Week Early By <span style={{fontWeight: 900}}>Signing Up &raquo;</span></h4></Link> : "")}
+{(newsletter ? <NewsletterLink /> : "")}
 
         
         <main

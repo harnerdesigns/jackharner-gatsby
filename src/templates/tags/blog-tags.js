@@ -32,10 +32,10 @@ class TagRoute extends React.Component {
                 const tagLink = `/blog/tags/${_.kebabCase(tag)}/`
                 return (
                   <Link to={tagLink} className="tag__card">
-                    <h2>
+                    <h3>
                       <FontAwesomeIcon fixedWidth icon={tagIcons[tag]} />
                       {tag}
-                    </h2>{" "}
+                    </h3>{" "}
                     <h4>
                       {tags[tag]} Post{tags[tag] > 1 ? "s" : ""}
                     </h4>

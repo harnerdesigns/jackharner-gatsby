@@ -31,13 +31,14 @@ const Button = ({
   if (href) {
     return (
       <StyledA
-        to={to}
         href={href}
+        target="_blank"
+        rel="noopener"
         style={extraStyle}
         className={computedClass}
         {...others}
       >
-        {icon ? <FontAwesomeIcon icon={icon} /> : ""}
+        {icon ? <FontAwesomeIcon icon={icon} /> : <FontAwesomeIcon icon="external-link-alt" />}
         <span className="label" dangerouslySetInnerHTML={{__html: label}}></span>
       </StyledA>
     )
