@@ -8,11 +8,12 @@ import RssCard from "../blog/rssCard"
 import { random } from "lodash"
 import HarnerDesigns from "./harnerDesigns"
 import NordVPN from "./nordvpn"
+import Printful from "./printful"
 
 
 const Shuffler = ({index}) => {
 
-  let vertCount = 4;
+  let vertCount = 5
 
   if(!index) {index = random(1, vertCount)}
 
@@ -21,9 +22,11 @@ const Shuffler = ({index}) => {
       return(<GridGospel />)   
     case 2: 
       return(<HarnerDesigns />)
-    case 3:
-      return(<DigitalOcean />)
+    case 3: 
+      return(<Printful />)
     case 4:
+      return(<DigitalOcean />)
+    case 5:
         return(<NordVPN />)
     default:
       return(null)

@@ -7,14 +7,14 @@ import PageTitle from "../components/pageTitle"
 import BlogCard from "../components/blog/blogCard"
 
 import TopTags from "../components/common/topTags"
-import Vert from "../components/verts/shuffler"
+import Shuffler from "../components/verts/shuffler"
 
 const Blog = ({ data, pageContext }) => {
   const { edges: posts } = data.allMarkdownRemark
   const tags = pageContext.topTags
     // Iterate through each post, putting all found tags into `tags`
   var topTags = Object.keys(tags).sort(function(a, b) {
-    return tags[a] < tags[b]
+    return tags[a] < tags[b] 
   })
 
   return (
@@ -32,7 +32,7 @@ const Blog = ({ data, pageContext }) => {
             .map(({ node: post }, index) => {
               let ShowCard;
               
-              if((index + 1) % 6 ===  0) {ShowCard = <Vert index={(index + 1) / 6} />}
+              if((index + 1) % 6 ===  0) {ShowCard = <Shuffler index={(index + 1) / 6} />}
               return (
                 <>
                   <BlogCard post={post} index={index} large={(index + 1) % 5 === 0 || index === 0} />
@@ -40,7 +40,6 @@ const Blog = ({ data, pageContext }) => {
                 </>
               )
             })}
-            <Vert />
         </div>
       </main>
     </Layout>
