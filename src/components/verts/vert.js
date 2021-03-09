@@ -17,7 +17,7 @@ const Vert = ({ link, slug, children, image, buttonText }) => {
         </div>
       )}
 
-      {buttonText && <a className="button">{buttonText}</a>}
+      {buttonText && <button className="button">{buttonText}</button>}
     </a>
   )
 }
