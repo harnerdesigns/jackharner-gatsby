@@ -6,7 +6,7 @@ import BlogCard from "../components/blog/blogCard"
 import PageTitle from "../components/pageTitle"
 import ProjectCard from "../components/portfolio/projectCard"
 import TopTags from "../components/common/topTags"
-import Vert from "../components/verts/shuffler"
+import Shuffler from "../components/verts/shuffler"
 class TagRoute extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
@@ -45,7 +45,7 @@ class TagRoute extends React.Component {
                 .map(({ node: post }, index) => {
                   let ShowCard;
 
-                  if ((index + 1) % 6 === 0) { ShowCard = <Vert index={(index + 1) / 6} /> }
+                  if ((index + 1) % 6 === 0) { ShowCard = <Shuffler index={(index + 1) / 6} /> }
 
                   let card =
                     postType === "portfolio" ? (
@@ -58,7 +58,7 @@ class TagRoute extends React.Component {
 
                   return <>{card}</>
                 })}
-              <Vert />
+              <Shuffler />
 
             </div>
           </main>
