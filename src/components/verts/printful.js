@@ -7,7 +7,7 @@ const Printful = () => {
   return (
     <Vert link={link} image={ printfulIcon } slug="printful" buttonText="Start Selling Merch Today &raquo;" >      
     <h2>Got Designs? Sell Them With ZERO Hassle.</h2>
-    <h3>Printful Prints, Packs, & Ships On 100s of Products</h3>
+    <h3>Printful Prints, Packs, & Ships 100s of Products</h3>
     </Vert>
 
   )
