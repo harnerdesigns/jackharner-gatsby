@@ -54,6 +54,7 @@ export default class ColorSwitcher extends Component {
 
 
     if (cookies.get('paletteColorObj')) {
+      // Set Color from Cookie
       const cookieColor = cookies.get('paletteColorObj');
       this.state = {
         color: cookieColor,
@@ -62,6 +63,8 @@ export default class ColorSwitcher extends Component {
       this.setColorVars()
 
     } else {
+
+      // Default Colors when no Cookie Found.
       this.state = {
         color: {
           hex: '#E91E63',
@@ -130,6 +133,8 @@ export default class ColorSwitcher extends Component {
 
   getTextColor = (c) => {
 
+    // Calculate the proper text color given background color `c`
+    
     let o = Math.round(((parseInt(c.r) * 299) + (parseInt(c.g) * 587) + (parseInt(c.b) * 114)) / 1000);
     return ((o > 125) ? ('black') : ('white'));
   }
