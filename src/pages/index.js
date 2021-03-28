@@ -28,8 +28,8 @@ const getPixelRatio = context => {
 const IndexPage = ({ data, pageContext }) => {
   const [particles, setParticles] = useState([
     {
-      x: "100px", //x-coordinate
-      y: "100px", //y-coordinate
+      x: 100, //x-coordinate
+      y: 100, //y-coordinate
       size: 5,
       frame: 0,
       angle: 0,
@@ -151,7 +151,7 @@ const IndexPage = ({ data, pageContext }) => {
           </h1>
           <h2>Jack of All Trades, Master of Some</h2>
           {/* <ImASlider /> */}
-          <div className="buttons" style={{ width: "50%" }}>
+          <div className="buttons">
             <Button label={"See My Work"} to="/portfolio" white />
             <Button label={"Let's Chat »"} to="/contact" />
           </div>
@@ -176,7 +176,7 @@ const IndexPage = ({ data, pageContext }) => {
           <Button
             to="/portfolio"
             extraStyle={{ gridColumn: "1 / -1" }}
-            label="See My Work »"
+            label="See More Work »"
             size="large"
           />
         </div>
@@ -196,7 +196,7 @@ const IndexPage = ({ data, pageContext }) => {
           </p>
         </div>
       </section>
-      <section className="half pink">
+      <section className="half pink quotes__wrapper">
         <h1>A Man Of The People:</h1>
 
         <Quotes quotes={quotes} />
