@@ -179,33 +179,29 @@ ul {
     color: #000;
   }
 
-  &.row{
+  &.row {
     flex-direction: column;
 
-    @include breakpoint(laptop){
-
+    @include breakpoint(laptop) {
       flex-direction: row;
     }
 
-    .column{
+    .column {
       width: 100%;
       align-self: flex-start;
-      @include breakpoint(laptop){
-        
+      @include breakpoint(laptop) {
         position: sticky;
         top: 25px;
-      width: 60%;
-      padding: 0.5rem 2rem;
-
-    }
+        width: 60%;
+        padding: 0.5rem 2rem;
+      }
     }
   }
 
   &.content {
-    
     padding: 2em;
 
-    @include breakpoint(laptop){
+    @include breakpoint(laptop) {
       padding: 2rem 25vw 2rem;
     }
     p {
@@ -264,33 +260,29 @@ ul {
   //   padding: 0.5em;
   font-weight: 900;
 
-  .Cursor{
+  .Cursor {
     font-weight: 400;
     color: #333;
   }
 
-
-  .Cursor--blinking{
-
+  .Cursor--blinking {
     animation: blink 1s step-start infinite;
-
   }
 }
 
-section.white .title__box{
-
+section.white .title__box {
   border-bottom: 5px solid #333;
 }
-section.black .title__box{
-  .Cursor{
+section.black .title__box {
+  .Cursor {
     color: #fff;
   }
 }
 
-@keyframes blink{
- 50%{
-   opacity: 0;
- }
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 .headroom-wrapper ~ container.intro {
   min-height: 85vh;
@@ -310,8 +302,10 @@ section.black .title__box{
   // line-height: 0.9em;
 }
 
-.intro:first-of-type{
+.intro:first-of-type {
   padding-top: 0;
+  margin-top: -125px;
+  position: relative;
 }
 
 .introduction {
@@ -334,6 +328,8 @@ section.black .title__box{
     margin-bottom: 0;
     width: 100%;
     text-align: center;
+    // text-shadow: 2px 2px 3px #000;
+    @include hardShadow(5,#000, true);
   }
 
   h2 {
@@ -345,6 +341,12 @@ section.black .title__box{
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+  }
+
+  .buttons {
+    .button--white {
+      background: rgba(0, 0, 0, 0.5);
     }
   }
 }

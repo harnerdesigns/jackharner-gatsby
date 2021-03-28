@@ -33,6 +33,12 @@
 
 .headroom {
   z-index: 5 !important;
+
+  &--unfixed{
+    .main_head{
+      background: rgba(0,0,0,0.6);
+    }
+  }
 }
 
 #colorSwitcher {
