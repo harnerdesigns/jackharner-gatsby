@@ -1,26 +1,63 @@
-.quote__slider{
-    width: 80%;
+.quotes__wrapper {
+    h1 {
+        text-align: center;
+    }
+}
+.quote__slider {
+    width: 100%;
     margin: 1rem auto;
+    @include breakpoint(laptop) {
+        width: 80%;
+    }
+    .slick-track {
+        display: flex;
+      }
+      .slick-track .slick-slide {
+        display: flex;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+      }
 }
 
-
-.quote__card{
-    width: 100%;
-    padding: 2rem;
+.quote__card {
+    width: 95%;
     text-align: center;
     background: var(--text-color);
     color: var(--text-color--inverted);
     border-radius: var(--border-radius);
+    margin: 0 auto;
+    padding: 1rem;
 
-    @include breakpoint(laptop){
+    @include breakpoint(laptop) {
         width: 80%;
-        margin: 0 auto;
+    padding: 2rem;
+
     }
 }
 
-.quote__quote{
+.quote__quote {
     font-weight: 900;
+    font-size: 1.5rem;
+
+    @include breakpoint(laptop) {
+        font-size: 3rem;
+    }
+
+    &.quote--long{
+
+        font-size: 1.25rem;
+
+    @include breakpoint(laptop) {
+        font-size: 2.5rem;
+    }
+    }
 }
-.quote__by{
+.quote__by {
     text-align: right;
+    font-size: 1.25rem;
+
+    @include breakpoint(laptop) {
+        font-size: 2rem;
+    }
 }

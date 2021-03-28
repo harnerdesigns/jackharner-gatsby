@@ -4,9 +4,7 @@
     display: grid;
     align-items: center;
     justify-content: center;
-    grid-gap: 1em;
-
-
+    grid-gap: 0.5rem;
     grid-template-columns: 1fr;
 
     @include breakpoint(laptop) {
@@ -14,10 +12,11 @@
 
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
         width: 80%;
+        grid-gap: 1rem;
     }
 
-    .button{
-
+    .button {
+        width: 100%;
         &:nth-child(2) {
             background: var(--color);
             color: var(--text-color);
@@ -25,7 +24,6 @@
             font-weight: 900;
         }
     }
-
 }
 
 .or {
@@ -45,9 +43,7 @@
     margin: 1rem;
     user-select: none;
 
-
     &.tall {
-
         position: relative;
         z-index: 3;
 
@@ -55,46 +51,37 @@
             width: 200%;
             height: 3px;
             border-radius: 3px;
-            content: '';
+            content: "";
             background: var(--text-color);
             position: absolute;
             z-index: -1;
-
         }
 
         @include breakpoint(laptop) {
             &:before {
                 width: 3px;
                 height: 70%;
-                content: '';
+                content: "";
                 border-radius: 3px;
 
                 background: var(--text-color);
                 position: absolute;
             }
-
-
-
         }
-
     }
 
     &.wide {
         position: relative;
         z-index: 3;
 
-
         &:before {
             width: 200%;
             height: 3px;
             border-radius: 3px;
-            content: '';
+            content: "";
             background: var(--text-color);
             position: absolute;
             z-index: -1;
-
         }
-
     }
-
 }

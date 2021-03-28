@@ -19,8 +19,9 @@ const Quotes = ({ quotes }) => {
         speed: 500,
         autoplay: true,
         autoplaySpeed: 3500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        adaptiveWidth: true,
     };
 
     return (

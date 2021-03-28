@@ -263,7 +263,7 @@
 
 .recent-projects {
   @extend .latest-posts;
-  width: 80%;
+  width: 100%;
   @include breakpoint(laptop) {
     width: 50%;
   }

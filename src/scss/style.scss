@@ -162,6 +162,8 @@ ul {
   @include breakpoint(mobileonly) {
     align-items: center;
     min-height: 75vh;
+  padding: 5em 1em;
+
   }
 
   &.black {
@@ -243,7 +245,11 @@ ul {
   @extend .full;
 
   min-height: 50vh;
+  padding: 3rem;
+  @include breakpoint(laptop){
   padding: 3rem 5rem;
+    
+  }
 }
 
 .slim {
@@ -303,9 +309,17 @@ section.black .title__box {
 }
 
 .intro:first-of-type {
-  padding-top: 0;
+  padding-top: calc(125px + 5em);
   margin-top: -125px;
   position: relative;
+
+  @include breakpoint(laptop){
+  margin-top: -125px;
+  padding-top: calc(125px + 5em);
+
+
+
+  }
 }
 
 .introduction {
