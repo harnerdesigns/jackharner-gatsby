@@ -65,24 +65,34 @@ const IndexPage = ({ data, pageContext }) => {
         ctx.beginPath()
         ctx.strokeStyle = color
 
-        ctx.fillStyle = "rgba(0,0,0,0.2)"
-        ctx.lineWidth = (p.frame / 200) * 15;
-        ctx.globalAlpha = p.frame / 75;
-        ctx.lineCap = "round"
+        ctx.lineWidth = 2;
+        ctx.globalAlpha = p.frame;
+        // ctx.lineCap = "round
         let endPoint = Math.random() * Math.PI;
         ctx.arc(p.x, p.y, p.size, p.angle * Math.PI, endPoint)
 
-        ctx.stroke()
+        if (p.frame % 1 === 0){
+
+          ctx.stroke()
+          // ctx.fill()
+        }
 
         particles[i] = {
           x: p.x, //x-coordinate
           y: p.y, //y-coordinate
-          size: p.size + (p.frame / 50) * 10,
+          size: p.size + 24 / 2,
           frame: p.frame + 1,
           angle: p.angle + Math.random(),
         }
 
         ctx.restore()
+
+        if ( p.frame > 100) {
+        ctx.arc(p.x, p.y, p.size, p.angle * Math.PI, 2 * Math.PI)
+        ctx.fillStyle = "rgba(0,0,0,0.03)"
+
+          ctx.fill();
+        }
 
         if ( p.frame >= 200) {
           // ctx.fillStyle = "rgba(0,0,0, 1)";
