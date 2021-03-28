@@ -28,8 +28,8 @@ const getPixelRatio = context => {
 const IndexPage = ({ data, pageContext }) => {
   const [particles, setParticles] = useState([
     {
-      x: window.innerWidth / 2, //x-coordinate
-      y: window.innerHeight / 2, //y-coordinate
+      x: "100px", //x-coordinate
+      y: "100px", //y-coordinate
       size: 5,
       frame: 0,
       angle: 0,
