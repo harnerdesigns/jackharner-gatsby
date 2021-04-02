@@ -12,29 +12,9 @@ import Button from "../components/atoms/button"
 import PhotoRoll from "../components/PhotoRoll"
 import Quotes from "../components/testimonies/quotes"
 import { useRef } from "react"
-const getPixelRatio = context => {
-  var backingStore =
-    context.backingStorePixelRatio ||
-    context.webkitBackingStorePixelRatio ||
-    context.mozBackingStorePixelRatio ||
-    context.msBackingStorePixelRatio ||
-    context.oBackingStorePixelRatio ||
-    context.backingStorePixelRatio ||
-    1
-
-  return (window.devicePixelRatio || 1) / backingStore
-}
+import CanvasBG from "../components/canvasBG"
 
 const IndexPage = ({ data, pageContext }) => {
-  const [particles, setParticles] = useState([
-    {
-      x: 100, //x-coordinate
-      y: 100, //y-coordinate
-      size: 5,
-      frame: 0,
-      angle: 0,
-    },
-  ]);
   const { edges: posts } = data.allMarkdownRemark
   const { photos } = data.photoRoll.frontmatter
   const { quotes } = data.testimonies.frontmatter
@@ -42,115 +22,18 @@ const IndexPage = ({ data, pageContext }) => {
   let portfolioPosts = posts.filter(
     post => post.node.fields.collection === "portfolio"
   )
-  let canvasRef = useRef()
 
-  useEffect(() => {
-    let canvas = canvasRef.current
-    let ctx = canvas.getContext("2d")
-    var W = window.innerWidth
-    var H = window.innerHeight
-    canvas.width = W
-    canvas.height = H
-
-    let requestId
-    const draw = () => {
-      requestId = requestAnimationFrame(draw)
-      // ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      var color = getComputedStyle(document.body).getPropertyValue("--color")
-      particles.forEach(function(p, i) {
-        let countUp = true;
-        ctx.save()
-        // ctx.translate(clickX, clickY);
-        ctx.beginPath()
-        ctx.strokeStyle = color
-
-        ctx.lineWidth = 2;
-        ctx.globalAlpha = p.frame;
-        // ctx.lineCap = "round
-        let endPoint = Math.random() * Math.PI;
-        ctx.arc(p.x, p.y, p.size, p.angle * Math.PI, endPoint)
-
-        if (p.frame % 1 === 0){
-
-          ctx.stroke()
-          // ctx.fill()
-        }
-
-        particles[i] = {
-          x: p.x, //x-coordinate
-          y: p.y, //y-coordinate
-          size: p.size + 24 / 2,
-          frame: p.frame + 1,
-          angle: p.angle + Math.random(),
-        }
-
-        ctx.restore()
-
-        if ( p.frame > 100) {
-        ctx.arc(p.x, p.y, p.size, p.angle * Math.PI, 2 * Math.PI)
-        ctx.fillStyle = "rgba(0,0,0,0.03)"
-
-          ctx.fill();
-        }
-
-        if ( p.frame >= 200) {
-          // ctx.fillStyle = "rgba(0,0,0, 1)";
-          countUp = false;
-
-          setParticles([
-            {
-              x: Math.random() * window.innerWidth, //x-coordinate
-              y: Math.random() * window.innerHeight, //y-coordinate
-              size: 5,
-              frame: 0,
-              angle: Math.random() * 1,
-            },
-          ])
-        }
-      })
-    }
-    draw()
-    return () => {
-      cancelAnimationFrame(requestId)
-    }
-  })
-  const canvasClick = e => {
-    let cursorX = e.pageX
-    let cursorY = e.pageY
-    console.log(particles)
-    setParticles([
-      ...particles,
-      {
-        x: cursorX, //x-coordinate
-        y: cursorY, //y-coordinate
-        size: 1,
-        frame: 0,
-      },
-    ])
-  }
   return (
     <Layout>
       <SEO title="Jack Of All Trades, Master Of Some" />
       <section className="full black intro">
-        <canvas
-          ref={canvasRef}
-          id="introbg_animation"
-          style={{
-            width: "100%",
-            height: "100%",
-            position: "absolute",
-            top: 0,
-            left: 0,
-            zIndex: 1,
-          }}
-        ></canvas>
+        <CanvasBG />
         <section className="introduction" style={{ zIndex: 2 }}>
           <h1>
             Hi, I'm <b>Jack&nbsp;Harner</b>
           </h1>
           <h2>Jack of All Trades, Master of Some</h2>
-          {/* <ImASlider /> */}
+          <ImASlider /> 
           <div className="buttons">
             <Button label={"See My Work"} to="/portfolio" white />
             <Button label={"Let's Chat »"} to="/contact" />
