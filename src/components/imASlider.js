@@ -21,7 +21,7 @@ class ImASlider extends Component {
   render() {
     return (
       <>
-        <h3>
+        <h3 className="imASlider">
           <span>I'm a&nbsp;</span>
           <span className="title__box">
             <Typing words={this.state.titles} />
