@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from "react"
 
+import styled from "styled-components";
+
 const CanvasBG = ({ children, footerCTA }) => {
   const [particles, setParticles] = useState([
     {
@@ -79,22 +81,46 @@ const CanvasBG = ({ children, footerCTA }) => {
     let cursorX = e.pageX
     let cursorY = e.pageY
     // console.log(particles)
-    setParticles([
-      ...particles,
-      {
-        x: cursorX, //x-coordinate
-        y: cursorY, //y-coordinate
-        size: 5,
-        frame: 0,
-        angle: Math.random(),
-        up: true,
-      },
-    ])
+        setParticles([
+            ...particles,
+            {
+              x: cursorX, //x-coordinate
+              y: cursorY, //y-coordinate
+              size: 5,
+              frame: 0,
+              angle: Math.random(),
+              up: true,
+            },
+          ])
+    
+
+  }
+
+  const canvasHover = e => {
+    let cursorX = e.pageX
+    let cursorY = e.pageY
+    // console.log(particles)
+    if(particles.length < 1) {
+        setParticles([
+            ...particles,
+            {
+              x: cursorX, //x-coordinate
+              y: cursorY, //y-coordinate
+              size: 5,
+              frame: 0,
+              angle: Math.random(),
+              up: true,
+            },
+          ])
+    }
+
   }
   return (
+    <>
     <canvas
       ref={canvasRef}
       id="introbg_animation"
+      onMouseMove={canvasHover}
       onClick={canvasClick}
       style={{
         width: "100%",
@@ -104,7 +130,7 @@ const CanvasBG = ({ children, footerCTA }) => {
         left: 0,
         zIndex: 1,
       }}
-    ></canvas>
+    ></canvas></>
   )
 }
 
@@ -112,6 +138,7 @@ export default CanvasBG
 
 const lineCircles = (ctx, p, full=false) => {
   ctx.globalAlpha = p.frame
+  ctx.globalCompositeOperation = (full ? 'destination-out' : null);
   // ctx.lineCap = "round
   let endPoint = (full ? (p.angle + 2) * Math.PI : Math.random() * Math.PI)
   ctx.arc(p.x, p.y, p.size, p.angle * Math.PI, endPoint)
@@ -119,3 +146,4 @@ const lineCircles = (ctx, p, full=false) => {
 
   ctx.restore()
 }
+
