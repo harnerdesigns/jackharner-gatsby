@@ -45,7 +45,7 @@ const IndexPage = ({ data, pageContext }) => {
           style={{ zIndex: 3 }}
         />
       </section>
-      <section className="half white row">
+      <section className="half white row row--mobile-reverse">
         <div className="recent-projects">
           {portfolioPosts
             .filter(post => post.node.frontmatter.title.length > 0)
