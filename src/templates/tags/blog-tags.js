@@ -65,7 +65,7 @@ class TagRoute extends React.Component {
                               }
                             />
                           )
-                        }
+                        } else {return ""}
 
                         })}
                     </div>

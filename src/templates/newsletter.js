@@ -47,14 +47,14 @@ const Newsletter = ({
         </div>
         <h2>
           Get them before anyone else by{" "}
-          <a
-            style={{ cursor: "pointer" }}
+          <button
+            style={{ cursor: "pointer", fontSize:"inherit", display:"inline", border: "none", background: "none", fontFamily: "inherit", color: "inherit", padding: 0 }}
             onClick={() => {
               ref.current.focus()
             }}
           >
             Signing Up
-          </a>
+          </button>
           !
         </h2>
       </section>
