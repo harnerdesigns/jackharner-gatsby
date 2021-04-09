@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from "react"
 
 import styled from "styled-components"
+import { breakpoints } from "./breakpoints"
 
 const FreelanceCountdown = () => {
   const [timeLeft, setTimeLeft] = useState({})
   const [year, setYear] = useState(new Date().getFullYear())
   const calculateTimeLeft = () => {
-
-    const difference = +new Date(`4/30/${year} 22:00`) - +new Date() 
+    const difference = +new Date(`4/30/${year} 22:00`) - +new Date()
 
     let timeLeft = {}
     if (difference > 0) {
@@ -31,23 +31,22 @@ const FreelanceCountdown = () => {
 
   const timerComponents = []
 
-  Object.keys(timeLeft).forEach((interval, i )=> {
+  Object.keys(timeLeft).forEach((interval, i) => {
     // if (!timeLeft[interval]) {
     //   return
     // }
     let string = timeLeft[interval]
     timerComponents.push(
-      <><CountdownNumber>
-        {string.toString().padStart(2, '0')}
-      </CountdownNumber>
-      <CountdownSeparator>{(i == 3 ?  "" : ":")}</CountdownSeparator>
+      <>
+        <CountdownNumber>{string.toString().padStart(2, "0")}</CountdownNumber>
+        <CountdownSeparator>{i == 3 ? "" : ":"}</CountdownSeparator>
       </>
     )
   })
 
   return (
     <section className="half black">
-      <h1>Countdown Till I Go Fulltime Freelance</h1>
+      <h1 style={{textAlign: "center"}}>Countdown Till I Go Fulltime Freelance</h1>
       <CountdownWrapper>
         {timerComponents.length ? timerComponents : <span>Time's up!</span>}
       </CountdownWrapper>
@@ -58,30 +57,33 @@ const FreelanceCountdown = () => {
 export default FreelanceCountdown
 
 const CountdownWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-display: flex;
-align-items: center;
-justify-content: center;
-
+  h1 {
+    text-align: center;
+  }
 `
 
-
 const CountdownNumber = styled.span`
-font-size: 4rem;
-font-weight: 900;
-/* vertical-align: middle; */
-margin: 0.5ch;
-line-height: 1;
-background: var(--color);
-color: var(--text-color);
-border-radius: var(--border-radius);
-padding: 0.5ch;
+  font-size: 3rem;
+  font-weight: 900;
+  /* vertical-align: middle; */
+  margin: 0.5ch;
+  line-height: 1;
+  background: var(--color);
+  color: var(--text-color);
+  border-radius: var(--border-radius);
+  padding: 0.5ch;
 
+  @media ${breakpoints.laptop} {
+    font-size: 4rem;
+  }
 `
 
 const CountdownSeparator = styled.span`
-
-font-size: 2.5rem;
-/* font-weight: 100; */
-line-height: 1;
-` 
+  font-size: 2.5rem;
+  /* font-weight: 100; */
+  line-height: 1;
+`
