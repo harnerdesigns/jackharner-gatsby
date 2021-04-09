@@ -80,7 +80,7 @@ export default function Template(props) {
           )}
 
           <section className="project__content">
-          {post.fields.externalLink && post.wordCount.words > 60 && (
+          {post.fields.externalLink && post.wordCount.words > 100 && (
               <Button
                 label={post.fields.externalLinkLabel}
                 href={post.fields.externalLink}

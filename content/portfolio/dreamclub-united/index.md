@@ -4,9 +4,15 @@ title: "Dreamclub United"
 logo: "./Dream-Club-Logo.png"
 description: "LA Non Profit"
 color: "#222"
+images: ["./dream-club-landing-page.png"]
 tags: ["HTML", "WordPress", "Non Profit"]
 weight: 700
-published: false
+published: true
+externalLink: "https://dreamclubunited.org"
 ---
 
-I'm currently serving as the Director of Technology for the LA Based non profit Dreamclub United. Part of my duties as the Director of Technology include building out our member portal where users can sign in, manage their donations, and get news and info about the organization. 
+I'm currently serving as the Director of Technology for the LA Based non profit DreamClub United. Part of my duties as the Director of Technology include building out our member portal where users can sign in, manage their donations, and get news and info about the organization. 
+
+The platform is being built on top of WordPress, and integrates directly with the Stripe API to easily and securely manage recurring billing. 
+
+More details coming once we launch!
