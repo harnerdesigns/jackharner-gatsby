@@ -84,4 +84,4 @@ const CountdownSeparator = styled.span`
 font-size: 2.5rem;
 /* font-weight: 100; */
 line-height: 1;
-`
+` 
