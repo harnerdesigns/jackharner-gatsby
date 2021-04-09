@@ -48,9 +48,11 @@ const Newsletter = ({
         <h2>
           Get them before anyone else by{" "}
           <button
-            style={{ cursor: "pointer", fontSize:"inherit", display:"inline", border: "none", background: "none", fontFamily: "inherit", color: "inherit", padding: 0 }}
+            style={{ cursor: "pointer", fontSize:"inherit", display:"inline", border: "none", background: "none", fontFamily: "inherit", color: "inherit", textDecoration: "underline", padding: 0 }}
             onClick={() => {
               ref.current.focus()
+              window.scrollTo(0, 0)
+
             }}
           >
             Signing Up
@@ -58,14 +60,15 @@ const Newsletter = ({
           !
         </h2>
       </section>
-      <section className="half black">
+      <section className="half black count-cta">
         <h1>Join {subscriberCount} Other Subscribers Today!</h1>
         <Button
           onClick={() => {
             ref.current.focus()
+            window.scrollTo(0, 0)
+
           }}
           size="large"
-          extraStyle={{ width: "50%" }}
           label="Let's Go!!!"
         />
       </section>
