@@ -25,10 +25,14 @@ const About = ({ data }) => {
       <PageTitle>About Me</PageTitle>
       <section className="half content black">
         <h2>Hi! My Name is Jack.</h2>
-        <h3>I'm a Web Developer based in Albuquerque, NM.</h3>
+        <h3>I'm a Freelance Web Developer based in Albuquerque, NM.</h3>
+        <p>If you access it through a web browser, I can probably build it. Just trying to make cool stuff with my friends. Professionally developing websites for almost 10 years now. </p>
         <p>
-          I like making stuff with WordPress, learning new things in Web Dev
-          (these days it's React), playing Overwatch / Valorant / Minecraft (<a href="https://twitch.tv/jackjackslaps" target="_blank">Follow Me on Twitch</a>), & spending time with my three cats.
+          In my free time I enjoy playing Overwatch / Valorant / Minecraft (
+          <a href="https://twitch.tv/jackjackslaps" target="_blank">
+            Follow Me on Twitch
+          </a>
+          ), & spending time with my three cats.
         </p>
       </section>
       <section className="slim  black">
@@ -56,12 +60,12 @@ const About = ({ data }) => {
         </p>
         <p>
           <em>Finally</em>, I was able to build full websites and totally custom
-          applications with a friendly user interface for adding and updating
-          content for all levels of tech-savvy users.
+          applications with a user friendly interface for adding and updating
+          content, accessible by all levels of tech-savvy users.
         </p>
       </section>
 
-      <section className="content full white">
+      <section className="content half white">
         <h2>Powering an E-Commerce Retail Store</h2>
 
         <p>
@@ -70,6 +74,9 @@ const About = ({ data }) => {
           Marketing Director, but it's a small company so I wear a lot of hats.
           My day to day tasks include (but are definitely not limited to):
         </p>
+      </section>
+      <section className="slim white">
+        <ImageGrid images={[Shoolu, Returns, ShooluSocial]} />
       </section>
       <section className="slim white">
         <section className="task-grid">
@@ -102,7 +109,6 @@ const About = ({ data }) => {
 
           <h3>And So Much More...</h3>
         </section>
-        <ImageGrid images={[Shoolu, Returns, ShooluSocial]} />
       </section>
 
       <section className="content full black">
@@ -116,10 +122,7 @@ const About = ({ data }) => {
           <em>k i n d of</em> know what you're talking about.{" "}
         </p>
         <p>
-          Right now, the wind powering my self-learning sails is all things
-          React. We're talking Redux, we're talking Gatsby, state, props,
-          components, arrow functions, all the good stuff (still haven't even
-          tried to dive into hooks yet).
+          Right now, the wind powering my self-learning sails is all things React, Node & Shopify. E-Commerce continues to be a massively growing industry, and all manner of stores are popping up. 
         </p>
 
         <p>
@@ -136,7 +139,7 @@ const About = ({ data }) => {
           When I'm not glued to the computer, I spend my time exploring the New
           Mexico Craft Beer scene (
           <a
-            href="https://lacumbrebrewing.com"
+            href="https://lacumbrebrewing.com?utm_source=jackharner.com"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -151,13 +154,13 @@ const About = ({ data }) => {
       <section className="slim white">
         <PhotoRoll photos={photos} />
       </section>
-      <section className="content slim white">
+      <section className="content half black">
         <h2>If You Want More Of Me...</h2>
         <p>
           Give me a follow on Twitter,{" "}
           <a href="https://twitter.com/jackharner">@JackHarner</a>, check out my{" "}
-          <Link to="/blog">Blog</Link>, or my{" "}
-          <a href="/portfolio">Portfolio</a>.{" "}
+          <Link to="/blog">Blog</Link>, or my <a href="/portfolio">Portfolio</a>
+          .{" "}
         </p>
       </section>
     </Layout>
@@ -183,6 +186,7 @@ export const pageQuery = graphql`
             }
           }
           link
+          tag
         }
       }
     }

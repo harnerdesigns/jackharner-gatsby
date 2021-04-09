@@ -13,6 +13,7 @@ import PhotoRoll from "../components/PhotoRoll"
 import Quotes from "../components/testimonies/quotes"
 import { useRef } from "react"
 import CanvasBG from "../components/canvasBG"
+import FreelanceCountdown from "../components/freelanceCountdown"
 
 const IndexPage = ({ data, pageContext }) => {
   const { edges: posts } = data.allMarkdownRemark
@@ -79,6 +80,7 @@ const IndexPage = ({ data, pageContext }) => {
           </p>
         </div>
       </section>
+      <FreelanceCountdown />
       <section className="half pink quotes__wrapper">
         <h1>A Man Of The People:</h1>
 

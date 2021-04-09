@@ -42,7 +42,7 @@ const Contact = () => (
           <Link to="/portfolio">Here's My Portfolio</Link>)
         </li>
         <li>
-          Hiring for a Front-End Developer Position (
+          Hiring for a Full Stack Developer Position (
           <a href="https://resume.jackharner.com">Here's My Resume</a>)
         </li>
         <li>

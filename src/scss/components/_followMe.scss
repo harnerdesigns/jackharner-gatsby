@@ -165,3 +165,32 @@ $producthunt: #da552f;
     }
   }
 }
+
+.socials--footer {
+display: flex;
+flex-direction: row;
+  a {
+    width: auto;
+    height: auto;
+    background: none;
+    color: var(--text-color) !important;
+    box-shadow: none;
+    border-radius: var(--border-radius);
+    svg {
+      transition: all 300ms;
+      font-size: 2em;
+      margin: 0.25em;
+
+      @include breakpoint(laptop) {
+      margin: 0.2em;
+      // font-size: 1em;
+      }
+    }
+
+    &.twitter {
+      &:before {
+        content: none;
+      }
+    }
+  }
+}

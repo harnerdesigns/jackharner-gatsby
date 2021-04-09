@@ -33,7 +33,8 @@ const tagIcons = {
   Shopify: ["fab", "shopify"],
   "E-Commerce": 'shopping-bag',
   Writing: "pencil-alt",
-  "Non Profit": "tree"
+  "Non Profit": "tree",
+  Cannabis: "cannabis"
 }
 
 export default tagIcons

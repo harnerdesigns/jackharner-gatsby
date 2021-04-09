@@ -260,6 +260,7 @@ ul {
 .slim {
   @extend .full;
   min-height: 10vh;
+  padding: 2rem;
 }
 
 .title__box {

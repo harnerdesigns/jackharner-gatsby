@@ -34,7 +34,8 @@ import {
   faPencilAlt,
   
   faTimes,
-  faTree
+  faTree,
+  faCannabis
 } from "@fortawesome/free-solid-svg-icons"
 
 config.autoAddCss = false
@@ -73,5 +74,6 @@ library.add(
   faQuestionCircle, faShoppingBag,
   faPencilAlt,
   faTimes,
-  faTree
+  faTree,
+  faCannabis
 )
