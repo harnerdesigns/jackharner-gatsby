@@ -3,9 +3,8 @@ date: 2021-04-10T17:07:45.666Z
 title: "Be A T H I C C Developer" 
 subtitle: "Why 'Wide or Deep' when you can 'Wide AND Deep'"
 featuredImage: "./featuredImage.png"
-ogImage: ""
+ogImage: "ogImage.png"
 tags: ['Newsletter']
-externalLink: ""
 published: true
 unlisted: true
 --- 
