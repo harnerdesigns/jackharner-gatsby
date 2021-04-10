@@ -1,0 +1,70 @@
+name: Gatsby Publish -- No Cache
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      - name: Yarn cache directory
+        id: yarn-cache-dirz
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Yarn cache
+        uses: actions/cache@v1
+        id: yarn-cache
+        with:
+          path: ${{ steps.yarn-cache-dir.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      # # In order to make gatsby incremental build works, it's necessary .cache
+      # # and public folder.
+      # - name: Gatsby Cache Folder
+      #   uses: actions/cache@v1
+      #   id: gatsby-cache-folder
+      #   with:
+      #     path: .cache
+      #     key: ${{ runner.os }}-cache-gatsby
+      #     restore-keys: |
+      #       ${{ runner.os }}-cache-gatsby
+
+      # - name: Gatsby Public Folder
+      #   uses: actions/cache@v1
+      #   id: gatsby-public-folder
+      #   with:
+      #     path: public/
+      #     key: ${{ runner.os }}-public-gatsby
+      #     restore-keys: |
+      #       ${{ runner.os }}-public-gatsby
+
+      - run: yarn install --pure-lockfile
+        name: Install dependencies
+
+
+
+      - run: yarn build --log-pages
+        name: Build
+        env:
+          # incremental builds
+          # https://www.gatsbyjs.org/docs/page-build-optimizations-for-incremental-data-changes/
+          # GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true
+          NODE_ENV: production
+          ENVIRONMENT: ${{ contains(github.ref, 'master') && 'production' || 'staging'}}
+          GA: ${{secrets.GA}}
+          CONVERTKIT_SECRET: ${{secrets.CONVERTKIT_SECRET}}
+          CONVERTKIT_KEY: ${{secrets.CONVERTKIT_KEY}}
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: public # The folder the action should deploy.
