@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import React, { useEffect, useRef, useState } from "react"
 
 import styled from "styled-components"
@@ -7,7 +8,7 @@ const FreelanceCountdown = () => {
   const [timeLeft, setTimeLeft] = useState({})
   const [year, setYear] = useState(new Date().getFullYear())
   const calculateTimeLeft = () => {
-    const difference = +new Date(`4/30/${year} 22:00`) - +new Date()
+    const difference = +new Date(`2021-04-30T16:00:00.000-06:00`) - +new Date()
 
     let timeLeft = {}
     if (difference > 0) {
@@ -50,6 +51,7 @@ const FreelanceCountdown = () => {
       <CountdownWrapper>
         {timerComponents.length ? timerComponents : <span>Time's up!</span>}
       </CountdownWrapper>
+      <h3 style={{textAlign: "center"}}>Hiring a contract Web Developer? <Link to="/contact">Let's Chat &raquo;</Link></h3>
     </section>
   )
 }
