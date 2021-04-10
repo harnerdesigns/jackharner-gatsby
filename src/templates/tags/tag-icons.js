@@ -34,7 +34,8 @@ const tagIcons = {
   "E-Commerce": 'shopping-bag',
   Writing: "pencil-alt",
   "Non Profit": "tree",
-  Cannabis: "cannabis"
+  Cannabis: "cannabis",
+  Career: "user-astronaut"
 }
 
 export default tagIcons
