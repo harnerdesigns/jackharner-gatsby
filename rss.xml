@@ -1,4 +1,126 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:webfeeds="http://webfeeds.org/rss/1.0"><channel><title><![CDATA[Jack Harner's Web Dev Blog]]></title><description><![CDATA[Jack Harner is a freelance Web Developer & Graphic Designer based in Albuquerque, New Mexico. He Specializes in WordPress development for small to medium sized businesses.]]></description><link>https://jackharner.com</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 10 Apr 2021 16:10:08 GMT</lastBuildDate><webfeeds:accentColor>#E91E63</webfeeds:accentColor><webfeeds:logo>./src/images/jackharenr-logo-white.svg</webfeeds:logo><item><title><![CDATA[Destructuring and Nested Destructuring in ES6]]></title><description><![CDATA[Have you ever had a JavaScript object that you needed to extract a bunch of different values out of? Today I'd like to introduce you to your new best friend: ES6 Destructuring. ES6 brings with it a bunch of nifty new ways to do things with JavaScript…]]></description><link>https://jackharner.com//blog/destructuring-and-nested-destructuring-in-es6/</link><guid isPermaLink="false">https://jackharner.com//blog/destructuring-and-nested-destructuring-in-es6/</guid><pubDate>Sun, 18 Oct 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Have you ever had a JavaScript object that you needed to extract a bunch of different values out of? Today I&apos;d like to introduce you to your new best friend: ES6 Destructuring.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:webfeeds="http://webfeeds.org/rss/1.0"><channel><title><![CDATA[Jack Harner's Web Dev Blog]]></title><description><![CDATA[Jack Harner is a freelance Web Developer & Graphic Designer based in Albuquerque, New Mexico. He Specializes in WordPress development for small to medium sized businesses.]]></description><link>https://jackharner.com</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 10 Apr 2021 21:56:37 GMT</lastBuildDate><webfeeds:accentColor>#E91E63</webfeeds:accentColor><webfeeds:logo>./src/images/jackharenr-logo-white.svg</webfeeds:logo><item><title><![CDATA[Be A T H I C C Developer]]></title><description><![CDATA[Don't be a T-Shaped Developer Be a T H I C C Developer Instead!  What's A T-Shaped Developer? The idea of a T-Shaped Dev has been around since the early 2010s, and it evolved from the concept of an I-Shaped Dev. The Letters Jack, WHAT DO THEY MEAN…]]></description><link>https://jackharner.com//blog/be-a-thicc-developer/</link><guid isPermaLink="false">https://jackharner.com//blog/be-a-thicc-developer/</guid><pubDate>Sat, 10 Apr 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Don&apos;t be a T-Shaped Developer&lt;/h1&gt;
+&lt;h1&gt;Be a T H I C C Developer Instead!&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;https://media.giphy.com/media/kcOVt7d7hcUVkADVS1/giphy.gif&quot;&gt;&lt;/p&gt;
+&lt;h2&gt;What&apos;s A T-Shaped Developer?&lt;/h2&gt;
+&lt;p&gt;The idea of a T-Shaped Dev has been around &lt;a href=&quot;https://en.wikipedia.org/wiki/T-shaped_skills&quot;&gt;since the early 2010s&lt;/a&gt;, and it evolved from the concept of an I-Shaped Dev. The Letters Jack, &lt;strong&gt;WHAT DO THEY MEAN?!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Picture a skill tree where each column is a different specialty in Programming and the rows signify more complex topics the further you go down:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 82.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAAsTAAALEwEAmpwYAAACx0lEQVQ4y4VTXUiaYRT+/KmpM6sxncwFs5gVusTBCKwWTObGtFnDXQXdSDESgiwcjMrELsYusqyRF6PuikHrYhcOVhflKIIuRaLLrpYZVje6QnvWe9inY9N24OXwnO+8z3fO857DcRwHIScA848rtZgxOPChqQvPb9xDTVkFpvQvMNPUCfedZsg4IQJaC6YfvIS/zoIKTkz3/joFwkcyDSYbbZi+78CTiruoEcnxTvcMU00OuJRGXL8kfHvbjClTF96omqHgyooT8kcsl2I8+B6TH8OovHWTYq+9Hnz6+gWND02En77qxOdvEVidDsJCgeBfQrFIRMAzOAhkc0AuB79vHHW1tSC7jH3f2IDkmgTJgwR+pjNI/DiAQqEo0bJQSKClpQX7+/tIJBKw2WyQSCTY2dnB6ekpRkZGKGdxcRHpdJp8EbJCyzyp1WpFT09PPqGhoQFDQ0MFWcRijI2NQSqVEhYUa5knM5lM2N7eRiwWQ1tbG11eW1vD8fEx+vv7KWdubg7ZbBbhcLh0hewi816vF+fn55cS5hAIBKDT6UjCw8NDRKNRquro6AgnJydIJpOoqqoqVmUhoFKpSJtIJAKtVkuxYDBIFVssFsK9vb3Y29tDX19f6Zb//NDd3Q2Px5NPMJvNmJiYyMvCfhoKhaDRaEoTin6PjdPpJL1Y2y6XC0qlEqlUitpeWFignK2tLWQyGWxubqK8vLy4hjwhe102EszcbjdVcXZ2Rnh5eZmqjMfjpDHz/EuX3BR2GJHP58tjNo+sRf4B6uvrMT8/D71ef7WG7LBBnp2dxdLSEqqrqyk2PDyM1dVVGAyG/A9Yux0dHf/XcGBgALyNjo7SS/O2vr5OmrFxYca0lcvlV69ea2srzdjFxQXsdjtptLu7SwR+v59yVlZWCDN/5erxpbNVMxqN+QS1Wk07zmOZTIb29nbyxVr+BXijXYpr9b0EAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Dev Skill Tree&quot;
+        title=&quot;Dev Skill Tree&quot;
+        src=&quot;/static/5ff4e5a90e705f7afa1636eba241b7e0/c1b63/dev-skill-tree.png&quot;
+        srcset=&quot;/static/5ff4e5a90e705f7afa1636eba241b7e0/5a46d/dev-skill-tree.png 300w,
+/static/5ff4e5a90e705f7afa1636eba241b7e0/0a47e/dev-skill-tree.png 600w,
+/static/5ff4e5a90e705f7afa1636eba241b7e0/c1b63/dev-skill-tree.png 1200w,
+/static/5ff4e5a90e705f7afa1636eba241b7e0/7c656/dev-skill-tree.png 1787w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt; &lt;/p&gt;
+&lt;p&gt;In the early days of the software industry, the preferred type of Dev was the I-Shaped dev, where they have very deep knowledge about a single aspect of software development. Someone who works with Databases and knows everything there is to know about Database Administration, but has never touched a single line of HTML in their life. A &quot;Master of One Trade&quot; type of dev. You had your role and that&apos;s all you did.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 60%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAADEElEQVQozz2S7U+TVxjGn4JUaCl9ESItNGhLX1Iw1mLGLJbFIFaWQYJaO+mL6CYwGGwmWxYaEHkxJVOkYBtd1AWFiOzFfWJGsoGET4zwEmzC1+0P2Pd9++15DonXh5NfrnPlnPvc95GOHigieeAEvXluGg+WM5lbQ0h9lCtqGymZz6rLuFnk5bbhA87kl3En9zg9cjZ40Mpkjo+L6iNE1HaR9ecdRsqXchiOdNF2OoilQE+6p5+TVgenbB4efPEd5kIjEY2Db/Q+DCo1o7FuwqcasGqMZL5M4LXYCDiOker8FrPWgOR0u1C0md3lesfngr+fvE/mh0eCr8bivNWc59/Sdj72fii8jZ0tOXtD8EjyDk9nnwm+ELqEpFKpyKQzXGtvx2Q08uvPv1Dj8+H3+/np5QKG4kNc03kYs9STq8rh0cOHxGMxiouL+e3VK45VV/NRfT3zL14IT9JqtSwuLjI4OIjT6WRzc5OmpiYutLaysbFBpctJv+4EP5rPUaIz8PrNGxL9/bjdbra3t2loaCAcDrO+vk5lZSWSsihaW1sjJt+saHR0lImJCcFtoTCvNY38czjKuaqTwnu7svI+OzAwQCaTEdzS0oIki97eXurlshUeGxujpKSE8vJybg8NCe+M/gjXy2oE3/zqa+rq6gQnk0kMBgMVFRXihYon2e12cfrq6iqRSGS/0SMj3Lt7V/Cnl0L8rm3k79IoZz01wlv5c/l9NpFIkE6nBTc3NyPpdDqWlpYYHh6mqqqK3d1dsXE5dJmdnR3cHg+DhT6em4OY9Yf4Y3mZoVu3qJaHkc1mCQaD4vCtrS1cLtf+k1OpFNFoFL1ez/z8PF6vl9raWuZmZ9GZjESL3AyVBVDJ2enpadqutGEymVhYWMAjX6i0YGZmRniSMi1Fe3t7dHR0CJ6amuLJ48eCP4tf5S/tJ/xnvkHzcb/wsu/e0dnZKXh8fJy5uTnBoVBov0KlukAgQEFBgRiQ1WrFZrPR091NfqGW03mltGrsounxeFz8UY1GQ19fHxaLBYfDQVdXF8oX/B+bjwqirw3MDgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Dev Skill Tree of an I-Shape Dev&quot;
+        title=&quot;Dev Skill Tree of an I-Shape Dev&quot;
+        src=&quot;/static/e27f5f6857f6b394eaa9a6c9f7dd2ad0/c1b63/skill-tree--i-dev.png&quot;
+        srcset=&quot;/static/e27f5f6857f6b394eaa9a6c9f7dd2ad0/5a46d/skill-tree--i-dev.png 300w,
+/static/e27f5f6857f6b394eaa9a6c9f7dd2ad0/0a47e/skill-tree--i-dev.png 600w,
+/static/e27f5f6857f6b394eaa9a6c9f7dd2ad0/c1b63/skill-tree--i-dev.png 1200w,
+/static/e27f5f6857f6b394eaa9a6c9f7dd2ad0/d61c2/skill-tree--i-dev.png 1800w,
+/static/e27f5f6857f6b394eaa9a6c9f7dd2ad0/97a96/skill-tree--i-dev.png 2400w,
+/static/e27f5f6857f6b394eaa9a6c9f7dd2ad0/0e149/skill-tree--i-dev.png 2466w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt; &lt;/p&gt;
+&lt;p&gt;As the software development landscape evolves, the lines are getting blurred between the specialties. This has led to the natural selection of T-Shaped devs over I-Shaped devs. Someone who has dabbled in a little bit of everything but still has deep knowledge in a particular area. Having a little bit of knowledge across the stack will help you make better decisions in your own lane that, while it might not seem like it, ultimately can effect the whole rest of the team. Often referred to as a &quot;Jack of All Trades, Master of One&quot; type of dev.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 60%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAADDElEQVQozz2T709bVRyHL6tjtLeXXi5W2tKOrS1rKbWysY2srDWLg84p6H60s9B10UUgKOgSEmPH7xHGLEYg+MJsccyREP6BbaJDa7I3iyGEdWEmvnB/wN6baPJ4elDPq+d+zpPv/Zxzc5X9L1VyoyrKYGWEtgoP80aMlOonrR5gwYhzUmRXKpsY149yoqKW61XH+FiLcMq8lznhnrP4yKgB6Ub3OFAqFBM5/bAc4jKp5I1WDpXbadlTwxeCHSYL3WL4kO0gelk5w/oRzqk+3CYrs9XHiZRXi0FOZowoTuEq3t02/qrr5wfHO6S1AOwfYrTqqBTwDnHBeoBCzRleuC/TbtnL38L93tG544r9z/RmvqqOSX7Lsg9FLG7UxEmb/dgE33afIlKmc8T0Mrdc7Wgie994lana19klOC/clNmHoezijuc0DYrGMZOdb1xtIjOhqJqVe4WHjExfIxAOsfHbU06/28nZdIpfnxWpDzfwufUg3zrbeUU3ePCowNXJcRoiYTZ/f8Ybbya4kM3w+OkW/mAAxe/zU1q/FApczGQkX5uc5Mv8rOSu8ynuW9p47sjQ3nhYZj8/XP/fHc5d5evFRcmdHR07Rx4YGCAej5cemJqawm6343a7GR8bk9kJ2z4+qG2WfOWTT2ltbZV8fXoaXdepq6tjZHhYZorP55PTC6Jhd3e35EnRcDafl/ze+ST31Db+EA1Phppl9pNo+J+by+VY/LdhR6mhpmmsra0xMTFBY2MjW1tbciOVTLG5uUkwFGLEeojvnAmctmp+XF9nbHSUcDhMsVgkkUjI4RsbGwQCgZ0jz83NkRF3YrPZWFlZoampiZaWFpbv3kUzqshUBhmrjVEm3IWFBbrSXRiGwerqKiHxwtIVLC0tyUwJBoOy7vb2Nj09PZLn5+e5dfOm5MvZSzxW3+ZP54d0vBaVWfHJE3p7eyXPzMywvLwsOZlM7jQstYvFYpjNZvmBPB4PXq+Xj/r7qbCqHN/t4Iz4xUpuNpslGo1isVgYHBzE5XJRX19PX18fqqryDz6/7L200g+0AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Dev Skill Tree of an T-Shape Dev&quot;
+        title=&quot;Dev Skill Tree of an T-Shape Dev&quot;
+        src=&quot;/static/a91f23d352b0ba51debf6a158a17954d/c1b63/skill-tree--t-dev.png&quot;
+        srcset=&quot;/static/a91f23d352b0ba51debf6a158a17954d/5a46d/skill-tree--t-dev.png 300w,
+/static/a91f23d352b0ba51debf6a158a17954d/0a47e/skill-tree--t-dev.png 600w,
+/static/a91f23d352b0ba51debf6a158a17954d/c1b63/skill-tree--t-dev.png 1200w,
+/static/a91f23d352b0ba51debf6a158a17954d/d61c2/skill-tree--t-dev.png 1800w,
+/static/a91f23d352b0ba51debf6a158a17954d/97a96/skill-tree--t-dev.png 2400w,
+/static/a91f23d352b0ba51debf6a158a17954d/0e149/skill-tree--t-dev.png 2466w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt; &lt;/p&gt;
+&lt;h2&gt;What&apos;s Different About Being T H I C C?&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://media.giphy.com/media/PN5d7H16UzSrS/giphy.gif&quot;&gt;&lt;/p&gt;
+&lt;p&gt;I propose we take the T-Shaped Dev a step or two further and call it a T H I C C Dev. Take your average T-Shaped dev and get them to deep dive into some other areas as well. The stem of your T might not end up as tall but it will be wide and stable. It takes all the benefits of a T-Shaped Dev vs an I-Shaped Dev to the extreme. &lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 60%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAADGUlEQVQozy2R7U9bZRjGjyulL6fltKdj7Q5t6euKqLzpmGtpl7KNqQzY4jqsNBBYxjqQZjqS6dJsNprYObJRSWbMnLKEBIkx8ZMvODUkftLYTIPh24x+N/4Bmvx8+uDz5VzPda5c+d33o4SbWrjhTlJq6eK4NUBNT3NWjZFXD/CenuGY8F5t6eFNVz9ZaxvvuA/zirOL52xBlkX2RXuUgpqQ2aTFh2JVTFx1PSNLDJPKTT1FX3Mrhyxe3hXaZ7IzIcoXtV5ce5opi2yjxG9ysKQP0GX2iKL9VPUk+0VWiZg1/mmf4xvfGHnHAQhf5prrIFVBQniRcTXOlu80fwXOMSSo/g3O8bV3VE7Q+H9F6+O2Jw2RRYbtIRRxuOHNkLfGcClNfBwaptvSSr/Nx73g87QIb9r9JG8bGUwiu+QfZFxLoCvN3A+d5HGzzmFTKx8Yx4VnQlGdDr74/gHXblWJKioPImc5ag8yrIbZbD9DeI+TNzz9fNR2gr2KhU/8J7nk7iXepPFdPM+A4uGlCzP8uP2QWEcCJRaN0Tg/1H8iJ/aIt8jrzl4q7kMQKsl9fSVG/NM/xVGrn7+D5/l83wvkhI8xzyUlzp3Ve7JjdGRkd+SFhQUyRzKNC9dHp9iruTGaVK4EB6SX1ULMGH1SF9sO0u8wpK6cmkYzW2kPhymXy9JTotGobN/a2mJiYkLqt2pLXG/uhsRlTqtRvjTG+CM0TdYmCGMX+cwxSGF6SmaviqKVlRWpRxqETqeTzc1NKpUKT3R28svPdUbHzzCi7ONbbZiY2GvZ0s19xxG84iE+bTnGa2LMp57uZfvhr5wYGpIg9XqdRCKxO/Ly8jKFQgFN01hfX6enp4dn0ynWNtZxetycn7vIzdu3eMxqZuX9O7ws6HRdZ2Njg04BkUqlWF1dlZ7S0dEhcXd2dpidnZW6Vqvx4d27Up+bmeH3R4+kPjU2Jr+/bW9z4f9stVplbW1N6lwut0vYoEun09hsNvlAgUCASCTC/Pw8FouFwWyWfD4vlz45OUkymcRut1MqlTAMg3g8TrFYRFVV/gPTQdKvaZp7xwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Dev Skill Tree of an T-Shape Dev&quot;
+        title=&quot;Dev Skill Tree of an T-Shape Dev&quot;
+        src=&quot;/static/0af2715d6c6c02c1b395dc326900d33c/c1b63/skill-tree--thicc-dev.png&quot;
+        srcset=&quot;/static/0af2715d6c6c02c1b395dc326900d33c/5a46d/skill-tree--thicc-dev.png 300w,
+/static/0af2715d6c6c02c1b395dc326900d33c/0a47e/skill-tree--thicc-dev.png 600w,
+/static/0af2715d6c6c02c1b395dc326900d33c/c1b63/skill-tree--thicc-dev.png 1200w,
+/static/0af2715d6c6c02c1b395dc326900d33c/d61c2/skill-tree--thicc-dev.png 1800w,
+/static/0af2715d6c6c02c1b395dc326900d33c/97a96/skill-tree--thicc-dev.png 2400w,
+/static/0af2715d6c6c02c1b395dc326900d33c/0e149/skill-tree--thicc-dev.png 2466w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt; &lt;/p&gt;
+&lt;p&gt;The more you know across the stack puts you in a much better position to be flexible throughout the organization, and from my experience, those types of people are VALUABLE. Be a &quot;Jack of All Trades, Master of Some&quot; type dev. The earliest reference I can find to that phrase comes from one of my favorite designers/entreprenuers, &lt;a href=&quot;https://vanschneider.com/blog/a-jack-of-all-trades/&quot;&gt;Tobias van Schneider&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;If you&apos;re the go-to guy in your company for one thing, that does come with it a certain level of job security, but if you&apos;re the go-to guy for three &lt;em&gt;or more&lt;/em&gt; things, you&apos;re not going to get fired. If they would have to hire more than 1 person to replace you, that gives you a TON of leverage. Nobody&apos;s invincible, obviously, but you can get away with a lot more than your average employee. &lt;strong&gt;Be Irreplaceable.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;But Jack, How Do I Get T H I C C?&lt;/h2&gt;
+&lt;p&gt;The absolute KEY to getting nice and T H I C C as a developer is the ability to absorb information quickly. If you can get to a place where you can take something in once, drop that info into your Mental Rolodex, and flip back to it in a couple weeks when you need it again, you&apos;ll be set. &lt;/p&gt;
+&lt;p&gt;Now, I&apos;m not saying you have to memorize everything you come across. Far from it, actually. All you have to remember is how to find that information again. Maybe that&apos;s with a Second Brain tool like Roam Research, or a massive folder of Bookmarks you search through, how you store the data doesn&apos;t matter. &lt;/p&gt;
+&lt;p&gt;Think of your Mental Rolodex like a cookbook. You want to make a cake but you don&apos;t remember exactly how. You look through a cookbook, usually alphabetically (or at least with a table of contents), and find the recipe for a cake. You still have to go make the cake, but now you have step by step instructions to get there. Plus, it took you almost no time to find that info because you already knew it was in the cookbook. &lt;/p&gt;
+&lt;p&gt;If you can find it again quickly, you don&apos;t need to remember it. You just need to remember that you &lt;em&gt;can&lt;/em&gt; do something, not &lt;em&gt;how&lt;/em&gt; to do something. The stuff you use all the time, you won&apos;t need to look up as much, and with a system in place to quickly find the rest, you&apos;ll go far. &lt;/p&gt;
+&lt;p&gt;Outside of that all you have to do is: &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Find something that piques your curiosity.&lt;/li&gt;
+&lt;li&gt;Google it.&lt;/li&gt;
+&lt;li&gt;Retain the relevant info.&lt;/li&gt;
+&lt;li&gt;Leave a breadcrumb trail to the rest.&lt;/li&gt;
+&lt;li&gt;Repeat. Forever.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;The Moral Of The Story Is:&lt;/h2&gt;
+&lt;h1&gt;Never Stop Learning&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;https://media.giphy.com/media/xUe3hdl4MY59NcMyjy/giphy.gif&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Destructuring and Nested Destructuring in ES6]]></title><description><![CDATA[Have you ever had a JavaScript object that you needed to extract a bunch of different values out of? Today I'd like to introduce you to your new best friend: ES6 Destructuring. ES6 brings with it a bunch of nifty new ways to do things with JavaScript…]]></description><link>https://jackharner.com//blog/destructuring-and-nested-destructuring-in-es6/</link><guid isPermaLink="false">https://jackharner.com//blog/destructuring-and-nested-destructuring-in-es6/</guid><pubDate>Sun, 18 Oct 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Have you ever had a JavaScript object that you needed to extract a bunch of different values out of? Today I&apos;d like to introduce you to your new best friend: ES6 Destructuring.&lt;/p&gt;
 &lt;p&gt;ES6 brings with it a bunch of nifty new ways to do things with JavaScript. One of the things I use ALL THE TIME is Destructuring. It allows you to pick and choose properties out of an object and automatically assign them to a variable.&lt;/p&gt;
 &lt;p&gt;Take the following JavaScript Object for example:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; person &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
