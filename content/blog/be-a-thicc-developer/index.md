@@ -1,10 +1,10 @@
 ---
 date: 2021-04-10T17:07:45.666Z
 title: "Be A T H I C C Developer" 
-subtitle: "Why 'Wide or Deep' when you can 'Wide AND Deep'"
+subtitle: "Why 'Wide or Deep' when you can 'Wide AND Deep'?"
 featuredImage: "./featuredImage.png"
 ogImage: "ogImage.png"
-tags: ['Newsletter']
+tags: ['Newsletter', 'Career']
 published: true
 unlisted: true
 --- 
@@ -40,7 +40,7 @@ I propose we take the T-Shaped Dev a step or two further and call it a T H I C C
 ![Dev Skill Tree of an T-Shape Dev](./skill-tree--thicc-dev.png) 
 
 
-The more you know across the stack puts you in a much better position to be flexible throughout the organization, and from my experience, those types of people are VALUABLE. Be a "Jack of All Trades, Master of Some" type dev. The earliest reference I can find to that phrase comes from one of my favorite designers/entreprenuers, [Tobias van Schneider](https://vanschneider.com/blog/a-jack-of-all-trades/). 
+The more you know across the stack puts you in a much better position to be flexible throughout the organization, and from my experience, those types of people are VALUABLE. Be a "Jack of All Trades, Master of Some" type dev. The earliest reference I can find to that phrase comes from one of my favorite designers/entrepreneurs, [Tobias van Schneider](https://vanschneider.com/blog/a-jack-of-all-trades/). 
 
 If you're the go-to guy in your company for one thing, that does come with it a certain level of job security, but if you're the go-to guy for three _or more_ things, you're not going to get fired. If they would have to hire more than 1 person to replace you, that gives you a TON of leverage. Nobody's invincible, obviously, but you can get away with a lot more than your average employee. **Be Irreplaceable.**
 
