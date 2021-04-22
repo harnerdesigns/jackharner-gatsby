@@ -6,7 +6,7 @@ featuredImage: "./featuredImage.png"
 ogImage: "ogImage.png"
 tags: ['Newsletter', 'Career']
 published: true
-unlisted: true
+unlisted: false
 --- 
 
 # Don't be a T-Shaped Developer
