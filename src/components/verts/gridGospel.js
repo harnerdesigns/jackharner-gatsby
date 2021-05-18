@@ -11,12 +11,13 @@ const GridGospel = () => {
       slug="gridgospel"
       buttonText="Buy Now &raquo;"
     >
-        <h2>Haven't Quite Mastered CSS Grid Yet?</h2>
+        <p>Haven't Quite Mastered CSS Grid Yet?</p>
         <p> Then you NEED to check out</p>
         <h1>
-          The Grid Gospel: An Intro To CSS Grid
+          The Grid Gospel:
         </h1>
-        <p>Get it Today and Receive:</p>
+        <h2>An Intro To CSS Grid</h2>
+        <h3>Get it Today and Receive:</h3>
         <ul>
           <li>20+ Pages of CSS Grid Awesomeness</li>
           <li>A Printable CSS Grid Cheat Sheet</li>
