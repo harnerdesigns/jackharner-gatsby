@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:webfeeds="http://webfeeds.org/rss/1.0"><channel><title><![CDATA[Jack Harner's Web Dev Blog]]></title><description><![CDATA[Jack Harner is a freelance Web Developer & Graphic Designer based in Albuquerque, New Mexico. He Specializes in WordPress development for small to medium sized businesses.]]></description><link>https://jackharner.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 10 May 2021 00:56:50 GMT</lastBuildDate><webfeeds:accentColor>#E91E63</webfeeds:accentColor><webfeeds:logo>./src/images/jackharenr-logo-white.svg</webfeeds:logo><item><title><![CDATA[Be A T H I C C Developer]]></title><description><![CDATA[Don't be a T-Shaped Developer Be a T H I C C Developer Instead!  What's A T-Shaped Developer? The idea of a T-Shaped Dev has been around since the early 2010s, and it evolved from the concept of an I-Shaped Dev. The Letters Jack, WHAT DO THEY MEAN…]]></description><link>https://jackharner.com//blog/be-a-thicc-developer/</link><guid isPermaLink="false">https://jackharner.com//blog/be-a-thicc-developer/</guid><pubDate>Sat, 10 Apr 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Don&apos;t be a T-Shaped Developer&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:webfeeds="http://webfeeds.org/rss/1.0"><channel><title><![CDATA[Jack Harner's Web Dev Blog]]></title><description><![CDATA[Jack Harner is a freelance Web Developer & Graphic Designer based in Albuquerque, New Mexico. He Specializes in WordPress development for small to medium sized businesses.]]></description><link>https://jackharner.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 18 May 2021 22:50:58 GMT</lastBuildDate><webfeeds:accentColor>#E91E63</webfeeds:accentColor><webfeeds:logo>./src/images/jackharenr-logo-white.svg</webfeeds:logo><item><title><![CDATA[Be A T H I C C Developer]]></title><description><![CDATA[Don't be a T-Shaped Developer Be a T H I C C Developer Instead!  What's A T-Shaped Developer? The idea of a T-Shaped Dev has been around since the early 2010s, and it evolved from the concept of an I-Shaped Dev. The Letters Jack, WHAT DO THEY MEAN…]]></description><link>https://jackharner.com//blog/be-a-thicc-developer/</link><guid isPermaLink="false">https://jackharner.com//blog/be-a-thicc-developer/</guid><pubDate>Sat, 10 Apr 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Don&apos;t be a T-Shaped Developer&lt;/h1&gt;
 &lt;h1&gt;Be a T H I C C Developer Instead!&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://media.giphy.com/media/kcOVt7d7hcUVkADVS1/giphy.gif&quot;&gt;&lt;/p&gt;
 &lt;h2&gt;What&apos;s A T-Shaped Developer?&lt;/h2&gt;
@@ -1468,70 +1468,163 @@ externalLink: &quot;&quot;
     &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; str&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[BigCommerce Developer Diary]]></title><description><![CDATA[Read My Diary 😉 I was asked to guest post on the BigCommerce Developer blog as part of their Developer Diaries series. The series looks at the general day to day of different people working in the e-commerce/BigCommerce space. I provided a look at…]]></description><link>https://jackharner.com//blog/bigcommerce-developer-diary/</link><guid isPermaLink="false">https://jackharner.com//blog/bigcommerce-developer-diary/</guid><pubDate>Fri, 22 Nov 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Read My Diary 😉&lt;/h2&gt;
 &lt;p&gt;I was asked to guest post on the BigCommerce Developer blog as part of their Developer Diaries series. The series looks at the general day to day of different people working in the e-commerce/BigCommerce space. I provided a look at my week working at &lt;a href=&quot;/portfolio/shoolu&quot;&gt;Shoolu&lt;/a&gt; and all the various things I do (and all the coffee I drink).&lt;/p&gt;
-&lt;h4&gt;Thanks Karen and Laruen for inviting me on!&lt;/h4&gt;</content:encoded></item><item><title><![CDATA[Getting Started With Digital Ocean]]></title><description><![CDATA[Digital Ocean is a cloud infrastructure company based in New York City. They have blazing fast data centers all over the world and are my personal favorite hosting provider. I point all of my clients there and anytime I need a server or any kind of…]]></description><link>https://jackharner.com//blog/getting-started-with-digital-ocean/</link><guid isPermaLink="false">https://jackharner.com//blog/getting-started-with-digital-ocean/</guid><pubDate>Wed, 20 Nov 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://m.do.co/c/66cca12b82bc&quot;&gt;Digital Ocean&lt;/a&gt; is a cloud infrastructure company based in New York City. They have blazing fast data centers all over the world and are my personal favorite hosting provider. I point all of my clients there and anytime I need a server or any kind of hosting, Digital Ocean is where I go. Spin up servers in a couple of clicks and you&apos;re on your way! &lt;/p&gt;
-&lt;h2&gt;Creating A Team&lt;/h2&gt;
-&lt;p&gt;Digital Ocean comes with the ability to create Teams. Teams allow you to share Droplets, Domains, Images, Volumes and pretty much everything else with multiple people, all while keeping the payment info stored securely in the owner&apos;s account. &lt;/p&gt;
-&lt;h3&gt;Prerequisites&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;A Digital Ocean Account (&lt;a href=&quot;https://m.do.co/c/66cca12b82bc&quot;&gt;Sign Up Here&lt;/a&gt;).&lt;/li&gt;
-&lt;li&gt;A credit card attached to your Digital Ocean account. &lt;/li&gt;
-&lt;li&gt;People you want to share access to your Droplets with.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Let&apos;s Just Jump Into It.&lt;/h3&gt;
-&lt;p&gt;The first step is to log in to your Digital Ocean account. &lt;/p&gt;
-&lt;p&gt;In the upper right hand corner of the page, click on your little profile picture (or whatever default icon you got). &lt;/p&gt;
-&lt;p&gt;Click on &quot;Create A Team&quot;.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1121px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 51.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFAf/EABQBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAX6E99A0H//EABYQAAMAAAAAAAAAAAAAAAAAAAQQNP/aAAgBAQABBQIKZBTL/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQIBAT8BZ//EABYQAQEBAAAAAAAAAAAAAAAAAAIQgf/aAAgBAQAGPwI7Tf/EABgQAQADAQAAAAAAAAAAAAAAAAEQobEA/9oACAEBAAE/IbOoA627P//aAAwDAQACAAMAAAAQ58//xAAWEQADAAAAAAAAAAAAAAAAAAABEDH/2gAIAQMBAT8QEX//xAAWEQADAAAAAAAAAAAAAAAAAAABEDH/2gAIAQIBAT8Qor//xAAcEAEAAgIDAQAAAAAAAAAAAAABABFRcRBBgfD/2gAIAQEAAT8QostYNpZBFUPk+XnO3fH/2Q==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;Create A Team Menu Item&quot;
-        title=&quot;Create A Team Menu Item&quot;
-        src=&quot;/static/545d0372a95244da99ee57c7aa6a6288/f279f/create-a-team.jpg&quot;
-        srcset=&quot;/static/545d0372a95244da99ee57c7aa6a6288/f93b5/create-a-team.jpg 300w,
-/static/545d0372a95244da99ee57c7aa6a6288/b4294/create-a-team.jpg 600w,
-/static/545d0372a95244da99ee57c7aa6a6288/f279f/create-a-team.jpg 1121w&quot;
-        sizes=&quot;(max-width: 1121px) 100vw, 1121px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;h3&gt;It&apos;s All In The Name&lt;/h3&gt;
+&lt;h4&gt;Thanks Karen and Laruen for inviting me on!&lt;/h4&gt;</content:encoded></item><item><title><![CDATA[Getting Started With DigitalOcean]]></title><description><![CDATA[DigitalOcean is a cloud infrastructure company based in New York City. They have blazing fast data centers all over the world and are my personal favorite hosting provider. I point all of my clients there and anytime I need a server or any kind of…]]></description><link>https://jackharner.com//blog/getting-started-with-digital-ocean/</link><guid isPermaLink="false">https://jackharner.com//blog/getting-started-with-digital-ocean/</guid><pubDate>Wed, 20 Nov 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://m.do.co/c/66cca12b82bc&quot;&gt;DigitalOcean&lt;/a&gt; is a cloud infrastructure company based in New York City. They have blazing fast data centers all over the world and are my personal favorite hosting provider. I point all of my clients there and anytime I need a server or any kind of hosting, DigitalOcean is where I go. Spin up servers in a couple of clicks and you&apos;re on your way! &lt;/p&gt;
+&lt;p&gt;Today I&apos;m going to go over how to get your DigitalOcean account setup, create a team, and grant me access to get your site setup.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;On the off chance that you got here through Google or elsewhere and you&apos;re not already a client of mine, please &lt;a href=&quot;/contact&quot;&gt;Get In Touch&lt;/a&gt;. I will gladly help you get something hosted on DigitalOcean.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Setting Up Your DigitalOcean Account&lt;/h2&gt;
+&lt;p&gt;Click the button above (&lt;a href=&quot;https://m.do.co/c/66cca12b82bc&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;or Here&lt;/a&gt;) to get started signing up for DigitalOcean. &lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 51.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQBBf/EABQBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAehZHehof//EABgQAAMBAQAAAAAAAAAAAAAAAAEEEDQC/9oACAEBAAEFAkcw6ERzT//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAECAQE/AWf/xAAYEAADAQEAAAAAAAAAAAAAAAABEIEAMf/aAAgBAQAGPwIXdQr/AP/EABoQAAEFAQAAAAAAAAAAAAAAAAEAEBGhsXH/2gAIAQEAAT8hs6RBiHGt6f8A/9oADAMBAAIAAwAAABBfD//EABYRAAMAAAAAAAAAAAAAAAAAAAEQMf/aAAgBAwEBPxARf//EABYRAAMAAAAAAAAAAAAAAAAAAAEQMf/aAAgBAgEBPxCiv//EABsQAAEFAQEAAAAAAAAAAAAAAAEAESEx8BBR/9oACAEBAAE/EJbpJhjE05MDYCxvXf/Z&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 51.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAACu0lEQVQoz32SfUzMcRzHf+YxozR6UJoehkp5uOuuunJ3iauurjuuVHc9q26uhFDEnIlGk9hsMoZZKqQSy/WwWTZ5+sf8Y2M2/xp/SDkVevnu/rD5x3d777vv9/P+vPf+PEgvPk/w4csk38Z/MD7hYmp6momJ77hcPwRcMDPD/86MiLumpnn3cZqBkZ9IhXYH1soTlNacEncD2RWNaI37UKXZURuq0ecdpnhPM0UC+VVNZJWfxFzWgKHQQbrlKPn2E1jtx9hWVI++4CRSdFIusq0FxKQUk2Dchdq4B8lbzqLlcSwOULFaZmZbqQNTyTEqDrZwtd3JucvdtN7sp7a+heCoFNZrLSh1hch0FiRFahGqjDISjTa276zHtq8Rg7kci7WKrB12dtee5UDDZYr3nubC1a5/yn3z5i3BazSs0+YSl76TcNV2JNnWfOLFI0ZXQqjMRGSsmbjNeaiTczFkVWKra8F26Dzm8uM4zt5gcmqSr2PjbsGnoy8JWZVAeHy2MFRJiCIVaX1yHrH6EpZH6ljgp2BpmIYlIWoCwlPQmKoxlR4lw1onWlFNjeMS1+/8oql1iuYr0HrjNRvj9UQk5KDUV+AboUWKSsphQ7IVz5UJePgrWBwoercijoWBKqITLagzbBgLD4mBNNJ4oY2vYvCfxuC3cDj66j3+a5Lxi0wjTJlDQJQOKVKTTbQQ9RKC831lLPCV4+EXw3zhNigijfTMXWiFqKngCDX1l7jf/5xr7Q+4eKWNqtozeAQmCm48/qKiUHkmUrAigxClgbk+G5E81yJ5Rbkxa0k0c5bJ8QpKwmdVKltM+wVqkWsqmLc0FkkKQpodJjZiHbOXKfEO3eTmSb3OEXqdT+jsHuRW1yPau5x/0XFvgM6eYTq6h+lzjtI//JKHg8/c/3d6hrgtcty87iF6+ke42/eYP5Md1JfMG9dkAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;Setting the Team Name&quot;
-        title=&quot;Setting the Team Name&quot;
-        src=&quot;/static/a438323069bd4f9a2e731db90fcbc257/e5166/team-name.jpg&quot;
-        srcset=&quot;/static/a438323069bd4f9a2e731db90fcbc257/f93b5/team-name.jpg 300w,
-/static/a438323069bd4f9a2e731db90fcbc257/b4294/team-name.jpg 600w,
-/static/a438323069bd4f9a2e731db90fcbc257/e5166/team-name.jpg 1200w,
-/static/a438323069bd4f9a2e731db90fcbc257/d9c39/team-name.jpg 1800w,
-/static/a438323069bd4f9a2e731db90fcbc257/d9786/team-name.jpg 1852w&quot;
+        alt=&quot;Sign Up Screen&quot;
+        title=&quot;Sign Up Screen&quot;
+        src=&quot;/static/efcebc1e51077e444ea2b33f938e1545/c1b63/sign-up-screen.png&quot;
+        srcset=&quot;/static/efcebc1e51077e444ea2b33f938e1545/5a46d/sign-up-screen.png 300w,
+/static/efcebc1e51077e444ea2b33f938e1545/0a47e/sign-up-screen.png 600w,
+/static/efcebc1e51077e444ea2b33f938e1545/c1b63/sign-up-screen.png 1200w,
+/static/efcebc1e51077e444ea2b33f938e1545/d61c2/sign-up-screen.png 1800w,
+/static/efcebc1e51077e444ea2b33f938e1545/d32a0/sign-up-screen.png 1843w&quot;
         sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
     &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Enter in &lt;em&gt;your&lt;/em&gt; name, &lt;em&gt;your&lt;/em&gt; email, and choose a strong Password. Then click on &lt;strong&gt;&quot;Sign up with email&quot;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Alternatively you can sign up with Google, or use an existing GitHub account.&lt;/p&gt;
+&lt;h2&gt;Verify Your Email&lt;/h2&gt;
+&lt;p&gt;They should send you an email with a link. Open it and click on the link to verify your email.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1197px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 18.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAIAAAABPYjBAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAg0lEQVQI152HAQ6DIBAE+f8XbSyt1auicnJoEQR6mNgHdDOZzAoAqOt7Vd2kfEAHSimtkYiMIXP6nGXKJbsYYuDdQz+IZsTXhM2on2puZ1N6Qo5OG9DFLVqJq9Qru1m2xXnaA368C4fox2nbfYhpPyLjf3HB7S64Y8op5eKcRebm99e+jm3l8Ifc1RcAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Confirm Your Email&quot;
+        title=&quot;Confirm Your Email&quot;
+        src=&quot;/static/e282e7fffe485c8468893e8562411bc0/d326d/confirm-email.png&quot;
+        srcset=&quot;/static/e282e7fffe485c8468893e8562411bc0/5a46d/confirm-email.png 300w,
+/static/e282e7fffe485c8468893e8562411bc0/0a47e/confirm-email.png 600w,
+/static/e282e7fffe485c8468893e8562411bc0/d326d/confirm-email.png 1197w&quot;
+        sizes=&quot;(max-width: 1197px) 100vw, 1197px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;Add A Payment Method&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 51.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABvklEQVQoz41R72sTQRDdP1paKFj/AfGz+EFDbVCr/SgWRMU2SdNWxVq5JpXEvb3b2/udu9okzV3Mc3Y3hYggPXjMm9mZN2/32EPnI5793MeOu48XfAn3AC8Ju6KNV6JFvEXntqaxww9Wem18evEOz523YOudJ1hr/407rcfYaDewedjE3e62wb3jJjaPKD/axkZ3C+uHDaytznYopxqbpBWmS0ySCtXoN+pijtmoxrysTVz8WgA1AAqr37xcmBk7X5vI3CDBDbiMIaMck9k1yvEUPLoiPsPleILiaoxpVUFlhcl1XcY5XJlgICO0xIDmEzAZpJABCakcXpAhTkqzfTqboyfGhtc1Oa5qw90wx/WSx2kJT2Zmdk/0MCRTLPA8hKTuqwJSWuEoKUi4QEpuNA9jC83T9NIs1Vz3yiBHX4Z4I85NZEpwxMNThLxPhwl8avDJqXart2u+Cl3zbjhBqRG+S4nXwsF7J7UO0x9dKDG0LgN7hdvAVxkCisc+x9bwK3Y/5WAhP0c8+Az9lr7K/3H0P2ixC/ohe76DB2ff0PyiwCLeQ9b/YATt5uzW7iK67okv0HBPcP/sFI86Mf4AyOjO18ALVF0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Add A Payment Method Screen&quot;
+        title=&quot;Add A Payment Method Screen&quot;
+        src=&quot;/static/691eeb9d584e3692c888b39c8f9f86c3/c1b63/add-payment-screen.png&quot;
+        srcset=&quot;/static/691eeb9d584e3692c888b39c8f9f86c3/5a46d/add-payment-screen.png 300w,
+/static/691eeb9d584e3692c888b39c8f9f86c3/0a47e/add-payment-screen.png 600w,
+/static/691eeb9d584e3692c888b39c8f9f86c3/c1b63/add-payment-screen.png 1200w,
+/static/691eeb9d584e3692c888b39c8f9f86c3/d61c2/add-payment-screen.png 1800w,
+/static/691eeb9d584e3692c888b39c8f9f86c3/d32a0/add-payment-screen.png 1843w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Next you&apos;re presented with the option of adding a Credit/Debit card, or connecting a PayPal account. &lt;/p&gt;
+&lt;p&gt;Pick Your Poison and follow the prompts to connect your payment method.&lt;/p&gt;
+&lt;p&gt;After you&apos;re done adding a payment method it takes you to a screen to help you get your first thing setup. Ignore this for now, and just click on &lt;strong&gt;&quot;Explore Our Control Panel&quot;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1127px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 69%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAIAAACgpqunAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABz0lEQVQoz31RyY7dIBCc//+a5AdyySXHKJdEyvI0XjCYfWkM2A/S2NZEymGkEi41Xbi6+mVeFKGKcfsGQvU/zJwQOTNDmKHrjfNKofBlIlJqz4WdqaQrVmXOe631+TwBsTqXlTHcSBuU9soC1lMqt1jpYGwQ0glphXLORx9ijOl41pJytbZMs/vxW0CVNnNbujjvt5hLBzHFmNO2I3Eu4nMhbCWVI27gwZqglY9bCTF56J3WQRePs9QmtNY8uD/jTyT7friwIfny4B+/TUhSLgESkq/D+un7gGRLZSJdLIyF1irEaLxHJeJqHbj9tehWay7dEZKRmwdVGAY+18XdtnCYGeNGqMCE0Ti/8lI5jqcFLq02IFVv6OkYQIJmb9uYIf4nRKB8bbVhkjh29691phRJ3DKmiIQxRgjplZgv2/K03QKEhdFrZjht70qVZUFy225tWegwXinst21czyoM5ZabRJhCSxgmwLYIxzTygBFYF3lfpOfnRr3f7lXhhlM+wDo/Dynt2IoX6GiaxdghOycdw1m5+D2zOVf1lEv+/AHJcRwL0+gKr9/HvapSdjxtSDjbcTzfxOR98fVBG68TH050z0SOvSIew3rx/3DZ/gtwKBF7PtY+2wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;After Payment Added Screen&quot;
+        title=&quot;After Payment Added Screen&quot;
+        src=&quot;/static/cb2772d41ab730ddd61e1142ec840301/dcccd/after-payment-added.png&quot;
+        srcset=&quot;/static/cb2772d41ab730ddd61e1142ec840301/5a46d/after-payment-added.png 300w,
+/static/cb2772d41ab730ddd61e1142ec840301/0a47e/after-payment-added.png 600w,
+/static/cb2772d41ab730ddd61e1142ec840301/dcccd/after-payment-added.png 1127w&quot;
+        sizes=&quot;(max-width: 1127px) 100vw, 1127px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;Creating A Team&lt;/h2&gt;
+&lt;p&gt;DigitalOcean comes with the ability to create Teams. Teams allow you to share Droplets, Domains, Images, Volumes and pretty much everything else with multiple people, all while keeping the payment info stored securely in the owner&apos;s account. &lt;/p&gt;
+&lt;h3&gt;Let&apos;s Just Jump Into It.&lt;/h3&gt;
+&lt;p&gt;In the upper right hand corner of the page, click on your little profile picture (or whatever default icon you got). &lt;/p&gt;
+&lt;p&gt;Click on &lt;strong&gt;&quot;Create A Team&quot;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 442px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 59.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABcElEQVQoz4WRy0rDQBSG41P4Gj6Jr+AbuHbvyp2rguBGn0CRIqUUF0bpRtJARXCRlrRNbJuZZJpb5+6ZlNpLKH4Jw8nM+c9/5sTSa+7Dt6th89pvXQ4ee6mvJTyaf/f5yIPTBSEY46wsIRZTImITWKpSKq1OuhdHnbPj13OredoYtWRSppTifo/9TJZCjMPQD4Kp6+ru+/L2qXzuSSNe8zD7uBm/3AV2Y9T5yibgy6UQVWlKaep5hetmjiMcRwolSyqV2oj1LvDNKWWOlycpxoj4fk4I7INGmmzFObf+sqEch63qXVXinAn7M4vIHEWzKMI4LvI8zwygFEJYO3aMaRgJpaBTRcHzHNoW0jjBajwrQAbrlvPKDCE9GOjhUIehbrelbUdMB1jOM+1jnS03iabTfeftO4MD5whBswmOY0IWewk1sRmEWocKjhFCSUVRFP+Jd+oY8awiTdN6grmzOsxqpAAEjDFew5KHqf/8PX4Bn8munLRFHNoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Create A Team Menu Item&quot;
+        title=&quot;Create A Team Menu Item&quot;
+        src=&quot;/static/dc867cc3454cb929d64f8f025307436b/e03bf/create-a-team.png&quot;
+        srcset=&quot;/static/dc867cc3454cb929d64f8f025307436b/5a46d/create-a-team.png 300w,
+/static/dc867cc3454cb929d64f8f025307436b/e03bf/create-a-team.png 442w&quot;
+        sizes=&quot;(max-width: 442px) 100vw, 442px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;It&apos;s All In The Name&lt;/h3&gt;
 &lt;p&gt;Type in your team name and either change or verify the &quot;Team Contact Email&quot;. That email is where all the team related billing and alert emails will go. &lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 656px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAIAAAC+dZmEAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACMUlEQVQ4y5VUyY7TQBDNt3NF/AjiwoUTww+gASFxiBBIiYjjeLx1t3tx9VaUu5NxnBlH4qnSqZTzam9vEBEcKkDwaCyGgBmkuIAhTvJs8RdLNm7oM1pkGjuFjZz4GfQ/cjo6tH62kH5tnMgxUriY5Rpn47VlaczkKYlLdmeQjdLhBtewIF/TCK3ED9/x4w+sJb50vU5O58MW3z3g+2/483iHfC5vwaRs33zCt5/xyy/8usdhvJ927k/y4kOUYygY7tqp/yTKrkU2Jgox14qotT4Wh/pUSN40VdnW1eHvnnOOy/QT2fuw2xmltDFKKzOO+YGPSBISfAg3fZnTDtut+PN7kANvW8kZBh+9wyQvOQtyLtg2J1PsoTwA74OzmYlGGynL8lSWZVEULbmWkooyVOm8JCHoYVBCaCEM586YAEASrbUA6gKiEZmY3vuZ7PjABs8scgbu0B0HrMS0G43CXlpPKaxumLXh8dFwARRmHJ2zxlAM5ZzDu0hk5zxAz1jf94xzSq+u66qqSMHlRQmp55c7s1jPCACpRqCYVNU0Icp4wnTS5qSfWQ/PZOpLLI5eX2ASsi/yZsE4O8Ko6cz6NI7nyM7FqvJCiD6BMUqfk9J1nRhk2dsnbqsenpg99XBitht8XuhN/vIe9BJUMw2GBiSUHbSVZjqzSA25/LRhIVDYFG8GxaetaJqGsU5wdiN51Jublr7yHnr9Cc6R/5Mb5w1bgzDYSVy/GniP7NOr+w7+AU8fuIOeT4sYAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Setting the Team Name&quot;
+        title=&quot;Setting the Team Name&quot;
+        src=&quot;/static/18e6edbec4d6495840f98244031ef1d3/748f4/create-a-team-1.png&quot;
+        srcset=&quot;/static/18e6edbec4d6495840f98244031ef1d3/5a46d/create-a-team-1.png 300w,
+/static/18e6edbec4d6495840f98244031ef1d3/0a47e/create-a-team-1.png 600w,
+/static/18e6edbec4d6495840f98244031ef1d3/748f4/create-a-team-1.png 656w&quot;
+        sizes=&quot;(max-width: 656px) 100vw, 656px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;ONLY&lt;/strong&gt; Select &quot;Convert ____ Into A Team&quot; If you already have another Digital Ocean account to invite to the team or you may lose access to the account.&lt;/p&gt;
+&lt;p&gt;Selecting &quot;Convert ____ Into A Team&quot; will move over any existing Droplets, or other DigitalOcean products to the new team. If you&apos;re starting with a fresh DigitalOcean account, this is fine. &lt;/p&gt;
+&lt;p&gt;Don&apos;t select this if you have existing Droplets you want to keep separate from the new Team.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;If you&apos;d like to require all users on the team to use 2FA or some other form of secure login, check the box under &quot;Secure Login&quot;.&lt;/p&gt;
-&lt;p&gt;Click on &quot;Create Team&quot;&lt;/p&gt;
+&lt;p&gt;If you&apos;d like to require all users on the team to use 2FA or some other form of secure login, check the box under &lt;strong&gt;&quot;Secure Login&quot;&lt;/strong&gt;. (You have to setup 2FA on your own account before you&apos;re allowed to require it for the team).&lt;/p&gt;
+&lt;p&gt;Click on &lt;strong&gt;&quot;Create Team&quot;&lt;/strong&gt;&lt;/p&gt;
 &lt;h3&gt;Dolla Dolla Bills Y&apos;all&lt;/h3&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -1558,35 +1651,35 @@ externalLink: &quot;&quot;
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;On the next page select (or add) your preferred Payment Method for the Team. This payment method will be used for all charges accrued on the team, but members of the team &lt;em&gt;will NOT&lt;/em&gt; have access to your payment info. &lt;/p&gt;
 &lt;h3&gt;Invite Time&lt;/h3&gt;
+&lt;p&gt;The next page is where you can invite everyone you want to give access. Enter in 1 Email per line. Those emails will get an invite to either create a DigitalOcean account, or connect an existing one to the team. &lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 669px; &quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 51.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAEEBf/EABQBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAdC+DQRDB//EABYQAAMAAAAAAAAAAAAAAAAAAAQQNP/aAAgBAQABBQIGZAzL/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFhEAAwAAAAAAAAAAAAAAAAAAARAx/9oACAECAQE/ATV//8QAFhAAAwAAAAAAAAAAAAAAAAAAARCB/9oACAEBAAY/AhWK/wD/xAAYEAADAQEAAAAAAAAAAAAAAAAQobEAQf/aAAgBAQABPyFmt0N0f//aAAwDAQACAAMAAAAQBw//xAAWEQADAAAAAAAAAAAAAAAAAAABEDH/2gAIAQMBAT8QEX//xAAVEQEBAAAAAAAAAAAAAAAAAAAQMf/aAAgBAgEBPxCh/8QAHRAAAQMFAQAAAAAAAAAAAAAAAQARIRAxQVHwof/aAAgBAQABPxCXdJB8vEwNwFxtq//Z&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 105.33333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAIAAADJt1n/AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABwklEQVQ4y6VUS24TQRT0Edjxy44FQnANzsECBRYsIoVFkg2Kwgk4QgRIiLDlPBEhjj+KPZ0e9/R3uqjumXGwPSEIyqV29etX/XM/D2IHIDOuYC3S5mQSAwChhvGoHJSFD2jgQuqWOg01KA3mCpcLjCWkTpEBJ6jrGDpSN6n85qRkbAOcNzofXYjWR+q0clwOdqjr2nsfQqCoQwK7lGtp/WYhxHg8nkwm0+m0KIrhxcVoNJrNZn8yUywyyrK8yhAZjWZcKcV2uYX+ldl31qmMKkNr3ZO2Zm4ULcOz059nP86Hw/MMnoJb+Ksze+eEFHOmF/wIHltKaYy50VwZNxclKaSSC2Otc9aaDO656tAkL9vW7HxQxlWZ2nrruDztnKNF8+P1r7y5+VtxbTY+ao8lzW3Mz/z6wv5pZTZ8wEff8eIYrz5j+1Mixc4Jdr5i9wS73/C6i5MvP+LNF0zLZGdV8a3j+QfceYuHB7i/j3t7eLCPx4d4coinR3j2HlsHKcghxu/u4dE7nF5m82ahrvCGoQat+feSVDbOVRRVlDpeVUkXKkqzUrmtefMmeJmsdZY+/wwWptXa9dzZAP+BfvPmKXvxC+m3s57rF8dUAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Add emails to invite&quot;
         title=&quot;Add emails to invite&quot;
-        src=&quot;/static/447de7b94138bdfee97012bd62da9d35/e5166/invite.jpg&quot;
-        srcset=&quot;/static/447de7b94138bdfee97012bd62da9d35/f93b5/invite.jpg 300w,
-/static/447de7b94138bdfee97012bd62da9d35/b4294/invite.jpg 600w,
-/static/447de7b94138bdfee97012bd62da9d35/e5166/invite.jpg 1200w,
-/static/447de7b94138bdfee97012bd62da9d35/d9c39/invite.jpg 1800w,
-/static/447de7b94138bdfee97012bd62da9d35/d9786/invite.jpg 1852w&quot;
-        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        src=&quot;/static/dad5d7721e1cddb4c378e112f60998a5/99272/add-me-as-a-team-member.png&quot;
+        srcset=&quot;/static/dad5d7721e1cddb4c378e112f60998a5/5a46d/add-me-as-a-team-member.png 300w,
+/static/dad5d7721e1cddb4c378e112f60998a5/0a47e/add-me-as-a-team-member.png 600w,
+/static/dad5d7721e1cddb4c378e112f60998a5/99272/add-me-as-a-team-member.png 669w&quot;
+        sizes=&quot;(max-width: 669px) 100vw, 669px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;The next page is where you can invite everyone you want to give access. Enter in 1 Email per line. Those emails will get an invite to either create a Digital Ocean account, or connect an existing one to the team. &lt;/p&gt;
+&lt;p&gt;If you were sent this so I can get your hosting account setup for you, please invite &lt;code class=&quot;language-text&quot;&gt;hello@jackharner.com&lt;/code&gt; as a team member.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;REMEMBER&lt;/strong&gt; - Anybody you invite to your team can spin up and destroy servers or anything in the account. Be careful who you give access. &lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2&gt;That&apos;s All Folks&lt;/h2&gt;
-&lt;p&gt;Now that you have your DigitalOcean Team set up you can add Droplets to your team, invite more team members, and everything else DigitalOcean has to offer. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[I've Forked The Repo, Now What?]]></title><description><![CDATA[So, you want to make some changes to an Open Source Repo? Good for you. That's the beauty of Open Source, even just fixing typos in the documentation makes a difference. Today I'm going to walk you through keeping your copy of a repo up to date with…]]></description><link>https://jackharner.com//blog/sync-forked-repo/</link><guid isPermaLink="false">https://jackharner.com//blog/sync-forked-repo/</guid><pubDate>Sat, 02 Nov 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;So, you want to make some changes to an Open Source Repo? Good for you. That&apos;s the beauty of Open Source, even just fixing typos in the documentation makes a difference. Today I&apos;m going to walk you through keeping your copy of a repo up to date with changes pushed to the original repo. &lt;/p&gt;
+&lt;p&gt;Now that you&apos;ve given me access, just sit back and relax and I&apos;ll get the rest of your account setup per our discussions. &lt;/p&gt;
+&lt;p&gt;If you&apos;re not one of my clients and you need help getting something hosted online, &lt;a href=&quot;/contact&quot;&gt;Get In Touch&lt;/a&gt; and I&apos;ll gladly get you setup and hosted with DigitalOcean.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[I've Forked The Repo, Now What?]]></title><description><![CDATA[So, you want to make some changes to an Open Source Repo? Good for you. That's the beauty of Open Source, even just fixing typos in the documentation makes a difference. Today I'm going to walk you through keeping your copy of a repo up to date with…]]></description><link>https://jackharner.com//blog/sync-forked-repo/</link><guid isPermaLink="false">https://jackharner.com//blog/sync-forked-repo/</guid><pubDate>Sat, 02 Nov 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;So, you want to make some changes to an Open Source Repo? Good for you. That&apos;s the beauty of Open Source, even just fixing typos in the documentation makes a difference. Today I&apos;m going to walk you through keeping your copy of a repo up to date with changes pushed to the original repo. &lt;/p&gt;
 &lt;p&gt;This tutorial assumes: &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;You have a basic understanding of git&lt;/li&gt;
