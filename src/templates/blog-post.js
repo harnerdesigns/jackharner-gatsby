@@ -36,7 +36,7 @@ export default function Template(props) {
             target="_blank"
             rel="noopener noreferrer"
             icon="external-link-alt"
-            label={
+            label={post.fields.externalLinkLabel ? post.fields.externalLinkLabel :
               " <strong>See Full Post</strong> @ " +
               post.fields.externalLink.match(
                 /^https?:\/\/([^/?#]+)(?:[/?#]|$)/i
@@ -117,6 +117,7 @@ query BlogPostByPath($slug: String!) {
     }
     fields{
       externalLink
+      externalLinkLabel
       slug
       ogImage
       date(formatString: "MMMM DD, YYYY")

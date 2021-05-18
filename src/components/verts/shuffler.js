@@ -9,6 +9,7 @@ import { random } from "lodash"
 import HarnerDesigns from "./harnerDesigns"
 import NordVPN from "./nordvpn"
 import Printful from "./printful"
+import Bonsai from "./bonsai"
 
 
 const Shuffler = ({index}) => {
@@ -28,6 +29,8 @@ const Shuffler = ({index}) => {
       return(<DigitalOcean />)
     case 5:
         return(<NordVPN />)
+    case 6:
+        return(<Bonsai />)
     default:
       return(null)
   }
