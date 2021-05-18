@@ -13,7 +13,7 @@ const Footer = ({ siteTitle, footerCTA = true }) => (
         {footerCTA && <FooterCTA />}
 
 
-    <section className="copyright">&copy; 2020 Jack Harner | <a href="https://github.com/harnerdesigns/jackharner-gatsby"> Built With Gatsby</a></section>
+    <section className="copyright">&copy; 2020 - 2021 Jack Harner | <a href="https://github.com/harnerdesigns/jackharner-gatsby"> Built With Gatsby</a></section>
     <MainMenu />
     <section className="socials socials--footer">
         <a
