@@ -175,6 +175,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               collection
               published
               externalLink
+              externalLinkLabel
             }
             frontmatter {
               title

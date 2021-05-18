@@ -25,6 +25,10 @@ const verts = () => {
         <hr />
 
         <Shuffler index={5} />
+
+        <hr />
+
+        <Shuffler index={6} />
       </section>
     </Layout>
   )
