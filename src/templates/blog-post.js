@@ -69,10 +69,11 @@ export default function Template(props) {
         {newsletter ? <NewsletterLink /> : ""}
 
         {postContentMap}
+        <Shuffler />
+
       </section>
       <section className="slim black">
         <section className="post__post-content">
-          <Shuffler />
           <ShareLinks post={post} />
           <RssCard />
           <nav className="postNavigation">
