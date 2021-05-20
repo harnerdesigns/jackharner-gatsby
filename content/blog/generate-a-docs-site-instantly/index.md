@@ -79,6 +79,7 @@ Inside your projects `docs` folder is where all your Markdown files go. `mkdocs 
 
 Depending on the complexity of your documentation you can add more Markdown files into the `docs` folder, or if you need you can create sub-folders, for example `docs/test/`. 
 
+{{{vert}}}
 
 ## Custom Navigation
 

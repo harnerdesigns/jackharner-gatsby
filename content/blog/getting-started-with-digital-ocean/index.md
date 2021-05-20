@@ -45,6 +45,8 @@ After you're done adding a payment method it takes you to a screen to help you g
 
 ![After Payment Added Screen](after-payment-added.png)
 
+{{{vert}}}
+
 ## Creating A Team
 
 DigitalOcean comes with the ability to create Teams. Teams allow you to share Droplets, Domains, Images, Volumes and pretty much everything else with multiple people, all while keeping the payment info stored securely in the owner's account. 

@@ -40,6 +40,8 @@ Here are the results of their test comparing NPM to Yarn:
 
 Blazing Fast! Even without using a cache, Yarn is 200% faster than NPM.
 
+{{{vert}}}
+
 ## How To Install Yarn
 
 After doing the research for this post I'm definitely sticking to Yarn for projects moving forward. Here's how you can install Yarn and see for yourself just how fast it is and get started integrating it into your workflow.

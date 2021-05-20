@@ -25,6 +25,8 @@ Some of my favorite photos on the internet are freely available on Unsplash. Eve
 
 There are some _really_ high quality photos available and the fact that you don't have to pay a dime for them is pretty amazing. 
 
+{{{vert}}}
+
 ## All Ships Rise With The Tide
 
 Unsplash has been doing a lot to push forward the photography industry as a whole. They recently launched [Unsplash for Brands](https://unsplash.com/brands) which was there way of bringing Branded stock photos to the site. For example, one of the first Brands brought on was Square. The partnership looks like this: 

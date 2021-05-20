@@ -76,6 +76,8 @@ const [, , only] = people
 console.log(only) // "Jovi"
 ```
 
+{{{vert}}}
+
 ## Nested Destructuring
 
 In the real world, you're probably going to have more complex objects than just that, so let's take a look at a more complex object example.
