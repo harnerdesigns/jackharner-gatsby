@@ -78,6 +78,8 @@ src/
       | <empty folder>
 ```
 
+{{{vert}}}
+
 ## Get Template-ing
 
 This is where you'll need to customize this tutorial to fit with your site and preexisting content. Inside your `/src/content/templates/<post-type>` directory, create versions of the files you will need every time you create a post. For me, that includes an `index.md` file with some custom frontmatter, and a `featuredImage.png`.

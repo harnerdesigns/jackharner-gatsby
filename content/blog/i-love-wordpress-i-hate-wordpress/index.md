@@ -3,7 +3,6 @@ date: 2021-02-07T23:33:55.619Z
 title: "I Love WordPress. I Hate WordPress." 
 subtitle: ""
 featuredImage: "./ilya-pavlov-OqtafYT5kTw-unsplash.jpg"
-ogImage: ""
 tags: ["WordPress"]
 externalLink: ""
 published: false

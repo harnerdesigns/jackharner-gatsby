@@ -42,6 +42,7 @@ upstream	https://github.com/{{owner}}/{{project_name}}.git (fetch)
 upstream	https://github.com/{{owner}}/{{project_name}}.git (push)
 ```
 
+{{{vert}}}
 
 ## Go Get That Code!
 

@@ -32,6 +32,7 @@ The first thing you need to do to setup GitHub Actions is create a folder called
 
 This YAML (a recursive acronym that stands for YAML Ain't Markup Language) file is what tells GitHub what to do, when to do it, & what to do it with.
 
+{{{vert}}}
 ## Configuration
 
 I've included the full code down below, but I'm going to walk through each piece so you understand what's happening and how to adjust it for your specific use case.
@@ -124,6 +125,8 @@ steps:
       npm install -g @bigcommerce/stencil-cli
       yarn
 ```
+
+{{{vert}}}
 
 #### Configure Stencil CLI
 

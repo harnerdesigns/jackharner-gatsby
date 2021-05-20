@@ -134,6 +134,7 @@ Up until know, someone could've found the url for the beta version, log in with 
 
 The last piece that I need to figure out is how to upload and schedule pictures with tweets. I'm hoping to figure out how to make that work without having to store any user files, since that can get huge. I think I'll be able to just send the file directly from the users browser to Twitter and then store the Media ID for posting eventually. That really depends on Twitter's media deletion strategy ( do they delete media that didn't get attached to a tweet within 2 hours? Weeks? never? ) Just more I'll have to research.  
 
+{{{vert}}}
 
 # Day 99 : Saturday, July 26th 2020
 ## Long Time No Talk.
@@ -152,6 +153,8 @@ I thought maybe it was a lingering Cookie issue, so I cleared all those out, but
 I check the server logs and it comes back with "Login Successful" but never redirects the user to be logged in. 
 
 I'm perplexed but tired, it's late so I just shut it down and go to bed. I'll revisit in a few days probably.
+
+{{{vert}}}
 
 # Day 12 : Wednesday, April 29th, 2020
 ## Better Late Than Never, Right?
@@ -198,4 +201,4 @@ The backend is based around Express, and MongoDB. I'm using [Passport.js](http:/
 
 One of the first big roadblocks I ran into was the fact that I had set up a virtual host so that `simple-tweets.local` would resolve to my `localhost:3000`, but I was having weird issues with the cookies being set to the wrong domain somewhere in the oAuth loop. Lots of googling and hair ripping later, I reset every path in the project to use http://127.0.0.1 as well as in the Twitter Developer tools. Once we have it live on a server with a domain pointing to it, we shouldn't have this problem, but now I'll know what to look for. 
 
-I'll contine to update this post as the project progresses. 
+I'll continue to update this post as the project progresses. 

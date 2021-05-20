@@ -20,6 +20,8 @@ If you're not familiar, [PiHole](https://pi-hole.net/) is a lovely piece of soft
 
 For me, it turned out not as simple. I use the stock Router/Modem Combo provided to me by Comcast. Turns out, they don't allow you to set custom DNS servers for the network. Great. So now I have to go around and configure each device manually to use the Pi as it's DNS server to get it to work. 
 
+{{{vert}}}
+
 > ## It's Always DNS.
 
 I've been meaning to buy my own router/modem for a while now, and this might be what finally pushes me over the edge. 

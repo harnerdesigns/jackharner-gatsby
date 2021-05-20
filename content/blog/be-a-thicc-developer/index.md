@@ -3,7 +3,7 @@ date: 2021-04-10T17:07:45.666Z
 title: "Be A T H I C C Developer" 
 subtitle: "Why 'Wide or Deep' when you can 'Wide AND Deep'?"
 featuredImage: "./featuredImage.png"
-ogImage: "ogImage.png"
+ogImage: "./ogImage.png"
 tags: ['Newsletter', 'Career']
 published: true
 unlisted: false
@@ -30,6 +30,7 @@ As the software development landscape evolves, the lines are getting blurred bet
 
 ![Dev Skill Tree of an T-Shape Dev](./skill-tree--t-dev.png) 
 
+{{{vert}}}
 
 ## What's Different About Being T H I C C?
 

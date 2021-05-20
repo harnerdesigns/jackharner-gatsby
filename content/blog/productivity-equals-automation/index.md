@@ -32,6 +32,8 @@ Want to automate certain mundane tasks online? Check out Selenium (more on that 
 
 Want to make Generative Art or play with fractals? [Python can do that too](https://simpleprogrammer.com/python-generative-art-math/).
 
+{{{vert}}}
+
 ### Selenium
 
 Need to submit the same form on a webpage over and over again? Time to bust out Selenium. Selenium is a tool you can use with Python (or Java) to write code to make a browser do things to itself 😉. Python is super verbose and easy to read so you're just telling the browser: 

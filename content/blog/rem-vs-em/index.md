@@ -3,7 +3,6 @@ date: 2021-02-16T05:35:50.249Z
 title: "Rem vs Em? What's The Difference?" 
 subtitle: "Responsive Typography"
 featuredImage: "./featuredImage.png"
-ogImage: ""
 tags: ['CSS']
 externalLink: ""
 published: false

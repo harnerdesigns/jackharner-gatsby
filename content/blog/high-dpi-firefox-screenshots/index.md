@@ -35,6 +35,8 @@ What that does is adds a Camera button to the Developer Tools Toolbox Buttons, n
 
 ![](screenshot-button.png)
 
+{{{vert}}}
+
 ## Bust Out The Big Guns
 
 > Need to take some massive (>2,000px wide) screenshots? 

@@ -34,6 +34,8 @@ Which looks like: <span class="box1"></span>
 
 I've used that animation many times to emphasize a discount, bring focus to the best deal on a Pricing page, or even just to make a beating heart.
 
+{{{vert}}}
+
 ## Treat Your Users Like Stormtroopers - Avoid Moving Targets
 
 If there are clickable things inside the thing you're animating, you don't want your users to have to click on moving targets. It's so frustrating to click and miss, let alone click, miss, and click on something else. Luckily, there's a really simple way to pause CSS Animations in CSS without JavaScript. The key to it all is the `animation-play-state` property. Let's see it in (SCSS) action:

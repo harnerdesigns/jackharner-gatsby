@@ -40,6 +40,8 @@ Replace the `xxxx`'s with your corresponding API Key and API Secret.
 
 Make sure to include `.env` in your `.gitignore` file so you don't check in your keys to your Git Repo. If someone were to get access to your API keys it would be the same as them having your username and password. They can control any part of your account and send a bunch of spam emails to your list. If you're using some sort of Continuous Deployment (CD) setup, you'll also need to include your Keys as Environment Variables according to your specific CD tool. 
 
+{{{vert}}}
+
 ## Make The Call
 
 In accordance with the bit above about security, we don't want to expose our API Keys to the public. The beauty of Gatsby and other Static Site Generators is that you can do things at build time instead of at run time or "in the browser". This keeps the Keys locked away behind your CD tools "Secrets" and away from the snooping eyes of the public.
