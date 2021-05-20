@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:webfeeds="http://webfeeds.org/rss/1.0"><channel><title><![CDATA[Jack Harner's Web Dev Blog]]></title><description><![CDATA[Jack Harner is a freelance Web Developer & Graphic Designer based in Albuquerque, New Mexico. He Specializes in WordPress development for small to medium sized businesses.]]></description><link>https://jackharner.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 18 May 2021 22:50:58 GMT</lastBuildDate><webfeeds:accentColor>#E91E63</webfeeds:accentColor><webfeeds:logo>./src/images/jackharenr-logo-white.svg</webfeeds:logo><item><title><![CDATA[Be A T H I C C Developer]]></title><description><![CDATA[Don't be a T-Shaped Developer Be a T H I C C Developer Instead!  What's A T-Shaped Developer? The idea of a T-Shaped Dev has been around since the early 2010s, and it evolved from the concept of an I-Shaped Dev. The Letters Jack, WHAT DO THEY MEAN…]]></description><link>https://jackharner.com//blog/be-a-thicc-developer/</link><guid isPermaLink="false">https://jackharner.com//blog/be-a-thicc-developer/</guid><pubDate>Sat, 10 Apr 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Don&apos;t be a T-Shaped Developer&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:webfeeds="http://webfeeds.org/rss/1.0"><channel><title><![CDATA[Jack Harner's Web Dev Blog]]></title><description><![CDATA[Jack Harner is a freelance Web Developer & Graphic Designer based in Albuquerque, New Mexico. He Specializes in WordPress development for small to medium sized businesses.]]></description><link>https://jackharner.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 20 May 2021 20:16:41 GMT</lastBuildDate><webfeeds:accentColor>#E91E63</webfeeds:accentColor><webfeeds:logo>./src/images/jackharenr-logo-white.svg</webfeeds:logo><item><title><![CDATA[Be A T H I C C Developer]]></title><description><![CDATA[Don't be a T-Shaped Developer Be a T H I C C Developer Instead!  What's A T-Shaped Developer? The idea of a T-Shaped Dev has been around since the early 2010s, and it evolved from the concept of an I-Shaped Dev. The Letters Jack, WHAT DO THEY MEAN…]]></description><link>https://jackharner.com//blog/be-a-thicc-developer/</link><guid isPermaLink="false">https://jackharner.com//blog/be-a-thicc-developer/</guid><pubDate>Sat, 10 Apr 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Don&apos;t be a T-Shaped Developer&lt;/h1&gt;
 &lt;h1&gt;Be a T H I C C Developer Instead!&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://media.giphy.com/media/kcOVt7d7hcUVkADVS1/giphy.gif&quot;&gt;&lt;/p&gt;
 &lt;h2&gt;What&apos;s A T-Shaped Developer?&lt;/h2&gt;
@@ -76,6 +76,7 @@
         loading=&quot;lazy&quot;
       /&gt;
     &lt;/span&gt; &lt;/p&gt;
+&lt;p&gt;{{{vert}}}&lt;/p&gt;
 &lt;h2&gt;What&apos;s Different About Being T H I C C?&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;https://media.giphy.com/media/PN5d7H16UzSrS/giphy.gif&quot;&gt;&lt;/p&gt;
 &lt;p&gt;I propose we take the T-Shaped Dev a step or two further and call it a T H I C C Dev. Take your average T-Shaped dev and get them to deep dive into some other areas as well. The stem of your T might not end up as tall but it will be wide and stable. It takes all the benefits of a T-Shaped Dev vs an I-Shaped Dev to the extreme. &lt;/p&gt;
@@ -163,6 +164,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; only&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; people
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;only&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// &quot;Jovi&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;{{{vert}}}&lt;/p&gt;
 &lt;h2&gt;Nested Destructuring&lt;/h2&gt;
 &lt;p&gt;In the real world, you&apos;re probably going to have more complex objects than just that, so let&apos;s take a look at a more complex object example.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; person &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -276,6 +278,7 @@ CONVERTKIT_SECRET=xxxxxxxxxxxxxxxxxxxxxxxxxx&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt
 &lt;p&gt;Replace the &lt;code class=&quot;language-text&quot;&gt;xxxx&lt;/code&gt;&apos;s with your corresponding API Key and API Secret.&lt;/p&gt;
 &lt;h2&gt;Security&lt;/h2&gt;
 &lt;p&gt;Make sure to include &lt;code class=&quot;language-text&quot;&gt;.env&lt;/code&gt; in your &lt;code class=&quot;language-text&quot;&gt;.gitignore&lt;/code&gt; file so you don&apos;t check in your keys to your Git Repo. If someone were to get access to your API keys it would be the same as them having your username and password. They can control any part of your account and send a bunch of spam emails to your list. If you&apos;re using some sort of Continuous Deployment (CD) setup, you&apos;ll also need to include your Keys as Environment Variables according to your specific CD tool. &lt;/p&gt;
+&lt;p&gt;{{{vert}}}&lt;/p&gt;
 &lt;h2&gt;Make The Call&lt;/h2&gt;
 &lt;p&gt;In accordance with the bit above about security, we don&apos;t want to expose our API Keys to the public. The beauty of Gatsby and other Static Site Generators is that you can do things at build time instead of at run time or &quot;in the browser&quot;. This keeps the Keys locked away behind your CD tools &quot;Secrets&quot; and away from the snooping eyes of the public.&lt;/p&gt;
 &lt;p&gt;For this purpose we&apos;re going to take advantage of the &lt;code class=&quot;language-text&quot;&gt;gatsby-node.js&lt;/code&gt; file in the root of our site. If you are unfamiliar with how Gatsby Builds, a part of the process includes running the &lt;code class=&quot;language-text&quot;&gt;gatsby-node.js&lt;/code&gt; file once. You can use this to create pages dynamically, add/modify nodes on your GraphQL tree, and more. This is where we&apos;re going to hit the &lt;a href=&quot;https://convertkit.com?lmref=HnoQfg&quot;&gt;ConvertKit&lt;/a&gt; API.&lt;/p&gt;
@@ -435,6 +438,7 @@ INFO    -  Cleaning site directory
 &lt;h2&gt;Fill it&lt;/h2&gt;
 &lt;p&gt;Inside your projects &lt;code class=&quot;language-text&quot;&gt;docs&lt;/code&gt; folder is where all your Markdown files go. &lt;code class=&quot;language-text&quot;&gt;mkdocs new&lt;/code&gt; creates an &lt;code class=&quot;language-text&quot;&gt;index.md&lt;/code&gt; file that&apos;s converted into the landing page. Include instructions about the docs site here. Telling users what kind of information they&apos;ll find here. &lt;/p&gt;
 &lt;p&gt;Depending on the complexity of your documentation you can add more Markdown files into the &lt;code class=&quot;language-text&quot;&gt;docs&lt;/code&gt; folder, or if you need you can create sub-folders, for example &lt;code class=&quot;language-text&quot;&gt;docs/test/&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;{{{vert}}}&lt;/p&gt;
 &lt;h2&gt;Custom Navigation&lt;/h2&gt;
 &lt;p&gt;As you flush out your &lt;code class=&quot;language-text&quot;&gt;docs&lt;/code&gt; folder, you&apos;ll notice the navigation bar at the header is automatically generated: &lt;/p&gt;
 &lt;p&gt;&lt;span
@@ -481,6 +485,7 @@ INFO    -  Cleaning site directory
 &lt;h2&gt;Folder Structure&lt;/h2&gt;
 &lt;p&gt;The first thing you need to do to setup GitHub Actions is create a folder called &lt;code class=&quot;language-text&quot;&gt;.github&lt;/code&gt; (note the period at the beginning) in the root of your theme. Inside that folder create one more folder called &lt;code class=&quot;language-text&quot;&gt;workflows&lt;/code&gt;. Now create a file in &lt;code class=&quot;language-text&quot;&gt;/.github/workflows/&lt;/code&gt; called &lt;code class=&quot;language-text&quot;&gt;main.yml&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;This YAML (a recursive acronym that stands for YAML Ain&apos;t Markup Language) file is what tells GitHub what to do, when to do it, &amp;#x26; what to do it with.&lt;/p&gt;
+&lt;p&gt;{{{vert}}}&lt;/p&gt;
 &lt;h2&gt;Configuration&lt;/h2&gt;
 &lt;p&gt;I&apos;ve included the full code down below, but I&apos;m going to walk through each piece so you understand what&apos;s happening and how to adjust it for your specific use case.&lt;/p&gt;
 &lt;h3&gt;Name It&lt;/h3&gt;
@@ -539,6 +544,7 @@ INFO    -  Cleaning site directory
     &lt;span class=&quot;token key atrule&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;token scalar string&quot;&gt;
       npm install -g @bigcommerce/stencil-cli
       yarn&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;{{{vert}}}&lt;/p&gt;
 &lt;h4&gt;Configure Stencil CLI&lt;/h4&gt;
 &lt;p&gt;As far as &lt;strong&gt;Step 4&lt;/strong&gt; goes, I tried a few different approaches and I&apos;m not sure if this is the best way, but it works for me. What you need to do is pass in your BigCommerce API Token and basically everything in your Stencil CLI-generated &lt;code class=&quot;language-text&quot;&gt;.stencil&lt;/code&gt; file.&lt;/p&gt;
 &lt;p&gt;I tried running &lt;code class=&quot;language-text&quot;&gt;stencil init&lt;/code&gt; which generates the file, but it&apos;s not set up to be run without  user input. It gets hung up on asking which goes against the core of CI/CD. Things need to be automatic. Maybe they&apos;ll add that like they did with &lt;code class=&quot;language-text&quot;&gt;stencil push&lt;/code&gt; with the &lt;code class=&quot;language-text&quot;&gt;-a&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;-d&lt;/code&gt; flags.&lt;/p&gt;
@@ -638,6 +644,7 @@ INFO    -  Cleaning site directory
 &lt;p&gt;Need to process or combine large spreadsheets on a recurring basis? Check out Pandas. &lt;/p&gt;
 &lt;p&gt;Want to automate certain mundane tasks online? Check out Selenium (more on that later 👇). &lt;/p&gt;
 &lt;p&gt;Want to make Generative Art or play with fractals? &lt;a href=&quot;https://simpleprogrammer.com/python-generative-art-math/&quot;&gt;Python can do that too&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;{{{vert}}}&lt;/p&gt;
 &lt;h3&gt;Selenium&lt;/h3&gt;
 &lt;p&gt;Need to submit the same form on a webpage over and over again? Time to bust out Selenium. Selenium is a tool you can use with Python (or Java) to write code to make a browser do things to itself 😉. Python is super verbose and easy to read so you&apos;re just telling the browser: &lt;/p&gt;
 &lt;blockquote&gt;
@@ -682,6 +689,7 @@ INFO    -  Cleaning site directory
 
 {{/if}}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Why can&apos;t they just build &lt;code class=&quot;language-text&quot;&gt;custom_fields&lt;/code&gt; as an object with the custom field names as keys? Require the name to be something that works as a JSON key with a max length and build it that way. &lt;/p&gt;
+&lt;p&gt;{{{vert}}}&lt;/p&gt;
 &lt;h2&gt;The &lt;del&gt;Solution&lt;/del&gt; Workaround&lt;/h2&gt;
 &lt;p&gt;There&apos;s a Handlebars block tag available called &lt;code class=&quot;language-text&quot;&gt;filter&lt;/code&gt; which allows you to filter an array of objects down by a specific property of the object. &lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;{{#filter product.custom_fields &amp;#39;&amp;lt;FieldName&amp;gt;&amp;#39; property=&amp;#39;name&amp;#39; }}
@@ -718,6 +726,7 @@ INFO    -  Cleaning site directory
       /&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;For me, it turned out not as simple. I use the stock Router/Modem Combo provided to me by Comcast. Turns out, they don&apos;t allow you to set custom DNS servers for the network. Great. So now I have to go around and configure each device manually to use the Pi as it&apos;s DNS server to get it to work. &lt;/p&gt;
+&lt;p&gt;{{{vert}}}&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;h2&gt;It&apos;s Always DNS.&lt;/h2&gt;
 &lt;/blockquote&gt;
@@ -845,6 +854,7 @@ INFO    -  Cleaning site directory
 &lt;p&gt;Up until know, someone could&apos;ve found the url for the beta version, log in with their Twitter and use the App. I got that locked down so only select accounts can log in to the Beta. I&apos;m going to be reaching out to a handful of Twitter friends in the coming days to see if they&apos;d be willing to help me test some stuff.  &lt;a href=&quot;https://twitter.com/messages/compose?recipient_id=246555108&amp;#x26;text=Simple%20Tweets%20is%20AWESOME&quot;&gt;Shoot me a DM on Twitter&lt;/a&gt; if you want to help out. &lt;/p&gt;
 &lt;h2&gt;What&apos;s Next&lt;/h2&gt;
 &lt;p&gt;The last piece that I need to figure out is how to upload and schedule pictures with tweets. I&apos;m hoping to figure out how to make that work without having to store any user files, since that can get huge. I think I&apos;ll be able to just send the file directly from the users browser to Twitter and then store the Media ID for posting eventually. That really depends on Twitter&apos;s media deletion strategy ( do they delete media that didn&apos;t get attached to a tweet within 2 hours? Weeks? never? ) Just more I&apos;ll have to research.  &lt;/p&gt;
+&lt;p&gt;{{{vert}}}&lt;/p&gt;
 &lt;h1&gt;Day 99 : Saturday, July 26th 2020&lt;/h1&gt;
 &lt;h2&gt;Long Time No Talk.&lt;/h2&gt;
 &lt;p&gt;It&apos;s been a while. I&apos;ve, thankfully, been working the whole time through the pandemic, both on some client work and my 9-5. I opened the project back up because I&apos;m making a point to be more active on Twitter and that was the whole reason I started building Simple Tweets in the first place. &lt;/p&gt;
@@ -854,6 +864,7 @@ INFO    -  Cleaning site directory
 &lt;p&gt;I thought maybe it was a lingering Cookie issue, so I cleared all those out, but still no response on the login.&lt;/p&gt;
 &lt;p&gt;I check the server logs and it comes back with &quot;Login Successful&quot; but never redirects the user to be logged in. &lt;/p&gt;
 &lt;p&gt;I&apos;m perplexed but tired, it&apos;s late so I just shut it down and go to bed. I&apos;ll revisit in a few days probably.&lt;/p&gt;
+&lt;p&gt;{{{vert}}}&lt;/p&gt;
 &lt;h1&gt;Day 12 : Wednesday, April 29th, 2020&lt;/h1&gt;
 &lt;h2&gt;Better Late Than Never, Right?&lt;/h2&gt;
 &lt;p&gt;I&apos;m starting this build log off a little bit after I started the project (currently titled Simple Tweets, but probably going to change). I didn&apos;t really have the idea to write down the whole process till I was well into an MVP. Either way, better late than never, right? According to GitHub the very first commit was on April 17, 2020, so that makes this Day 12.&lt;/p&gt;
@@ -922,7 +933,7 @@ INFO    -  Cleaning site directory
 &lt;p&gt;Since the tool is entirely focused on Twitter, the only way my users can login is with Twitter. Makes Sense. That just meant I had to figure out oAuth. It&apos;s been a pretty big beast for me that I&apos;ve yet to attempt to tackle, but now is the time. &lt;/p&gt;
 &lt;p&gt;The backend is based around Express, and MongoDB. I&apos;m using &lt;a href=&quot;http://www.passportjs.org/&quot;&gt;Passport.js&lt;/a&gt; for Authentication and the beautifully put together &lt;a href=&quot;https://github.com/jaredhanson/passport-twitter&quot;&gt;passport-twitter&lt;/a&gt; package to handle the Authentication. &lt;/p&gt;
 &lt;p&gt;One of the first big roadblocks I ran into was the fact that I had set up a virtual host so that &lt;code class=&quot;language-text&quot;&gt;simple-tweets.local&lt;/code&gt; would resolve to my &lt;code class=&quot;language-text&quot;&gt;localhost:3000&lt;/code&gt;, but I was having weird issues with the cookies being set to the wrong domain somewhere in the oAuth loop. Lots of googling and hair ripping later, I reset every path in the project to use &lt;a href=&quot;http://127.0.0.1&quot;&gt;http://127.0.0.1&lt;/a&gt; as well as in the Twitter Developer tools. Once we have it live on a server with a domain pointing to it, we shouldn&apos;t have this problem, but now I&apos;ll know what to look for. &lt;/p&gt;
-&lt;p&gt;I&apos;ll contine to update this post as the project progresses. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Pausing CSS Animations on Hover]]></title><description><![CDATA[CSS Animations are an easy, lightweight way to add a little motion and excitement to a page. You definitely don't want to overdo it, though. One of the most frustrating things as a user is when you go to click on something, it moves, and you miss…]]></description><link>https://jackharner.com//blog/pausing-css-animations-on-hover/</link><guid isPermaLink="false">https://jackharner.com//blog/pausing-css-animations-on-hover/</guid><pubDate>Sat, 28 Mar 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;CSS Animations are an easy, lightweight way to add a little motion and excitement to a page. You definitely don&apos;t want to overdo it, though. One of the most frustrating things as a user is when you go to click on something, it moves, and you miss. Today I&apos;m going to show you how to pause your CSS animations when someone goes to click on them.&lt;/p&gt;
+&lt;p&gt;I&apos;ll continue to update this post as the project progresses. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Pausing CSS Animations on Hover]]></title><description><![CDATA[CSS Animations are an easy, lightweight way to add a little motion and excitement to a page. You definitely don't want to overdo it, though. One of the most frustrating things as a user is when you go to click on something, it moves, and you miss…]]></description><link>https://jackharner.com//blog/pausing-css-animations-on-hover/</link><guid isPermaLink="false">https://jackharner.com//blog/pausing-css-animations-on-hover/</guid><pubDate>Sat, 28 Mar 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;CSS Animations are an easy, lightweight way to add a little motion and excitement to a page. You definitely don&apos;t want to overdo it, though. One of the most frustrating things as a user is when you go to click on something, it moves, and you miss. Today I&apos;m going to show you how to pause your CSS animations when someone goes to click on them.&lt;/p&gt;
 &lt;h2&gt;The Animation&lt;/h2&gt;
 &lt;p&gt;We&apos;ll start with one of my favorite simple animations, the Pulse:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token atrule&quot;&gt;&lt;span class=&quot;token rule&quot;&gt;@keyframes&lt;/span&gt; pulse&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -940,6 +951,7 @@ INFO    -  Cleaning site directory
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Which looks like: &lt;span class=&quot;box1&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;I&apos;ve used that animation many times to emphasize a discount, bring focus to the best deal on a Pricing page, or even just to make a beating heart.&lt;/p&gt;
+&lt;p&gt;{{{vert}}}&lt;/p&gt;
 &lt;h2&gt;Treat Your Users Like Stormtroopers - Avoid Moving Targets&lt;/h2&gt;
 &lt;p&gt;If there are clickable things inside the thing you&apos;re animating, you don&apos;t want your users to have to click on moving targets. It&apos;s so frustrating to click and miss, let alone click, miss, and click on something else. Luckily, there&apos;s a really simple way to pause CSS Animations in CSS without JavaScript. The key to it all is the &lt;code class=&quot;language-text&quot;&gt;animation-play-state&lt;/code&gt; property. Let&apos;s see it in (SCSS) action:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;scss&quot;&gt;&lt;pre class=&quot;language-scss&quot;&gt;&lt;code class=&quot;language-scss&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;.box &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -1007,6 +1019,7 @@ INFO    -  Cleaning site directory
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Some of my favorite photos on the internet are freely available on Unsplash. Even &lt;a href=&quot;https://unsplash.com/@nasa&quot;&gt;NASA&lt;/a&gt; is on Unsplash. Hubble Space Telescope photos are freely available for anyone to use for any reason. That is INSANE. Unfortunately they did strip out the EXIF data on the Hubble photos (Camera Type: $4.7 billion Space Telescope, Aperature: f3.4 Meters). &lt;/p&gt;
 &lt;p&gt;There are some &lt;em&gt;really&lt;/em&gt; high quality photos available and the fact that you don&apos;t have to pay a dime for them is pretty amazing. &lt;/p&gt;
+&lt;p&gt;{{{vert}}}&lt;/p&gt;
 &lt;h2&gt;All Ships Rise With The Tide&lt;/h2&gt;
 &lt;p&gt;Unsplash has been doing a lot to push forward the photography industry as a whole. They recently launched &lt;a href=&quot;https://unsplash.com/brands&quot;&gt;Unsplash for Brands&lt;/a&gt; which was there way of bringing Branded stock photos to the site. For example, one of the first Brands brought on was Square. The partnership looks like this: &lt;/p&gt;
 &lt;ol&gt;
@@ -1097,6 +1110,7 @@ INFO    -  Cleaning site directory
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Blazing Fast! Even without using a cache, Yarn is 200% faster than NPM.&lt;/p&gt;
+&lt;p&gt;{{{vert}}}&lt;/p&gt;
 &lt;h2&gt;How To Install Yarn&lt;/h2&gt;
 &lt;p&gt;After doing the research for this post I&apos;m definitely sticking to Yarn for projects moving forward. Here&apos;s how you can install Yarn and see for yourself just how fast it is and get started integrating it into your workflow.&lt;/p&gt;
 &lt;h3&gt;Windows&lt;/h3&gt;
@@ -1233,6 +1247,7 @@ INFO    -  Cleaning site directory
         loading=&quot;lazy&quot;
       /&gt;
     &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;{{{vert}}}&lt;/p&gt;
 &lt;h2&gt;Bust Out The Big Guns&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Need to take some massive (&gt;2,000px wide) screenshots? &lt;/p&gt;
@@ -1296,6 +1311,7 @@ published: true
       | &amp;lt;empty folder&amp;gt;
     | portfolio/
       | &amp;lt;empty folder&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;{{{vert}}}&lt;/p&gt;
 &lt;h2&gt;Get Template-ing&lt;/h2&gt;
 &lt;p&gt;This is where you&apos;ll need to customize this tutorial to fit with your site and preexisting content. Inside your &lt;code class=&quot;language-text&quot;&gt;/src/content/templates/&amp;lt;post-type&amp;gt;&lt;/code&gt; directory, create versions of the files you will need every time you create a post. For me, that includes an &lt;code class=&quot;language-text&quot;&gt;index.md&lt;/code&gt; file with some custom frontmatter, and a &lt;code class=&quot;language-text&quot;&gt;featuredImage.png&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Take a look at my &lt;code class=&quot;language-text&quot;&gt;templates/blog/index.md&lt;/code&gt;:&lt;/p&gt;
@@ -1571,6 +1587,7 @@ externalLink: &quot;&quot;
         loading=&quot;lazy&quot;
       /&gt;
     &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;{{{vert}}}&lt;/p&gt;
 &lt;h2&gt;Creating A Team&lt;/h2&gt;
 &lt;p&gt;DigitalOcean comes with the ability to create Teams. Teams allow you to share Droplets, Domains, Images, Volumes and pretty much everything else with multiple people, all while keeping the payment info stored securely in the owner&apos;s account. &lt;/p&gt;
 &lt;h3&gt;Let&apos;s Just Jump Into It.&lt;/h3&gt;
@@ -1719,6 +1736,7 @@ externalLink: &quot;&quot;
 origin	git@github.com:{{you}}/{{project_name}}.git (push)
 upstream	https://github.com/{{owner}}/{{project_name}}.git (fetch)
 upstream	https://github.com/{{owner}}/{{project_name}}.git (push)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;{{{vert}}}&lt;/p&gt;
 &lt;h2&gt;Go Get That Code!&lt;/h2&gt;
 &lt;p&gt;Now that we&apos;ve associated our Original Repo with our local Forked Repo, it&apos;s time to go get the new code. &lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;command-line-prompt&quot;&gt;&lt;span data-user=jack data-host=localhost&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; fetch upstream&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
