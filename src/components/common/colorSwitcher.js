@@ -151,6 +151,19 @@ export default class ColorSwitcher extends Component {
     }
   }
 
+  lightenHSL(hsl, amount, format = false) {
+
+    let newL = (hsl.l) + (amount / 100);
+    let newS = (hsl.s) - (amount * 2 / 100);
+    if (format) {
+
+      return "hsl(" + hsl.h + ", " + (newS * 100) + "%, " + (newL * 100) + "%)"
+    } else {
+
+      return { h: hsl.h, s: hsl.s, l: newL }
+    }
+  }
+
 
 
   setColorVars = () => {
@@ -164,9 +177,14 @@ export default class ColorSwitcher extends Component {
     document.documentElement.style.setProperty('--text-color--inverted', (textColor === "white" ? "black" : "white"));
 
     document.documentElement.style.setProperty('--darker-color', this.darkenHSL(this.state.selected_color.hsl, 15, true));
+    document.documentElement.style.setProperty('--lighter-color', this.lightenHSL(this.state.selected_color.hsl, 5, true));
+
     let darkerColor = this.darkenHSL(this.state.selected_color.hsl, 15);
     console.log({ lighter: this.state.selected_color.hsl, darker: darkerColor });
     document.documentElement.style.setProperty('--darker-text-color', this.getTextColor(this.hslToRgb(darkerColor.h, darkerColor.s, darkerColor.l)));
+    let lighterColor = this.darkenHSL(this.state.selected_color.hsl, 5);
+    console.log({ lighter: this.state.selected_color.hsl, darker: lighterColor });
+    document.documentElement.style.setProperty('--lighter-text-color', this.getTextColor(this.hslToRgb(lighterColor.h, lighterColor.s, lighterColor.l)));
 
 
 

@@ -80,7 +80,7 @@
 
   &:hover {
     svg {
-      color: var(--darker-color);
+      color: var(-z-color);
       filter: drop-shadow(2px 2px 0 var(--text-color));
     }
   }

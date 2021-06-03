@@ -9,11 +9,14 @@ import { Link } from "gatsby"
 
 const Contact = () => (
   <Layout>
-    <SEO title="Contact" />
+    <SEO title="Get In Touch" />
 
     <PageTitle>Get In Touch</PageTitle>
-    <section className="half black">
+    <section className="slim black">
       <h2>The best ways to get a hold of me are:</h2>
+      </section>
+    <section className="slim black" style={{background: "var(--gradient)", boxShadow: "inset 0 3px 3px  rgba(0,0,0,0.8)"}}>
+
       <section className="buttons">
         <Button
           href="https://twitter.com/messages/compose?recipient_id=246555108&text=Hi%20Jack!"
@@ -23,6 +26,7 @@ const Contact = () => (
           label={"Twitter DM"}
           size="large"
           extraStyle={{ width: "80%" }}
+          white
         />
         <div className="or wide">OR</div>
         <Button
@@ -33,8 +37,11 @@ const Contact = () => (
           label={ "Email"}
           size="large"
           extraStyle={{ width: "80%" }}
+          white
         />
       </section>
+      </section>
+      <section class="slim black">
       <h3>Please Reach Out If You Are:</h3>
       <ul>
         <li>
