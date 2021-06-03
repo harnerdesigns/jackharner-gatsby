@@ -19,7 +19,7 @@ const Blog = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <SEO title="Blog" />
+      <SEO title={`Blog Archive | ${topTags[0]}, ${topTags[1]}, & More `} />
       <PageTitle>Blog</PageTitle>
       <main className="page_body page_body--grid">
         

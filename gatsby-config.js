@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: `/jackharner-gatsby`,
   siteMetadata: {
     title: `Jack Harner`,
-    description: `Jack Harner is a freelance Web Developer & Graphic Designer based in Albuquerque, New Mexico. He Specializes in WordPress development for small to medium sized businesses.`,
+    description: `Jack Harner is a Freelance Web Developer based in Denver, Colorado. He Specializes in E-Commerce, Shopify, WordPress.`,
     author: `@jackharner`,
     siteUrl: 'https://jackharner.com'
   },
