@@ -33,8 +33,8 @@ export default class MainMenu extends Component {
             <Link to="/newsletter">Newsletter</Link>
             <Link to="/about">About</Link>
             <Link href="https://harnerdesigns.com/shop?utm_source=jackharner">Shop</Link>
-            <Button to="/contact" className="button" label="Get In Touch"/>
             <ColorSwitcher />
+            <Button to="/contact" className="button" label="Get In Touch"/>
 
         </nav>
 

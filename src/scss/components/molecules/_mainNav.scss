@@ -38,6 +38,7 @@
                 color: var(--text-color);
                 border-radius: var(--border-radius);
                 margin: 0 0.5rem;
+                
 
                 @include breakpoint(mobileonly) {
                     margin: 0;
@@ -46,7 +47,7 @@
                 }
 
                 &:hover {
-                    background: var(--darker-color);
+                    background: var(--lighter-color);
                 }
             }
         }
@@ -60,11 +61,11 @@
                 align-items: flex-start;
                 text-align: left;
                 font-size: 1em;
-                order: -1;
                 border-bottom: 1px solid #ccc;
 
                 svg {
                     font-size: 1.5em;
+                    margin-right: 0.5ch;
                     vertical-align: middle;
                 }
                 &:after {
@@ -114,7 +115,7 @@
 
     #mobileMenuBG{
         width: 100%;
-        background: linear-gradient(to top, var(--color), var(--darker-color), var(--color));
+        background: linear-gradient(to top, var(--color), var(--purple), var(--darker-color));
         opacity: 1;
         position: absolute;
         top:0;

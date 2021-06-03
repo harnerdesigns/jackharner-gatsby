@@ -4,7 +4,7 @@ button.button {
     padding: 0.25em 1em;
     font-size: 1em;
     text-align: center;
-    background: $pink;
+    background: var(--color);
     color: var(--text-color);
     border-radius: 4px;
     text-decoration: none;
@@ -16,6 +16,9 @@ button.button {
     text-transform: capitalize;
 
     &:hover {
+    background: var(--lighter-color);
+    color: var(--lighter-text-color);
+
         @include hardShadow(5, var(--darker-color));
     }
 
