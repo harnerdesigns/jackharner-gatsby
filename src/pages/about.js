@@ -25,7 +25,7 @@ const About = ({ data }) => {
       <PageTitle>About Me</PageTitle>
       <section className="half content black">
         <h2>Hi! My Name is Jack.</h2>
-        <h3>I'm a Freelance Web Developer based in Albuquerque, NM.</h3>
+        <h3>I'm a Freelance Web Developer based in Denver, CO.</h3>
         <p>If you access it through a web browser, I can probably build it. Just trying to make cool stuff with my friends. Professionally developing websites for almost 10 years now. </p>
         <p>
           In my free time I enjoy playing Overwatch / Valorant / Minecraft (

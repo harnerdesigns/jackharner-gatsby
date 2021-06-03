@@ -172,6 +172,7 @@ ul {
 
   &.pink {
     background: var(--color);
+
     color: var(--text-color);
   }
 
@@ -198,7 +199,7 @@ ul {
       }
     }
 
-    &--mobile-reverse{
+    &--mobile-reverse {
       flex-direction: column-reverse;
       @include breakpoint(laptop) {
         flex-direction: row;
@@ -296,8 +297,8 @@ section.black .title__box {
     opacity: 0;
   }
 }
-.headroom-wrapper ~ container.intro {
-  min-height: 85vh;
+.headroom-wrapper ~ section.intro {
+  min-height: 50vh;
   // position: relative;
 }
 
@@ -315,13 +316,18 @@ section.black .title__box {
 }
 
 .intro:first-of-type {
-  padding-top: calc(125px + 5em);
+  padding-top: calc(125px);
   margin-top: -125px;
+  padding-bottom: 2rem;
   position: relative;
-
+  background: var(--gradient);
+  @include breakpoint(tablet) {
+    padding-bottom: 0;
+  }
   @include breakpoint(laptop) {
     margin-top: -125px;
-    padding-top: calc(125px + 5em);
+    padding-top: calc(125px);
+    padding-bottom: 0;
   }
 }
 
@@ -332,19 +338,20 @@ section.black .title__box {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 1.25em;
 
   background: #000;
-  border: 5px solid var(--color);
-  border-radius: var(--border-radius);
-    @include hardShadow(5, var(--darker-color), true);
-
+  color: #fff;
+  padding: 1rem;
+  // @include hardShadow(5, var(--darker-color), true);
 
   // opacity: 0;
 
   @include breakpoint(laptop) {
     width: 70%;
-    border: 10px solid var(--color);
+    // align-self: stretch;
+  padding:2rem;
+
+    // border-radius: var(--border-radius) var(--border-radius) 0 0;
   }
 
   h1,
@@ -357,11 +364,23 @@ section.black .title__box {
   }
 
   h1 {
-    margin-top: 2rem;
+    // margin-top: 2rem;
+    @include breakpoint(laptop) {
+      font-size: 2.5rem;
+    }
+    @include breakpoint(desktop) {
+      font-size: 4rem;
+    }
   }
 
   h2 {
     font-weight: 100;
+    @include breakpoint(laptop) {
+      font-size: 1.5rem;
+    }
+    @include breakpoint(desktop) {
+      font-size: 2.5rem;
+    }
   }
 
   h3 {
@@ -374,9 +393,11 @@ section.black .title__box {
 
   .imASlider {
     @include hardShadow(5, #000, true);
+    margin: 0;
   }
 
   .buttons {
+    margin-bottom: 0;
     .button--white {
       background: rgba(0, 0, 0, 0.5);
     }

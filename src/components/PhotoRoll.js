@@ -46,7 +46,6 @@ const StyledPhotoRoll = styled.div`
   width: 100%;
   transition: 600ms !important;
 
-
   @media ${breakpoints.laptop} {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
@@ -74,30 +73,27 @@ const StyledRollLink = styled.a`
   position: relative;
   transition: 600ms !important;
 
-
   &:nth-of-type(n + 5) {
     display: none;
   }
 
   @media ${breakpoints.laptop} {
     display: block !important;
+    &:hover {
+      grid-column: auto / span 4;
+      box-shadow: 0 0 30px #000;
+      z-index: 2;
+    }
   }
 
   .gatsby-image-wrapper {
     width: 100%;
     height: 100%;
-  transition: 600ms !important;
-
+    transition: 600ms !important;
 
     img {
       transition: transform 600ms !important;
       min-height: 25vmax;
     }
-  }
-
-  &:hover {
-    grid-column: auto / span 4;
-    box-shadow: 0 0 30px #000;
-    z-index: 2;
   }
 `

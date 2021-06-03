@@ -7,7 +7,11 @@
   --darker-color: #aa1145;
   --darker-text-color: white;
 
+  --purple: #9c27b0;
+
   --border-radius: 10px;
+
+  --gradient: radial-gradient(circle at 0% 250%, var(--color), var(--darker-color), var(--purple), var(--color));
 }
 
 $red: #f44336;
