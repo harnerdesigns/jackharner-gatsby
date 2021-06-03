@@ -7,6 +7,14 @@
     grid-gap: 0.5rem;
     grid-template-columns: 1fr;
 
+    @include breakpoint(tablet) {
+
+
+        grid-template-columns: 1fr;
+        width: 90%;
+        grid-gap: 1rem;
+    }
+
     @include breakpoint(laptop) {
         grid-template-rows: 1fr;
 

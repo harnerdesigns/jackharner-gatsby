@@ -14,6 +14,10 @@ import Quotes from "../components/testimonies/quotes"
 import { useRef } from "react"
 import CanvasBG from "../components/canvasBG"
 import FreelanceCountdown from "../components/freelanceCountdown"
+import styled from "styled-components"
+
+import jack from "../images/jack.png"
+import { breakpoints } from "../components/breakpoints"
 
 const IndexPage = ({ data, pageContext }) => {
   const { edges: posts } = data.allMarkdownRemark
@@ -27,24 +31,24 @@ const IndexPage = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title="Jack Of All Trades, Master Of Some" />
-      <section className="full black intro">
+      <section className="full pink intro">
+        <IntroGrid>
         <CanvasBG />
-        <section className="introduction" style={{ zIndex: 2 }}>
-          <h1>
-            Hi, I'm <b>Jack&nbsp;Harner</b>
-          </h1>
-          <h2>Jack of All Trades, Master of Some</h2>
-          <ImASlider /> 
-          <div className="buttons">
-            <Button label={"See My Work"} to="/portfolio" white />
-            <Button label={"Let's Chat »"} to="/contact" />
-          </div>
-        </section>
-        <FontAwesomeIcon
-          icon="caret-down"
-          id="scrollIndicator"
-          style={{ zIndex: 3 }}
-        />
+          <ImageWrapper>
+            <img src={jack} />
+          </ImageWrapper>
+          <section className="introduction" style={{"zIndex": 2}}>
+            <h1>
+              Hi, I'm <b>Jack&nbsp;Harner</b>
+            </h1>
+            <h2>Jack of All Trades, Master of Some</h2>
+            <ImASlider />
+            <div className="buttons">
+              <Button label={"See My Work"} to="/portfolio" white />
+              <Button label={"Let's Chat »"} to="/contact" />
+            </div>
+          </section>
+        </IntroGrid>
       </section>
       <section className="half white row row--mobile-reverse">
         <div className="recent-projects">
@@ -218,5 +222,36 @@ export const pageQuery = graphql`
         }
       }
     }
+  }
+`
+
+const IntroGrid = styled.section`
+  display: grid;
+  grid-template-columns: 1fr; 
+  z-index: 2;
+
+  @media ${breakpoints.tablet} {
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+  }
+
+  @media ${breakpoints.laptop} {
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+  }
+`
+
+const ImageWrapper = styled.div`
+  width: 100%;
+    pointer-events: none;
+  display: flex;
+    z-index: 2;
+    align-self: flex-end;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
   }
 `

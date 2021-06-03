@@ -22,14 +22,14 @@ const CanvasBG = ({ children, footerCTA }) => {
     var W = window.innerWidth
     var H = window.innerHeight
     canvas.width = W
-    canvas.height = H
+    canvas.height = canvas.offsetHeight
 
     let requestId
 
     const draw = () => {
       //   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      var color = getComputedStyle(document.body).getPropertyValue("--color")
+      var color = getComputedStyle(document.body).getPropertyValue("--text-color")
       particles.forEach(function(p, i) {
         ctx.save()
         // ctx.translate(clickX, clickY);

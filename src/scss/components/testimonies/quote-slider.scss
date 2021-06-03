@@ -11,13 +11,13 @@
     }
     .slick-track {
         display: flex;
-      }
-      .slick-track .slick-slide {
+    }
+    .slick-track .slick-slide {
         display: flex;
         height: auto;
         align-items: center;
         justify-content: center;
-      }
+    }
 }
 
 .quote__card {
@@ -31,8 +31,7 @@
 
     @include breakpoint(laptop) {
         width: 80%;
-    padding: 2rem;
-
+        padding: 2rem;
     }
 }
 
@@ -41,16 +40,17 @@
     font-size: 1.5rem;
 
     @include breakpoint(laptop) {
-        font-size: 3rem;
+        font-size: 1.5rem;
     }
-
-    &.quote--long{
-
+    @include breakpoint(desktop) {
+        font-size: 2rem;
+    }
+    &.quote--long {
         font-size: 1.25rem;
 
-    @include breakpoint(laptop) {
-        font-size: 2.5rem;
-    }
+        @include breakpoint(laptop) {
+            font-size: 1.25rem;
+        }
     }
 }
 .quote__by {
@@ -58,6 +58,6 @@
     font-size: 1.25rem;
 
     @include breakpoint(laptop) {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 }
