@@ -1,5 +1,4 @@
 import React from "react"
-import Helmet from "react-helmet"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import BlogCard from "../components/blog/blogCard"
@@ -7,6 +6,7 @@ import PageTitle from "../components/pageTitle"
 import ProjectCard from "../components/portfolio/projectCard"
 import TopTags from "../components/common/topTags"
 import Shuffler from "../components/verts/shuffler"
+import SEO from "../components/seo"
 class TagRoute extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
@@ -31,7 +31,7 @@ class TagRoute extends React.Component {
     return (
       <Layout>
         <section className="section">
-          <Helmet title={`${tag} ${postTypeLabels.plural} | ${title}`} />
+          <SEO title={`${tag} ${postTypeLabels.plural}`} />
 
           <PageTitle>{tagHeader}</PageTitle>
 

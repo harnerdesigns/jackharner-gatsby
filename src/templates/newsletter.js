@@ -16,7 +16,7 @@ const Newsletter = ({
   return (
     <Layout footerCTA={false}>
       <SEO
-        title="Learn _____ With Me"
+        title="Learn _____ With Me | Newsletter Sign Up"
         image={ogImage}
         description="Sign Up for my newsletter and learn about Web Development, Graphic Design, Automation, & More!"
       />

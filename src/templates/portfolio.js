@@ -18,7 +18,7 @@ const Blog = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <SEO title="Portfolio" />
+      <SEO title={`Projects | ${topTags[0]}, ${topTags[1]}, ${topTags[2]}, & More `} />
       <PageTitle>Portfolio</PageTitle>
       <main className="page_body page_body--grid">
       <TopTags topTags={topTags} postType='portfolio' />

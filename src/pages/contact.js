@@ -9,7 +9,9 @@ import { Link } from "gatsby"
 
 const Contact = () => (
   <Layout>
-    <SEO title="Get In Touch" />
+    <SEO title="Get In Touch"
+      description="Links to send me an email or a Twitter DM. Ya baby, slide into my DMs"
+    />
 
     <PageTitle>Get In Touch</PageTitle>
     <section className="slim black">

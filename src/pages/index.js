@@ -6,12 +6,10 @@ import ImASlider from "../components/imASlider"
 import ProjectCard from "../components/portfolio/projectCard"
 import BlogCard from "../components/blog/blogCard"
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link, graphql } from "gatsby"
 import Button from "../components/atoms/button"
 import PhotoRoll from "../components/PhotoRoll"
 import Quotes from "../components/testimonies/quotes"
-import { useRef } from "react"
 import CanvasBG from "../components/canvasBG"
 import FreelanceCountdown from "../components/freelanceCountdown"
 import styled from "styled-components"
@@ -31,7 +29,7 @@ const IndexPage = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title="Jack Of All Trades, Master Of Some" />
-      <section className="full pink intro">
+      <section className="full black intro">
         <IntroGrid>
         <CanvasBG />
           <ImageWrapper>
