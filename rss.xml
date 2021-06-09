@@ -1,4 +1,161 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:webfeeds="http://webfeeds.org/rss/1.0"><channel><title><![CDATA[Jack Harner's Web Dev Blog]]></title><description><![CDATA[Jack Harner is a Freelance Web Developer based in Denver, Colorado. He Specializes in E-Commerce, Shopify, WordPress.]]></description><link>https://jackharner.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 03 Jun 2021 06:15:57 GMT</lastBuildDate><webfeeds:accentColor>#E91E63</webfeeds:accentColor><webfeeds:logo>./src/images/jackharenr-logo-white.svg</webfeeds:logo><item><title><![CDATA[Be A T H I C C Developer]]></title><description><![CDATA[Don't be a T-Shaped Developer Be a T H I C C Developer Instead!  What's A T-Shaped Developer? The idea of a T-Shaped Dev has been around since the early 2010s, and it evolved from the concept of an I-Shaped Dev. The Letters Jack, WHAT DO THEY MEAN…]]></description><link>https://jackharner.com//blog/be-a-thicc-developer/</link><guid isPermaLink="false">https://jackharner.com//blog/be-a-thicc-developer/</guid><pubDate>Sat, 10 Apr 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Don&apos;t be a T-Shaped Developer&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:webfeeds="http://webfeeds.org/rss/1.0"><channel><title><![CDATA[Jack Harner's Web Dev Blog]]></title><description><![CDATA[Jack Harner is a Freelance Web Developer based in Denver, Colorado. He Specializes in E-Commerce, Shopify, WordPress.]]></description><link>https://jackharner.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 09 Jun 2021 06:46:30 GMT</lastBuildDate><webfeeds:accentColor>#E91E63</webfeeds:accentColor><webfeeds:logo>./src/images/jackharenr-logo-white.svg</webfeeds:logo><item><title><![CDATA[Quitting, Moving, & Getting Bit By A Dog]]></title><description><![CDATA[It Finally Happened:  The End Of An Era My last official day at my 9-5 was April 30th. After working there for almost 5 years, it was definitely a bittersweet ending.  My bosses had known about my exit for the better part of 6 weeks, and that time…]]></description><link>https://jackharner.com//blog/my-first-month-as-a-freelancer/</link><guid isPermaLink="false">https://jackharner.com//blog/my-first-month-as-a-freelancer/</guid><pubDate>Thu, 03 Jun 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;It Finally Happened:&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1057px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 39.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABM0lEQVQY02NgoBDIyMiYmppaWVm5urpqG+or6WqZWVpYOTu4+XmbmJtpmxqZWVsZWZiZO9mZWpgbGBhYWlmZmJhANQsJCWlpaeno6AD1+OtbxWhYWWvpxxo6JJi7uplYJmjbuGgZB5nY5Vp62xtbaGhrKSooaGtro9jPzMgEJBdoBf4N609jULoeVH/MtyyDTf1/8uweOedZar5/Uqa7ccqBVTKi6GRiYoJoXqwe+Nu9NZNd44Zz6XGb7BwB/f8hE3rlXeZqBPwJ63fjkgeqYWFkYkTTz8rCws7FqcQuYMohLsUtqM8uqscpJsMjaMkpqcglpMIlbMEpKcEryMrOhiXYuLm55eXlhSTF+SVFpeRk+SRERWSlxGWkBGUlJeVlhKUkxBRlVdXVpKWkcIY8IxgRCQDFfjlKZVy2WgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Freelancing For A Month&quot;
+        title=&quot;Freelancing For A Month&quot;
+        src=&quot;/static/d8ceb8270b051ec4a7020bee6328119b/4ef40/freelance-countdown.png&quot;
+        srcset=&quot;/static/d8ceb8270b051ec4a7020bee6328119b/5a46d/freelance-countdown.png 300w,
+/static/d8ceb8270b051ec4a7020bee6328119b/0a47e/freelance-countdown.png 600w,
+/static/d8ceb8270b051ec4a7020bee6328119b/4ef40/freelance-countdown.png 1057w&quot;
+        sizes=&quot;(max-width: 1057px) 100vw, 1057px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;The End Of An Era&lt;/h2&gt;
+&lt;p&gt;My last official day at my 9-5 was April 30th. After working there for almost 5 years, it was definitely a bittersweet ending. &lt;/p&gt;
+&lt;p&gt;My bosses had known about my exit for the better part of 6 weeks, and that time &lt;em&gt;FLEW&lt;/em&gt; by.&lt;/p&gt;
+&lt;p&gt;I don&apos;t really know why, but telling them was the most nerve wracking thing I feel like I&apos;ve ever done. Right before telling our GM, I had the closest thing to a panic attack I&apos;ve ever experienced. I was just standing in our office&apos;s kitchen, my heart beating at 150 BPM (Thanks Galaxy Watch for telling me to &quot;Calm Down&quot;) and my whole body shaking. &lt;/p&gt;
+&lt;p&gt;I knew I just had to rip the Band-Aid off. The clock was ticking down and it wasn&apos;t going to get easier.&lt;/p&gt;
+&lt;h2&gt;I&apos;m Moving, But...&lt;/h2&gt;
+&lt;p&gt;Obviously, I was way overthinking the whole &quot;telling my boss&quot; situation. Hindsight being what it is, I know I was worked up over how important my work was to that business. There was some significant downsizing at the start of COVID, and a lot of essential day-to-day warehouse tasks fell to me. I was fortunate to still have a job, but boy was it stressful.&lt;/p&gt;
+&lt;p&gt;The conversation with my boss went better than I could&apos;ve hoped. I let her know that I was burnt out, both with the job and with New Mexico. I&apos;d been living there for 26-ish years and it was absolutely time for a change. I was ready to dive full time into freelancing and tying that into my move to Denver sounded perfect to me.&lt;/p&gt;
+&lt;p&gt;I reasoned that a lot of the work they had actually hired me for didn&apos;t &lt;em&gt;have&lt;/em&gt; to be done in the warehouse. Graphic Design, Web Dev, Software Dev, and Marketing are prime task categories for Remote work. All we had to do was shuffle some of the warehouse tasks to the few people we did bring back, and anything that I couldn&apos;t pawn off that I could do remote I would continue to do. Easy.&lt;/p&gt;
+&lt;p&gt;She was onboard with my plan and even offered to discuss it with the owners for me. A HUGE relief because I probably would&apos;ve had the same pre-convo panic attack at least once, if not twice more. Overall she was happy for me, and excited for the next chapter in my life.&lt;/p&gt;
+&lt;p&gt;They agreed to let me switch over to being a contractor, and to continue doing what I could from Denver. That was a huge weight of my shoulders knowing I had yet another client to rely on to get my bills paid. &lt;/p&gt;
+&lt;p&gt;I spent basically the last month preparing them and the warehouse so that I could update software remotely, debug issues on some of the computers remotely, and making sure I had access to everything I needed from anywhere. &lt;/p&gt;
+&lt;p&gt;My last day finally rolled around, and with some weird cosmic timing, someone had broken into the warehouse that morning. 2 Guys literally just walked up, kicked our glass front door in, and ran off with only like $100 worth of shoes and some clothes. Spent the first half of my last day scrubbing through our security cameras to see if they caught anything the cops could use. &lt;/p&gt;
+&lt;p&gt;I was only working a half day since I had plenty of moving stuff to deal with, so my boss brought in lunch for everyone. We ate, had a last &quot;mobile happy hour&quot;, I said some tearful goodbyes, and then I left.&lt;/p&gt;
+&lt;h2&gt;Moving To Colorado&lt;/h2&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;If there&apos;s one thing I learned about moving from moving to Colorado, it&apos;s this:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h3 style=&quot;text-align: center;&quot;&gt;FIGURE OUT THE NEW HOUSING SITUATION BEFORE YOU TELL YOUR CURRENT PLACE YOU&apos;RE LEAVING&lt;/h3&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;My roommate and I got approved for the apartment &lt;strong&gt;16 hours&lt;/strong&gt; before I had planned to leave Albuquerque with a truck full of all my stuff. SIXTEEN HOURS!&lt;/p&gt;
+&lt;p&gt;Let me tell you, that is not the way to go about moving states. Our housing plans changed about 5 times in the last few months we were planning this whole thing. What was initially going to be a 4 Bed, 3+ Bath house with 4 roommates, rapidly became a 2 bed 2.5 bath apartment between me and my best friend &lt;a href=&quot;https://www.youtube.com/channel/UCivxFHGyZy66hA3DV95rL9w&quot;&gt;Clinton &quot;I&apos;m Not A Chef&quot; Day&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Going from one stressful situation to the next, we got the apartment, had a brief moment of untapped joy, and then the panic that I had too much shit that wasn&apos;t all going to fit set in. Apparently, my dad has played nothing but Tetris since he was a kid because he got way more in the truck than I expected. The too small truck ended up being a blessing, though, because it forced me to leave behind some stuff I was having trouble letting go of.&lt;/p&gt;
+&lt;p&gt;Just a quick 6.5 hour drive later, and we made it to the new place. &lt;/p&gt;
+&lt;h2&gt;DOG BITE&lt;/h2&gt;
+&lt;p&gt;On my 5th full day in Denver, I was bit by a dog and had to get 12 stitches in my nose.&lt;/p&gt;
+&lt;p&gt;Some &quot;Welcome to Denver&quot;, right?&lt;/p&gt;
+&lt;p&gt;Given what happened, I&apos;m still very fortunate. It was millimeters away from my septum piercing, inches away from my eyes, and could&apos;ve been a whole lot worse.&lt;/p&gt;
+&lt;p&gt;It&apos;s already healing up really well. I got the stitches out about a week ago, and the scab has totally fallen off. I&apos;m not too worried about the scar. If anything, it&apos;s a nice segway into a wild ass story to share at parties.&lt;/p&gt;
+&lt;p&gt;{{{vert}}}&lt;/p&gt;
+&lt;h2&gt;Fixing Bugs In Production From My Phone At A Brewery&lt;/h2&gt;
+&lt;p&gt;Colorado has an absolutely insane craft beer scene. As an avid consumer of craft beer, any time my roommate suggests a new spot, I&apos;m pretty much always down to go. The spot this time was called Bruz Beers, a traditional Belgian-style specializing brewery in Midtown.&lt;/p&gt;
+&lt;p&gt;I&apos;m still not exactly sure what happened, but I managed to publish the only just-started update to &lt;a href=&quot;https://bottlerocketsauce.com&quot;&gt;Bottle Rocket Hot Sauce&apos;s site&lt;/a&gt;, overwriting V1 on the Live Site. &lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;Completely and totally breaking the site.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 598px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 84.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAAsSAAALEgHS3X78AAACqklEQVQ4y31UXXPSUBDlB2hVaGgLhRBIycclIYEQAgHCp9WqTDvjjH1yxifffXV89if58467N70pGWd82NnN5u7J2T17U7HCDB/vv8FPthgtDgjTPcL5HgEbxe54ia6Xot71UTcG/7XLno9Ktr/Hzx+/IaZUHK/hTNYQ5O1ohbYToW0F0E0P5y3r2doOznVB5hamdYS0SncQ5wCjBUw/gZhkxGiKnpdQLkVbTFG1EmhiAc1NoTkzaGaYA3XKoGwEOEU/SDGcbWGPV4hWtwS6ghWmiLN3sCZb1AYZ6sMt6v5Ges2aQJOsBgWzguGlITBJVvCSDZxgiQYdvrZGaFG7l+YQLXuM6xuaX9sis3PfcfO5ddwSGOcqVzTIhJikhyNm2a0UhgUJ0wOx3uXikA2mGymcTSI50Rqr/R7LLMarpkPAeesS8KLrodEPSUVPKsms2DjPqrFd0TMfViw0ydDDRW9Y5NT7Chewmtym8vwB9rqIqeVIej53qiaDlp+fZtjkYpoT+2Z/JL3uTkoAyksWhiizMlRcANKeEbNn4EAyvboJSoWqqG6Uc6eCSMCq7uAlLaua0+umhWrLxhuyJrXNC8xxjZaZCzinnewfz5rJFHvYoOEKIwCr3RETGGQtayy96cXoigi9QSzXhz/Ks2XfoA54LEo8JsNx5XN8iz/ff2E33iFcv0eyuYMdH2DNP8HPjgh3DxitP+S3hmbLAikBT9kWe2i5Cd4eHiGCBXzev/kWD18OePx6h8Nxh7NehKrho0Ztc2FN3uNnfyqcbLlKL140TNmCTdetH8wRpUuEU7rPIpQ/A013Sqtxui7//BxkQIkW0TeHM7ky1jCBboc4I4H4Pc+G21G3gS+BAlLqFgxVQg02V3NAjMPiMK9Q42mN+JyK2TjmD6oZ/gV05/FUdB2xcAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Breaking Bottle Rocket Tweet&quot;
+        title=&quot;Breaking Bottle Rocket Tweet&quot;
+        src=&quot;/static/dca3643364f506bcd06cd4abf8ba244f/0c69d/breaking-bottle-rocket.png&quot;
+        srcset=&quot;/static/dca3643364f506bcd06cd4abf8ba244f/5a46d/breaking-bottle-rocket.png 300w,
+/static/dca3643364f506bcd06cd4abf8ba244f/0c69d/breaking-bottle-rocket.png 598w&quot;
+        sizes=&quot;(max-width: 598px) 100vw, 598px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;My dilemma was that I was at least 30 minutes away from my computer, and we were already had plans to go get some delicious pizza. &lt;/p&gt;
+&lt;h3&gt;The Pizza:&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAMEBQEC/8QAFwEBAQEBAAAAAAAAAAAAAAAAAQACA//aAAwDAQACEAMQAAABq81IOW8Zup8VwYw3/8QAHBABAAEFAQEAAAAAAAAAAAAAAgEAAxIUIhEx/9oACAEBAAEFAtU1q+UhcyWGHyAubnBhyom6gv/EABoRAAEFAQAAAAAAAAAAAAAAAAABAhAREjH/2gAIAQMBAT8Boyg7kf/EABgRAAIDAAAAAAAAAAAAAAAAAAABEBES/9oACAECAQE/AbZtij//xAAfEAACAgEEAwAAAAAAAAAAAAAAAQIhESIjMUFRYaH/2gAIAQEABj8Ce78MuawXFlcvwVlv2XZpZKL6aGkz/8QAGxAAAgMBAQEAAAAAAAAAAAAAAREAITFBUXH/2gAIAQEAAT8h5sSK/M1phxX/AJGMT5VhJqMaDQhMH9jXgBORPZChUqmPon//2gAMAwEAAgADAAAAEHwIf//EABgRAQADAQAAAAAAAAAAAAAAAAEAEBEh/9oACAEDAQE/EAR062f/xAAZEQEAAgMAAAAAAAAAAAAAAAAAARExQWH/2gAIAQIBAT8Q7KdMFQ//xAAdEAEBAAICAwEAAAAAAAAAAAABEQAhQXExkcHR/9oACAEBAAE/EBEKy3eHbcRPZuweA3jxV4KD1jRoSaEpx9xsj1Oqp4xobCqR3+ZQEAVEOsSmsWxd4VJLkHP/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;The Pizza In Question&quot;
+        title=&quot;The Pizza In Question&quot;
+        src=&quot;/static/c06198a0a4125fe8ff60c205484916df/e5166/pizza.jpg&quot;
+        srcset=&quot;/static/c06198a0a4125fe8ff60c205484916df/f93b5/pizza.jpg 300w,
+/static/c06198a0a4125fe8ff60c205484916df/b4294/pizza.jpg 600w,
+/static/c06198a0a4125fe8ff60c205484916df/e5166/pizza.jpg 1200w,
+/static/c06198a0a4125fe8ff60c205484916df/491c4/pizza.jpg 1514w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;em&gt;Don&apos;t ask me what was on it, but it was SO good.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Luckily I had an SSH Client already setup on my phone (Let&apos;s see your iPhone do that) so I was able to: &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;SSH into one of my web servers&lt;/li&gt;
+&lt;li&gt;Clone the Bottle Rocket theme repo to that server from the &lt;code class=&quot;language-text&quot;&gt;main&lt;/code&gt; branch&lt;/li&gt;
+&lt;li&gt;Setup Shopify&apos;s ThemeKit&lt;/li&gt;
+&lt;li&gt;Re-deployed the V1 version of the theme.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;All of that on this tiny little terminal on Bruz&apos;s patio while the sun set: &lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 500px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 205.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAApABQDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAEEBQID/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAIBA//aAAwDAQACEAMQAAAByomL4gdLS7qrI8+sycvSZo//xAAbEAACAgMBAAAAAAAAAAAAAAAAEQISARAgIf/aAAgBAQABBQLpZEVzpHheJeI4cf/EABYRAQEBAAAAAAAAAAAAAAAAABASAP/aAAgBAwEBPwEnS//EABgRAQADAQAAAAAAAAAAAAAAAAABEhMQ/9oACAECAQE/AeUUaS0l/8QAGhAAAgIDAAAAAAAAAAAAAAAAATEAECAwMv/aAAgBAQAGPwLUqYjE6GH/xAAdEAACAgIDAQAAAAAAAAAAAAABEQAxECBhobHw/9oACAEBAAE/IWcOGzpPxgQVdT4UJC/IIRjE6Ol//9oADAMBAAIAAwAAABDPP/8ApB//xAAXEQADAQAAAAAAAAAAAAAAAAAAEBFx/9oACAEDAQE/EFtaU//EABgRAQADAQAAAAAAAAAAAAAAAAARUWEQ/9oACAECAQE/EOStO2TJ/8QAIhABAAIBAwMFAAAAAAAAAAAAAQARITFBYVGR0RBxgaGx/9oACAEBAAE/EFqEMcQU0UinVZn7z6pbHeZ6/UQ2O8GCXE68/cphp3+YzVB5XmHw09cwRhX5gCGpaU44hpHabE//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;JuiceSSH Terminal&quot;
+        title=&quot;JuiceSSH Terminal&quot;
+        src=&quot;/static/4364cf056b2041b2b999ae1576141cba/41099/juice-ssh-scaled.jpg&quot;
+        srcset=&quot;/static/4364cf056b2041b2b999ae1576141cba/f93b5/juice-ssh-scaled.jpg 300w,
+/static/4364cf056b2041b2b999ae1576141cba/41099/juice-ssh-scaled.jpg 500w&quot;
+        sizes=&quot;(max-width: 500px) 100vw, 500px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;So far, that&apos;s been the most &quot;freelance&quot; thing I&apos;ve experienced, and it just shows that I&apos;m prepared to fix anything at any time. Maybe I am cutout for this whole freelance thing after all!&lt;/p&gt;
+&lt;h2&gt;Biggest Challenges So Far&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;h3&gt;I am my own boss, there&apos;s no one telling me what to do!! 😀😀&lt;/h3&gt;
+&lt;h3&gt;I am my own boss, there&apos;s no one telling me what to do.. 😱😱&lt;/h3&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This one is both a blessing and a curse. When I first moved up here I made it a big deal to delete all of my alarms.&lt;/p&gt;
+&lt;p&gt;&quot;I&apos;ll wake up when I WANT to wake up&quot; I told anyone who would listen. &lt;/p&gt;
+&lt;p&gt;I still woke up at 7 the next morning. &lt;/p&gt;
+&lt;p&gt;After about a month I pretty much get my day started around 8:30. Take my time getting coffee or whatever else for the morning and typically sit down to work around 10. Love that for me.&lt;/p&gt;
+&lt;p&gt;However...&lt;/p&gt;
+&lt;p&gt;The only thing forcing my ass into the chair is the dwindling of my bank account and the loom of impending homelessness (or worse, moving back to Albuquerque). Which you&apos;d think would be the best motivator, right?&lt;/p&gt;
+&lt;p&gt;I&apos;m getting the hang of it, but it&apos;s definitely something to get used to.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h3&gt;My Income Is Now Like An Arcade High Score&lt;/h3&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Since going fulltime freelance I switched my invoicing and time tracking software over to &lt;a href=&quot;https://www.hellobonsai.com/invite?fp_ref=jackharner&quot;&gt;Bonsai&lt;/a&gt;. I wanted something that could handle both time tracking as well as invoicing and payments. I&apos;m going to write up a full review here soon, but so far I love it.&lt;/p&gt;
+&lt;p&gt;One thing it does, is it puts both your unbilled hours and the money expected from those unbilled hours right on the dashboard. I&apos;m working with a couple of clients in a &quot;do work. invoice twice a month&quot; capacity, so I&apos;m directly incentivized to get that unbilled hours number as high as possible.&lt;/p&gt;
+&lt;p&gt;I can already tell that&apos;s going to turn me into a workaholic. &lt;/p&gt;
+&lt;h2&gt;Key Takeaways from Month 1&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;My nose is not dog proof.&lt;/li&gt;
+&lt;li&gt;I am the only one in charge of making sure I get my work. &lt;/li&gt;
+&lt;li&gt;Twitter continues to be my most profitable network, as far as getting clients.&lt;/li&gt;
+&lt;li&gt;Prioritize creating content over consuming content.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;h3&gt;I might turn this into a monthly series following my Freelance career. Hit me up on &lt;a href=&quot;https://twitter.com/jackharner&quot;&gt;Twitter @JackHarner&lt;/a&gt; if you want to see more like this!&lt;/h3&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[Be A T H I C C Developer]]></title><description><![CDATA[Don't be a T-Shaped Developer Be a T H I C C Developer Instead!  What's A T-Shaped Developer? The idea of a T-Shaped Dev has been around since the early 2010s, and it evolved from the concept of an I-Shaped Dev. The Letters Jack, WHAT DO THEY MEAN…]]></description><link>https://jackharner.com//blog/be-a-thicc-developer/</link><guid isPermaLink="false">https://jackharner.com//blog/be-a-thicc-developer/</guid><pubDate>Sat, 10 Apr 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Don&apos;t be a T-Shaped Developer&lt;/h1&gt;
 &lt;h1&gt;Be a T H I C C Developer Instead!&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://media.giphy.com/media/kcOVt7d7hcUVkADVS1/giphy.gif&quot;&gt;&lt;/p&gt;
 &lt;h2&gt;What&apos;s A T-Shaped Developer?&lt;/h2&gt;
