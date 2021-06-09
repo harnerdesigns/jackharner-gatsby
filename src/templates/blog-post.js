@@ -6,10 +6,7 @@ import BlogTitle from "../components/blog/blogTitle"
 import Button from "../components/atoms/button"
 import BlogCard from "../components/blog/blogCard"
 import ShareLinks from "../components/social/shareLinks"
-import RssCard from "../components/blog/rssCard"
-import Brave from "../components/verts/brave"
 import Shuffler from "../components/verts/shuffler"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import NewsletterLink from "../components/blog/NewsletterLink"
 
 export default function Template(props) {
@@ -35,7 +32,7 @@ export default function Template(props) {
   return (
     <Layout>
       <SEO
-        title={post.frontmatter.title}
+        title={`${post.frontmatter.title}${post.frontmatter.subtitle ? " | " + post.frontmatter.subtitle : ""}`}
         description={post.excerpt}
         image={
           post.fields.ogImage
@@ -75,7 +72,6 @@ export default function Template(props) {
       <section className="slim black">
         <section className="post__post-content">
           <ShareLinks post={post} />
-          <RssCard />
           <nav className="postNavigation">
             <h3>Related Posts</h3>
             <ul>
