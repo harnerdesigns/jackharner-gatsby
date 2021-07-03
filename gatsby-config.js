@@ -4,9 +4,10 @@ module.exports = {
     title: `Jack Harner`,
     description: `Jack Harner is a Freelance Web Developer based in Denver, Colorado. He Specializes in E-Commerce, Shopify, WordPress.`,
     author: `@jackharner`,
-    siteUrl: 'https://jackharner.com'
+    siteUrl: "https://jackharner.com",
   },
-  plugins: ["gatsby-plugin-catch-links",
+  plugins: [
+    "gatsby-plugin-catch-links",
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -63,49 +64,54 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: process.env.GA,
-      }
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-mdx`,
-
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        defaultLayouts: {
+          blog: require.resolve("./src/templates/blog-post.js"),
+        },
+      },
+    },
 
     {
       resolve: "gatsby-transformer-remark",
       options: {
-        plugins: [{
-          resolve: `gatsby-remark-prismjs`,
-          options: {
-            classPrefix: "language-",
-            inlineCodeMarker: '±',
-            aliases: { 'js': 'javascript' },
-            showLineNumbers: false,
-            noInlineHighlight: false,
-            languageExtensions: [],
-            prompt: {
-              user: "jack",
-              host: "localhost",
-              global: true,
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: "±",
+              aliases: { js: "javascript" },
+              showLineNumbers: false,
+              noInlineHighlight: false,
+              languageExtensions: [],
+              prompt: {
+                user: "jack",
+                host: "localhost",
+                global: true,
+              },
             },
           },
-        },
           `gatsby-remark-copy-linked-files`,
-        {
-          resolve: `gatsby-remark-images`,
-          options: {
-            maxWidth: 1200,
-            linkImagesToOriginal: false,
-
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+              linkImagesToOriginal: false,
+            },
           },
-        },
-        {
-          resolve: `gatsby-remark-responsive-iframe`,
-          options: {
-            wrapperStyle: `margin-bottom: 1.0725rem`,
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
           },
-        }
-      
-      ], // just in case those previously mentioned remark plugins sound cool :)
+        ], // just in case those previously mentioned remark plugins sound cool :)
       },
     },
     {
@@ -120,13 +126,13 @@ module.exports = {
         icon: `src/images/jackharner-icon.svg`, // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-sass',
-    'gatsby-plugin-advanced-sitemap',
-    'gatsby-plugin-styled-components',
+    "gatsby-plugin-sass",
+    "gatsby-plugin-advanced-sitemap",
+    "gatsby-plugin-styled-components",
     `gatsby-plugin-twitter`,
 
     {
-      resolve: 'gatsby-plugin-feed',
+      resolve: "gatsby-plugin-feed",
       options: {
         query: `
           {
@@ -144,10 +150,11 @@ module.exports = {
           {
             output: "/rss.xml",
             title: "Jack Harner's Web Dev Blog",
-            custom_namespaces: {"webfeeds": "http://webfeeds.org/rss/1.0" },
+            custom_namespaces: { webfeeds: "http://webfeeds.org/rss/1.0" },
             custom_elements: [
               { "webfeeds:accentColor": "#E91E63" },
-              { "webfeeds:logo": "./src/images/jackharenr-logo-white.svg" }],
+              { "webfeeds:logo": "./src/images/jackharenr-logo-white.svg" },
+            ],
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
@@ -189,16 +196,9 @@ module.exports = {
               }
             }
             `,
-
           },
         ],
-      }
-    }
-
-
+      },
+    },
   ],
 }
-
-
-
-
