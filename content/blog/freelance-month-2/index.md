@@ -6,7 +6,7 @@ featuredImage: "./featuredImage.png"
 ogImage: "./focus-on-whats-paying-you.png"
 tags: ['Freelance', 'Newsletter']
 externalLink: ""
-published: false
+published: true
 unlisted: true
 ---
 
