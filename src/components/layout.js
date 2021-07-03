@@ -7,12 +7,14 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+import { MDXProvider } from "@mdx-js/react"
 import { useStaticQuery, graphql } from "gatsby"
 import "./fontawesome"
 import Header from "./common/header"
 import "../scss/style.scss"
 import Footer from "./common/footer"
 import SimpleReactLightbox from "simple-react-lightbox";
+import ImageGrid from "./imageGrid";
 
 
 const Layout = ({ children, footerCTA }) => {
@@ -25,8 +27,12 @@ const Layout = ({ children, footerCTA }) => {
       }
     }
   `)
+
+  const shortcodes = { ImageGrid }
   return (
-         <SimpleReactLightbox>
+    <MDXProvider components={shortcodes}>
+
+      <SimpleReactLightbox>
 
     
       <div>
@@ -37,6 +43,7 @@ const Layout = ({ children, footerCTA }) => {
         <Footer footerCTA={footerCTA} />
       </div>
     </SimpleReactLightbox>
+    </MDXProvider>
   )
 }
 
