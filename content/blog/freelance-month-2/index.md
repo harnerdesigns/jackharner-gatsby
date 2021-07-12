@@ -7,7 +7,7 @@ ogImage: "./focus-on-whats-paying-you.png"
 tags: ['Freelance', 'Newsletter']
 externalLink: ""
 published: true
-unlisted: true
+unlisted: false
 ---
 
 Now that June is in the books and things have pretty much settled, I'm getting into my new routine and I'm LOVING it. 
