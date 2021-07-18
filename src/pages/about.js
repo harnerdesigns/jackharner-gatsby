@@ -29,7 +29,7 @@ const About = ({ data }) => {
         <p>If you access it through a web browser, I can probably build it. Just trying to make cool stuff with my friends. Professionally developing websites for almost 10 years now. </p>
         <p>
           In my free time I enjoy playing Overwatch / Valorant / Minecraft (
-          <a href="https://twitch.tv/jackjackslaps" target="_blank">
+          <a href="https://twitch.tv/jackjackslaps" target="_blank" rel="noreferrer">
             Follow Me on Twitch
           </a>
           ), & spending time with my three cats.

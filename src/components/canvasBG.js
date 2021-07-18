@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from "react"
 
-import styled from "styled-components"
-
 const CanvasBG = ({ children, footerCTA }) => {
   const [particles, setParticles] = useState([
     {
@@ -29,7 +27,9 @@ const CanvasBG = ({ children, footerCTA }) => {
     const draw = () => {
       //   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      var color = getComputedStyle(document.body).getPropertyValue("--text-color")
+      var color = getComputedStyle(document.body).getPropertyValue(
+        "--text-color"
+      )
       particles.forEach(function(p, i) {
         ctx.save()
         // ctx.translate(clickX, clickY);
@@ -59,7 +59,7 @@ const CanvasBG = ({ children, footerCTA }) => {
             angle: p.angle + Math.random(),
             up: p.up,
           }
-        } else {  
+        } else {
           particles[i] = {
             x: p.x, //x-coordinate
             y: p.y, //y-coordinate
@@ -70,10 +70,10 @@ const CanvasBG = ({ children, footerCTA }) => {
           }
         }
 
-        if (p.frame == 33) {
+        if (p.frame === 33) {
           particles.splice(i, 1)
           //   ctx.clearRect(0, 0, canvas.width, canvas.height)
-          if (particles.length == 0) {
+          if (particles.length === 0) {
             setParticles([
               {
                 x: Math.random() * W, //x-coordinate
@@ -93,7 +93,7 @@ const CanvasBG = ({ children, footerCTA }) => {
     return () => {
       cancelAnimationFrame(requestId)
     }
-  }, null)
+  })
   const canvasClick = e => {
     let cursorX = e.pageX
     let cursorY = e.pageY

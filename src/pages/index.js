@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -33,7 +33,7 @@ const IndexPage = ({ data, pageContext }) => {
         <IntroGrid>
         <CanvasBG />
           <ImageWrapper>
-            <img src={jack} />
+            <img src={jack} alt="Jack Harner" />
           </ImageWrapper>
           <section className="introduction" style={{"zIndex": 2}}>
             <h1>

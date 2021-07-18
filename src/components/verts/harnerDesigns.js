@@ -1,6 +1,6 @@
 import React from "react"
 import MoreWithLess from "../../images/more-with-less.png"
-import Paranoid from "../../images/paranoid-tank.png"
+// import Paranoid from "../../images/paranoid-tank.png"
 import DeathBefore from "../../images/death-before-decaf.png"
 import Sandias from "../../images/sandias-print.png"
 import Vert from "./vert"

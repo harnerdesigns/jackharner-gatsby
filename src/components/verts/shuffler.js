@@ -1,7 +1,5 @@
 import React from "react"
 
-import Brave from "./brave"
-import Newsletter from "./newsletter"
 import GridGospel from "./gridGospel"
 import DigitalOcean from "./digitalOcean"
 import { random } from "lodash"

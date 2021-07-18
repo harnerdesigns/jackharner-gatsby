@@ -1,9 +1,7 @@
-import PropTypes from "prop-types"
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from "gatsby"
 import styled from "styled-components"
-const _ = require("lodash")
 
 const NewsletterLink = () => {
   return (

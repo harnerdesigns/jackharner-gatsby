@@ -10,7 +10,7 @@ const ProjectHeader = ({ post, index, small, nolink }) => {
 
   if(post.frontmatter.tags){
 
-    let filterTags = post.frontmatter.tags.filter((tag, i) => (i < 3 ? true : false))
+    filterTags = post.frontmatter.tags.filter((tag, i) => (i < 3 ? true : false))
     tags = <div className="tags"><FontAwesomeIcon icon="tag" /> {filterTags.map((tag, i) => {
       const tagLink = `/portfolio/tags/${_.kebabCase(tag)}/`
 

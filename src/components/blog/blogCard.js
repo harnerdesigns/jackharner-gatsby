@@ -15,8 +15,8 @@ let filterTags, tags;
 
     if(post.frontmatter.tags){
 
-        let filterTags = post.frontmatter.tags.filter((tag, i) => (i < 3 ? true : false))
-        let tags = <div className="tags"><FontAwesomeIcon icon="tag" /> {filterTags.map((tag, i) => {
+        filterTags = post.frontmatter.tags.filter((tag, i) => (i < 3 ? true : false))
+        tags = <div className="tags"><FontAwesomeIcon icon="tag" /> {filterTags.map((tag, i) => {
             return (<>{tag}{i < filterTags.length - 1 ? ", " : (filterTags.length < post.frontmatter.tags.length ? ", + " + (post.frontmatter.tags.length - filterTags.length) : "")}</>)
         })}</div>;
     }
