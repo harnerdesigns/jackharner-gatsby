@@ -66,6 +66,7 @@ export const pageQuery = graphql`
             title
             subtitle
             date(formatString: "MMMM DD, YYYY")
+            updated(formatString: "MMMM DD, YYYY")
             tags
             published
             featuredImage {

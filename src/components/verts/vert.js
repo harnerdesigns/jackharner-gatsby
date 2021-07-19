@@ -5,7 +5,7 @@ const Vert = ({ link, slug, children, image, buttonText }) => {
     <a
       href={link}
       target="_blank"
-      rel="noopener"
+      rel="noopener noreferrer sponsored"
       className={`vert vert--${slug} vert--${
         image ? "with-icon" : "without-icon"
       }`}
@@ -13,7 +13,7 @@ const Vert = ({ link, slug, children, image, buttonText }) => {
       <div className="vert__content">{children}</div>
       {image && (
         <div className="vert__img-wrap">
-          <img src={image} />
+          <img src={image} alt="" />
         </div>
       )}
 

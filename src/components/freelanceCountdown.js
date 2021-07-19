@@ -1,13 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from "gatsby"
-import React, { useEffect, useRef, useState } from "react"
+import React, { useEffect, useState } from "react"
 
 import styled from "styled-components"
 import { breakpoints } from "./breakpoints"
 
 const FreelanceCountdown = () => {
   const [timeLeft, setTimeLeft] = useState({})
-  const [year, setYear] = useState(new Date().getFullYear())
   const calculateTimeLeft = () => {
     const difference =  +new Date() - +new Date(`2021-04-30T16:00:00.000-06:00`)
 
@@ -24,7 +23,6 @@ const FreelanceCountdown = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setTimeLeft(calculateTimeLeft())
-      setYear(new Date().getFullYear())
     }, 1000)
     // Clear timeout if the component is unmounted
     return () => clearTimeout(timer)
@@ -40,7 +38,7 @@ const FreelanceCountdown = () => {
     timerComponents.push(
       <>
         <CountdownNumber>{string.toString().padStart(2, "0")} <CountdownLabel>{interval}</CountdownLabel></CountdownNumber>
-        <CountdownSeparator>{i == 3 ? "" : ":"}</CountdownSeparator>
+        <CountdownSeparator>{i === 3 ? "" : ":"}</CountdownSeparator>
       </>
     )
   })
