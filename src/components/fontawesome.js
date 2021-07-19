@@ -37,7 +37,8 @@ import {
   faTree,
   faCannabis,
   faUserAstronaut,
-  faSpinner
+  faSpinner,
+  faCode
 } from "@fortawesome/free-solid-svg-icons"
 
 config.autoAddCss = false
@@ -80,5 +81,6 @@ library.add(
   faTree,
   faCannabis,
   faUserAstronaut,
-  faSpinner
+  faSpinner,
+  faCode
 )

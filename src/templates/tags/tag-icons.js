@@ -32,6 +32,7 @@ const tagIcons = {
   Python: ["fab", "python"],
   Shopify: ["fab", "shopify"],
   "E-Commerce": 'shopping-bag',
+  "Code Snippets": 'code',
   Writing: "pencil-alt",
   "Non Profit": "tree",
   Cannabis: "cannabis",

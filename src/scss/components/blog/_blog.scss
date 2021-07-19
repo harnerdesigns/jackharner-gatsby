@@ -98,6 +98,7 @@
     padding: 0 1rem 1rem 1rem;
     display: flex;
     align-items: flex-end;
+    justify-content: flex-start;
 
     .tags {
       margin-left: auto;
@@ -110,10 +111,21 @@
 
       @include breakpoint(laptop) {
         margin-left: 0;
-        margin-right: auto;
+        // margin-right: auto;
         text-align: right;
         font-size: 1.25rem;
       }
+    }
+
+    .card__date{
+      font-size: 1.25rem;
+      font-weight: 100;
+      margin-left: 1ch;
+
+      svg{
+        margin-right: 0.5ch;
+      }
+      
     }
   }
 

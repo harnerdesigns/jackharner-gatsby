@@ -28,6 +28,8 @@ Working with multiple clients at once is great because if I'm running into a pro
 
 Freelancing has provided me with multiple income streams, however they're not passive income by any means. I'm still technically trading my time for money. Now that the side (nights and weekends) work that I was doing, pre-freelance, has become my main work, the side-side-hustles can become the side job. I've made some significant progress on Simple Tweets, and am hammering out the details for a few different e-commerce opportunities.
 
+{{{vert}}}
+
 ## Started with Electric Eye
 
 I started my first project with a new client, [Electric Eye](https://electriceye.io/), this month! Electric Eye is this fully remote Ecommerce Agency specializing in building and optimizing DTC Brands with Shopify.
@@ -39,6 +41,7 @@ I spent a little time getting onboarded with the team and then got tasked my fir
 ![Free Shipping Progress Bar](./ee-shipping-bar.png)
 
 I'm super stoked to have the opportunity to work with them and I can't wait to see what else I get to build!
+
 
 ## It's Paying The Bills!
 
