@@ -69,14 +69,14 @@ const BlogCard = ({ post, index, small, large }) => {
           {/* {(index === 0 ? <p className="post__excerpt">{post.excerpt} <Link to={post.fields.slug}>Read&nbsp;More&nbsp;&raquo;</Link></p> : "")} */}
           <div className="card__meta">
             {tags}
-            <div className="card__date">
-              <FontAwesomeIcon icon="calendar" /> 
-              <Moment fromNow>
-                {post.frontmatter.updated
-                  ? post.frontmatter.updated
-                  : post.frontmatter.date}
-              </Moment>
-            </div>
+            {post.fields.date ? (
+              <div className="card__date">
+                <FontAwesomeIcon icon="calendar" />
+                <Moment fromNow title={post.fields.date}>{post.fields.date}</Moment>
+              </div>
+            ) : (
+              ""
+            )}
           </div>
         </div>
       </article>

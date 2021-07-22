@@ -10,24 +10,20 @@ const verts = () => {
     <Layout>
       <SEO title="verts" />
       <PageTitle>verts</PageTitle>
-      <section className="half content black">
+      <section className="half verts black">
         <Shuffler index={1} />
-
-        <hr />
+        
         <Shuffler index={2} />
-        <hr />
-
+        
         <Shuffler index={3} />
-        <hr />
-
+        
         <Shuffler index={4} />
-        <hr />
-
+        
         <Shuffler index={5} />
-
-        <hr />
-
+        
         <Shuffler index={6} />
+        
+        <Shuffler index={7} />
       </section>
     </Layout>
   )

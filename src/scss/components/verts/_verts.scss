@@ -1,10 +1,20 @@
+.half.verts {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+    grid-gap: 10rem 2rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
 .vert {
     width: 100%;
     text-align: center;
     display: flex;
     align-items: center;
     align-self: center;
-
+    position: relative;
     border: 2px solid #fff;
     border-left: none;
     border-right: none;
@@ -39,6 +49,19 @@
         font-size: 1.5rem;
         padding: 0.5rem;
         cursor: pointer;
+    }
+
+    &:after {
+        content: "Ad";
+        background: #fff;
+        color: #000;
+        position: absolute;
+        top: 0;
+        right: 1em;
+        padding: 0.25em;
+        border-radius: 0 0 var(--border-radius) var(--border-radius);
+        font-weight: 100;
+        font-size: 0.8rem;
     }
 }
 
@@ -220,7 +243,6 @@
         }
 
         .product__title {
-            
             opacity: 0;
             transition: 300ms;
             text-align: left;
@@ -279,17 +301,16 @@
             transition: 300ms;
         }
 
-        .label{
-
+        .label {
             display: grid;
             grid-template-columns: 1fr auto;
             align-items: center;
             justify-content: center;
 
-            strong{
+            strong {
                 font-size: 1.5em;
             }
-            span{
+            span {
                 grid-column: 2;
                 grid-row: 1 / span 2;
             }
@@ -508,5 +529,49 @@
 
         border-radius: var(--border-radius);
         grid-row: 1;
+    }
+}
+
+.vert--namecheap {
+    $namecheapOrange: #fe5803;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    border-width: 15px;
+    .vert__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        align-self: center;
+
+        h2,
+        h3 {
+            color: #fff;
+            margin: 0;
+        }
+    }
+
+    .vert__img-wrap {
+        background: #fff;
+        padding: 1rem;
+
+        border-radius: var(--border-radius);
+        grid-row: 1;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    a.button,
+    button.button {
+        color: #fff;
+        margin: 0 auto;
+        width: 100%;
+        background: $namecheapOrange;
+
+        &:hover {
+            @include hardShadow(5, darken($namecheapOrange, 10));
+        }
     }
 }

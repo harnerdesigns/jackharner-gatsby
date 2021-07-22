@@ -7,6 +7,7 @@ import HarnerDesigns from "./harnerDesigns"
 import NordVPN from "./nordvpn"
 import Printful from "./printful"
 import Bonsai from "./bonsai"
+import Namecheap from "./namecheap"
 
 
 const Shuffler = ({index}) => {
@@ -28,6 +29,8 @@ const Shuffler = ({index}) => {
         return(<NordVPN />)
     case 6:
         return(<Bonsai />)
+    case 7:
+        return(<Namecheap />)
     default:
       return(null)
   }
