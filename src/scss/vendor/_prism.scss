@@ -1,5 +1,5 @@
 .gatsby-highlight{
-    max-width: 80%;
+    max-width: 95%;
     width: 100%;
     margin: 0 auto 2em;
     border-radius: var(--border-radius);
@@ -9,6 +9,7 @@
     
     @include breakpoint(laptop) {
       padding: 1em !important;
+    max-width: 80%;
       margin: 0 auto 3em;
       @include hardShadow(15, var(--darker-color));
     }

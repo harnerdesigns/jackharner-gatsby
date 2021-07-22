@@ -104,6 +104,8 @@
       margin-left: auto;
       text-align: left;
       font-weight: 100;
+      font-size: 1rem;
+
 
       a {
         font-weight: 100;
@@ -113,12 +115,11 @@
         margin-left: 0;
         // margin-right: auto;
         text-align: right;
-        font-size: 1.25rem;
       }
     }
 
     .card__date{
-      font-size: 1.25rem;
+      font-size: 1rem;
       font-weight: 100;
       margin-left: 1ch;
 
@@ -439,11 +440,18 @@
   }
 
   .gatsby-resp-image-wrapper {
-    width: 75%;
+    width: 100%;
     max-width: 100% !important;
     margin: 0 auto 1.5em;
-    border: 20px solid #fff;
+    border: 10px solid #fff;
     border-radius: var(--border-radius);
+
+    @include breakpoint(laptop){
+    width: 75%;
+    border: 20px solid #fff;
+
+
+    }
   }
 
   p > img {
