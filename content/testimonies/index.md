@@ -13,4 +13,7 @@ quotes:
   - quote: "TYVM @JackHarner"
     by: Jay Huffman
     link: https://twitter.com/MisterJHuffman/status/1298069726715883520
+  - quote: "Fast, reliable, accurate— Jack’s a magician!"
+    by: Brandon Arvay
+    link: https://www.branded78.com/
 ---

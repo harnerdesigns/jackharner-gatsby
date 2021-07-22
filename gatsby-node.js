@@ -171,6 +171,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             id
             excerpt
             fields {
+              date
               slug
               collection
               published

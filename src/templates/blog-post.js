@@ -99,6 +99,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
+        updated(formatString: "MMMM DD, YYYY")
         title
         subtitle
         tags

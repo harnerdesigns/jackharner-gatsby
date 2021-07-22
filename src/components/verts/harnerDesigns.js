@@ -83,8 +83,9 @@ export default HarnerDesigns
 const ProductCard = ({ product }) => {
 
   return (
-    <a className="product__image-wrapper" href={product.link} title={formatTitle(product.title)}>
-      {product.image ? <img className="product__image" src={"https://harnerdesigns.com/?attachment_id=" + product.image} alt={product.title} /> : <Loader />}
+    <a className="product__image-wrapper" target="_blank"
+    rel="noopener noreferrer" href={product.link} title={formatTitle(product.title)}>
+      {product.image ? <img  className="product__image" src={"https://harnerdesigns.com/?attachment_id=" + product.image} alt={product.title} /> : <Loader />}
       <span className="product__title" title={formatTitle(product.title)}>{chopTitle(formatTitle(product.title))}</span>
     </a>
   )
