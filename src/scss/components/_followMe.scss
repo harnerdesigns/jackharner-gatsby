@@ -1,5 +1,6 @@
 $facebook: #3b5999;
 $twitter: #55acee;
+$polywork: #40be88;
 $instagram: #e4405f;
 $dribbble: #ea4c89;
 $github: #111;
@@ -74,7 +75,22 @@ $producthunt: #da552f;
 
     &.devto svg {
       height: 1em;
+
       width: auto;
+    }
+
+    &.polywork {
+      color: $polywork;
+      img {
+        margin-bottom: 0.25em;
+        font-size: 4em;
+        height: 1em;
+        width: auto;
+      }
+
+      &:hover {
+        @include gradient($polywork);
+      }
     }
 
     &.facebook {
@@ -99,6 +115,8 @@ $producthunt: #da552f;
       &:before {
         content: "My Favorite";
         font-size: 0.6em;
+        margin-bottom: 1em;
+        margin-top: -1em;
         color: #aaa;
 
         @include breakpoint(mobileonly) {
@@ -167,8 +185,8 @@ $producthunt: #da552f;
 }
 
 .socials--footer {
-display: flex;
-flex-direction: row;
+  display: flex;
+  flex-direction: row;
   a {
     width: auto;
     height: auto;
@@ -182,8 +200,8 @@ flex-direction: row;
       margin: 0.25em;
 
       @include breakpoint(laptop) {
-      margin: 0.2em;
-      // font-size: 1em;
+        margin: 0.2em;
+        // font-size: 1em;
       }
     }
 

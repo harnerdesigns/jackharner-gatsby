@@ -7,6 +7,8 @@ import PageTitle from "../components/pageTitle"
 import Button from "../components/atoms/button"
 import { Link } from "gatsby"
 
+import PolyWorkLogo from "../images/polywork-logo.svg";
+
 const Contact = () => (
   <Layout>
     <SEO title="Get In Touch"
@@ -51,12 +53,10 @@ const Contact = () => (
           <Link to="/portfolio">Here's My Portfolio</Link>)
         </li>
         <li>
-          Hiring for a Full Stack Developer Position (
-          <a href="https://resume.jackharner.com">Here's My Resume</a>)
+          Need help getting your business started with E-Commerce
         </li>
         <li>
-          Literally drowning in so much money that you need to give it away to
-          some stranger online
+          Literally drowning in so much money that you need to give it away to some stranger online
         </li>
       </ul>
     </section>
@@ -72,6 +72,15 @@ const Contact = () => (
         >
           <FontAwesomeIcon icon={["fab", "twitter"]} />
           Twitter
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://polywork.com/jackharner"
+          className="polywork"
+        >
+          <img src={PolyWorkLogo} alt="Polywork" />
+          Polywork
         </a>
         <a
           target="_blank"
