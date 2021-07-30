@@ -137,7 +137,7 @@
 
 .main_footer {
     .main_nav {
-        width: 80%;
+        width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
@@ -146,12 +146,15 @@
 
         @include breakpoint(laptop) {
             display: flex;
+            align-items: center;
+            justify-content:center;
         }
 
         a {
             color: #fff;
             padding: 0.5em;
             text-align: center;
+            width: auto;
 
             &:hover {
                 background: transparentize($color: #fff, $amount: 0.8);
@@ -163,7 +166,18 @@
                 border-radius: var(--border-radius);
                 margin: 0 0.5rem;
                 width: auto;
+                grid-column: 1 / -1;
             }
+        }
+    }
+
+    .secondary_nav{
+        @extend .main_nav;
+
+        em{
+            white-space: nowrap;
+            padding-right: 0.5em;
+            text-align: center;
         }
     }
 

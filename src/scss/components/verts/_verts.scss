@@ -3,9 +3,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 1rem;
-    grid-gap: 10rem 2rem;
+    grid-gap: 5rem;
     justify-content: flex-start;
     align-items: flex-start;
+    margin-bottom: 3rem;
+
+    .vert{
+        align-self:flex-start!important;
+    }
 }
 
 .vert {

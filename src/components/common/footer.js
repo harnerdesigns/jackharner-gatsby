@@ -1,21 +1,22 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import PropTypes from "prop-types"
 import React from "react"
-
+import styled from "styled-components"
+import { breakpoints } from "../breakpoints"
 
 import FooterCTA from "./FooterCTA"
 
-import MainMenu from "./mainMenu";
+import MainMenu from "./mainMenu"
+import SecondaryMenu from "./secondaryMenu"
 
 const Footer = ({ siteTitle, footerCTA = true }) => (
-  
-  <footer className="slim main_footer" >
-        {footerCTA && <FooterCTA />}
+  <footer className="slim main_footer">
+    {footerCTA && <FooterCTA />}
 
-
-    <section className="copyright">&copy; 2020 - 2021 Jack Harner | <a href="https://github.com/harnerdesigns/jackharner-gatsby"> Built With Gatsby</a></section>
-    <MainMenu />
-    <section className="socials socials--footer">
+    <MenuGrid>
+      <MainMenu />
+      <SecondaryMenu />
+      <section className="socials socials--footer">
         <a
           target="_blank"
           rel="noopener noreferrer"
@@ -46,14 +47,16 @@ const Footer = ({ siteTitle, footerCTA = true }) => (
           href="https://dev.to/jackharner"
           className="devto"
         >
-          <FontAwesomeIcon icon={["fab", "dev"]} />        </a>
+          <FontAwesomeIcon icon={["fab", "dev"]} />{" "}
+        </a>
         <a
           target="_blank"
           rel="noopener noreferrer"
           href="https://github.com/harnerdesigns"
           className="github"
         >
-          <FontAwesomeIcon icon={["fab", "github"]} />        </a>
+          <FontAwesomeIcon icon={["fab", "github"]} />{" "}
+        </a>
         <a
           target="_blank"
           rel="noopener noreferrer"
@@ -61,12 +64,17 @@ const Footer = ({ siteTitle, footerCTA = true }) => (
           className="producthunt"
         >
           <FontAwesomeIcon icon={["fab", "product-hunt"]} />
-          
         </a>
       </section>
-
-  </footer >
-
+      <section className="copyright">
+        &copy; 2020 - 2021 Jack Harner |{" "}
+        <a href="https://github.com/harnerdesigns/jackharner-gatsby">
+          {" "}
+          Built With Gatsby
+        </a>
+      </section>
+    </MenuGrid>
+  </footer>
 )
 
 Footer.propTypes = {
@@ -79,4 +87,18 @@ Footer.defaultProps = {
 
 export default Footer
 
+const MenuGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
 
+  @media ${breakpoints.laptopL} {
+    width: 50%;
+  }
+
+  .main_nav {
+    a {
+      width: 100%;
+    }
+  }
+`
