@@ -11,13 +11,10 @@ footer.main_footer {
 
   @include breakpoint(laptop) {
     flex-direction: column;
-  margin-top: 0;
-
+    margin-top: 0;
   }
-  .main_nav {
-    a {
-      color: var(--text-color);
-    }
+
+  .copyright{
+    margin: 1rem auto;
   }
 }
-

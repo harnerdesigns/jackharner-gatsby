@@ -40,7 +40,7 @@ $producthunt: #da552f;
     box-shadow: 0 2px 3px transparentize(#000, 0.7);
     width: 33vmin;
     height: 33vmin;
-    margin: 1vw;
+    margin: 1rem;
     background: #fff;
 
     display: flex;
@@ -187,6 +187,7 @@ $producthunt: #da552f;
 .socials--footer {
   display: flex;
   flex-direction: row;
+  margin: 0 auto;
   a {
     width: auto;
     height: auto;

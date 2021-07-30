@@ -8,8 +8,12 @@ import Shuffler from "../components/verts/shuffler"
 const verts = () => {
   return (
     <Layout>
-      <SEO title="verts" />
-      <PageTitle>verts</PageTitle>
+      <SEO title="Affiliate Links" />
+      <PageTitle>My Affiliate Links</PageTitle>
+      <section className="slim content black">
+      <h3>If you want to help support Me and My Content, feel free to check out some of the places I'm an affiliate for.</h3>
+      <p>If you click through any of these links and make a purchase, I get a percentage of your purchase total at no extra cost to you. I only affiliate with companies that I personally use and can vouch for.</p>
+      </section>
       <section className="half verts black">
         <Shuffler index={1} />
         
