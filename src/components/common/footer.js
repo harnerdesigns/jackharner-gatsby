@@ -28,6 +28,14 @@ const Footer = ({ siteTitle, footerCTA = true }) => (
         <a
           target="_blank"
           rel="noopener noreferrer"
+          href="https://patreon.com/jackharner"
+          className="patreon"
+        >
+          <FontAwesomeIcon icon={["fab", "patreon"]} />
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
           href="https://instagram.com/jackharner"
           className="instagram"
         >

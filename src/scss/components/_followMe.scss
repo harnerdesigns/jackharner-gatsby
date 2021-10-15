@@ -1,6 +1,7 @@
 $facebook: #3b5999;
 $twitter: #55acee;
 $polywork: #40be88;
+$patreon: #ff424d;
 $instagram: #e4405f;
 $dribbble: #ea4c89;
 $github: #111;
@@ -90,6 +91,14 @@ $producthunt: #da552f;
 
       &:hover {
         @include gradient($polywork);
+      }
+    }
+
+    &.patreon {
+      color: $patreon;
+
+      &:hover {
+        @include gradient($patreon);
       }
     }
 
