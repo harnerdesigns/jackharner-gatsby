@@ -15,7 +15,7 @@ const Bonsai = () => {
       <p>
         All-In-One Freelance Time Tracking, Invoicing, Proposal & Contract Generator. Bonsai does it all.
       </p>
-        <h3>Start Getting Paid On Time with Bonsai.</h3>
+        <h3>Automate your Freelance Business With Bonsai</h3>
     </Vert>
   )
 }

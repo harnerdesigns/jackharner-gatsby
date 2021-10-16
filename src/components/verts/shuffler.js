@@ -1,8 +1,8 @@
 import React from "react"
+import { random } from "lodash"
 
 import GridGospel from "./gridGospel"
 import DigitalOcean from "./digitalOcean"
-import { random } from "lodash"
 import HarnerDesigns from "./harnerDesigns"
 import NordVPN from "./nordvpn"
 import Printful from "./printful"
@@ -17,10 +17,23 @@ const Shuffler = ({index}) => {
 
   let vertCount = verts.length
 
-  if(!index) {index = random(1, vertCount)}
+  console.log({vertCount, index})
+
+  if(index > vertCount){
+
+    index = index % vertCount;
+
+  } 
+  
+  if (index == null || index === 0) {
+    index = random(0, vertCount)
+  
+  } 
+    return(
+      <>{verts[index]}</>
+      )  
 
 
-  return (verts[index])
 
   
 }
