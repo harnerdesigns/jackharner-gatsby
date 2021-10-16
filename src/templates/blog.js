@@ -32,10 +32,10 @@ const Blog = ({ data, pageContext }) => {
             .map(({ node: post }, index) => {
               let ShowCard;
               
-              if((index + 1) % 6 ===  0) {ShowCard = <Shuffler index={(index + 1) / 5} />}
+              if((index ) % 6 ===  0) {ShowCard = <><Shuffler index={index} /></>}
               return (
                 <>
-                  <BlogCard post={post} index={index} large={(index + 1) % 5 === 0 || index === 0} />
+                  <BlogCard post={post} index={index} large={(index + 1) % 6 === 0 || index === 0} />
                   {ShowCard}
                 </>
               )

@@ -44,7 +44,7 @@ class TagRoute extends React.Component {
                 .map(({ node: post }, index) => {
                   let ShowCard;
 
-                  if ((index + 1) % 6 === 0) { ShowCard = <Shuffler index={(index + 1) / 6} /> }
+                  if ((index) % 6 === 0) { ShowCard = <Shuffler /> }
 
                   let card =
                     postType === "portfolio" ? (

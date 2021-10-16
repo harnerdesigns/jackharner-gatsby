@@ -4,7 +4,7 @@ title: "Focus On What's Paying You"
 subtitle: "My 2nd Month As A Freelancer"
 featuredImage: "./featuredImage.png"
 ogImage: "./focus-on-whats-paying-you.png"
-tags: ['Freelance', 'Newsletter']
+tags: ['Freelance', 'Career', 'Newsletter']
 externalLink: ""
 published: true
 unlisted: false

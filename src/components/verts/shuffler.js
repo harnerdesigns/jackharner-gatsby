@@ -1,39 +1,41 @@
 import React from "react"
+import { random } from "lodash"
 
 import GridGospel from "./gridGospel"
 import DigitalOcean from "./digitalOcean"
-import { random } from "lodash"
 import HarnerDesigns from "./harnerDesigns"
 import NordVPN from "./nordvpn"
 import Printful from "./printful"
 import Bonsai from "./bonsai"
 import Namecheap from "./namecheap"
+import Patreon from "./patreon"
 
 
 const Shuffler = ({index}) => {
 
-  let vertCount = 5
+  let verts = [<GridGospel />, <HarnerDesigns />, <Patreon />, <Printful />, <DigitalOcean />, <NordVPN />, <Bonsai />, <Namecheap />] 
 
-  if(!index) {index = random(1, vertCount)}
+  let vertCount = verts.length
 
-  switch(index){
-    case 1: 
-      return(<GridGospel />)   
-    case 2: 
-      return(<HarnerDesigns />)
-    case 3: 
-      return(<Printful />)
-    case 4:
-      return(<DigitalOcean />)
-    case 5:
-        return(<NordVPN />)
-    case 6:
-        return(<Bonsai />)
-    case 7:
-        return(<Namecheap />)
-    default:
-      return(null)
-  }
+  console.log({vertCount, index})
+
+  if(index > vertCount){
+
+    index = index % vertCount;
+
+  } 
+  
+  if (index == null || index === 0) {
+    index = random(0, vertCount)
+  
+  } 
+    return(
+      <>{verts[index]}</>
+      )  
+
+
+
+  
 }
 
 export default Shuffler

@@ -4,7 +4,7 @@ title: "Be A T H I C C Developer"
 subtitle: "Why 'Wide or Deep' when you can 'Wide AND Deep'?"
 featuredImage: "./featuredImage.png"
 ogImage: "./ogImage.png"
-tags: ['Newsletter', 'Career']
+tags: ['Newsletter', 'Career', 'Automation']
 published: true
 unlisted: false
 --- 
