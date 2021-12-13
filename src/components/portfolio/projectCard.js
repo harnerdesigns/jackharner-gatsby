@@ -46,8 +46,8 @@ const ProjectCard = ({ post, index, small, nolink }) => {
         </div>
         <ul className="project__tags">
             {post.frontmatter.tags.map((tag, index) => {
-              return <li title={tag}><FontAwesomeIcon fixedWidth icon={tagIcons[tag]} />
-               <span>{tag}</span></li>
+              return index < 3 ? <li title={tag}><FontAwesomeIcon fixedWidth icon={tagIcons[tag]} />
+               <span>{tag}</span></li> : ""
             })}
           </ul>
       </article>

@@ -8,9 +8,9 @@ class ImASlider extends Component {
     this.state = {
       titles: [
         "Web Developer",
+        "E-Commerce Consultant",
         "Problem Solver",
         "Photographer",
-        "Graphic Designer",
         "Cat Lover",
         "Entrepreneur",
       ],

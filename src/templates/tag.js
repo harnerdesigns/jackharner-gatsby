@@ -78,7 +78,10 @@ export const tagPageQuery = graphql`
     }
     allMarkdownRemark(
       limit: 1000
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: {
+        order: [DESC, DESC]
+        fields: [fields___weight, frontmatter___date]
+      }
       filter: {
         frontmatter: { tags: { in: [$tag] } }
         fields: { published: { eq: true }, unlisted: { ne: true }, collection: { eq: $postType } }
@@ -114,6 +117,7 @@ export const tagPageQuery = graphql`
             externalLink
             published
             unlisted
+            weight
           }
         }
       }

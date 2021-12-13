@@ -4,7 +4,7 @@ title: "Shoolu Product API"
 logo: "./shoolu-logo.svg"
 description: "Filling Gaps In BigCommerce"
 color: "#0fb681"
-tags: ["PHP", "AJAX"]
+tags: ["PHP", "AJAX", "BigCommerce", "E-Commerce"]
 images: ["./shoolu-product-grid.png"]
 weight: 0
 published: true

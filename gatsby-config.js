@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: `/jackharner-gatsby`,
   siteMetadata: {
     title: `Jack Harner`,
-    description: `Jack Harner is a Freelance Web Developer based in Denver, Colorado. He Specializes in E-Commerce, Shopify, WordPress.`,
+    description: `Jack Harner is a Freelance Web Developer & E-Commerce Consultant based in Denver, Colorado.`,
     author: `@jackharner`,
     siteUrl: "https://jackharner.com",
   },
@@ -111,6 +111,7 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
+          `gatsby-remark-autolink-headers`
         ], // just in case those previously mentioned remark plugins sound cool :)
       },
     },

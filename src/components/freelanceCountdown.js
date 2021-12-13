@@ -10,10 +10,11 @@ const FreelanceCountdown = () => {
   const calculateTimeLeft = () => {
     const difference =  +new Date() - +new Date(`2021-04-30T16:00:00.000-06:00`)
 
+
     let timeLeft = 
        {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        days:    Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours:   Math.floor((difference / (1000 * 60 * 60)) % 24),
         minutes: Math.floor((difference / 1000 / 60) % 60),
         seconds: Math.floor((difference / 1000) % 60),
       }
@@ -45,7 +46,7 @@ const FreelanceCountdown = () => {
 
   return (
     <section className="half black">
-      <h1 style={{textAlign: "center"}}>I've Been A Fulltime Freelancer For</h1>
+      <h1 style={{textAlign: "center"}}>I've Been Freelancing Full Time For:</h1>
       <CountdownWrapper>
         {timerComponents.length ? timerComponents : <FontAwesomeIcon icon="spinner" spin />}
       </CountdownWrapper>
@@ -62,6 +63,7 @@ const CountdownWrapper = styled.div`
   justify-content: center;
   grid-template-columns: repeat(3, 1fr auto) 1fr;
   grid-gap: 1ch;
+  margin: 1rem auto;
 
   h1 {
     text-align: center;

@@ -7,6 +7,7 @@ import ProjectHeader from "../components/portfolio/projectHeader"
 import Button from "../components/atoms/button"
 import defaultOGImage from "../images/jackHarner-default-OG.jpg"
 import { SRLWrapper } from "simple-react-lightbox";
+import _ from "lodash"
 
 export default function Template(props) {
   const post = props.data.markdownRemark
@@ -23,9 +24,9 @@ export default function Template(props) {
           " By Jack Harner."
         }
         image={
-          post.frontmatter.logo
+          post.fields.ogImage ? post.frontmatter.ogImage.childImageSharp.sizes.src : (post.frontmatter.logo
             ? post.frontmatter.logo.publicURL
-            : defaultOGImage
+            : defaultOGImage)
         }
       />
       <ProjectHeader post={post} />
@@ -56,24 +57,24 @@ export default function Template(props) {
       <section className="half black">
         <main
           className={
-            post.frontmatter.images && post.frontmatter.images.length > 0
+            (post.frontmatter.images && post.frontmatter.images.length > 0
               ? "project__body"
-              : "project__body project__body--no-images"
+              : "project__body project__body--no-images") + " project--" + _.camelCase(post.frontmatter.title)
           }
         >
           {post.frontmatter.images && post.frontmatter.images.length > 0 ? (
             <section className="project__images">
+              <SRLWrapper>
               {post.frontmatter.images.map((image, index) => {
                 return image ? (
-                  <SRLWrapper>
 
                   <img src={image.childImageSharp.sizes.src} alt="" />
+                  
+                  ) : (
+                    ""
+                    )
+                  })}
                   </SRLWrapper>
-
-                ) : (
-                  ""
-                )
-              })}
             </section>
           ) : (
             ""

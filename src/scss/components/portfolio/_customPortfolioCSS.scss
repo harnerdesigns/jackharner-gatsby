@@ -1,0 +1,34 @@
+.project--bottleRocketHotSauceV2{
+
+    
+
+    @include breakpoint(laptop){
+
+        #scroll-down{
+            display: flex;
+            width: 100%;
+            height: 1rem;
+            i,svg{
+                height: 3rem;
+        }}
+        [id$="-floating-checkout-button"]{
+            margin-top: 4rem;
+        }
+        
+        [id$="-ajax-order-form"]{
+            margin-top: 68rem;
+        }
+
+        [id$="-one-of-each-buttons"]{
+            margin-top: 50rem;
+        }
+
+        [id$="-multiple-products-and-variations"]{
+            margin-top: 5rem;
+        }
+
+        [id^="go-buy-some-sauce"]{
+            margin-top: 25rem;
+        }
+    }
+}
