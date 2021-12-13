@@ -2,14 +2,13 @@
 date: 2020-08-08T20:34:40.151Z
 title: "Bottle Rocket Hot Sauce" 
 logo: "bottle-rocket-logo--red.svg"
-description: "Custom Shopify Theme"
+description: "Pre Sale Shopify Theme"
 color: "#e94939"
 tags: 
     - Shopify
     - E-Commerce
     - Animation
 images: ["updated-landing-page.png"]
-weight: 9999
 published: true
 externalLink: https://bottlerocketsauce.com
 

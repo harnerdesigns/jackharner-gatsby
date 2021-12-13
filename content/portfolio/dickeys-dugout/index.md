@@ -4,7 +4,7 @@ title: "Dickey's Dugout"
 logo: "Dickeys-dugout-logo-white.svg"
 description: "Custom Shopify Theme"
 color: "#2ba99c"
-tags: ["Shopify"]
+tags: ["Shopify", "E-Commerce"]
 images: ["dickeys-dugout-landing-page.png"]
 weight: 0
 published: true

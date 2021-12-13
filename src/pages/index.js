@@ -53,7 +53,7 @@ const IndexPage = ({ data, pageContext }) => {
           {portfolioPosts
             .filter(post => post.node.frontmatter.title.length > 0)
             .map(({ node: post }, index) => {
-              if (index <= 3) {
+              if (index <= 5) {
                 return <ProjectCard post={post} index={index} small />
               } else {
                 return false
@@ -67,27 +67,27 @@ const IndexPage = ({ data, pageContext }) => {
           />
         </div>
         <div className="column">
-          <h1>I'm a Full Stack Web Developer.</h1>
+          <h1>Web Developer.</h1>
           <p>
-            From E-Commerce Stores to Custom Business Applications & Everything
-            In Between. If you access it through a web browser, I can build it
-            with an emphasis on clean, responsive design.
+            Access it through a web browser? I can build it
+            with an emphasis on clean, responsive design. From landing pages & custom business applications to E-Commerce stores & everything
+            in between.
           </p>
-          <p>
-            I work with <Link to="/portfolio/tags/shopify/">Shopify</Link>,{" "}
-            <Link to="/portfolio/tags/word-press/">WordPress</Link>,{" "}
-            <Link to="/portfolio/tags/php/">PHP</Link>,{" "}
-            <Link to="/portfolio/tags/react/">React</Link>,{" "}
-            <Link to="/portfolio/tags/node/">Node</Link>, Python & More.
-          </p>
+
+          <h1>E-Commerce Consultant.</h1>
+
+          <p>Whether your company is just getting started selling online, or you're looking to grow your online presence, I can help! I solve problems through programming, automation, process design & more.</p>
+
+          <p><Link to="/contact">Schedule a FREE Intro Call</Link> and let's figure out how you can start selling better online.</p>
+
         </div>
       </section>
-      <FreelanceCountdown />
       <section className="half pink quotes__wrapper">
         <h1>A Man Of The People:</h1>
 
         <Quotes quotes={quotes} />
       </section>
+      <FreelanceCountdown />
       <section className="full white row">
         <div className="column">
           <h1>I Learn In Public.</h1>
@@ -95,7 +95,7 @@ const IndexPage = ({ data, pageContext }) => {
           <p>
             I write about <Link to="/blog">Web Development</Link>,{" "}
             <Link to="/blog/tags/automation/">Automation</Link> &{" "}
-            <a href="https://bleedingcoffee.com">Coffee</a>. By sharing my
+            <Link to="/blog/tags/freelance/">Freelancing</Link>. By sharing my
             understanding of a particular topic, I give the people learning
             after me a fresh perspective on a problem and possible solutions.
           </p>

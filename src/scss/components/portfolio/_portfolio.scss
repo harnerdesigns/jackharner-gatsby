@@ -36,7 +36,8 @@
     margin-bottom: 1em;
     height: 8em;
     width: 100%;
-    display: flex; align-items: center;
+    display: flex;
+    align-items: center;
     justify-content: center;
 
     img {
@@ -45,7 +46,7 @@
       object-fit: contain;
     }
 
-    .project__title{
+    .project__title {
       text-align: center;
       margin: 0 auto;
       font-weight: 900;
@@ -73,8 +74,6 @@
       margin: 0;
       font-size: 1.5rem;
     }
-
-    
   }
 
   .project__tags {
@@ -82,23 +81,22 @@
     align-items: center;
     justify-content: center;
     color: #fff;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
     font-size: 1em;
     font-weight: 100;
     width: auto;
     margin: 0 4rem;
     border-radius: 0 0 var(--border-radius) var(--border-radius);
 
-
     li {
       list-style: none;
       padding: 0 0.25em;
       margin: 0;
-      span{
+      span {
         font-size: 0.8em;
       }
 
-      svg{
+      svg {
         margin-right: 0.07em;
       }
     }
@@ -122,18 +120,17 @@
       .project__description {
         font-size: 1.15rem;
       }
-
     }
-        .project__tags {
-          li{
-            &:after{
-              content: "";
-            }
-          }
-          span {
-            display: none;
-          }
+    .project__tags {
+      li {
+        &:after {
+          content: "";
         }
+      }
+      span {
+        display: none;
+      }
+    }
   }
 }
 
@@ -151,7 +148,7 @@
     }
 
     .card__titles {
-      @include card(2);
+      @include card(1);
       // width: 100%;
     }
   }
@@ -167,12 +164,21 @@
   @include breakpoint(laptop) {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    max-width: 80%;
+    max-width: 80vw;
     width: 100%;
 
     &--no-images {
       max-width: 1280px;
       grid-template-columns: 1fr;
+    }
+  }
+
+  .button {
+    margin-bottom: 2rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+      margin-top: 2rem;
     }
   }
 
@@ -187,6 +193,8 @@
 
     img {
       width: 100%;
+      margin-bottom: 2rem;
+      @include card(1);
     }
 
     position: relative;
@@ -194,7 +202,7 @@
     @include breakpoint(laptop) {
       position: sticky;
       top: 3em;
-      margin: 2em;
+      margin: -3em 0;
     }
   }
 
@@ -257,9 +265,17 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        text-align: center;
+      }
     }
 
-    .gatsby-resp-iframe-wrapper{
+    .gatsby-resp-iframe-wrapper {
       width: 100%;
     }
   }
@@ -311,7 +327,7 @@
 .project__header {
   @extend .project__card;
 
-  padding: 1em;
+  padding: 1rem;
 
   display: grid;
   align-items: center;
@@ -319,9 +335,9 @@
   grid-template-columns: 1fr;
 
   @include breakpoint(laptop) {
-    grid-template-columns: 3fr 2fr;
-    grid-gap: 3em;
-    padding: 1em 10vw;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    padding: 1rem 10vw;
 
     &--no-logo {
       grid-template-columns: 1fr;
@@ -329,7 +345,8 @@
   }
 
   .logo__wrapper {
-    margin: 1em auto;
+    margin: 1rem auto;
+    height: 15rem;
   }
   .logo {
     @include breakpoint(laptop) {
@@ -345,43 +362,57 @@
     justify-content: center;
     display: flex;
     flex-direction: column;
+    margin-top: auto;
+    margin-bottom: -3rem;
+    @include card(1);
   }
 
   .project__title {
     color: #333;
     text-align: center;
     margin: 0;
+    margin-bottom: 1rem;
+    font-size: 3rem;
   }
 
   .project__description {
     color: #666;
     text-align: center;
+    font-size: 2rem;
     margin: 0;
+    margin-bottom: 1rem;
   }
 
   .project__tags {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     color: #999;
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: 100;
     margin: 0.5em;
+    background: none;
+    width: 100%;
 
-    li {
+    a {
       list-style: none;
-      padding: 0.15em;
+      padding: 0.25em;
       margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
-      &:after {
-        content: ",";
+      i,
+      svg {
+        font-size: 2rem;
+        color: $black;
       }
-
-      &:last-child {
-        &:after {
-          content: none;
-        }
+      span {
+        font-weight: 400;
       }
     }
   }
 }
+
+@import "customPortfolioCSS";

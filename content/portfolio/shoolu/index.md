@@ -15,8 +15,6 @@ published: true
 ### The Job:
 # So Much More Than That
 
-_Disclaimer: I currently work for Shoe Fitters Inc. managing Shoolu.com_
-
 [Shoolu.com](https://shoolu.com) is a fast growing online Shoe Retailer. They carry name brands like New Balance, Adidas, Earth, Dansko, FRYE, UGG & more. My job as the Marketing director is any and everything related to the website. 
 
 This includes: 
