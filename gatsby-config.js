@@ -111,7 +111,6 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-autolink-headers`
         ], // just in case those previously mentioned remark plugins sound cool :)
       },
     },
