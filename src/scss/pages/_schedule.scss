@@ -1,0 +1,31 @@
+.calendly-embed__wrapper {
+    margin-bottom: 3rem;
+    width: 50vw;
+}
+
+.calendly-inline-widget{
+    margin-bottom: 2rem;
+    width: 100%;
+    background: #000;
+}
+
+#calendar-lock{
+    max-width: 28rem;
+    font-size: 2rem;
+}
+
+.loading-screen {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+    h2 .Typist{
+        display: inline-block;
+    }
+}
