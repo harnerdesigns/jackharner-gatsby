@@ -14,6 +14,7 @@ const Schedule = ({ data }) => {
   const [showEmbed, setShowEmbed] = useState(false)
   const [loading, setLoading] = useState(false)
   const [password, setPassword] = useState(false)
+  const [height, setHeight] = useState("75vh")
   let embedOrPassword
 
   useEffect(() => {
@@ -30,7 +31,7 @@ const Schedule = ({ data }) => {
   }, [password])
 
   if (showEmbed) {
-    embedOrPassword = Embed(loading, setLoading)
+    embedOrPassword = Embed(loading, setLoading, height, setHeight)
   } else {
     embedOrPassword = (
       <>
@@ -62,18 +63,27 @@ const Schedule = ({ data }) => {
 
 export default Schedule
 
-const Embed = (loading, setLoading) => {
+const Embed = (loading, setLoading, height, setHeight) => {
   return (
     <>
       <CalendlyEventListener
+        onDateAndTimeSelected={e => {
+          console.log(e)
+          setHeight("100vh")
+        }}
+        onEventScheduled={e => {
+          console.log(e)
+          setHeight("75vh")
+        }}
         onEventTypeViewed={function noRefCheck() {
           setLoading(false)
+          setHeight("75vh")
         }}
       >
         <InlineWidget
           url="https://calendly.com/jackharner/freelance?hide_event_type_details=1&hide_gdpr_banner=1"
           styles={{
-            height: "70vh",
+            height: height,
           }}
         />
       </CalendlyEventListener>
