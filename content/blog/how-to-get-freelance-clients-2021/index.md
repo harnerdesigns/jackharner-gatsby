@@ -7,7 +7,6 @@ ogImage: ""
 tags: [Freelance, Career, Newsletter]
 externalLink: ""
 published: true
-unlisted: true
 ---
 As of writing, I've been freelancing fulltime for just over 200 days now (Woo 🎉) and I wanted to share with y'all what I've been doing to get new clients in 2021 and how I plan to adjust going into 2022. 
 
