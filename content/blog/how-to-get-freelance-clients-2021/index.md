@@ -3,11 +3,10 @@ date: 2021-12-12T20:04:46.451Z
 title: "How To Get Freelance Clients In 2021" 
 subtitle: "What's Worked For Me & My Plans For 2022"
 featuredImage: "./photo-1545987796-200677ee1011.jpeg"
-ogImage: ""
+ogImage: "./ogImage.png"
 tags: [Freelance, Career, Newsletter]
 externalLink: ""
 published: true
-unlisted: true
 ---
 As of writing, I've been freelancing fulltime for just over 200 days now (Woo 🎉) and I wanted to share with y'all what I've been doing to get new clients in 2021 and how I plan to adjust going into 2022. 
 
@@ -15,7 +14,7 @@ I'm making no guarantee that these tactics will work for you. I'm just relaying 
 
 # #LearnInPublic
 
-1. Have a blog. 
+1. Have a [blog](https://jackharner.com/blog). 
 2. Write down the things you do. 
 3. Get people to read how to do the things you do, but decide to hire you to just do it instead.
 4. ...?
