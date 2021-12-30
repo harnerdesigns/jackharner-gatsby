@@ -21,9 +21,11 @@ const Blog = ({ data, pageContext }) => {
     <Layout>
       <SEO title={`Blog Archive | ${topTags[0]}, ${topTags[1]}, & More `} />
       <PageTitle>Blog</PageTitle>
+      <section className="slim black">
+        <TopTags topTags={topTags} postType='blog' />
+      </section>
       <main className="page_body page_body--grid">
         
-        <TopTags topTags={topTags} postType='blog' />
 
         <div className="blog-posts">
           {posts

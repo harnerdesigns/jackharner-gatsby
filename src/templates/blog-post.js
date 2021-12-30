@@ -20,19 +20,22 @@ export default function Template(props) {
   let postContentArray = postContent.split("{{{vert}}}")
 
   let postContentMap = postContentArray.map((content, index) => {
-    return(<>
-    
-      <main
-        className={"post__body " + post.fields.slug}
-        dangerouslySetInnerHTML={{ __html: content }}
-      ></main>
-      {(postContentArray.length - 1 > index ? <Shuffler  /> : "")}
-    </>)
+    return (
+      <>
+        <main
+          className={"post__body " + post.fields.slug}
+          dangerouslySetInnerHTML={{ __html: content }}
+        ></main>
+        {postContentArray.length - 1 > index ? <Shuffler /> : ""}
+      </>
+    )
   })
   return (
     <Layout>
       <SEO
-        title={`${post.frontmatter.title}${post.frontmatter.subtitle ? " | " + post.frontmatter.subtitle : ""}`}
+        title={`${post.frontmatter.title}${
+          post.frontmatter.subtitle ? " | " + post.frontmatter.subtitle : ""
+        }`}
         description={post.excerpt}
         image={
           post.fields.ogImage
@@ -66,25 +69,27 @@ export default function Template(props) {
         {newsletter ? <NewsletterLink /> : ""}
 
         {postContentMap}
+      </section>
+      <section className="slim black row" style={{gridGap: "3rem"}}>
         <Shuffler />
-
+        <section className="post__post-content">
+          <nav className="postNavigation">
+          <ShareLinks post={post} />
+          <h3>Want More?</h3>
+          <ul>
+            {related.map((post, index) => {
+              return (
+                <li>
+                  <BlogCard post={post} small />
+                </li>
+              )
+            })}
+          </ul>
+        </nav>
+        </section>
       </section>
       <section className="slim black">
-        <section className="post__post-content">
-          <ShareLinks post={post} />
-          <nav className="postNavigation">
-            <h3>Related Posts</h3>
-            <ul>
-              {related.map((post, index) => {
-                return (
-                  <li>
-                    <BlogCard post={post} small />
-                  </li>
-                )
-              })}
-            </ul>
-          </nav>
-        </section>
+        
       </section>
     </Layout>
   )

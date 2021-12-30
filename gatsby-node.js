@@ -37,7 +37,7 @@ function isPortfolioNode(node) {
 function randomNum(min, max, currentIndex = null) {
   var n = []
   var i = 0
-  while (i < 3) {
+  while (i < 4) {
     var num = Math.floor(Math.random() * max) + min
     if (num !== currentIndex && n.indexOf(num) === -1) {
       n.push(num)
@@ -270,6 +270,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         listedPosts[relatedIndexes[0]].node,
         listedPosts[relatedIndexes[1]].node,
         listedPosts[relatedIndexes[2]].node,
+        listedPosts[relatedIndexes[3]].node,
       ]
 
       createPage({
@@ -362,6 +363,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         result.data.portfolio.edges[relatedPortfolioIndexes[0]].node,
         result.data.portfolio.edges[relatedPortfolioIndexes[1]].node,
         result.data.portfolio.edges[relatedPortfolioIndexes[2]].node,
+        result.data.portfolio.edges[relatedPortfolioIndexes[3]].node,
       ]
 
       createPage({
@@ -449,6 +451,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         result.data.blog.edges[relatedBlogIndexes[0]].node,
         result.data.blog.edges[relatedBlogIndexes[1]].node,
         result.data.blog.edges[relatedBlogIndexes[2]].node,
+        result.data.blog.edges[relatedBlogIndexes[3]].node,
       ]
 
       createPage({

@@ -4,7 +4,7 @@ title: "Shoe Fitters"
 logo: "./shoefitters-logo.svg"
 description: "WordPress Site"
 color: "#0c5644"
-tags: ["WordPress", "HTML", "PHP"]
+tags: ["WordPress", "PHP"]
 images: ["./Shoe-fitters-landing-page.png"]
 weight: 0
 published: true

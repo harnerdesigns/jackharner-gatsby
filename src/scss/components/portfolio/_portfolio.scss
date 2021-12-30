@@ -221,23 +221,27 @@
     p {
       width: 100%;
       max-width: 100%;
-      line-height: 1.8;
+      line-height: 2;
       margin: 0.5em auto;
 
-      font-size: 1em;
+      font-size: 1.5rem;
     }
 
     ul {
       max-width: 80%;
 
       @include breakpoint(laptop) {
-        max-width: 75%;
+        max-width: 85%;
         width: 100%;
       }
 
-      li > p {
+      li{
+        line-height: 2;
+        
+        & > p {
         margin-bottom: 0;
-      }
+        line-height: 2;
+      }}
       li > ul {
         margin: 0;
         li {

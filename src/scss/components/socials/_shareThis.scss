@@ -2,11 +2,14 @@
     width: 95%;
     margin: 0 auto;
 
-    display: flex;
+    display: grid;
     align-items: center;
+    align-self: flex-start;
     justify-content: center;
-    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
     background: var(--text-color);
+    grid-gap: 1rem;
+    padding: 1rem;
 
     @include breakpoint(laptop) {
         width: 100%;
@@ -30,9 +33,7 @@
     a {
         color: var(--text-color);
         padding: 0.5em;
-        margin: 0.5em;
         background: var(--color);
-
     }
 }
 

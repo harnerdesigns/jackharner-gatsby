@@ -26,6 +26,7 @@ export const NewsletterForm = React.forwardRef((props, ref) => {
                 {" "}
                 <Typing
                   words={[
+                    "    ",
                     "Web Dev",
                     "Automation",
                     "WordPress",

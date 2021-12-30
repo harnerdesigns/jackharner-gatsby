@@ -5,7 +5,7 @@ logo: "./Dream-Club-Logo.png"
 description: "LA Non Profit"
 color: "#222"
 images: ["./dream-club-launch.png", "./dream-club-dashboard.png", "./dream-club-card-info.png"]
-tags: ["HTML", "WordPress", "Non Profit"]
+tags: ["E-Commerce", "WordPress", "Non Profit"]
 weight: 700
 published: true
 externalLink: "https://dreamclubunited.org"

@@ -4,12 +4,12 @@ title: "Shoolu Returns Portal"
 logo: "./shoolu-logo.svg"
 description: "Returns As Simple As Possible"
 color: "#0fb681"
-tags: ["HTML", "CSS"]
+tags: ["E-Commerce", "HTML", "CSS"]
 images: ["./shoolu-returns-full-page.png", "./shoolu-returns-exchange-form.png"]
 weight: -1
 published: true
 externalLink: "https://returns.shoolu.com"
-externalLinkLabel: "See The Return Portal"
+externalLinkLabel: "See The Portal"
 ---
 
 

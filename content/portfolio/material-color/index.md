@@ -4,7 +4,7 @@ title: "Material Color Palette"
 logo: "./material-color-logo-text.svg"
 description: "Chrome & Firefox Extension"
 color: "#efefef"
-tags: ["HTML", "Material Design"]
+tags: ["HTML", "CSS", "Material Design"]
 images: ["./Material-Color-Picker.jpg"]
 published: true
 weight: 8
