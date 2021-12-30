@@ -4,7 +4,7 @@ title: "Bleeding Coffee"
 logo: "./BleedingCoffee-logo-white.svg"
 description: "WordPress Affiliate Blog"
 color: "rgb(75, 44, 32)"
-tags: ["WordPress", "HTML", "PHP"]
+tags: ["WordPress", "PHP"]
 published: true
 externalLink: "https://bleedingcoffee.com"
 externalLinkLabel: "Check Out Bleeding Coffee »"

@@ -6,7 +6,7 @@ description: "Tweet Without Thinking About It"
 color: "#00acee"
 tags: ["Node", "Twitter", "React"]
 weight: 0
-published: false
+published: true
 ---
 
 Simple Tweets was an idea I had a while back. I envisioned a minimal tweeting tool that would allow you to schedule tweets without thinking about it.

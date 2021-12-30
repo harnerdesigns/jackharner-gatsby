@@ -7,6 +7,9 @@ import ProjectCard from "../components/portfolio/projectCard"
 import TopTags from "../components/common/topTags"
 import Shuffler from "../components/verts/shuffler"
 import SEO from "../components/seo"
+import tagIcons from "./tags/tag-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
 class TagRoute extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
@@ -20,12 +23,13 @@ class TagRoute extends React.Component {
         : { single: "Blog Post", plural: "Blog Posts", type: "Blog" }
 
     let topTags = this.props.pageContext.topTags
-    topTags = Object.keys(topTags).sort(function (a, b) {
+    topTags = Object.keys(topTags).sort(function(a, b) {
       return topTags[a] < topTags[b]
     })
 
-    const tagHeader = `${totalCount} ${tag} ${totalCount === 1 ? postTypeLabels.single : postTypeLabels.plural
-      }`
+    const tagHeader = <>{totalCount} {
+      totalCount === 1 ? postTypeLabels.single : postTypeLabels.plural
+    } Tagged {tag}</>
 
     return (
       <Layout>
@@ -33,32 +37,42 @@ class TagRoute extends React.Component {
           <SEO title={`${tag} ${postTypeLabels.plural}`} />
 
           <PageTitle>{tagHeader}</PageTitle>
-
+          <section className="slim black">
+            <TopTags
+              topTags={topTags}
+              postType={postType}
+              back={true}
+              exclude={tag}
+            />
+          </section>
           <main className="page_body page_body--grid">
-            <TopTags topTags={topTags} postType={postType} back={true} exclude={tag} />
-
-
             <div className={postType === "blog" ? "blog-posts" : "projects"}>
               {posts
                 .filter(post => post.node.frontmatter.title.length > 0)
                 .map(({ node: post }, index) => {
-                  let ShowCard;
+                  let ShowCard
 
-                  if ((index) % 6 === 0) { ShowCard = <Shuffler /> }
+                  if (index % 6 === 0) {
+                    ShowCard = <Shuffler />
+                  }
 
                   let card =
                     postType === "portfolio" ? (
                       <ProjectCard post={post} index={index} />
                     ) : (
-                        <><BlogCard post={post} index={index} large={(index + 1) % 5 === 0 || index === 0} />
-                          {ShowCard}</>
-
-                      )
+                      <>
+                        <BlogCard
+                          post={post}
+                          index={index}
+                          large={(index + 1) % 5 === 0 || index === 0}
+                        />
+                        {ShowCard}
+                      </>
+                    )
 
                   return <>{card}</>
                 })}
               <Shuffler />
-
             </div>
           </main>
         </section>
@@ -84,7 +98,11 @@ export const tagPageQuery = graphql`
       }
       filter: {
         frontmatter: { tags: { in: [$tag] } }
-        fields: { published: { eq: true }, unlisted: { ne: true }, collection: { eq: $postType } }
+        fields: {
+          published: { eq: true }
+          unlisted: { ne: true }
+          collection: { eq: $postType }
+        }
       }
     ) {
       totalCount
