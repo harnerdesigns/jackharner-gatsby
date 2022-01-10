@@ -34,10 +34,11 @@ function isPortfolioNode(node) {
   return true
 }
 
-function randomNum(min, max, currentIndex = null) {
+function randomNum(min, max, currentIndex = null, arrayLength = 4) {
   var n = []
   var i = 0
-  while (i < 4) {
+  
+  while (i < arrayLength) {
     var num = Math.floor(Math.random() * max) + min
     if (num !== currentIndex && n.indexOf(num) === -1) {
       n.push(num)
@@ -264,7 +265,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         node.fields.unlisted ? false : true
       )
       const edgeCount = listedPosts.length
-      const relatedIndexes = randomNum(0, edgeCount, index)
+      const relatedIndexes = randomNum(0, edgeCount, index, 4)
 
       const related = [
         listedPosts[relatedIndexes[0]].node,
@@ -357,13 +358,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
     _.each(result.data.portfolio.edges, (edge, index) => {
       const edgeCount = result.data.portfolio.edges.length
-      const relatedPortfolioIndexes = randomNum(0, edgeCount, index)
+      const relatedPortfolioIndexes = randomNum(0, edgeCount, index, 3)
 
       const related = [
         result.data.portfolio.edges[relatedPortfolioIndexes[0]].node,
         result.data.portfolio.edges[relatedPortfolioIndexes[1]].node,
         result.data.portfolio.edges[relatedPortfolioIndexes[2]].node,
-        result.data.portfolio.edges[relatedPortfolioIndexes[3]].node,
       ]
 
       createPage({
@@ -445,13 +445,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
     _.each(result.data.newsletter.edges, (edge, index) => {
       const edgeCount = result.data.blog.edges.length
-      const relatedBlogIndexes = randomNum(0, edgeCount, index)
+      const relatedBlogIndexes = randomNum(0, edgeCount, index, 3)
 
       const related = [
         result.data.blog.edges[relatedBlogIndexes[0]].node,
         result.data.blog.edges[relatedBlogIndexes[1]].node,
         result.data.blog.edges[relatedBlogIndexes[2]].node,
-        result.data.blog.edges[relatedBlogIndexes[3]].node,
       ]
 
       createPage({

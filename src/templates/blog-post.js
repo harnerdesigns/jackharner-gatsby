@@ -44,7 +44,7 @@ export default function Template(props) {
         }
       />
       <BlogTitle post={post} />
-      <section className="half black content">
+      <section className="half content">
         {post.fields.externalLink ? (
           <Button
             href={post.fields.externalLink}
@@ -60,7 +60,7 @@ export default function Template(props) {
                   )[1]
             }
             size="large"
-            extraStyle={{ width: "80%" }}
+            extraStyle={{ width: "80%", zIndex: 2 }}
           />
         ) : (
           ""
@@ -70,27 +70,25 @@ export default function Template(props) {
 
         {postContentMap}
       </section>
-      <section className="slim black row" style={{gridGap: "3rem"}}>
+      <section className="slim black row" style={{ gridGap: "3rem" }}>
         <Shuffler />
         <section className="post__post-content">
           <nav className="postNavigation">
-          <ShareLinks post={post} />
-          <h3>Want More?</h3>
-          <ul>
-            {related.map((post, index) => {
-              return (
-                <li>
-                  <BlogCard post={post} small />
-                </li>
-              )
-            })}
-          </ul>
-        </nav>
+            <h3>Want More?</h3>
+            <ul>
+              {related.map((post, index) => {
+                return (
+                  <li>
+                    <BlogCard post={post} small />
+                  </li>
+                )
+              })}
+            </ul>
+            <ShareLinks post={post} />
+          </nav>
         </section>
       </section>
-      <section className="slim black">
-        
-      </section>
+      <section className="slim black"></section>
     </Layout>
   )
 }

@@ -3,6 +3,7 @@ import React, {Component} from "react"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 
 import defaultOGImage from '../../images/jackHarner-default-OG.jpg'
+import Drips from "../atoms/drips";
 
 
 
@@ -20,6 +21,7 @@ export default class ShareLinks extends Component{
 
 
     <aside className="share-buttons">
+        <Drips color="black" slim />
         <h4 className="shareThis"><FontAwesomeIcon icon="share-alt"/>&nbsp;Share This Post:</h4>
 
         <a href={"https://www.facebook.com/sharer/sharer.php?u=" + postPermalink}

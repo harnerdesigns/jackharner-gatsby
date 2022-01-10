@@ -20,7 +20,7 @@ const Blog = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title={`Blog Archive | ${topTags[0]}, ${topTags[1]}, & More `} />
-      <PageTitle>Blog</PageTitle>
+      <PageTitle subtitle="Tutorials, Freelancing, Developing for E-Commerce, Life Updates & More...">Blog</PageTitle>
       <section className="slim black">
         <TopTags topTags={topTags} postType='blog' />
       </section>
@@ -34,7 +34,7 @@ const Blog = ({ data, pageContext }) => {
             .map(({ node: post }, index) => {
               let ShowCard;
               
-              if((index ) % 6 ===  0) {ShowCard = <><Shuffler index={index} /></>}
+              if((index) % 6 ===  0) {ShowCard = <><Shuffler /></>}
               return (
                 <>
                   <BlogCard post={post} index={index} large={(index + 1) % 6 === 0 || index === 0} />

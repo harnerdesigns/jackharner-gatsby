@@ -158,6 +158,7 @@ ul {
   justify-content: center;
   flex-direction: column;
   padding: 5em 2em;
+  position: relative;
 
   @include breakpoint(mobileonly) {
     align-items: center;
@@ -172,13 +173,16 @@ ul {
 
   &.pink {
     background: var(--color);
-
     color: var(--text-color);
   }
 
   &.white {
     background: #fff;
     color: #000;
+  }
+
+  &.full-width {
+    padding: 0;
   }
 
   &.row {
@@ -209,6 +213,7 @@ ul {
 
   &.content {
     padding: 2em;
+    color: #fff;
 
     @include breakpoint(laptop) {
       padding: 2rem 25vw 2rem;
@@ -229,7 +234,7 @@ ul {
       grid-template-columns: 1fr 1fr 1fr;
       align-items: stretch;
 
-      &--2{
+      &--2 {
         grid-template-columns: 1fr 1fr;
       }
     }
@@ -251,6 +256,82 @@ ul {
     // max-width: 50%;
   }
 }
+
+// [class*="--wavy"] {
+//   &:after {
+//     content: "";
+//     width: 100%;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     height: 25vh;
+//     position: absolute;
+//     background-position: bottom center;
+//     background-repeat: no-repeat;
+//     background-size: 300% 100%;
+//     z-index: 1;
+//     pointer-events: none;
+
+//     @include breakpoint(laptop){
+//     background-size: 100% 100%;
+//     height: 25%;
+
+//     }
+//   }
+//   > * {
+//     z-index: 2;
+//   }
+
+//   &.black--wavy {
+//     &:after {
+//       background-image: url("../images/waves.svg");
+//     }
+//   }
+//   &.black--wavy-2 {
+//     &:after {
+//       background-image: url("../images/waves-2.svg");
+//     }
+//   }
+//   &.black--wavy-3 {
+//     &:after {
+//       background-image: url("../images/waves-3.svg");
+//     }
+//   }
+//   &.black--wavy-4 {
+//     &:after {
+//       background-image: url("../images/waves-4.svg");
+//     }
+//   } &.black--wavy-5 {
+//     &:after {
+//       background-image: url("../images/waves-5.svg");
+//     }
+//   }
+//   &.white--wavy {
+//     &:after {
+//       background-image: url("../images/waves-white.svg");
+//     }
+//   }
+//   &.white--wavy-2 {
+//     &:after {
+//       background-image: url("../images/waves-2-white.svg");
+//       height: 25%;
+//     }
+//   }
+//   &.white--wavy-3 {
+//     &:after {
+//       background-image: url("../images/waves-3-white.svg");
+//     }
+//   }
+//   &.white--wavy-4 {
+//     &:after {
+//       background-image: url("../images/waves-4-white.svg");
+//     }
+//   } &.white--wavy-5 {
+//     &:after {
+//       background-image: url("../images/waves-5-white.svg");
+//     }
+//   }
+// }
 
 .half {
   @extend .full;
@@ -301,10 +382,7 @@ section.black .title__box {
     opacity: 0;
   }
 }
-.headroom-wrapper ~ section.intro {
-  min-height: 50vh;
-  // position: relative;
-}
+
 
 .imaslider__title {
   padding: 0 0.25em;
@@ -320,18 +398,33 @@ section.black .title__box {
 }
 
 .intro:first-of-type {
-  padding-top: calc(125px);
-  margin-top: -125px;
-  padding-bottom: 2rem;
+  padding: 0;
+  min-height: 50vh;
   position: relative;
   background: var(--gradient);
   @include breakpoint(tablet) {
+    padding-bottom: 2rem;
     padding-bottom: 0;
   }
-  @include breakpoint(laptop) {
-    margin-top: -125px;
+  @include breakpoint(laptop){
+    min-height: 70vh;
+    margin-bottom: 0;
+  }
+  
+}
+
+.headroom-wrapper {
+  ~ section.intro, ~ .page-title, ~ .blog-title, ~ .project__header {
     padding-top: calc(125px);
-    padding-bottom: 0;
+    margin-top: -125px;
+    padding-bottom: 5rem;
+
+    @include breakpoint(laptop) {
+      margin-top: -125px;
+      padding-top: 125px;
+      padding-bottom: 0;
+    }
+ 
   }
 }
 
@@ -353,7 +446,7 @@ section.black .title__box {
   @include breakpoint(laptop) {
     width: 70%;
     // align-self: stretch;
-  padding:2rem;
+    padding: 2rem;
 
     // border-radius: var(--border-radius) var(--border-radius) 0 0;
   }

@@ -65,8 +65,8 @@ const HarnerDesigns = () => {
   })
   return (
     <Vert slug="moreWithLess">
-      <h2>Prints, Shirts, & Mugs, OH MY!</h2>
-      <h3>Help support my content by getting yourself something to wear, drink out of, or stare at. Thanks love u.</h3>
+      <header class="moreWithLess__header"><h2>Prints, Shirts, & Mugs, OH MY!</h2>
+      <h3>Help support my content by getting yourself something to wear, drink out of, or stare at. Thanks love u.</h3></header>
       <div class="product-grid">{products.length ? productsMap : ""}
       <Button
         icon="shopping-bag"

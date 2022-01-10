@@ -9,20 +9,20 @@ const GridGospel = () => {
       link={link}
       image={GridGospelCover}
       slug="gridgospel"
-      buttonText="Buy Now &raquo;"
+      buttonText="Buy Now! &raquo;"
     >
-        <p>Haven't Quite Mastered CSS Grid Yet?</p>
-        <p> Then you NEED to check out</p>
-        <h1>
-          The Grid Gospel:
-        </h1>
+      <p>Haven't Quite Mastered CSS Grid Yet?</p>
+      <p>Then you NEED to check out</p>
+      <div class="book__title">
+        <h1>The Grid Gospel</h1>
         <h2>An Intro To CSS Grid</h2>
-        <h3>Get it Today and Receive:</h3>
-        <ul>
-          <li>20+ Pages of CSS Grid Awesomeness</li>
-          <li>A Printable CSS Grid Cheat Sheet</li>
-          <li>Access to live CodePen examples</li>
-        </ul>
+      </div>
+      <h3>Get it Today for <strong>$1</strong> and Receive:</h3>
+      <ul>
+        <li>20+ Pages of CSS Grid Awesomeness</li>
+        <li>A Printable CSS Grid Cheat Sheet</li>
+        <li>Access to Live CodePen Examples</li>
+      </ul>
     </Vert>
   )
 }

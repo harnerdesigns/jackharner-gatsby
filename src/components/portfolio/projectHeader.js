@@ -5,6 +5,7 @@ import _ from "lodash"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import tagIcons from "../../templates/tags/tag-icons"
+import Drips from "../atoms/drips"
 
 const ProjectHeader = ({ post, index, small, nolink }) => {
   let filterTags, tags
@@ -39,8 +40,12 @@ const ProjectHeader = ({ post, index, small, nolink }) => {
             : "project__header--no-logo"
         }`
       }
-      style={{ background: post.frontmatter.color }}
+      style={{
+        background: post.frontmatter.color,
+        "--color": post.frontmatter.color,
+      }}
     >
+      <Drips color="black" slim />
       {post.frontmatter.logo && (
         <div className="logo__wrapper">
           <img

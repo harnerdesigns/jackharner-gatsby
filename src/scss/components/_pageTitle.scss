@@ -1,11 +1,10 @@
 .page-title {
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 0;
   text-align: center;
-  background: var(--color) url("../images/waves.svg");
   position: relative;
   overflow: hidden;
-
+  min-height: 40vh;
   h1 {
     color: #fff;
     font-weight: 900;
@@ -26,7 +25,8 @@
     i,
     svg {
       position: absolute;
-      bottom: 0; left: 0;
+      bottom: 0;
+      left: 0;
       transform: scale(2);
       transform-origin: 0 100%;
     }
@@ -36,6 +36,11 @@
     color: #fff;
     text-shadow: -1px -1px 1px #000, -2px -2px 1px #000, 1px 1px 1px #000, 2px 2px 1px #000, 1px -1px 1px #000,
       2px -2px 1px #000, -1px 1px 1px #000, -2px 2px 1px #000;
+
+    @include breakpoint(laptop) {
+      max-width: 65%;
+      margin: 0 auto;
+    }
   }
 
   &:hover {
@@ -44,21 +49,30 @@
 
 .blog-title {
   @extend .page-title;
-
-  padding: 17vh 0;
+  min-height: 75vh;
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
+  display: flex; align-items: center; 
+  justify-content: center;
+  flex-direction: column;
   @include card(-3);
   // background-color: var( --color );
   // background-blend-mode: screen ;
+
+  @include breakpoint(laptop) {
+    margin-bottom: -7vh;
+  }
 
   h1,
   h2,
   h4 {
     background: transparentize(#000, 0.5);
-    margin: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
     padding: 0.1em 1em;
+    display: block;
   }
 
   .post__meta {
@@ -68,7 +82,7 @@
 
     color: #fff;
     font-size: 1em;
-
+width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;

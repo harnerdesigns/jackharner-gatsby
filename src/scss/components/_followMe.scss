@@ -29,7 +29,6 @@ $producthunt: #da552f;
 
   a {
     text-decoration: none;
-
     display: block;
 
     @include breakpoint(mobileonly) {
@@ -43,6 +42,7 @@ $producthunt: #da552f;
     height: 33vmin;
     margin: 1rem;
     background: #fff;
+    position: relative;
 
     display: flex;
     align-items: center;
@@ -83,9 +83,9 @@ $producthunt: #da552f;
     &.polywork {
       color: $polywork;
       img {
-        margin-bottom: 0.25em;
+        margin: 0.25em;
         font-size: 4em;
-        height: 1em;
+        height: 2rem;
         width: auto;
       }
 

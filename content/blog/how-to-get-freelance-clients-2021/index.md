@@ -4,7 +4,7 @@ title: "How To Get Freelance Clients In 2021"
 subtitle: "What's Worked For Me & My Plans For 2022"
 featuredImage: "./photo-1545987796-200677ee1011.jpeg"
 ogImage: "./ogImage.png"
-tags: [Freelance, Career, Newsletter]
+tags: [Freelance, Career, Newsletter, Automation]
 externalLink: ""
 published: true
 ---

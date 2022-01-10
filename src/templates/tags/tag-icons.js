@@ -36,7 +36,9 @@ const tagIcons = {
   Writing: "pencil-alt",
   "Non Profit": "tree",
   Cannabis: "cannabis",
-  Career: "user-astronaut"
+  Career: "user-astronaut",
+  Freelance: "bacon",
+  DigitalOcean: ["fab", "digital-ocean"]
 }
 
 export default tagIcons

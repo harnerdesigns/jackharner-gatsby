@@ -2,6 +2,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from "gatsby"
+import Drips from "../atoms/drips";
 const _ = require("lodash");
 
 
@@ -13,6 +14,8 @@ const BlogTitle = ({ post }) => {
     return(<header className={"blog-title " + post.fields.collection} style={{
         backgroundImage:(post.frontmatter.featuredImage ?  'url(' + post.frontmatter.featuredImage.childImageSharp.sizes.originalImg + ')' : '')
     }}>
+        <Drips color="black" slim />
+
         <h1 className="post__title">{post.frontmatter.title}</h1>
         {(post.frontmatter.subtitle ? <h2 className="post__subtitle">{post.frontmatter.subtitle}</h2> : "")}
         <div className="post__meta">

@@ -20,7 +20,6 @@ class TagRoute extends React.Component {
 
     return (
       <Layout>
-        <section className="section">
           <SEO title="Project Tags" />
 
           <PageTitle>Project Tags</PageTitle>
@@ -31,10 +30,10 @@ class TagRoute extends React.Component {
                 const tagLink = `/portfolio/tags/${_.kebabCase(tag)}/`
                 return (
                   <Link to={tagLink} className="tag__card">
-                    <h3>
                       <FontAwesomeIcon fixedWidth icon={tagIcons[tag]} />
+                    <h3>
                       {tag}
-                    </h3>{" "}
+                    </h3>
                     <h4>
                       {tags[tag]} Project{tags[tag] > 1 ? "s" : ""}
                     </h4>
@@ -73,7 +72,6 @@ class TagRoute extends React.Component {
               })}
             </div>
           </main>
-        </section>
       </Layout>
     )
   }
@@ -90,9 +88,12 @@ export const tagPageQuery = graphql`
     }
     allMarkdownRemark(
       limit: 1000
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: {
+        fields: [fields___weight, frontmatter___date]
+        order: [DESC, DESC]
+      }
       filter: {
-        fields: { published: { eq: true }, collection: { eq: "portfolio" } }
+        fields: { published: { eq: true }, collection: { eq: "portfolio" }, unlisted: { ne: true } }
       }
     ) {
       totalCount
@@ -114,6 +115,8 @@ export const tagPageQuery = graphql`
           fields {
             slug
             collection
+            weight
+            unlisted
           }
         }
       }

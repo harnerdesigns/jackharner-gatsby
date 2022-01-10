@@ -12,7 +12,7 @@ const Namecheap = () => {
       buttonText="Buy or Transfer a Domain Today &raquo;"
     >
       <h2>The Best Place to Buy Domains</h2>
-      <h3>Popular Domains Starting at $0.99.</h3>
+      <h3>Popular Domains Starting at $0.99</h3>
     </Vert>
   )
 }
