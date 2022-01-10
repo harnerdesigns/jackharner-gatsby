@@ -1,4 +1,169 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:webfeeds="http://webfeeds.org/rss/1.0"><channel><title><![CDATA[Jack Harner's Web Dev Blog]]></title><description><![CDATA[Jack Harner is a Freelance Web Developer & E-Commerce Consultant based in Denver, Colorado.]]></description><link>https://jackharner.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 30 Dec 2021 19:28:58 GMT</lastBuildDate><webfeeds:accentColor>#E91E63</webfeeds:accentColor><webfeeds:logo>./src/images/jackharenr-logo-white.svg</webfeeds:logo><item><title><![CDATA[How To Get Freelance Clients In 2021]]></title><description><![CDATA[As of writing, I've been freelancing fulltime for just over 200 days now (Woo 🎉) and I wanted to share with y'all what I've been doing to get new clients in 2021 and how I plan to adjust going into 2022.  I'm making no guarantee that these tactics…]]></description><link>https://jackharner.com//blog/how-to-get-freelance-clients-2021/</link><guid isPermaLink="false">https://jackharner.com//blog/how-to-get-freelance-clients-2021/</guid><pubDate>Sun, 12 Dec 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;As of writing, I&apos;ve been freelancing fulltime for just over 200 days now (Woo 🎉) and I wanted to share with y&apos;all what I&apos;ve been doing to get new clients in 2021 and how I plan to adjust going into 2022. &lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:webfeeds="http://webfeeds.org/rss/1.0"><channel><title><![CDATA[Jack Harner's Web Dev Blog]]></title><description><![CDATA[Jack Harner is a Freelance Web Developer & E-Commerce Consultant based in Denver, Colorado.]]></description><link>https://jackharner.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 10 Jan 2022 03:05:31 GMT</lastBuildDate><webfeeds:accentColor>#E91E63</webfeeds:accentColor><webfeeds:logo>./src/images/jackharenr-logo-white.svg</webfeeds:logo><item><title><![CDATA[Organize Your Shopify Theme & Section Settings]]></title><description><![CDATA[Shopify is the most customizable e-commerce platform, while still being super user friendly out of the box. Like yes, hypothetically you can build literally anything you wanted if you built it from scratch, but who's got the time for that?! (Let…]]></description><link>https://jackharner.com//blog/organize-your-shopify-settings/</link><guid isPermaLink="false">https://jackharner.com//blog/organize-your-shopify-settings/</guid><pubDate>Sat, 08 Jan 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Shopify is the most customizable e-commerce platform, while still being super user friendly out of the box. Like yes, hypothetically you can build literally anything you wanted if you built it from scratch, but who&apos;s got the time for that?! (Let alone maintaining it??) Shopify gets you about as close as you can get to the &quot;build it from scratch&quot; level of flexibility, while still letting you hand the store off to the less technically inclined users that will be running it on the day to day. &lt;/p&gt;
+&lt;p&gt;The theme editor, &amp;#x26; sections (+ specifically the introduction of &lt;a href=&quot;https://twitter.com/shopify/status/1409922304738484229?lang=en&quot;&gt;Sections Everywhere&lt;/a&gt; ) really opens the doors for hyper customizable Shopify themes, and dynamic e-commerce experiences across the site.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 74.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsSAAALEgHS3X78AAADhElEQVQ4y42U209cVRTGzx/SaGLqQx+0PiiPVR+aKiY2mBK0rcGC3IYOM5RhQBg6QtNUBKqWyjXlorVYm0Knl5m2qSQ2JlrjVBtS04AUmILMwAxzPXMFfq49OCS8uXL22eectfa3v/WtvY6m6zqpZApP1E8oEYNNuTbl9j8sk04Ti+nZ5z+8HmrvjKElEglW/X5S4swBhcJhBi99x5nz3XT09tLe00NXXw/nhi7w9egI50eG+WJwkM97e7K+zr4+2r76km8nxtHC4Qh+f4BgMIgCVxYWwOnZWWbm55ldWODv/+Y5zzMeuN24Hz3iqcfDzNM5Zubms3F/TU8zI2s0tdgvDNPCcH19fYthKMytey6u3LjKhNPBNdd1HLdvZMfVm+OM35zANXmHu/d/lPk2Tom95nLwq/s3tFAwgNe7TCQS2U55bW0N66lmDhuKKTFXUFpbSVmdgYr6aqoaajC3WCg4Wsjr+98QfzmmljrKLFUMXBxC29jYYOmfZcICmDOVfuvZ01Q2GKmx1WG2WThht1L3aQPWtiaMLVb25b2M6bUXOHK0iJaONompY/TyRbRUOoNvTScaT5HJZLYYCqC941R21+omM8ebajHJMFgMmKylvF1UgP3QftzGg1Tm51Pf9glG8Q+PfYPm9flYXFpiedlLTNe3AW3tdkpOlFPZaKTKWo2l2Uhnt41z3UYaKw5Qs2cPx57fRd4rL2GxN2BoNDE0NoqWTqdYWVkhGo1up6wAm8+c5CNTGeUCams1ccvVz88PfuCuo5/LXQbyXtzFc7t3U1h6WKSwUll/nAuXRtBUGdSxyaWbK4rlZD0flBTyYdn71LfacP7kxDHSwYDxGJZ9r1Lx3gEOFbzFu0UHRZYa2fxjekcHhKEAKUbRWExAt46NYms/baPcXIZBqtokDO798pDrV8b5rKqU+0fyac/bS9Wbeykufkc0lELZzAx/Lyknk0lWVld3pJyRQik99UQcPa6TTCZIpZJEEknpohBR/yo+0T0WC0vbSlw8Tlxi4zJnj43P5yUhLzlTh3xzY2c/qwZYWnxGIODHJwSWvV7ZJL0jRmEJ4CYrgaiwSZH7JyhANZRNPXlCc3s7nf192M924ZyczH6PiERBYavYrW9sSZWRTtNiehzPko9gaCtl1S3KkQMMiL4Pp6b48/FjfpceXlhcFF8m2/dKLsVSFVSxU2v+BUEIz+osdajjAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Theme Editor&quot;
+        title=&quot;Theme Editor&quot;
+        src=&quot;/static/858475dd05b33b0168f6234fdeea5db8/c1b63/theme_editor.png&quot;
+        srcset=&quot;/static/858475dd05b33b0168f6234fdeea5db8/5a46d/theme_editor.png 300w,
+/static/858475dd05b33b0168f6234fdeea5db8/0a47e/theme_editor.png 600w,
+/static/858475dd05b33b0168f6234fdeea5db8/c1b63/theme_editor.png 1200w,
+/static/858475dd05b33b0168f6234fdeea5db8/d61c2/theme_editor.png 1800w,
+/static/858475dd05b33b0168f6234fdeea5db8/f238d/theme_editor.png 2078w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;With Great Customization, Comes Great Responsibility&lt;/h2&gt;
+&lt;p&gt;Just because you &lt;em&gt;can&lt;/em&gt; turn everything into a Block, Section, or Theme setting doesn&apos;t mean you &lt;em&gt;should&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;But if you&apos;re going to anyway, you better keep things organized and descriptive. I&apos;m going to show you how to use the &lt;code class=&quot;language-text&quot;&gt;header&lt;/code&gt;, and &lt;code class=&quot;language-text&quot;&gt;paragraph&lt;/code&gt; settings, as well as the &lt;code class=&quot;language-text&quot;&gt;info&lt;/code&gt; setting property to make it perfectly clear what each setting changes.&lt;/p&gt;
+&lt;h2&gt;Section Settings Background&lt;/h2&gt;
+&lt;p&gt;If you&apos;re unfamiliar, Shopify Sections are reusable blocks of code that can be modified, updated, &amp;#x26; reordered by anybody with access to the Shopify backend. &lt;/p&gt;
+&lt;p&gt;You define the settings and blocks available to each section with a JSON object inside of the &lt;code class=&quot;language-text&quot;&gt;{% schema %} ... {% endschema %}&lt;/code&gt; tags.&lt;/p&gt;
+&lt;p&gt;For example, you&apos;ll see something like this at the end of most files in the &lt;code class=&quot;language-text&quot;&gt;/sections/&lt;/code&gt; directory: &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;liquid&quot;&gt;&lt;pre class=&quot;language-liquid&quot;&gt;&lt;code class=&quot;language-liquid&quot;&gt;{&lt;span class=&quot;token operator&quot;&gt;%&lt;/span&gt; schema &lt;span class=&quot;token operator&quot;&gt;%&lt;/span&gt;}
+{
+    &quot;name&quot;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &quot;Coolest Section Ever&quot;,
+    &quot;settings&quot;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; [ 
+        ...
+     ],
+    &quot;blocks&quot;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; [ 
+        ...
+     ],
+}
+{&lt;span class=&quot;token operator&quot;&gt;%&lt;/span&gt; endschema &lt;span class=&quot;token operator&quot;&gt;%&lt;/span&gt;}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The settings inside the &lt;code class=&quot;language-text&quot;&gt;settings&lt;/code&gt; array are displayed in the order you write them, from top to bottom down the file. &lt;/p&gt;
+&lt;h2&gt;The Header Setting&lt;/h2&gt;
+&lt;p&gt;Use the header setting when you want to group or separate a collection of settings. As is probably obvious based on the name, it creates a Header with the text from the &lt;code class=&quot;language-text&quot;&gt;content&lt;/code&gt; property and creates a bit of separation between the settings above and below it.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 412px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 115.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAXCAIAAACEf/j0AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADN0lEQVQ4y42U21MSYRjG/Uu68srpxkOaIQEqKKWIgE1jd0xjXXBSEGSmKUVtLI9lN93Z2ca7us9pdApsDEYFOSxLEAosx+UgZ7Z3FwfNEeubnR3m5fvt8x6e76tp4ymZ/aPwNHRKJubeEASRLuSzpWI0lfCHQ3g6lcxlCqViqVRKJpOZTObo6CibzcK2QCBQQ+cpGXwSbuJIdCRctPm9pl+IHTt042FXNIhGsHQ+S5SIyipS6xim80fpAk0TVzH5Yg3+C2NBp90Ri0aJKqtQKIA4hmE1NJ6K3aO4w77LY4qfizXE3q774ADz+2FTvkAtSgfSrsDl36Qy1EzvHeHwla1d0hn5NIEisXQGry77F3ydr2rrUzEEmgaO9NHCe4jGXj4L3Rv02W3GnV2L2YIgyM7ubgDDKtgJTO9TtvFU0LNGjlQ3+xqi+PKTuFiE2W1mm93hcKSplc/nz0u7d4ROTkt9pUumW3gH0WA4jFj3K5suSpuCVQCD8jilLJNILtfV6b/rt7a2jCZTearnNwwwpkDNEqqbuqS6+bcQXfv0+eHM03A0GgqFoud17gSGahn9o+1CTXO3fHKBhIuIrbT5JZfNJVMpcBUMqzpMebNDoG7hyqbmyLR9MvHv+ksu/bdNw4+f29sXpc0SqBlCDfP2g3ru8MTyR1LZhRT1G+CNeDwOTr5wzgI1t0c22H2fxx5alk8SG19Rn9/q9gRDocrWM20/BUPOvBFen4LVLZnVzBN7e1Ecxw4PYbb/dhjUzIDMRdpGrmJ86QNEV1ZeKRQKj9vtQBAURa1Wq9frrQpD2e0iqtvUqLRaLY1GM5vNgFkslnAkcqbyU3MWkKPqEI01c+VTi6S34cRHIpH/chilrDmGl0g4nycH6/P5jEajxbIPKeA4fvpbJzBgMOfOgbGrNxSPqZrh9MI7kUh4PJ5gMFhNmbwMWEINPOwBbevN4SnqYNhs9vX19VwuV76x4olELBYDcXiDWyFe/oTf7wdvkw1j39K2cOXlC3BoaKi2tlavNxiNJr3BAD13Op2oy4WiLjjbkFEZBudCw9TtAnXngPZaz/D0IqlsMBhWV1dTqRTIgcnKVZy7/gByj0hpy5UxdwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Header Setting&quot;
+        title=&quot;Header Setting&quot;
+        src=&quot;/static/dbdddebe420ad88088ada19b633b67e4/9e32a/header-setting.png&quot;
+        srcset=&quot;/static/dbdddebe420ad88088ada19b633b67e4/5a46d/header-setting.png 300w,
+/static/dbdddebe420ad88088ada19b633b67e4/9e32a/header-setting.png 412w&quot;
+        sizes=&quot;(max-width: 412px) 100vw, 412px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Just add the following block in between the settings you want to add:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;header&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;content&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Header Text Content&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This works inside of Section, Theme &amp;#x26; Block settings arrays.&lt;/p&gt;
+&lt;h2&gt;The Paragraph Setting&lt;/h2&gt;
+&lt;p&gt;Use the paragraph setting when you want to add some additional context to a group of settings. (If you&apos;re trying to expand on a single specific setting use the Info property below.)&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 396px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 61.33333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACEElEQVQoz22S62oTURDH96UEoUkUaUttm8aCBkQpvoE2SaHVD0H8Ij6F76AvYCpNm0vVJnsJ3Samye6e3bNnb9mNm70dZ1MN8TIMw5nh/GaG4c/QJYvjOEmS5Ur0u5LMbRYE79u1t58+vKt9HFmE+XzWufGTZteynCCYua47nU49z/N9H97+3KII+sQQFn2hF3N78wX4rY3n9x4eSoi4E+e0Xm82m42zBs+xX8/Pz1vtWu14Ov1xA6Qd5p1gH+bO7sHqo8NMvryx91pqfKGdbyEvJDxPBSHiuJjjIo6N0shFLBt02UQQqHhJWy3qOCl8d/dgZWt/9UlVPmlGBEuqhlRNw1hVtbEkS7KiYR0KsiJD6th2uvpwSDFO4VyhAvDa06p82o4sc6hhRIjheti0ZMAME1LNMCG1PU8zDNOfUUmihDDZQgXgzPb+5rM30nGdDvqk3yeiaPUHdn9giKI9+A4RKoZ4FWNMDQMWpp1OOjlXKMPwle3S1l513OsngytyceH1ejbLmp3uhOddQXA4biLwyWhEFw5rBwEDp0rhfGmteATX9sPw8nqsmeZIRdcIIaLDW8IYGeYfApgbk92p5B5UMjvl9eJLpKjIjGqs7ZgkDKO//4Jalh1gwNKD5UvrxaOxpM2CEGETIUVRENb1ueZ+yYv+OxngbKEM8P3Hr0aSBiIAVelEV1WVGMZ/mYX9BKahVwzjpvcEAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Paragraph Setting&quot;
+        title=&quot;Paragraph Setting&quot;
+        src=&quot;/static/6e380d7ef81ad3234c51715a993417d4/db910/paragraph-setting.png&quot;
+        srcset=&quot;/static/6e380d7ef81ad3234c51715a993417d4/5a46d/paragraph-setting.png 300w,
+/static/6e380d7ef81ad3234c51715a993417d4/db910/paragraph-setting.png 396w&quot;
+        sizes=&quot;(max-width: 396px) 100vw, 396px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;paragraph&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;content&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Lorem ipsum dolor sit amet.&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can include links in Markdown style if you need to provide additional context and resources:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;paragraph&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;content&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Lorem ipsum dolor sit amet. [Here&apos;s a link](https://jackharner.com)&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If you really want extra separation between sets of settings, create a paragraph setting and set the text to either &lt;code class=&quot;language-text&quot;&gt;-&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;=&lt;/code&gt;, or my personal favorite: &lt;code class=&quot;language-text&quot;&gt;~&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;paragraph&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;content&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;~~~~~~~~~~~~~~~~~~~~~~~~~~&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 372px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 39.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABEElEQVQY031R7U7CMBTde+mGJIr8wQExoK/hNoPjcXwnydjWEg0j8kMwg7bb+sFtGxI06Mltcvpxeu5pHdcPL3vB7ThGi0Ip9Tabzefpfk+EkJyLs2Ug4bDj3gWuH9yMXnK8hHlZlp/rtfoXVVVRyqRUjtcPL3pPnVFsxZvtd1Gsmob/BTAllEJrWtweRp4fdh+gbS0GmZSyOYfaFICbM7rtq0EE5iC2zhWjhBDKmC4YjIGP5UAsh324Qovbw2fPj7qP09w4b3fcBpMG0KThApzsyml45/p+0uqHnXH8/lFsdnzyipfFKk1TjBc5QgjjLMswRkmSwC/Udf1D3BrYzFOb+atsxBHwPDa/5YBfz34AXeeijyY/xV0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Tilde Separator&quot;
+        title=&quot;Tilde Separator&quot;
+        src=&quot;/static/bd1b403d3f5b91a493e54d339218c2d8/98b6e/tilde-separator.png&quot;
+        srcset=&quot;/static/bd1b403d3f5b91a493e54d339218c2d8/5a46d/tilde-separator.png 300w,
+/static/bd1b403d3f5b91a493e54d339218c2d8/98b6e/tilde-separator.png 372w&quot;
+        sizes=&quot;(max-width: 372px) 100vw, 372px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;The Info Property&lt;/h2&gt;
+&lt;p&gt;Another way to provide even more specific clarity is through the info property. &lt;/p&gt;
+&lt;p&gt;Every &lt;a href=&quot;https://shopify.dev/themes/architecture/settings/input-settings&quot;&gt;Input Setting&lt;/a&gt; type, can accept the info property which adds a little bit of text directly under the input.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 308px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 54%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABfElEQVQoz41S6ZKUMBic9382XS3dBRICIScQjuEIDCxz2DjjuFr+8Csq1UCaPshhmubr9Xr7NZfL5XkLfPvX+GkfgMM8n7Zty3hK4zgMIm0M5zymNGYsE4KxWCodBG9B8PoWkmk+gfPp88vLl68P8vl8rqrK5oW1eT+Mdd0opYSQpXNam7J0UghjDN6O3q/ruiwLlGHwQYZ5nnEQcquV1lIqSmnKU2DoCynhyBV5FEUw0HXd+v4O1oM8T343maSMEqmUNjamBE+0za0xYUSSJLXWnk7LuqzoAvpP8mXyI/0Z9PX7N55lnAsShSRmESHKmALWnYPgs9i/yWnCEljPpMzSkBBYjVnCaCS1/Vj1/V/Awm/bbduOfgLuh6Hvh2PbDuPk/TSMfhiGY9c12HHssHRdP44jyHthqAoZKlfmhaubRkgNe3VVmbxomrYo98JdVeET4CN2VTcQuB+BXRkIqVCskKrr+9t/z+F+wuB8w7VhOT+y/Rnyia8fyD8Ahgpq0RKjOzIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Info Property&quot;
+        title=&quot;Info Property&quot;
+        src=&quot;/static/fb3b1b094ca9fd1b6d2dfb80b8dafb03/2ece4/info-setting.png&quot;
+        srcset=&quot;/static/fb3b1b094ca9fd1b6d2dfb80b8dafb03/5a46d/info-setting.png 300w,
+/static/fb3b1b094ca9fd1b6d2dfb80b8dafb03/2ece4/info-setting.png 308w&quot;
+        sizes=&quot;(max-width: 308px) 100vw, 308px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;checkbox&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;predictive_search_enabled&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;label&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Enable product suggestions&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;info&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;This will also affect the search bar on the search results page.&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;default&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;ORGANIZE ORGANIZE ORGANIZE&lt;/h2&gt;
+&lt;p&gt;Putting these three puzzle pieces together will give more context to and help your clients understand the different settings throughout the theme. The more they understand, the less they&apos;re going to take up your time with content changing questions.&lt;/p&gt;
+&lt;h1&gt;Stay tuned for more Shopify Tutorials, Tips &amp;#x26; Tricks!&lt;/h1&gt;
+&lt;h2&gt;Further Reading&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://shopify.dev/themes/architecture/settings/sidebar-settings&quot;&gt;Shopify Docs on Sidebar Settings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://shopify.dev/themes/architecture/settings/input-settings&quot;&gt;Shopify Docs on Input Settings&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[How To Get Freelance Clients In 2021]]></title><description><![CDATA[As of writing, I've been freelancing fulltime for just over 200 days now (Woo 🎉) and I wanted to share with y'all what I've been doing to get new clients in 2021 and how I plan to adjust going into 2022.  I'm making no guarantee that these tactics…]]></description><link>https://jackharner.com//blog/how-to-get-freelance-clients-2021/</link><guid isPermaLink="false">https://jackharner.com//blog/how-to-get-freelance-clients-2021/</guid><pubDate>Sun, 12 Dec 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;As of writing, I&apos;ve been freelancing fulltime for just over 200 days now (Woo 🎉) and I wanted to share with y&apos;all what I&apos;ve been doing to get new clients in 2021 and how I plan to adjust going into 2022. &lt;/p&gt;
 &lt;p&gt;I&apos;m making no guarantee that these tactics will work for you. I&apos;m just relaying what&apos;s worked for me in hopes that you can take something from it, apply it to your own freelance business, and grow as well. &lt;/p&gt;
 &lt;h1&gt;#LearnInPublic&lt;/h1&gt;
 &lt;ol&gt;
