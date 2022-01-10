@@ -31,6 +31,7 @@ const LinkWrapper = styled(Link)`
   background: var(--color);
   color: var(--text-color);
   border-radius: var(--border-radius);
+  z-index: 9;
 
   &:hover{
       background: var(--darker-color);

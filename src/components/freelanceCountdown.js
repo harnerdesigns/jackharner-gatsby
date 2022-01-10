@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import React, { useEffect, useState } from "react"
 
 import styled from "styled-components"
+import Drips from "./atoms/drips"
 import { breakpoints } from "./breakpoints"
 
 const FreelanceCountdown = () => {
@@ -38,8 +39,9 @@ const FreelanceCountdown = () => {
     let string = timeLeft[interval]
     timerComponents.push(
       <>
-        <CountdownNumber>{string.toString().padStart(2, "0")} <CountdownLabel>{interval}</CountdownLabel></CountdownNumber>
-        <CountdownSeparator>{i === 3 ? "" : ":"}</CountdownSeparator>
+        <CountdownNumber>
+          
+          {string.toString().padStart(2, "0")} <CountdownLabel>{interval}</CountdownLabel></CountdownNumber>
       </>
     )
   })
@@ -61,9 +63,15 @@ const CountdownWrapper = styled.div`
   display: grid;
   align-items: center;
   justify-content: center;
-  grid-template-columns: repeat(3, 1fr auto) 1fr;
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 1ch;
   margin: 1rem auto;
+
+  @media ${breakpoints.tablet} {
+    grid-template-columns: repeat(4, 1fr);
+
+
+  }
 
   h1 {
     text-align: center;
@@ -84,7 +92,7 @@ const CountdownNumber = styled.span`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
+position: relative;
   @media ${breakpoints.laptop} {
     font-size: 4rem;
   }

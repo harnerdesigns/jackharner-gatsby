@@ -3,8 +3,10 @@ import React from "react"
 
 import Link from "../atoms/maybeExternal"
 import Moment from "react-moment"
+import tagIcons from "../../templates/tags/tag-icons"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Drips from "../atoms/drips"
 
 const BlogCard = ({ post, index, small, large }) => {
   let filterTags, tags
@@ -14,21 +16,23 @@ const BlogCard = ({ post, index, small, large }) => {
       i < 3 ? true : false
     )
     tags = (
-      <div className="tags">
-        <FontAwesomeIcon icon="tag" />{" "}
+      <>
         {filterTags.map((tag, i) => {
+          let icon = tagIcons[tag] || null
           return (
-            <>
-              {tag}
-              {i < filterTags.length - 1
-                ? ", "
-                : filterTags.length < post.frontmatter.tags.length
-                ? ", + " + (post.frontmatter.tags.length - filterTags.length)
-                : ""}
-            </>
+            <div className="tag__wrapper">
+              {icon ? (
+                <>
+                  <FontAwesomeIcon fixedWidth icon={icon} />
+                  <span className="tag__label">{tag}</span>
+                </>
+              ) : (
+                tag
+              )}
+            </div>
           )
         })}
-      </div>
+      </>
     )
   }
   return (
@@ -66,18 +70,20 @@ const BlogCard = ({ post, index, small, large }) => {
           ) : (
             ""
           )}
-          {/* {(index === 0 ? <p className="post__excerpt">{post.excerpt} <Link to={post.fields.slug}>Read&nbsp;More&nbsp;&raquo;</Link></p> : "")} */}
-          <div className="card__meta">
-            {tags}
-            {post.fields.date ? (
-              <div className="card__date">
-                <FontAwesomeIcon icon="calendar" />
-                <Moment fromNow title={post.fields.date}>{post.fields.date}</Moment>
-              </div>
-            ) : (
-              ""
-            )}
-          </div>
+        </div>
+
+        <div className="card__meta">
+          {tags}
+          {post.fields.date ? (
+            <div className="card__date">
+              <FontAwesomeIcon fixedWidth icon="calendar" />
+              <Moment fromNow title={post.fields.date}>
+                {post.fields.date}
+              </Moment>
+            </div>
+          ) : (
+            ""
+          )}
         </div>
       </article>
     </Link>

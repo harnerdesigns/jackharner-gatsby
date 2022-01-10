@@ -33,7 +33,6 @@ class TagRoute extends React.Component {
 
     return (
       <Layout>
-        <section className="section">
           <SEO title={`${tag} ${postTypeLabels.plural}`} />
 
           <PageTitle>{tagHeader}</PageTitle>
@@ -72,10 +71,9 @@ class TagRoute extends React.Component {
 
                   return <>{card}</>
                 })}
-              <Shuffler />
+              {posts.length > 2 && <Shuffler />}
             </div>
           </main>
-        </section>
       </Layout>
     )
   }
@@ -114,6 +112,7 @@ export const tagPageQuery = graphql`
             title
             subtitle
             date(formatString: "MMMM DD, YYYY")
+            updated(formatString: "MMMM DD, YYYY")
             published
             description
             featuredImage {
@@ -136,6 +135,7 @@ export const tagPageQuery = graphql`
             published
             unlisted
             weight
+            date(formatString: "MMMM DD, YYYY")
           }
         }
       }

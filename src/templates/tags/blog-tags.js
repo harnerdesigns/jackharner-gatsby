@@ -21,7 +21,6 @@ class TagRoute extends React.Component {
 
     return (
       <Layout>
-        <section className="section">
           <SEO title="Blog Tags" />
 
           <PageTitle>Blog Tags</PageTitle>
@@ -32,41 +31,41 @@ class TagRoute extends React.Component {
                 const tagLink = `/blog/tags/${_.kebabCase(tag)}/`
                 return (
                   <Link to={tagLink} className="tag__card">
-                    <h3>
-                      <FontAwesomeIcon fixedWidth icon={tagIcons[tag]} />
-                      {tag}
-                    </h3>{" "}
-                    <h4>
-                      {tags[tag]} Post{tags[tag] > 1 ? "s" : ""}
-                    </h4>
+                    <FontAwesomeIcon fixedWidth icon={tagIcons[tag]} />
+                      <h3>{tag}</h3>
+                      <h4>
+                        {tags[tag]} Post{tags[tag] > 1 ? "s" : ""}
+                      </h4>
                     <div className="tag__post-preview">
                       {posts
                         .filter(({ node: post }) =>
-                          (post.frontmatter.tags ?  post.frontmatter.tags.includes(tag) : false)
+                          post.frontmatter.tags
+                            ? post.frontmatter.tags.includes(tag)
+                            : false
                         )
                         .map(({ node: post }, i) => {
-                          if(i < 4){
-
-                          return (
-                            <img
-                              src={
-                                post.frontmatter.featuredImage.childImageSharp
-                                  .resize.src
-                              }
-                              alt={
-                                post.frontmatter.title +
-                                " | " +
-                                post.frontmatter.subtitle
-                              }
-                              title={
-                                post.frontmatter.title +
-                                " | " +
-                                post.frontmatter.subtitle
-                              }
-                            />
-                          )
-                        } else {return ""}
-
+                          if (i < 4) {
+                            return (
+                              <img
+                                src={
+                                  post.frontmatter.featuredImage.childImageSharp
+                                    .resize.src
+                                }
+                                alt={
+                                  post.frontmatter.title +
+                                  " | " +
+                                  post.frontmatter.subtitle
+                                }
+                                title={
+                                  post.frontmatter.title +
+                                  " | " +
+                                  post.frontmatter.subtitle
+                                }
+                              />
+                            )
+                          } else {
+                            return ""
+                          }
                         })}
                     </div>
                   </Link>
@@ -74,7 +73,6 @@ class TagRoute extends React.Component {
               })}
             </div>
           </main>
-        </section>
       </Layout>
     )
   }
@@ -93,7 +91,11 @@ export const tagPageQuery = graphql`
       limit: 1000
       sort: { fields: [frontmatter___date], order: DESC }
       filter: {
-        fields: { published: { eq: true }, unlisted: { eq: false }, collection: { eq: "blog" } }
+        fields: {
+          published: { eq: true }
+          unlisted: { eq: false }
+          collection: { eq: "blog" }
+        }
       }
     ) {
       totalCount

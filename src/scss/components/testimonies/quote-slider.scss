@@ -18,6 +18,26 @@
         align-items: center;
         justify-content: center;
     }
+
+    .slick-dots {
+        bottom: -3rem;
+
+        button {
+            &:before {
+                color: #fff;
+                font-size: 12px;
+            }
+        }
+
+        .slick-active {
+            button {
+                &:before {
+                    color: #fff;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
 }
 
 .quote__card {

@@ -18,9 +18,6 @@
     display: flex;
     align-self: flex-start;
     width: 100%;
-
-    &:hover {
-    }
   }
 }
 
@@ -37,6 +34,7 @@
 
   @include breakpoint(laptop) {
     grid-template-columns: 1fr;
+    align-self: stretch;
   }
 
   .notice--draft {
@@ -55,17 +53,18 @@
   }
 
   .featuredImage__wrapper {
-    grid-row: 1 / -1;
+    grid-row: 1 / span 2;
     align-self: flex-start;
     display: flex;
     align-items: center;
     justify-content: center;
 
     width: 100%;
-    height: 100%;
+    height: 15vh;
 
     @include breakpoint(laptop) {
-      height: 30vh;
+      height: 20vh;
+      grid-row: auto;
     }
 
     @include card(-1);
@@ -84,97 +83,83 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100%;
-    background: var(--color);
+    width: 100%;
     color: var(--text-color);
+    padding: 0.5rem 1rem;
 
     @include breakpoint(laptop) {
       justify-content: flex-start;
+      margin: auto;
+    }
+
+    .post__title,
+    .post__subtitle {
+      width: 100%;
+      color: var(--text-color);
+      margin: 0;
+      text-align: right;
+
+      @include breakpoint(laptop) {
+        text-align: center;
+      }
+    }
+
+    .post__title {
+      font-weight: 900;
+      grid-column: 2;
+      font-size: 1.5em;
+      @include breakpoint(laptop) {
+        font-size: 2em;
+      }
+    }
+
+    .post__subtitle {
+      font-style: italic;
+      font-size: 1em;
+
+      @include breakpoint(laptop) {
+        font-size: 1em;
+      }
     }
   }
 
   .card__meta {
     width: 100%;
-    padding: 0 1rem 1rem 1rem;
+    padding: 0 1rem;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
+    align-items: center;
+    margin-top: auto;
+    justify-content: center;
+    background: var(--darker-color);
+    border-left: 5px solid var(--color);
+    border-bottom: 5px solid var(--color);
+    border-right: 5px solid var(--color);
+    border-radius: 0 0 var(--border-radius) 0;
+    color: var(--darker-text-color);
+    @include card(-1);
+    @include breakpoint(laptop) {
+      display: grid;
+      border-radius: 0 0 var(--border-radius) var(--border-radius);
 
-    .tags {
-      margin-left: auto;
-      text-align: left;
-      font-weight: 100;
+      grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+    }
+
+    .tag__wrapper,
+    .card__date {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem;
       font-size: 1rem;
-
-
-      a {
+      .tag__label,
+      time {
+        transition: 300ms;
+        font-size: 0.8rem;
+        line-height: 1.2;
         font-weight: 100;
       }
-
-      @include breakpoint(laptop) {
-        margin-left: 0;
-        // margin-right: auto;
-        text-align: right;
-      }
     }
-
-    .card__date{
-      font-size: 1rem;
-      font-weight: 100;
-      margin-left: 1ch;
-
-      svg{
-        margin-right: 0.5ch;
-      }
-      
-    }
-  }
-
-  .post__title,
-  .post__subtitle {
-    width: 100%;
-    color: var(--text-color);
-
-    text-align: right;
-
-    @include breakpoint(laptop) {
-      text-align: left;
-    }
-  }
-
-  .post__title {
-    margin: 0;
-    font-weight: 900;
-    padding: 1rem;
-    grid-column: 2;
-    font-size: 1.5em;
-
-    // background: var( --color );
-    @include breakpoint(laptop) {
-      font-size: 2em;
-    }
-  }
-
-  .post__subtitle {
-    margin: 0;
-    padding: 0 1rem 1rem 1rem;
-    font-style: italic;
-
-    grid-column: 2;
-    font-size: 1em;
-
-    @include breakpoint(laptop) {
-      font-size: 1em;
-    }
-  }
-
-  .post__excerpt {
-    font-weight: 400;
-    padding: 1rem;
-    font-size: 1em;
-    color: $gray;
-    background: #fff;
-    width: 100%;
   }
 
   .external-link__icon {
@@ -203,66 +188,6 @@
   }
 }
 
-.blog--link {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  vertical-align: middle;
-  padding: 0.75em;
-  background: var(--text-color);
-  color: var(--color);
-  margin: 0.5em 0;
-  position: relative;
-  min-width: 0%;
-
-  transition: 300ms;
-  width: 100%;
-
-  border-bottom: 1px solid #ccc;
-
-  @include card(1);
-
-  @include breakpoint(laptop) {
-    width: 100%;
-    flex: 1 0;
-    margin: 0;
-    display: inline-flex;
-    align-items: flex-start;
-    border-bottom: none;
-    text-align: left;
-  }
-
-  &:hover {
-    width: 100%;
-    opacity: 1;
-    background: var(--darker-color);
-    color: var(--darker-text-color);
-  }
-
-  .subtitle {
-    font-size: 0.8em;
-    font-weight: 400;
-  }
-
-  .external-link__icon {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: var(--color);
-    color: var(--text-color);
-    padding: 0.2em;
-    font-size: 1.15rem;
-    width: 1.75em;
-    height: 1.75em;
-    transform: translate(30%, -30%);
-    border-radius: 1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
 .blog__link {
   // First Blog Card In Grid
 
@@ -271,13 +196,17 @@
   overflow: hidden;
 
   &:hover {
-    @include hardShadow(20, var(--darker-color));
+    @include hardShadow(5, var(--darker-color));
+
+    @include breakpoint(laptop) {
+      @include hardShadow(20, var(--darker-color));
+    }
   }
 
   &--large {
     @include breakpoint(laptop) {
       grid-column: auto / span 2;
-      // grid-row: auto / span 2;
+      // grid-row: auto / span 3;
       justify-self: stretch;
       align-self: stretch !important;
     }
@@ -293,33 +222,56 @@
       }
 
       .featuredImage__wrapper {
-        height: 100%;
+        height: 45vh;
+
+        @include breakpoint(laptop) {
+          height: 100%;
+          grid-row: 1 / span 2;
+        }
       }
 
       .card__titles {
         justify-content: center;
+        align-items: center;
+
+        .post__title {
+          text-align: center;
+          font-size: 3rem;
+
+          @include breakpoint(laptop) {
+            font-size: 3em;
+            text-align: left;
+          }
+        }
+        .post__subtitle {
+          text-align: center;
+          font-size: 2rem;
+          @include breakpoint(laptop) {
+            font-size: 2em;
+            text-align: left;
+          }
+        }
       }
 
       .card__meta {
+        border-radius: 0;
+        border-left: 0;
+        border-bottom-width: 15px;
         @include breakpoint(laptop) {
-          font-size: 1.5em;
+          border-right-width: 15px;
+          border-radius: 0 0 calc(var(--border-radius) * 2.5) 0;
         }
-      }
 
-      .post__title {
-        @include breakpoint(laptop) {
-          font-size: 3em;
-        }
-      }
-      .post__subtitle {
-        @include breakpoint(laptop) {
-          font-size: 2em;
-        }
-      }
+        .tag__wrapper,
+        .card__date {
+          @include breakpoint(laptop) {
+            font-size: 1.5em;
+          }
 
-      .post__excerpt {
-        @include breakpoint(laptop) {
-          font-size: 1.5em;
+          time,
+          .tag__label {
+            font-size: 1rem;
+          }
         }
       }
     }
@@ -333,12 +285,24 @@
 
   &--small {
     .blog__card {
+      grid-template-columns: 1fr 3fr;
+      border-radius: var(--border-radius);
+
+      .featuredImage__wrapper {
+        height: 100%;
+        grid-row: auto / span 2;
+        border-radius: var(--border-radius) 0 0 var(--border-radius);
+      }
+
       .featuredImage {
         height: 100%;
         width: 100%;
+        border-radius: var(--border-radius) 0 0 var(--border-radius);
+        object-fit: cover;
       }
       .post__title {
         font-size: 1.5rem;
+        padding-bottom: 0;
       }
       .post__subtitle {
         font-size: 1rem;
@@ -351,6 +315,19 @@
       .external-link__icon {
         font-size: 1.5rem;
       }
+
+      .card__meta {
+        border-left: 0;
+        border-radius: 0 0 var(--border-radius) 0;
+      }
+
+      .tag__wrapper,
+      .card__date {
+        .tag__label,
+        time {
+          font-size: 0.6rem;
+        }
+      }
     }
   }
 }
@@ -361,14 +338,21 @@
   justify-content: center;
   flex-direction: column;
   width: 95%;
+  z-index: 9;
 
   @include breakpoint(laptop) {
     width: 100%;
   }
 
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-align: center;
+  }
+
   h2 {
     margin-bottom: 0.5em;
-    text-align: center;
   }
 
   hr {
@@ -391,11 +375,12 @@
   }
 
   ul {
-    max-width: 80%;
+    max-width: 100%;
+    width: auto;
+    font-size: 1.5rem;
 
     @include breakpoint(laptop) {
       max-width: 75%;
-      width: 100%;
     }
 
     li > p {
@@ -446,11 +431,9 @@
     border: 10px solid #fff;
     border-radius: var(--border-radius);
 
-    @include breakpoint(laptop){
-    width: 75%;
-    border: 20px solid #fff;
-
-
+    @include breakpoint(laptop) {
+      width: 75%;
+      border: 20px solid #fff;
     }
   }
 

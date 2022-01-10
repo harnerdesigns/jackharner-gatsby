@@ -7,12 +7,15 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+import Drips from "./atoms/drips"
 
 const PageTitle = ({ children, subtitle = "" }) => {
-  return (
-    <header className="page-title">
-      <h1>{children}</h1>
 
+  return (
+    <header className="page-title slim pink" >
+      <Drips color="black" slim/>
+
+      <h1>{children}</h1>
       {subtitle && <h2>{subtitle}</h2>}
     </header>
   )

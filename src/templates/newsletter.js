@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import { NewsletterForm } from "../components/common/NewsletterForm"
 import ogImage from "../images/Learn-With-Me-OG-Image.jpg"
 import Button from "../components/atoms/button"
+import Drips from "../components/atoms/drips"
 
 const Newsletter = ({
   data,
@@ -25,6 +26,7 @@ const Newsletter = ({
       </section>
 
       <section className="slim pink">
+        <Drips color="black" wrapperHeight="100%"/>
         <h2>
           I only send{" "}
           <span title="For Legal Reasons, This Is A JOKE.">

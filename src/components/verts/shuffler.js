@@ -10,10 +10,29 @@ import Bonsai from "./bonsai"
 import Namecheap from "./namecheap"
 import Patreon from "./patreon"
 
+function shuffle(array) {
+  let currentIndex = array.length,  randomIndex;
+
+  // While there remain elements to shuffle...
+  while (currentIndex != 0) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}
+
 
 const Shuffler = ({index}) => {
 
   let verts = [<GridGospel />, <HarnerDesigns />, <Patreon />, <Printful />, <DigitalOcean />, <NordVPN />, <Bonsai />, <Namecheap />] 
+
 
   let vertCount = verts.length
 
@@ -25,8 +44,9 @@ const Shuffler = ({index}) => {
 
   } 
   
-  if (index == null || index === 0) {
-    index = random(0, vertCount)
+  if (index == null || index === undefined) {
+    index = random(0, vertCount - 1)
+    verts = shuffle(verts)
   
   } 
     return(

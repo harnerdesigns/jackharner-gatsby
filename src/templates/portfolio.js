@@ -7,6 +7,8 @@ import PageTitle from "../components/pageTitle"
 import ProjectCard from "../components/portfolio/projectCard"
 import TopTags from "../components/common/topTags"
 
+import portfolioOG from "../images/portfolio-ogImage.png"
+
 const Blog = ({ data, pageContext }) => {
   const { edges: posts } = data.allMarkdownRemark
 
@@ -20,9 +22,10 @@ const Blog = ({ data, pageContext }) => {
     <Layout >
       <SEO
         title={`Portfolio | ${topTags[0]}, ${topTags[1]}, ${topTags[2]}, & More `}
-        description={``}
+        description={`Take a closer look at some of Jack's best E-Commerce & Web Development Work. `}
+        image={portfolioOG}
       />
-      <PageTitle>Portfolio</PageTitle>
+      <PageTitle subtitle="Allow me to present some of my best work from throughout my 10+ year career in web development.">Portfolio</PageTitle>
       <section className="slim black">
         <TopTags topTags={topTags} postType="portfolio" />
       </section>

@@ -16,6 +16,7 @@ import styled from "styled-components"
 
 import jack from "../images/jack.png"
 import { breakpoints } from "../components/breakpoints"
+import Drips from "../components/atoms/drips"
 
 const IndexPage = ({ data, pageContext }) => {
   const { edges: posts } = data.allMarkdownRemark
@@ -29,13 +30,14 @@ const IndexPage = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title="Jack Of All Trades, Master Of Some" />
-      <section className="full black intro">
-        <IntroGrid>
-        <CanvasBG />
+      <section className="full white--wavy-5 black intro">
+        <IntroGrid style={{ zIndex: 1 }}>
+          <Drips color="#fff" wrapperHeight="40%" />
+          <CanvasBG />
           <ImageWrapper>
             <img src={jack} alt="Jack Harner" />
           </ImageWrapper>
-          <section className="introduction" style={{"zIndex": 2}}>
+          <section className="introduction" style={{ zIndex: 2 }}>
             <h1>
               Hi, I'm <b>Jack&nbsp;Harner</b>
             </h1>
@@ -69,27 +71,37 @@ const IndexPage = ({ data, pageContext }) => {
         <div className="column">
           <h1>Web Developer.</h1>
           <p>
-            Access it through a web browser? I can build it
-            with an emphasis on clean, responsive design. From landing pages & custom business applications to E-Commerce stores & everything
-            in between.
+            Access it through a web browser? I can build it with an emphasis on
+            clean, responsive design. From landing pages & custom business
+            applications to E-Commerce stores & everything in between.
           </p>
 
           <h1>E-Commerce Consultant.</h1>
 
-          <p>Whether your company is just getting started selling online, or you're looking to grow your online presence, I can help! I solve problems through programming, automation, process design & more.</p>
+          <p>
+            Whether your company is just getting started selling online, or
+            you're looking to grow your online presence, I can help! I solve
+            problems through programming, automation, process design & more.
+          </p>
 
-          <p><Link to="/contact">Schedule a FREE Intro Call</Link> and let's figure out how you can start selling better online.</p>
-
+          <p>
+            <Link to="/contact">Schedule a FREE Intro Call</Link> and let's
+            figure out how you can start selling better online.
+          </p>
         </div>
       </section>
-      <section className="half pink quotes__wrapper">
+      <section className="half pink black--wavy quotes__wrapper">
+        <Drips color="black" slim />
+
         <h1>A Man Of The People:</h1>
 
         <Quotes quotes={quotes} />
       </section>
       <FreelanceCountdown />
       <section className="full white row">
-        <div className="column">
+        <Drips color="black" slim />
+
+        <div className="column" style={{ marginBottom: "6rem" }}>
           <h1>I Learn In Public.</h1>
 
           <p>
@@ -225,12 +237,14 @@ export const pageQuery = graphql`
 
 const IntroGrid = styled.section`
   display: grid;
-  grid-template-columns: 1fr; 
+  grid-template-columns: 1fr;
   z-index: 2;
+  margin-bottom: 5rem;
 
   @media ${breakpoints.tablet} {
     grid-template-columns: 1fr 2fr;
     align-items: center;
+    margin-bottom: 2rem;
   }
 
   @media ${breakpoints.laptop} {
@@ -241,10 +255,15 @@ const IntroGrid = styled.section`
 
 const ImageWrapper = styled.div`
   width: 100%;
-    pointer-events: none;
+  pointer-events: none;
   display: flex;
-    z-index: 2;
-    align-self: flex-end;
+  z-index: -1 !important;
+  align-self: flex-end;
+  margin: -2rem 0 0;
+
+  @media ${breakpoints.tablet} {
+    margin: -4rem 0 -2rem;
+  }
 
   img {
     width: 100%;

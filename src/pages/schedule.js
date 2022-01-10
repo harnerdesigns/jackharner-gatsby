@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react"
-import { Link, graphql } from "gatsby"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import PageTitle from "../components/pageTitle"
 import SEO from "../components/seo"
-import { Helmet } from "react-helmet"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { set, toLower } from "lodash"
+
+import {  toLower } from "lodash"
 import { CalendlyEventListener, InlineWidget } from "react-calendly"
 import Typing from "../components/Typing"
 
