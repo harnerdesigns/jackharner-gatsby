@@ -25,7 +25,7 @@ $gray: #212121;
       @content;
     }
   } @else if $point == desktop {
-    @media (min-width: 75rem) {
+    @media (min-width: 1281px) {
       @content;
     }
   } @else if $point == laptop {

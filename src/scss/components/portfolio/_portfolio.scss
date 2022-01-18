@@ -77,9 +77,8 @@
   }
 
   .project__tags {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
     color: #fff;
     background: rgba(0, 0, 0, 0.2);
     font-size: 1em;
@@ -88,12 +87,23 @@
     margin: 0 4rem;
     border-radius: 0 0 var(--border-radius) var(--border-radius);
 
+    @include breakpoint(laptop) {
+      width: 95%;
+      margin: 0 auto;
+    }
+
     li {
       list-style: none;
-      padding: 0 0.25em;
+      padding: 0.25em;
       margin: 0;
+      display: grid;
+      place-items: center;
       span {
         font-size: 0.8em;
+        line-height: 1;
+        @include breakpoint(laptop) {
+          font-size: 0.6em;
+        }
       }
 
       svg {
@@ -122,6 +132,7 @@
       }
     }
     .project__tags {
+      width: 60%;
       li {
         &:after {
           content: "";
