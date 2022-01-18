@@ -1,6 +1,6 @@
 .page-title {
   width: 100%;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -36,9 +36,11 @@
     color: #fff;
     text-shadow: -1px -1px 1px #000, -2px -2px 1px #000, 1px 1px 1px #000, 2px 2px 1px #000, 1px -1px 1px #000,
       2px -2px 1px #000, -1px 1px 1px #000, -2px 2px 1px #000;
+      font-size: 2rem;
 
     @include breakpoint(laptop) {
       max-width: 65%;
+      font-size: 2.25rem;
       margin: 0 auto;
     }
   }

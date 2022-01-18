@@ -21,7 +21,6 @@ export default class ShareLinks extends Component{
 
 
     <aside className="share-buttons">
-        <Drips color="black" slim />
         <h4 className="shareThis"><FontAwesomeIcon icon="share-alt"/>&nbsp;Share This Post:</h4>
 
         <a href={"https://www.facebook.com/sharer/sharer.php?u=" + postPermalink}
