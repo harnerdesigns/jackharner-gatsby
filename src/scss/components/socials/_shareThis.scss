@@ -10,8 +10,6 @@
     background: var(--text-color);
     grid-gap: 1rem;
     padding: 1rem;
-    position: relative;
-    padding-bottom: 7rem;
 
     @include breakpoint(laptop) {
         width: 100%;
