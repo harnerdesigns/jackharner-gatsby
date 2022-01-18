@@ -41,7 +41,7 @@ export default class MainMenu extends Component {
         <button id="mobileMenuToggle" class={(this.state.isOpen ? "is-open" : "")} aria-label="Menu" onClick={this.toggleMenu} type={"button"}>
             <FontAwesomeIcon fixedWidth icon={(this.state.isOpen ? "times" : "bars")}></FontAwesomeIcon>
         </button>
-        <button id="mobileMenuBG" class={(this.state.isOpen ? "is-open" : "")} onClick={this.toggleMenu} aria-label="Menu"></button>
+        <button id="mobileMenuBG" class={(this.state.isOpen ? "is-open" : "")} onClick={this.toggleMenu} aria-label="Menu"><FontAwesomeIcon fixedWidth icon={"times"}></FontAwesomeIcon></button>
     </>)
     }
 

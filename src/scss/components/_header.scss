@@ -55,7 +55,12 @@
 
   &--unfixed{
     .main_head{
-      background: rgba(0,0,0,0.6);
+      background: none;
+      box-shadow: none;
+
+      a.button, button.button{
+        background: #000;
+      }
     }
   }
 
