@@ -79,26 +79,3 @@ const Newsletter = ({
 }
 
 export default Newsletter
-
-export const pageQuery = graphql`
-  query MailingListQuery {
-    photoRoll: markdownRemark(frontmatter: { title: { eq: "Photo Roll" } }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-        photos {
-          photo {
-            childImageSharp {
-              fluid(maxWidth: 1200) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          link
-        }
-      }
-    }
-  }
-`

@@ -1,5 +1,5 @@
 nav.newsletterNavigation {
-    @extend nav.postNavigation;
+    @extend .postNavigation;
 
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;

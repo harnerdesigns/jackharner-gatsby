@@ -12,7 +12,7 @@ const _ = require("lodash");
 const BlogTitle = ({ post }) => {
 
     return(<header className={"blog-title " + post.fields.collection} style={{
-        backgroundImage:(post.frontmatter.featuredImage ?  'url(' + post.frontmatter.featuredImage.childImageSharp.sizes.originalImg + ')' : '')
+        backgroundImage:(post.frontmatter.featuredImage ?  'url(' + post.frontmatter.featuredImage.childImageSharp.original.src + ')' : '')
     }}>
         <Drips color="black" slim />
 

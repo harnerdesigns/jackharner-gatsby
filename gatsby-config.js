@@ -1,11 +1,5 @@
-import dotenv from "dotenv"
-dotenv.config({
-  path: `.env.${process.env.NODE_ENV}`,
-});
-
 module.exports = {
-  pathPrefix: `/jackharner-gatsby`,
-  siteMetadata: {
+siteMetadata: {
     title: `Jack Harner`,
     description: `Jack Harner is a Freelance Web Developer & E-Commerce Consultant based in Denver, Colorado.`,
     author: `@jackharner`,
@@ -68,7 +62,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GA,
+        trackingId: "UA-65838121-9",
       },
     },
     `gatsby-transformer-sharp`,
@@ -202,5 +196,8 @@ module.exports = {
         ],
       },
     },
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
   ],
 }

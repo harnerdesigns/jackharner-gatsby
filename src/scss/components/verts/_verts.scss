@@ -176,7 +176,7 @@
     }
 
     @include breakpoint(mobileonly){
-        margin-top: (35vh / 2)!important;
+        margin-top: calc(35vh / 2)!important;
     }
 
     .vert__content {
@@ -233,7 +233,7 @@
         filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.4));
 
         @include breakpoint(mobileonly){
-            margin: (35vh / -2) 0 0;
+            margin: calc(35vh / -2) 0 0;
         }
 
         @include breakpoint(desktop) {
