@@ -33,6 +33,8 @@ const CtaContainer = styled.div`
   text-align: center;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24),
   0 1px 8px rgba(0, 0, 0, 0.12);
+  border-radius: 1em;
+
   .title__box{
     border-bottom:5px solid #333;
 
@@ -53,13 +55,16 @@ const CtaContainer = styled.div`
   }
   
   @media ${breakpoints.laptop} {
-    width: 65%;
+    width: 85%;
 
     grid-template-columns: 1fr ;
     grid-gap: 1em;
     align-items: center;
     justify-content: center;
 
-    border-radius: 1em;
+  }
+
+  @media ${breakpoints.desktop} {
+    width: 75%;
   }
 `

@@ -113,7 +113,7 @@ siteMetadata: {
         start_url: `/`,
         background_color: `#E91E63`,
         theme_color: `#E91E63`,
-        display: `minimal-ui`,
+        display: `fullscreen`,
         icon: `src/images/jackharner-icon.svg`, // This path is relative to the root of the site.
       },
     },
@@ -198,6 +198,6 @@ siteMetadata: {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }
