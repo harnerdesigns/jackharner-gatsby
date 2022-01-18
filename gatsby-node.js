@@ -1,10 +1,12 @@
-const _ = require("lodash")
-const path = require("path")
-const fetch = require("node-fetch")
+import _ from "lodash"
+import path from "path"
+import fetch from "node-fetch"
 
-const { createFilePath } = require(`gatsby-source-filesystem`)
-const { attachFields } = require(`gatsby-plugin-node-fields`)
-require("dotenv").config({
+import { createFilePath } from "gatsby-source-filesystem"
+import { attachFields } from "gatsby-plugin-node-fields"
+import dotenv from "dotenv"
+
+dotenv.config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 

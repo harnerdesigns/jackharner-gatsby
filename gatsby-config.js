@@ -1,3 +1,8 @@
+import dotenv from "dotenv"
+dotenv.config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   pathPrefix: `/jackharner-gatsby`,
   siteMetadata: {
@@ -68,14 +73,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        defaultLayouts: {
-          blog: require.resolve("./src/templates/blog-post.js"),
-        },
-      },
-    },
 
     {
       resolve: "gatsby-transformer-remark",
@@ -130,7 +127,12 @@ module.exports = {
     "gatsby-plugin-advanced-sitemap",
     "gatsby-plugin-styled-components",
     `gatsby-plugin-twitter`,
-
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://jackharner.com`,
+      },
+    },
     {
       resolve: "gatsby-plugin-feed",
       options: {
