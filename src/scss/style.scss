@@ -339,6 +339,9 @@ ul {
   min-height: 50vh;
   padding: 3rem;
   @include breakpoint(laptop) {
+    padding: 3rem;
+  }
+  @include breakpoint(wide) {
     padding: 3rem 5rem;
   }
 }

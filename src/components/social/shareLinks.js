@@ -16,7 +16,7 @@ export default class ShareLinks extends Component{
     
     render(){
         let postPermalink = "https://jackharner.com" + this.post.fields.slug;
-        let postImage = "https://jackharner.com" + (this.post.frontmatter.featuredImage ? this.post.frontmatter.featuredImage.childImageSharp.sizes.src : defaultOGImage)
+        let postImage = "https://jackharner.com" + (this.post.frontmatter.featuredImage ? this.post.frontmatter.featuredImage.childImageSharp.original.src : defaultOGImage)
         return(
 
 

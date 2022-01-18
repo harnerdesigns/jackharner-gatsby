@@ -24,7 +24,7 @@ export default function Template(props) {
           " By Jack Harner."
         }
         image={
-          post.fields.ogImage ? post.frontmatter.ogImage.childImageSharp.sizes.src : (post.frontmatter.logo
+          post.fields.ogImage ? post.frontmatter.ogImage.childImageSharp.original.src : (post.frontmatter.logo
             ? post.frontmatter.logo.publicURL
             : defaultOGImage)
         }
@@ -68,7 +68,7 @@ export default function Template(props) {
               {post.frontmatter.images.map((image, index) => {
                 return image ? (
 
-                  <img src={image.childImageSharp.sizes.src} alt="" />
+                  <img src={image.childImageSharp.original.src} alt="" />
                   
                   ) : (
                     ""
@@ -133,7 +133,7 @@ export const pageQuery = graphql`
         tags
         images {
           childImageSharp {
-            sizes {
+            original {
               src
             }
           }

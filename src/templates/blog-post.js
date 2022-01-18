@@ -39,8 +39,8 @@ export default function Template(props) {
         description={post.excerpt}
         image={
           post.fields.ogImage
-            ? post.frontmatter.ogImage.childImageSharp.sizes.src
-            : post.frontmatter.featuredImage.childImageSharp.sizes.src
+            ? post.frontmatter.ogImage.childImageSharp.original.src
+            : post.frontmatter.featuredImage.childImageSharp.original.src
         }
       />
       <BlogTitle post={post} />
@@ -109,10 +109,10 @@ export const pageQuery = graphql`
         featuredImage {
           absolutePath
           childImageSharp {
-            sizes {
-              ...GatsbyImageSharpSizes
+            original {
+              
               src
-              originalImg
+              
             }
           }
         }
@@ -120,10 +120,10 @@ export const pageQuery = graphql`
         ogImage {
           absolutePath
           childImageSharp {
-            sizes {
-              ...GatsbyImageSharpSizes
+            original {
+              
               src
-              originalImg
+              
             }
           }
         }

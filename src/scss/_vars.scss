@@ -100,7 +100,7 @@ $gray: #212121;
   @for $i from 1 through $distance {
     @if $i == $distance {
       @if $filter == true {
-        $shadow: #{$shadow} drop-shadow(#{$i / 3}px #{$i / 3}px 0 #{$color});
+        $shadow: #{$shadow} drop-shadow(#{math.div($i , 3)}px #{math.div($i , 3)}px 0 #{$color});
       } @else {
         $shadow: #{$shadow} #{$i}px #{$i}px 0 #{$color};
       }
