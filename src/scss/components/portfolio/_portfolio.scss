@@ -370,7 +370,8 @@
     border: 5px solid #000;
     width: auto;
     padding: 1rem;
-    width: 100%;
+    width: auto;
+    max-width: 100%;
   }
   .logo {
     @include breakpoint(laptop) {
