@@ -1,6 +1,10 @@
 ---
 title: Testimonies
 quotes: 
+  - quote: "big shout to @JackHarner for the recent work on one of my sites. Am immediately hiring him again for more work. Really good dude and developer for Shopify, eCommerce, and other website solutions."
+    by: Matt Lady
+    title: Owner @ High Key Geek
+    link: https://twitter.com/mattlady/status/1487254356353175552
   - quote: "Jack is a workhorse. He's talented, reliable, and his code is clean. It's a pleasure to work together, and I would recommend him to anyone."
     by: Mike Weaver
     title: Lead Developer @ Electric Eye
