@@ -17,7 +17,7 @@ const Quotes = ({ quotes }) => {
         infinite: true,
         speed: 500,
         autoplay: true,
-        autoplaySpeed: 3500,
+        autoplaySpeed: 7000,
         slidesToShow: 3,
         slidesToScroll: 3,
         adaptiveWidth: true,
