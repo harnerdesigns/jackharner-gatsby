@@ -71,7 +71,7 @@ class TagRoute extends React.Component {
 
                   return <>{card}</>
                 })}
-              {posts.length > 2 && <Shuffler />}
+              {posts.length > 2 && postType === "blog" && <Shuffler />}
             </div>
           </main>
       </Layout>

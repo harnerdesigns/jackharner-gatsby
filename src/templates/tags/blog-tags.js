@@ -28,7 +28,7 @@ class TagRoute extends React.Component {
           <main className="page_body page_body--grid">
             <div className="tag-grid">
               {sortedTags.map((tag, index) => {
-                const tagLink = `/blog/tags/${_.kebabCase(tag)}/`
+                const tagLink = (tag === 'WordPress' ? `/blog/tags/wordpress/` :  `/blog/tags/${_.kebabCase(tag)}/`)
                 return (
                   <Link to={tagLink} className="tag__card">
                     <FontAwesomeIcon fixedWidth icon={tagIcons[tag]} />

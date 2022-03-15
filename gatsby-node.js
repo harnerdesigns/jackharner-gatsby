@@ -10,7 +10,6 @@ require("dotenv").config({
 
 const { NODE_ENV, CONVERTKIT_SECRET, CONVERTKIT_KEY } = process.env
 
-console.log(NODE_ENV)
 
 function isBlogNode(node) {
   if (node.internal.type !== "MarkdownRemark") {
@@ -135,6 +134,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     const parent = getNode(_.get(node, "parent"))
 
     const slug = createFilePath({ node, getNode, basePath: `content/blog` })
+    console.log({slug})
     createNodeField({
       node,
       name: `slug`,
@@ -315,7 +315,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       sortedTopBlogTags[item[0]] = item[1]
     })
 
-    console.log({ sortedTopBlogTags: sortedTopBlogTags })
+    // console.log({ sortedTopBlogTags: sortedTopBlogTags })
 
     blogTags = _.uniq(blogTags)
 
@@ -339,7 +339,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     // Make tag pages
 
     blogTags.forEach(tag => {
-      const tagPath = `/blog/tags/${_.kebabCase(tag)}/`
+      const tagPath = (tag === 'WordPress' ? `/blog/tags/wordpress/` :  `/blog/tags/${_.kebabCase(tag)}/`)
 
       createPage({
         path: tagPath,
@@ -406,7 +406,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       sortedTopPortfolioTags[item[0]] = item[1]
     })
 
-    console.log({ sortedTopPortfolioTags: sortedTopPortfolioTags })
+    // console.log({ sortedTopPortfolioTags: sortedTopPortfolioTags })
 
     portfolioTags = _.uniq(portfolioTags)
 
@@ -500,7 +500,7 @@ async function getSubscriberCount(convertkit_secret, convertkit_key) {
   )
     .then(response => response.json())
     .then(data => {
-      console.log({ convertkitRes: data })
+      // console.log({ convertkitRes: data })
       return data.total_subscribers
     })
     .catch(err => console.error(err))
