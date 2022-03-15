@@ -17,7 +17,7 @@ const ProjectHeader = ({ post, index, small, nolink }) => {
     tags = (
       <div className="project__tags">
         {filterTags.map((tag, i) => {
-          const tagLink = `/portfolio/tags/${_.kebabCase(tag)}/`
+          const tagLink = (tag === 'WordPress' ? `/portfolio/tags/wordpress/` :  `/portfolio/tags/${_.kebabCase(tag)}/`)
 
           return (
             <Link to={tagLink}>

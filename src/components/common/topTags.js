@@ -30,7 +30,7 @@ const TopTags = ({ topTags = [], postType = null, back = false, exclude = null, 
           Back to {postTypeLabels.plural}
         </Link></li>}
         {topTags && topTags.map((tag, i) => {
-          const tagLink = `/${postType}/tags/${_.kebabCase(tag)}/`
+          const tagLink = (tag === 'WordPress' ? `/${postType}/tags/wordpress/` :  `/${postType}/tags/${_.kebabCase(tag)}/`)
           if (i < limit && tag !== exclude) {
             return (
               <li className="top-tag" key={i}>
