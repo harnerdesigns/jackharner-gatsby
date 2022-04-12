@@ -76,7 +76,7 @@
 
     &:after {
         content: "Ad";
-        background: rgba(#fff,0.3);
+        background: rgba(#fff, 0.3);
         color: #fff;
         position: absolute;
         top: 0;
@@ -175,8 +175,8 @@
         grid-template-columns: 4fr 5fr;
     }
 
-    @include breakpoint(mobileonly){
-        margin-top: calc(35vh / 2)!important;
+    @include breakpoint(mobileonly) {
+        margin-top: calc(35vh / 2) !important;
     }
 
     .vert__content {
@@ -232,7 +232,7 @@
         display: flex;
         filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.4));
 
-        @include breakpoint(mobileonly){
+        @include breakpoint(mobileonly) {
             margin: calc(35vh / -2) 0 0;
         }
 
@@ -770,5 +770,88 @@
     }
     100% {
         top: 0;
+    }
+}
+
+.vert--shaklee {
+    $shakleeGreen: #133e35;
+    $lighterGreen: #006a52;
+    $border-width: 15px;
+    background: #fff;
+    color: $black;
+    flex-direction: column;
+
+    border-top: $border-width solid $shakleeGreen;
+    border-bottom: $border-width solid $shakleeGreen;
+
+    .grid {
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+
+        @include breakpoint(laptop) {
+            grid-template-columns: 3fr 2fr;
+        }
+
+        img.meology-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            @include breakpoint(laptop) {
+                width: calc(100% + 1rem);
+                height: calc(100% + 1rem);
+                
+                margin-top: -1rem;
+                margin-left: 1rem;
+            }
+        }
+    }
+
+    a.button,
+    button.button {
+        color: #fff;
+        background: $shakleeGreen;
+        width: 100%;
+
+        img {
+            margin-right: 0.5ch;
+        }
+    }
+
+    h3 {
+        strong {
+            font-weight: 900;
+        }
+    }
+
+    .shaklee__perks {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        li {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            svg {
+                margin-right: 0.5rem;
+                color: $shakleeGreen;
+            }
+            span {
+                font-size: 1rem;
+                font-weight: 400;
+            }
+        }
+    }
+
+    &:hover {
+        color: $shakleeGreen;
+
+        a.button,
+        button.button {
+            background: #006a52;
+        }
     }
 }

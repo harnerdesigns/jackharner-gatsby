@@ -1,0 +1,76 @@
+.page-wrapper{
+  width: 100%;
+  min-height: 100vh;
+  display: grid; 
+  grid-template-columns: 1fr;
+}
+
+.page-width{
+  max-width: $pageWidth;
+  width: 95%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  
+  @include breakpoint(laptop) {
+      width: 100%;
+  }
+}
+
+.content-width{
+  max-width: 75ch;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  
+  @include breakpoint(laptop) {
+      width: 100%;
+  }
+}
+
+.grid {
+  display: grid;
+  position: relative;
+}
+
+@for $i from 1 to 10 {
+  .grid--#{$i} {
+      grid-template-columns: repeat(#{$i}, 1fr);
+  }
+  .grid--span-#{$i} {
+      grid-column: span #{$i};
+  }
+}
+.grid--span-all {
+  grid-column: 1 / -1;
+}
+
+@include breakpoint(mobileonly) {
+  @for $i from 1 to 10 {
+      .grid--mobile-#{$i} {
+          grid-template-columns: repeat(#{$i}, 1fr);
+      }
+      .grid--mobile-span-#{$i} {
+          grid-column: span #{$i};
+      }
+  }
+}
+
+@include breakpoint(tabletdown) {
+  @for $i from 1 to 10 {
+      .grid--tablet-#{$i} {
+          grid-template-columns: repeat(#{$i}, 1fr);
+      }
+      .grid--tablet-span-#{$i} {
+          grid-column: span #{$i};
+      }
+  }
+}
+.grid--mobile-span-all {
+  grid-column: 1 / -1;
+}
+
+
+main {position: relative;}
