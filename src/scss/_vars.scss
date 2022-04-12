@@ -20,32 +20,70 @@ $red: #f44336;
 $pink: var(--color, #e91e63);
 $black: #000;
 $gray: #212121;
+$pageWidth: 100%;
 
 @mixin breakpoint($point) {
-  @if $point == wide {
-    @media (min-width: 90rem) {
-      @content;
-    }
-  } @else if $point == desktop {
-    @media (min-width: 1281px) {
-      @content;
-    }
-  } @else if $point == laptop {
-    @media (min-width: 64rem) {
-      @content;
-    }
-  } @else if $point == tablet {
-    @media (min-width: 37.5rem) {
-      @content;
-    }
-  } @else if $point == phablet {
-    @media (min-width: 37.5rem) {
-      @content;
-    }
-  } @else if $point == mobileonly {
-    @media (max-width: 37.5rem) {
-      @content;
-    }
+  @if $point==desktop {
+      @media (min-width: $pageWidth) {
+          @content ;
+      }
+  }
+  @else if $point==laptop {
+      @media (min-width: 1024px) {
+          @content ;
+      }
+  }
+  @else if $point==tablet {
+      @media (min-width: 768px) {
+          @content ;
+      }
+  }
+  @else if $point==tabletdown {
+      @media (max-width: 768px) {
+          @content ;
+      }
+  }
+  @else if $point==phablet {
+      @media (min-width: 375px) {
+          @content ;
+      }
+  }
+  @else if $point==mobileonly {
+      @media (max-width: 375px) {
+          @content ;
+      }
+  }
+  @else if $point==portrait {
+      @media (orientation: portrait) {
+          @content ;
+      }
+  }
+}
+
+
+.mobile-only{
+  display: none;
+  @include breakpoint(tabletdown){
+      display:flex;
+  }
+}
+
+.tablet-only{
+  display: none;
+  @include breakpoint(tabletdown){
+      display:flex;
+  }
+  @include breakpoint(tablet){
+      display:flex;
+  }
+  @include breakpoint(laptop){
+      display: none;
+  }
+}
+.desktop-only{
+  display: none;
+  @include breakpoint(laptop){
+      display:flex;
   }
 }
 

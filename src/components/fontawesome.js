@@ -41,6 +41,8 @@ import {
   faCode,
   faLock,
   faBacon,
+  faMoneyBill,
+  faShieldAlt
 } from "@fortawesome/free-solid-svg-icons"
 
 config.autoAddCss = false
@@ -86,5 +88,6 @@ library.add(
   faSpinner,
   faCode,
   faLock,
-  faBacon
-)
+  faBacon,
+  faMoneyBill,
+  faShieldAlt)

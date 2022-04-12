@@ -9,6 +9,7 @@ import Printful from "./printful"
 import Bonsai from "./bonsai"
 import Namecheap from "./namecheap"
 import Patreon from "./patreon"
+import Shaklee from "./shaklee"
 
 function shuffle(array) {
   let currentIndex = array.length,  randomIndex;
@@ -31,7 +32,7 @@ function shuffle(array) {
 
 const Shuffler = ({index}) => {
 
-  let verts = [<GridGospel />, <HarnerDesigns />, <Patreon />, <Printful />, <DigitalOcean />, <NordVPN />, <Bonsai />, <Namecheap />] 
+  let verts = [<GridGospel />, <HarnerDesigns />, <Shaklee />, <Patreon />, <Printful />, <DigitalOcean />, <NordVPN />, <Bonsai />, <Namecheap />] 
 
 
   let vertCount = verts.length
