@@ -6,7 +6,7 @@ featuredImage: "./steve-johnson-wpw8sHoBtSY-unsplash.jpg"
 ogImage: "./steve-johnson-wpw8sHoBtSY-unsplash.jpg"
 tags: ['Shopify', 'Code Snippets']
 externalLink: ""
-published: false
+published: true
 ---
 
 Shopify sections make it super easy to add customizable settings that your clients can control with a wonderful user-friendly UI.
