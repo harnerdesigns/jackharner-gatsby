@@ -47,7 +47,7 @@
   grid-column: 1 / -1;
 }
 
-@include breakpoint(mobileonly) {
+@include breakpoint(tabletdown) {
   @for $i from 1 to 10 {
       .grid--mobile-#{$i} {
           grid-template-columns: repeat(#{$i}, 1fr);

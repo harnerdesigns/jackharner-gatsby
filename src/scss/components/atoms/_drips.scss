@@ -9,18 +9,18 @@
     z-index: 1;
     pointer-events: none;
     overflow: hidden;
-    @include breakpoint(mobileonly){
+    @include breakpoint(tabletdown){
         overflow:hidden;
     }
 
 
     svg {
-        width: 101%;
+        width: 400%;
         height: 100%;
         object-fit:cover;
         object-position: center bottom;
-        @include breakpoint(mobileonly){
-            width: 400%;
+        @include breakpoint(laptop){
+            width: 101%;
         }
     }
 

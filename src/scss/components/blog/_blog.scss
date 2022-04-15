@@ -428,6 +428,7 @@
   .gatsby-resp-image-wrapper {
     width: 100%;
     max-width: 100% !important;
+    max-height: 75vh;
     margin: 0 auto 1.5em;
     border: 10px solid #fff;
     border-radius: var(--border-radius);
@@ -435,6 +436,11 @@
     @include breakpoint(laptop) {
       width: 75%;
       border: 20px solid #fff;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
   }
 

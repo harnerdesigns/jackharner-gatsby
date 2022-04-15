@@ -123,7 +123,7 @@
       padding: 0;
     }
 
-    @include breakpoint(mobileonly) {
+    @include breakpoint(tabletdown) {
       &:nth-of-type(1n + 5) {
         display: none;
       }

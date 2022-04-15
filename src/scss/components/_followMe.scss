@@ -21,7 +21,7 @@ $producthunt: #da552f;
   align-items: center;
   justify-content: center;
 
-  @include breakpoint(mobileonly) {
+  @include breakpoint(tabletdown) {
     width: 100%;
     justify-content: center;
     flex-direction: column;
@@ -31,9 +31,7 @@ $producthunt: #da552f;
     text-decoration: none;
     display: block;
 
-    @include breakpoint(mobileonly) {
-      width: 100%;
-    }
+    width: 100%;
   }
 
   a {
@@ -54,7 +52,7 @@ $producthunt: #da552f;
     letter-spacing: 0.25em;
     transition: background 300ms;
 
-    @include breakpoint(mobileonly) {
+    @include breakpoint(tabletdown) {
       flex-direction: row;
       width: 100%;
       font-size: 1em;
@@ -68,7 +66,7 @@ $producthunt: #da552f;
       font-size: 4em;
       margin-bottom: 0.25em;
 
-      @include breakpoint(mobileonly) {
+      @include breakpoint(tabletdown) {
         font-size: 2em;
         margin: 0.5em;
       }
@@ -128,7 +126,7 @@ $producthunt: #da552f;
         margin-top: -1em;
         color: #aaa;
 
-        @include breakpoint(mobileonly) {
+        @include breakpoint(tabletdown) {
           display: none;
         }
       }

@@ -44,7 +44,7 @@
                 transition: 100ms;
             }
 
-            @include breakpoint(mobileonly) {
+            @include breakpoint(tabletdown) {
                 font-size: 1.25em;
                 border-bottom: 1px solid #ccc;
                 color: var(--color);
@@ -62,7 +62,7 @@
                 border-radius: var(--border-radius);
                 margin: 0 0.5rem;
 
-                @include breakpoint(mobileonly) {
+                @include breakpoint(tabletdown) {
                     margin: 0;
                     width: 100%;
                     border-radius: 0;
@@ -78,7 +78,7 @@
             padding: 0.5em;
             margin-right: auto;
 
-            @include breakpoint(mobileonly) {
+            @include breakpoint(tabletdown) {
                 width: 100%;
                 height: 100%;
                 display: flex;
