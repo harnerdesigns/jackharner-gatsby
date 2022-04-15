@@ -828,6 +828,11 @@
         display: flex;
         align-items: flex-start;
         justify-content: space-around;
+        flex-direction: column;
+
+        @include breakpoint(laptop) {
+            flex-direction: row;
+        }
         li {
             list-style: none;
             display: flex;
@@ -835,6 +840,7 @@
             align-items: center;
             justify-content: center;
             width: 100%;
+            margin: 0;
             svg {
                 margin-right: 0.5rem;
                 color: $shakleeGreen;
