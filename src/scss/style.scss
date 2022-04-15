@@ -163,7 +163,7 @@ ul {
   padding: 5em 2em;
   position: relative;
 
-  @include breakpoint(mobileonly) {
+  @include breakpoint(tabletdown) {
     align-items: center;
     min-height: 75vh;
     padding: 5em 1em;
@@ -249,7 +249,7 @@ ul {
   }
 
   h2 {
-    @include breakpoint(mobileonly) {
+    @include breakpoint(tabletdown) {
       text-align: center;
     }
   }
@@ -487,7 +487,7 @@ section.black .title__box {
   }
 
   h3 {
-    @include breakpoint(mobileonly) {
+    @include breakpoint(tabletdown) {
       display: flex;
       // flex-direction: column;
       align-items: center;

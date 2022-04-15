@@ -175,7 +175,7 @@
         grid-template-columns: 4fr 5fr;
     }
 
-    @include breakpoint(mobileonly) {
+    @include breakpoint(tabletdown) {
         margin-top: calc(35vh / 2) !important;
     }
 
@@ -232,7 +232,7 @@
         display: flex;
         filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.4));
 
-        @include breakpoint(mobileonly) {
+        @include breakpoint(tabletdown) {
             margin: calc(35vh / -2) 0 0;
         }
 

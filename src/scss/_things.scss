@@ -141,7 +141,7 @@ p.tagline {
     margin: 0 1em;
   }
 
-  @include breakpoint(mobileonly) {
+  @include breakpoint(tabletdown) {
     &:nth-of-type(1) {
       border-radius: 10px 10px 0 10px;
     }

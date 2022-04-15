@@ -22,7 +22,7 @@ button.button {
         @include hardShadow(5, var(--darker-color));
     }
 
-    @include breakpoint(mobileonly) {
+    @include breakpoint(tabletdown) {
         width: 95%;
         font-size: 1em;
     }

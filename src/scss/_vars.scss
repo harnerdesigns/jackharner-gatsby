@@ -48,7 +48,7 @@ $pageWidth: 100%;
           @content ;
       }
   }
-  @else if $point==mobileonly {
+  @else if $point==tabletdown {
       @media (max-width: 375px) {
           @content ;
       }
