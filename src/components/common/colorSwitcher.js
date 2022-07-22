@@ -228,7 +228,7 @@ export default class ColorSwitcher extends Component {
     this.setState(
       {
         color: {
-          hex: "#005BBB",
+          hex: "#e91e63",
           rgb: {
             r: "0",
             g: "91",
@@ -242,7 +242,7 @@ export default class ColorSwitcher extends Component {
           },
         },
         selected_color: {
-          hex: "#005BBB",
+          hex: "#e91e63",
           rgb: {
             r: "0",
             g: "91",

@@ -1,6 +1,10 @@
 ---
 title: Testimonies
 quotes: 
+  - quote: "Jack's attention to detail and thorough communication always made us feel at ease. He has worked with us for about year developing our website and has been nothing short of patient and understanding. He comes HIGHLY recommended from National Roofing."
+    by: Jennifer D.
+    title: Marketing & Estimating Administrator @ National Roofing
+    link: https://nationalroofing.com
   - quote: "Jack saved my Shopify site from a very stupid SEO issue that would have killed all of my rankings. Highly recommended, very trustworthy dev. Truly a master of some trades."
     by: Sean Markey
     title: Rank Theory
