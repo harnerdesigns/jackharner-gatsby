@@ -36,17 +36,31 @@
       }
     @include breakpoint(laptop) {
     max-width: 50%;
-
     }
   
     @include breakpoint(desktop){
       max-width: 50%;
-  
+    }
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
   }
 
   .main_nav {
     margin-left: auto;
+  }
+
+
+  &--min{
+    grid-template-columns: 1fr;
+    .logo{
+      margin: 0 auto;
+      height: 6rem;
+      max-width: 100%;
+    }
   }
 }
 
