@@ -15,7 +15,7 @@ export default function Template(props) {
   let postContent = post.html
   postContent = postContent.replace(
     "</p>",
-    '</p><script async="true" type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CE7ITK7W&placement=jackharnercom" id="_carbonads_js"></script>'
+    '</p><script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CE7ITK7W&placement=jackharnercom" id="_carbonads_js"></script>'
   )
   let postContentArray = postContent.split("{{{vert}}}")
 

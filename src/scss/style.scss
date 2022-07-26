@@ -420,6 +420,9 @@ section.black .title__box {
 }
 
 .headroom-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   ~ section.intro, ~ .page-title, ~ .blog-title, ~ .project__header {
     padding-top: calc(125px);
     margin-top: -125px;
