@@ -69,7 +69,7 @@ const IndexPage = ({ data, pageContext }) => {
           />
         </div>
         <div className="column">
-          <h1>Web Developer.</h1>
+          <h1>Freelance Web Developer.</h1>
           <p>
             Access it through a web browser? I can build it with an emphasis on
             clean, responsive design. From landing pages & custom business
