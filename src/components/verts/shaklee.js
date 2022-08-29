@@ -41,7 +41,7 @@ const Shaklee = () => {
             <FontAwesomeIcon icon={"lock"} />
             Proven
           </h4>
-          <span>100+ Published Research Papers</span>
+          <span>Most clinically proven Wellness company in the world.</span>
         </li>
         <li>
           <h4>
