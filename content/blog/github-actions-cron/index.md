@@ -7,7 +7,6 @@ ogImage: "./chuttersnap-mytSmcgVHRE-unsplash.jpg"
 tags: ['Automation', 'Git', 'Newsletter']
 externalLink: ""
 published: true
-unlisted: true
 ---
 
 If you use GitHub actions to build and deploy (CI/CD) a project, you can schedule those actions to automatically run on a specific time interval using cron. This is sweet if you're building a pseudo-static site with data that doesn't change all the time, but does change often enough to want to automate the build process. I initially implemented cron into my GitHub Actions to build my side project [Live Music Forecast](https://livemusicforecast.com) every 6 hours. 
