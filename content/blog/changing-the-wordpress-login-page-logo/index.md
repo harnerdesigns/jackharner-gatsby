@@ -20,7 +20,7 @@ function jh_custom_logo_support() {
 }
 ```
 
-## Change The wp-login.php Logo
+## Changing The wp-login.php Logo
 
 Add this to your `functions.php` file:
 
