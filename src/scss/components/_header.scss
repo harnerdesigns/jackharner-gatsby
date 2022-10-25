@@ -7,18 +7,18 @@
   align-items: center;
   grid-template-columns: 3fr 1fr;
 
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   transition: background 300ms;
   z-index: 99999;
+  backdrop-filter: blur(1px);
   @include card(4);
 
   @include breakpoint(laptop) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  @include breakpoint(desktop){
+  @include breakpoint(desktop) {
     grid-template-columns: 1fr 3fr 1fr;
-
   }
 
   .logo {
@@ -32,17 +32,16 @@
     width: 100%;
     @include breakpoint(tablet) {
       max-width: 25vw;
-  
-      }
-    @include breakpoint(laptop) {
-    max-width: 50%;
     }
-  
-    @include breakpoint(desktop){
+    @include breakpoint(laptop) {
       max-width: 50%;
     }
 
-    img{
+    @include breakpoint(desktop) {
+      max-width: 50%;
+    }
+
+    img {
       width: 100%;
       height: 100%;
       object-fit: contain;
@@ -53,10 +52,9 @@
     margin-left: auto;
   }
 
-
-  &--min{
+  &--min {
     grid-template-columns: 1fr;
-    .logo{
+    .logo {
       margin: 0 auto;
       height: 6rem;
       max-width: 100%;
@@ -66,21 +64,30 @@
 
 .headroom {
   z-index: 40 !important;
+  width: 100%;
 
-  &--unfixed{
-    .main_head{
+  &--unfixed {
+    .main_head {
       background: none;
       box-shadow: none;
 
-      a.button, button.button{
+      a.button,
+      button.button {
         background: #000;
+      }
+
+      &:hover{
+        background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(5px);
+
       }
     }
   }
 
-  &--scrolled{
-    .main_head{
-      background: rgba(0,0,0,0.9);
+  &--scrolled {
+    .main_head {
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(15px);
     }
   }
 }

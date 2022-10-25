@@ -134,7 +134,7 @@ const IndexPage = ({ data, pageContext }) => {
           />
         </div>
       </section>
-      <section className="full black">
+      {/* <section className="full black">
         <h1
           style={{
             padding: "1rem",
@@ -151,7 +151,7 @@ const IndexPage = ({ data, pageContext }) => {
           </a>
         </p>
         <PhotoRoll photos={photos} />
-      </section>
+      </section> */}
     </Layout>
   )
 }

@@ -71,7 +71,6 @@ const Contact = () => (
           href="https://twitter.com/jackharner"
           className="twitter"
         >
-          <Drips color="#000" wrapperHeight="30%" numberPoints={15} />
           <FontAwesomeIcon icon={["fab", "twitter"]} />
           Twitter
         </a>
@@ -81,7 +80,6 @@ const Contact = () => (
           href="https://polywork.com/jackharner"
           className="polywork"
         >
-                    <Drips color="#000" wrapperHeight="30%" numberPoints={15} />
           <img src={PolyWorkLogo} alt="Polywork" />
           Polywork
         </a>
@@ -91,7 +89,6 @@ const Contact = () => (
           href="https://instagram.com/jackharner"
           className="instagram"
         >
-                    <Drips color="#000" wrapperHeight="30%" numberPoints={15} />
           <FontAwesomeIcon icon={["fab", "instagram"]} />
           Instagram
         </a>
@@ -101,7 +98,6 @@ const Contact = () => (
           href="https://dribbble.com/jackharner"
           className="dribbble"
         >
-                    <Drips color="#000" wrapperHeight="30%" numberPoints={15} />
           <FontAwesomeIcon icon={["fab", "dribbble"]} />
           Dribbble
         </a>
@@ -111,7 +107,6 @@ const Contact = () => (
           href="https://dev.to/jackharner"
           className="devto"
         >
-                    <Drips color="#000" wrapperHeight="30%" numberPoints={15} />
           <FontAwesomeIcon icon={["fab", "dev"]} />
           Dev.to
         </a>
@@ -121,7 +116,6 @@ const Contact = () => (
           href="https://github.com/harnerdesigns"
           className="github"
         >
-                    <Drips color="#000" wrapperHeight="30%" numberPoints={15} />
           <FontAwesomeIcon icon={["fab", "github"]} />
           GitHub
         </a>
@@ -131,7 +125,6 @@ const Contact = () => (
           href="https://www.producthunt.com/@jackharner"
           className="producthunt"
         >
-                    <Drips color="#000" wrapperHeight="30%" numberPoints={15} />
           <FontAwesomeIcon icon={["fab", "product-hunt"]} />
           Product Hunt
         </a>
