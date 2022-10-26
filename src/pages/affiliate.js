@@ -10,9 +10,7 @@ const verts = () => {
   return (
     <Layout>
       <SEO title="Affiliate Links" />
-      <section className="slim pink full-width">
         <PageTitle>My Affiliate Links</PageTitle>
-      </section>
       <section className="slim content black">
         <h3>
           If you want to help support Me and My Content, feel free to check out

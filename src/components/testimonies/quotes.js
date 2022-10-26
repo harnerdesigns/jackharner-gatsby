@@ -10,7 +10,7 @@ import QuoteCard from "./quote";
 
 const Quotes = ({ quotes }) => {
 
-    let quoteCards = quotes.map((quote) => <QuoteCard quote={quote} />)
+    let quoteCards = quotes?.map((quote) => <QuoteCard quote={quote} />)
 
     var settings = {
         dots: true,

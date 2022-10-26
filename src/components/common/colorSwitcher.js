@@ -26,7 +26,8 @@ let styles = {
     zIndex: 9999,
   },
   cover: {
-    background: "radial-gradient(#fff, rgba(0,0,0,0.4) 60%)",
+    background: "rgba(0,0,0,0.5)",
+    backdropFilter: "blur(5px)",
     height: "100vh",
     width: "100%",
     position: "fixed",

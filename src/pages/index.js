@@ -97,7 +97,12 @@ const IndexPage = ({ data, pageContext }) => {
 
         <Quotes quotes={quotes} />
       </section>
-      <FreelanceCountdown />
+      <section className="half black">
+        <FreelanceCountdown />
+        <h3 style={{textAlign: "center"}}>
+          Hiring a contract Web Developer? <Link to="/contact">Let's Chat &raquo;</Link>
+        </h3>
+      </section>
       <section className="full white row">
         <Drips color="black" slim />
 
@@ -134,7 +139,7 @@ const IndexPage = ({ data, pageContext }) => {
           />
         </div>
       </section>
-      <section className="full black">
+      {/* <section className="full black">
         <h1
           style={{
             padding: "1rem",
@@ -151,7 +156,7 @@ const IndexPage = ({ data, pageContext }) => {
           </a>
         </p>
         <PhotoRoll photos={photos} />
-      </section>
+      </section> */}
     </Layout>
   )
 }
