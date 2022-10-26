@@ -1,0 +1,27 @@
+.quotes-grid__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+    grid-gap: 1rem;
+    margin: 2rem auto 0;
+    @include breakpoint(tablet) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @include breakpoint(laptop) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .quote__card {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        @include card(1);
+
+        a{
+            margin-left: auto;
+        }
+    }
+}

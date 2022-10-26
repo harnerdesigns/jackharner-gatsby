@@ -97,7 +97,12 @@ const IndexPage = ({ data, pageContext }) => {
 
         <Quotes quotes={quotes} />
       </section>
-      <FreelanceCountdown />
+      <section className="half black">
+        <FreelanceCountdown />
+        <h3 style={{textAlign: "center"}}>
+          Hiring a contract Web Developer? <Link to="/contact">Let's Chat &raquo;</Link>
+        </h3>
+      </section>
       <section className="full white row">
         <Drips color="black" slim />
 

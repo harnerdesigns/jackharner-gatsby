@@ -30,7 +30,7 @@ export default class MainMenu extends Component {
         <nav className={"main_nav" + (this.state.isOpen ? " is-open" : "")}>
             <Link to="/portfolio">Portfolio</Link>
             <Link to="/blog">Blog</Link>
-            <Link href="https://harnerdesigns.com/shop?utm_source=jackharner">Shop</Link>
+            <a href="https://harnerdesigns.com/shop?utm_source=jackharner">Shop</a>
             <Link to="/newsletter">Newsletter</Link>
             <Link to="/about">About</Link>
             <ColorSwitcher />
@@ -38,10 +38,10 @@ export default class MainMenu extends Component {
 
         </nav>
 
-        <button id="mobileMenuToggle" class={(this.state.isOpen ? "is-open" : "")} aria-label="Menu" onClick={this.toggleMenu} type={"button"}>
+        <button id="mobileMenuToggle" className={(this.state.isOpen ? "is-open" : "")} aria-label="Menu" onClick={this.toggleMenu} type={"button"}>
             <FontAwesomeIcon fixedWidth icon={(this.state.isOpen ? "times" : "bars")}></FontAwesomeIcon>
         </button>
-        <button id="mobileMenuBG" class={(this.state.isOpen ? "is-open" : "")} onClick={this.toggleMenu} aria-label="Menu"><FontAwesomeIcon fixedWidth icon={"times"}></FontAwesomeIcon></button>
+        <button id="mobileMenuBG" className={(this.state.isOpen ? "is-open" : "")} onClick={this.toggleMenu} aria-label="Menu"><FontAwesomeIcon fixedWidth icon={"times"}></FontAwesomeIcon></button>
     </>)
     }
 

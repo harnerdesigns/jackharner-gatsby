@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-const Drips = ({ color, slim, wrapperHeight, svgWidth, numberPoints = 21 }) => {
+const Drips = ({ color, slim, wrapperHeight, svgWidth, numberPoints = 15 }) => {
   const wrapperRef = useRef()
   const [path, setPath] = useState("")
   const [built, setBuilt] = useState(false)
