@@ -195,31 +195,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           }
         }
       }
-      wpblog: wpcontent{
-        posts{
-          edges{
-            node{
-              status
-              tags {
-                edges {
-                  node {
-                    id
-                    name
-                    uri
-                  }
-                }
-              }
-              content
-              featuredImage {
-                node {
-                  id
-                  sourceUrl
-                }
-              }
-            }
-          }
-        }
-      }
 
       portfolio: allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
