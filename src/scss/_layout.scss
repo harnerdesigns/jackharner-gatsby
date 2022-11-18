@@ -73,4 +73,13 @@
 }
 
 
+.flex{
+  display:flex;
+
+  &--flex-start{
+    align-items: flex-start;
+  }
+}
+
+
 main {position: relative;}
