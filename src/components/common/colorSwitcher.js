@@ -55,24 +55,24 @@ export default class ColorSwitcher extends Component {
       // Default Colors when no Cookie Found.
       this.state = {
         color: {
-          hex: "#005BBB",
+          hex: "#E91E63",
           rgb: {
-            r: "0",
-            g: "91",
-            b: "187",
+            r: "233",
+            g: "30",
+            b: "99",
           },
         },
         selected_color: {
-          hex: "#005BBB",
+          hex: "#E91E63",
           rgb: {
-            r: "0",
-            g: "91",
-            b: "187",
+            r: "233",
+            g: "30",
+            b: "99",
           },
           hsl: {
-            h: 211,
-            s: 1,
-            l: 0.73,
+            h: 340,
+            s: 87,
+            l: 0.91,
             a: 1,
           },
         },
