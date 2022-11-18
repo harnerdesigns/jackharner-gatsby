@@ -107,7 +107,10 @@ const HireMe = () => {
     };
     fetch('https://app.hellobonsai.com/api/v1/custom_form_request_answer', requestOptions)
     .then(response => response.json())
-    .then(data => setSuccess(true));
+    .then(data => setSuccess(true)).catch((error)=>{
+      console.error({error})
+      setError(error);
+    });
 
     }
 

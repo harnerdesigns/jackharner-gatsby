@@ -65,7 +65,7 @@ const descriptors = [
         name: "published",
         getter: node => node.frontmatter.published,
         defaultValue: false,
-        transformer: value => (NODE_ENV !== "development" ? value : true),
+        transformer: value => (NODE_ENV !== "development" ? value : value),
       },
       {
         name: "unlisted",
@@ -115,7 +115,7 @@ const descriptors = [
       {
         name: "weight",
         getter: node => node.frontmatter.weight,
-        defaultValue: 0,
+        defaultValue: 0
       },
       {
         name: "ogImage",
@@ -158,12 +158,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   var sortedTopBlogTags = {}
 
   return graphql(`
-    {
+    query Everything($drafts: [Boolean]){
       blog: allMarkdownRemark(
         sort: { order: DESC, fields: [fields___weight, fields___date] }
         filter: {
           fileAbsolutePath: { glob: "**/content/blog/**/*.md" }
-          fields: { published: { eq: true } }
+          fields: { published: { in: $drafts } }
         }
         limit: 1000
       ) {
@@ -273,7 +273,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         }
       }
     }
-  `).then(async result => {
+  `, {drafts: NODE_ENV === "development" ? [true, false] : [true]}).then(async result => {
     if (result.errors) {
       reporter.panicOnBuild(
         `Error while running GraphQL query.` + result.errors
@@ -358,8 +358,20 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: path.resolve(`src/templates/blog.js`),
       context: {
         topTags: sortedTopBlogTags,
+        drafts: false
+
       },
     })
+    if(NODE_ENV === "development"){
+      createPage({
+        path: "/blog/drafts",
+        component: path.resolve(`src/templates/blog.js`),
+        context: {
+          topTags: sortedTopBlogTags,
+          drafts: true
+        },
+      })
+    }
 
     // Make tag pages
 

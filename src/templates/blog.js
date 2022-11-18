@@ -12,6 +12,7 @@ import Shuffler from "../components/verts/shuffler"
 const Blog = ({ data, pageContext }) => {
   const { edges: posts } = data.allMarkdownRemark
   const tags = pageContext.topTags
+  const drafts = pageContext.drafts
     // Iterate through each post, putting all found tags into `tags`
   var topTags = Object.keys(tags).sort(function(a, b) {
     return tags[a] < tags[b] 
@@ -19,10 +20,10 @@ const Blog = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <SEO title={`Blog Archive | ${topTags[0]}, ${topTags[1]}, & More `} />
-      <PageTitle subtitle="Tutorials, Freelancing, Developing for E-Commerce, Life Updates & More...">Blog</PageTitle>
+      <SEO title={`${posts.length} Blog Posts | ${topTags[0]}, ${topTags[1]}, & More `} />
+      <PageTitle subtitle={drafts ? "" : "Tutorials, Freelancing, Developing for E-Commerce, Life Updates & More."}>{posts.length} Blog {drafts ? "Drafts" : "Posts"}</PageTitle>
       <section className="slim black">
-        <TopTags topTags={topTags} postType='blog' />
+        {!drafts && <TopTags topTags={topTags} postType='blog' />}
       </section>
       <main className="page_body page_body--grid">
         
@@ -50,14 +51,14 @@ const Blog = ({ data, pageContext }) => {
 export default Blog
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query IndexQuery($drafts: Boolean) {
     allMarkdownRemark(
       sort: {
         order: [DESC, DESC]
         fields: [fields___weight, fields___date]
       }
       filter: {
-        fields: { published: { eq: true },  unlisted: { eq: false }, collection: { eq: "blog" } }
+        fields: { published: { ne: $drafts },  unlisted: { eq: false }, collection: { eq: "blog" } }
       }
     ) {
       edges {
