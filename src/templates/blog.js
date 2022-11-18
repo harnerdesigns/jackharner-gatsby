@@ -14,13 +14,15 @@ const Blog = ({ data, pageContext }) => {
   const tags = pageContext.topTags
   const drafts = pageContext.drafts
     // Iterate through each post, putting all found tags into `tags`
-  var topTags = Object.keys(tags).sort(function(a, b) {
+  var topTags = Object.keys(tags).filter((tag)=>{
+    return tag !== "Newsletter"
+  }).sort(function(a, b) {
     return tags[a] < tags[b] 
   })
 
   return (
     <Layout>
-      <SEO title={`${posts.length} Blog Posts | ${topTags[0]}, ${topTags[1]}, & More `} />
+      <SEO title={`${posts.length} ${topTags[0]}, ${topTags[1]}, & ${topTags[2]} Blog Posts `} />
       <PageTitle subtitle={drafts ? "" : "Tutorials, Freelancing, Developing for E-Commerce, Life Updates & More."}>{posts.length} Blog {drafts ? "Drafts" : "Posts"}</PageTitle>
       <section className="slim black">
         {!drafts && <TopTags topTags={topTags} postType='blog' />}
