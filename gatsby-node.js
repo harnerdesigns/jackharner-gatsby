@@ -364,35 +364,35 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       })
     })
 
-    /////////////////////
-    // New Blog Pages //
-    ///////////////////
+    // /////////////////////
+    // // New Blog Pages //
+    // ///////////////////
 
-    _.each(result.data.wpblog.edges, (edge, index) => {
-      let listedPosts = result.data.blog.edges.filter(({ node }) =>
-        node.fields.unlisted ? false : true
-      )
-      const edgeCount = listedPosts.length
-      const relatedIndexes = randomNum(0, edgeCount, index, 4)
+    // _.each(result.data.wpblog.edges, (edge, index) => {
+    //   let listedPosts = result.data.blog.edges.filter(({ node }) =>
+    //     node.fields.unlisted ? false : true
+    //   )
+    //   const edgeCount = listedPosts.length
+    //   const relatedIndexes = randomNum(0, edgeCount, index, 4)
 
-      const related = [
-        listedPosts[relatedIndexes[0]].node,
-        listedPosts[relatedIndexes[1]].node,
-        listedPosts[relatedIndexes[2]].node,
-        listedPosts[relatedIndexes[3]].node,
-      ]
+    //   const related = [
+    //     listedPosts[relatedIndexes[0]].node,
+    //     listedPosts[relatedIndexes[1]].node,
+    //     listedPosts[relatedIndexes[2]].node,
+    //     listedPosts[relatedIndexes[3]].node,
+    //   ]
 
-      console.log({wpblog: listedPosts})
+    //   console.log({wpblog: listedPosts})
 
-      createPage({
-        path: `${edge.node.slug}`,
-        component: path.resolve("./src/templates/blog-post.js"),
-        context: {
-          slug: edge.node.slug,
-          related,
-        },
-      })
-    })
+    //   createPage({
+    //     path: `${edge.node.slug}`,
+    //     component: path.resolve("./src/templates/blog-post.js"),
+    //     context: {
+    //       slug: edge.node.slug,
+    //       related,
+    //     },
+    //   })
+    // })
     
 
     //////////////////////
