@@ -23,11 +23,11 @@ const WhyMe = ({ data, pageContext }) => {
     <Layout footerCTA={false}>
       <Seo title="Why Hire Me?" />
       <PageTitle>Why Hire Me?</PageTitle>
-      <section className="slim black content content--centered">
+      <section className="slim black content--centered">
 
         <div>
           <h2>
-            Are you considering hiring me, but you're kind of on the fence?
+            Considering hiring me, but you're on the fence?
           </h2>
           <h3>
             Here's a couple reasons why you should swing that other leg over and{" "}
@@ -39,13 +39,11 @@ const WhyMe = ({ data, pageContext }) => {
         <h1>#1 My Clients Love Me:</h1>
         <Grid quotes={quotes} />
       </section>
-      <section className="half black">
-        <Drips
+      <section className="full black">
+        {/* <Drips
           color="var(--color)"
-          slim
           wrapperHeight={"20vh"}
-          numberPoints={25}
-        />
+        /> */}
         <FreelanceCountdown
           header="#2 I've Been Freelancing Full Time For:"
           subheader="+ building websites for 10 years before that."
@@ -53,7 +51,7 @@ const WhyMe = ({ data, pageContext }) => {
         <h2>So You Could Say I've Been Doing This For A While.</h2>
       </section>
 
-      <section class="half pink">
+      <section class="full pink">
         <h1>#3 Big Name Clients Trust Me:</h1>
         <div className="client-logo-list">
           <img src={WZY} />
