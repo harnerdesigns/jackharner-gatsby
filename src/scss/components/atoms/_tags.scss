@@ -51,24 +51,38 @@
     margin-bottom: 1em;
 
     div {
-      min-height: 8rem;
-
-      padding: 0.25em;
+      position: relative;
+      
+      padding-top: 100%;
       height: 100%;
       color: #fff;
+
+      @include breakpoint(tabletdown) {
+        &:nth-of-type(3){
+          display: none;
+        }
+      }
     }
 
     img {
       margin: 0 auto;
-      width: 100%;
-      height: auto;
+      width: 95%;
+      height: 95%;
       display: block;
-
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       object-fit: cover;
     }
 
     &--portfolio {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+
+      @include breakpoint(laptop) {
+        grid-template-columns: repeat(3, 1fr);
+        
+      }
 
       img {
         height: 100%;

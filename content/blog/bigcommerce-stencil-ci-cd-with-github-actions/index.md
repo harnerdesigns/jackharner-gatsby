@@ -211,12 +211,12 @@ jobs:
 
 ## Taking The BigCommerce CI/CD Flow A Step Further
 
-Once you get settled into a CI/CD flow that works for you and your clients, here are a handful of ideas to extend the workflows: 
+Once you get settled into a CI/CD flow that works for you and your clients, here are a handful of ideas to extend it: 
 
 1. Connect the workflow to send work to both a staging and production site.
 2. Setup an NPM / Yarn Cache to save time installing all the different dependencies.
 3. Modify the theme name with things like the date and the Pull Request info to connect the theme names back to the repo.
-4. Create a separate action that regularly pulls in the live theme on the store to capture any changes your client made directly through the theme editor. 
+4. Create a separate [GitHub action that uses CRON](/blog/github-actions-cron/) to regularly pull in the live theme on the store, capturing any changes your client made directly through the theme editor. 
 
 And pretty much anything else you can think of that you can accomplish with GitHub Actions. Automating the deploy process makes it so much easier to focus on fixing bugs and building new features, instead of wasting time manually deploying new changes.
 
