@@ -16,12 +16,11 @@ export default function Template(props) {
   return (
     <Layout>
       <SEO
-        title={post.frontmatter.title + " » " + post.frontmatter.description}
+        title={post.frontmatter.title + " - " + post.frontmatter.description}
         description={
           post.frontmatter.title +
           " - " +
-          post.frontmatter.description +
-          " By Jack Harner."
+          post.frontmatter.description + ", a " +  post.frontmatter.tags[0] + " Project By Jack Harner."
         }
         image={
           post.fields.ogImage ? post.frontmatter.ogImage.childImageSharp.original.src : (post.frontmatter.logo

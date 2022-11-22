@@ -29,7 +29,7 @@ const IndexPage = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <SEO title="Jack Of All Trades, Master Of Some" />
+      <SEO title="Jack Of All Trades, Master Of Some" titleTemplate={"%s » Jack Harner | Web & E-Commerce Dev"} />
       <section className="full white--wavy-5 black intro">
         <IntroGrid style={{ zIndex: 1 }}>
           <Drips color="#fff" wrapperHeight="40%" />

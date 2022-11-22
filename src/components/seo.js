@@ -12,7 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import favicon from '../images/jackharner-icon.png';
 import defaultOGImage from '../images/jackHarner-default-OG.jpg'
 
-function SEO({ description, lang, meta, title, image }) {
+function SEO({ description, lang, meta, title, image, titleTemplate }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -48,7 +48,7 @@ function SEO({ description, lang, meta, title, image }) {
         lang
       }}
       title={title}
-      titleTemplate={`%s » ${site.siteMetadata.title} | Web Developer & E-Commerce Consultant `}
+      titleTemplate={titleTemplate ? titleTemplate : `%s » ${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
