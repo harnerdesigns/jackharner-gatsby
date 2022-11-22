@@ -32,7 +32,7 @@ function shuffle(array) {
 
 const Shuffler = ({index}) => {
 
-  let verts = [<GridGospel />, <HarnerDesigns />, <Shaklee />, <Patreon />, <Printful />, <DigitalOcean />, <NordVPN />, <Bonsai />, <Namecheap />] 
+  let verts = [<GridGospel />, <Shaklee />, <Patreon />, <Printful />, <DigitalOcean />, <NordVPN />, <Bonsai />, <Namecheap />] 
 
 
   let vertCount = verts.length
