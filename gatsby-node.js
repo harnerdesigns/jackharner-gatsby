@@ -473,7 +473,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     // Make tag pages
 
     portfolioTags.forEach(tag => {
-      const tagPath = (tag === 'WordPress' ? `/blog/tags/wordpress/` :  `/blog/tags/${_.kebabCase(tag)}/`)
+      const tagPath = (tag === 'WordPress' ? `/portfolio/tags/wordpress/` :  `/portfolio/tags/${_.kebabCase(tag)}/`)
       
       createPage({
         path: tagPath,
