@@ -44,8 +44,7 @@ const IndexPage = ({ data, pageContext }) => {
             <h2>Jack of All Trades, Master of Some</h2>
             <ImASlider />
             <div className="buttons">
-              <Button label={"See My Work"} to="/portfolio" white />
-              <Button label={"Let's Chat »"} to="/contact" />
+              <Button label={"Why You Should Hire Me »"} to="/why-me" />
             </div>
           </section>
         </IntroGrid>
