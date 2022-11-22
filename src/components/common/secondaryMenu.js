@@ -19,6 +19,7 @@ const SecondaryMenu = () => {
             <em>Other Pages:</em>
             <Link to="/affiliate">Affiliate Links</Link>
             <Link to="/uses">Tools I Use</Link>
+            <Link to="/links">Quick Links</Link>
         </nav>
 
     </>)
