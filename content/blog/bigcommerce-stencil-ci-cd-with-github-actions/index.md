@@ -10,7 +10,7 @@ published: true
 unlisted: false
 ---
 
-> Post Updated November 21st, 2022 to work with Stencil-CLI >5.x
+Post Updated November 21st, 2022 to work with Stencil-CLI >5.x
 
 Back in November 2019, GitHub released GitHub Actions. An ["API for cause and effect"](https://github.blog/2019-08-08-github-actions-now-supports-ci-cd/) they called it. 
 
