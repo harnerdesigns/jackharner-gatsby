@@ -71,7 +71,7 @@ class TagRoute extends React.Component {
 
                   return <>{card}</>
                 })}
-              {posts.length > 2 && postType === "blog" && <Shuffler />}
+
             </div>
           </main>
       </Layout>
@@ -92,7 +92,7 @@ export const tagPageQuery = graphql`
       limit: 1000
       sort: {
         order: [DESC, DESC]
-        fields: [fields___weight, frontmatter___date]
+        fields: [fields___weight, fields___date]
       }
       filter: {
         frontmatter: { tags: { in: [$tag] } }

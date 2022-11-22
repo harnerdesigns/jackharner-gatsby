@@ -29,6 +29,10 @@
     border-right: none;
     padding: 1rem;
 
+    a{
+        color: inherit;
+    }
+
     p {
         text-align: center;
         font-size: 1.5rem;
@@ -85,6 +89,10 @@
         border-radius: 0 0 var(--border-radius) var(--border-radius);
         font-weight: 100;
         font-size: 0.8rem;
+    }
+
+    &:hover {
+        color: #fff;
     }
 }
 
@@ -258,7 +266,12 @@
         }
 
         &:hover {
-            @include hardShadow(5, #222);
+        }
+    }
+
+    &:hover{
+        button.button {
+                @include hardShadow(5, #222);
         }
     }
 }
@@ -429,8 +442,8 @@
     color: #fff;
     border: none;
     grid-template-columns: 1fr;
-    @include breakpoint(desktop) {
-        grid-template-columns: 2fr 1fr;
+    @include breakpoint(laptop) {
+        grid-template-columns: 1fr 3fr;
     }
 
     h2,
@@ -484,8 +497,8 @@
     color: #fff;
     border: none;
     grid-template-columns: 1fr;
-    @include breakpoint(desktop) {
-        grid-template-columns: 1fr 2fr;
+    @include breakpoint(laptop) {
+        grid-template-columns: 1fr 3fr;
     }
 
     h2,
@@ -585,6 +598,13 @@
     $bonsaiGreen: #00af8b;
     background: #fff;
     border-radius: var(--border-radius);
+
+    grid-template-columns: 1fr;
+
+    @include breakpoint(laptop) {
+        grid-template-columns: 1fr 3fr;
+    }
+
 
     p {
         color: #333;
