@@ -1,6 +1,6 @@
 ---
 date: 2020-08-01T21:22:11Z
-updated: 2020-08-09T11:43:40Z
+updated: 2022-11-21T11:43:40Z
 title: "BigCommerce Stencil CI/CD with GitHub Actions" 
 subtitle: "Publish Your Theme on Every Commit to Main"
 featuredImage: "./martin-adams-a_PDPUPuNZ8-unsplash.jpg"
@@ -9,6 +9,8 @@ externalLink: ""
 published: true
 unlisted: false
 ---
+
+> Post Updated November 21st, 2022 to work with Stencil-CLI >5.x
 
 Back in November 2019, GitHub released GitHub Actions. An ["API for cause and effect"](https://github.blog/2019-08-08-github-actions-now-supports-ci-cd/) they called it. 
 
@@ -28,7 +30,7 @@ Once GitHub allowed Free Private Repos for individuals (and eventually teams), I
 
 ## Folder Structure
 
-The first thing you need to do to setup GitHub Actions is create a folder called `.github` (note the period at the beginning) in the root of your theme. Inside that folder create one more folder called `workflows`. Now create a file in `/.github/workflows/` called `main.yml`.
+The first thing you need to do to setup GitHub Actions is create a hidden folder called `.github` (note the period at the beginning) in the root of your theme. Inside that folder create one more folder called `workflows`. Now create a file in `/.github/workflows/` called `main.yml`.
 
 This YAML (a recursive acronym that stands for YAML Ain't Markup Language) file is what tells GitHub what to do, when to do it, & what to do it with.
 
@@ -48,7 +50,7 @@ This defines the name of the Workflow that you are creating and shows up on GitH
 
 ### Main Branch Only
 
-In order to save build minutes, we only want to run the workflow when something is Pushed to the Main branch. For that, add the following:
+In order to save build minutes, we only want to run the workflow when something is pushed to the `main` branch. For that, add the following:
 
 ```yml
 on:
@@ -95,21 +97,21 @@ steps:
 
 The `uses` attribute in this step allows you to run other GitHub Actions inside your Action. This allows things to be modular and reusable. Check out [GitHub.com/actions](https://github.com/actions) for more info.
 
-#### Node v10 Only
+#### Node v14 Only
 
-Since BigCommerce stencil still requires Node 10, **Step 2** involves installing the specific version of node we need:
+Since BigCommerce Stencil requires Node 14, **Step 2** involves installing the specific version of node we need:
 
 ```yml
 steps:
   
   ...
 
-  - name: Set Node version to 10
+  - name: Set Node version to 14
     uses: actions/setup-node@v1
     with:
-      node-version: 10
+      node-version: 14
 ```
-On this step we now have the `with` attribute. This allows you to pass configuration options to your "Used" actions. In this case we define `node-version` as `10` since that's what we need for the Stencil CLI to work. 
+On this step we now have the `with` attribute. This allows you to pass configuration options to your "Uses" actions. In this case we define `node-version` as `14` since that's what we need for the Stencil CLI to work. 
 
 #### Install Dependencies
 
@@ -130,30 +132,26 @@ steps:
 
 #### Configure Stencil CLI
 
-As far as **Step 4** goes, I tried a few different approaches and I'm not sure if this is the best way, but it works for me. What you need to do is pass in your BigCommerce API Token and basically everything in your Stencil CLI-generated `.stencil` file.
+> Update as of 2022: `stencil init` now has all of the flags available to run through CI. The original setup involved storing the entire contents of the .stencil file as a secret in the repo. 
 
-I tried running `stencil init` which generates the file, but it's not set up to be run without  user input. It gets hung up on asking which goes against the core of CI/CD. Things need to be automatic. Maybe they'll add that like they did with `stencil push` with the `-a` and `-d` flags.
+We need to add a couple secrets to the repo to keep our Stencil CLI Access Token secure. Open up your Repo and click Settings > Secrets > Actions > New secret. Name the first one `STENCIL_STORE_URL` and paste in your store's mybigcommerce.com url (i.e. `https://store-xxxxxxxxxx.mybigcommerce.com` ). Save that secret and add a second one called `STENCIL_ACCESS_TOKEN` with your Stencil CLI Access Token as the value. GitHub Secrets allow you to use sensitive data in your Actions without exposing it to the world. 
 
-The bitbucket pipeline recommends just checking in your `.stencil` to your repo and leaving it private. In order to not check in your keys to GitHub you should take advantage of GitHub Secrets. 
-
-Open up your Repo and click Settings > Secrets > New secret. Name it `STENCIL` and paste in your entire `.stencil` file as the value. GitHub Secrets allow you to use sensitive data in your Actions without exposing it to the world at all. 
-
-Now you can just copy the STENCIL secret to an env variable for the shell command `echo "$STENCIL" > .stencil`. 
+Once again we'll use Step Environment Variables to send our secrets to the `stencil init` command to generate the `secrets.stencil.json` and `config.stencil.json` files used connect the CI runner to our specific BigCommerce store:
 
 ```yml
 steps:
 
   ...
-
-  - run: 'echo "$STENCIL" > .stencil'
-    shell: bash
-    env:
-      STENCIL: ${{secrets.STENCIL}}
+- name: Connect to store
+      env:
+        URL: ${{ secrets.STENCIL_STORE_URL }}
+        TOKEN: ${{ secrets.STENCIL_ACCESS_TOKEN }}
+      run: stencil init -u $URL -t $TOKEN -p 3000 -h https://api.bigcommerce.com
 ```
 
 #### Push It Gurl
 
-The last thing to do is push the theme with the Stencil CLI. We use the aforementioned `-a` & `-d` flags to **A**ctivate a specific variation of the theme and to **D**elete the oldest unused theme (there is a limit to how many themes you can have uploaded to BigCommerce at one time).
+The last thing to do is push the theme with the Stencil CLI. We use the aforementioned `-a` & `-d` flags to **A**ctivate a specific variation (in our case the variant called "Light") of the theme and to **D**elete the oldest unused theme (there is a limit to how many themes you can have uploaded to BigCommerce at one time).
 
 ```yml
 steps:
@@ -190,25 +188,36 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v1
 
-      - name: Set Node version to 10
+      - name: Set Node version to 14
         uses: actions/setup-node@v1
         with:
-          node-version: 10
+          node-version: 14
 
       - name: Install Dependencies
         run: |
           npm install -g @bigcommerce/stencil-cli
           yarn
 
-      - run: 'echo "$STENCIL" > .stencil'
-        shell: bash
-        env:
-          STENCIL: ${{secrets.STENCIL}}
+      - name: Connect to store
+            env:
+              URL: ${{ secrets.STENCIL_STORE_URL }}
+              TOKEN: ${{ secrets.STENCIL_ACCESS_TOKEN }}
+            run: stencil init -u $URL -t $TOKEN -p 3000 -h https://api.bigcommerce.com
 
       - name: Push Theme
         run: |
           stencil push -a Light -d
 ```
 
+## Taking The BigCommerce CI/CD Flow A Step Further
+
+Once you get settled into a CI/CD flow that works for you and your clients, here are a handful of ideas to extend the workflows: 
+
+1. Connect the workflow to send work to both a staging and production site.
+2. Setup an NPM / Yarn Cache to save time installing all the different dependencies.
+3. Modify the theme name with things like the date and the Pull Request info to connect the theme names back to the repo.
+4. Create a separate action that regularly pulls in the live theme on the store to capture any changes your client made directly through the theme editor. 
+
+And pretty much anything else you can think of that you can accomplish with GitHub Actions. Automating the deploy process makes it so much easier to focus on fixing bugs and building new features, instead of wasting time manually deploying new changes.
 
 > <span>Featured Image by <a href="https://unsplash.com/@martinadams?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Martin Adams</a> on <a href="https://unsplash.com/s/photos/piping?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>

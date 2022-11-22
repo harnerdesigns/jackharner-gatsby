@@ -52,7 +52,7 @@ const WhyMe = ({ data, pageContext }) => {
       </section>
 
       <section class="full pink">
-        <h1>#3 Big Name Clients Trust Me:</h1>
+        <h1>#3 Big Name Companies Trust Me:</h1>
         <div className="client-logo-list">
           <img src={WZY} />
           <img src={EE} />
