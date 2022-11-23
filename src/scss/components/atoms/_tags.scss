@@ -4,7 +4,7 @@
 
   display: grid;
   grid-template-columns: 1fr;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   border-radius: var(--border-radius);
   transition: 300ms;
@@ -42,13 +42,18 @@
     grid-column: 1 / -1;
 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
     padding: 0 1rem;
     border-radius: var(--border-radius);
     align-items: center;
     justify-content: center;
     margin-bottom: 1em;
+
+    grid-template-columns: repeat(2, 1fr);
+
+      @include breakpoint(laptop) {
+        grid-template-columns: repeat(4, 1fr);
+      }
 
     div {
       position: relative;
@@ -58,7 +63,7 @@
       color: #fff;
 
       @include breakpoint(tabletdown) {
-        &:nth-of-type(3){
+        &:nth-of-type(n + 3){
           display: none;
         }
       }

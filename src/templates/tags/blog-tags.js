@@ -13,7 +13,7 @@ class TagRoute extends React.Component {
     const posts = this.props.data.allMarkdownRemark.edges
     const tags = this.props.pageContext.topTags
 
-    var sortedTags = Object.keys(tags).sort(function(a, b) {
+    var sortedTags = Object.keys(tags).sort(function (a, b) {
       return tags[a] < tags[b]
     })
 
@@ -21,31 +21,33 @@ class TagRoute extends React.Component {
 
     return (
       <Layout>
-          <SEO title="Blog Tags" />
+        <SEO title="Blog Tags" />
 
-          <PageTitle>Blog Tags</PageTitle>
+        <PageTitle>Blog Tags</PageTitle>
 
-          <main className="page_body page_body--grid">
-            <div className="tag-grid">
-              {sortedTags.map((tag, index) => {
-                const tagLink = (tag === 'WordPress' ? `/blog/tags/wordpress/` :  `/blog/tags/${_.kebabCase(tag)}/`)
-                return (
-                  <Link to={tagLink} className="tag__card">
-                    <FontAwesomeIcon fixedWidth icon={tagIcons[tag]} />
-                      <h3>{tag}</h3>
-                      <h4>
-                        {tags[tag]} Post{tags[tag] > 1 ? "s" : ""}
-                      </h4>
-                    <div className="tag__post-preview">
-                      {posts
-                        .filter(({ node: post }) =>
-                          post.frontmatter.tags
-                            ? post.frontmatter.tags.includes(tag)
-                            : false
-                        )
-                        .map(({ node: post }, i) => {
-                          if (i < 4) {
-                            return (
+        <main className="page_body page_body--grid">
+          <div className="tag-grid">
+            {sortedTags.map((tag, index) => {
+              const tagLink = (tag === 'WordPress' ? `/blog/tags/wordpress/` : `/blog/tags/${_.kebabCase(tag)}/`)
+              return (
+                <Link to={tagLink} className="tag__card">
+                  <FontAwesomeIcon fixedWidth icon={tagIcons[tag]} />
+                  <h3>{tag}</h3>
+                  <h4>
+                    {tags[tag]} Post{tags[tag] > 1 ? "s" : ""}
+                  </h4>
+                  <div className="tag__post-preview">
+                    {posts
+                      .filter(({ node: post }) =>
+                        post.frontmatter.tags
+                          ? post.frontmatter.tags.includes(tag)
+                          : false
+                      )
+                      .map(({ node: post }, i) => {
+                        if (i < 4) {
+                          return (
+                            <div>
+
                               <img
                                 src={
                                   post.frontmatter.featuredImage.childImageSharp
@@ -62,17 +64,18 @@ class TagRoute extends React.Component {
                                   post.frontmatter.subtitle
                                 }
                               />
-                            )
-                          } else {
-                            return ""
-                          }
-                        })}
-                    </div>
-                  </Link>
-                )
-              })}
-            </div>
-          </main>
+                            </div>
+                          )
+                        } else {
+                          return ""
+                        }
+                      })}
+                  </div>
+                </Link>
+              )
+            })}
+          </div>
+        </main>
       </Layout>
     )
   }
