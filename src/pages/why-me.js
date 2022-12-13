@@ -14,6 +14,7 @@ import WZY from "../images/logos/WZ_Logo.svg"
 import MT from "../images/logos/MT_Script_White.svg"
 import NR from "../images/logos/national-roofing-logo.svg"
 import Shoolu from "../images/logos/shoolu-logo.svg"
+import ReadyToGo from "../components/ready-to-go"
 
 const WhyMe = ({ data, pageContext }) => {
   console.log(data.testimonies.frontmatter)
@@ -62,16 +63,7 @@ const WhyMe = ({ data, pageContext }) => {
         </div>
       </section>
 
-      <section className="half white grid grid--2 content--centered">
-        <div>
-          <h2>Ready to go?</h2>
-          <Link to="/contact"><h3>&laquo; Let's Chat</h3></Link>
-        </div>
-        <div>
-          <h2>Still Not Convinced?</h2>
-          <Link to="/contact"><h3>Let's Chat Anyway &raquo;</h3></Link>
-        </div>
-      </section>
+      <ReadyToGo />
     </Layout>
   )
 }
