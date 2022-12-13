@@ -32,7 +32,7 @@ const IndexPage = ({ data, pageContext }) => {
       <SEO title="Jack Of All Trades, Master Of Some" titleTemplate={"%s » Jack Harner | Web & E-Commerce Dev"} />
       <section className="full white--wavy-5 black intro">
         <IntroGrid style={{ zIndex: 1 }}>
-          <Drips color="#fff" wrapperHeight="40%" />
+          <Drips color="#fff" wrapperHeight="40%" style={{zIndex: 2}} />
           <CanvasBG />
           <ImageWrapper>
             <img src={jack} alt="Jack Harner" />
@@ -105,7 +105,7 @@ const IndexPage = ({ data, pageContext }) => {
       <section className="full white row">
         <Drips color="black" slim />
 
-        <div className="column" style={{ marginBottom: "6rem" }}>
+        <div className="column" style={{ marginBottom: "10rem" }}>
           <h1>I Learn In Public.</h1>
 
           <p>
@@ -262,7 +262,7 @@ const ImageWrapper = styled.div`
   width: 100%;
   pointer-events: none;
   display: flex;
-  z-index: -1 !important;
+  z-index: 1 !important;
   align-self: flex-end;
   margin: -2rem 0 0;
 

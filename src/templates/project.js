@@ -65,9 +65,13 @@ export default function Template(props) {
             <section className="project__images">
               <SRLWrapper>
               {post.frontmatter.images.map((image, index) => {
+                console.log(image)
                 return image ? (
-
-                  <img src={image.childImageSharp.original.src} alt="" />
+                  <div class={"img__screen" + (image.childImageSharp.original.height > 700 ? " tall " : " short ") + (image.childImageSharp.original.width > 900 ? " wide " : " narrow ")}>
+                    <div className={"img__wrapper"}>
+                      <img src={image.childImageSharp.original.src} alt="" />
+                    </div>
+                  </div>
                   
                   ) : (
                     ""
@@ -134,6 +138,8 @@ export const pageQuery = graphql`
           childImageSharp {
             original {
               src
+              height
+              width
             }
           }
         }

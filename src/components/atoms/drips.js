@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-const Drips = ({ color, slim, wrapperHeight, svgWidth, numberPoints = 15 }) => {
+const Drips = ({ color, slim, wrapperHeight, svgWidth, numberPoints = 15, style }) => {
   const wrapperRef = useRef()
   const [path, setPath] = useState("")
   const [built, setBuilt] = useState(false)
@@ -103,7 +103,7 @@ const Drips = ({ color, slim, wrapperHeight, svgWidth, numberPoints = 15 }) => {
       ref={wrapperRef}
       id="svgWrapper"
       className={slim ? "slim" : ""}
-      style={{ height: wrapperHeight ? wrapperHeight : "" }}
+      style={{...style, height: wrapperHeight ? wrapperHeight : "" }}
     >
       <svg
         preserveAspectRatio="none"

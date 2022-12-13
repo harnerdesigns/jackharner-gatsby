@@ -98,9 +98,11 @@
       margin: 0;
       display: grid;
       place-items: center;
+
       span {
         font-size: 0.8em;
         line-height: 1;
+
         @include breakpoint(laptop) {
           font-size: 0.6em;
         }
@@ -119,10 +121,12 @@
       height: 4em;
       width: 100%;
     }
+
     .card__titles {
       display: grid;
       align-items: center;
       padding: 0.5rem;
+
       .project__title {
         font-size: 2rem;
       }
@@ -131,13 +135,16 @@
         font-size: 1.15rem;
       }
     }
+
     .project__tags {
       width: 60%;
+
       li {
         &:after {
           content: "";
         }
       }
+
       span {
         display: none;
       }
@@ -202,11 +209,64 @@
 
     flex-direction: column;
 
+    .img__screen {
+
+      margin-bottom: 4rem;
+
+      &.wide {
+
+        &:after {
+          content: '';
+          height: 7vh;
+          display: block;
+          background: url('../images/computer-stand.svg') center top / contain no-repeat;
+        }
+
+        .img__wrapper {
+          display: block;
+          max-height: 45vmin;
+          overflow-y: scroll;
+          border-radius: calc(var(--border-radius) * 3);
+          border: 10px solid #686868;
+          @include card(1);
+        }
+      }
+
+      &.narrow {
+        width: 45%;
+        margin: 0 auto 4rem;
+        position: relative;
+
+        .img__wrapper {
+          max-height: 65vmin;
+          overflow-y: scroll;
+          border-radius: calc(var(--border-radius) * 3);
+          border: 10px solid #686868;
+          border-bottom: 30px solid #686868;
+        }
+
+        &:after {
+          content: "";
+          width: 25%;
+          height: 5px;
+          border-radius: 5px;
+          border: 2px solid #333;
+          position: absolute;
+          display: block;
+          bottom: 7px;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+    }
+
+
+
     img {
       width: 100%;
-      margin-bottom: 2rem;
-      @include card(1);
-      border-radius: var(--border-radius);
+      margin-bottom: 0;
+      display: block;
     }
 
     position: relative;
@@ -250,13 +310,15 @@
       li {
         line-height: 2;
 
-        & > p {
+        &>p {
           margin-bottom: 0;
           line-height: 2;
         }
       }
-      li > ul {
+
+      li>ul {
         margin: 0;
+
         li {
           list-style: circle;
         }
@@ -269,10 +331,12 @@
 
       li {
         margin-bottom: 0.25em;
+
         p {
           margin: 0;
         }
-        & > ol {
+
+        &>ol {
           margin: 0.5em 1em 0.5em 3em;
         }
       }
@@ -301,6 +365,8 @@
 .recent-projects {
   @extend .latest-posts;
   width: 100%;
+  margin-top: 0;
+
   @include breakpoint(laptop) {
     width: 50%;
   }
@@ -369,11 +435,11 @@
     background: var(--color);
     border-radius: var(--border-radius);
     border: 5px solid #000;
-    width: auto;
     padding: 1rem;
-    width: auto;
+    width: 100%;
     max-width: 100%;
   }
+
   .logo {
     @include breakpoint(laptop) {
       max-width: 100%;
@@ -438,6 +504,7 @@
         font-size: 2rem;
         color: inherit;
       }
+
       span {
         font-weight: 400;
       }

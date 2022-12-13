@@ -42,6 +42,7 @@ class TagRoute extends React.Component {
               postType={postType}
               back={true}
               exclude={tag}
+              limit={5}
             />
           </section>
           <main className="page_body page_body--grid">
