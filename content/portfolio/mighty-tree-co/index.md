@@ -8,7 +8,7 @@ tags:
     - Cannabis
     - E-Commerce
     - WordPress
-images: ["./home-page.png", "./in-store-pickup.png", "./products.png", "./verification.png"]
+images: ["./home-page.png", "./home-page--mobile.png", "./in-store-pickup.png", "./products.png", "./verification.png"]
 weight: 999
 published: true
 externalLink: "https://mightytreeco.com"
