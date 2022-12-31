@@ -9,7 +9,7 @@ externalLink: ""
 published: true
 ---
 
-One of the toughest parts about being a freelancer is the possibility that you'll have to chase down every single paycheck you ever earn. 
+One of the toughest parts about being a freelancer is the possibility that you'll have to chase down every single paycheck you ever earn. However, there are some steps you can take ahead of time to prevent you from having to chase to hard.
 
 Keep in mind, I'm a freelance web developer (and not a lawyer) so some of this advice may not apply to other freelance fields. These are all avenues to help you get paid promptly, but you'll need to make some personal tweaks according to your specific situation.
 
@@ -64,3 +64,9 @@ If your an artist or a writer of some kind where work samples you send over for 
 ## Automate Payment Reminders
 
 I use [Bonsai](https://www.hellobonsai.com/invite?fp_ref=jackharner) to manage all of my invoicing and time tracking. It makes it insanely easy to charge late fees,send out email reminders. Bonsai helps manage pretty much every step of the freelance process from Proposals to Contracts to Getting Paid. [Check 'em out](https://www.hellobonsai.com/invite?fp_ref=jackharner) if you need help automating your freelance business.
+
+---
+
+ Use some of these steps, use em all, but if nothing else: 
+
+### AlWAYS. GET. A. CONTRACT.
