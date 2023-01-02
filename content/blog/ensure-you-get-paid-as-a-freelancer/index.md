@@ -1,9 +1,9 @@
 ---
-date: 2022-12-14T00:28:44.082Z
+date: 2022-12-31T00:28:44.082Z
 title: "Ensure You Get Paid As A Freelancer" 
 subtitle: "AKA, F*** You, Pay Me"
-featuredImage: "./featuredImage.png"
-ogImage: ""
+featuredImage: "./adam-nir-wTO6MWpMrJk-unsplash.jpg"
+ogImage: "./ensure-you-get-paid-og-image.png"
 tags: ["Freelance", "Career"]
 externalLink: ""
 published: true
