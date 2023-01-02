@@ -1,7 +1,7 @@
 module.exports = {
 siteMetadata: {
     title: `Jack Harner`,
-    description: `Jack Harner is a Freelance Web Developer & E-Commerce Consultant based in Denver, Colorado.`,
+    description: `Jack Harner is a Freelance Web Developer & E-Commerce Consultant based in Denver, Colorado. Shopify, BigCommerce, WordPress Dev & More.`,
     author: `@jackharner`,
     siteUrl: "https://jackharner.com",
   },
