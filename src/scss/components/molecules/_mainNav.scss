@@ -24,6 +24,7 @@
             min-height: 80vh;
             max-height: 100vh;
             overflow-y: auto;
+            padding: 0;
         }
 
         @include breakpoint(laptop) {
@@ -172,8 +173,12 @@
                             content: "";
                             width: 5px;
                             height: 100%;
-                            background: #fff;
+                            background: var(--color);
                             display: block;
+
+                            @include breakpoint(laptop) {
+                                background: #fff;
+                            }
                         }
                     }
         

@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react"
+import React, { Component, useEffect, useState } from "react"
 
 import { Link } from "gatsby"
 
@@ -12,62 +12,59 @@ let linkSettings = {
     partiallyActive: true
 }
 
-export default class MainMenu extends Component {
+const MainMenu = (props) => {
 
-    constructor(props) {
-        super(props);
+    const [isOpen, setIsOpen] = useState(false);
+    const [subMenuOpen, setSubMenuOpen] = useState(false);
 
-        this.state = { isOpen: false };
+    let toggleMenu = () => {
+        setIsOpen(!isOpen);
+        setSubMenuOpen(false);
     }
 
-    toggleMenu = () => {
 
+    return (<>
+        <nav className={"main_nav" + (isOpen ? " is-open" : "")}>
 
-        this.setState({ isOpen: !this.state.isOpen });
+            <SubMenu link={{ link: "/services", text: "Services" }} links={[{ link: "/services/shopify", text: "Shopify", icon: ['fab', 'shopify'] }, { link: "/services/bigcommerce", text: "BigCommerce", icon: "shopping-cart" }]} subMenuOpen={subMenuOpen} setSubMenuOpen={setSubMenuOpen} />
 
+            <SubMenu link={{ link: "/portfolio", text: "Portfolio" }} links={[{ link: "/portfolio/", text: "All Projects", extraSettings: { partiallyActive: false } }, { link: "/portfolio/tags/e-commerce/", text: "E-Commerce", icon: 'shopping-cart' }, { link: "/portfolio/tags/wordpress/", text: "WordPress", icon: ['fab', "wordpress"] }, { link: "/portfolio/tags/shopify/", text: "Shopify", icon: ['fab', "shopify"] }]} subMenuOpen={subMenuOpen} setSubMenuOpen={setSubMenuOpen} />
 
-    }
+            <SubMenu link={{ link: "/blog", text: "Blog" }} links={[{ link: "/blog/", text: "All Posts", extraSettings: { partiallyActive: false } }, { link: "/blog/tags/freelance/", text: "Freelance", icon: 'bacon' }, { link: "/blog/tags/wordpress/", text: "WordPress", icon: ['fab', "wordpress"] }, { link: "/blog/tags/shopify/", text: "Shopify", icon: ['fab', "shopify"] }, { link: "/blog/tags/big-commerce/", text: "BigCommerce", icon: 'shopping-cart' }]} subMenuOpen={subMenuOpen} setSubMenuOpen={setSubMenuOpen} />
+            <Link {...linkSettings} to="/newsletter">Newsletter</Link>
+            <Link {...linkSettings} to="/why-me">Why Hire Me?</Link>
+            <ColorSwitcher />
+            <Button to="/contact" className="button" label="Get In Touch" />
 
-    render() {
+        </nav>
 
-        return (<>
-            <nav className={"main_nav" + (this.state.isOpen ? " is-open" : "")}>
-
-                <SubMenu link={{ link: "/services", text: "Services" }} links={[{ link: "/services/shopify", text: "Shopify", icon: ['fab', 'shopify'] }, { link: "/services/bigcommerce", text: "BigCommerce", icon: "shopping-cart" }]} />
-
-                <SubMenu link={{ link: "/portfolio", text: "Portfolio" }} links={[{ link: "/portfolio/", text: "All Projects" },{ link: "/portfolio/tags/e-commerce/", text: "E-Commerce", icon: 'shopping-cart' }, { link: "/portfolio/tags/wordpress/", text: "WordPress", icon: ['fab', "wordpress"] }, { link: "/portfolio/tags/shopify/", text: "Shopify", icon: ['fab', "shopify"] }]} />
-
-                <SubMenu link={{ link: "/blog", text: "Blog" }} links={[{ link: "/blog/", text: "All Posts" }, { link: "/blog/tags/freelance/", text: "Freelance", icon: 'bacon' }, { link: "/blog/tags/wordpress/", text: "WordPress", icon: ['fab', "wordpress"] }, { link: "/blog/tags/shopify/", text: "Shopify", icon: ['fab', "shopify"] }, { link: "/blog/tags/big-commerce/", text: "BigCommerce", icon: 'shopping-cart' }]} />
-                <Link {...linkSettings} to="/newsletter">Newsletter</Link>
-                <Link {...linkSettings} to="/why-me">Why Hire Me?</Link>
-                <ColorSwitcher />
-                <Button to="/contact" className="button" label="Get In Touch" />
-
-            </nav>
-
-            <button id="mobileMenuToggle" className={(this.state.isOpen ? "is-open" : "")} aria-label="Menu" onClick={this.toggleMenu} type={"button"}>
-                <FontAwesomeIcon fixedWidth icon={(this.state.isOpen ? "times" : "bars")}></FontAwesomeIcon>
-            </button>
-            <button id="mobileMenuBG" className={(this.state.isOpen ? "is-open" : "")} onClick={this.toggleMenu} aria-label="Menu"><FontAwesomeIcon fixedWidth icon={"times"}></FontAwesomeIcon></button>
-        </>)
-    }
-
+        <button id="mobileMenuToggle" className={(isOpen ? "is-open" : "")} aria-label="Menu" onClick={toggleMenu} type={"button"}>
+            <FontAwesomeIcon fixedWidth icon={(isOpen ? "times" : "bars")}></FontAwesomeIcon>
+        </button>
+        <button id="mobileMenuBG" className={(isOpen ? "is-open" : "")} onClick={toggleMenu} aria-label="Menu"><FontAwesomeIcon fixedWidth icon={"times"}></FontAwesomeIcon></button>
+    </>)
 
 }
+export default MainMenu
 
 
 
-const SubMenu = ({ link, links }) => {
+const SubMenu = ({ link, links, subMenuOpen, setSubMenuOpen }) => {
 
-    const [isOpen, setIsOpen] = useState(false)
+    let menuID = link.link;
+    let isOpen = (subMenuOpen === menuID)
 
     let openMenu = function (e) {
         e.preventDefault();
-        setIsOpen(!isOpen);
+        if(!isOpen){
+            setSubMenuOpen(menuID);
+        } else {
+            setSubMenuOpen(false);
+        }
     }
 
     let linksMarkup = links.map((link, index) => {
-        return (<Link {...linkSettings} key={index} to={link.link}>{link.icon && <FontAwesomeIcon icon={link.icon} />}{link.text}</Link>)
+        return (<Link {...linkSettings} {...link.extraSettings} key={index} to={link.link}>{link.icon && <FontAwesomeIcon icon={link.icon} />}{link.text}</Link>)
     })
 
     return (
