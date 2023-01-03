@@ -6,6 +6,7 @@ import ColorSwitcher from "./colorSwitcher";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Button from "../atoms/button";
 
+
 let linkSettings = {
     activeClassName: "active",
     partiallyActive: true
@@ -31,12 +32,14 @@ export default class MainMenu extends Component {
 
         return (<>
             <nav className={"main_nav" + (this.state.isOpen ? " is-open" : "")}>
-                <Link {...linkSettings} to="/why-me">Why Hire Me?</Link>
+
                 <SubMenu link={{ link: "/services", text: "Services" }} links={[{ link: "/services/shopify", text: "Shopify", icon: ['fab', 'shopify'] }, { link: "/services/bigcommerce", text: "BigCommerce", icon: "shopping-cart" }]} />
-                <Link {...linkSettings} to="/portfolio">Portfolio</Link>
-                <Link {...linkSettings} to="/blog">Blog</Link>
+
+                <SubMenu link={{ link: "/portfolio", text: "Portfolio" }} links={[{ link: "/portfolio/", text: "All Projects" },{ link: "/portfolio/tags/e-commerce/", text: "E-Commerce", icon: 'shopping-cart' }, { link: "/portfolio/tags/wordpress/", text: "WordPress", icon: ['fab', "wordpress"] }, { link: "/portfolio/tags/shopify/", text: "Shopify", icon: ['fab', "shopify"] }]} />
+
+                <SubMenu link={{ link: "/blog", text: "Blog" }} links={[{ link: "/blog/", text: "All Posts" }, { link: "/blog/tags/freelance/", text: "Freelance", icon: 'bacon' }, { link: "/blog/tags/wordpress/", text: "WordPress", icon: ['fab', "wordpress"] }, { link: "/blog/tags/shopify/", text: "Shopify", icon: ['fab', "shopify"] }, { link: "/blog/tags/big-commerce/", text: "BigCommerce", icon: 'shopping-cart' }]} />
                 <Link {...linkSettings} to="/newsletter">Newsletter</Link>
-                <Link {...linkSettings} to="/about">About</Link>
+                <Link {...linkSettings} to="/why-me">Why Hire Me?</Link>
                 <ColorSwitcher />
                 <Button to="/contact" className="button" label="Get In Touch" />
 
@@ -64,7 +67,7 @@ const SubMenu = ({ link, links }) => {
     }
 
     let linksMarkup = links.map((link, index) => {
-        return (<Link {...linkSettings}  key={index} to={link.link}>{link.icon && <FontAwesomeIcon icon={link.icon} />}{link.text}</Link>)
+        return (<Link {...linkSettings} key={index} to={link.link}>{link.icon && <FontAwesomeIcon icon={link.icon} />}{link.text}</Link>)
     })
 
     return (

@@ -128,6 +128,7 @@
             flex-direction: column;
             justify-content: stretch;
             height: 100%;
+            
 
             @include breakpoint(laptop) {
                 height: unset;
@@ -154,7 +155,11 @@
                     bottom: 0;
                     right: 0;
                     transform: translateY(100%);
-                    min-width: 200px;
+                    min-width: 250px;
+                    box-shadow: 0 3px 3px rgba(0,0,0,0.3);
+                    border: 2px solid #fff;
+                    border-radius: 5px 0 5px 5px;
+
                 }
 
                 a {
@@ -167,7 +172,7 @@
                             content: "";
                             width: 5px;
                             height: 100%;
-                            background: var(--color);
+                            background: #fff;
                             display: block;
                         }
                     }
@@ -179,6 +184,10 @@
             }
 
             &.is-open {
+                > a {
+                    background: #fff;
+                    color: var(--color);
+                }
                 svg.caret {
                     transform: rotate(180deg);
                 }
