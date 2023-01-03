@@ -1,0 +1,45 @@
+.service {
+    .brand-perks__grid {
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 0.5rem;
+        }
+    }
+
+    .shopify-bg {
+        background: url("../images/logos/shopify-bg.png") repeat;
+        background-size: 300px;
+        h2 {
+            
+            color: #fff;
+            font-weight: 900;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            @include breakpoint(laptop) {
+                font-size: 4rem;
+            }
+        }
+    }
+
+    .project-grid {
+        h2 {
+            margin: auto;
+            text-align: center;
+            
+            @include breakpoint(laptop) {
+                width: 70%;
+                text-align: right;
+            }
+        }
+    }
+
+    &--shopify {
+        --color: #95bf47;
+    }
+
+    &--bigcommerce {
+        --color: #0d52ff;
+    }
+}

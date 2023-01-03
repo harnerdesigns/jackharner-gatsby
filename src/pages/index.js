@@ -29,7 +29,7 @@ const IndexPage = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <SEO title="Jack Of All Trades, Master Of Some" titleTemplate={"%s » Jack Harner | Web & E-Commerce Dev"} />
+      <SEO title="Jack Of All Trades, Master Of Some" titleTemplate={"Jack Harner | Web & E-Commerce Developer"} />
       <section className="full white--wavy-5 black intro">
         <IntroGrid style={{ zIndex: 1 }}>
           <Drips color="#fff" wrapperHeight="40%" style={{zIndex: 2}} />
@@ -264,7 +264,7 @@ const ImageWrapper = styled.div`
   display: flex;
   z-index: 1 !important;
   align-self: flex-end;
-  margin: -2rem 0 0;
+  margin: -2rem 0;
 
   @media ${breakpoints.tablet} {
     margin: -4rem 0 -2rem;

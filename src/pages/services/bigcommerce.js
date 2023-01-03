@@ -6,7 +6,7 @@ import PageTitle from "../../components/pageTitle"
 import Seo from "../../components/seo"
 import ReadyToGo from "../../components/ready-to-go"
 
-import shopifyLogo from "../../images/logos/shopify.svg"
+import bigcommerceLogo from "../../images/logos/bigcommerce.svg"
 import ProjectCard from "../../components/portfolio/projectCard"
 
 
@@ -14,7 +14,7 @@ const BigCommerce = ({ data, pageContext }) => {
 
   const { edges: posts } = data.allMarkdownRemark
   return (
-    <Layout footerCTA={false}>
+    <Layout footerCTA={false} className={"service service--bigcommerce"}>
       <Seo title="Custom BigCommerce Themes" />
       <PageTitle>Custom BigCommerce Themes</PageTitle>
 
@@ -22,16 +22,16 @@ const BigCommerce = ({ data, pageContext }) => {
 
         <div className="grid grid--2" style={{alignItems: "center", justifyContent: "center"}}>
 
-          <img src={shopifyLogo} style={{ maxHeight: "25vh", display: "block", margin: "0 auto" }} />
+          <img src={bigcommerceLogo} style={{ maxHeight: "25vh", display: "block", margin: "0 auto" }} />
 
           <div>
-            <h2>Custom Shopify Themes Tailored For Your Brand or Small Business</h2>
+            <h2>BigCommerce Themes Unique To You & Your Brand or Small Business</h2>
           </div>
         </div>
       </section>
 
-      <section className="slim black grid grid--3">
-        <h2>Recent Shopify Projects:</h2>
+      <section className="project-grid slim black grid grid--3">
+        <h2>Recent BigCommerce Projects:</h2>
         {posts.map(({ node: post }, index) => {
           return <ProjectCard post={post} index={index} />
         })}

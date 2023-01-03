@@ -7,6 +7,7 @@ import Seo from "../../components/seo"
 import ReadyToGo from "../../components/ready-to-go"
 
 import shopifyLogo from "../../images/logos/shopify.svg"
+import shopifyBG from "../../images/logos/shopify-bg.png"
 import ProjectCard from "../../components/portfolio/projectCard"
 
 
@@ -14,13 +15,13 @@ const WhyMe = ({ data, pageContext }) => {
 
   const { edges: posts } = data.allMarkdownRemark
   return (
-    <Layout footerCTA={false}>
+    <Layout footerCTA={false} className={"service service--shopify"}>
       <Seo title="Shopify Theme Development" />
       <PageTitle>Shopify Theme Development</PageTitle>
 
-      <section className="slim content black">
+      <section className="half black">
 
-        <div className="grid grid--2" style={{alignItems: "center", justifyContent: "center"}}>
+        <div className="" style={{ alignItems: "center", justifyContent: "center" }}>
 
           <img src={shopifyLogo} style={{ maxHeight: "25vh", display: "block", margin: "0 auto" }} />
 
@@ -30,8 +31,29 @@ const WhyMe = ({ data, pageContext }) => {
         </div>
       </section>
 
-      <section className="slim black grid grid--3">
-        <h2>Recent Shopify Projects:</h2>
+      <section className="shopify-bg half content--centered white">
+        <h2>Shopify Powers Millions of E-Commerce Businesses In 150+ Countries.</h2>
+      </section>
+
+      <section className="brand-perks__grid white slim content--centered grid grid--3">
+        <div>
+          <h3>Already On Shopify?</h3>
+          <h4>Let's clean up your existing theme, or start from scratch.</h4>
+        </div>
+        <div>
+          <h3>Somewhere Else?</h3>
+          <h4>I can transfer you to the platform trusted by millions.</h4>
+        </div>
+        <div>
+          <h3>Brand New To E-Commerce?</h3>
+          <h4>I'll get you all set up and selling online right away!</h4>
+        </div>
+
+
+      </section>
+
+      <section className="project-grid half black grid grid--3">
+        <h2>My Recent Shopify Projects:</h2>
         {posts.map(({ node: post }, index) => {
           return <ProjectCard post={post} index={index} />
         })}
