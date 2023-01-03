@@ -8,18 +8,15 @@
   grid-template-columns: 3fr 1fr;
 
   background: rgba(0, 0, 0, 0.6);
-  transition: background 300ms;
+  transition: 300ms;
   z-index: 99999;
   backdrop-filter: blur(1px);
   @include card(4);
 
   @include breakpoint(laptop) {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 300px 1fr;
   }
 
-  @include breakpoint(desktop) {
-    grid-template-columns: 1fr 3fr 1fr;
-  }
 
   .logo {
     display: grid;
@@ -32,13 +29,6 @@
     width: 100%;
     @include breakpoint(tablet) {
       max-width: 25vw;
-    }
-    @include breakpoint(laptop) {
-      max-width: 50%;
-    }
-
-    @include breakpoint(desktop) {
-      max-width: 50%;
     }
 
     img {
@@ -88,6 +78,14 @@
     .main_head {
       background: rgba(0, 0, 0, 0.5);
       backdrop-filter: blur(15px);
+      @include breakpoint(laptop) {
+        grid-template-columns: 200px 1fr;
+        padding: 0rem 1rem;
+        .main_nav{
+          padding: 0 1rem;
+        }
+      }
+
     }
   }
 }
@@ -99,7 +97,7 @@
   background: none;
   cursor: pointer;
   transition: 300ms;
-  padding: 0.5em;
+  padding: 0 0.5em;
 
   svg {
     filter: drop-shadow(2px 2px 0 var(--color));

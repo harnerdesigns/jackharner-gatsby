@@ -21,23 +21,26 @@
             transform: translateY(0);
             @include card(3);
             opacity: 1;
-            height: 65vh;
+            min-height: 80vh;
+            max-height: 100vh;
+            overflow-y: auto;
         }
 
         @include breakpoint(laptop) {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-end;
             transform: none;
-            grid-column-start: 3;
             opacity: 1;
             position: relative;
+            margin-left: auto;
         }
 
         a {
             color: #fff;
             padding: 0.5em;
             transition: 500ms;
+            position: relative;
 
             &:hover {
                 background: transparentize($color: #fff, $amount: 0.8);
@@ -54,6 +57,19 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+            }
+
+            &.active {
+                &:after {
+                    content: "";
+                    width: 100%;
+                    height: 3px;
+                    background: #fff;
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
             }
 
             &.button {
@@ -76,7 +92,6 @@
 
         #colorSwitcher {
             padding: 0.5em;
-            margin-right: auto;
 
             @include breakpoint(tabletdown) {
                 width: 100%;
@@ -102,6 +117,75 @@
             }
             &:hover {
                 color: var(--color);
+            }
+        }
+
+        .nav-submenu__wrapper {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: stretch;
+            height: 100%;
+
+            @include breakpoint(laptop) {
+                height: unset;
+            }
+
+            i,
+            svg {
+                transition: 300ms;
+                margin-left: 0.5rem;
+                line-height: 1;
+                @include breakpoint(laptop) {
+                    margin-left: 0;                    
+                }
+            }
+            .nav-submenu__submenu {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+
+                @include breakpoint(laptop) {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    transform: translateY(100%);
+                    min-width: 200px;
+                }
+
+                a {
+                    width: 100%;
+                    color: #fff;
+
+                    &.active {
+                        padding-left: calc(0.5em + 5px);
+                        &:after {
+                            content: "";
+                            width: 5px;
+                            height: 100%;
+                            background: var(--color);
+                            display: block;
+                        }
+                    }
+        
+                }
+                svg {
+                    margin-right: 0.5em;
+                }
+            }
+
+            &.is-open {
+                svg.caret {
+                    transform: rotate(180deg);
+                }
+
+                .nav-submenu__submenu {
+                    background: #000;
+                }
             }
         }
     }
@@ -154,7 +238,7 @@
         &.is-open {
             display: flex;
             transform: translateY(0);
-            padding-bottom: 40vh;
+            padding-bottom: 30vh;
             opacity: 0.8;
             height: 120vh;
         }

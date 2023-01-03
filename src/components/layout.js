@@ -17,7 +17,7 @@ import SimpleReactLightbox from "simple-react-lightbox";
 import ImageGrid from "./imageGrid";
 
 
-const Layout = ({ children, footerCTA }) => {
+const Layout = ({ children, footerCTA, className }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -35,7 +35,7 @@ const Layout = ({ children, footerCTA }) => {
       <SimpleReactLightbox>
 
     
-      <div>
+      <div className={className}>
         <Header siteTitle={data.site.siteMetadata.title} />
 
         {children}

@@ -9,7 +9,7 @@ externalLink: ""
 published: true
 ---
 
-One of the toughest parts about being a freelancer is the possibility that you'll have to chase down every single paycheck you ever earn. However, there are some steps you can take ahead of time to prevent you from having to chase to hard.
+One of the toughest parts about being a freelancer is the possibility that you'll have to chase down every single paycheck you ever earn. However, there are some steps you can take ahead of time to prevent you from having to chase too hard.
 
 Keep in mind, I'm a freelance web developer (and not a lawyer) so some of this advice may not apply to other freelance fields. These are all avenues to help you get paid promptly, but you'll need to make some personal tweaks according to your specific situation (and you should consult a lawyer).
 
