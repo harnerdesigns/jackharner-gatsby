@@ -5,6 +5,8 @@ import Layout from "../components/layout-min"
 import PageTitle from "../components/pageTitle"
 import SEO from "../components/seo"
 
+import quicklinksOG from "../images/quick-links-og.png";
+
 import { toLower } from "lodash"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -12,22 +14,22 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 const Links = ({ data }) => {
   return (
     <Layout>
-      <SEO title="Quick Links" />
+      <SEO title="Quick Links" image={quicklinksOG}  />
       <PageTitle>Quick Links</PageTitle>
       
       <section className="slim black">
         <LinksGrid>
           <Link to="/portfolio" className="button button--large">
-            See my Portfolio
+            See My Portfolio
           </Link>
           <Link to="/newsletter" className="button button--large">
-            Join my Newsletter
+            Join My Newsletter
           </Link>
-          <a className="button button--large" href="https://harnerdesigns.com/shop">
-            Shop Merch, Prints + More
-          </a>
           <a className="button button--large" href="https://livemusicforecast.com">
             Live Music Forecast
+          </a>
+          <a className="button button--large" href="https://whatsthatphobia.com">
+            What's That Phobia?
           </a>
         </LinksGrid>
       </section>
