@@ -5,17 +5,15 @@ import styled from "styled-components"
 import { breakpoints } from "../breakpoints"
 
 import FooterCTA from "./FooterCTA"
+import FooterMenu from "./footerMenu"
 
-import MainMenu from "./mainMenu"
-import SecondaryMenu from "./secondaryMenu"
 
 const Footer = ({ siteTitle, footerCTA = true }) => (
   <footer className="slim main_footer">
     {footerCTA && <FooterCTA />}
 
     <MenuGrid>
-      <MainMenu />
-      <SecondaryMenu />
+      <FooterMenu />
       <section className="socials socials--footer">
         <a
           target="_blank"
