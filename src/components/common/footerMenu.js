@@ -18,7 +18,8 @@ const FooterMenu = (props) => {
             <FooterSubMenu title="Projects" links={[{ link: "/portfolio/", text: "All Projects", extraSettings: { partiallyActive: false } }, { link: "/portfolio/tags/e-commerce/", text: "E-Commerce", icon: 'shopping-cart' }, { link: "/portfolio/tags/wordpress/", text: "WordPress", icon: ['fab', "wordpress"] }, { link: "/portfolio/tags/shopify/", text: "Shopify", icon: ['fab', "shopify"] }]} />
 
             <FooterSubMenu title="Blog" links={[{ link: "/blog/", text: "All Posts", extraSettings: { partiallyActive: false } }, { link: "/blog/tags/freelance/", text: "Freelance", icon: 'bacon' }, { link: "/blog/tags/wordpress/", text: "WordPress", icon: ['fab', "wordpress"] }, { link: "/blog/tags/shopify/", text: "Shopify", icon: ['fab', "shopify"] }, { link: "/blog/tags/big-commerce/", text: "BigCommerce", icon: 'shopping-cart' }]} />
-            <FooterSubMenu title="Other" links={[{ link: "/why-me/bigcommerce", text: "Why Hire Me?" }, { link: "/newsletter", text: "Newsletter" }, { link: "/affiliate", text: "Affiliate Links" },  { link: "/uses", text: "Tools I Use" }, { link: "/links", text: "Quick Links" },  ]}  />
+            <FooterSubMenu title="Why Me?" links={[{ link: "/why-me/", text: "I'll Tell You Why" }, { link: "/testimonials/", text: "Testimonials" }]}  />
+            <FooterSubMenu title="Other" links={[{ link: "/newsletter", text: "Newsletter" }, { link: "/affiliate", text: "Affiliate Links" },  { link: "/uses", text: "Tools I Use" }, { link: "/links", text: "Quick Links" },  ]}  />
 
         </nav>
     </>)
