@@ -38,7 +38,12 @@ const WhyMe = ({ data, pageContext }) => {
       </section>
       <section className="half white">
         <h1>#1 My Clients Love Me:</h1>
-        <Grid quotes={quotes} />
+        <Grid quotes={quotes.slice(0, 6)} />
+        <h2>
+          <Link to="/testimonials">
+          See All My Client Testimonials &raquo;
+        </Link>
+        </h2>
       </section>
       <section className="full black">
         {/* <Drips
