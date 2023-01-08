@@ -134,7 +134,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     const parent = getNode(_.get(node, "parent"))
 
     const slug = createFilePath({ node, getNode, basePath: `content/blog` })
-    console.log({slug})
+    // console.log({slug})
     createNodeField({
       node,
       name: `slug`,

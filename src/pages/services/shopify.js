@@ -35,6 +35,13 @@ const WhyMe = ({ data, pageContext }) => {
         <h2>Shopify Powers Millions of E-Commerce Businesses In 150+ Countries.</h2>
       </section>
 
+      <section className="project-grid half black grid grid--3">
+        <h2>My Recent Shopify Projects:</h2>
+        {posts.map(({ node: post }, index) => {
+          return <ProjectCard post={post} index={index} />
+        })}
+      </section>
+
       <section className="brand-perks__grid white slim content--centered grid grid--3">
         <div>
           <h3>Already On Shopify?</h3>
@@ -48,20 +55,10 @@ const WhyMe = ({ data, pageContext }) => {
           <h3>Brand New To E-Commerce?</h3>
           <h4>I'll get you all set up and selling online right away!</h4>
         </div>
-
-
       </section>
-
-      <section className="project-grid half black grid grid--3">
-        <h2>My Recent Shopify Projects:</h2>
-        {posts.map(({ node: post }, index) => {
-          return <ProjectCard post={post} index={index} />
-        })}
-      </section>
-
 
       <ReadyToGo />
-
+      
     </Layout>
   )
 }
