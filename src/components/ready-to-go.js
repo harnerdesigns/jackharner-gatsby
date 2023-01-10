@@ -6,7 +6,7 @@ const ReadyToGo = () => {
     return (
         <section className="ready-to-go__wrapper half white grid grid--2 content--centered">
             <div className="ready-to-go__block">
-                <Link to="/contact"></Link>
+                <Link to="/hire-me"></Link>
                 <h2>Ready to go?</h2>
                 <h3>&laquo; Let's Chat</h3>
             </div>

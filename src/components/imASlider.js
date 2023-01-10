@@ -10,8 +10,6 @@ class ImASlider extends Component {
         "Web Developer",
         "E-Commerce Consultant",
         "Problem Solver",
-        "Photographer",
-        "Cat Lover",
         "Entrepreneur",
       ],
     }

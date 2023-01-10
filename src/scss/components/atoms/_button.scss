@@ -10,15 +10,14 @@ button.button {
     text-decoration: none;
     margin: 0.5em auto;
     box-shadow: 0 1px 2px transparentize(#000, 0.8);
-    border: none;
-    transition: all 300ms;
+border: none;    transition: all 300ms;
 
     text-transform: capitalize;
 
     &:hover {
-    background: var(--lighter-color);
-    color: var(--lighter-text-color);
-
+        background: linear-gradient(-50deg, rgba(#000, 0.4), rgba(#000, 0.3) 22%, rgba(#000, 0.2) 76%, rgba(#000, 0.4));
+        color: #fff;
+        backdrop-filter: blur(5px);
         @include hardShadow(5, var(--darker-color));
     }
 

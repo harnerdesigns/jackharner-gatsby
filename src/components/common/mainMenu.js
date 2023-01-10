@@ -32,9 +32,9 @@ const MainMenu = (props) => {
 
             <SubMenu link={{ link: "/blog", text: "Blog" }} links={[{ link: "/blog/", text: "All Posts", extraSettings: { partiallyActive: false } }, { link: "/blog/tags/freelance/", text: "Freelance", icon: 'bacon' }, { link: "/blog/tags/wordpress/", text: "WordPress", icon: ['fab', "wordpress"] }, { link: "/blog/tags/shopify/", text: "Shopify", icon: ['fab', "shopify"] }, { link: "/blog/tags/big-commerce/", text: "BigCommerce", icon: 'shopping-cart' }]} subMenuOpen={subMenuOpen} setSubMenuOpen={setSubMenuOpen} />
             <Link {...linkSettings} to="/newsletter">Newsletter</Link>
-            <Link {...linkSettings} to="/why-me">Why Hire Me?</Link>
+            <Link {...linkSettings} to="/why-me">Why Me?</Link>
             <ColorSwitcher />
-            <Button to="/contact" className="button" label="Get In Touch" />
+            <Button to="/hire-me" className="button" label="Hire Me" />
 
         </nav>
 
