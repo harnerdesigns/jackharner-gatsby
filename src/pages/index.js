@@ -32,7 +32,7 @@ const IndexPage = ({ data, pageContext }) => {
       <SEO title="Jack Of All Trades, Master Of Some" titleTemplate={"Jack Harner | Web & E-Commerce Developer"} />
       <section className="full white--wavy-5 black intro">
         <IntroGrid style={{ zIndex: 1 }}>
-          <Drips color="#fff" wrapperHeight="40%" style={{zIndex: 2}} />
+          <Drips color="#fff" wrapperHeight="40%" style={{zIndex: 3}} />
           <CanvasBG />
           <ImageWrapper>
             <img src={jack} alt="Jack Harner" />
@@ -76,12 +76,12 @@ const IndexPage = ({ data, pageContext }) => {
         </div>
         <div className="column">
 
-          <h2>Freelance Web Developer.</h2>
+          <h2>Freelance Web Developer</h2>
           <p>
             Access it through a web browser? I can build it with an emphasis on clean, responsive design. From simple landing pages to E-Commerce stores & everything in between.
           </p>
 
-          <h2>E-Commerce Consultant.</h2>
+          <h2>E-Commerce Consultant</h2>
 
           <p>
             Whether your company is just getting started selling online, or
@@ -92,7 +92,7 @@ const IndexPage = ({ data, pageContext }) => {
 
           <p>
             <Link to="/hire-me">Answer a few quick questions</Link>, and let's
-            figure out how you can start selling better online.
+            figure out how I can help you start selling better online.
           </p>
         </div>
       </section>
