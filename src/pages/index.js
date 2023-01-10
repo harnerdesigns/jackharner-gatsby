@@ -41,14 +41,21 @@ const IndexPage = ({ data, pageContext }) => {
             <h1>
               Hi, I'm <b>Jack&nbsp;Harner</b>
             </h1>
-            <h2>Jack of All Trades, Master of Some</h2>
-            <ImASlider />
+
+            <h2>Helping You Sell Better Online</h2>
+            <h3>Web Development & E-Commerce Consulting</h3>
+
             <div className="buttons">
-              <Button label={"Why You Should Hire Me »"} to="/why-me" />
+              <Button label={"Hire Me »"} to="/hire-me" />
             </div>
           </section>
         </IntroGrid>
       </section>
+
+        {/* <section className="no-padding white full-width content content--centered" style={{gridColumn: "1 / -1"}}>
+      <h2>Jack of All Trades, Master of Some</h2>
+            <ImASlider />
+      </section> */}
       <section className="half white row row--mobile-reverse">
         <div className="recent-projects">
           {portfolioPosts
@@ -68,23 +75,23 @@ const IndexPage = ({ data, pageContext }) => {
           />
         </div>
         <div className="column">
-          <h1>Freelance Web Developer.</h1>
+
+          <h2>Freelance Web Developer.</h2>
           <p>
-            Access it through a web browser? I can build it with an emphasis on
-            clean, responsive design. From landing pages & custom business
-            applications to E-Commerce stores & everything in between.
+            Access it through a web browser? I can build it with an emphasis on clean, responsive design. From simple landing pages to E-Commerce stores & everything in between.
           </p>
 
-          <h1>E-Commerce Consultant.</h1>
+          <h2>E-Commerce Consultant.</h2>
 
           <p>
             Whether your company is just getting started selling online, or
-            you're looking to grow your online presence, I can help! I solve
-            problems through programming, automation, process design & more.
+            you're looking to grow your online presence, I can help! I've built custom themes and tools for both <Link to="/services/shopify">Shopify</Link> & <Link to="services/bigcommerce">BigCommerce</Link>. 
           </p>
 
+          <h2>Let's Get Started</h2>
+
           <p>
-            <Link to="/contact">Schedule a FREE Intro Call</Link> and let's
+            <Link to="/hire-me">Answer a few quick questions</Link>, and let's
             figure out how you can start selling better online.
           </p>
         </div>
@@ -92,14 +99,16 @@ const IndexPage = ({ data, pageContext }) => {
       <section className="half pink black--wavy quotes__wrapper">
         <Drips color="black" slim />
 
-        <h1>A Man Of The People:</h1>
+        <h1>A Man Of The People</h1>
 
         <Quotes quotes={quotes} />
       </section>
+
+      
       <section className="half black">
         <FreelanceCountdown />
         <h3 style={{textAlign: "center"}}>
-          Hiring a contract Web Developer? <Link to="/contact">Let's Chat &raquo;</Link>
+          Hiring a contract Web Developer? <Link to="/hire-me">Let's Chat &raquo;</Link>
         </h3>
       </section>
       <section className="full white row">

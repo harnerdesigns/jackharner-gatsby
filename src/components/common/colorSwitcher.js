@@ -77,6 +77,9 @@ export default class ColorSwitcher extends Component {
           },
         },
       }
+
+      this.setColorVars()
+
     }
   }
 
@@ -128,6 +131,7 @@ export default class ColorSwitcher extends Component {
 
   darkenHSL(hsl, amount, format = false) {
     let newL = hsl.l - amount / 100
+    console.log({newL})
     if (format) {
       return "hsl(" + hsl.h + ", " + hsl.s * 100 + "%, " + newL * 100 + "%)"
     } else {
@@ -229,38 +233,23 @@ export default class ColorSwitcher extends Component {
     this.setState(
       {
         color: {
-          hex: "#e91e63",
+          hex: "#E91E63",
           rgb: {
-            r: "0",
-            g: "91",
-            b: "187",
+            r: "233",
+            g: "30",
+            b: "99",
           },
           hsl: {
-            h: 211,
-            s: 1,
-            l: 0.73,
+            h: 340,
+            s: 87,
+            l: 0.91,
             a: 1,
-          },
-        },
-        selected_color: {
-          hex: "#e91e63",
-          rgb: {
-            r: "0",
-            g: "91",
-            b: "187",
-          },
-          hsl: {
-            h: 211,
-            s: 1,
-            l: 0.73,
-            a: 1,
-          },
+          }
         },
         isColorPickerOpen: false,
       },
       () => this.setColorVars()
     )
-    console.log(this.state)
 
     cookies.remove("paletteColorObj", { path: "/" })
     // ReactGA.event({

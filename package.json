@@ -52,10 +52,10 @@
     "readline-sync": "^1.4.10",
     "replace-in-file": "^6.3.2",
     "sass": "^1.48.0",
-    "simple-react-lightbox": "^3.6.9-0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.3",
-    "universal-cookie": "^4.0.4"
+    "universal-cookie": "^4.0.4",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "prettier": "^2.5.1"

@@ -13,7 +13,6 @@ import "./fontawesome"
 import Header from "./common/header-min"
 import "../scss/style.scss"
 import Footer from "./common/footer-min"
-import SimpleReactLightbox from "simple-react-lightbox";
 import ImageGrid from "./imageGrid";
 
 
@@ -23,7 +22,6 @@ const Layout = ({ children, footerCTA }) => {
   return (
     <MDXProvider components={shortcodes}>
 
-      <SimpleReactLightbox>
 
     
       <div>
@@ -33,7 +31,6 @@ const Layout = ({ children, footerCTA }) => {
 
         <Footer footerCTA={false} />
       </div>
-    </SimpleReactLightbox>
     </MDXProvider>
   )
 }

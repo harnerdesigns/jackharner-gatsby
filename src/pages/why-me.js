@@ -32,7 +32,7 @@ const WhyMe = ({ data, pageContext }) => {
           </h2>
           <h3>
             Here's a couple reasons why you should swing that other leg over and{" "}
-            <Link to="/contact">Hire Me</Link>.
+            <Link to="/hire-me">Hire Me</Link>.
           </h3>
         </div>
       </section>

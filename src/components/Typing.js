@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 
 import Typist from "react-typist"
 
-import uuid from "uuid"
+import { v4 as uuidv4 } from 'uuid';
 
 class Typing extends Component {
 
@@ -20,13 +20,13 @@ class Typing extends Component {
     const { words } = this.props
     const n = words.map((word, i) => {
       return [
-        <span key={uuid()}>{word}</span>,
-        <Typist.Backspace key={uuid()} count={word.length} delay={1200} />,
+        <span key={uuidv4()}>{word}</span>,
+        <Typist.Backspace key={uuidv4()} count={word.length} delay={1200} />,
       ]
     })
 
     return [
-      <Typist key={uuid()} onTypingDone={() => this.forceUpdate()}>
+      <Typist key={uuidv4()} onTypingDone={() => this.forceUpdate()}>
         {n}
       </Typist>,
     ]

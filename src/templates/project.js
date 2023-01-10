@@ -6,7 +6,6 @@ import ProjectCard from "../components/portfolio/projectCard"
 import ProjectHeader from "../components/portfolio/projectHeader"
 import Button from "../components/atoms/button"
 import defaultOGImage from "../images/jackHarner-default-OG.jpg"
-import { SRLWrapper } from "simple-react-lightbox";
 import _ from "lodash"
 
 export default function Template(props) {
@@ -63,7 +62,6 @@ export default function Template(props) {
         >
           {post.frontmatter.images && post.frontmatter.images.length > 0 ? (
             <section className="project__images">
-              <SRLWrapper>
               {post.frontmatter.images.map((image, index) => {
                 console.log(image)
                 return image ? (
@@ -77,7 +75,6 @@ export default function Template(props) {
                     ""
                     )
                   })}
-                  </SRLWrapper>
             </section>
           ) : (
             ""
