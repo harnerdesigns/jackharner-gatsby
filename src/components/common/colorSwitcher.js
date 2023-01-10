@@ -152,23 +152,25 @@ export default class ColorSwitcher extends Component {
   setColorVars = () => {
     var textColor = this.getTextColor(this.state.selected_color.rgb)
 
-    document.documentElement.style.setProperty(
-      "--color",
-      this.state.selected_color.hex
-    )
+    if(typeof document !== "undefined"){
 
-    document.documentElement.style.setProperty("--text-color", textColor)
-    document.documentElement.style.setProperty(
-      "--text-color--inverted",
+      document.documentElement.style.setProperty(
+        "--color",
+        this.state.selected_color.hex
+        )
+        
+        document.documentElement.style.setProperty("--text-color", textColor)
+        document.documentElement.style.setProperty(
+          "--text-color--inverted",
       textColor === "white" ? "black" : "white"
     )
 
     document.documentElement.style.setProperty(
       "--darker-color",
       this.darkenHSL(this.state.selected_color.hsl, 15, true)
-    )
-    document.documentElement.style.setProperty(
-      "--lighter-color",
+      )
+      document.documentElement.style.setProperty(
+        "--lighter-color",
       this.lightenHSL(this.state.selected_color.hsl, 5, true)
     )
 
@@ -178,21 +180,22 @@ export default class ColorSwitcher extends Component {
       "--darker-text-color",
       this.getTextColor(
         this.hslToRgb(darkerColor.h, darkerColor.s, darkerColor.l)
-      )
-    )
-    let lighterColor = this.darkenHSL(this.state.selected_color.hsl, 5)
-    console.log({
-      lighter: this.state.selected_color.hsl,
-      darker: lighterColor,
-    })
-    document.documentElement.style.setProperty(
-      "--lighter-text-color",
-      this.getTextColor(
-        this.hslToRgb(lighterColor.h, lighterColor.s, lighterColor.l)
-      )
-    )
-  }
-
+        )
+        )
+        let lighterColor = this.darkenHSL(this.state.selected_color.hsl, 5)
+        console.log({
+          lighter: this.state.selected_color.hsl,
+          darker: lighterColor,
+        })
+        document.documentElement.style.setProperty(
+          "--lighter-text-color",
+          this.getTextColor(
+            this.hslToRgb(lighterColor.h, lighterColor.s, lighterColor.l)
+            )
+            )
+          }
+        }
+          
   toggleModal = () => {
     this.setState({
       isColorPickerOpen: !this.state.isColorPickerOpen,
