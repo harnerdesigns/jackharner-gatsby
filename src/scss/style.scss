@@ -370,7 +370,7 @@ section.black .title__box {
 }
 
 .introduction {
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -391,12 +391,12 @@ section.black .title__box {
   // opacity: 0;
 
   @include breakpoint(laptop) {
-    width: 70%;
+    width: 50%;
   border-radius: calc(var(--border-radius) * 2);
-    height: 65vh;
-    // align-self: stretch;
-    padding: 3rem 2rem 5rem;
+    padding: 1rem 2rem ;
 
+    position: absolute!important; top: 50%; right: 2.5rem;
+    transform: translateY(-50%);
     // border-radius: var(--border-radius) var(--border-radius) 0 0;
   }
 
@@ -436,11 +436,7 @@ section.black .title__box {
     @include breakpoint(desktop) {
       font-size: 2.5rem;
     }
-    @include breakpoint(tabletdown) {
-      display: flex;
-      // flex-direction: column;
-      align-items: center;
-    }
+
   }
 
   .imASlider {

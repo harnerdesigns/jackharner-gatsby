@@ -32,7 +32,7 @@ const IndexPage = ({ data, pageContext }) => {
       <SEO title="Jack Of All Trades, Master Of Some" titleTemplate={"Jack Harner | Web & E-Commerce Developer"} />
       <section className="full white--wavy-5 black intro">
         <IntroGrid style={{ zIndex: 1 }}>
-          <Drips color="#fff" wrapperHeight="40%" style={{zIndex: 3}} />
+          <Drips color="#fff" wrapperHeight="40%" style={{zIndex: 2}} />
           <CanvasBG />
           <ImageWrapper>
             <img src={jack} alt="Jack Harner" />
