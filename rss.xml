@@ -1,4 +1,164 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:webfeeds="http://webfeeds.org/rss/1.0"><channel><title><![CDATA[Jack Harner's Web Dev Blog]]></title><description><![CDATA[Jack Harner is a Freelance Web Developer & E-Commerce Consultant based in Denver, Colorado. Shopify, BigCommerce, WordPress Dev & More.]]></description><link>https://jackharner.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 10 Jan 2023 22:39:44 GMT</lastBuildDate><webfeeds:accentColor>#E91E63</webfeeds:accentColor><webfeeds:logo>./src/images/jackharenr-logo-white.svg</webfeeds:logo><item><title><![CDATA[Ensure You Get Paid As A Freelancer]]></title><description><![CDATA[One of the toughest parts about being a freelancer is the possibility that you'll have to chase down every single paycheck you ever earn. However, there are some steps you can take ahead of time to prevent you from having to chase too hard. Keep in…]]></description><link>https://jackharner.com//blog/ensure-you-get-paid-as-a-freelancer/</link><guid isPermaLink="false">https://jackharner.com//blog/ensure-you-get-paid-as-a-freelancer/</guid><pubDate>Sat, 31 Dec 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;One of the toughest parts about being a freelancer is the possibility that you&apos;ll have to chase down every single paycheck you ever earn. However, there are some steps you can take ahead of time to prevent you from having to chase too hard.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:webfeeds="http://webfeeds.org/rss/1.0"><channel><title><![CDATA[Jack Harner's Web Dev Blog]]></title><description><![CDATA[Jack Harner is a Freelance Web Developer & E-Commerce Consultant based in Denver, Colorado. Shopify, BigCommerce, WordPress Dev & More.]]></description><link>https://jackharner.com</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 13 Jan 2023 00:31:07 GMT</lastBuildDate><webfeeds:accentColor>#E91E63</webfeeds:accentColor><webfeeds:logo>./src/images/jackharenr-logo-white.svg</webfeeds:logo><item><title><![CDATA[Setting The Artboard Background Color In Adobe Illustrator]]></title><description><![CDATA[Sometimes when you're working with graphic design you end up working on a piece that's meant to be displayed on a non-white background, like a logo or web icon. Unfortunately, there isn't really a way to set the background color of an artboard in…]]></description><link>https://jackharner.com//blog/setting-the-artboard-background-color-in-adobe-illustrator/</link><guid isPermaLink="false">https://jackharner.com//blog/setting-the-artboard-background-color-in-adobe-illustrator/</guid><pubDate>Fri, 13 Jan 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Sometimes when you&apos;re working with graphic design you end up working on a piece that&apos;s meant to be displayed on a non-white background, like a logo or web icon. Unfortunately, there isn&apos;t really a way to set the background color of an artboard in Illustrator, but let&apos;s look at a few workarounds that acheive the same effect.&lt;/p&gt;
+&lt;h2&gt;The Simplest Way&lt;/h2&gt;
+&lt;p&gt;The simplest, but probably not best way of accomplishing a colored background is to just draw out a rectangle the size of your artboard, send it to back &lt;code&gt;Ctrl + Shift + [&lt;/code&gt; and lock it &lt;code&gt;Ctrl + 2&lt;/code&gt;.&lt;/p&gt;
+&lt;img src=&quot;https://harnerdesigns.com/wp-content/uploads/2019/07/The-easiest-way__cropped.gif&quot; alt=&quot;&quot; class=&quot;alignnone size-full wp-image-1157&quot;&gt;
+&lt;p&gt;I&apos;ve run into problems with this method however, where I&apos;ll go to export the file as an SVG but forget to delete the background and end up with an extra element in the code or a solid color where you wanted transparency in a PNG.&lt;/p&gt;
+&lt;p&gt;Useful if you just need to check a quick background color, just don&apos;t forget to delete it when you&apos;re saving!&lt;/p&gt;
+&lt;p&gt;{{{vert}}}&lt;/p&gt;
+&lt;h2&gt;The Better Way&lt;/h2&gt;
+&lt;p&gt;The better, not quite as simple way to get a colored artboard is to take advantage of the Transparency Grid. It&apos;s used to show which parts of a project are transparent and how much. To get it setup go to &lt;code&gt;File &gt; Document Setup&lt;/code&gt;&lt;/p&gt;
+&lt;img src=&quot;https://harnerdesigns.com/wp-content/uploads/2019/07/Document-Setup-Menu-Item.png&quot; alt=&quot;Document Setup Menu Item&quot; width=&quot;576&quot; height=&quot;624&quot; class=&quot;alignnone size-full wp-image-1159&quot;&gt;
+&lt;p&gt;Under the Transparency section you need to double click on both of these two color squares and set them to whatever color you want your background to be.&lt;/p&gt;
+&lt;img src=&quot;https://harnerdesigns.com/wp-content/uploads/2019/07/document-setup-settings.png&quot; alt=&quot;The Settings You Need to change&quot; width=&quot;1080&quot; height=&quot;598&quot; class=&quot;alignnone size-full wp-image-1161&quot;&gt;
+&lt;p&gt;Click OK on the Document Settings panel and then go to &lt;code&gt;View &gt; Show Transparency Grid&lt;/code&gt;&lt;/p&gt;
+&lt;img src=&quot;https://harnerdesigns.com/wp-content/uploads/2019/07/Show-Transparency-Grid.png&quot; alt=&quot;&quot; width=&quot;705&quot; height=&quot;823&quot; class=&quot;alignnone size-full wp-image-1162&quot;&gt;
+&lt;p&gt;You can also use the keyboard shortcut: &lt;code&gt;Ctrl + Shift + D&lt;/code&gt; to toggle the Transparency Grid on and off.&lt;/p&gt;
+&lt;img src=&quot;https://harnerdesigns.com/wp-content/uploads/2019/07/transparency-grid-result.png&quot; alt=&quot;Transparency Grid Result&quot; width=&quot;777&quot; height=&quot;782&quot; class=&quot;alignnone size-full wp-image-1163&quot;&gt;
+&lt;p&gt;There you have it. A &quot;Not White&quot; background on your Artboards in Illustrator without having extra objects or stuff cluttering up your files. The document properties are set on a per-project basis, so you&apos;ll have to set it every time.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Anatomy of a WordPress Theme]]></title><description><![CDATA[WordPress Development relies on either Themes or Plugins for WordPress. Today, I'm going to walk you through the base files you need for any WordPress Theme. A few of these files you absolutely need for WordPress to even consider your collection of…]]></description><link>https://jackharner.com//blog/anatomy-of-a-wordpress-theme/</link><guid isPermaLink="false">https://jackharner.com//blog/anatomy-of-a-wordpress-theme/</guid><pubDate>Fri, 13 Jan 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;WordPress Development relies on either Themes or Plugins for WordPress. Today, I&apos;m going to walk you through the base files you need for any WordPress Theme.&lt;/p&gt;
+&lt;p&gt;A few of these files you absolutely need for WordPress to even consider your collection of files a theme, a handful that you kind of need depending on what site you&apos;re going for, and a lot that allow you to realize WordPress true potential.&lt;/p&gt;
+&lt;h2&gt;Absolutely Required&lt;/h2&gt;
+&lt;p&gt;There are only two files that &lt;strong&gt;absolutely required&lt;/strong&gt; for WordPress to even recognize your theme as a theme. &lt;code&gt;index.php&lt;/code&gt; and &lt;code&gt;style.css&lt;/code&gt;. Let&apos;s break down the difference and some necessary parts.&lt;/p&gt;
+&lt;h3&gt;&lt;code&gt;index.php&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;According to the WordPress &lt;a href=&quot;https://developer.wordpress.org/themes/basics/template-hierarchy/&quot;&gt;Template Heirarchy&lt;/a&gt;, &lt;code&gt;index.php&lt;/code&gt; is the last fallback for every type of page. If it can&apos;t match to any other template file, this is the one that gets rendered.&lt;/p&gt;
+&lt;h3&gt;&lt;code&gt;style.css&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;This is the main stylesheet of your theme. It needs to live in the root of your theme&apos;s folder. &quot;&lt;code&gt;wp-content/themes/&amp;#x3C;theme-name&gt;/style.css&lt;/code&gt;&quot;. In order for WordPress to treat your theme right (buy it a nice dinner and some expensive wine), you need to include a comment header at the very top (otherwise it&apos;s leftovers and clearance wine). It contains information like the name of your theme, description, links to the developers and support, and more. For example, this is the header from WordPress&apos; default &lt;a href=&quot;https://github.com/WordPress/twentynineteen/blob/master/style.css&quot;&gt;TwentyNinteen Theme&lt;/a&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;/*
+Theme Name: Twenty Nineteen
+Theme URI: https://github.com/WordPress/twentynineteen
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Description: Our 2019 default theme is designed to show off the power of the block editor. It features custom styles for all the default blocks and is built so that what you see in the editor looks like what you&apos;ll see on your website. Twenty Nineteen is designed to be adaptable to a wide range of websites, whether you’re running a photo blog, launching a new business, or supporting a non-profit. Featuring ample whitespace and modern sans-serif headlines paired with classic serif body text, it&apos;s built to be beautiful on all screen sizes.
+Requires at least: WordPress 4.9.6
+Version: 1.2
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: twentynineteen
+Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you&apos;ve learned with others.
+Twenty Nineteen is based on Underscores https://underscores.me/, (C) 2012-2018 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you use a task runner like Gulp you can set up your SCSS tasks to generate the header for you from your &lt;code&gt;package.json&lt;/code&gt; file so you only have to update that information in one spot.&lt;/p&gt;
+&lt;h2&gt;Optional But Useful&lt;/h2&gt;
+&lt;h3&gt;&lt;code&gt;functions.php&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Your theme&apos;s Functions file is the file where all the magic that makes WordPress so great happen. It runs when WordPress is initialized and is where you can extend the platform to suit your needs.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;h2&gt;BE CAREFUL WHEN MODIFYING THIS FILE!&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;functions.php&lt;/code&gt; runs on both the Admin side and the front-end, so if you leave a typo or something, it will break your whole site. Work on your theme locally and &lt;em&gt;Never&lt;/em&gt; update your &lt;code&gt;functions.php&lt;/code&gt; in the admin area Theme Editor.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Typically you use the &lt;code&gt;functions.php&lt;/code&gt; file to enqueue scripts and stylesheets to get loaded dynamically, define widget areas, modify how WordPress outputs pretty much anything, and a whole lot more.&lt;/p&gt;
+&lt;p&gt;For Example:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;php&quot;&gt;function enqueue_my_scripts(){
+        wp_enqueue_script( &quot;theme&quot;, get_stylesheet_directory_uri().&apos;/theme.js&apos;);
+        wp_enqueue_style( &apos;style&apos;, get_stylesheet_uri() );
+}
+add_action(&apos;wp_enqueue_scripts&apos;, &apos;enqueue_my_scripts&apos;);
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;&lt;code&gt;header.php&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;This template file gets called with &lt;code&gt;get_header()&lt;/code&gt;. In here lives everything you want at the beginning of every page. Things like the opening &lt;code&gt;&amp;#x3C;html&gt;&lt;/code&gt; tag, your &lt;code&gt;&amp;#x3C;head&gt;&amp;#x3C;/head&gt;&lt;/code&gt; block, your opening &lt;code&gt;&amp;#x3C;body&gt;&lt;/code&gt; tag and then typically a &lt;code&gt;&amp;#x3C;header&gt;&amp;#x3C;/header&gt;&lt;/code&gt; block.&lt;/p&gt;
+&lt;p&gt;Make sure to include &lt;code&gt;&amp;#x3C;?php wp_head(); ?&gt;&lt;/code&gt; at the end of your &lt;code&gt;&amp;#x3C;head&gt;&lt;/code&gt; block or else WordPress doesn&apos;t have a place to inject code into the header.&lt;/p&gt;
+&lt;h3&gt;&lt;code&gt;footer.php&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;footer.php&lt;/code&gt;, much like &lt;code&gt;header.php&lt;/code&gt;, is called with &lt;code&gt;get_footer()&lt;/code&gt;. As you could expect, &lt;code&gt;footer.php&lt;/code&gt; includes all the things you want at the &lt;em&gt;end&lt;/em&gt; of every page: your footer, probably a few widget or menu areas, and then the closing tags:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;php&quot;&gt;&amp;lt;?php wp_footer(); ?&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;&lt;code&gt;wp_footer()&lt;/code&gt; is nessecary so that WordPress can add scripts to the end of the document.&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;code&gt;sidebar.php&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The last of the layout templates, &lt;code&gt;sidebar.php&lt;/code&gt; get&apos;s called with, I&apos;m sure you can guess, &lt;code&gt;get_sidebar()&lt;/code&gt;. Depending on the needs of the design, the sidebar can be or display anything.&lt;/p&gt;
+&lt;p&gt;First things first you need to register your sidebar. Place the following code in your &lt;code&gt;functions.php&lt;/code&gt; file:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;php&quot;&gt;register_sidebar( array(
+    &apos;id&apos;          =&amp;gt; &apos;top-menu&apos;,
+    &apos;name&apos;        =&amp;gt; &apos;Top Menu&apos;,
+    &apos;description&apos; =&amp;gt; &apos;This sidebar is located at the top.&apos;
+) );
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Remember what you set for the &lt;code&gt;id&lt;/code&gt; because you need that to get the sidebar content. Add the following code to your &lt;code&gt;sidebar.php&lt;/code&gt; file:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;php&quot;&gt;&amp;lt;div id=&quot;sidebar-top-menu&quot; class=&quot;sidebar&quot;&amp;gt;
+    &amp;lt;?php dynamic_sidebar( &apos;top-menu&apos; ); ?&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Your &quot;Top Menu&quot; sidebar should now show up in the &lt;code&gt;Customize &gt; Widgets&lt;/code&gt; area of the WordPress backend.&lt;/p&gt;
+&lt;h3&gt;&lt;code&gt;search.php&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The depth and complexity of customizing a search page are out of the scope of this article, but you can do it. Typically this template just needs a loop, fetching posts and outputting as a grid or list. You can also replace this template with an entirely different search tool to handle more advanced searching.&lt;/p&gt;
+&lt;h2&gt;Post Type Templates&lt;/h2&gt;
+&lt;h3&gt;&lt;code&gt;single.php&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The Single template is displayed when a single post is queried. It typically contains the full content of the post, your social share links, and potentially a comments section.&lt;/p&gt;
+&lt;p&gt;You utilize the loop to get the content for the post:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;php&quot;&gt;&amp;lt;?php if ( have_posts() ) : ?&amp;gt;
+    &amp;lt;?php while ( have_posts() ) : the_post(); ?&amp;gt;    
+    // Do Stuff
+    &amp;lt;?php endwhile; ?&amp;gt;
+&amp;lt;?php endif; ?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;&lt;code&gt;comments.php&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The Comments template is called from &lt;code&gt;comments_template()&lt;/code&gt; from within &lt;code&gt;single.php&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Inside &lt;code&gt;single.php&lt;/code&gt; you would include:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;php&quot;&gt;if ( comments_open() || get_comments_number() ) :
+    comments_template();
+endif;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Which just checks if comments are open for that post, or if there are any comments and if so output the default comments form.&lt;/p&gt;
+&lt;p&gt;See the &lt;a href=&quot;https://codex.wordpress.org/Comments_in_WordPress&quot;&gt;codex&lt;/a&gt; for more info about WordPress comments.&lt;/p&gt;
+&lt;h3&gt;&lt;code&gt;page.php&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The Page template is the default template for Pages. The biggest difference between Posts and Pages in WordPress is that pages are for more timeless content. Examples being your site&apos;s &quot;About Us&quot; page or the &quot;Contact Us&quot; page. Unlike Posts, Pages cannot be categorized or tagged. They can, however, be arranged hierarchically with each page being able to have many children but only one parent page.&lt;/p&gt;
+&lt;p&gt;With Pages you can develop custom templates. Either &lt;code&gt;page-{templateName}.php&lt;/code&gt; or &lt;code&gt;page-templates/page-{templateName}.php&lt;/code&gt;. This specific template will match any pages with the slug &lt;code&gt;{templateName}&lt;/code&gt; unless you add the following PHP comment to the beginning of the template:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?php /* Template Name: Example Template */ ?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This allows WordPress to recognize the template as a custom Page Template and adds a drop down to the Edit Page screen where you can select a specific template for each page.&lt;/p&gt;
+&lt;img src=&quot;https://harnerdesigns.com/wp-content/uploads/2019/05/PageTemplateSelector.png&quot; alt=&quot;&quot; class=&quot;alignnone size-full wp-image-1081&quot;&gt;
+&lt;p&gt;Examples of different page templates you could create include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A centered wide template, with one column and a focus on the content.&lt;/li&gt;
+&lt;li&gt;Different Templates for Right and Left Sidebar Positions&lt;/li&gt;
+&lt;li&gt;A more complex grid&lt;/li&gt;
+&lt;li&gt;Unique one-off landing pages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The sky&apos;s the limit really. (One of the many beauties of WordPress)&lt;/p&gt;
+&lt;h3&gt;&lt;code&gt;attachment.php&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The Attachment template file is very similar to &lt;code&gt;single.php&lt;/code&gt; except it&apos;s for displaying images, videos, files and other things uploaded through the WordPress media upload system.&lt;/p&gt;
+&lt;p&gt;Very similar to visiting a wikipedia page about a specific image file:&lt;/p&gt;
+&lt;img src=&quot;https://harnerdesigns.com/wp-content/uploads/2019/05/Screen-Shot-2019-05-04-at-18.57.16-fullpage-1024x573.png&quot; alt=&quot;Wikipedia Attachment Page&quot; class=&quot;alignnone size-large wp-image-1082&quot;&gt;
+&lt;h3&gt;&lt;code&gt;image.php&lt;/code&gt;, &lt;code&gt;jpg.php&lt;/code&gt;, &lt;code&gt;video.php&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;These are all just more specific versions of &lt;code&gt;attachment.php&lt;/code&gt;. They allow you to specify custom templates for all images (&lt;code&gt;image.php&lt;/code&gt;), only JPG images (&lt;code&gt;jpg.php&lt;/code&gt;), and even videos (&lt;code&gt;video.php&lt;/code&gt;). These are highly optional, and you should probably be ok with just an &lt;code&gt;attachment.php&lt;/code&gt; file, but if your site needs the specificity, by all means, specify away.&lt;/p&gt;
+&lt;h2&gt;Archival Templates&lt;/h2&gt;
+&lt;p&gt;The Archival templates are focused around grouping relevant content together in a useful way. When you run through The Loop on an archive template, it typically returns more than one post so your templates should account for that.&lt;/p&gt;
+&lt;h3&gt;&lt;code&gt;archive.php&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The default Archive template. Used if none of the other templates are found. Run through The Loop and output posts. If you want to have different looking pages for your Category Archives vs Looking at a specific Date and so on, use the templates below.&lt;/p&gt;
+&lt;h3&gt;&lt;code&gt;category.php&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The Category Template is the default archive template for viewing posts of the same category. Displays a list of posts from a specific category if there is no &lt;code&gt;category-{categorySlug}.php&lt;/code&gt; file for the category with a slug of &lt;code&gt;{categorySlug}&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If &lt;code&gt;category.php&lt;/code&gt; doesn&apos;t exist, WordPress reverts to &lt;code&gt;archive.php&lt;/code&gt; and then &lt;code&gt;index.php&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;code&gt;tag.php&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Exact same thing as &lt;code&gt;category.php&lt;/code&gt; but for Tags.&lt;/p&gt;
+&lt;p&gt;If &lt;code&gt;tag.php&lt;/code&gt; doesn&apos;t exist, WordPress reverts to &lt;code&gt;archive.php&lt;/code&gt; and then &lt;code&gt;index.php&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;code&gt;taxonomy.php&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;This is the default Taxonomy Template for Custom Taxonomies. If you don&apos;t have &lt;code&gt;taxonomy-{taxonomyName}.php&lt;/code&gt; and a Custom Taxonomy page is queried, it defaults back to &lt;code&gt;taxonomy.php&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If &lt;code&gt;taxonomy.php&lt;/code&gt; doesn&apos;t exist, WordPress reverts to &lt;code&gt;archive.php&lt;/code&gt; and then &lt;code&gt;index.php&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;code&gt;author.php&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The Author template is used to display posts by a specific author. In here you can include the author&apos;s Biography and social links, etc as well as a list of all the posts that individual has contributed to the site.&lt;/p&gt;
+&lt;h3&gt;&lt;code&gt;date.php&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;date.php&lt;/code&gt; file is pretty similar to the other archival templates, it just allows you to specify a different archive page when looking at a specific date. You could build a day.php, month.php, or year.php if you needed to.&lt;/p&gt;
+&lt;h2&gt;Other Templates&lt;/h2&gt;
+&lt;h3&gt;&lt;code&gt;front-page.php&lt;/code&gt; &amp;amp; &lt;code&gt;home.php&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;See &lt;a href=&quot;https://wordpress.stackexchange.com/a/110987/162441&quot;&gt;This StackOverflow Answer&lt;/a&gt; about the difference between &lt;code&gt;front-page.php&lt;/code&gt; and &lt;code&gt;home.php&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;&lt;code&gt;404.php&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;This template is called whenever a user ends up on a page that doesn&apos;t exist. Use the 404 template to redirect the users back to the right place or present them with a search bar to help them find what they were looking for.&lt;/p&gt;
+&lt;p&gt;Be creative with it. Landing on a broken page is never fun for your user and there&apos;s a very high chance they&apos;ll just close the tab instead of actually trying to find what they were looking for.&lt;/p&gt;
+&lt;h2&gt;&lt;a href=&quot;https://github.com/harnerdesigns/blank2&quot;&gt;Blank2 - Blank WordPress Theme&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;A good way to hit the ground running on your new WordPress project is with my &lt;a href=&quot;https://github.com/harnerdesigns/blank2&quot;&gt;Blank2 Blank Starter WordPress theme&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Comes with all the WordPress Template files you need and a pretty nifty Gulp setup to automate at least a few steps in your development (SASS-&gt;CSS, Minify JS, BrowserSync, and more).&lt;/p&gt;
+&lt;p&gt;Run the following code in your terminal to get started:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git clone https://github.com/harnerdesigns/blank2.git new-wp-theme
+$ cd new-wp-theme &amp;amp;&amp;amp; npm install
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;In Conclusion&lt;/h2&gt;
+&lt;p&gt;You should now have at least a basic understanding of what all the different theme files do and when to use them.&lt;/p&gt;
+&lt;p&gt;Developing for WordPress is pretty simple once you get the concepts down. It&apos;s &lt;em&gt;SO&lt;/em&gt; customizable though so you can truly create any kind of web application you want.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Ensure You Get Paid As A Freelancer]]></title><description><![CDATA[One of the toughest parts about being a freelancer is the possibility that you'll have to chase down every single paycheck you ever earn. However, there are some steps you can take ahead of time to prevent you from having to chase too hard. Keep in…]]></description><link>https://jackharner.com//blog/ensure-you-get-paid-as-a-freelancer/</link><guid isPermaLink="false">https://jackharner.com//blog/ensure-you-get-paid-as-a-freelancer/</guid><pubDate>Sat, 31 Dec 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;One of the toughest parts about being a freelancer is the possibility that you&apos;ll have to chase down every single paycheck you ever earn. However, there are some steps you can take ahead of time to prevent you from having to chase too hard.&lt;/p&gt;
 &lt;p&gt;Keep in mind, I&apos;m a freelance web developer (and not a lawyer) so some of this advice may not apply to other freelance fields. These are all avenues to help you get paid promptly, but you&apos;ll need to make some personal tweaks according to your specific situation (and you should consult a lawyer).&lt;/p&gt;
 &lt;h2&gt;ALWAYS. GET. A. CONTRACT.&lt;/h2&gt;
 &lt;p&gt;I repeat:&lt;/p&gt;
@@ -2588,4 +2748,211 @@ upstream	https://github.com/{{owner}}/{{project_name}}.git (push)&lt;/code&gt;&l
 &lt;h2&gt;Seal The Deal&lt;/h2&gt;
 &lt;p&gt;Finish off your changes by pushing them back up to your Forked Repo&apos;s &lt;code class=&quot;language-text&quot;&gt;origin&lt;/code&gt; remote that you have write access to.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;command-line-prompt&quot;&gt;&lt;span data-user=jack data-host=localhost&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; push origin master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Ta da! You just refreshed your forked repo. Make, test, commit and push your changes and you&apos;ll be all set to create a pull request back to the Original Repo. You&apos;re ready to start changing the world of Open Source Software one pull request at a time!&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;Ta da! You just refreshed your forked repo. Make, test, commit and push your changes and you&apos;ll be all set to create a pull request back to the Original Repo. You&apos;re ready to start changing the world of Open Source Software one pull request at a time!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Sick Console Bro! How To Style Your console.log with CSS]]></title><description><![CDATA[Photo by Glenn Carstens-Peters on Unsplash In Chrome and Firefox (>31) you can add CSS styles to your console.log() messages. It's fairly simple and straightforward. All you need to do is include a %c string before your log message and then pass your…]]></description><link>https://jackharner.com//blog/sick-console-bro/</link><guid isPermaLink="false">https://jackharner.com//blog/sick-console-bro/</guid><pubDate>Thu, 13 Jun 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;Photo by &lt;a href=&quot;https://unsplash.com/@glenncarstenspeters?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Glenn Carstens-Peters&lt;/a&gt; on Unsplash&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;In &lt;a href=&quot;https://developers.google.com/web/tools/chrome-devtools/console/console-write#styling_console_output_with_css&quot;&gt;Chrome&lt;/a&gt; and Firefox (&gt;31) you can add CSS styles to your console.log() messages. It&apos;s fairly simple and straightforward.&lt;/p&gt;
+&lt;p&gt;All you need to do is include a &lt;code&gt;%c&lt;/code&gt; string before your log message and then pass your CSS as a parameter to the console.log( ) function. Like so:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;console.log(&quot;%c{{Log Message}}&quot;, &quot;{{CSS}}&quot;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For example, this code runs on &lt;a href=&quot;https://harnerdesigns.com&quot;&gt;my portfolio&lt;/a&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;console.log(&quot;%cHarner Designs&quot;, &quot;color:#233E82; font-family:&apos;Ubuntu&apos;; display: block;font-weight:bold; font-size:48px; background:#fff;&quot;);
+    console.log(&quot;%cLike to dig into the meaty bits of the website?\nThanks for looking! Hit us up on Twitter @harnerdesigns!&quot;, &quot;color:#222; font-family:&apos;Ubuntu&apos;; font-weight:100; font-size:24px; background:#fff;&quot;);
+    console.log(&quot;%cDid you know you can style your console output?!&quot;, &quot;color:#333; font-family:&apos;Ubuntu&apos;; font-weight:100; font-size:18px; background:#fff;&quot;);
+    console.log(&quot;%cCheck our blog to learn how: https://harnerdesigns.com/blog/style-your-console-log-with-css/&quot;, &quot;line-height: 3em; padding: 0.5em; text-align: center; border: 1px dotted #aaa; background:#fff; font-size: 14px;&quot;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and outputs like this to the console:&lt;/p&gt;
+&lt;img src=&quot;https://harnerdesigns.com/wp-content/uploads/2019/06/styled-console-update.png&quot; alt=&quot;&quot; width=&quot;1025&quot; height=&quot;347&quot; class=&quot;alignnone size-full wp-image-1140&quot;&gt;
+&lt;p&gt;{{{vert}}}&lt;/p&gt;
+&lt;h2&gt;Styling Multiple Strings In One Log&lt;/h2&gt;
+&lt;p&gt;It&apos;s also &lt;a href=&quot;https://stackoverflow.com/a/13017382/10425698&quot;&gt;possible&lt;/a&gt; to include multiple strings in one command and style them differently. Check it out:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;console.log(&quot;%cString1&quot; + &quot;%cString2&quot;, &quot;{{CSS for String1}}&quot;, &quot;{{CSS for String2}}&quot;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Reusing Styles Across Log Messages&lt;/h2&gt;
+&lt;p&gt;You can also store the CSS You want to apply to a variable and then pass that to multiple console.logs:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;var consoleStyle = &quot;{{Reusable CSS}}&quot;;
+console.log(&quot;%cString1&quot;, consoleStyle);
+console.log(&quot;%cString2&quot;, consoleStyle);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Do you leave any little easter eggs in your console? Could you see a use case for this in your own projects? I&apos;d love to know down in the comments! Show me some examples of cool things you&apos;ve found in console messages.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Add Logout Link To Account Menu - BigCommerce For WordPress]]></title><description><![CDATA[BigCommerce for WordPress (BC4WP) allows you to combine the power of the BigCommerce back-end with the customization of WordPress on the front-end for a truly unique E-Commerce experience. One thing that seems missing out of their integration is a…]]></description><link>https://jackharner.com//blog/add-logout-link-to-account-menu-bigcommerce-for-wordpress/</link><guid isPermaLink="false">https://jackharner.com//blog/add-logout-link-to-account-menu-bigcommerce-for-wordpress/</guid><pubDate>Thu, 18 Apr 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;BigCommerce for WordPress (BC4WP) allows you to combine the power of the BigCommerce back-end with the customization of WordPress on the front-end for a truly unique E-Commerce experience.&lt;/p&gt;
+&lt;p&gt;One thing that seems missing out of their integration is a logout link on the My Account page:
+&lt;img src=&quot;https://harnerdesigns.com/wp-content/uploads/2019/04/Before-Code.png&quot; alt=&quot;BC4WP Account Menu - Before&quot; width=&quot;474&quot; height=&quot;187&quot; class=&quot;alignnone size-full wp-image-1056&quot;&gt;&lt;/p&gt;
+&lt;p&gt;It seemed like an easy fix and since I&apos;ve started to dabble in making pull requests to Open Source Software, I decided to take a look. The &quot;SubNav&quot; as they&apos;ve called it is populated in &lt;code&gt;bigcommerce-for-wordpress/src/BigCommerce/Accounts/Sub_Nav.php&lt;/code&gt;. It uses &lt;code&gt;get_option&lt;/code&gt; to pull the stored Account, Orders, &amp;#x26; Address pages and populates the &lt;code&gt;$links[]&lt;/code&gt; array with the associated data.&lt;/p&gt;
+&lt;p&gt;Easy.&lt;/p&gt;
+&lt;p&gt;Just append the logout information to the &lt;code&gt;$links[]&lt;/code&gt; array with &lt;code&gt;wp_logout_url()&lt;/code&gt; and the logout link will appear in the my accounts page.&lt;/p&gt;
+&lt;p&gt;And thus, my first &lt;a href=&quot;https://github.com/bigcommerce/bigcommerce-for-wordpress/pull/150&quot;&gt;Pull Request&lt;/a&gt; to the BC4WP repo was born.&lt;/p&gt;
+&lt;h2&gt;Shot Down Like A High Schooler Before Prom&lt;/h2&gt;
+&lt;p&gt;My PR was rejected citing that logging out of WordPress was &quot;Out of Scope&quot; of the BigCommerce for WordPress plugin. However, Jonathan of &lt;a href=&quot;https://tri.be/&quot;&gt;Modern Tribe&lt;/a&gt; (the plugin developers) pointed out that there is a filter already applied to the links generated so that Site Admins can add anything they wish to that list of links: &lt;code&gt;bigcommerce/account/subnav/links&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;So..? How Do You Do It?&lt;/h2&gt;
+&lt;p&gt;If you&apos;re like me and &lt;em&gt;want&lt;/em&gt; to add the logout link to the BigCommerce for WordPress Account Page Submenu, just add the following code to your theme&apos;s &lt;code&gt;functions.php&lt;/code&gt; file:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token function&quot;&gt;add_filter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;bigcommerce/account/subnav/links&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;$links&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+ &lt;span class=&quot;token variable&quot;&gt;$links&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+  &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;url&apos;&lt;/span&gt;     &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;gt&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;wp_logout_url&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;label&apos;&lt;/span&gt;   &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;gt&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;__&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;Logout&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;bigcommerce&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;current&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;gt&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token constant boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+ &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+ &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$links&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And that&apos;s it! Now there will be a convenient to use Logout Link on the &quot;My Account&quot; page with BigCommerce for WordPress.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[How To Measure Angles In Illustrator]]></title><description><![CDATA[Sometimes you need to be exact in your designs. I'm definitely a little bit of a perfectionist when it comes to things like that. Maybe you need to align the rotation of something to the edge of another object. You could just eyeball it, but that's…]]></description><link>https://jackharner.com//blog/how-to-measure-angles-in-illustrator/</link><guid isPermaLink="false">https://jackharner.com//blog/how-to-measure-angles-in-illustrator/</guid><pubDate>Fri, 22 Mar 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Sometimes you need to be exact in your designs. I&apos;m definitely a little bit of a perfectionist when it comes to things like that. Maybe you need to align the rotation of something to the edge of another object. You could just eyeball it, but that&apos;s hella time consuming and frustrating because you know you&apos;re never going to be able to get it just right.&lt;/p&gt;
+&lt;p&gt;Let the computer do the heavy lifting and let&apos;s learn how to measure angles in Illustrator.&lt;/p&gt;
+&lt;h2&gt;Ruler To The Rescue!&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://harnerdesigns.com/blog/measure-angles-in-illustrator/find-the-ruler-tool/&quot; rel=&quot;attachment wp-att-1017&quot;&gt;&lt;img src=&quot;https://harnerdesigns.com/wp-content/uploads/2019/03/find-the-ruler-tool.png&quot; alt=&quot;The Ruler&apos;s Hiding Under The Eyedropper&quot; class=&quot;alignnone size-large wp-image-1017&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;First thing you&apos;ll need to do is find the Ruler tool. It&apos;s located underneath the Eyedropper tool in the left-hand menu. Click and hold the Eyedropper button and then without letting go of your mouse slide over to the Ruler menu item that pops up to select the ruler.&lt;/p&gt;
+&lt;p&gt;{{{vert}}}&lt;/p&gt;
+&lt;h2&gt;Open The Info Window If It Didn&apos;t Pop Up&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://harnerdesigns.com/blog/measure-angles-in-illustrator/draw-a-line/&quot; rel=&quot;attachment wp-att-1020&quot;&gt;&lt;img src=&quot;https://harnerdesigns.com/wp-content/uploads/2019/03/Draw-A-Line-1024x716.png&quot; alt=&quot;Make Sure The Info Box Opened Up&quot; class=&quot;alignnone size-large wp-image-1020&quot;&gt;&lt;/a&gt;
+With the Ruler selected, click anywhere on the artboard and the Info window should pop up. If it doesn&apos;t, go to &lt;code&gt;Window &gt; Info&lt;/code&gt; or &lt;code&gt;Ctrl + F8&lt;/code&gt; to bring it up.&lt;/p&gt;
+&lt;p&gt;Now either click on two points, or click and drag a line between two points and the Info box will update with the angle of the segment you just drew, as well as info about Width/Height and the X/Y Positions.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://harnerdesigns.com/blog/measure-angles-in-illustrator/heres-the-angle/&quot; rel=&quot;attachment wp-att-1018&quot;&gt;&lt;img src=&quot;https://harnerdesigns.com/wp-content/uploads/2019/03/heres-the-angle.png&quot; alt=&quot;Here&apos;s where the angle is.&quot; class=&quot;alignnone size-large wp-image-1018&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Use Your New Found Knowledge For Good&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://harnerdesigns.com/blog/measure-angles-in-illustrator/the-angles-match-2/&quot; rel=&quot;attachment wp-att-1025&quot;&gt;&lt;img src=&quot;https://harnerdesigns.com/wp-content/uploads/2019/03/The-Angles-Match-1.png&quot; alt=&quot;Look! They Match Up So Perfectly.&quot; width=&quot;866&quot; height=&quot;412&quot; class=&quot;alignnone size-full wp-image-1025&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;After pulling the angle from the Info box with the Ruler, we can use our -19.92° angle to rotate our elements so they line up. Save yourself &lt;em&gt;hours&lt;/em&gt; of frustration trying to get elements to line up by just measuring.&lt;/p&gt;
+&lt;p&gt;You know what they say:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;h3&gt;Measure Twice. Save yourself &lt;em&gt;hours&lt;/em&gt; of frustration trying to get elements to line up by just measuring.&lt;/h3&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I&apos;m not sure anyone &lt;em&gt;actually&lt;/em&gt; says that, but you get my point. Happy Protracting!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[WordPress Crop Image Button Grayed Out]]></title><description><![CDATA[You probably found this post because you're trying to crop images in WordPress' Media Library Image Editor. The button's greyed out right from the start. Oh No! How Do I Crop images with WordPress? You just have to click and drag on the image, the…]]></description><link>https://jackharner.com//blog/wordpress-crop-image-button-grayed-out/</link><guid isPermaLink="false">https://jackharner.com//blog/wordpress-crop-image-button-grayed-out/</guid><pubDate>Mon, 17 Dec 2018 00:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;https://harnerdesigns.com/wp-content/uploads/2018/12/Crop-Tool-Grayed-out.png&quot; alt=&quot;&quot; width=&quot;477&quot; height=&quot;393&quot; class=&quot;alignnone size-full wp-image-896&quot;&gt;
+&lt;p&gt;You probably found this post because you&apos;re trying to crop images in WordPress&apos; Media Library Image Editor. The button&apos;s greyed out right from the start. Oh No! How Do I Crop images with WordPress?&lt;/p&gt;
+&lt;h2&gt;It&apos;s Real Simple.&lt;/h2&gt;
+&lt;p&gt;You just have to click and drag on the image, the area you want to crop. Once you let go of the mouse the button becomes clickable again. Yay!&lt;/p&gt;
+&lt;img src=&quot;https://harnerdesigns.com/wp-content/uploads/2018/12/Crop-tool-not-grayed-out.png&quot; alt=&quot;&quot; width=&quot;488&quot; height=&quot;410&quot; class=&quot;alignnone size-full wp-image-897&quot;&gt;
+&lt;p&gt;After you make your first try at selecting, you can lock the aspect ratio with the fields over to the right hand side. Select the area you want cropped and click the Crop Button (now that you can).&lt;/p&gt;
+&lt;p&gt;Make sure to hit save and enjoy your newly cropped photos!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Upload SVG Files To WordPress]]></title><description><![CDATA[Allowing SVG Files in WordPress so you can upload them through the Media panel is surprisingly simple. This allows you to harness the power and speed benefits of SVG Files as opposed to Raster Images. Either add the following snippet to your theme's…]]></description><link>https://jackharner.com//blog/upload-svg-files-to-wordpress/</link><guid isPermaLink="false">https://jackharner.com//blog/upload-svg-files-to-wordpress/</guid><pubDate>Wed, 28 Nov 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Allowing SVG Files in WordPress so you can upload them through the Media panel is surprisingly simple. This allows you to harness the power and speed benefits of SVG Files as opposed to Raster Images.&lt;/p&gt;
+&lt;p&gt;Either add the following snippet to your theme&apos;s &lt;code&gt;functions.php&lt;/code&gt; file or create a WordPress plugin that executes the following code:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;harnerdesigns_mime_types&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;$mimes&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token variable&quot;&gt;$mimes&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;svg&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;image/svg+xml&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$mimes&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;add_filter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;upload_mimes&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;harnerdesigns_mime_types&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;There are &lt;a href=&quot;https://security.stackexchange.com/questions/11384/exploits-or-other-security-risks-with-svg-upload&quot;&gt;security concerns&lt;/a&gt; to allowing SVG files to be uploaded, so make sure that only trusted contributors have access to uploading.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Pushing WordPress Theme Updates With Git]]></title><description><![CDATA[Do you frequently update WordPress themes? It's kind of a pain in the ass, right?  Typically has to be done manually through FTP or uploading a new zip through the backend. Well, today I'm going to show you how to update your site with just: Sounds…]]></description><link>https://jackharner.com//blog/pushing-wordpress-theme-updates-with-git/</link><guid isPermaLink="false">https://jackharner.com//blog/pushing-wordpress-theme-updates-with-git/</guid><pubDate>Tue, 11 Sep 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Do you frequently update WordPress themes? It&apos;s kind of a pain in the ass, right?  Typically has to be done manually through FTP or uploading a new zip through the backend.&lt;/p&gt;
+&lt;p&gt;Well, today I&apos;m going to show you how to update your site with just:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ git push live&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Sounds to good to be true? It&apos;s not. Check it out:&lt;/p&gt;
+&lt;h2&gt;Prerequisites&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;SSH Access to your web server&lt;/li&gt;
+&lt;li&gt;Git installed on your local machine and on your web server&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This setup works best for one off customs themes (like the one on &lt;a href=&quot;https://harnerdesigns.com&quot;&gt;HarnerDesigns.com&lt;/a&gt;) and not for themes produced to be distributed.&lt;/p&gt;
+&lt;h2&gt;Create Your Repo Locally&lt;/h2&gt;
+&lt;p&gt;First things first, create a folder for your project and enter it:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ mkdir git-test &amp;amp;amp;&amp;amp;amp; cd git-test&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;then initialize the repo:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ git init&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Alternatively, you can just clone my &lt;a href=&quot;https://github.com/harnerdesigns/blank2&quot;&gt;Blank2 - Blank WordPress Theme&lt;/a&gt; repo to get started:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ git clone https://github.com/harnerdesigns/blank2.git git-test&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Create A Bare Repo On The Remote Server&lt;/h2&gt;
+&lt;p&gt;A bare repo is a directory containing the working tree of your git project, just without storing all the files. It&apos;s essentially just a directory of all the files noramlly in your .git directory.&lt;/p&gt;
+&lt;p&gt;SSH into your server:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ ssh &amp;amp;lt;user&amp;amp;gt;@&amp;amp;lt;server&amp;amp;gt;:&amp;amp;lt;sshPort&amp;amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Create a folder for the bare repo and enter it:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;amp;lt;user&amp;amp;gt;@&amp;amp;lt;server&amp;amp;gt; $ mkdir git-test.git &amp;amp;amp;&amp;amp;amp; cd git-test.git&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Remember where on the server you created this directory, you&apos;ll need that later (Doing it in your home directory works perfectly fine).&lt;/p&gt;
+&lt;p&gt;Initialize the bare repo:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;amp;lt;user&amp;amp;gt;@&amp;amp;lt;server&amp;amp;gt; $ git init --bare&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;[ad]&lt;/p&gt;
+&lt;h2&gt;Hook It Up&lt;/h2&gt;
+&lt;p&gt;Your shiny new bare git repo has a directory &lt;code&gt;hooks&lt;/code&gt; and in it are a bunch of .sample files. We want to do something after the repo receives new data, so create a new file called &lt;code&gt;post-receive&lt;/code&gt; (no extension) and add the following to it:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;#!/bin/bash
+GIT_WORK_TREE=&amp;amp;lt;pathToWordPressInstall&amp;amp;gt;/wp-content/themes/git-test git checkout -f&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;What this will do is, any time you push to this git repo, set the working tree for the repo to the theme folder in your WordPress install and then force checkout the files.&lt;/p&gt;
+&lt;h2&gt;Back Down From The &quot;Cloud&quot;&lt;/h2&gt;
+&lt;p&gt;Now logout of your remote server. It&apos;s time to add the new repo as a remote for your local one.&lt;/p&gt;
+&lt;p&gt;Make sure you&apos;re in your project&apos;s folder:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ git remote add live ssh://&amp;amp;lt;server&amp;amp;gt;/home/&amp;amp;lt;user&amp;amp;gt;/git-test.git&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;and that&apos;s it! All you need to do to update your live theme now is add some files, commit them like normal and then run:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ git push live&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Being able to Update WordPress sites quickly allows for quicker bug fixes and less time spent wrangling files. Combine this idea with a taskrunner like Gulp and you&apos;ll be flying through updates.&lt;/p&gt;
+&lt;p&gt;Let me know if you use this method or if you have any other ways to manage WordPress Themes!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Pointing A Domain to The Newest File In A Directory]]></title><description><![CDATA[I wrote a python script for Shoolu.com to use the BigCommerce API to pull the latest added products and generate an XML RSS file.  BigCommerce did have the functionality to automatically generate these RSS feeds but they have moonlighted support and…]]></description><link>https://jackharner.com//blog/pointing-a-domain-to-the-newest-file-in-a-directory/</link><guid isPermaLink="false">https://jackharner.com//blog/pointing-a-domain-to-the-newest-file-in-a-directory/</guid><pubDate>Fri, 17 Aug 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I wrote a python script for Shoolu.com to use the BigCommerce API to pull the latest added products and generate an XML RSS file.  BigCommerce did have the functionality to automatically generate these RSS feeds but they have moonlighted support and have removed it for new merchants so it didn&apos;t seem like something to rely on.&lt;/p&gt;
+&lt;h2&gt;PYTHON To The Rescue&lt;/h2&gt;
+&lt;p&gt;I found the BigCommerce Python API and used that to fetch all the products with a created date of at most 7 days ago. I then looped through all those products to create the nessecary items in the RSS File.&lt;/p&gt;
+&lt;p&gt;This worked well and good but I was basically just overwriting the one file and losing any previous weeks worth of New Products. I knew it would be easy enough to just write to a different file with the current date in the file name so it&apos;d be new every time.&lt;/p&gt;
+&lt;h2&gt;Trouble In Paradise&lt;/h2&gt;
+&lt;p&gt;The plan was to use this RSS feed to generate a &quot;What&apos;s new at Shoolu&quot; email every week through MailChimp and their ability to work with RSS Feeds. The problem with the current approach of dating the files was that I was pointing Mailchimp at the one direct file so I&apos;d have to update it every week which kind of defeats the purpose of all of this.&lt;/p&gt;
+&lt;p&gt;{{{vert}}}&lt;/p&gt;
+&lt;h2&gt;An Unexpected Solution&lt;/h2&gt;
+&lt;p&gt;I tried digging around for a way to have a root domain (&lt;a href=&quot;https://rss.shoolu.com&quot;&gt;rss.shoolu.com&lt;/a&gt;) point to the latest file in the directory. There were several suggestions including using php to fetch the latest file and redirecting and some other less than elegant solutions.&lt;/p&gt;
+&lt;p&gt;None of them really tickled me the way a good solution does.&lt;/p&gt;
+&lt;p&gt;I finally decided to just update the python script to just output &lt;code&gt;index.xml&lt;/code&gt; as well as &lt;code&gt;latestProducts-[date].xml&lt;/code&gt;. That way &lt;code&gt;index.xml&lt;/code&gt; would get overwritten with the currently accurate info and we&apos;d also get the dated backups to log.&lt;/p&gt;
+&lt;p&gt;Then for simplicities sake I just updated the Apache Virtual Host file for the domain:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;Directory /var/www/rss/public/&gt;
+    ...
+    DirectoryIndex index.xml
+&amp;lt;/Directory&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;So the root domain would point directly to the file. Might not be the most elegant solution, but it works in this specific case so I&apos;d figured I&apos;d document it.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Custom Post Type Archives Not Showing Up In WordPress Menus]]></title><description><![CDATA[Need to add Custom Post Type Archives to a WordPress menu but they're not showing up? I tore my hair out for a good while before finding the answer. For some reason, most of my custom post types were showing up just fine, but some weren't. The answer…]]></description><link>https://jackharner.com//blog/custom-post-type-archives-not-showing-up-in-wordpress-menus/</link><guid isPermaLink="false">https://jackharner.com//blog/custom-post-type-archives-not-showing-up-in-wordpress-menus/</guid><pubDate>Sat, 28 Apr 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Need to add Custom Post Type Archives to a WordPress menu but they&apos;re not showing up? I tore my hair out for a good while before finding the answer. For some reason, most of my custom post types were showing up just fine, but some weren&apos;t. The answer is surprisingly simple and shouldn&apos;t have taken me as long to figure out as it did.&lt;/p&gt;
+&lt;h2&gt;Make Sure The Archive Is Turned On&lt;/h2&gt;
+You can&apos;t add a CPT Archive to a menu if that archive doesn&apos;t exist. Make sure in your functions.php file that you include the following code when creating the post type:
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token function&quot;&gt;register_post_type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;example&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 
+    &lt;span class=&quot;token keyword&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;has_archive&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;gt&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token constant boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 
+        &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;other args&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Check Under The &quot;View All&quot; Tab&lt;/h2&gt;
+Once you made sure that the archive is on, check under the View All tab for the custom post type. It should just be the plural name of your custom post type, but it could be different depending on the settings in your register_post_type() function.
+&lt;img class=&quot;alignnone wp-image-433 size-full&quot; src=&quot;https://harnerdesigns.com/wp-content/uploads/2018/04/View-All-Tab.png&quot; alt=&quot;Make Sure To Check The View All Tab&quot; width=&quot;600&quot; height=&quot;400&quot;&gt;
+&lt;h2&gt;Check The Screen Options&lt;/h2&gt;
+If your custom post type isn&apos;t showing up at all on the Menu page, check the Screen Options. For some reason, new CPTs can possibly be unchecked and thus, not show up at all on the Menu page. Make sure everything is checked in the box and you should be all set!
+&lt;img class=&quot;alignnone wp-image-434 size-full&quot; src=&quot;https://harnerdesigns.com/wp-content/uploads/2018/04/Screen-Options.png&quot; alt=&quot;Check The Screen Options And Make Sure Your Custom Post Type Is Checked&quot; width=&quot;600&quot; height=&quot;204&quot;&gt;
+&lt;h2&gt;Conclusion. Working Custom Post Type Archives&lt;/h2&gt;
+And That&apos;s It! You should be able to add the Custom Post Type Archives to the menus in WordPress now. Let me know in the comments down below if you have any questions! Be sure to check out the rest of our &lt;a href=&quot;https://jackharner.com/blog/tags/wordpress/&quot;&gt;WordPress Tutorials&lt;/a&gt;.</content:encoded></item><item><title><![CDATA[Using Flex Box For Responsive Design]]></title><description><![CDATA[Today I’m going to show you how to use Flex Box to create a row of buttons that turns into a responsive list of links with just CSS. This technique can be useful for having multiple large calls to action. Keep reading to learn what’s going on in the…]]></description><link>https://jackharner.com//blog/using-flex-box-for-responsive-design/</link><guid isPermaLink="false">https://jackharner.com//blog/using-flex-box-for-responsive-design/</guid><pubDate>Mon, 20 Jun 2016 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Flex Box is Pretty Awesome&lt;/h2&gt;
+&lt;p&gt;Today I’m going to show you how to use Flex Box to create a row of buttons that turns into a responsive list of links with just CSS. This technique can be useful for having multiple large calls to action. Keep reading to learn what’s going on in the code, or just jump to the bottom for the source code, it’s up to you.&lt;/p&gt;
+&lt;img src=&quot;https://harnerdesigns.com/wp-content/uploads/2016/06/Flex-Grid.png&quot; alt=&quot;Flex-Grid&quot;&gt;
+&lt;h2&gt;Basic HTML&lt;/h2&gt;
+&lt;p&gt;We’ll start off with some initial markup:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;container&amp;gt;
+    &amp;lt;div class=&quot;button&quot;&amp;gt;
+        &amp;lt;p&amp;gt;Classes&amp;lt;/p&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div class=&quot;button&quot;&amp;gt;
+        &amp;lt;p&amp;gt;Instructors&amp;lt;/p&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div class=&quot;button&quot;&amp;gt;
+        &amp;lt;p&amp;gt;Sign&amp;amp;nbsp;Up&amp;lt;/p&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/container&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Desktop CSS&lt;/h2&gt;
+&lt;p&gt;Then we’ll add some CSS to make the Desktop version:&lt;/p&gt;
+&lt;img src=&quot;https://harnerdesigns.com/wp-content/uploads/2016/06/desktop-css.png&quot; alt=&quot;desktop css&quot;&gt;
+&lt;pre&gt;&lt;code&gt;container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+    flex-wrap: wrap;
+}
+
+.button {
+    background: rgba(255, 255, 255, 1);
+    width: 15%;
+    text-align: center;
+    height: auto;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;What this does is makes the container the Flex Box for all the buttons. We can then use all of the flex box properties to adjust how the buttons display. For more info on flex box and what you can do with it, check out CSS-Trick’s &lt;a href=&quot;https://css-tricks.com/snippets/css/a-guide-to-flexbox/&quot; target=&quot;_blank&quot;&gt;Comprehensive Guide&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Mobile CSS&lt;/h2&gt;
+&lt;p&gt;Now for the magic. By adding the cards and the container to the mobile media query we can then manipulate the flex-direction property. As you can guess, flex direction adjusts which way the items will flow inside the container. By setting the container to flex-direction: column, and the cards to flex-direction:row; we can layout the buttons in a much more mobile friendly way.&lt;/p&gt;
+&lt;img src=&quot;https://harnerdesigns.com/wp-content/uploads/2016/06/mobile-css.png&quot; alt=&quot;mobile css&quot;&gt;
+&lt;pre&gt;&lt;code&gt;@media screen and (max-width: 900px) {
+  container {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 0.5em;
+  }
+  .button p {
+    padding: 0 0.5em;
+  }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That&apos;s it! With a little flex box magic and a single media query you can easily have a row of buttons for your users with more screen real estate, and a column for those on their phones and small tablets.&lt;/p&gt;
+&lt;p class=&quot;codepen&quot; data-height=&quot;600&quot; data-theme-id=&quot;17675&quot; data-slug-hash=&quot;XKJBaQ&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;jackharner&quot; data-embed-version=&quot;2&quot;&gt;See the Pen &lt;a href=&quot;https://codepen.io/jackharner/pen/XKJBaQ/&quot;&gt;ROW TO COLUMN&lt;/a&gt; by Jack Harner (&lt;a href=&quot;https://codepen.io/jackharner&quot;&gt;@jackharner&lt;/a&gt;) on &lt;a href=&quot;https://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script src=&quot;//assets.codepen.io/assets/embed/ei.js&quot; async=&quot;&quot;&gt;&lt;/script&gt;</content:encoded></item><item><title><![CDATA[Coffee Shops Cultivate Creativity]]></title><description><![CDATA[Every day we struggle as creatives to find that spark to ignite the creativity inside. I'm currently sitting in a Satellite Coffee just north of UNM while I wait for my girlfriend to get out of class and for some reason I feel compelled to write. I…]]></description><link>https://jackharner.com//blog/coffee-shops-cultivate-creativity/</link><guid isPermaLink="false">https://jackharner.com//blog/coffee-shops-cultivate-creativity/</guid><pubDate>Thu, 27 Aug 2015 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Every day we struggle as creatives to find that spark to ignite the creativity inside.&lt;/p&gt;
+&lt;p&gt;I&apos;m currently sitting in a Satellite Coffee just north of UNM while I wait for my girlfriend to get out of class and for some reason I feel compelled to write. I&apos;ve been meaning to start this blog for a while. I&apos;m not entirely sure what it&apos;s going to become, but hopefully it&apos;ll be something.&lt;/p&gt;
+&lt;p&gt;While I sit here, sipping on my White Chocolate Mocha, the sounds of long lost friends reuniting dance across my ears. Most of this specific coffee shop&apos;s clientele are health care workers, which makes sense seeing as it&apos;s right next to the hospital. There&apos;s a paramedic, at lest 2 nurses, a doctor who stopped in for a &quot;Greenie Breakfast Panini&quot;, and several administration workers.&lt;/p&gt;
+&lt;p&gt;I&apos;m not sure what it is, but simply being here is boosting my productivity and my creativity. Maybe it&apos;s the smell of the coffee, or maybe it&apos;s the fact that I&apos;m not home. Either way, I feel like I&apos;ve been stuck in a bit of a rut lately and spending more time enjoying delicious coffee is the boost I need to get my creative juices flowing.&lt;/p&gt;</content:encoded></item></channel></rss>
