@@ -10,8 +10,10 @@
     }
 
     .shopify-bg {
-        background: url("../images/logos/shopify-bg.png") repeat;
+        background: var(--color) url("../images/logos/shopify-bg.png") repeat;
         background-size: 300px;
+        will-change: background-position;
+        animation: slideBG 8000ms infinite linear;
         h2 {
             
             color: #fff;
@@ -41,5 +43,15 @@
 
     &--bigcommerce {
         --color: #0d52ff;
+    }
+}
+
+
+@keyframes slideBG {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 300px 300px;
     }
 }
