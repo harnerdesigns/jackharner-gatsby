@@ -257,7 +257,7 @@ const ImageWrapper = styled.div`
   display: flex;
   z-index: 1 !important;
   align-self: flex-end;
-  margin: -2rem 0;
+  margin: -5rem 0;
 
   @media ${breakpoints.tablet} {
     margin: -10rem 0 -2rem;
