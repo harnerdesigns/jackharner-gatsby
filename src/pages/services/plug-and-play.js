@@ -72,7 +72,7 @@ const BigCommerce = ({ data, pageContext }) => {
 export default BigCommerce
 
 export const pageQuery = graphql`
-query BigCommercePagQuery {
+query PlugNPlayPageQuery {
   allMarkdownRemark(
     limit: 5
     sort: {
