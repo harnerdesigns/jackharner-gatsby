@@ -14,7 +14,8 @@ import CanvasBG from "../components/canvasBG"
 import FreelanceCountdown from "../components/freelanceCountdown"
 import styled from "styled-components"
 
-import jack from "../images/jack.png"
+import jack from "../images/jack-sm.png"
+import jackXS from "../images/jack-xs.png"
 import { breakpoints } from "../components/breakpoints"
 import Drips from "../components/atoms/drips"
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -33,10 +34,10 @@ const IndexPage = ({ data, pageContext }) => {
       <SEO title="Jack Of All Trades, Master Of Some" titleTemplate={"Jack Harner | Web & E-Commerce Developer"} />
       <section className="full white--wavy-5 black intro">
         <IntroGrid style={{ zIndex: 1 }}>
-          <Drips color="#fff" wrapperHeight="40%" style={{zIndex: 2}} />
+          <Drips color="#fff" wrapperHeight="40%" style={{ zIndex: 2 }} />
           <CanvasBG />
           <ImageWrapper>
-            <LazyLoadImage src={jack} alt="Jack Harner" loading="lazy" />
+            <LazyLoadImage src={jack} placeholderSrc={jackXS} alt="Jack Harner" loading="lazy" />
           </ImageWrapper>
           <section className="introduction" style={{ zIndex: 2 }}>
             <h1>
@@ -53,7 +54,7 @@ const IndexPage = ({ data, pageContext }) => {
         </IntroGrid>
       </section>
 
-        {/* <section className="no-padding white full-width content content--centered" style={{gridColumn: "1 / -1"}}>
+      {/* <section className="no-padding white full-width content content--centered" style={{gridColumn: "1 / -1"}}>
       <h2>Jack of All Trades, Master of Some</h2>
             <ImASlider />
       </section> */}
@@ -86,7 +87,7 @@ const IndexPage = ({ data, pageContext }) => {
 
           <p>
             Whether your company is just getting started selling online, or
-            you're looking to grow your online presence, I can help! I've built custom themes and tools for both <Link to="/services/shopify">Shopify</Link> & <Link to="services/bigcommerce">BigCommerce</Link>. 
+            you're looking to grow your online presence, I can help! I've built custom themes and tools for both <Link to="/services/shopify">Shopify</Link> & <Link to="services/bigcommerce">BigCommerce</Link>.
           </p>
 
           <h2>Let's Get Started</h2>
@@ -105,10 +106,10 @@ const IndexPage = ({ data, pageContext }) => {
         <Quotes quotes={quotes} />
       </section>
 
-      
+
       <section className="half black">
         <FreelanceCountdown />
-        <h3 style={{textAlign: "center"}}>
+        <h3 style={{ textAlign: "center" }}>
           Hiring a contract Web Developer? <Link to="/hire-me">Let's Chat &raquo;</Link>
         </h3>
       </section>
@@ -148,24 +149,6 @@ const IndexPage = ({ data, pageContext }) => {
           />
         </div>
       </section>
-      {/* <section className="full black">
-        <h1
-          style={{
-            padding: "1rem",
-            textAlign: "center",
-            alignSelf: "center",
-          }}
-        >
-          I Like Taking Photos, Too!
-        </h1>
-        <p>
-          Landscapes, Food, Products, and My Cats.{" "}
-          <a href="https://unsplash.com/@jackharner">
-            Follow Me on Unsplash &raquo;
-          </a>
-        </p>
-        <PhotoRoll photos={photos} />
-      </section> */}
     </Layout>
   )
 }
@@ -277,7 +260,7 @@ const ImageWrapper = styled.div`
   margin: -2rem 0;
 
   @media ${breakpoints.tablet} {
-    margin: -4rem 0 -2rem;
+    margin: -10rem 0 -2rem;
   }
 
   img {
