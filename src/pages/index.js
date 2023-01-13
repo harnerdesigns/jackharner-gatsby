@@ -17,6 +17,7 @@ import styled from "styled-components"
 import jack from "../images/jack.png"
 import { breakpoints } from "../components/breakpoints"
 import Drips from "../components/atoms/drips"
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const IndexPage = ({ data, pageContext }) => {
   const { edges: posts } = data.allMarkdownRemark
@@ -35,7 +36,7 @@ const IndexPage = ({ data, pageContext }) => {
           <Drips color="#fff" wrapperHeight="40%" style={{zIndex: 2}} />
           <CanvasBG />
           <ImageWrapper>
-            <img src={jack} alt="Jack Harner" />
+            <LazyLoadImage src={jack} alt="Jack Harner" loading="lazy" />
           </ImageWrapper>
           <section className="introduction" style={{ zIndex: 2 }}>
             <h1>
