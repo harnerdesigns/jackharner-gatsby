@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:webfeeds="http://webfeeds.org/rss/1.0"><channel><title><![CDATA[Jack Harner's Web Dev Blog]]></title><description><![CDATA[Jack Harner is a Freelance Web Developer & E-Commerce Consultant based in Denver, Colorado. Shopify, BigCommerce, WordPress Dev & More.]]></description><link>https://jackharner.com</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 13 Jan 2023 07:49:25 GMT</lastBuildDate><webfeeds:accentColor>#E91E63</webfeeds:accentColor><webfeeds:logo>./src/images/jackharenr-logo-white.svg</webfeeds:logo><item><title><![CDATA[Setting The Artboard Background Color In Adobe Illustrator]]></title><description><![CDATA[Sometimes when you're working with graphic design you end up working on a piece that's meant to be displayed on a non-white background, like a logo or web icon. Unfortunately, there isn't really a way to set the background color of an artboard in…]]></description><link>https://jackharner.com//blog/setting-the-artboard-background-color-in-adobe-illustrator/</link><guid isPermaLink="false">https://jackharner.com//blog/setting-the-artboard-background-color-in-adobe-illustrator/</guid><pubDate>Fri, 13 Jan 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Sometimes when you&apos;re working with graphic design you end up working on a piece that&apos;s meant to be displayed on a non-white background, like a logo or web icon. Unfortunately, there isn&apos;t really a way to set the background color of an artboard in Illustrator, but let&apos;s look at a few workarounds that acheive the same effect.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:webfeeds="http://webfeeds.org/rss/1.0"><channel><title><![CDATA[Jack Harner's Web Dev Blog]]></title><description><![CDATA[Jack Harner is a Freelance Web Developer & E-Commerce Consultant based in Denver, Colorado. Shopify, BigCommerce, WordPress Dev & More.]]></description><link>https://jackharner.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 17 Jan 2023 17:54:34 GMT</lastBuildDate><webfeeds:accentColor>#E91E63</webfeeds:accentColor><webfeeds:logo>./src/images/jackharenr-logo-white.svg</webfeeds:logo><item><title><![CDATA[Setting The Artboard Background Color In Adobe Illustrator]]></title><description><![CDATA[Sometimes when you're working with graphic design you end up working on a piece that's meant to be displayed on a non-white background, like a logo or web icon. Unfortunately, there isn't really a way to set the background color of an artboard in…]]></description><link>https://jackharner.com//blog/setting-the-artboard-background-color-in-adobe-illustrator/</link><guid isPermaLink="false">https://jackharner.com//blog/setting-the-artboard-background-color-in-adobe-illustrator/</guid><pubDate>Fri, 13 Jan 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Sometimes when you&apos;re working with graphic design you end up working on a piece that&apos;s meant to be displayed on a non-white background, like a logo or web icon. Unfortunately, there isn&apos;t really a way to set the background color of an artboard in Illustrator, but let&apos;s look at a few workarounds that acheive the same effect.&lt;/p&gt;
 &lt;h2&gt;The Simplest Way&lt;/h2&gt;
 &lt;p&gt;The simplest, but probably not best way of accomplishing a colored background is to just draw out a rectangle the size of your artboard, send it to back &lt;code&gt;Ctrl + Shift + [&lt;/code&gt; and lock it &lt;code&gt;Ctrl + 2&lt;/code&gt;.&lt;/p&gt;
 &lt;img src=&quot;https://harnerdesigns.com/wp-content/uploads/2019/07/The-easiest-way__cropped.gif&quot; alt=&quot;&quot; class=&quot;alignnone size-full wp-image-1157&quot;&gt;
@@ -15,14 +15,14 @@
 &lt;p&gt;You can also use the keyboard shortcut: &lt;code&gt;Ctrl + Shift + D&lt;/code&gt; to toggle the Transparency Grid on and off.&lt;/p&gt;
 &lt;img src=&quot;https://harnerdesigns.com/wp-content/uploads/2019/07/transparency-grid-result.png&quot; alt=&quot;Transparency Grid Result&quot; width=&quot;777&quot; height=&quot;782&quot; class=&quot;alignnone size-full wp-image-1163&quot;&gt;
 &lt;p&gt;There you have it. A &quot;Not White&quot; background on your Artboards in Illustrator without having extra objects or stuff cluttering up your files. The document properties are set on a per-project basis, so you&apos;ll have to set it every time.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Anatomy of a WordPress Theme]]></title><description><![CDATA[WordPress Development relies on either Themes or Plugins for WordPress. Today, I'm going to walk you through the base files you need for any WordPress Theme. A few of these files you absolutely need for WordPress to even consider your collection of…]]></description><link>https://jackharner.com//blog/anatomy-of-a-wordpress-theme/</link><guid isPermaLink="false">https://jackharner.com//blog/anatomy-of-a-wordpress-theme/</guid><pubDate>Fri, 13 Jan 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;WordPress Development relies on either Themes or Plugins for WordPress. Today, I&apos;m going to walk you through the base files you need for any WordPress Theme.&lt;/p&gt;
-&lt;p&gt;A few of these files you absolutely need for WordPress to even consider your collection of files a theme, a handful that you kind of need depending on what site you&apos;re going for, and a lot that allow you to realize WordPress true potential.&lt;/p&gt;
-&lt;h2&gt;Absolutely Required&lt;/h2&gt;
+&lt;p&gt;A few of these files you absolutely need for WordPress to even consider your collection of files a theme, a handful that you kind of need depending on the site requirements, and a lot that allow you to realize WordPress&apos; true potential.&lt;/p&gt;
+&lt;h3&gt;Absolutely Required&lt;/h3&gt;
 &lt;p&gt;There are only two files that &lt;strong&gt;absolutely required&lt;/strong&gt; for WordPress to even recognize your theme as a theme. &lt;code&gt;index.php&lt;/code&gt; and &lt;code&gt;style.css&lt;/code&gt;. Let&apos;s break down the difference and some necessary parts.&lt;/p&gt;
-&lt;h3&gt;&lt;code&gt;index.php&lt;/code&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;index.php&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;According to the WordPress &lt;a href=&quot;https://developer.wordpress.org/themes/basics/template-hierarchy/&quot;&gt;Template Heirarchy&lt;/a&gt;, &lt;code&gt;index.php&lt;/code&gt; is the last fallback for every type of page. If it can&apos;t match to any other template file, this is the one that gets rendered.&lt;/p&gt;
-&lt;h3&gt;&lt;code&gt;style.css&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;This is the main stylesheet of your theme. It needs to live in the root of your theme&apos;s folder. &quot;&lt;code&gt;wp-content/themes/&amp;#x3C;theme-name&gt;/style.css&lt;/code&gt;&quot;. In order for WordPress to treat your theme right (buy it a nice dinner and some expensive wine), you need to include a comment header at the very top (otherwise it&apos;s leftovers and clearance wine). It contains information like the name of your theme, description, links to the developers and support, and more. For example, this is the header from WordPress&apos; default &lt;a href=&quot;https://github.com/WordPress/twentynineteen/blob/master/style.css&quot;&gt;TwentyNinteen Theme&lt;/a&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;/*
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;style.css&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;This is the main stylesheet of your theme. It needs to live in the root of your theme&apos;s folder. &quot;&lt;code&gt;wp-content/themes/&amp;#x3C;theme-name/style.css&lt;/code&gt;&quot;. In order for WordPress to treat your theme right (buy it a nice dinner and some expensive wine), you need to include a comment header at the very top (otherwise it&apos;s leftovers and clearance wine). It contains information like the name of your theme, description, links to the developers and support, and more. For example, this is the header from WordPress&apos; default &lt;a href=&quot;https://github.com/WordPress/twentynineteen/blob/master/style.css&quot;&gt;TwentyNinteen Theme&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/*
 Theme Name: Twenty Nineteen
 Theme URI: https://github.com/WordPress/twentynineteen
 Author: the WordPress team
@@ -40,76 +40,68 @@ Twenty Nineteen is based on Underscores https://underscores.me/, (C) 2012-2018 A
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
-*/
-&lt;/code&gt;&lt;/pre&gt;
+*/&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;If you use a task runner like Gulp you can set up your SCSS tasks to generate the header for you from your &lt;code&gt;package.json&lt;/code&gt; file so you only have to update that information in one spot.&lt;/p&gt;
 &lt;h2&gt;Optional But Useful&lt;/h2&gt;
-&lt;h3&gt;&lt;code&gt;functions.php&lt;/code&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;functions.php&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;Your theme&apos;s Functions file is the file where all the magic that makes WordPress so great happen. It runs when WordPress is initialized and is where you can extend the platform to suit your needs.&lt;/p&gt;
 &lt;blockquote&gt;
-  &lt;h2&gt;BE CAREFUL WHEN MODIFYING THIS FILE!&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;functions.php&lt;/code&gt; runs on both the Admin side and the front-end, so if you leave a typo or something, it will break your whole site. Work on your theme locally and &lt;em&gt;Never&lt;/em&gt; update your &lt;code&gt;functions.php&lt;/code&gt; in the admin area Theme Editor.&lt;/p&gt;
+&lt;h2&gt;BE CAREFUL WHEN MODIFYING THIS FILE!&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;functions.php&lt;/code&gt; runs on both the Admin side and the front-end, so if you leave a typo or something, it will break your whole site. Work on your theme locally and &lt;em&gt;Never&lt;/em&gt; update your &lt;code class=&quot;language-text&quot;&gt;functions.php&lt;/code&gt; in the admin area Theme Editor.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Typically you use the &lt;code&gt;functions.php&lt;/code&gt; file to enqueue scripts and stylesheets to get loaded dynamically, define widget areas, modify how WordPress outputs pretty much anything, and a whole lot more.&lt;/p&gt;
+&lt;p&gt;Typically you use the &lt;code class=&quot;language-text&quot;&gt;functions.php&lt;/code&gt; file to enqueue scripts and stylesheets to get loaded dynamically, define widget areas, modify how WordPress outputs pretty much anything, and a whole lot more.&lt;/p&gt;
 &lt;p&gt;For Example:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;php&quot;&gt;function enqueue_my_scripts(){
-        wp_enqueue_script( &quot;theme&quot;, get_stylesheet_directory_uri().&apos;/theme.js&apos;);
-        wp_enqueue_style( &apos;style&apos;, get_stylesheet_uri() );
-}
-add_action(&apos;wp_enqueue_scripts&apos;, &apos;enqueue_my_scripts&apos;);
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;&lt;code&gt;header.php&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;This template file gets called with &lt;code&gt;get_header()&lt;/code&gt;. In here lives everything you want at the beginning of every page. Things like the opening &lt;code&gt;&amp;#x3C;html&gt;&lt;/code&gt; tag, your &lt;code&gt;&amp;#x3C;head&gt;&amp;#x3C;/head&gt;&lt;/code&gt; block, your opening &lt;code&gt;&amp;#x3C;body&gt;&lt;/code&gt; tag and then typically a &lt;code&gt;&amp;#x3C;header&gt;&amp;#x3C;/header&gt;&lt;/code&gt; block.&lt;/p&gt;
-&lt;p&gt;Make sure to include &lt;code&gt;&amp;#x3C;?php wp_head(); ?&gt;&lt;/code&gt; at the end of your &lt;code&gt;&amp;#x3C;head&gt;&lt;/code&gt; block or else WordPress doesn&apos;t have a place to inject code into the header.&lt;/p&gt;
-&lt;h3&gt;&lt;code&gt;footer.php&lt;/code&gt;&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;enqueue_my_scripts&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;wp_enqueue_script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token string double-quoted-string&quot;&gt;&quot;theme&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;get_stylesheet_directory_uri&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;/theme.js&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;wp_enqueue_style&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;style&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;get_stylesheet_uri&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;add_action&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;wp_enqueue_scripts&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;enqueue_my_scripts&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;header.php&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;This template file gets called with &lt;code&gt;get_header()&lt;/code&gt;. In here lives everything you want at the beginning of every page. Things like the opening &lt;code&gt;&lt;html&gt;&lt;/code&gt; tag, your &lt;code&gt;&lt;head&gt;&lt;/head&gt;&lt;/code&gt; block, your opening &lt;code&gt;&amp;#x3C;body&lt;/code&gt; tag and then typically a &lt;code&gt;&lt;header&gt;&lt;/header&gt;&lt;/code&gt; block.&lt;/p&gt;
+&lt;p&gt;Make sure to include &lt;code&gt;&amp;#x3C;?php wp_head(); ?&lt;/code&gt; at the end of your &lt;code&gt;&lt;head&gt;&lt;/code&gt; block or else WordPress doesn&apos;t have a place to inject code into the header.&lt;/p&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;footer.php&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;footer.php&lt;/code&gt;, much like &lt;code&gt;header.php&lt;/code&gt;, is called with &lt;code&gt;get_footer()&lt;/code&gt;. As you could expect, &lt;code&gt;footer.php&lt;/code&gt; includes all the things you want at the &lt;em&gt;end&lt;/em&gt; of every page: your footer, probably a few widget or menu areas, and then the closing tags:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;php&quot;&gt;&amp;lt;?php wp_footer(); ?&amp;gt;
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token php language-php&quot;&gt;&lt;span class=&quot;token delimiter important&quot;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;wp_footer&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;body
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;html&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;em&gt;&lt;code&gt;wp_footer()&lt;/code&gt; is nessecary so that WordPress can add scripts to the end of the document.&lt;/em&gt;&lt;/p&gt;
-&lt;h3&gt;&lt;code&gt;sidebar.php&lt;/code&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;sidebar.php&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;The last of the layout templates, &lt;code&gt;sidebar.php&lt;/code&gt; get&apos;s called with, I&apos;m sure you can guess, &lt;code&gt;get_sidebar()&lt;/code&gt;. Depending on the needs of the design, the sidebar can be or display anything.&lt;/p&gt;
 &lt;p&gt;First things first you need to register your sidebar. Place the following code in your &lt;code&gt;functions.php&lt;/code&gt; file:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;php&quot;&gt;register_sidebar( array(
-    &apos;id&apos;          =&amp;gt; &apos;top-menu&apos;,
-    &apos;name&apos;        =&amp;gt; &apos;Top Menu&apos;,
-    &apos;description&apos; =&amp;gt; &apos;This sidebar is located at the top.&apos;
-) );
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token function&quot;&gt;register_sidebar&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;id&apos;&lt;/span&gt;          &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;top-menu&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;name&apos;&lt;/span&gt;        &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;Top Menu&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;description&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;This sidebar is located at the top.&apos;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Remember what you set for the &lt;code&gt;id&lt;/code&gt; because you need that to get the sidebar content. Add the following code to your &lt;code&gt;sidebar.php&lt;/code&gt; file:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;php&quot;&gt;&amp;lt;div id=&quot;sidebar-top-menu&quot; class=&quot;sidebar&quot;&amp;gt;
-    &amp;lt;?php dynamic_sidebar( &apos;top-menu&apos; ); ?&amp;gt;
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Your &quot;Top Menu&quot; sidebar should now show up in the &lt;code&gt;Customize &gt; Widgets&lt;/code&gt; area of the WordPress backend.&lt;/p&gt;
-&lt;h3&gt;&lt;code&gt;search.php&lt;/code&gt;&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&amp;lt;div id=&quot;sidebar-top-menu&quot; class=&quot;sidebar&quot;
+    &lt;span class=&quot;token php language-php&quot;&gt;&lt;span class=&quot;token delimiter important&quot;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;dynamic_sidebar&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;top-menu&apos;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;div&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Your &quot;Top Menu&quot; sidebar should now show up in the &lt;code&gt;Customize  Widgets&lt;/code&gt; area of the WordPress backend.&lt;/p&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;search.php&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;The depth and complexity of customizing a search page are out of the scope of this article, but you can do it. Typically this template just needs a loop, fetching posts and outputting as a grid or list. You can also replace this template with an entirely different search tool to handle more advanced searching.&lt;/p&gt;
 &lt;h2&gt;Post Type Templates&lt;/h2&gt;
-&lt;h3&gt;&lt;code&gt;single.php&lt;/code&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;single.php&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;The Single template is displayed when a single post is queried. It typically contains the full content of the post, your social share links, and potentially a comments section.&lt;/p&gt;
 &lt;p&gt;You utilize the loop to get the content for the post:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;php&quot;&gt;&amp;lt;?php if ( have_posts() ) : ?&amp;gt;
-    &amp;lt;?php while ( have_posts() ) : the_post(); ?&amp;gt;    
-    // Do Stuff
-    &amp;lt;?php endwhile; ?&amp;gt;
-&amp;lt;?php endif; ?&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;&lt;code&gt;comments.php&lt;/code&gt;&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token php language-php&quot;&gt;&lt;span class=&quot;token delimiter important&quot;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;have_posts&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;
+    &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;php &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;have_posts&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token class-name return-type&quot;&gt;the_post&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;    
+    &lt;span class=&quot;token comment&quot;&gt;// Do Stuff&lt;/span&gt;
+    &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;php &lt;span class=&quot;token keyword&quot;&gt;endwhile&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;php &lt;span class=&quot;token keyword&quot;&gt;endif&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;comments.php&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;The Comments template is called from &lt;code&gt;comments_template()&lt;/code&gt; from within &lt;code&gt;single.php&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Inside &lt;code&gt;single.php&lt;/code&gt; you would include:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;php&quot;&gt;if ( comments_open() || get_comments_number() ) :
-    comments_template();
-endif;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;comments_open&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;get_comments_number&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token class-name return-type&quot;&gt;comments_template&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;endif&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Which just checks if comments are open for that post, or if there are any comments and if so output the default comments form.&lt;/p&gt;
 &lt;p&gt;See the &lt;a href=&quot;https://codex.wordpress.org/Comments_in_WordPress&quot;&gt;codex&lt;/a&gt; for more info about WordPress comments.&lt;/p&gt;
-&lt;h3&gt;&lt;code&gt;page.php&lt;/code&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;page.php&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;The Page template is the default template for Pages. The biggest difference between Posts and Pages in WordPress is that pages are for more timeless content. Examples being your site&apos;s &quot;About Us&quot; page or the &quot;Contact Us&quot; page. Unlike Posts, Pages cannot be categorized or tagged. They can, however, be arranged hierarchically with each page being able to have many children but only one parent page.&lt;/p&gt;
 &lt;p&gt;With Pages you can develop custom templates. Either &lt;code&gt;page-{templateName}.php&lt;/code&gt; or &lt;code&gt;page-templates/page-{templateName}.php&lt;/code&gt;. This specific template will match any pages with the slug &lt;code&gt;{templateName}&lt;/code&gt; unless you add the following PHP comment to the beginning of the template:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;?php /* Template Name: Example Template */ ?&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token php language-php&quot;&gt;&lt;span class=&quot;token delimiter important&quot;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;/* Template Name: Example Template */&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This allows WordPress to recognize the template as a custom Page Template and adds a drop down to the Edit Page screen where you can select a specific template for each page.&lt;/p&gt;
 &lt;img src=&quot;https://harnerdesigns.com/wp-content/uploads/2019/05/PageTemplateSelector.png&quot; alt=&quot;&quot; class=&quot;alignnone size-full wp-image-1081&quot;&gt;
 &lt;p&gt;Examples of different page templates you could create include:&lt;/p&gt;
@@ -120,42 +112,39 @@ endif;
 &lt;li&gt;Unique one-off landing pages&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The sky&apos;s the limit really. (One of the many beauties of WordPress)&lt;/p&gt;
-&lt;h3&gt;&lt;code&gt;attachment.php&lt;/code&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;attachment.php&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;The Attachment template file is very similar to &lt;code&gt;single.php&lt;/code&gt; except it&apos;s for displaying images, videos, files and other things uploaded through the WordPress media upload system.&lt;/p&gt;
-&lt;p&gt;Very similar to visiting a wikipedia page about a specific image file:&lt;/p&gt;
-&lt;img src=&quot;https://harnerdesigns.com/wp-content/uploads/2019/05/Screen-Shot-2019-05-04-at-18.57.16-fullpage-1024x573.png&quot; alt=&quot;Wikipedia Attachment Page&quot; class=&quot;alignnone size-large wp-image-1082&quot;&gt;
-&lt;h3&gt;&lt;code&gt;image.php&lt;/code&gt;, &lt;code&gt;jpg.php&lt;/code&gt;, &lt;code&gt;video.php&lt;/code&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;image.php&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;jpg.php&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;video.php&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;These are all just more specific versions of &lt;code&gt;attachment.php&lt;/code&gt;. They allow you to specify custom templates for all images (&lt;code&gt;image.php&lt;/code&gt;), only JPG images (&lt;code&gt;jpg.php&lt;/code&gt;), and even videos (&lt;code&gt;video.php&lt;/code&gt;). These are highly optional, and you should probably be ok with just an &lt;code&gt;attachment.php&lt;/code&gt; file, but if your site needs the specificity, by all means, specify away.&lt;/p&gt;
 &lt;h2&gt;Archival Templates&lt;/h2&gt;
 &lt;p&gt;The Archival templates are focused around grouping relevant content together in a useful way. When you run through The Loop on an archive template, it typically returns more than one post so your templates should account for that.&lt;/p&gt;
-&lt;h3&gt;&lt;code&gt;archive.php&lt;/code&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;archive.php&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;The default Archive template. Used if none of the other templates are found. Run through The Loop and output posts. If you want to have different looking pages for your Category Archives vs Looking at a specific Date and so on, use the templates below.&lt;/p&gt;
-&lt;h3&gt;&lt;code&gt;category.php&lt;/code&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;category.php&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;The Category Template is the default archive template for viewing posts of the same category. Displays a list of posts from a specific category if there is no &lt;code&gt;category-{categorySlug}.php&lt;/code&gt; file for the category with a slug of &lt;code&gt;{categorySlug}&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;If &lt;code&gt;category.php&lt;/code&gt; doesn&apos;t exist, WordPress reverts to &lt;code&gt;archive.php&lt;/code&gt; and then &lt;code&gt;index.php&lt;/code&gt;&lt;/p&gt;
-&lt;h3&gt;&lt;code&gt;tag.php&lt;/code&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;tag.php&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;Exact same thing as &lt;code&gt;category.php&lt;/code&gt; but for Tags.&lt;/p&gt;
 &lt;p&gt;If &lt;code&gt;tag.php&lt;/code&gt; doesn&apos;t exist, WordPress reverts to &lt;code&gt;archive.php&lt;/code&gt; and then &lt;code&gt;index.php&lt;/code&gt;&lt;/p&gt;
-&lt;h3&gt;&lt;code&gt;taxonomy.php&lt;/code&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;taxonomy.php&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;This is the default Taxonomy Template for Custom Taxonomies. If you don&apos;t have &lt;code&gt;taxonomy-{taxonomyName}.php&lt;/code&gt; and a Custom Taxonomy page is queried, it defaults back to &lt;code&gt;taxonomy.php&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;If &lt;code&gt;taxonomy.php&lt;/code&gt; doesn&apos;t exist, WordPress reverts to &lt;code&gt;archive.php&lt;/code&gt; and then &lt;code&gt;index.php&lt;/code&gt;&lt;/p&gt;
-&lt;h3&gt;&lt;code&gt;author.php&lt;/code&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;author.php&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;The Author template is used to display posts by a specific author. In here you can include the author&apos;s Biography and social links, etc as well as a list of all the posts that individual has contributed to the site.&lt;/p&gt;
-&lt;h3&gt;&lt;code&gt;date.php&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;The &lt;code&gt;date.php&lt;/code&gt; file is pretty similar to the other archival templates, it just allows you to specify a different archive page when looking at a specific date. You could build a day.php, month.php, or year.php if you needed to.&lt;/p&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;date.php&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;date.php&lt;/code&gt; file is pretty similar to the other archival templates, it just allows you to specify a different archive page when looking at a specific date. You could also build a day.php, month.php, or year.php if you needed to be that specific in your archives&lt;/p&gt;
 &lt;h2&gt;Other Templates&lt;/h2&gt;
-&lt;h3&gt;&lt;code&gt;front-page.php&lt;/code&gt; &amp;amp; &lt;code&gt;home.php&lt;/code&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;front-page.php&lt;/code&gt; &amp;#x26; &lt;code class=&quot;language-text&quot;&gt;home.php&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;See &lt;a href=&quot;https://wordpress.stackexchange.com/a/110987/162441&quot;&gt;This StackOverflow Answer&lt;/a&gt; about the difference between &lt;code&gt;front-page.php&lt;/code&gt; and &lt;code&gt;home.php&lt;/code&gt;.&lt;/p&gt;
-&lt;h3&gt;&lt;code&gt;404.php&lt;/code&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;404.php&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;This template is called whenever a user ends up on a page that doesn&apos;t exist. Use the 404 template to redirect the users back to the right place or present them with a search bar to help them find what they were looking for.&lt;/p&gt;
 &lt;p&gt;Be creative with it. Landing on a broken page is never fun for your user and there&apos;s a very high chance they&apos;ll just close the tab instead of actually trying to find what they were looking for.&lt;/p&gt;
-&lt;h2&gt;&lt;a href=&quot;https://github.com/harnerdesigns/blank2&quot;&gt;Blank2 - Blank WordPress Theme&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a href=&quot;https://github.com/harnerdesigns/blank2&quot;&gt;BlanBlank WordPress Theme&lt;/a&gt;&lt;/h2&gt;&lt;/h2&gt;
 &lt;p&gt;A good way to hit the ground running on your new WordPress project is with my &lt;a href=&quot;https://github.com/harnerdesigns/blank2&quot;&gt;Blank2 Blank Starter WordPress theme&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Comes with all the WordPress Template files you need and a pretty nifty Gulp setup to automate at least a few steps in your development (SASS-&gt;CSS, Minify JS, BrowserSync, and more).&lt;/p&gt;
 &lt;p&gt;Run the following code in your terminal to get started:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$ git clone https://github.com/harnerdesigns/blank2.git new-wp-theme
-$ cd new-wp-theme &amp;amp;&amp;amp; npm install
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;command-line-prompt&quot;&gt;&lt;span data-user=jack data-host=localhost&gt;&lt;/span&gt;&lt;span data-user=jack data-host=localhost&gt;&lt;/span&gt;&lt;/span&gt;$ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; clone https://github.com/harnerdesigns/blank2.git new-wp-theme
+$ &lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; new-wp-theme &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;In Conclusion&lt;/h2&gt;
 &lt;p&gt;You should now have at least a basic understanding of what all the different theme files do and when to use them.&lt;/p&gt;
 &lt;p&gt;Developing for WordPress is pretty simple once you get the concepts down. It&apos;s &lt;em&gt;SO&lt;/em&gt; customizable though so you can truly create any kind of web application you want.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Ensure You Get Paid As A Freelancer]]></title><description><![CDATA[One of the toughest parts about being a freelancer is the possibility that you'll have to chase down every single paycheck you ever earn. However, there are some steps you can take ahead of time to prevent you from having to chase too hard. Keep in…]]></description><link>https://jackharner.com//blog/ensure-you-get-paid-as-a-freelancer/</link><guid isPermaLink="false">https://jackharner.com//blog/ensure-you-get-paid-as-a-freelancer/</guid><pubDate>Sat, 31 Dec 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;One of the toughest parts about being a freelancer is the possibility that you&apos;ll have to chase down every single paycheck you ever earn. However, there are some steps you can take ahead of time to prevent you from having to chase too hard.&lt;/p&gt;
