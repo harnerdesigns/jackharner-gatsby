@@ -19,7 +19,7 @@ const Links = ({ data }) => {
       
       <section className="slim black">
         <LinksGrid>
-          <a className="button button--large" href="https://drive.google.com/file/d/1KkSFW1mm-clGBlMk_R05Ahzpf3Fo4SGo/view?usp=share_link">
+          <a className="button button--large" href="https://drive.google.com/drive/folders/15plYFeTQh41IAPm6UYbYPyhsim8bV1Ih?usp=share_link">
             Dixie's Birthday Album
           </a>
           <Link to="/portfolio" className="button button--large">
