@@ -8,9 +8,16 @@ import BlogCard from "../components/blog/blogCard"
 import ShareLinks from "../components/social/shareLinks"
 import Shuffler from "../components/verts/shuffler"
 import NewsletterLink from "../components/blog/NewsletterLink"
+import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
 
 export default function Template(props) {
   const post = props.data.markdownRemark
+
+  let disqusConfig = {
+    url: `${config.siteUrl+location.pathname}`,
+    identifier: post.id,
+    title: post.frontmatter.title
+  }
   const { related, newsletter } = props.pageContext
   let postContent = post.html
   postContent = postContent.replace(
@@ -73,6 +80,7 @@ export default function Template(props) {
       <section className="slim black row" style={{ gridGap: "3rem" }}>
         <Shuffler />
         <section className="post__post-content">
+        <Disqus config={disqusConfig} />
           <nav className="postNavigation">
             <h3>Want More?</h3>
             <ul>
