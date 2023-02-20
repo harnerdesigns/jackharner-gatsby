@@ -12,12 +12,14 @@ import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
 
 export default function Template(props) {
   const post = props.data.markdownRemark
+  const site = props.data.site;
 
   let disqusConfig = {
-    url: `${config.siteUrl+location.pathname}`,
+    url: `${typeof window !== 'undefined' ? window.location.href : ''}`,
     identifier: post.id,
     title: post.frontmatter.title
   }
+  console.log({disqusConfig})
   const { related, newsletter } = props.pageContext
   let postContent = post.html
   postContent = postContent.replace(
@@ -77,10 +79,12 @@ export default function Template(props) {
 
         {postContentMap}
       </section>
+      <section className="slim black content">
+        <Disqus config={disqusConfig} />
+      </section>
       <section className="slim black row" style={{ gridGap: "3rem" }}>
         <Shuffler />
         <section className="post__post-content">
-        <Disqus config={disqusConfig} />
           <nav className="postNavigation">
             <h3>Want More?</h3>
             <ul>
@@ -102,6 +106,14 @@ export default function Template(props) {
 }
 export const pageQuery = graphql`
   query BlogPostByPath($slug: String!) {
+    site {
+      siteMetadata {
+        title
+        description
+        author
+        siteUrl
+      }
+    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       excerpt(pruneLength: 150)

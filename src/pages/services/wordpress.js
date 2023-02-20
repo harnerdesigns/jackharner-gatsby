@@ -25,7 +25,7 @@ const BigCommerce = ({ data, pageContext }) => {
           <img src={wordpressLogo} style={{ maxHeight: "25vh", display: "block", margin: "0 auto" }} />
 
           <div>
-            <h2>WordPress Plugins & Themes Unique To You & Your Brand</h2>
+            <h2>WordPress Plugins & Themes Solving YOUR Unique Business Needs</h2>
           </div>
         </div>
       </section>
