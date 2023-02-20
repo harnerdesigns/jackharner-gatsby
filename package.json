@@ -16,6 +16,7 @@
     "gatsby-plugin-advanced-sitemap": "^2.0.0",
     "gatsby-plugin-canonical-urls": "^4.5.0",
     "gatsby-plugin-catch-links": "^4.5.0",
+    "gatsby-plugin-disqus": "^1.2.4",
     "gatsby-plugin-feed": "^4.5.0",
     "gatsby-plugin-gatsby-cloud": "^4.5.2",
     "gatsby-plugin-google-analytics": "^4.5.0",

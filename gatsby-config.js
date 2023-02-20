@@ -78,6 +78,12 @@ siteMetadata: {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `jackharner`
+      }
+    },
 
     {
       resolve: "gatsby-transformer-remark",
