@@ -12,9 +12,9 @@ A `/uses` page is a place for developers to share what tools, software, setups a
 
 ## Computers
 
-### [Dell Optiplex 9020 MT](https://amzn.to/3cDotGn)
+### [Dell Optiplex 9020 MT](https://amzn.to/41oUtH6)
 
-* [Intel Core i7-4770 CPU](https://amzn.to/30fptLN)
+* [Intel Core i7-4770 CPU](https://amzn.to/3XW99KU)
 * 14 GB Ram
 * ASUS GTX 550 TI
 * 1 TB 7200 RPM HDD
@@ -36,12 +36,12 @@ A `/uses` page is a place for developers to share what tools, software, setups a
 
 * The craziest yet coolest keyboard I've ever experienced. 
 
-### [Logitech G604 Mouse](https://amzn.to/2P1DF8l) 
+### [Logitech G604 Mouse](https://amzn.to/3kvnuQN) 
 
 * It is a right handed mouse even though I mouse lefty.
 * Six thumb (in my case ring) keys.
 
-### [G.Skill KM780 MX Keyboard](https://amzn.to/36aIdQj) 
+### [G.Skill KM780 MX Keyboard](https://amzn.to/3IMfVi6) 
 
   * Cherry MX Blue switches
   * Love me that CLICK CLICK CLICK
