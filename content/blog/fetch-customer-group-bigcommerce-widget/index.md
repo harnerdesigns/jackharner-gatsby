@@ -2,8 +2,8 @@
 date: 2023-02-24T07:34:30.321Z
 title: "Fetch Customer Group & More in a BigCommerce Widget" 
 subtitle: ""
-featuredImage: "./featuredImage.png"
-ogImage: "./featuredImage.png"
+featuredImage: "./nick-page-ovav6SivMAY-unsplash.jpg"
+ogImage: "./nick-page-ovav6SivMAY-unsplash.jpg"
 tags: ["BigCommerce"]
 externalLink: ""
 published: true
