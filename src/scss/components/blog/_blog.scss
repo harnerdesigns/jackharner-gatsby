@@ -435,18 +435,33 @@
     }
   }
 
+  .gatsby-resp-image-figure{
+    width: 100%;
+    figcaption{
+      color: #fff;
+      text-align: center; 
+      font-style: italic;
+      font-size: 1rem;
+    }
+  }
+
   .gatsby-resp-image-wrapper {
     width: 100%;
     max-width: 100% !important;
     max-height: 75vh;
     margin: 0 auto 1.5em;
-    border: 10px solid #fff;
-    border-radius: var(--border-radius);
+    border: 5px solid #fff;
+    overflow: hidden;
 
+    .gatsby-resp-image-background-image{
+      max-height: 100%;
+    }
+    
     @include breakpoint(laptop) {
       width: 75%;
-      border: 20px solid #fff;
     }
+
+
     img{
       width: 100%;
       height: 100%;

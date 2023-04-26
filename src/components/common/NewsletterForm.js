@@ -20,7 +20,7 @@ export const NewsletterForm = React.forwardRef((props, ref) => {
         <div className="formkit-background"></div>
         <div data-style="minimal">
           <div className="formkit-header" data-element="header">
-            <h1>
+            <h2>
               Learn&nbsp;
               <span className="title__box">
                 {" "}
@@ -37,7 +37,7 @@ export const NewsletterForm = React.forwardRef((props, ref) => {
                 />
               </span>
               With Me
-            </h1>
+            </h2>
           </div>
           <div className="formkit-subheader" data-element="subheader">
             <p>
