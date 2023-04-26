@@ -1,4 +1,104 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:webfeeds="http://webfeeds.org/rss/1.0"><channel><title><![CDATA[Jack Harner's Web Dev Blog]]></title><description><![CDATA[Jack Harner is a Freelance Web Developer & E-Commerce Consultant based in Denver, Colorado. Shopify, BigCommerce, WordPress Dev & More.]]></description><link>https://jackharner.com</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 24 Feb 2023 21:40:13 GMT</lastBuildDate><webfeeds:accentColor>#E91E63</webfeeds:accentColor><webfeeds:logo>./src/images/jackharenr-logo-white.svg</webfeeds:logo><item><title><![CDATA[Fetch Customer Group & More in a BigCommerce Widget]]></title><description><![CDATA[Did you know you can fetch Customer data on the frontend in a custom BigCommerce Widget? If you didn't, well it's your lucky day because today I'm going to show you how. Schema Setup This tutorial is going to assume you are using Bigcommerce's Widget…]]></description><link>https://jackharner.com//blog/fetch-customer-group-bigcommerce-widget/</link><guid isPermaLink="false">https://jackharner.com//blog/fetch-customer-group-bigcommerce-widget/</guid><pubDate>Fri, 24 Feb 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Did you know you can fetch Customer data on the frontend in a custom BigCommerce Widget? If you didn&apos;t, well it&apos;s your lucky day because today I&apos;m going to show you how.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:webfeeds="http://webfeeds.org/rss/1.0"><channel><title><![CDATA[Jack Harner's Web Dev Blog]]></title><description><![CDATA[Jack Harner is a Freelance Web Developer & E-Commerce Consultant based in Denver, Colorado. Shopify, BigCommerce, WordPress Dev & More.]]></description><link>https://jackharner.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 26 Apr 2023 16:35:06 GMT</lastBuildDate><webfeeds:accentColor>#E91E63</webfeeds:accentColor><webfeeds:logo>./src/images/jackharenr-logo-white.svg</webfeeds:logo><item><title><![CDATA[Freelancing & Traveling]]></title><description><![CDATA[I'm currently writing to you from a beautiful AirBnB in Bruges, Belgium, halfway through a birthday trip through Europe with my partner.  Freelancing never really stops and I know I couldn't afford to take two+ weeks off. Thankfully being a freelance…]]></description><link>https://jackharner.com//blog/freelancing-and-traveling/</link><guid isPermaLink="false">https://jackharner.com//blog/freelancing-and-traveling/</guid><pubDate>Sat, 15 Apr 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I&apos;m currently writing to you from a beautiful AirBnB in Bruges, Belgium, halfway through a birthday trip through Europe with my partner.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 157%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAfABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEBQL/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQP/2gAMAwEAAhADEAAAAbGRtx0aJDNrz+V0SAX/xAAbEAADAAMBAQAAAAAAAAAAAAAAAQIDERIhE//aAAgBAQABBQJ1OzZfpHRUdN5PVTFkpCh65yHzs//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BH//EABoQAAIDAQEAAAAAAAAAAAAAAAARECEiMgH/2gAIAQEABj8CTuebNesbMRyOf//EABwQAQADAQADAQAAAAAAAAAAAAEAESExUWFxkf/aAAgBAQABPyHifpAoq7iBjzgPF0YwTDEu6bHb3OXCKXO0NiVXXjs+X7P/2gAMAwEAAgADAAAAELf7w//EABcRAQEBAQAAAAAAAAAAAAAAAAEAECH/2gAIAQMBAT8QwC5f/8QAGREBAAIDAAAAAAAAAAAAAAAAAAERITFR/9oACAECAQE/EKhhtUdf/8QAHhABAQADAAEFAAAAAAAAAAAAAREAITFBYXGBobH/2gAIAQEAAT8Q0c5tMuOKSDr1xINpiN7g8iPM8nrlvQnIAYySL4HEUBI5Pu4IqjQW1/MoYR6OsAYGNe/MVOhYTpxq6+GP/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;AirBNB in Bruges&quot;
+        title=&quot;Plant Themed AirBnB in Bruges, Belgium&quot;
+        src=&quot;/static/3b6a60b2be13237d45b9cdf478f49f17/e5166/bruges-bnb.jpg&quot;
+        srcset=&quot;/static/3b6a60b2be13237d45b9cdf478f49f17/f93b5/bruges-bnb.jpg 300w,
+/static/3b6a60b2be13237d45b9cdf478f49f17/b4294/bruges-bnb.jpg 600w,
+/static/3b6a60b2be13237d45b9cdf478f49f17/e5166/bruges-bnb.jpg 1200w,
+/static/3b6a60b2be13237d45b9cdf478f49f17/644c5/bruges-bnb.jpg 1440w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Plant Themed AirBnB in Bruges, Belgium&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Freelancing never really stops and I know I couldn&apos;t afford to take two+ weeks off. Thankfully being a &lt;a href=&quot;/portfolio/&quot;&gt;freelance web developer&lt;/a&gt; means I can work from anywhere as long as I have my laptop and a WiFi connection.&lt;/p&gt;
+&lt;p&gt;With that being said, I&apos;ve already encountered a few things I wish I&apos;d thought about before leaving home that I figured I&apos;d share with you today to add to your pre-travel checklist.&lt;/p&gt;
+&lt;h2&gt;1. Make Sure You Have Access to EVERYTHING&lt;/h2&gt;
+&lt;p&gt;I had previously set up VPN access with one of my clients so I could troubleshoot issues on their local network from anywhere. Once that was set up  I saved a copy of the OpenVPN connection to an encrypted flash drive I keep on my keys that goes everywhere with me.&lt;/p&gt;
+&lt;p&gt;I hadn&apos;t paid close enough attention and some of the configuration options had changed since I set it all up and the VPN config I brought with me was no longer correct. Big problem. I was able to get back onto their VPN, but I had to have someone at my client&apos;s physical location dig up some info for me from their side. Not ideal, especially if you are trying to keep a low profile about your travels.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 980px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 209%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAqABQDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAIDBAUB/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAMCAf/aAAwDAQACEAMQAAAB6/lcKYuBmows97DljdAlSbwf/8QAHBAAAgICAwAAAAAAAAAAAAAAAAECEQMQEiAj/9oACAEBAAEFAt2QeuRhk2WezIxmnefUUV0//8QAFhEBAQEAAAAAAAAAAAAAAAAAABEQ/9oACAEDAQE/AciIj//EABcRAQEBAQAAAAAAAAAAAAAAAAAREBL/2gAIAQIBAT8BzpVV/8QAHRAAAAUFAAAAAAAAAAAAAAAAAAEQESACIkFxkf/aAAgBAQAGPwKB7WrqMwsGEOP/xAAfEAACAgIBBQAAAAAAAAAAAAAAAREhEHFRMUFhgZH/2gAIAQEAAT8hJxIX9yhC0JW4aZoTL0I4JBRxeBPkR7MhwMXfeP/aAAwDAQACAAMAAAAQFBbDFD//xAAXEQEBAQEAAAAAAAAAAAAAAAAAEQEQ/9oACAEDAQE/EOZpSEP/xAAXEQEBAQEAAAAAAAAAAAAAAAAAEQEQ/9oACAECAQE/EJzcJUt//8QAHRABAAICAwEBAAAAAAAAAAAAAQARITFBUXGRsf/aAAgBAQABPxBblG64xFgWyICFb5lO7AbWYJMMPh+S5ygWwJCtYGAwKdcblfaCOHyBXRdrRuHW+RNmY2/SM//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Eiffel Tower In Paris&quot;
+        title=&quot;Cloudy Morning Eiffel Tower in Paris, France&quot;
+        src=&quot;/static/8568878c862556c16373caa716a3e511/4012a/eiffel-tower.jpg&quot;
+        srcset=&quot;/static/8568878c862556c16373caa716a3e511/f93b5/eiffel-tower.jpg 300w,
+/static/8568878c862556c16373caa716a3e511/b4294/eiffel-tower.jpg 600w,
+/static/8568878c862556c16373caa716a3e511/4012a/eiffel-tower.jpg 980w&quot;
+        sizes=&quot;(max-width: 980px) 100vw, 980px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Cloudy Morning Eiffel Tower in Paris, France&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;You definitely want to make sure you&apos;ll have access to everything you need and that everything is correct BEFORE you leave. My recommendation here would be to take your laptop to a nearby coffee shop and go through your entire client list, double checking you can get to everything with just your laptop.&lt;/p&gt;
+&lt;p&gt;As a web developer, for me that involved checking Github access, SSH access, BigCommerce Stencil CLI, Shopify&apos;s CLI, and more.&lt;/p&gt;
+&lt;p&gt;Taking that time to do this ahead of time will save you tons of headache while abroad.&lt;/p&gt;
+&lt;h2&gt;2. Set Up A VPN In Your House&lt;/h2&gt;
+&lt;p&gt;This one really only applies if you have a work computer at home and a laptop you&apos;re taking with you. If you solely work from your laptop you shouldn&apos;t run into any issues.&lt;/p&gt;
+&lt;p&gt;Setting up a local VPN in your house would allow you to access everything on your home network from anywhere you have internet access. You don&apos;t want to get halfway across the world and find out you don&apos;t have a certain file or project that you forgot to move to your laptop. However if you do, and you have your local VPN set up (and your home computer is on) you can access everything you need (doubling down on #1).&lt;/p&gt;
+&lt;p&gt;When setting up the VPN you want to make sure to do it safely and securely. Opening up a port on your home network to the entire Internet can have some serious security concerns if done willy-nilly (so don&apos;t come after me if you do it wrong and your local network gets hacked). You&apos;ll also need to set up some sort of Dynamic DNS since most home internet service providers rotate through IP addresses. Dynamic DNS (DDNS) publishes the current IP address for your home network somewhere which allows you to connect to the right spot even if your network&apos;s global IP changes. You then tell your VPN connection to fetch the IP to use from the DDNS service.&lt;/p&gt;
+&lt;h2&gt;3. Prepare Your Clients Way Ahead Of Time&lt;/h2&gt;
+&lt;p&gt;I made the mistake of not telling one of my biggest clients that I was going to be in Europe for 2.5 weeks until about a week before I left. Luckily there weren&apos;t any huge projects about to start during that time. However, I know a little bit more of a heads up would&apos;ve been better for their project management. I spent that whole week cramming a ton of work and shuffling some things around to ensure things were going to run smoothly even with me being about 9 timezones away. Not ideal, but we made it work.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 133.33333333333331%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAbABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIDBQT/xAAWAQEBAQAAAAAAAAAAAAAAAAACAQP/2gAMAwEAAhADEAAAAb0aMdepIhFmitdlLP/EAB0QAAICAgMBAAAAAAAAAAAAAAECAAMRIRASEyL/2gAIAQEAAQUCrDZsr+l7KrZKhjMEQbgXehMlZ7WHj//EABYRAQEBAAAAAAAAAAAAAAAAAAASEf/aAAgBAwEBPwGUqa//xAAWEQEBAQAAAAAAAAAAAAAAAAAAARL/2gAIAQIBAT8BlbrLMf/EAB4QAAIBBAMBAAAAAAAAAAAAAAABERASMTICIYGR/9oACAEBAAY/AldbxRv9ItfhKMmTMqnbRKcG7p//xAAeEAEAAgICAwEAAAAAAAAAAAABABEhMVFhQXGRof/aAAgBAQABPyFNRH2XvfjhCKx3kRbixDBgH4hQJwEm/wCZWED21HIS6ZpNPuBZbmf/2gAMAwEAAgADAAAAEJg6vv/EABcRAAMBAAAAAAAAAAAAAAAAAAABESH/2gAIAQMBAT8Qp62QUsKP/8QAGBEAAwEBAAAAAAAAAAAAAAAAAREhABD/2gAIAQIBAT8QlBkRYC2Dw//EAB4QAQADAAIDAQEAAAAAAAAAAAEAESExYVGBkUFx/9oACAEBAAE/EDTrBfn89waSoYFHTMgJp22iSiDou8SsapBUd/sA4EeVhOyu+5QyK8wc+RpVtwa+RV8rMXDR3phUFnldWf/Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Dutch Pancake&quot;
+        title=&quot;Dutch Pancake I Ate In Amsterdam, Netherlands&quot;
+        src=&quot;/static/ab64e4e1194ade6769093d916e0aa21f/e5166/dutch-pancake.jpg&quot;
+        srcset=&quot;/static/ab64e4e1194ade6769093d916e0aa21f/f93b5/dutch-pancake.jpg 300w,
+/static/ab64e4e1194ade6769093d916e0aa21f/b4294/dutch-pancake.jpg 600w,
+/static/ab64e4e1194ade6769093d916e0aa21f/e5166/dutch-pancake.jpg 1200w,
+/static/ab64e4e1194ade6769093d916e0aa21f/d9c39/dutch-pancake.jpg 1800w,
+/static/ab64e4e1194ade6769093d916e0aa21f/82b8c/dutch-pancake.jpg 1960w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Dutch Pancake I Ate In Amsterdam, Netherlands&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h2&gt;4. Anticipate Not Having Good (or Any) WiFi&lt;/h2&gt;
+&lt;p&gt;Multiple times this trip, I went to go do some work, and either just didn&apos;t have working WiFi or it was dog slow and unusable. Given that my job is entirely online, that was a problem. My clients were prepared that my work output was going to be down a bit while I was gone, but if that wasn&apos;t the case I would have been in even bigger trouble.&lt;/p&gt;
+&lt;p&gt;One solution would be to get an international phone plan and use your phone as a mobile hotspot (sorry iPhones). This depends on being in a country with a solid phone network, and wouldn&apos;t provide blazing fast speeds, but would be more reliable than trusting your AirBnB or hotel to have consistent WiFi.&lt;/p&gt;
+&lt;p&gt;An alternative solution would be to get one of those WiFi hotspots (like this &lt;a href=&quot;https://amzn.to/3L3niS3&quot;&gt;GlocalMe Hotspot on Amazon&lt;/a&gt;). Obviously a pricey solution, ($120 for the hotspot &amp;#x26; $12 - $500 / mo depending on how many gigs you need) but at least it would be a business expense that you can write off.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://media.tenor.com/5iY9XU26qbQAAAAC/schitts-creek-david-rose.gif&quot; alt=&quot;It&amp;#x27;s A Write Off&quot;&gt;&lt;/p&gt;
+&lt;p&gt;If running your freelance business depends on you having internet, having a solution (if not more than one) to a spotty WiFi connection is an absolute necessity.&lt;/p&gt;
+&lt;h2&gt;Where To Next?&lt;/h2&gt;
+&lt;p&gt;I don&apos;t think I&apos;m quite ready to commit to the whole Digital Nomad lifestyle yet (I missed my cats a little too much), but I definitely want to get out and travel more since I have the location freedom to do so. My partner and I are thinking Costa Rica next. If you have any travel recommendations or other things to consider before leaving, let me know down in the comments or hit me up on twitter &lt;a href=&quot;https://twitter.com/jackharner&quot;&gt;@JackHarner&lt;/a&gt;!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Fetch Customer Group & More in a BigCommerce Widget]]></title><description><![CDATA[Did you know you can fetch Customer data on the frontend in a custom BigCommerce Widget? If you didn't, well it's your lucky day because today I'm going to show you how. Schema Setup This tutorial is going to assume you are using Bigcommerce's Widget…]]></description><link>https://jackharner.com//blog/fetch-customer-group-bigcommerce-widget/</link><guid isPermaLink="false">https://jackharner.com//blog/fetch-customer-group-bigcommerce-widget/</guid><pubDate>Fri, 24 Feb 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Did you know you can fetch Customer data on the frontend in a custom BigCommerce Widget? If you didn&apos;t, well it&apos;s your lucky day because today I&apos;m going to show you how.&lt;/p&gt;
 &lt;h2&gt;Schema Setup&lt;/h2&gt;
 &lt;p&gt;This tutorial is going to assume you are using &lt;a href=&quot;https://developer.bigcommerce.com/docs/ZG9jOjMwNzg1ODgz-widget-builder&quot;&gt;Bigcommerce&apos;s Widget Builder cli&lt;/a&gt; and already have it configured to work with your specific store.  (I&apos;ll probably write a post about this as well.)&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;command-line-prompt&quot;&gt;&lt;span data-user=jack data-host=localhost&gt;&lt;/span&gt;&lt;/span&gt;$ widget-builder create customer-widget&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
