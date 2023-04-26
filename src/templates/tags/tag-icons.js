@@ -38,7 +38,10 @@ const tagIcons = {
   Cannabis: "cannabis",
   Career: "user-astronaut",
   Freelance: "bacon",
-  DigitalOcean: ["fab", "digital-ocean"]
+  DigitalOcean: ["fab", "digital-ocean"],
+  Travel: "paper-plane",
+  Illustrator: "bezier-curve",
+  "Graphic Design": "palette"
 }
 
 export default tagIcons

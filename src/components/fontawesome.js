@@ -41,6 +41,8 @@ import {
   faCode,
   faLock,
   faBacon,
+  faPaperPlane,
+  faBezierCurve,
   faMoneyBill,
   faShieldAlt
 } from "@fortawesome/free-solid-svg-icons"
@@ -89,5 +91,7 @@ library.add(
   faCode,
   faLock,
   faBacon,
+  faPaperPlane,
+  faBezierCurve,
   faMoneyBill,
   faShieldAlt)
