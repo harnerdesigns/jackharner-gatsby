@@ -1,23 +1,25 @@
 .blog-posts {
   margin: 2em auto;
-  max-width: 100%;
-
+ 
   display: flex;
   flex-direction: column;
 
   @include breakpoint(laptop) {
     display: grid;
-    grid-gap: 2em;
+    grid-gap: 4em;
     align-items: flex-start;
 
     grid-auto-flow: dense;
     grid-template-columns: repeat(3, 1fr);
+
+    margin-bottom: 8rem;
   }
 
   .blog__link {
     display: flex;
     align-self: flex-start;
     width: 100%;
+    height: 100%;
   }
 }
 

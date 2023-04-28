@@ -8,11 +8,18 @@ import ReadyToGo from "../../components/ready-to-go"
 
 import wordpressLogo from "../../images/logos/wordpress.png"
 import ProjectCard from "../../components/portfolio/projectCard"
+import Quotes from "../../components/testimonies/quotes"
 
 
 const BigCommerce = ({ data, pageContext }) => {
 
-  const { edges: posts } = data.allMarkdownRemark
+  const { edges: posts } = data.projects
+
+  const { quotes } = data.testimonies.frontmatter
+
+  let filteredQuotes = quotes.filter((node) => node.tags && node.tags.includes('WordPress') ? true : false)
+
+
   return (
     <Layout footerCTA={false} className={"service service--wordpress"}>
       <Seo title="Custom WordPress Themes & Plugins" />
@@ -37,6 +44,15 @@ const BigCommerce = ({ data, pageContext }) => {
         })}
       </section>
 
+      <section className="half">
+        <div className="grid-item--full-width">
+          <h2>My WordPress Clients Love Me!</h2>
+        </div>
+        <Quotes quotes={filteredQuotes} />
+
+      </section>
+
+
 
       <ReadyToGo />
 
@@ -48,7 +64,7 @@ export default BigCommerce
 
 export const pageQuery = graphql`
 query BigCommercePagQuery {
-  allMarkdownRemark(
+  projects: allMarkdownRemark(
     limit: 5
     sort: {
       order: [DESC, DESC]
@@ -97,6 +113,21 @@ query BigCommercePagQuery {
           weight
           date(formatString: "MMMM DD, YYYY")
         }
+      }
+    }
+  }
+  testimonies: markdownRemark(frontmatter: { title: { eq: "Testimonies" } }) {
+    fields {
+      slug
+    }
+    frontmatter {
+      title
+      quotes {
+        quote
+        link
+        by
+        title
+        tags
       }
     }
   }

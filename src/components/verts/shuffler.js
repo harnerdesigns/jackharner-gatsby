@@ -37,7 +37,6 @@ const Shuffler = ({index}) => {
 
   let vertCount = verts.length
 
-  console.log({vertCount, index})
 
   if(index > vertCount){
 

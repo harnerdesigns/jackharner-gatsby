@@ -150,6 +150,7 @@ export const pageQuery = graphql`
         collection
         externalLink
         externalLinkLabel
+        unlisted
       }
     }
   }

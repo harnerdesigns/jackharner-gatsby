@@ -18,8 +18,8 @@ const Quotes = ({ quotes }) => {
         speed: 500,
         autoplay: true,
         autoplaySpeed: 7000,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: quotes.length > 3 ? 3 : quotes.length,
+        slidesToScroll: quotes.length > 3 ? 3 : quotes.length,
         adaptiveWidth: true,
         responsive: [
             {

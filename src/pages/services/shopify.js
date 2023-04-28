@@ -9,11 +9,16 @@ import ReadyToGo from "../../components/ready-to-go"
 import shopifyLogo from "../../images/logos/shopify.svg"
 import shopifyBG from "../../images/logos/shopify-bg.png"
 import ProjectCard from "../../components/portfolio/projectCard"
+import Quotes from "../../components/testimonies/quotes"
 
 
 const WhyMe = ({ data, pageContext }) => {
 
-  const { edges: posts } = data.allMarkdownRemark
+  const { edges: posts } = data.projects
+  const { quotes } = data.testimonies.frontmatter
+
+  let filteredQuotes = quotes.filter((node) => node.tags && node.tags.includes('Shopify') ? true : false)
+
   return (
     <Layout footerCTA={false} className={"service service--shopify"}>
       <Seo title="Shopify Theme Development" />
@@ -41,24 +46,34 @@ const WhyMe = ({ data, pageContext }) => {
           return <ProjectCard post={post} index={index} />
         })}
       </section>
+      <section className="brand-perks__grid white half content--centered grid grid--2">
+        <div>
+          <h2>How I Can Help:</h2>
+        </div>
+        <div>
+          <h3>Are You Already On Shopify?</h3>
+          <p>I can clean up your existing Shopify theme, or start from scratch.</p>
 
-      <section className="brand-perks__grid white slim content--centered grid grid--3">
-        <div>
-          <h3>Already On Shopify?</h3>
-          <h4>Let's clean up your existing theme, or start from scratch.</h4>
-        </div>
-        <div>
           <h3>Somewhere Else?</h3>
-          <h4>I can transfer you to the platform trusted by millions.</h4>
-        </div>
-        <div>
+          <p>I can transfer you to the platform trusted by millions.</p>
+
           <h3>Brand New To E-Commerce?</h3>
-          <h4>I'll get you all set up and selling online right away!</h4>
+          <p>I'll get you all set up and selling online right away!</p>
         </div>
       </section>
 
+      <section className="half shopify-bg shopify-bg--alt">
+        <div className="grid-item--full-width">
+          <h2>My Shopify Clients Love Me!</h2>
+        </div>
+        <Quotes quotes={filteredQuotes} />
+
+      </section>
+
+
+
       <ReadyToGo />
-      
+
     </Layout>
   )
 }
@@ -67,7 +82,7 @@ export default WhyMe
 
 export const pageQuery = graphql`
 query ShopifyPagQuery {
-  allMarkdownRemark(
+  projects: allMarkdownRemark(
     limit: 5
     sort: {
       order: [DESC, DESC]
@@ -116,6 +131,21 @@ query ShopifyPagQuery {
           weight
           date(formatString: "MMMM DD, YYYY")
         }
+      }
+    }
+  }
+  testimonies: markdownRemark(frontmatter: { title: { eq: "Testimonies" } }) {
+    fields {
+      slug
+    }
+    frontmatter {
+      title
+      quotes {
+        quote
+        link
+        by
+        title
+        tags
       }
     }
   }

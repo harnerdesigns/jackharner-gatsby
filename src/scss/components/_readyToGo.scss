@@ -11,6 +11,10 @@
     align-items: center;
     justify-content: center;
 
+    @include breakpoint(tabletdown){
+        border-bottom: 5px solid var(--color);
+    }
+
     &,
     * {
         transition: 300ms;
@@ -36,6 +40,8 @@
         background: var(--color);
         height: 100%;
         transition: 300ms;
+
+
     }
 
     &:hover {
@@ -54,6 +60,7 @@
         &:before {
             left: 0;
             background: black;
+            
         }
         &:hover {
             &,

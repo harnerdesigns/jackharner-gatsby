@@ -122,6 +122,11 @@ const descriptors = [
         getter: node => node.frontmatter.ogImage,
         defaultValue: "",
       },
+      {
+        name: "unlisted",
+        getter: node => node.frontmatter.unlisted,
+        defaultValue: false,
+      },
     ],
   },
 ]
@@ -400,13 +405,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     ////////////////////
 
     _.each(result.data.portfolio.edges, (edge, index) => {
-      const edgeCount = result.data.portfolio.edges.length
+
+      let listedProjects = result.data.portfolio.edges.filter(({ node }) =>
+        node.fields.unlisted ? false : true
+      )
+      const edgeCount = listedProjects.length
       const relatedPortfolioIndexes = randomNum(0, edgeCount, index, 3)
 
       const related = [
-        result.data.portfolio.edges[relatedPortfolioIndexes[0]].node,
-        result.data.portfolio.edges[relatedPortfolioIndexes[1]].node,
-        result.data.portfolio.edges[relatedPortfolioIndexes[2]].node,
+        listedProjects[relatedPortfolioIndexes[0]].node,
+        listedProjects[relatedPortfolioIndexes[1]].node,
+        listedProjects[relatedPortfolioIndexes[2]].node,
       ]
 
       createPage({

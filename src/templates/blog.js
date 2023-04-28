@@ -30,17 +30,17 @@ const Blog = ({ data, pageContext }) => {
       <main className="page_body page_body--grid">
         
 
-        <div className="blog-posts">
+        <div className="blog-posts page-width">
           {posts
             .filter(post => post.node.fields.collection === "blog")
             .filter(post => post.node.frontmatter.title.length > 0)
             .map(({ node: post }, index) => {
               let ShowCard;
               
-              if((index) % 8 ===  0) {ShowCard = <><Shuffler /></>}
+              if(index > 1 && (index) % 7 ===  0) {ShowCard = <div id="ezoic-pub-ad-placeholder-111"> </div>}
               return (
                 <>
-                  <BlogCard post={post} index={index} large={(index + 1) % 6 === 0 || index === 0} />
+                  <BlogCard post={post} index={index} />
                   {ShowCard}
                 </>
               )
@@ -88,7 +88,7 @@ export const pageQuery = graphql`
             externalLink
             published
             date(formatString: "MMMM DD, YYYY")
-
+            unlisted
           }
         }
       }
