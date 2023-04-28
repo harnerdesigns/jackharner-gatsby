@@ -53,7 +53,7 @@ export const pageQuery = graphql`
         fields: [fields___weight, frontmatter___date]
       }
       filter: {
-        fields: { published: { eq: true }, collection: { eq: "portfolio" } }
+        fields: { published: { eq: true },  unlisted: { eq: false },  collection: { eq: "portfolio" } }
       }
     ) {
       edges {

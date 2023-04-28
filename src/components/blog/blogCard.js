@@ -27,7 +27,7 @@ const BlogCard = ({ post, index, small, large }) => {
                   <span className="tag__label">{tag}</span>
                 </>
               ) : (
-                tag
+                <><span className="tag__label">{tag}</span></>
               )}
             </div>
           )

@@ -29,7 +29,7 @@ The first thing you need to do is get your account's API keys from [ConvertKit](
 
 To store your keys securely and away from prying eyes, we're going to take advantage of Environment Variables. If you don't already use them, create a `.env` file in the root of your Gatsby project, and paste this block of code in there:
 
-```env
+```
 CONVERTKIT_KEY=xxxxxxxxxxxxxx
 CONVERTKIT_SECRET=xxxxxxxxxxxxxxxxxxxxxxxxxx
 ```

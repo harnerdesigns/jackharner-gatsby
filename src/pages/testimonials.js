@@ -49,6 +49,7 @@ export const pageQuery = graphql`
           link
           by
           title
+          tags
         }
       }
     }

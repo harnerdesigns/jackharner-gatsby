@@ -42,6 +42,7 @@ h1 {
   /* 2x body copy size = 32px */
   line-height: 1.25;
   /* 45px / 36px */
+  font-weight: 900;
 }
 
 @media (min-width: 43.75em) {
@@ -66,6 +67,8 @@ h2 {
   /* 1.625x body copy size = 26px */
   line-height: 1.15384615;
   /* 30px / 26px */
+  font-weight: 700;
+
 }
 
 @media (min-width: 43.75em) {
@@ -89,6 +92,9 @@ h3 {
   /* 1.375x body copy size = 22px */
   line-height: 1.13636364;
   /* 25px / 22px */
+
+  font-weight: 600;
+
 }
 
 @media (min-width: 43.75em) {
@@ -111,6 +117,9 @@ h4 {
   font-size: 1.5em;
   /* 1.125x body copy size = 18px */
   line-height: 1.11111111;
+
+  font-weight: 500;
+
 }
 
 @media (min-width: 43.75em) {

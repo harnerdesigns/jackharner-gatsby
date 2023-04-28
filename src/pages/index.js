@@ -174,6 +174,7 @@ export const pageQuery = graphql`
             description
             color
             date(formatString: "MMMM DD, YYYY")
+            updated(formatString: "MMMM DD, YYYY")
             tags
             published
             featuredImage {
@@ -193,6 +194,7 @@ export const pageQuery = graphql`
             collection
             externalLink
             published
+            date(formatString: "MMMM DD, YYYY")
           }
         }
       }

@@ -14,6 +14,7 @@
         background-size: 300px;
         will-change: background-position;
         animation: slideBG 8000ms infinite linear;
+
         h2 {
             
             color: #fff;
@@ -22,6 +23,12 @@
             @include breakpoint(laptop) {
                 font-size: 4rem;
             }
+        }
+
+        &--alt{
+            animation: slideBG2 8000ms infinite linear;
+            background-blend-mode: invert;
+
         }
     }
 
@@ -53,5 +60,14 @@
     }
     to {
         background-position: 300px 300px;
+    }
+}
+
+@keyframes slideBG2 {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -300px 300px;
     }
 }

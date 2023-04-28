@@ -56,9 +56,12 @@ const ProjectHeader = ({ post, index, small, nolink }) => {
         </div>
       )}
       <div className="header__titles">
+
         <Link to={post.fields.slug}>
-          <h2 className="project__title">{post.frontmatter.title}</h2>
+          <h1 className="project__title">{post.frontmatter.title}</h1>
         </Link>
+
+
 
         {post.frontmatter.description != null ? (
           <h4 className="project__description">
@@ -68,7 +71,9 @@ const ProjectHeader = ({ post, index, small, nolink }) => {
           ""
         )}
         {tags}
+      {(post.fields.unlisted ? <div className="project__unlisted"><FontAwesomeIcon icon={['fab', "android"]} /> This Project Is Unlisted</div> : "")}
       </div>
+
     </header>
   )
 }

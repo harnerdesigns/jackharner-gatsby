@@ -41,7 +41,8 @@ const tagIcons = {
   DigitalOcean: ["fab", "digital-ocean"],
   Travel: "paper-plane",
   Illustrator: "bezier-curve",
-  "Graphic Design": "palette"
+  "Graphic Design": "palette",
+  "Plug & Play": "plug"
 }
 
 export default tagIcons

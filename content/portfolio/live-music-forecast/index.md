@@ -6,8 +6,7 @@ description: "Live Music Directory"
 color: "#002868"
 tags: ["Gatsby", "Automation", "Node"]
 images: ["./live-music-forecast-home.png"]
-weight: 9997
-externalLink: https://livemusicforecast.com
+weight: 0
 published: true
 ---
 
