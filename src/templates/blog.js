@@ -37,7 +37,7 @@ const Blog = ({ data, pageContext }) => {
             .map(({ node: post }, index) => {
               let ShowCard;
               
-              if(index > 1 && (index) % 7 ===  0) {ShowCard = <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CE7ITK7W&placement=jackharnercom" id="_carbonads_js"></script>}
+              if(index === 2) {ShowCard = <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CE7ITK7W&placement=jackharnercom" id="_carbonads_js"></script>}
               return (
                 <>
                   <BlogCard post={post} index={index} />
