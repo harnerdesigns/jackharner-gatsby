@@ -8,8 +8,6 @@ tags: ["Shopify", "Cannabis"]
 images: ["./HRVST-landing-page.png"]
 weight: 0
 published: true
-externalLink: https://thehrvst.com
-externalLinkLabel: Be Cool \\ Buy HRVST
 ---
 
 Delta 8 THC is the hottest new Cannabinoid product to hit the market. An extract derived completely from Federally Legal Hemp, Delta 8 is legal everywhere CBD is. 
