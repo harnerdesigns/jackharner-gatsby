@@ -6,7 +6,7 @@ import PageTitle from "../../components/pageTitle"
 import Seo from "../../components/seo"
 import ReadyToGo from "../../components/ready-to-go"
 
-import wordpressLogo from "../../images/logos/wordpress.png"
+import wordpressLogo from "../../images/logos/wordpress.svg"
 import ProjectCard from "../../components/portfolio/projectCard"
 import Quotes from "../../components/testimonies/quotes"
 
@@ -23,28 +23,27 @@ const BigCommerce = ({ data, pageContext }) => {
   return (
     <Layout footerCTA={false} className={"service service--wordpress"}>
       <Seo title="Custom WordPress Themes & Plugins" />
-      <PageTitle>WordPress Theme & Plugin Development</PageTitle>
 
-      <section className="slim content black">
+      <PageTitle subtitle="WordPress Plugins & Themes Solving YOUR Unique Business Needs">WordPress Theme & Plugin Development</PageTitle>
 
-        <div className="grid grid--2" style={{alignItems: "center", justifyContent: "center"}}>
 
-          <img src={wordpressLogo} style={{ maxHeight: "25vh", display: "block", margin: "0 auto" }} />
+      <section className="wordpress-bg half content--centered white" style={{marginTop: "12vw"}}>
+      <img src={wordpressLogo} className="wordpress-logo" />
 
-          <div>
-            <h2>WordPress Plugins & Themes Solving YOUR Unique Business Needs</h2>
-          </div>
-        </div>
+        <h3 className="did-you-know">Did you know?</h3>
+
+        <h2>Wordpress Powers Over a THIRD of the Internet!</h2>
+        <h3 className="did-you-know">It's the most flexible CMS while still being insanely user friendly.</h3>
       </section>
 
       <section className="project-grid slim black grid grid--3">
-        <h2>Recent WordPress Projects:</h2>
+        <h2><Link to="/portfolio/tags/wordpress">Recent WordPress Projects:</Link></h2>
         {posts.map(({ node: post }, index) => {
           return <ProjectCard post={post} index={index} />
         })}
       </section>
 
-      <section className="half">
+      <section className="half wordpress-bg wordpress-bg--alt">
         <div className="grid-item--full-width">
           <h2>My WordPress Clients Love Me!</h2>
         </div>

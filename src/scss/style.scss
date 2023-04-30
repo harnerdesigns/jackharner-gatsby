@@ -342,7 +342,7 @@ section.black .title__box {
   padding: 0;
   min-height: 50vh;
   position: relative;
-  background: linear-gradient(60deg, var(--color), var(--purple));
+  background: linear-gradient(60deg, var(--color), var(--cyan));
   @include breakpoint(tablet) {
     padding-bottom: 2rem;
     padding-bottom: 0;

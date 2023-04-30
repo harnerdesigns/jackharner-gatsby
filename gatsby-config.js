@@ -129,8 +129,8 @@ siteMetadata: {
         name: `Jack Harner`,
         short_name: `JackHarner`,
         start_url: `/`,
-        background_color: `#E91E63`,
-        theme_color: `#E91E63`,
+        background_color: `#9C27B0`,
+        theme_color: `#9C27B0`,
         display: `fullscreen`,
         icon: `src/images/jackharner-icon.svg`, // This path is relative to the root of the site.
       },
@@ -166,7 +166,7 @@ siteMetadata: {
             title: "Jack Harner's Web Dev Blog",
             custom_namespaces: { webfeeds: "http://webfeeds.org/rss/1.0" },
             custom_elements: [
-              { "webfeeds:accentColor": "#E91E63" },
+              { "webfeeds:accentColor": "#9C27B0" },
               { "webfeeds:logo": "./src/images/jackharenr-logo-white.svg" },
             ],
             serialize: ({ query: { site, allMarkdownRemark } }) => {

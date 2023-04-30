@@ -55,24 +55,24 @@ export default class ColorSwitcher extends Component {
       // Default Colors when no Cookie Found.
       this.state = {
         color: {
-          hex: "#E91E63",
+          hex: "#9C27B0",
           rgb: {
-            r: "233",
-            g: "30",
-            b: "99",
+            r: "156",
+            g: "39",
+            b: "176",
           },
         },
         selected_color: {
-          hex: "#E91E63",
+          hex: "#9C27B0",
           rgb: {
-            r: "233",
-            g: "30",
-            b: "99",
+            r: "156",
+            g: "39",
+            b: "176",
           },
           hsl: {
-            h: 340,
-            s: 87,
-            l: 0.91,
+            h: 291,
+            s: 63.7,
+            l: .422,
             a: 1,
           },
         },
@@ -236,16 +236,16 @@ export default class ColorSwitcher extends Component {
     this.setState(
       {
         color: {
-          hex: "#E91E63",
+          hex: "#9C27B0",
           rgb: {
-            r: "233",
-            g: "30",
-            b: "99",
+            r: "156",
+            g: "39",
+            b: "176",
           },
           hsl: {
-            h: 340,
-            s: 87,
-            l: 0.91,
+            h: 291,
+            s: 63.7,
+            l: 42.2,
             a: 1,
           }
         },
@@ -282,7 +282,7 @@ export default class ColorSwitcher extends Component {
                 this.onReset()
               }}
               extraStyle={{
-                background: "#E91E63",
+                background: "#9C27B0",
                 color: "#ffffff",
                 marginTop: "1rem",
               }}

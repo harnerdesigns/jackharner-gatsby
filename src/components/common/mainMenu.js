@@ -26,7 +26,7 @@ const MainMenu = (props) => {
     return (<>
         <nav className={"main_nav" + (isOpen ? " is-open" : "")}>
 
-            <SubMenu link={{ link: "/services", text: "Services" }} links={[{ link: "/services/shopify", text: "Shopify", icon: ['fab', 'shopify'] }, { link: "/services/bigcommerce", text: "BigCommerce", icon: "shopping-cart" }]} subMenuOpen={subMenuOpen} setSubMenuOpen={setSubMenuOpen} />
+            <SubMenu link={{ link: "/services", text: "Services" }} links={[{ link: "/services/shopify", text: "Shopify", icon: ['fab', 'shopify'] }, { link: "/services/bigcommerce", text: "BigCommerce", icon: "shopping-cart" }, { link: "/services/wordpress", text: "WordPress", icon: ["fa-brands", "wordpress"] }]} subMenuOpen={subMenuOpen} setSubMenuOpen={setSubMenuOpen} />
 
             <SubMenu link={{ link: "/portfolio", text: "Portfolio" }} links={[{ link: "/portfolio/", text: "All Projects", extraSettings: { partiallyActive: false } }, { link: "/portfolio/tags/e-commerce/", text: "E-Commerce", icon: 'shopping-cart' }, { link: "/portfolio/tags/wordpress/", text: "WordPress", icon: ['fab', "wordpress"] }, { link: "/portfolio/tags/shopify/", text: "Shopify", icon: ['fab', "shopify"] }]} subMenuOpen={subMenuOpen} setSubMenuOpen={setSubMenuOpen} />
 
