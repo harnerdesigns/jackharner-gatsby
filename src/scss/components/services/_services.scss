@@ -16,19 +16,73 @@
         animation: slideBG 8000ms infinite linear;
 
         h2 {
-            
+
             color: #fff;
             font-weight: 900;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
             @include breakpoint(laptop) {
                 font-size: 4rem;
             }
         }
 
-        &--alt{
+        &--alt {
             animation: slideBG2 8000ms infinite linear;
             background-blend-mode: invert;
 
+        }
+    }
+
+
+    .wordpress-bg {
+        background: var(--color) url("../images/logos/wordpress-bg.png") repeat;
+        background-size: 300px;
+        will-change: background-position;
+        animation: slideBG 8000ms infinite linear;
+        box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.5);
+
+        h2 {
+
+            color: #fff;
+            font-weight: 900;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
+            @include breakpoint(laptop) {
+                font-size: 4rem;
+            }
+        }
+
+        .did-you-know{
+            color: #fff;
+            font-weight: 400;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+
+            @include breakpoint(laptop){
+                font-size: 3rem;
+            }
+        }
+
+        &--alt {
+            animation: slideBG2 8000ms infinite linear;
+            background-blend-mode: invert;
+
+        }
+
+        .wordpress-logo {
+            width: 70vw;
+            height: 70vw;
+            display: block;
+            margin: 0 auto;
+            margin-top: -50vw;
+            z-index: 5;
+            filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.5));
+
+            @include breakpoint(laptop) {
+                width: 30vw;
+                height: 30vw;
+                margin-top: -17vw;
+
+            }
         }
     }
 
@@ -36,7 +90,7 @@
         h2 {
             margin: auto;
             text-align: center;
-            
+
             @include breakpoint(laptop) {
                 width: 70%;
                 text-align: right;
@@ -51,6 +105,10 @@
     &--bigcommerce {
         --color: #0d52ff;
     }
+
+    &--wordpress {
+        --color: #21759b;
+    }
 }
 
 
@@ -58,6 +116,7 @@
     from {
         background-position: 0 0;
     }
+
     to {
         background-position: 300px 300px;
     }
@@ -67,6 +126,7 @@
     from {
         background-position: 0 0;
     }
+
     to {
         background-position: -300px 300px;
     }

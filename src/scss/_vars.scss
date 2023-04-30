@@ -1,13 +1,14 @@
 @use 'sass:math';
 
 :root {
-  --color: #e91e63;
+  --color: #9C27B0;
   --text-color: white;
   --text-color--inverted: black;
   --darker-color: #aa1145;
   --darker-text-color: white;
 
   --purple: #9c27b0;
+  --cyan: rgb(0,188,212);
 
   --border-radius: 10px;
 
@@ -17,7 +18,7 @@
 }
 
 $red: #f44336;
-$pink: var(--color, #e91e63);
+$pink: var(--color, #9C27B0);
 $black: #000;
 $gray: #212121;
 $pageWidth: 100%;
