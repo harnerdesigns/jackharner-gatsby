@@ -9,9 +9,9 @@ import ReadyToGo from "../../components/ready-to-go"
 import wordpressLogo from "../../images/logos/wordpress.svg"
 import ProjectCard from "../../components/portfolio/projectCard"
 import Quotes from "../../components/testimonies/quotes"
+import OgImage from "../../images/services/wordpress-og-photo.png"
 
-
-const BigCommerce = ({ data, pageContext }) => {
+const WordPress = ({ data, pageContext }) => {
 
   const { edges: posts } = data.projects
 
@@ -22,7 +22,7 @@ const BigCommerce = ({ data, pageContext }) => {
 
   return (
     <Layout footerCTA={false} className={"service service--wordpress"}>
-      <Seo title="Custom WordPress Themes & Plugins" />
+      <Seo title="Custom WordPress Themes & Plugins" image={OgImage} />
 
       <PageTitle subtitle="WordPress Plugins & Themes Solving YOUR Unique Business Needs">WordPress Theme & Plugin Development</PageTitle>
 
@@ -59,10 +59,10 @@ const BigCommerce = ({ data, pageContext }) => {
   )
 }
 
-export default BigCommerce
+export default WordPress
 
 export const pageQuery = graphql`
-query BigCommercePagQuery {
+query WordPressPagQuery {
   projects: allMarkdownRemark(
     limit: 5
     sort: {
