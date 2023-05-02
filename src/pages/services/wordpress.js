@@ -22,18 +22,29 @@ const WordPress = ({ data, pageContext }) => {
 
   return (
     <Layout footerCTA={false} className={"service service--wordpress"}>
-      <Seo title="Custom WordPress Themes & Plugins" image={OgImage} />
+      <Seo  title="Custom WordPress Themes & Plugins" image={OgImage} />
 
       <PageTitle subtitle="WordPress Plugins & Themes Solving YOUR Unique Business Needs">WordPress Theme & Plugin Development</PageTitle>
+      <section className="wordpress-bg half content--centered white" style={{ marginTop: "12vw" }}>
+        <img src={wordpressLogo} className="wordpress-logo" />
 
+        <h2>Need A WordPress Developer?</h2>
 
-      <section className="wordpress-bg half content--centered white" style={{marginTop: "12vw"}}>
-      <img src={wordpressLogo} className="wordpress-logo" />
+        <h3 className="did-you-know">I've been building with WordPress for over 10 years!</h3>
+        <Link to="/hire-me" className="button button--large button--white button--arrow-right">Let's Chat</Link>
+      </section>
+      <section className="slim black">
+        <div className="grid-item--full-width">
+          <h2>My WordPress Clients Love Me!</h2>
+        </div>
+        <Quotes quotes={filteredQuotes} />
 
-        <h3 className="did-you-know">Did you know?</h3>
+      </section>
 
-        <h2>Wordpress Powers Over a THIRD of the Internet!</h2>
+      <section className="half wordpress-bg wordpress-bg--alt">
+      <h2>Let's Build Some Cool WordPress Stuff Together!</h2>
         <h3 className="did-you-know">It's the most flexible CMS while still being insanely user friendly.</h3>
+
       </section>
 
       <section className="project-grid slim black grid grid--3">
@@ -42,14 +53,10 @@ const WordPress = ({ data, pageContext }) => {
           return <ProjectCard post={post} index={index} />
         })}
       </section>
+    
 
-      <section className="half wordpress-bg wordpress-bg--alt">
-        <div className="grid-item--full-width">
-          <h2>My WordPress Clients Love Me!</h2>
-        </div>
-        <Quotes quotes={filteredQuotes} />
 
-      </section>
+
 
 
 
