@@ -30,7 +30,7 @@ const BigCommerce = ({ data, pageContext }) => {
           <img src={bigcommerceLogo} style={{ maxHeight: "25vh", display: "block", margin: "0 auto" }} />
 
           <div>
-            <h2>BigCommerce Themes Unique To You & Your Brand or Small Business</h2>
+            <h2>BigCommerce Stencil Themes Unique To You & Your Business</h2>
           </div>
         </div>
       </section>
