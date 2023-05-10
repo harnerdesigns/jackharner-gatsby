@@ -34,13 +34,29 @@ const BigCommerce = ({ data, pageContext }) => {
           </div>
         </div>
       </section>
+      <section className="brand-perks__grid white half content--centered grid grid--2">
+        <div>
+          <h2>How I Can Help:</h2>
+        </div>
+        <div>
+          <h3>Custom Theme Development</h3>
+          <p>I can clean up your existing BigCommerce theme, or whip up one of my delicious, made from scratch, BigCommerce themes.</p>
 
+          <h3>BigCommerce Theme CI/CD Setup</h3>
+          <p>Already building a BigCommerce theme and want an easier deployment process? Let me integrate my BigCommerce Deployment workflow to automate site updates.</p>
+
+          <h3>BigCommerce Store Setup</h3>
+          <p>I'll get your store all set up and you selling online right away!</p>
+        </div>
+      </section>
       <section className="project-grid slim black grid grid--3">
-        <h2>Recent BigCommerce Projects:</h2>
+        <h2><Link to="/portfolio/tags/wordpress">Recent BigCommerce Projects:</Link></h2>
         {posts.map(({ node: post }, index) => {
           return <ProjectCard post={post} index={index} />
         })}
       </section>
+
+      
 
       {/* <section className="half shopify-bg shopify-bg--alt">
         <div className="grid-item--full-width">

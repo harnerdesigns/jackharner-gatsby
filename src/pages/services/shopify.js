@@ -31,7 +31,7 @@ const WhyMe = ({ data, pageContext }) => {
           <img src={shopifyLogo} style={{ maxHeight: "25vh", display: "block", margin: "0 auto" }} />
 
           <div>
-            <h2>Custom Shopify Themes Tailored For Your Brand or Small Business</h2>
+            <h2>Custom Shopify Themes Tailored For Your Brand</h2>
           </div>
         </div>
       </section>
