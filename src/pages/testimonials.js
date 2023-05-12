@@ -21,7 +21,7 @@ const Testimonials = ({ data, pageContext }) => {
 
         <div>
           <h2>
-            I know that I'm good at what I do, but don't just take my word for it:
+            I know that I'm great at what I do, but don't just take my word for it:
           </h2>
         </div>
       </section>

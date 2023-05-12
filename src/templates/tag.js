@@ -5,10 +5,7 @@ import BlogCard from "../components/blog/blogCard"
 import PageTitle from "../components/pageTitle"
 import ProjectCard from "../components/portfolio/projectCard"
 import TopTags from "../components/common/topTags"
-import Shuffler from "../components/verts/shuffler"
 import SEO from "../components/seo"
-import tagIcons from "./tags/tag-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 class TagRoute extends React.Component {
   render() {
@@ -51,10 +48,6 @@ class TagRoute extends React.Component {
                 .filter(post => post.node.frontmatter.title.length > 0)
                 .map(({ node: post }, index) => {
                   let ShowCard
-
-                  if (index % 6 === 0) {
-                    ShowCard = <Shuffler />
-                  }
 
                   let card =
                     postType === "portfolio" ? (

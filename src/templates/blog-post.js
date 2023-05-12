@@ -6,7 +6,6 @@ import BlogTitle from "../components/blog/blogTitle"
 import Button from "../components/atoms/button"
 import BlogCard from "../components/blog/blogCard"
 import ShareLinks from "../components/social/shareLinks"
-import Shuffler from "../components/verts/shuffler"
 import NewsletterLink from "../components/blog/NewsletterLink"
 import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
 
@@ -35,7 +34,6 @@ export default function Template(props) {
           className={"post__body " + post.fields.slug}
           dangerouslySetInnerHTML={{ __html: content }}
         ></main>
-        {postContentArray.length - 1 > index ? <Shuffler /> : ""}
       </>
     )
   })
@@ -83,7 +81,6 @@ export default function Template(props) {
         <Disqus config={disqusConfig} />
       </section>
       <section className="slim black row" style={{ gridGap: "3rem" }}>
-        <Shuffler />
         <section className="post__post-content">
           <nav className="postNavigation">
             <h3>Want More?</h3>
