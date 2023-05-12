@@ -7,7 +7,6 @@ import PageTitle from "../components/pageTitle"
 import BlogCard from "../components/blog/blogCard"
 
 import TopTags from "../components/common/topTags"
-import Shuffler from "../components/verts/shuffler"
 
 const Blog = ({ data, pageContext }) => {
   const { edges: posts } = data.allMarkdownRemark

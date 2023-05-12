@@ -45,7 +45,7 @@ const BigCommerce = ({ data, pageContext }) => {
 
           <h3>BigCommerce</h3>
           <h4>Let me help your clients with their pesky Handlebars and GraphQL issues.</h4>
-          <Link to="/portfolio/tags/bigcommerce">View My BigCommerce Work &raquo;</Link>
+          <Link to="/portfolio/tags/big-commerce">View My BigCommerce Work &raquo;</Link>
         </div>
         <div>
           <h3>WordPress</h3>
