@@ -37,6 +37,7 @@ export default function Template(props) {
       </>
     )
   })
+  console.log({post})
   return (
     <Layout>
       <SEO
@@ -46,8 +47,8 @@ export default function Template(props) {
         description={post.excerpt}
         image={
           post.fields.ogImage
-            ? post.frontmatter.ogImage.childImageSharp.original.src
-            : post.frontmatter.featuredImage.childImageSharp.original.src
+            ? post.frontmatter.ogImage.childImageSharp.gatsbyImageData.images.fallback.src
+            : post.frontmatter.featuredImage.childImageSharp.gatsbyImageData.images.fallback.src
         }
       />
       <BlogTitle post={post} />
@@ -126,22 +127,14 @@ export const pageQuery = graphql`
         featuredImage {
           absolutePath
           childImageSharp {
-            original {
-              
-              src
-              
-            }
+            gatsbyImageData(layout: FULL_WIDTH,  transformOptions: {fit: COVER})
           }
         }
 
         ogImage {
           absolutePath
           childImageSharp {
-            original {
-              
-              src
-              
-            }
+            gatsbyImageData(layout: CONSTRAINED, height: 630, width:1200, transformOptions: {fit: COVER})
           }
         }
       }

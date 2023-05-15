@@ -162,98 +162,83 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   var sortedTopPortfolioTags = {}
   var sortedTopBlogTags = {}
 
-  return graphql(`
-    query Everything($drafts: [Boolean]){
-      blog: allMarkdownRemark(
-        sort: { order: DESC, fields: [fields___weight, fields___date] }
-        filter: {
-          fileAbsolutePath: { glob: "**/content/blog/**/*.md" }
-          fields: { published: { in: $drafts } }
+  return graphql(`query Everything($drafts: [Boolean]) {
+  blog: allMarkdownRemark(
+    sort: [{fields: {weight: DESC}}, {fields: {date: ASC}}]
+    filter: {fileAbsolutePath: {glob: "**/content/blog/**/*.md"}, fields: {published: {in: $drafts}}}
+    limit: 1000
+  ) {
+    edges {
+      node {
+        id
+        excerpt
+        fields {
+          date
+          slug
+          collection
+          published
+          externalLink
+          externalLinkLabel
         }
-        limit: 1000
-      ) {
-        edges {
-          node {
-            id
-            excerpt
-            fields {
-              date
-              slug
-              collection
-              published
-              externalLink
-              externalLinkLabel
-            }
-            frontmatter {
-              title
-              subtitle
-              tags
-              published
-              featuredImage {
-                childImageSharp {
-                  resize(width: 500, height: 500, cropFocus: CENTER) {
-                    src
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-
-      portfolio: allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        filter: {
-          fileAbsolutePath: { glob: "**/content/portfolio/**/*.md" }
-          fields: { published: { eq: true } }
-        }
-        limit: 1000
-      ) {
-        edges {
-          node {
-            fields {
-              slug
-              collection
-              published
-            }
-            frontmatter {
-              color
-              title
-              description
-              tags
-              logo {
-                publicURL
-              }
-            }
-          }
-        }
-      }
-      newsletter: allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        filter: {
-          fileAbsolutePath: { glob: "**/content/blog/**/*.md" }
-          fields: { published: { eq: true }, unlisted: { eq: false } }
-          frontmatter: { tags: { in: "Newsletter" } }
-        }
-        limit: 1000
-      ) {
-        edges {
-          node {
-            fields {
-              slug
-              collection
-              published
-            }
-            frontmatter {
-              title
-              subtitle
-              tags
+        frontmatter {
+          title
+          subtitle
+          tags
+          published
+          featuredImage {
+            childImageSharp {
+              gatsbyImageData(layout: CONSTRAINED, height: 350, transformOptions: {fit: COVER})
             }
           }
         }
       }
     }
-  `, {drafts: NODE_ENV === "development" ? [true, false] : [true]}).then(async result => {
+  }
+  portfolio: allMarkdownRemark(
+    sort: {frontmatter: {date: DESC}}
+    filter: {fileAbsolutePath: {glob: "**/content/portfolio/**/*.md"}, fields: {published: {eq: true}}}
+    limit: 1000
+  ) {
+    edges {
+      node {
+        fields {
+          slug
+          collection
+          published
+        }
+        frontmatter {
+          color
+          title
+          description
+          tags
+          logo {
+            publicURL
+          }
+        }
+      }
+    }
+  }
+  newsletter: allMarkdownRemark(
+    sort: {frontmatter: {date: DESC}}
+    filter: {fileAbsolutePath: {glob: "**/content/blog/**/*.md"}, fields: {published: {eq: true}, unlisted: {eq: false}}, frontmatter: {tags: {in: "Newsletter"}}}
+    limit: 1000
+  ) {
+    edges {
+      node {
+        fields {
+          slug
+          collection
+          published
+        }
+        frontmatter {
+          title
+          subtitle
+          tags
+        }
+      }
+    }
+  }
+}`, {drafts: NODE_ENV === "development" ? [true, false] : [true]}).then(async result => {
     if (result.errors) {
       reporter.panicOnBuild(
         `Error while running GraphQL query.` + result.errors
@@ -540,7 +525,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         subscriberCount: subscriberCount,
       },
     })
-  })
+  });
 }
 
 async function getSubscriberCount(convertkit_secret, convertkit_key) {

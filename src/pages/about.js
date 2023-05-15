@@ -12,14 +12,10 @@ import PhotoRoll from "../components/PhotoRoll"
 import Sara from "../images/sara.jpg"
 import Chief from "../images/chief.jpg"
 import BabyKitty from "../images/baby-kitty.jpg"
-import Returns from "../images/Shoolu-Returns-Portal-exchange.png"
-import Shoolu from "../images/shoolu.png"
-import ShooluSocial from "../images/Shoolu-social.jpg"
 import Drips from "../components/atoms/drips"
 import FreelanceCountdown from "../components/freelanceCountdown"
 
-const About = ({ data }) => {
-  const { photos } = data.photoRoll.frontmatter
+const About = () => {
 
   return (
     <Layout>
@@ -126,27 +122,3 @@ const About = ({ data }) => {
 }
 
 export default About
-
-export const pageQuery = graphql`
-  query AboutPageQuery {
-    photoRoll: markdownRemark(frontmatter: { title: { eq: "Photo Roll" } }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-        photos {
-          photo {
-            childImageSharp {
-              fluid(maxWidth: 1200) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          link
-          tag
-        }
-      }
-    }
-  }
-`
