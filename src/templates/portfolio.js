@@ -45,38 +45,31 @@ const Blog = ({ data, pageContext }) => {
 }
 export default Blog
 
-export const pageQuery = graphql`
-  query AllBlogsQuery {
-    allMarkdownRemark(
-      sort: {
-        order: [DESC, DESC]
-        fields: [fields___weight, frontmatter___date]
-      }
-      filter: {
-        fields: { published: { eq: true },  unlisted: { eq: false },  collection: { eq: "portfolio" } }
-      }
-    ) {
-      edges {
-        node {
-          excerpt(pruneLength: 250)
-          id
-          frontmatter {
-            title
-            description
-            color
-            date(formatString: "MMMM DD, YYYY")
-            tags
-            logo {
-              extension
-              publicURL
-            }
+export const pageQuery = graphql`query AllBlogsQuery {
+  allMarkdownRemark(
+    sort: [{fields: {weight: DESC}}, {frontmatter: {date: DESC}}]
+    filter: {fields: {published: {eq: true}, unlisted: {eq: false}, collection: {eq: "portfolio"}}}
+  ) {
+    edges {
+      node {
+        excerpt(pruneLength: 250)
+        id
+        frontmatter {
+          title
+          description
+          color
+          date(formatString: "MMMM DD, YYYY")
+          tags
+          logo {
+            extension
+            publicURL
           }
-          fields {
-            slug
-            collection
-          }
+        }
+        fields {
+          slug
+          collection
         }
       }
     }
   }
-`
+}`

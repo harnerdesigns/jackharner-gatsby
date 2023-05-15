@@ -5,6 +5,7 @@ import PageTitle from "../../components/pageTitle"
 import SEO from "../../components/seo"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import tagIcons from "./tag-icons"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const _ = require("lodash")
 
@@ -48,10 +49,9 @@ class TagRoute extends React.Component {
                           return (
                             <div>
 
-                              <img
-                                src={
-                                  post.frontmatter.featuredImage.childImageSharp
-                                    .resize.src
+                              <GatsbyImage
+                                image={
+                                  post.frontmatter.featuredImage.childImageSharp.gatsbyImageData
                                 }
                                 alt={
                                   post.frontmatter.title +
@@ -83,46 +83,36 @@ class TagRoute extends React.Component {
 
 export default TagRoute
 
-export const tagPageQuery = graphql`
-  query TagsPage {
-    site {
-      siteMetadata {
-        title
-      }
+export const tagPageQuery = graphql`query TagsPage {
+  site {
+    siteMetadata {
+      title
     }
-    allMarkdownRemark(
-      limit: 1000
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: {
-        fields: {
-          published: { eq: true }
-          unlisted: { eq: false }
-          collection: { eq: "blog" }
-        }
-      }
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            tags
-            title
-            subtitle
-            featuredImage {
-              childImageSharp {
-                resize(width: 150, height: 150, cropFocus: CENTER) {
-                  src
-                }
-              }
+  }
+  allMarkdownRemark(
+    limit: 1000
+    sort: {frontmatter: {date: DESC}}
+    filter: {fields: {published: {eq: true}, unlisted: {eq: false}, collection: {eq: "blog"}}}
+  ) {
+    totalCount
+    edges {
+      node {
+        id
+        frontmatter {
+          tags
+          title
+          subtitle
+          featuredImage {
+            childImageSharp {
+              gatsbyImageData(layout: CONSTRAINED, width: 100, height: 100, transformOptions: {fit: COVER})
             }
           }
-          fields {
-            published
-            unlisted
-          }
+        }
+        fields {
+          published
+          unlisted
         }
       }
     }
   }
-`
+}`

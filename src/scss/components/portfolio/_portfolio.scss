@@ -172,11 +172,11 @@
   }
 }
 
-.project__unlisted{
-width: 100%;
-background: #000;
-color: #fff;
-text-align: center;
+.project__unlisted {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  text-align: center;
 }
 
 .project__body {
@@ -215,60 +215,8 @@ text-align: center;
     justify-content: center;
 
     flex-direction: column;
-
-    .img__screen {
-
-      margin-bottom: 4rem;
-
-      &.wide {
-
-        &:after {
-          content: '';
-          height: 7vh;
-          display: block;
-          background: url('../images/computer-stand.svg') center top / contain no-repeat;
-        }
-
-        .img__wrapper {
-          display: block;
-          max-height: 45vmin;
-          overflow-y: scroll;
-          border-radius: calc(var(--border-radius) * 3);
-          border: 10px solid #686868;
-          @include card(1);
-        }
-      }
-
-      &.narrow {
-        width: 45%;
-        margin: 0 auto 4rem;
-        position: relative;
-
-        .img__wrapper {
-          max-height: 65vmin;
-          overflow-y: scroll;
-          border-radius: calc(var(--border-radius) * 3);
-          border: 10px solid #686868;
-          border-bottom: 30px solid #686868;
-        }
-
-        &:after {
-          content: "";
-          width: 25%;
-          height: 5px;
-          border-radius: 5px;
-          border: 2px solid #333;
-          position: absolute;
-          display: block;
-          bottom: 7px;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
-      }
-
-    }
-
-
+    gap: 2rem;
+    padding: 2rem 0;
 
     img {
       width: 100%;
@@ -317,13 +265,13 @@ text-align: center;
       li {
         line-height: 2;
 
-        &>p {
+        & > p {
           margin-bottom: 0;
           line-height: 2;
         }
       }
 
-      li>ul {
+      li > ul {
         margin: 0;
 
         li {
@@ -343,7 +291,7 @@ text-align: center;
           margin: 0;
         }
 
-        &>ol {
+        & > ol {
           margin: 0.5em 1em 0.5em 3em;
         }
       }

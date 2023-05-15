@@ -77,8 +77,9 @@ module.exports = {
         trackingId: "UA-65838121-9",
       },
     },
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
@@ -182,35 +183,38 @@ module.exports = {
               })
             },
             query: `{
-              allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {fileAbsolutePath: {glob: "**/content/blog/**/*.md"}, frontmatter: {published: {eq: true}}}, limit: 1000) {
-                edges {
-                  node {
-                    excerpt(pruneLength: 250)
-                    id
-                    html
-                    frontmatter {
-                      title
-                      subtitle
-                      date(formatString: "MMMM DD, YYYY")
-                      featuredImage {
-                        childImageSharp {
-                          resize(width: 500, height: 500, cropFocus: CENTER) {
-                            src
-                          }
-                        }
-                      }
-                    }
-                    fields {
-                      slug
-                      collection
-                      externalLink
-                      published
-                    }
-                  }
-                }
+  allMarkdownRemark(
+    sort: {frontmatter: {date: DESC}}
+    filter: {fileAbsolutePath: {glob: "**/content/blog/**/*.md"}, frontmatter: {published: {eq: true}}}
+    limit: 1000
+  ) {
+    edges {
+      node {
+        excerpt(pruneLength: 250)
+        id
+        html
+        frontmatter {
+          title
+          subtitle
+          date(formatString: "MMMM DD, YYYY")
+          featuredImage {
+            childImageSharp {
+              resize(width: 500, height: 500, cropFocus: CENTER) {
+                src
               }
             }
-            `,
+          }
+        }
+        fields {
+          slug
+          collection
+          externalLink
+          published
+        }
+      }
+    }
+  }
+}`,
           },
         ],
       },

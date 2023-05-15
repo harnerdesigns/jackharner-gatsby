@@ -47,7 +47,6 @@ class TagRoute extends React.Component {
               {posts
                 .filter(post => post.node.frontmatter.title.length > 0)
                 .map(({ node: post }, index) => {
-                  let ShowCard
 
                   let card =
                     postType === "portfolio" ? (
@@ -57,9 +56,7 @@ class TagRoute extends React.Component {
                         <BlogCard
                           post={post}
                           index={index}
-                          large={(index + 1) % 5 === 0 || index === 0}
                         />
-                        {ShowCard}
                       </>
                     )
 
@@ -75,64 +72,50 @@ class TagRoute extends React.Component {
 
 export default TagRoute
 
-export const tagPageQuery = graphql`
-  query SingleTagPage($tag: String, $postType: String) {
-    site {
-      siteMetadata {
-        title
-      }
+export const tagPageQuery = graphql`query SingleTagPage($tag: String, $postType: String) {
+  site {
+    siteMetadata {
+      title
     }
-    allMarkdownRemark(
-      limit: 1000
-      sort: {
-        order: [DESC, DESC]
-        fields: [fields___weight, fields___date]
-      }
-      filter: {
-        frontmatter: { tags: { in: [$tag] } }
-        fields: {
-          published: { eq: true }
-          unlisted: { ne: true }
-          collection: { eq: $postType }
+  }
+  allMarkdownRemark(
+    limit: 1000
+    sort: [{fields: {weight: DESC}}, {fields: {date: DESC}}]
+    filter: {frontmatter: {tags: {in: [$tag]}}, fields: {published: {eq: true}, unlisted: {ne: true}, collection: {eq: $postType}}}
+  ) {
+    totalCount
+    edges {
+      node {
+        excerpt(pruneLength: 250)
+        id
+        frontmatter {
+          title
+          subtitle
+          date(formatString: "MMMM DD, YYYY")
+          updated(formatString: "MMMM DD, YYYY")
+          published
+          description
+          featuredImage {
+            childImageSharp {
+              gatsbyImageData(layout: CONSTRAINED, height: 350, transformOptions: {fit: COVER})
+            }
+          }
+          logo {
+            publicURL
+          }
+          tags
+          color
         }
-      }
-    ) {
-      totalCount
-      edges {
-        node {
-          excerpt(pruneLength: 250)
-          id
-          frontmatter {
-            title
-            subtitle
-            date(formatString: "MMMM DD, YYYY")
-            updated(formatString: "MMMM DD, YYYY")
-            published
-            description
-            featuredImage {
-              childImageSharp {
-                resize(width: 500, height: 500, cropFocus: CENTER) {
-                  src
-                }
-              }
-            }
-            logo {
-              publicURL
-            }
-            tags
-            color
-          }
-          fields {
-            slug
-            collection
-            externalLink
-            published
-            unlisted
-            weight
-            date(formatString: "MMMM DD, YYYY")
-          }
+        fields {
+          slug
+          collection
+          externalLink
+          published
+          unlisted
+          weight
+          date(formatString: "MMMM DD, YYYY")
         }
       }
     }
   }
-`
+}`

@@ -7,6 +7,7 @@ import tagIcons from "../../templates/tags/tag-icons"
 
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const ProjectCard = ({ post, index, small, nolink }) => {
   return (
@@ -27,11 +28,15 @@ const ProjectCard = ({ post, index, small, nolink }) => {
 
         
         <div className="logo__wrapper">
-        {post.frontmatter.logo && <img
-            src={post.frontmatter.logo.publicURL}
+        {post.frontmatter.logo.childImageSharp ? <GatsbyImage
+            image={post.frontmatter.logo.childImageSharp.gatsbyImageData}
             className="logo"
             alt={post.frontmatter.title}
-          />}
+          /> : <img
+          src={post.frontmatter.logo.publicURL}
+          className="logo"
+          alt={post.frontmatter.title}
+        />}
           {!post.frontmatter.logo && <h2 className="project__title">{post.frontmatter.title}</h2>}
         </div>
 

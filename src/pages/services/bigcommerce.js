@@ -74,22 +74,11 @@ const BigCommerce = ({ data, pageContext }) => {
 
 export default BigCommerce
 
-export const pageQuery = graphql`
-query BigCommercePagQuery {
+export const pageQuery = graphql`query BigCommercePagQuery {
   projects: allMarkdownRemark(
     limit: 5
-    sort: {
-      order: [DESC, DESC]
-      fields: [fields___weight, fields___date]
-    }
-    filter: {
-      frontmatter: { tags: { in: ["BigCommerce"] } }
-      fields: {
-        published: { eq: true }
-        unlisted: { ne: true }
-        collection: { eq: "portfolio" }
-      }
-    }
+    sort: [{fields: {weight: DESC}}, {fields: {date: DESC}}]
+    filter: {frontmatter: {tags: {in: ["BigCommerce"]}}, fields: {published: {eq: true}, unlisted: {ne: true}, collection: {eq: "portfolio"}}}
   ) {
     totalCount
     edges {
@@ -105,9 +94,7 @@ query BigCommercePagQuery {
           description
           featuredImage {
             childImageSharp {
-              resize(width: 500, height: 500, cropFocus: CENTER) {
-                src
-              }
+              gatsbyImageData(layout: CONSTRAINED, height: 350, transformOptions: {fit: COVER})
             }
           }
           logo {
@@ -128,7 +115,7 @@ query BigCommercePagQuery {
       }
     }
   }
-  testimonies: markdownRemark(frontmatter: { title: { eq: "Testimonies" } }) {
+  testimonies: markdownRemark(frontmatter: {title: {eq: "Testimonies"}}) {
     fields {
       slug
     }
@@ -143,5 +130,4 @@ query BigCommercePagQuery {
       }
     }
   }
-}
-`
+}`

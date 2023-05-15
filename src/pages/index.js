@@ -1,28 +1,24 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
-import ImASlider from "../components/imASlider"
+import Seo from "../components/seo"
 import ProjectCard from "../components/portfolio/projectCard"
 import BlogCard from "../components/blog/blogCard"
 
 import { Link, graphql } from "gatsby"
 import Button from "../components/atoms/button"
-import PhotoRoll from "../components/PhotoRoll"
 import Quotes from "../components/testimonies/quotes"
 import CanvasBG from "../components/canvasBG"
 import FreelanceCountdown from "../components/freelanceCountdown"
 import styled from "styled-components"
 
-import jack from "../images/jack-sm.png"
-import jackXS from "../images/jack-xs.png"
 import { breakpoints } from "../components/breakpoints"
 import Drips from "../components/atoms/drips"
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import { StaticImage } from "gatsby-plugin-image"
+
 
 const IndexPage = ({ data, pageContext }) => {
   const { edges: posts } = data.allMarkdownRemark
-  const { photos } = data.photoRoll.frontmatter
   const { quotes } = data.testimonies.frontmatter
   let blogPosts = posts.filter(post => post.node.fields.collection === "blog")
   let portfolioPosts = posts.filter(
@@ -31,13 +27,13 @@ const IndexPage = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <SEO title="Jack Of All Trades, Master Of Some" titleTemplate={"Jack Harner | Web & E-Commerce Developer"} />
+      <Seo title="Jack Of All Trades, Master Of Some" titleTemplate={"Jack Harner | Web & E-Commerce Developer"} />
       <section className="full white--wavy-5 black intro">
         <IntroGrid style={{ zIndex: 1 }}>
           <Drips color="#fff" wrapperHeight="40%" style={{ zIndex: 2 }} />
           <CanvasBG />
           <ImageWrapper>
-            <LazyLoadImage src={jack} placeholderSrc={jackXS} alt="Jack Harner" loading="lazy" />
+            <StaticImage src="../images/jack-sm.png" placeholder="blurred" alt="Jack Harner" />
           </ImageWrapper>
           <section className="introduction" style={{ zIndex: 2 }}>
             <h1>
@@ -155,85 +151,62 @@ const IndexPage = ({ data, pageContext }) => {
 
 export default IndexPage
 
-export const pageQuery = graphql`
-  query HomePageQuery {
-    allMarkdownRemark(
-      sort: {
-        fields: [fields___weight, frontmatter___date]
-        order: [DESC, DESC]
-      }
-      filter: { fields: { published: { eq: true }, unlisted: { ne: true } } }
-    ) {
-      edges {
-        node {
-          excerpt(pruneLength: 250)
-          id
-          frontmatter {
-            title
-            subtitle
-            description
-            color
-            date(formatString: "MMMM DD, YYYY")
-            updated(formatString: "MMMM DD, YYYY")
-            tags
-            published
-            featuredImage {
-              childImageSharp {
-                resize(width: 500, height: 500, cropFocus: CENTER) {
-                  src
-                }
-              }
-            }
-            logo {
-              extension
-              publicURL
-            }
-          }
-          fields {
-            slug
-            collection
-            externalLink
-            published
-            date(formatString: "MMMM DD, YYYY")
-          }
-        }
-      }
-    }
-    photoRoll: markdownRemark(frontmatter: { title: { eq: "Photo Roll" } }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-        photos {
-          photo {
-            childImageSharp {
-              fluid(maxWidth: 1200) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          link
-          tag
-        }
-      }
-    }
-    testimonies: markdownRemark(frontmatter: { title: { eq: "Testimonies" } }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-        quotes {
-          quote
-          link
-          by
+export const pageQuery = graphql`query HomePageQuery {
+  allMarkdownRemark(
+    sort: [{fields: {weight: DESC}}, {frontmatter: {date: DESC}}]
+    filter: {fields: {published: {eq: true}, unlisted: {ne: true}}}
+  ) {
+    edges {
+      node {
+        excerpt(pruneLength: 250)
+        id
+        frontmatter {
           title
+          subtitle
+          description
+          color
+          date(formatString: "MMMM DD, YYYY")
+          updated(formatString: "MMMM DD, YYYY")
+          tags
+          published
+          featuredImage {
+            childImageSharp {
+              gatsbyImageData(layout: CONSTRAINED, height: 350, transformOptions: {fit: COVER})
+            }
+          }
+          logo {
+            extension
+            publicURL
+            childImageSharp {
+              gatsbyImageData(layout: CONSTRAINED, height: 80, transformOptions: {fit: COVER})
+            }
+          }
+        }
+        fields {
+          slug
+          collection
+          externalLink
+          published
+          date(formatString: "MMMM DD, YYYY")
         }
       }
     }
   }
-`
+  testimonies: markdownRemark(frontmatter: {title: {eq: "Testimonies"}}) {
+    fields {
+      slug
+    }
+    frontmatter {
+      title
+      quotes {
+        quote
+        link
+        by
+        title
+      }
+    }
+  }
+}`
 
 const IntroGrid = styled.section`
   display: grid;

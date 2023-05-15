@@ -80,22 +80,11 @@ const WhyMe = ({ data, pageContext }) => {
 
 export default WhyMe
 
-export const pageQuery = graphql`
-query ShopifyPagQuery {
+export const pageQuery = graphql`query ShopifyPagQuery {
   projects: allMarkdownRemark(
     limit: 5
-    sort: {
-      order: [DESC, DESC]
-      fields: [fields___weight, fields___date]
-    }
-    filter: {
-      frontmatter: { tags: { in: ["Shopify"] } }
-      fields: {
-        published: { eq: true }
-        unlisted: { ne: true }
-        collection: { eq: "portfolio" }
-      }
-    }
+    sort: [{fields: {weight: DESC}}, {fields: {date: DESC}}]
+    filter: {frontmatter: {tags: {in: ["Shopify"]}}, fields: {published: {eq: true}, unlisted: {ne: true}, collection: {eq: "portfolio"}}}
   ) {
     totalCount
     edges {
@@ -111,9 +100,7 @@ query ShopifyPagQuery {
           description
           featuredImage {
             childImageSharp {
-              resize(width: 500, height: 500, cropFocus: CENTER) {
-                src
-              }
+              gatsbyImageData(layout: CONSTRAINED, height: 350, transformOptions: {fit: COVER})
             }
           }
           logo {
@@ -134,7 +121,7 @@ query ShopifyPagQuery {
       }
     }
   }
-  testimonies: markdownRemark(frontmatter: { title: { eq: "Testimonies" } }) {
+  testimonies: markdownRemark(frontmatter: {title: {eq: "Testimonies"}}) {
     fields {
       slug
     }
@@ -149,5 +136,4 @@ query ShopifyPagQuery {
       }
     }
   }
-}
-`
+}`
