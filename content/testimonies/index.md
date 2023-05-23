@@ -31,6 +31,12 @@ quotes:
     link: "https://twitter.com/LoboExplosivo/status/1291787282723282944"
     tags: ["Shopify"]
 
+  - quote: "I’ve worked on various projects with Jack over the years and it’s always been a positive experience for me and my team. Happy to recommend him to others."
+    by: Josey Orr
+    title: Owner @ Easier Golfing
+    link: https://easiergolfing.com/
+    tags: ["Shopify"]
+
   - quote: "With a knack for effective problem-solving, Jack has soundly proven himself as a trusted, reliable web development partner."
     by: Andrew Rosensweig
     title: Project Manager @ Electric Eye

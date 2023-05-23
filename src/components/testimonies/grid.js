@@ -1,5 +1,5 @@
 import React from "react"
-import QuoteCard from "./quote";
+import QuoteCard from "./quote-big";
 
 const Grid = ({ quotes }) => {
 

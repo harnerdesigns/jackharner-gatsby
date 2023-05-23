@@ -25,7 +25,7 @@ $pageWidth: 100%;
 
 @mixin breakpoint($point) {
   @if $point==desktop {
-      @media (min-width: $pageWidth) {
+      @media (min-width: 1280px) {
           @content ;
       }
   }
