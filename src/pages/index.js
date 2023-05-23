@@ -97,7 +97,8 @@ const IndexPage = ({ data, pageContext }) => {
       <section className="half pink black--wavy quotes__wrapper">
         <Drips color="black" slim />
 
-        <h1>A Man Of The People</h1>
+        <h2>A Man Of The People</h2>
+        <h3><Link to="/testimonials">See All My Testimonials</Link></h3>
 
         <Quotes quotes={quotes} />
       </section>

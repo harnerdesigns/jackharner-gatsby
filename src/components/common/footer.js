@@ -73,7 +73,7 @@ const Footer = ({ siteTitle, footerCTA = true }) => (
         </a>
       </section>
       <section className="copyright">
-        &copy; 2020 - 2023 Jack Harner |{" "}
+        &copy; 2015 - 2023 Jack Harner |{" "}
         <a href="https://github.com/harnerdesigns/jackharner-gatsby">
           {" "}
           Built With Gatsby
