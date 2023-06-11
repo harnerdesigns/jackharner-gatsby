@@ -24,21 +24,21 @@ const ProjectCard = ({ post, index, small, nolink }) => {
           (small ? " project__card--small" : "")
         }
       >
-        
 
-        
-        <div className="logo__wrapper">
-        {post.frontmatter.logo.childImageSharp ? <GatsbyImage
+
+
+        {post.frontmatter.logo && <div className="logo__wrapper">
+          {post.frontmatter.logo.childImageSharp ? <GatsbyImage
             image={post.frontmatter.logo.childImageSharp.gatsbyImageData}
             className="logo"
             alt={post.frontmatter.title}
           /> : <img
-          src={post.frontmatter.logo.publicURL}
-          className="logo"
-          alt={post.frontmatter.title}
-        />}
+            src={post.frontmatter.logo.publicURL}
+            className="logo"
+            alt={post.frontmatter.title}
+          />}
           {!post.frontmatter.logo && <h2 className="project__title">{post.frontmatter.title}</h2>}
-        </div>
+        </div>}
 
         <div className="card__titles">
           {/* <h2 className="project__title">{post.frontmatter.title}</h2> */}
@@ -49,12 +49,12 @@ const ProjectCard = ({ post, index, small, nolink }) => {
             </h4>
           )}
         </div>
-        <ul className="project__tags">
-            {post.frontmatter.tags.map((tag, index) => {
-              return index < 3 ? <li title={tag}><FontAwesomeIcon fixedWidth icon={tagIcons[tag]} />
-               <span>{tag}</span></li> : ""
-            })}
-          </ul>
+        {post.frontmatter.tags && <ul className="project__tags">
+          {post.frontmatter.tags.map((tag, index) => {
+            return index < 3 ? <li title={tag}><FontAwesomeIcon fixedWidth icon={tagIcons[tag]} />
+              <span>{tag}</span></li> : ""
+          })}
+        </ul>}
       </article>
     </Link>
   )
