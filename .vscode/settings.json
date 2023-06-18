@@ -1,6 +1,9 @@
 {
-    "editor.fontSize": 14,
-    "editor.rulers": [],
+    "editor.fontSize": 20,
+    "editor.rulers": {},
     "editor.renderLineHighlight": "line",
-    "workbench.colorCustomizations": {}
+    "workbench.colorCustomizations": {
+        "editor.lineHighlightBorder": "#fff"
+    },
+    "editor.lineHeight": 35
 }
