@@ -19,8 +19,8 @@ const About = () => {
 
   return (
     <Layout>
-      <SEO title="About" />
-      <PageTitle>About Me</PageTitle>
+      <SEO title="My Life As A Freelance Developer" />
+      <PageTitle>My Life As A Freelance Developer</PageTitle>
       <section className="half content black">
         <h2>Hi! My Name is Jack.</h2>
         <h3>I'm a Freelance Web Developer based in Denver, CO.</h3>
@@ -74,7 +74,7 @@ const About = () => {
         </p>
       </section>
       <FreelanceCountdown drips={"var(--color)"} />
-    
+
 
       <section className="content full pink">
         <Drips color={"white"} wrapperHeight={"35%"} />
