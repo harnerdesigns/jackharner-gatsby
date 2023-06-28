@@ -78,6 +78,8 @@ const Footer = ({ siteTitle, footerCTA = true }) => (
           {" "}
           Built With Gatsby
         </a>
+        <br />
+        Denver, CO Freelance Web Developer & E-Commerce Consultant
       </section>
     </MenuGrid>
   </footer>
