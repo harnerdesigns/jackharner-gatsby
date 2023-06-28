@@ -114,7 +114,7 @@ const IndexPage = ({ data, pageContext }) => {
         <Drips color="black" slim />
 
         <div className="column" style={{ marginBottom: "10rem" }}>
-          <h1>I Learn In Public.</h1>
+          <h2>I Learn In Public.</h2>
 
           <p>
             I write about <Link to="/blog">Web Development</Link>,{" "}
