@@ -7,7 +7,6 @@ ogImage: ""
 tags: ["Newsletter", "Productivity", "Automation", "Roam Research"]
 externalLink: ""
 published: true
-unlisted: true
 ---
 
 ## SmartBlocks in Roam Research
