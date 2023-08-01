@@ -10,6 +10,7 @@ import quicklinksOG from "../images/quick-links-og.png";
 import { toLower } from "lodash"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { NewsletterForm } from "../components/common/NewsletterForm"
 
 const Links = ({ data }) => {
   return (
