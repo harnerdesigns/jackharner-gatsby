@@ -25,11 +25,8 @@ const Links = ({ data }) => {
           <Link to="/newsletter" className="button button--large">
             Join My Newsletter
           </Link>
-          <a className="button button--large" href="https://livemusicforecast.com">
-            Live Music Forecast
-          </a>
-          <a className="button button--large" href="https://whatsthatphobia.com">
-            What's That Phobia?
+          <a className="button button--large" href="https://houseplanthomie.com" style={{backgroundColor: "#009688"}}>
+            The Houseplant Homie
           </a>
         </LinksGrid>
       </section>
