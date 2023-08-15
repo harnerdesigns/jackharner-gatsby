@@ -5,7 +5,7 @@ module.exports = {
     author: `@jackharner`,
     siteUrl: "https://jackharner.com",
   },
-  trailingSlash: `never`,
+  trailingSlash: `always`,
   plugins: [
     "gatsby-plugin-catch-links",
     `gatsby-plugin-react-helmet`,
