@@ -265,7 +265,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       ]
 
       createPage({
-        path: `${edge.node.fields.slug}`,
+        path: `${edge.node.fields.slug}/`,
         component: path.resolve("./src/templates/blog-post.js"),
         context: {
           slug: edge.node.fields.slug,
@@ -311,7 +311,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
     // Create All Tags Page
     createPage({
-      path: "/blog/tags",
+      path: "/blog/tags/",
       component: path.resolve(`src/templates/tags/blog-tags.js`),
       context: {
         topTags: sortedTopBlogTags,
@@ -319,7 +319,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     })
 
     createPage({
-      path: "/blog",
+      path: "/blog/",
       component: path.resolve(`src/templates/blog.js`),
       context: {
         topTags: sortedTopBlogTags,
@@ -329,7 +329,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     })
     if(NODE_ENV === "development"){
       createPage({
-        path: "/blog/drafts",
+        path: "/blog/drafts/",
         component: path.resolve(`src/templates/blog.js`),
         context: {
           topTags: sortedTopBlogTags,
@@ -341,7 +341,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     // Make tag pages
 
     blogTags.forEach(tag => {
-      const tagPath = (tag === 'WordPress' ? `/blog/tags/wordpress` :  `/blog/tags/${_.kebabCase(tag)}`)
+      const tagPath = (tag === 'WordPress' ? `/blog/tags/wordpress/` :  `/blog/tags/${_.kebabCase(tag)}/`)
 
       createPage({
         path: tagPath,
@@ -375,7 +375,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     //   console.log({wpblog: listedPosts})
 
     //   createPage({
-    //     path: `${edge.node.slug}`,
+    //     path: `${edge.node.slug}/`,
     //     component: path.resolve("./src/templates/blog-post.js"),
     //     context: {
     //       slug: edge.node.slug,
@@ -404,7 +404,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       ]
 
       createPage({
-        path: `${edge.node.fields.slug}`,
+        path: `${edge.node.fields.slug}/`,
         component: path.resolve("./src/templates/project.js"),
         context: {
           slug: edge.node.fields.slug,
@@ -449,7 +449,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
     // Create All Tags Page
     createPage({
-      path: "/portfolio/tags",
+      path: "/portfolio/tags/",
       component: path.resolve(`src/templates/tags/portfolio-tags.js`),
       context: {
         topTags: sortedTopPortfolioTags,
@@ -457,7 +457,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     })
 
     createPage({
-      path: "/portfolio",
+      path: "/portfolio/",
       component: path.resolve(`src/templates/portfolio.js`),
       context: {
         topTags: sortedTopPortfolioTags,
@@ -467,7 +467,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     // Make tag pages
 
     portfolioTags.forEach(tag => {
-      const tagPath = (tag === 'WordPress' ? `/portfolio/tags/wordpress` :  `/portfolio/tags/${_.kebabCase(tag)}`)
+      const tagPath = (tag === 'WordPress' ? `/portfolio/tags/wordpress/` :  `/portfolio/tags/${_.kebabCase(tag)}/`)
       
       createPage({
         path: tagPath,
@@ -491,7 +491,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       ]
 
       createPage({
-        path: `${edge.node.fields.slug}`,
+        path: `${edge.node.fields.slug}/`,
         component: path.resolve("./src/templates/blog-post.js"),
         context: {
           slug: edge.node.fields.slug,
@@ -518,7 +518,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     )
 
     createPage({
-      path: "/newsletter",
+      path: "/newsletter/",
       component: path.resolve(`src/templates/newsletter.js`),
       context: {
         recentEmails: recent3,
