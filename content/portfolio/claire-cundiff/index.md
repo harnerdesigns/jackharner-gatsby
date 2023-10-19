@@ -7,7 +7,7 @@ color: "#22223b"
 tags: ["WordPress", "E-Commerce"]
 images: ["./claire-cundiff-homepage.png", "./claire-cundiff-pdp.png"]
 weight: 0
-published: false
+published: true
 ---
 
 Claire Cundiff is an artist based out of Madrid, NM. She specializes in Encaustone art which uses a combination of very thin sheets of mica, and ink to make stunning pieces that you would never believe are made of rocks.
