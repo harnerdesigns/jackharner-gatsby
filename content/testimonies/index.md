@@ -39,6 +39,7 @@ quotes:
 
   - quote: "With a knack for effective problem-solving, Jack has soundly proven himself as a trusted, reliable web development partner."
     by: Andrew Rosensweig
+    link: https://electriceye.io/
     title: Project Manager @ Electric Eye
     tags: ["Shopify"]
 
