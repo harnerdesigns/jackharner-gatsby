@@ -20,9 +20,6 @@ const Links = ({ data }) => {
       
       <section className="slim black">
         <LinksGrid>
-          <a className="button button--large" href="https://drive.google.com/drive/folders/15plYFeTQh41IAPm6UYbYPyhsim8bV1Ih?usp=share_link">
-            Dixie's Birthday Album
-          </a>
           <Link to="/portfolio" className="button button--large">
             See My Portfolio
           </Link>
@@ -42,6 +39,16 @@ const Links = ({ data }) => {
           className="twitter"
         >
           <FontAwesomeIcon icon={["fab", "twitter"]} />
+          <span className="sr-only">Twitter</span>
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://patreon.com/jackharner"
+          className="patreon"
+        >
+          <FontAwesomeIcon icon={["fab", "patreon"]} />
+          <span className="sr-only">Patreon</span>
         </a>
         <a
           target="_blank"
@@ -50,6 +57,7 @@ const Links = ({ data }) => {
           className="instagram"
         >
           <FontAwesomeIcon icon={["fab", "instagram"]} />
+          <span className="sr-only">Instagram</span>
         </a>
       </section>
     </Layout>

@@ -36,7 +36,7 @@ function isPortfolioNode(node) {
 function randomNum(min, max, currentIndex = null, arrayLength = 4) {
   var n = []
   var i = 0
-  
+
   while (i < arrayLength) {
     var num = Math.floor(Math.random() * max) + min
     if (num !== currentIndex && n.indexOf(num) === -1) {
@@ -238,7 +238,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       }
     }
   }
-}`, {drafts: NODE_ENV === "development" ? [true, false] : [true]}).then(async result => {
+}`, { drafts: NODE_ENV === "development" ? [true, false] : [true] }).then(async result => {
     if (result.errors) {
       reporter.panicOnBuild(
         `Error while running GraphQL query.` + result.errors
@@ -265,7 +265,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       ]
 
       createPage({
-        path: `${edge.node.fields.slug}/`,
+        path: `${edge.node.fields.slug}`,
         component: path.resolve("./src/templates/blog-post.js"),
         context: {
           slug: edge.node.fields.slug,
@@ -285,7 +285,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     // console.log(blogTags)
 
     // Count Tags To Get Top Tags
-    var topBlogTags = blogTags.reduce(function(p, c) {
+    var topBlogTags = blogTags.reduce(function (p, c) {
       p[c] = (p[c] || 0) + 1
       return p
     }, {})
@@ -297,11 +297,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       sortedTopBlogTagsArray.push([tag, topBlogTags[tag]])
     }
 
-    sortedTopBlogTagsArray.sort(function(a, b) {
+    sortedTopBlogTagsArray.sort(function (a, b) {
       return b[1] - a[1]
     })
 
-    sortedTopBlogTagsArray.forEach(function(item) {
+    sortedTopBlogTagsArray.forEach(function (item) {
       sortedTopBlogTags[item[0]] = item[1]
     })
 
@@ -327,7 +327,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
       },
     })
-    if(NODE_ENV === "development"){
+    if (NODE_ENV === "development") {
       createPage({
         path: "/blog/drafts/",
         component: path.resolve(`src/templates/blog.js`),
@@ -341,7 +341,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     // Make tag pages
 
     blogTags.forEach(tag => {
-      const tagPath = (tag === 'WordPress' ? `/blog/tags/wordpress/` :  `/blog/tags/${_.kebabCase(tag)}/`)
+      const tagPath = (tag === 'WordPress' ? `/blog/tags/wordpress/` : `/blog/tags/${_.kebabCase(tag)}/`)
 
       createPage({
         path: tagPath,
@@ -383,7 +383,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     //     },
     //   })
     // })
-    
+
 
     //////////////////////
     // Portfolio Pages //
@@ -404,7 +404,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       ]
 
       createPage({
-        path: `${edge.node.fields.slug}/`,
+        path: `${edge.node.fields.slug}`,
         component: path.resolve("./src/templates/project.js"),
         context: {
           slug: edge.node.fields.slug,
@@ -423,7 +423,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     // console.log(portfolioTags)
 
     // Count Tags To Get Top Tags
-    var topPortfolioTags = portfolioTags.reduce(function(p, c) {
+    var topPortfolioTags = portfolioTags.reduce(function (p, c) {
       p[c] = (p[c] || 0) + 1
       return p
     }, {})
@@ -435,11 +435,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       sortedTopPortfolioTagsArray.push([tag, topPortfolioTags[tag]])
     }
 
-    sortedTopPortfolioTagsArray.sort(function(a, b) {
+    sortedTopPortfolioTagsArray.sort(function (a, b) {
       return b[1] - a[1]
     })
 
-    sortedTopPortfolioTagsArray.forEach(function(item) {
+    sortedTopPortfolioTagsArray.forEach(function (item) {
       sortedTopPortfolioTags[item[0]] = item[1]
     })
 
@@ -467,8 +467,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     // Make tag pages
 
     portfolioTags.forEach(tag => {
-      const tagPath = (tag === 'WordPress' ? `/portfolio/tags/wordpress/` :  `/portfolio/tags/${_.kebabCase(tag)}/`)
-      
+      const tagPath = (tag === 'WordPress' ? `/portfolio/tags/wordpress/` : `/portfolio/tags/${_.kebabCase(tag)}/`)
+
       createPage({
         path: tagPath,
         component: path.resolve(`src/templates/tag.js`),
@@ -531,9 +531,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 async function getSubscriberCount(convertkit_secret, convertkit_key) {
   return fetch(
     "https://api.convertkit.com/v3/subscribers?api_key=" +
-      convertkit_key +
-      "&api_secret=" +
-      convertkit_secret
+    convertkit_key +
+    "&api_secret=" +
+    convertkit_secret
   )
     .then(response => response.json())
     .then(data => {

@@ -9,7 +9,7 @@ tags:
     - E-Commerce
     - Animation
 images: ["v2-mobile-on-desktop.png", "v2-full.png"]
-weight: 9999
+weight: 100
 published: true
 externalLink: https://bottlerocketsauce.com
 externalLinkLabel: Go Buy Some Sauce!!

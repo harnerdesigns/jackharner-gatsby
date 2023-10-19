@@ -48,9 +48,9 @@ const FreelanceCountdown = ({ drips, header, subheader }) => {
 
   return (
     <section>
-      <h1 style={{ textAlign: "center" }}>
+      <h2 style={{ textAlign: "center" }}>
         {header ? header : "I've Been Freelancing Full Time For:"}
-      </h1>
+      </h2>
       <CountdownWrapper>
         {timerComponents.length ? (
           timerComponents

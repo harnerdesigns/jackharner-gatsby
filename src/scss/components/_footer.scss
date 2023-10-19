@@ -15,6 +15,11 @@ footer.main_footer {
 
   .copyright {
     margin: 1rem auto;
+    text-align: center;
+
+    & > span{
+      font-size: 0.8em;
+    }
   }
 }
 
