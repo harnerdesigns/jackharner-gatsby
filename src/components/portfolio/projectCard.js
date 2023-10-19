@@ -36,8 +36,7 @@ const ProjectCard = ({ post, index, small, nolink }) => {
             src={post.frontmatter.logo.publicURL}
             className="logo"
             alt={post.frontmatter.title}
-          />}
-          {!post.frontmatter.logo && <h2 className="project__title">{post.frontmatter.title}</h2>}
+          /> || <h2 className="project__title">{post.frontmatter.title}</h2>}
         </div>}
 
         <div className="card__titles">
