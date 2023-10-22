@@ -19,6 +19,12 @@ quotes:
     link: https://twitter.com/mattlady/status/1487254356353175552
     tags: ["Shopify"]
 
+  - quote: "When I first contacted Jack Harner, I had a decent but very out of date website. I was delighted with Jack's timely responses, his willingness to bandy ideas and options and the elegant designs he then offered in response to our discussions.  I am very pleased with my website, thanks to Jack's hard work and professionalism."
+    by: Claire Cundiff
+    title: Encaustone Artist
+    link: https://clairecundiff.com
+    tags: ['WordPress']
+
   - quote: "Jack is a workhorse. He's talented, reliable, and his code is clean. It's a pleasure to work together, and I would recommend him to anyone."
     by: Mike Weaver
     title: Lead Developer @ Electric Eye
