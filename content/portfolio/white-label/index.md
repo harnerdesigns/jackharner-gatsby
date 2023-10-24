@@ -1,9 +1,9 @@
 ---
 date: 2023-04-28T16:46:33.054Z
-title: "Weizen Young" 
-logo: "./WZ_Logo.svg"
-description: "BigCommerce Development"
-color: "#00C6C1"
+title: "White Labeled BigCommerce Development" 
+logo: "./hello.svg"
+description: "Your Clients. My Code. Our Money."
+color: "#0d52ff"
 tags: ["BigCommerce", "Plug & Play"]
 images: ["./premium-pricing.png", "./side-cart.png"]
 weight: 999
@@ -13,9 +13,9 @@ unlisted: true
 
 ## White Label BigCommerce Development
 
-I've worked with Weizen Young as a contractor for over a year now. In that time I went from being just a backup set of hands doing small bug fixes to one of the main developers working directly with their clients. 
+I've worked with several agencies as a contractor for my entire freelance career. In that time I been everything from just a backup set of hands doing small bug fixes to one of the main developers working directly with clients. 
 
-Some examples of work I've done for their clients include: 
+Some examples of work I've done for clients include: 
 
 * Automating theme deployment and fetching code changes made through the File Editor
 * Working with price lists & customer groups to provide premium pricing on certain products
@@ -24,11 +24,6 @@ Some examples of work I've done for their clients include:
 * Accessibility (A11y) audits & fixes
 * **And so much more!**
 
-## Automating BigCommerce Theme Deployment
-
-It all started when they found my blog post "[BigCommerce Stencil CI/CD with GitHub Actions](/blog/bigcommerce-stencil-ci-cd-with-github-actions/)". They wanted to automate the deployment process for their clients, and decided to enlist my help getting that all set up. With my help, we've improved the GitHub Actions workflow and implemented it for over a dozen clients. 
-
-The deploy workflows allows us to easily track all the code changes through GitHub, update live themes right away, deploy to staging stores for review, update theme titles, and more.
 
 ## Need An Extra Set of Hands for Your Agency?
 

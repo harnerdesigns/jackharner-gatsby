@@ -10,7 +10,6 @@ import Drips from "../components/atoms/drips"
 
 import jack from "../images/jack.png"
 import EE from "../images/logos/EE.svg"
-import WZY from "../images/logos/WZ_Logo.svg"
 import MT from "../images/logos/MT_Script_White.svg"
 import NR from "../images/logos/national-roofing-logo.svg"
 import Shoolu from "../images/logos/shoolu-logo.svg"
@@ -60,7 +59,6 @@ const WhyMe = ({ data, pageContext }) => {
       <section class="full pink">
         <h1>#3 Big Name Companies Trust Me:</h1>
         <div className="client-logo-list">
-          <img src={WZY} />
           <img src={EE} />
           <img src={MT} />
           <img src={NR} />
