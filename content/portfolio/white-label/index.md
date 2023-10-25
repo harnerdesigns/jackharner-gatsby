@@ -13,7 +13,7 @@ unlisted: true
 
 ## White Label BigCommerce Development
 
-I've worked with several agencies as a contractor for my entire freelance career. In that time I been everything from just a backup set of hands doing small bug fixes to one of the main developers working directly with clients. 
+I've worked with several BigCommerce agencies as a contractor for my entire freelance career. In that time I been everything from just a backup set of hands doing small bug fixes to one of the main developers working directly with clients. 
 
 Some examples of work I've done for clients include: 
 
