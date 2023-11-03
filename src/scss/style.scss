@@ -106,7 +106,6 @@ ul {
 
 @import "type";
 
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -123,7 +122,9 @@ ul {
   position: absolute;
   bottom: 1rem;
   font-size: 1em;
-  animation: fadeIn 1s 3s, bounce 7s infinite ease-out;
+  animation:
+    fadeIn 1s 3s,
+    bounce 7s infinite ease-out;
   bottom: 0;
   left: 50%;
   animation-fill-mode: backwards;
@@ -198,7 +199,7 @@ ul {
   }
 
   &.full-width {
-    padding: 0!important;
+    padding: 0 !important;
   }
 
   &.row {
@@ -212,7 +213,7 @@ ul {
       width: 100%;
       align-self: flex-start;
       @include breakpoint(laptop) {
-        position: sticky!important;
+        position: sticky !important;
         top: 25px;
         width: 60%;
         padding: 0.5rem 2rem;
@@ -237,8 +238,9 @@ ul {
       font-size: 1.5rem;
     }
 
-    &--centered{
-      &,*{
+    &--centered {
+      &,
+      * {
         text-align: center;
       }
     }
@@ -297,7 +299,7 @@ ul {
   padding: 2rem;
 }
 
-.no-padding{
+.no-padding {
   @extend .full;
   padding: 0;
   min-height: 0;
@@ -337,7 +339,6 @@ section.black .title__box {
   }
 }
 
-
 .imaslider__title {
   padding: 0 0.25em;
   display: block;
@@ -346,8 +347,19 @@ section.black .title__box {
   font-family: "Roboto Slab";
   font-weight: 900;
   color: var(--color);
-  text-shadow: 1px 0 1px #000, 0 1px 1px #000, 1px 1px 1px #000, 2px 0 1px #000, 0 2px 1px #000, 2px 2px 1px #000,
-    -1px 0 1px #000, 0 -1px 1px #000, -1px -1px 1px #000, -2px 0 1px #000, 0 -2px 1px #000, -2px -2px 1px #000;
+  text-shadow:
+    1px 0 1px #000,
+    0 1px 1px #000,
+    1px 1px 1px #000,
+    2px 0 1px #000,
+    0 2px 1px #000,
+    2px 2px 1px #000,
+    -1px 0 1px #000,
+    0 -1px 1px #000,
+    -1px -1px 1px #000,
+    -2px 0 1px #000,
+    0 -2px 1px #000,
+    -2px -2px 1px #000;
   // line-height: 0.9em;
 }
 
@@ -360,15 +372,17 @@ section.black .title__box {
     padding-bottom: 2rem;
     padding-bottom: 0;
   }
-  @include breakpoint(laptop){
+  @include breakpoint(laptop) {
     min-height: 70vh;
     margin-bottom: 0;
   }
-  
 }
 
 .headroom-wrapper {
-  ~ section.intro, ~ .page-title, ~ .blog-title, ~ .project__header {
+  ~ section.intro,
+  ~ .page-title,
+  ~ .blog-title,
+  ~ .project__header {
     padding-top: calc(125px);
     margin-top: -125px;
     padding-bottom: 5rem;
@@ -378,7 +392,6 @@ section.black .title__box {
       padding-top: 138px;
       padding-bottom: 0;
     }
- 
   }
 }
 
@@ -390,11 +403,19 @@ section.black .title__box {
   align-items: center;
   justify-content: center;
 
-  background: linear-gradient(-50deg, rgba(#fff, 0.4), rgba(#fff, 0.2) 22%, rgba(#fff, 0.1) 40%, rgba(#fff, 0.2) 66%, rgba(#fff, 0.1) 80%, rgba(#fff, 0.4));
-  border-top: 2px solid rgba(#fff,0.2);
-  border-left: 2px solid rgba(#fff,0.2);
-  border-right: 2px solid rgba(#fff,0.4);
-  border-bottom: 2px solid rgba(#fff,0.4);
+  background: linear-gradient(
+    -50deg,
+    rgba(#fff, 0.4),
+    rgba(#fff, 0.2) 22%,
+    rgba(#fff, 0.1) 40%,
+    rgba(#fff, 0.2) 66%,
+    rgba(#fff, 0.1) 80%,
+    rgba(#fff, 0.4)
+  );
+  border-top: 2px solid rgba(#fff, 0.2);
+  border-left: 2px solid rgba(#fff, 0.2);
+  border-right: 2px solid rgba(#fff, 0.4);
+  border-bottom: 2px solid rgba(#fff, 0.4);
   border-radius: var(--border-radius);
   backdrop-filter: blur(5px);
   color: #fff;
@@ -405,16 +426,19 @@ section.black .title__box {
 
   @include breakpoint(laptop) {
     width: 50%;
-  border-radius: calc(var(--border-radius) * 2);
-    padding: 1rem 2rem ;
+    border-radius: calc(var(--border-radius) * 2);
+    padding: 1rem 2rem;
 
-    position: absolute!important; top: 50%; right: 2.5rem;
+    position: absolute !important;
+    top: 50%;
+    right: 2.5rem;
     transform: translateY(-50%);
     // border-radius: var(--border-radius) var(--border-radius) 0 0;
   }
 
   h1,
-  h2, h3 {
+  h2,
+  h3 {
     margin-bottom: 0;
     width: 100%;
     text-align: center;
@@ -433,7 +457,7 @@ section.black .title__box {
   }
 
   h2 {
-    font-weight: 100;
+    font-weight: 300;
     @include breakpoint(laptop) {
       font-size: 2.5rem;
     }
@@ -443,13 +467,13 @@ section.black .title__box {
   }
 
   h3 {
+    font-weight: 100;
     @include breakpoint(laptop) {
       font-size: 1.5rem;
     }
     @include breakpoint(desktop) {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
-
   }
 
   .imASlider {
@@ -459,7 +483,6 @@ section.black .title__box {
 
   .buttons {
     margin-bottom: 0;
-    
   }
 }
 
