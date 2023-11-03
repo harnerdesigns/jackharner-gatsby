@@ -318,3 +318,25 @@ $tabHeight: 7vw;
     opacity: 0.3;
   }
 }
+
+
+.partner-logos{
+
+  padding: 1rem 0;
+
+  gap: 2rem;
+
+  @include breakpoint(laptop) {
+    gap: 10rem;
+    padding: 1rem 5rem;
+  }
+
+  div.grid{
+    align-items: center;
+    justify-content: center;
+
+    img{
+      width: 100%;
+    }
+  }
+}

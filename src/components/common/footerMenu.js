@@ -13,7 +13,7 @@ const FooterMenu = (props) => {
     return (<>
         <nav className={"footer-nav"}>
 
-            <FooterSubMenu title="Services" links={[{ link: "/services/shopify", text: "Shopify", icon: ['fab', 'shopify'] }, { link: "/services/bigcommerce", text: "BigCommerce", icon: "shopping-cart" }]} />
+            <FooterSubMenu title="Services" links={[{ link: "/services/shopify", text: "Shopify", icon: ['fab', 'shopify'] }, { link: "/services/bigcommerce", text: "BigCommerce", icon: "shopping-cart" }, { link: "/services/wordpress", text: "WordPress", icon: ["fa-brands", "wordpress"] }, { link: "/services/ghost-coding", text: "Ghost Coding", icon: "fa-ghost" }]} />
 
             <FooterSubMenu title="Projects" links={[{ link: "/portfolio/", text: "All Projects", extraSettings: { partiallyActive: false } }, { link: "/portfolio/tags/e-commerce/", text: "E-Commerce", icon: 'shopping-cart' }, { link: "/portfolio/tags/wordpress/", text: "WordPress", icon: ['fab', "wordpress"] }, { link: "/portfolio/tags/shopify/", text: "Shopify", icon: ['fab', "shopify"] }]} />
 
