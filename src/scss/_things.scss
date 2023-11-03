@@ -295,3 +295,26 @@ $tabHeight: 7vw;
     grid-column: 1 / -1;
   }
 }
+
+
+.ghost-image.bounce{
+  position: relative;
+  animation: ghostBounce 2s infinite alternate, ghostFade 3s infinite alternate;
+}
+
+@keyframes ghostBounce {
+0% {
+    top: 1rem
+  }
+  100% {
+    top: -1rem;
+  }
+}
+@keyframes ghostFade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.3;
+  }
+}

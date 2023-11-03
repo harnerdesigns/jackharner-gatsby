@@ -45,7 +45,7 @@ import {
   faBezierCurve,
   faMoneyBill,
   faShieldAlt,
-  faPlug
+  faPlug, faGhost
 } from "@fortawesome/free-solid-svg-icons"
 
 config.autoAddCss = false
@@ -96,4 +96,4 @@ library.add(
   faBezierCurve,
   faMoneyBill,
   faShieldAlt,
-  faPlug)
+  faPlug, faGhost)

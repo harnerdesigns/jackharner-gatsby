@@ -105,7 +105,8 @@ const IndexPage = ({ data, pageContext }) => {
 
 
       <section className="half black">
-        <FreelanceCountdown />
+        <FreelanceCountdown subheader="+ building websites for 10 years before that."
+/>
         <h3 style={{ textAlign: "center" }}>
           Hiring a contract Web Developer? <Link to="/hire-me">Let's Chat &raquo;</Link>
         </h3>
