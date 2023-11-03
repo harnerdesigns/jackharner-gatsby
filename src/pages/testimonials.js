@@ -10,7 +10,6 @@ import Drips from "../components/atoms/drips"
 import ReadyToGo from "../components/ready-to-go"
 
 const Testimonials = ({ data, pageContext }) => {
-  console.log(data.testimonies.frontmatter)
   const { quotes } = data.testimonies.frontmatter
 
   return (

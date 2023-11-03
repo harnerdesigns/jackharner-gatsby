@@ -131,7 +131,6 @@ export default class ColorSwitcher extends Component {
 
   darkenHSL(hsl, amount, format = false) {
     let newL = hsl.l - amount / 100
-    console.log({newL})
     if (format) {
       return "hsl(" + hsl.h + ", " + hsl.s * 100 + "%, " + newL * 100 + "%)"
     } else {
@@ -175,7 +174,6 @@ export default class ColorSwitcher extends Component {
     )
 
     let darkerColor = this.darkenHSL(this.state.selected_color.hsl, 15)
-    console.log({ lighter: this.state.selected_color.hsl, darker: darkerColor })
     document.documentElement.style.setProperty(
       "--darker-text-color",
       this.getTextColor(
@@ -183,10 +181,6 @@ export default class ColorSwitcher extends Component {
         )
         )
         let lighterColor = this.darkenHSL(this.state.selected_color.hsl, 5)
-        console.log({
-          lighter: this.state.selected_color.hsl,
-          darker: lighterColor,
-        })
         document.documentElement.style.setProperty(
           "--lighter-text-color",
           this.getTextColor(

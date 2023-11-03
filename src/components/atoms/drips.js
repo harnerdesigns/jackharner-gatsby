@@ -64,8 +64,6 @@ const Drips = ({ color, slim, wrapperHeight, svgWidth, numberPoints = 15, style 
       points.push({ x: i * (width / pointCount), y: waveHeight })
     }
 
-    console.log({ points })
-
     return points
   }
 

@@ -16,7 +16,6 @@ import Shoolu from "../images/logos/shoolu-logo.svg"
 import ReadyToGo from "../components/ready-to-go"
 
 const WhyMe = ({ data, pageContext }) => {
-  console.log(data.testimonies.frontmatter)
   const { quotes } = data.testimonies.frontmatter
 
   return (
