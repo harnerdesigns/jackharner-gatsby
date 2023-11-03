@@ -29,7 +29,7 @@ const IndexPage = ({ data, pageContext }) => {
   )
 
   return (
-    <Layout>
+    <Layout footerCTA={false}>
       <Seo title="Jack Of All Trades, Master Of Some" titleTemplate={"Jack Harner | Web & E-Commerce Developer"} />
       <section className="full white--wavy-5 black intro">
         <IntroGrid style={{ zIndex: 1 }}>
@@ -59,11 +59,7 @@ const IndexPage = ({ data, pageContext }) => {
       </section> */}
       <section className="half white row">
         <div className="column">
-          <h2>Website Problem Solver</h2>
-          <p>
-            Let me solve all your company's problems with code! (ok, maybe not every problem...) From fixing on-page SEO bugs, to revamping entire websites, I can supercharge your business's online presence with designs SO user friendly, even your grandma will go "Wow! This moving telegram is pretty spiffy".
-          </p>
-          <h2>E-Commerce Consultant</h2>
+        <h2>E-Commerce Consultant</h2>
           <p>
             Whether your company is just getting started selling online, or you're looking to grow your online presence, I can help! I build hyper-custom, "dive into the darkest corners of the platform"-type themes and tools for both <Link to="/services/shopify">Shopify</Link> & <Link to="services/bigcommerce">BigCommerce</Link>.
           </p>
@@ -71,6 +67,11 @@ const IndexPage = ({ data, pageContext }) => {
             <div className="grid"><img src={ShopifyPartner} alt="Shopify Partner" /></div>
             <div className="grid"><img src={BCPartner} alt="BigCommerce Partner" /></div>
           </div>
+          <h2>Professional Problem Solver</h2>
+          <p>
+            Let me solve all your company's problems with code! (ok, maybe not every problem...) From fixing on-page SEO bugs, to revamping entire websites, I can supercharge your business's online presence with designs SO user friendly, even your grandma will go "Wow! This moving telegram is pretty spiffy".
+          </p>
+      
 
           <h2>Let's Get Started</h2>
           <p>
