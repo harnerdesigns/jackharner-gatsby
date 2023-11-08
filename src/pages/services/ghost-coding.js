@@ -9,6 +9,7 @@ import ReadyToGo from "../../components/ready-to-go"
 import bigcommerceLogo from "../../images/logos/bigcommerce.svg"
 import shopifyLogo from "../../images/logos/shopify.svg"
 import wordpressLogo from "../../images/logos/wordpress.svg"
+import reactLogo from "../../images/logos/react.svg"
 import calendarIcon from "../../images/illustrations/calendar.svg"
 import ghost from "../../images/illustrations/ghost.svg"
 
@@ -40,28 +41,36 @@ const GhostCoding = ({ data, pageContext }) => {
           <img src={shopifyLogo} style={{ maxHeight: "25vh", display: "block", margin: "0 auto", filter: "invert(1)" }} />
 
           <h3>Shopify</h3>
-          <h4>My skills and abilities with Shopify Liquid flow like water.</h4>
+          <p>My skills and abilities with Shopify Liquid flow like water.</p>
           <Link to="/portfolio/tags/shopify">View My Shopify Work &raquo;</Link>
         </Link>
         <Link to="/portfolio/tags/big-commerce">
           <img src={bigcommerceLogo} style={{ maxHeight: "25vh", display: "block", margin: "0 auto", filter: "invert(1)" }} />
 
           <h3>BigCommerce</h3>
-          <h4>Let me help your clients with their pesky Stencil, Handlebars, and GraphQL issues.</h4>
+          <p>Let me help your clients with their pesky Stencil, Handlebars, and GraphQL issues.</p>
           <Link to="/portfolio/tags/big-commerce">View My BigCommerce Work &raquo;</Link>
         </Link>
         <Link to="/portfolio/tags/wordpress">
           <img src={wordpressLogo} style={{ maxHeight: "25vh", display: "block", width: "100%", margin: "0 auto", filter: "invert(1)" }} />
 
           <h3>WordPress / WooCommerce</h3>
-          <h4>I grew up on PHP and have no intentions of dropping it now.</h4>
+          <p>I grew up on PHP and have no intentions of dropping it now.</p>
           <Link to="/portfolio/tags/wordpress">View My WordPress Work &raquo;</Link>
+
+        </Link>
+        <Link to="/portfolio/tags/react">
+          <img src={reactLogo} style={{ maxHeight: "25vh", display: "block", width: "100%", margin: "0 auto"}} />
+
+          <h3>React Development</h3>
+          <p>Let me build you the custom frontend UI of your client's dreams.</p>
+          <Link to="/portfolio/tags/react">View My React Projects &raquo;</Link>
 
         </Link>
       </section>
 
       <section className="project-grid slim black grid grid--3">
-        <h2>Recent E-Commerce Projects:</h2>
+        <h2>Recent Web Development Projects:</h2>
         {posts.map(({ node: post }, index) => {
           return <ProjectCard post={post} index={index} />
         })}
@@ -69,7 +78,11 @@ const GhostCoding = ({ data, pageContext }) => {
 
       <section className="pink half content grid grid--2" style={{alignItems: "center", justifyContent: "center"}}>
         <div><img src={calendarIcon} /></div>
-        <h3>I'm more than happy to work under your agency's brand name, communicate directly with your clients, and adapt to your project management processes and timelines.</h3>
+        <div>
+          <h2>Workflow Agnostic.</h2>
+          <p>I'm more than happy to work under your agency's brand name, communicate directly with your clients, and adapt to your project management processes and timelines.</p>
+          <p><em>P.S. I can even help you figure any of those out if you haven't quite locked in your agency's workflows yet.</em></p>
+        </div>
       </section>
 
 
