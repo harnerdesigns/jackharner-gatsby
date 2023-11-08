@@ -50,7 +50,7 @@ const WhyMe = ({ data, pageContext }) => {
         /> */}
         <FreelanceCountdown
           header="#2 I've Been Freelancing Full Time For:"
-          subheader="+ building websites for 10 years before that."
+          subheader="+ building websites for a decade before that."
         />
         <h2>So You Could Say I've Been Doing This For A While.</h2>
       </section>
