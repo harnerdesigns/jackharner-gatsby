@@ -1,11 +1,31 @@
 .service {
     .brand-perks__grid {
+        gap: 2rem;
         div {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: stretch;
             padding: 0 0.5rem;
+        }
+        a {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding: 0 0.5rem;
+
+            img {
+                margin-bottom: auto;
+            }
+            h3 {
+                display: block;
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1.25rem;
+                font-weight: 400;
+            }
         }
     }
 
@@ -16,7 +36,6 @@
         animation: slideBG 8000ms infinite linear;
 
         h2 {
-
             color: #fff;
             font-weight: 900;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
@@ -29,10 +48,8 @@
         &--alt {
             animation: slideBG2 8000ms infinite linear;
             background-blend-mode: invert;
-
         }
     }
-
 
     .wordpress-bg {
         background: var(--color) url("../images/logos/wordpress-bg.png") repeat;
@@ -42,7 +59,6 @@
         box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.5);
 
         h2 {
-
             color: #fff;
             font-weight: 900;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
@@ -52,13 +68,13 @@
             }
         }
 
-        .did-you-know{
+        .did-you-know {
             color: #fff;
             font-weight: 400;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
             text-align: center;
 
-            @include breakpoint(laptop){
+            @include breakpoint(laptop) {
                 font-size: 3rem;
             }
         }
@@ -66,7 +82,6 @@
         &--alt {
             animation: slideBG2 8000ms infinite linear;
             background-blend-mode: invert;
-
         }
 
         .wordpress-logo {
@@ -82,14 +97,13 @@
                 width: 30vw;
                 height: 30vw;
                 margin-top: -17vw;
-
             }
         }
 
         .button {
             width: 90%;
 
-            @include breakpoint(laptop){
+            @include breakpoint(laptop) {
                 width: 30%;
             }
         }
@@ -118,12 +132,33 @@
     &--wordpress {
         --color: #21759b;
     }
-    
-    &--ghost-coding{ 
-        --color: #4A148C;
+
+    &--ghost-coding {
+        --color: #4a148c;
+    }
+
+    &__links {
+        align-items: stretch;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        a {
+            padding: 1rem 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #fff;
+            &.big {
+                font-size: 2rem;
+                @include card(1);
+                background: #fff;
+                color: var(--color);
+                &:hover {
+                    color: var(--darker-color);
+                }
+            }
+        }
     }
 }
-
 
 @keyframes slideBG {
     from {
