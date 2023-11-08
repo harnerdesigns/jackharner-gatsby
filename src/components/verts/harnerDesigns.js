@@ -47,7 +47,6 @@ const HarnerDesigns = () => {
 
   useEffect(() => {
     fetchData("https://harnerdesigns.com/wp-json/wp/v2/product").then(data => {
-      console.log(data)
       shuffle(data).forEach(product => {
         let newProduct = {
           link: product.link,

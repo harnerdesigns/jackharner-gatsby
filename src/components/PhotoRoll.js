@@ -11,7 +11,6 @@ class PhotoRoll extends Component {
     super(props)
 
     this.state = { photos: this.props.photos, open: false }
-    console.log({ photos: this.state.photos })
   }
 
   toggleRoll = () => {

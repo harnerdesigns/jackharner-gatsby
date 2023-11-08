@@ -18,7 +18,6 @@ class TagRoute extends React.Component {
       return tags[a] < tags[b]
     })
 
-    console.log(sortedTags)
 
     return (
       <Layout>

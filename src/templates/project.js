@@ -64,7 +64,6 @@ export default function Template(props) {
           {post.frontmatter.images && post.frontmatter.images.length > 0 ? (
             <section className="project__images">
               {post.frontmatter.images.map((image, index) => {
-                console.log({image})
                 return image ? (
                     <div className={"img__wrapper"}>
                       <GatsbyImage image={image.childImageSharp.gatsbyImageData} alt="" />

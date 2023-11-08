@@ -67,11 +67,9 @@ const Embed = (loading, setLoading, height, setHeight) => {
     <>
       <CalendlyEventListener
         onDateAndTimeSelected={e => {
-          console.log(e)
           setHeight("100vh")
         }}
         onEventScheduled={e => {
-          console.log(e)
           setHeight("75vh")
         }}
         onEventTypeViewed={function noRefCheck() {

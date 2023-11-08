@@ -26,19 +26,7 @@ const About = () => {
         <h3>I'm a Freelance Web Developer based in Denver, CO.</h3>
         <p>
           If you access it through a web browser, I can probably build it. I'm
-          just trying to make cool stuff with my friends, but I've been
-          professionally developing websites for almost 10 years now.{" "}
-        </p>
-        <p>
-          In my free time I enjoy playing Overwatch / Valorant / Minecraft (
-          <a
-            href="https://twitch.tv/jackjackslaps"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Follow Me on Twitch
-          </a>
-          ), playing Disc Golf, & photographing cats.
+          just trying to make cool stuff with my friends, but I've been professionally developing websites for over a decade.{" "}
         </p>
       </section>
       <section className="slim  black">

@@ -18,7 +18,6 @@ export default function Template(props) {
     identifier: post.id,
     title: post.frontmatter.title
   }
-  console.log({disqusConfig})
   const { related, newsletter } = props.pageContext
   let postContent = post.html
   postContent = postContent.replace(
@@ -37,7 +36,6 @@ export default function Template(props) {
       </>
     )
   })
-  console.log({post})
   return (
     <Layout>
       <SEO
