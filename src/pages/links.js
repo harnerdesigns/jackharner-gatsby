@@ -29,6 +29,9 @@ const Links = ({ data }) => {
           <a className="button button--large" href="https://houseplanthomie.com" style={{backgroundColor: "#009688"}}>
             The Houseplant Homie
           </a>
+          <a className="button button--large" href="/Jack-Harner--Renrah-LTD.vcf" target="_blank" rel="noopener noreferrer">
+            Save My Contact Info
+          </a>
         </LinksGrid>
       </section>
       <section className="socials socials--footer">
