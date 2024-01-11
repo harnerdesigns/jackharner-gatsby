@@ -15,13 +15,37 @@ Ghost coding, at it's simplest, is when you do programming work for someone else
 
 I'm **pretty sure** I'm the first person to coin the term "Ghost Coding" in relation to white-label work for other agencies (willing to stand corrected on that, but I can't find any evidence otherwise).
 
+In a few more words, Ghost Coding refers to the practice of doing programming / web development work for someone else, and selling them the rights to pass your work off as their own. The term is based off the term "ghostwriter" which [is defined as](https://en.wikipedia.org/wiki/Ghostwriter) "a person hired to write literary or journalistic works, speeches, or other texts that are putatively credited to another person as the author".
+
+Let's go over some of the Benefits of Ghost Coding as well as some of the downsides, and at the end I'll give you a few tips to help you get started!
+
+## Benefits of Ghost Coding
+
+### No Pesky Sales Process
+
+It's the agency's job to track down and land new clients (and they most likely already have a team dedicated to doing just that). I just end up with a list of tasks that keeps refilling week after week. 
+
+I'd much rather have to swoon a couple of clients than have to constantly chase down my next meal. By locking down 2-3 agencies that each have 10-15+ clients at least, and continuing to provide consistent value day in & day out, you'll never run out of work to do.
+
+### Stabilize The Workload (and in effect the pay)
+
+There's a fairly good chance that your clients won't all have work at the same time (unless it's Oct/Nov and you work in E-commerce 😅). By multiplying your pool of potential work through Ghost Coding, you'll quickly end up with a full queue. If the work is slowing down with one agency, you can most likely reach out to one of the other two, and keep your plate as full as it can be.
+
+### Less Paperwork For The Same Amount Of Programming
+
+By funneling a majority of your work through a couple of agencies, you vastly simplify the amount of admin and task management work you have to do. 
+
+3 big invoices instead of 30+ small ones? I'll take it.
+
+3 meetings a week instead of 3 tiny free spaces on my calendar? Sign me up.
+
 ## Downsides to Ghost Coding
 
 ### The Final Product Ain't Yours
 
-If you look at my portfolio, there's not a whole lot on there, yet lately I've been busier than ever. What gives?
+If you look at [my portfolio](https://jackharner.com/portfolio), there's not a whole lot new on there recently, yet lately I've been busier than ever. What gives?
 
-NDAs are what gives, but that's ok.
+NDAs are what gives, and that's ok.
 
 The agency is giving me money for the privilege to claim my work as their own in the same way that a lot of your favorite Musicians claim other's work as their own. 
 
@@ -33,29 +57,13 @@ But if something happens and just 1 or 2 key relationships get soured *(if any o
 
 The ease of finding the work is nice, but make sure you don't have all your eggs in just some other agency's basket.
 
+### Juggling More Requires More Concentration
+
+
+
 ### Less Diversification
 
 By primarily relying on 2-3 agencies, you increase the likelihood and size of the emergency if you happen to lose just one of those clients. 2-3 agencies is better than just a single job, but having a couple other clients floating around alongside your Ghost Coding clients is probably a pretty good idea.
-
-## Benefits of Ghost Coding
-
-### No Pesky Sales Process
-
-It's the agency's job to track down and land new clients (and they most likely already have a team dedicated to doing just that). I just have a list of tasks that keeps refilling week after week. 
-
-I'd much rather have to swoon a couple of clients than have to constantly chase down my next meal. By locking down 2-3 agencies that each have 10-15+ clients at least, and continuing to provide consistent value day in & day out, you'll never run out of work to do.
-
-### Stabilize The Workload (and in effect the pay)
-
-There's a fairly good chance that your clients won't all have work at the same time (unless it's Oct/Nov and you work in E-commerce 😅). By multiplying your pool of potential work through Ghost Coding, you'll quickly end up with a full queue. If the work is slowing down with one agency, you can most likely reach out to one of the other two, and keep your plate as full as it can be.
-
-### Less Diversification
-
-I'm putting this one in both the Pros & the Cons column for Ghost Coding. By funneling a majority of your work through a couple of agencies, you vastly simplify the amount of admin and task management work you have to do. 
-
-3 big invoices instead of 30+ small ones? I'll take it.
-
-3 meetings a week instead of 3 tiny free spaces on my calendar? Sign me up.
 
 
 ## How To Get Started Ghost Coding
