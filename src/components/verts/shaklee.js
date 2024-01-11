@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const Shaklee = () => {
   const link =
-    "https://meology.shaklee.com/?site=shakleeUS&sponsorId=KQifLHCL3j9XBRP0DWz5aQ%3D%3D&originalSponsorId=KQifLHCL3j9XBRP0DWz5aQ%3D%3D"
+    "https://shaklee.jackharner.com"
   return (
     <Vert
       link={link}
