@@ -19,7 +19,7 @@ In a few more words, Ghost Coding refers to the practice of doing programming / 
 
 Let's go over some of the Benefits of Ghost Coding as well as some of the downsides, and at the end I'll give you a few tips to help you get started!
 
-**[If this sounds like something you need for your development/marketing agency, let's chat!](/hire-me/)**
+_[If this sounds like something you need for your dev or marketing agency, let's chat!](/hire-me/)_
 
 ## Benefits of Ghost Coding
 
@@ -29,7 +29,7 @@ It's the agency's job to track down and land new clients (and they most likely a
 
 I'd much rather have to swoon a couple of clients than have to constantly chase down my next meal. By locking down 2-3 agencies that each have 10-15+ clients at least, and continuing to provide consistent value day in & day out, you'll never run out of work to do.
 
-### Stabilize The Workload (and in effect the pay)
+### Stabilize The Workload (+ The Pay)
 
 There's a fairly good chance that your clients won't all have work at the same time (unless it's Oct/Nov and you work in E-commerce 😅). By multiplying your pool of potential work through Ghost Coding, you'll quickly end up with a full queue. If the work is slowing down with one agency, you can most likely reach out to one of the other two, and keep your plate as full as it can be.
 
@@ -96,4 +96,4 @@ You probably should be a little ways into your freelance career already. The rea
 
 Leave me a comment below or [hit me up on Twitter (@JackHarner)](https://twitter.com/jackharner) if you have any questions!
 
-**[P.s. Let's chat if you want to hire me to Ghost Code for your agency](/hire-me/)**
+_[P.S. Let's chat if you want to hire me to Ghost Code for your agency](/hire-me/)_
