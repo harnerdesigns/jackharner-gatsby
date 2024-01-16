@@ -126,12 +126,12 @@
     }
 
     @include breakpoint(tabletdown) {
-      &:nth-of-type(1n + 5) {
+      &:nth-of-type(1n + 4) {
         display: none;
       }
 
       &:last-of-type {
-        display: flex;
+        display: block;
       }
     }
 
@@ -175,4 +175,12 @@
       @extend .top-tag;
     }
   }
+}
+
+
+.tag__description{
+  color: var(--text-color);
+  max-width: 800px;
+  font-size: 1.5rem;
+  margin: 1rem auto 2rem;
 }

@@ -24,14 +24,14 @@ const Services = () => {
 
       <section className="slim pink content content--centered">
 
-        <div className="grid grid--2 service__links">
-          <Link className="big" to="/services/shopify">Shopify Development</Link>
-          <Link className="big" to="/services/bigcommerce">BigCommerce Theme Development</Link>
-          <Link className="big" to="/services/wordpress">WordPress Theme Development</Link>
-          <Link className="big" to="/services/ghost-coding">Ghost Coding (White Label Web Development)</Link>
+        <div className="grid grid--2 grid--mobile-1 service__links">
+          <Link className="big" to="/services/shopify">Shopify Development &raquo;</Link>
+          <Link className="big" to="/services/bigcommerce">BigCommerce Theme Development &raquo;</Link>
+          <Link className="big" to="/services/wordpress">WordPress Theme Development &raquo;</Link>
+          <Link className="big" to="/services/ghost-coding">Ghost Coding (White Label Web Development) &raquo;</Link>
 
         </div>
-        <div class="grid grid--3 service__links">
+        <div class="grid grid--3 grid--mobile-2 service__links">
           <Link to="">Continuous Integration / Continuous Development (CI/CD)</Link>
           <Link to="">E-Commerce Consulting</Link>
           <Link to="">Website Redesigns</Link>

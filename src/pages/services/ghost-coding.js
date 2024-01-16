@@ -24,7 +24,7 @@ const GhostCoding = ({ data, pageContext }) => {
       <Seo title="Ghost Coding" />
       <PageTitle>Ghost Coding</PageTitle>
 
-      <section className="slim black content content--centered grid grid--2" style={{alignItems: "center", justifyContent: "center"}}>
+      <section className="slim black content content--centered grid grid--2 grid--mobile-1" style={{alignItems: "center", justifyContent: "center"}}>
 
           <div><img src={ghost} className="ghost-image bounce" /></div>
 
@@ -35,7 +35,7 @@ const GhostCoding = ({ data, pageContext }) => {
       </section>
 
 
-      <section className="brand-perks__grid white half content--centered grid grid--4">
+      <section className="brand-perks__grid white half content--centered grid grid--4 grid--mobile-1">
         <div style={{ gridColumn: "1 / -1" }}><h2>White Labeled Web Development Services</h2></div>
         <Link to="/portfolio/tags/shopify">
           <img src={shopifyLogo} style={{ maxHeight: "25vh", display: "block", margin: "0 auto", filter: "invert(1)" }} />
@@ -69,15 +69,15 @@ const GhostCoding = ({ data, pageContext }) => {
         </Link>
       </section>
 
-      <section className="project-grid slim black grid grid--3">
+      <section className="project-grid slim black grid grid--3 grid--mobile-1">
         <h2>Recent Web Development Projects:</h2>
         {posts.map(({ node: post }, index) => {
           return <ProjectCard post={post} index={index} />
         })}
       </section>
 
-      <section className="pink half content grid grid--2" style={{alignItems: "center", justifyContent: "center"}}>
-        <div><img src={calendarIcon} /></div>
+      <section className="pink half content grid grid--2 grid--mobile-1" style={{alignItems: "center", justifyContent: "center"}}>
+        <div style={{width: "100%"}}><img src={calendarIcon} style={{width: "100%"}} /></div>
         <div>
           <h2>Workflow Agnostic.</h2>
           <p>I'm more than happy to work under your agency's brand name, communicate directly with your clients, and adapt to your project management processes and timelines.</p>

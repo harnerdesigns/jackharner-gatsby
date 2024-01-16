@@ -6,7 +6,7 @@
 
   @include breakpoint(laptop) {
     display: grid;
-    grid-gap: 4em;
+    grid-gap: 2rem 4rem;
     align-items: flex-start;
 
     grid-auto-flow: dense;
@@ -365,12 +365,15 @@
   }
 
   h2 {
+    margin-top: 3rem;
     margin-bottom: 0.5em;
     background: var(--color);
     color: var(--text-color);
     padding: 0.25rem 3.5rem;
     font-family: "Roboto";
     text-transform: uppercase;
+    width: 110%;
+    margin-left: -5%;
   }
 
   hr {

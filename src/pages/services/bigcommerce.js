@@ -25,7 +25,7 @@ const BigCommerce = ({ data, pageContext }) => {
 
       <section className="slim content black">
 
-        <div className="grid grid--2" style={{alignItems: "center", justifyContent: "center"}}>
+        <div className="grid grid--2 grid--mobile-1" style={{alignItems: "center", justifyContent: "center"}}>
 
           <img src={bigcommerceLogo} style={{ maxHeight: "25vh", display: "block", margin: "0 auto" }} />
 
@@ -34,7 +34,7 @@ const BigCommerce = ({ data, pageContext }) => {
           </div>
         </div>
       </section>
-      <section className="brand-perks__grid white half content--centered grid grid--2">
+      <section className="brand-perks__grid white half content--centered grid grid--2 grid--mobile-1">
         <div>
           <h2>How I Can Help:</h2>
         </div>
@@ -49,7 +49,7 @@ const BigCommerce = ({ data, pageContext }) => {
           <p>I'll get your store all set up and you selling online right away!</p>
         </div>
       </section>
-      <section className="project-grid slim black grid grid--3">
+      <section className="project-grid slim black grid grid--3 grid--mobile-1">
         <h2><Link to="/portfolio/tags/big-commerce">Recent BigCommerce Projects:</Link></h2>
         {posts.map(({ node: post }, index) => {
           return <ProjectCard post={post} index={index} />

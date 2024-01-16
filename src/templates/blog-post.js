@@ -28,20 +28,18 @@ export default function Template(props) {
 
   let postContentMap = postContentArray.map((content, index) => {
     return (
-      <>
-        <main
-          className={"post__body " + post.fields.slug}
-          dangerouslySetInnerHTML={{ __html: content }}
-        ></main>
-      </>
+      <main
+        key={index}
+        className={"post__body " + post.fields.slug}
+        dangerouslySetInnerHTML={{ __html: content }}
+      ></main>
     )
   })
   return (
     <Layout>
       <SEO
-        title={`${post.frontmatter.title}${
-          post.frontmatter.subtitle ? " | " + post.frontmatter.subtitle : ""
-        }`}
+        title={`${post.frontmatter.title}${post.frontmatter.subtitle ? " | " + post.frontmatter.subtitle : ""
+          }`}
         description={post.excerpt}
         image={
           post.fields.ogImage
@@ -61,9 +59,9 @@ export default function Template(props) {
               post.fields.externalLinkLabel
                 ? post.fields.externalLinkLabel
                 : " <strong>See Full Post</strong> @ " +
-                  post.fields.externalLink.match(
-                    /^https?:\/\/([^/?#]+)(?:[/?#]|$)/i
-                  )[1]
+                post.fields.externalLink.match(
+                  /^https?:\/\/([^/?#]+)(?:[/?#]|$)/i
+                )[1]
             }
             size="large"
             extraStyle={{ width: "80%", zIndex: 2 }}

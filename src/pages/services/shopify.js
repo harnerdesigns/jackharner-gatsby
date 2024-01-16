@@ -40,13 +40,13 @@ const WhyMe = ({ data, pageContext }) => {
         <h2>Shopify Powers Millions of E-Commerce Businesses In 150+ Countries.</h2>
       </section>
 
-      <section className="project-grid half black grid grid--3">
+      <section className="project-grid half black grid grid--3 grid--mobile-1">
         <h2>My Recent Shopify Projects:</h2>
         {posts.map(({ node: post }, index) => {
           return <ProjectCard post={post} index={index} />
         })}
       </section>
-      <section className="brand-perks__grid white half content--centered grid grid--2">
+      <section className="brand-perks__grid white half content--centered grid grid--2 grid--mobile-1">
         <div>
           <h2>How I Can Help:</h2>
         </div>
