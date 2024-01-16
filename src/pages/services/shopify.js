@@ -48,7 +48,7 @@ const WhyMe = ({ data, pageContext }) => {
       </section>
       <section className="brand-perks__grid white half content--centered grid grid--2">
         <div>
-          <h2>How I Can Help:</h2>
+          <h2 style={{fontSize: "6rem", width: "50%", textAlign: "right" }}>How I Can Help:</h2>
         </div>
         <div>
           <h3>Are You Already On Shopify?</h3>
