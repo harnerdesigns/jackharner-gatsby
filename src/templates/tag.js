@@ -6,6 +6,9 @@ import PageTitle from "../components/pageTitle"
 import ProjectCard from "../components/portfolio/projectCard"
 import TopTags from "../components/common/topTags"
 import SEO from "../components/seo"
+import tagDescriptions from "./tags/tag-descriptions"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import tagIcons from "./tags/tag-icons"
 
 class TagRoute extends React.Component {
   render() {
@@ -32,7 +35,8 @@ class TagRoute extends React.Component {
       <Layout>
           <SEO title={`${tag} ${postTypeLabels.plural}`} />
 
-          <PageTitle>{tagHeader}</PageTitle>
+          <PageTitle><FontAwesomeIcon fixedWidth icon={tagIcons[tag]} /> {tagHeader}</PageTitle>
+          {tagDescriptions[tag] && <p className="tag__description">{tagDescriptions[tag]}</p>}
           <section className="slim black">
             <TopTags
               topTags={topTags}

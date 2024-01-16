@@ -42,7 +42,10 @@ const tagIcons = {
   Travel: "paper-plane",
   Illustrator: "bezier-curve",
   "Graphic Design": "palette",
-  "Plug & Play": "plug"
+  "Plug & Play": "plug",
+  "Listicle": "list",
+  Productivity: "tasks",
+  "Roam Research": "brain"
 }
 
 export default tagIcons
