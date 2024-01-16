@@ -7,6 +7,7 @@ import ProjectHeader from "../components/portfolio/projectHeader"
 import Button from "../components/atoms/button"
 import defaultOGImage from "../images/jackHarner-default-OG.jpg"
 import _ from "lodash"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 export default function Template(props) {
   const post = props.data.markdownRemark
@@ -63,13 +64,10 @@ export default function Template(props) {
           {post.frontmatter.images && post.frontmatter.images.length > 0 ? (
             <section className="project__images">
               {post.frontmatter.images.map((image, index) => {
-                console.log(image)
                 return image ? (
-                  <div class={"img__screen" + (image.childImageSharp.original.height > 700 ? " tall " : " short ") + (image.childImageSharp.original.width > 900 ? " wide " : " narrow ")}>
                     <div className={"img__wrapper"}>
-                      <img src={image.childImageSharp.original.src} alt="" />
+                      <GatsbyImage image={image.childImageSharp.gatsbyImageData} alt="" />
                     </div>
-                  </div>
                   
                   ) : (
                     ""
@@ -133,11 +131,7 @@ export const pageQuery = graphql`
         tags
         images {
           childImageSharp {
-            original {
-              src
-              height
-              width
-            }
+            gatsbyImageData(layout: CONSTRAINED, width: 800, transformOptions: {fit: COVER})
           }
         }
         logo {

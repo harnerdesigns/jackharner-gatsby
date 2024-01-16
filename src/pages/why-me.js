@@ -8,22 +8,19 @@ import FreelanceCountdown from "../components/freelanceCountdown"
 import Grid from "../components/testimonies/grid"
 import Drips from "../components/atoms/drips"
 
-import jack from "../images/jack.png"
-import EE from "../images/logos/EE.svg"
-import WZY from "../images/logos/WZ_Logo.svg"
 import MT from "../images/logos/MT_Script_White.svg"
+import BD from "../images/logos/Buck-and-Doe-Logo.svg"
 import NR from "../images/logos/national-roofing-logo.svg"
 import Shoolu from "../images/logos/shoolu-logo.svg"
 import ReadyToGo from "../components/ready-to-go"
 
 const WhyMe = ({ data, pageContext }) => {
-  console.log(data.testimonies.frontmatter)
   const { quotes } = data.testimonies.frontmatter
 
   return (
     <Layout footerCTA={false}>
-      <Seo title="Why Hire Me?" />
-      <PageTitle>Why Hire Me?</PageTitle>
+      <Seo title="Why Hire Jack Harner?" />
+      <PageTitle>Why Hire Jack Harner?</PageTitle>
       <section className="slim black content--centered">
 
         <div>
@@ -52,17 +49,16 @@ const WhyMe = ({ data, pageContext }) => {
         /> */}
         <FreelanceCountdown
           header="#2 I've Been Freelancing Full Time For:"
-          subheader="+ building websites for 10 years before that."
+          subheader="+ building websites for a decade before that."
         />
         <h2>So You Could Say I've Been Doing This For A While.</h2>
       </section>
 
       <section class="full pink">
-        <h1>#3 Big Name Companies Trust Me:</h1>
+        <h1>#3 Big & Small Companies Alike Trust Me:</h1>
         <div className="client-logo-list">
-          <img src={WZY} />
-          <img src={EE} />
           <img src={MT} />
+          <img src={BD} />
           <img src={NR} />
           <img src={Shoolu} />
         </div>

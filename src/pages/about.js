@@ -12,37 +12,21 @@ import PhotoRoll from "../components/PhotoRoll"
 import Sara from "../images/sara.jpg"
 import Chief from "../images/chief.jpg"
 import BabyKitty from "../images/baby-kitty.jpg"
-import Returns from "../images/Shoolu-Returns-Portal-exchange.png"
-import Shoolu from "../images/shoolu.png"
-import ShooluSocial from "../images/Shoolu-social.jpg"
 import Drips from "../components/atoms/drips"
 import FreelanceCountdown from "../components/freelanceCountdown"
 
-const About = ({ data }) => {
-  const { photos } = data.photoRoll.frontmatter
+const About = () => {
 
   return (
     <Layout>
-      <SEO title="About" />
-      <PageTitle>About Me</PageTitle>
+      <SEO title="My Life As A Freelance Developer" />
+      <PageTitle>My Life As A Freelance Developer</PageTitle>
       <section className="half content black">
         <h2>Hi! My Name is Jack.</h2>
         <h3>I'm a Freelance Web Developer based in Denver, CO.</h3>
         <p>
           If you access it through a web browser, I can probably build it. I'm
-          just trying to make cool stuff with my friends, but I've been
-          professionally developing websites for almost 10 years now.{" "}
-        </p>
-        <p>
-          In my free time I enjoy playing Overwatch / Valorant / Minecraft (
-          <a
-            href="https://twitch.tv/jackjackslaps"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Follow Me on Twitch
-          </a>
-          ), playing Disc Golf, & photographing cats.
+          just trying to make cool stuff with my friends, but I've been professionally developing websites for over a decade.{" "}
         </p>
       </section>
       <section className="slim  black">
@@ -78,7 +62,7 @@ const About = ({ data }) => {
         </p>
       </section>
       <FreelanceCountdown drips={"var(--color)"} />
-    
+
 
       <section className="content full pink">
         <Drips color={"white"} wrapperHeight={"35%"} />
@@ -126,27 +110,3 @@ const About = ({ data }) => {
 }
 
 export default About
-
-export const pageQuery = graphql`
-  query AboutPageQuery {
-    photoRoll: markdownRemark(frontmatter: { title: { eq: "Photo Roll" } }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-        photos {
-          photo {
-            childImageSharp {
-              fluid(maxWidth: 1200) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          link
-          tag
-        }
-      }
-    }
-  }
-`

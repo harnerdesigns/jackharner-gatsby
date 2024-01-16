@@ -7,6 +7,7 @@ import tagIcons from "../../templates/tags/tag-icons"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Drips from "../atoms/drips"
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
 
 const BlogCard = ({ post, index, small, large }) => {
   let filterTags, tags
@@ -49,11 +50,9 @@ const BlogCard = ({ post, index, small, large }) => {
     >
       <article className="blog__card">
         <div className="featuredImage__wrapper">
-          <img
-            src={post.frontmatter.featuredImage.childImageSharp.resize.src}
-            className="featuredImage"
-            alt={post.frontmatter.title}
-          />
+          <GatsbyImage image={post.frontmatter.featuredImage.childImageSharp.gatsbyImageData} className="featuredImage"
+            alt={post.frontmatter.title}/>
+          
         </div>
         <div className="card__titles">
           {post.frontmatter.published !== true && (

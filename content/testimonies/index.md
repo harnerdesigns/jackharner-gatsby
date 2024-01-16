@@ -19,6 +19,12 @@ quotes:
     link: https://twitter.com/mattlady/status/1487254356353175552
     tags: ["Shopify"]
 
+  - quote: "When I first contacted Jack Harner, I had a decent but very out of date website. I was delighted with Jack's timely responses, his willingness to bandy ideas and options and the elegant designs he then offered in response to our discussions.  I am very pleased with my website, thanks to Jack's hard work and professionalism."
+    by: Claire Cundiff
+    title: Encaustone Artist
+    link: https://clairecundiff.com
+    tags: ['WordPress']
+
   - quote: "Jack is a workhorse. He's talented, reliable, and his code is clean. It's a pleasure to work together, and I would recommend him to anyone."
     by: Mike Weaver
     title: Lead Developer @ Electric Eye
@@ -31,8 +37,15 @@ quotes:
     link: "https://twitter.com/LoboExplosivo/status/1291787282723282944"
     tags: ["Shopify"]
 
+  - quote: "I’ve worked on various projects with Jack over the years and it’s always been a positive experience for me and my team. Happy to recommend him to others."
+    by: Josey Orr
+    title: Owner @ Easier Golfing
+    link: https://easiergolfing.com/
+    tags: ["Shopify"]
+
   - quote: "With a knack for effective problem-solving, Jack has soundly proven himself as a trusted, reliable web development partner."
     by: Andrew Rosensweig
+    link: https://electriceye.io/
     title: Project Manager @ Electric Eye
     tags: ["Shopify"]
 

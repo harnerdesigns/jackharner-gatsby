@@ -31,7 +31,7 @@ const WordPress = ({ data, pageContext }) => {
         <h2>Need A WordPress Developer?</h2>
 
         <h3 className="did-you-know">I've been building with WordPress for over 10 years!</h3>
-        <Link to="/hire-me" className="button button--large button--white button--arrow-right">Let's Chat</Link>
+        <Link to="/hire-me" className="button button--large button--white">Let's Chat &raquo;</Link>
       </section>
       <section className="slim black">
         <div className="grid-item--full-width">
@@ -47,7 +47,7 @@ const WordPress = ({ data, pageContext }) => {
 
       </section>
 
-      <section className="project-grid slim black grid grid--3">
+      <section className="project-grid slim black grid grid--3 grid--mobile-1">
         <h2><Link to="/portfolio/tags/wordpress">Recent WordPress Projects:</Link></h2>
         {posts.map(({ node: post }, index) => {
           return <ProjectCard post={post} index={index} />
@@ -68,22 +68,11 @@ const WordPress = ({ data, pageContext }) => {
 
 export default WordPress
 
-export const pageQuery = graphql`
-query WordPressPagQuery {
+export const pageQuery = graphql`query WordPressPagQuery {
   projects: allMarkdownRemark(
     limit: 5
-    sort: {
-      order: [DESC, DESC]
-      fields: [fields___weight, fields___date]
-    }
-    filter: {
-      frontmatter: { tags: { in: ["WordPress"] } }
-      fields: {
-        published: { eq: true }
-        unlisted: { ne: true }
-        collection: { eq: "portfolio" }
-      }
-    }
+    sort: [{fields: {weight: DESC}}, {fields: {date: DESC}}]
+    filter: {frontmatter: {tags: {in: ["WordPress"]}}, fields: {published: {eq: true}, unlisted: {ne: true}, collection: {eq: "portfolio"}}}
   ) {
     totalCount
     edges {
@@ -99,9 +88,7 @@ query WordPressPagQuery {
           description
           featuredImage {
             childImageSharp {
-              resize(width: 500, height: 500, cropFocus: CENTER) {
-                src
-              }
+              gatsbyImageData(layout: CONSTRAINED, height: 350, transformOptions: {fit: COVER})
             }
           }
           logo {
@@ -122,7 +109,7 @@ query WordPressPagQuery {
       }
     }
   }
-  testimonies: markdownRemark(frontmatter: { title: { eq: "Testimonies" } }) {
+  testimonies: markdownRemark(frontmatter: {title: {eq: "Testimonies"}}) {
     fields {
       slug
     }
@@ -137,5 +124,4 @@ query WordPressPagQuery {
       }
     }
   }
-}
-`
+}`

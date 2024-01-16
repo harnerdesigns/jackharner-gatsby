@@ -7,7 +7,6 @@ import PageTitle from "../components/pageTitle"
 import BlogCard from "../components/blog/blogCard"
 
 import TopTags from "../components/common/topTags"
-import Shuffler from "../components/verts/shuffler"
 
 const Blog = ({ data, pageContext }) => {
   const { edges: posts } = data.allMarkdownRemark
@@ -51,46 +50,37 @@ const Blog = ({ data, pageContext }) => {
 }
 export default Blog
 
-export const pageQuery = graphql`
-  query IndexQuery($drafts: Boolean) {
-    allMarkdownRemark(
-      sort: {
-        order: [DESC, DESC]
-        fields: [fields___weight, fields___date]
-      }
-      filter: {
-        fields: { published: { ne: $drafts },  unlisted: { eq: false }, collection: { eq: "blog" } }
-      }
-    ) {
-      edges {
-        node {
-          excerpt(pruneLength: 250)
-          id
-          frontmatter {
-            title
-            subtitle
-            date(formatString: "MMMM DD, YYYY")
-            updated(formatString: "MMMM DD, YYYY")
-            tags
-            published
-            featuredImage {
-              childImageSharp {
-                resize(width: 1000, height: 1000, cropFocus: CENTER) {
-                  src
-                }
-              }
+export const pageQuery = graphql`query IndexQuery($drafts: Boolean) {
+  allMarkdownRemark(
+    sort: [{fields: {weight: DESC}}, {fields: {date: DESC}}]
+    filter: {fields: {published: {ne: $drafts}, unlisted: {eq: false}, collection: {eq: "blog"}}}
+  ) {
+    edges {
+      node {
+        excerpt(pruneLength: 250)
+        id
+        frontmatter {
+          title
+          subtitle
+          date(formatString: "MMMM DD, YYYY")
+          updated(formatString: "MMMM DD, YYYY")
+          tags
+          published
+          featuredImage {
+            childImageSharp {
+              gatsbyImageData(layout: CONSTRAINED, height: 350, transformOptions: {fit: COVER})
             }
           }
-          fields {
-            slug
-            collection
-            externalLink
-            published
-            date(formatString: "MMMM DD, YYYY")
-            unlisted
-          }
+        }
+        fields {
+          slug
+          collection
+          externalLink
+          published
+          date(formatString: "MMMM DD, YYYY")
+          unlisted
         }
       }
     }
   }
-`
+}`

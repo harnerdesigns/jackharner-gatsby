@@ -16,7 +16,6 @@ class TagRoute extends React.Component {
       return tags[a] < tags[b]
     })
 
-    console.log(sortedTags)
 
     return (
       <Layout>
@@ -79,47 +78,40 @@ class TagRoute extends React.Component {
 
 export default TagRoute
 
-export const tagPageQuery = graphql`
-  query PortfolioTagsPage {
-    site {
-      siteMetadata {
-        title
-      }
+export const tagPageQuery = graphql`query PortfolioTagsPage {
+  site {
+    siteMetadata {
+      title
     }
-    allMarkdownRemark(
-      limit: 1000
-      sort: {
-        fields: [fields___weight, frontmatter___date]
-        order: [DESC, DESC]
-      }
-      filter: {
-        fields: { published: { eq: true }, collection: { eq: "portfolio" }, unlisted: { ne: true } }
-      }
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            subtitle
-            description
-            color
-            date(formatString: "MMMM DD, YYYY")
-            tags
-            logo {
-              extension
-              publicURL
-            }
+  }
+  allMarkdownRemark(
+    limit: 1000
+    sort: [{fields: {weight: DESC}}, {frontmatter: {date: DESC}}]
+    filter: {fields: {published: {eq: true}, collection: {eq: "portfolio"}, unlisted: {ne: true}}}
+  ) {
+    totalCount
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          subtitle
+          description
+          color
+          date(formatString: "MMMM DD, YYYY")
+          tags
+          logo {
+            extension
+            publicURL
           }
-          fields {
-            slug
-            collection
-            weight
-            unlisted
-          }
+        }
+        fields {
+          slug
+          collection
+          weight
+          unlisted
         }
       }
     }
   }
-`
+}`

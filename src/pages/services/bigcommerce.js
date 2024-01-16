@@ -25,7 +25,7 @@ const BigCommerce = ({ data, pageContext }) => {
 
       <section className="slim content black">
 
-        <div className="grid grid--2" style={{alignItems: "center", justifyContent: "center"}}>
+        <div className="grid grid--2 grid--mobile-1" style={{alignItems: "center", justifyContent: "center"}}>
 
           <img src={bigcommerceLogo} style={{ maxHeight: "25vh", display: "block", margin: "0 auto" }} />
 
@@ -34,13 +34,29 @@ const BigCommerce = ({ data, pageContext }) => {
           </div>
         </div>
       </section>
+      <section className="brand-perks__grid white half content--centered grid grid--2 grid--mobile-1">
+        <div>
+          <h2>How I Can Help:</h2>
+        </div>
+        <div>
+          <h3>Custom Theme Development</h3>
+          <p>I can clean up your existing BigCommerce theme, or whip up one of my delicious, made from scratch, BigCommerce themes.</p>
 
-      <section className="project-grid slim black grid grid--3">
-        <h2>Recent BigCommerce Projects:</h2>
+          <h3>BigCommerce Theme CI/CD Setup</h3>
+          <p>Already building a BigCommerce theme and want an easier deployment process? Let me integrate my BigCommerce Deployment workflow to automate site updates.</p>
+
+          <h3>BigCommerce Store Setup</h3>
+          <p>I'll get your store all set up and you selling online right away!</p>
+        </div>
+      </section>
+      <section className="project-grid slim black grid grid--3 grid--mobile-1">
+        <h2><Link to="/portfolio/tags/big-commerce">Recent BigCommerce Projects:</Link></h2>
         {posts.map(({ node: post }, index) => {
           return <ProjectCard post={post} index={index} />
         })}
       </section>
+
+      
 
       {/* <section className="half shopify-bg shopify-bg--alt">
         <div className="grid-item--full-width">
@@ -58,22 +74,11 @@ const BigCommerce = ({ data, pageContext }) => {
 
 export default BigCommerce
 
-export const pageQuery = graphql`
-query BigCommercePagQuery {
+export const pageQuery = graphql`query BigCommercePagQuery {
   projects: allMarkdownRemark(
     limit: 5
-    sort: {
-      order: [DESC, DESC]
-      fields: [fields___weight, fields___date]
-    }
-    filter: {
-      frontmatter: { tags: { in: ["BigCommerce"] } }
-      fields: {
-        published: { eq: true }
-        unlisted: { ne: true }
-        collection: { eq: "portfolio" }
-      }
-    }
+    sort: [{fields: {weight: DESC}}, {fields: {date: DESC}}]
+    filter: {frontmatter: {tags: {in: ["BigCommerce"]}}, fields: {published: {eq: true}, unlisted: {ne: true}, collection: {eq: "portfolio"}}}
   ) {
     totalCount
     edges {
@@ -89,9 +94,7 @@ query BigCommercePagQuery {
           description
           featuredImage {
             childImageSharp {
-              resize(width: 500, height: 500, cropFocus: CENTER) {
-                src
-              }
+              gatsbyImageData(layout: CONSTRAINED, height: 350, transformOptions: {fit: COVER})
             }
           }
           logo {
@@ -112,7 +115,7 @@ query BigCommercePagQuery {
       }
     }
   }
-  testimonies: markdownRemark(frontmatter: { title: { eq: "Testimonies" } }) {
+  testimonies: markdownRemark(frontmatter: {title: {eq: "Testimonies"}}) {
     fields {
       slug
     }
@@ -127,5 +130,4 @@ query BigCommercePagQuery {
       }
     }
   }
-}
-`
+}`

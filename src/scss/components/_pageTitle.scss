@@ -11,9 +11,20 @@
     margin: 0;
     z-index: 222;
 
-    text-shadow: -1px -1px 0 #000, -2px -2px 0 #000, 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000,
-      4px 4px 0 var(--color), 5px 5px 0 #000, 6px 6px 0 #000, 7px 7px 0 #000, 8px 8px 0 #000, 9px 9px 0 #000,
-      10px 10px 0 #000, 11px 11px 0 #000;
+    text-shadow:
+      -1px -1px 0 #000,
+      -2px -2px 0 #000,
+      1px 1px 0 #000,
+      2px 2px 0 #000,
+      3px 3px 0 #000,
+      4px 4px 0 var(--color),
+      5px 5px 0 #000,
+      6px 6px 0 #000,
+      7px 7px 0 #000,
+      8px 8px 0 #000,
+      9px 9px 0 #000,
+      10px 10px 0 #000,
+      11px 11px 0 #000;
     transition: 300ms;
 
     font-size: 2.5em;
@@ -24,18 +35,28 @@
 
     i,
     svg {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      transform: scale(2);
-      transform-origin: 0 100%;
+      height: 2em !important;
+      width: 2em !important;
+      vertical-align: middle;
+      display: inline-block;
+      background: #000;
+      border: 5px solid var(--darker-color);
+      padding: 0.5rem;
+      border-radius: 2rem;
     }
   }
 
   h2 {
     color: #fff;
-    text-shadow: -1px -1px 1px #000, -2px -2px 1px #000, 1px 1px 1px #000, 2px 2px 1px #000, 1px -1px 1px #000,
-      2px -2px 1px #000, -1px 1px 1px #000, -2px 2px 1px #000;
+    text-shadow:
+      -1px -1px 1px #000,
+      -2px -2px 1px #000,
+      1px 1px 1px #000,
+      2px 2px 1px #000,
+      1px -1px 1px #000,
+      2px -2px 1px #000,
+      -1px 1px 1px #000,
+      -2px 2px 1px #000;
     font-size: 2rem;
 
     @include breakpoint(laptop) {
@@ -67,11 +88,29 @@
     margin-bottom: -7vh;
   }
 
+  .blog-title__bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+  }
+
+  .page-title__content {
+    background: transparentize(#000, 0.5);
+    backdrop-filter: blur(3px);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0;
+  }
+
   h1,
   h2,
   h4 {
-    background: transparentize(#000, 0.5);
-    backdrop-filter: blur(3px);
     margin: 0 auto;
     width: 100%;
     max-width: 100%;
@@ -80,8 +119,6 @@
   }
 
   .post__meta {
-    background: transparentize(#000, 0.5);
-    backdrop-filter: blur(3px);
     margin: 0;
     padding: 0.1em 1em;
 

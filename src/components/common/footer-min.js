@@ -15,11 +15,13 @@ const Footer = ({ siteTitle, footerCTA = true }) => (
 
     <MenuGrid>
       <section className="copyright">
-        &copy; 2020 - 2022 Jack Harner |{" "}
+        &copy; 2015 - 2023 Jack Harner |{" "}
         <a href="https://github.com/harnerdesigns/jackharner-gatsby">
           {" "}
           Built With Gatsby
         </a>
+        <br />
+        Denver, CO Freelance Web Developer & E-Commerce Consultant
       </section>
     </MenuGrid>
   </footer>

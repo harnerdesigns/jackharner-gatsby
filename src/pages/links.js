@@ -10,6 +10,7 @@ import quicklinksOG from "../images/quick-links-og.png";
 import { toLower } from "lodash"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { NewsletterForm } from "../components/common/NewsletterForm"
 
 const Links = ({ data }) => {
   return (
@@ -25,11 +26,11 @@ const Links = ({ data }) => {
           <Link to="/newsletter" className="button button--large">
             Join My Newsletter
           </Link>
-          <a className="button button--large" href="https://livemusicforecast.com">
-            Live Music Forecast
+          <a className="button button--large" href="https://houseplanthomie.com" style={{backgroundColor: "#009688"}}>
+            The Houseplant Homie
           </a>
-          <a className="button button--large" href="https://whatsthatphobia.com">
-            What's That Phobia?
+          <a className="button button--large" href="/Jack-Harner--Renrah-LTD.vcf" target="_blank" rel="noopener noreferrer">
+            Save My Contact Info
           </a>
         </LinksGrid>
       </section>
@@ -41,6 +42,16 @@ const Links = ({ data }) => {
           className="twitter"
         >
           <FontAwesomeIcon icon={["fab", "twitter"]} />
+          <span className="sr-only">Twitter</span>
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://patreon.com/jackharner"
+          className="patreon"
+        >
+          <FontAwesomeIcon icon={["fab", "patreon"]} />
+          <span className="sr-only">Patreon</span>
         </a>
         <a
           target="_blank"
@@ -49,6 +60,7 @@ const Links = ({ data }) => {
           className="instagram"
         >
           <FontAwesomeIcon icon={["fab", "instagram"]} />
+          <span className="sr-only">Instagram</span>
         </a>
       </section>
     </Layout>

@@ -16,9 +16,6 @@ export default class ImageGrid extends Component {
 
     onClick = (index) => {
 
-        console.log(index);
-
-
         if(this.state.activeImage !== index){
 
             this.setState({

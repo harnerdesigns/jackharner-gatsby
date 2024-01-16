@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+FN;CHARSET=UTF-8:Jack Harner
+N;CHARSET=UTF-8:Harner;Jack;;;
+EMAIL;CHARSET=UTF-8;type=WORK,INTERNET:hello@jackharner.com
+TEL;TYPE=WORK,VOICE:(720) 319-7050
+TITLE;CHARSET=UTF-8:Founder
+ORG;CHARSET=UTF-8:Renrah LTD.
+URL;type=WORK;CHARSET=UTF-8:https://renrah.dev
+X-SOCIALPROFILE;TYPE=twitter:https://twitter.com/jackharner
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/jackharner/
+REV:2023-12-02T18:08:09.241Z
+END:VCARD

@@ -22,6 +22,7 @@ const Footer = ({ siteTitle, footerCTA = true }) => (
           className="twitter"
         >
           <FontAwesomeIcon icon={["fab", "twitter"]} />
+          <span className="sr-only">Twitter</span>
         </a>
         <a
           target="_blank"
@@ -30,6 +31,7 @@ const Footer = ({ siteTitle, footerCTA = true }) => (
           className="patreon"
         >
           <FontAwesomeIcon icon={["fab", "patreon"]} />
+          <span className="sr-only">Patreon</span>
         </a>
         <a
           target="_blank"
@@ -38,6 +40,7 @@ const Footer = ({ siteTitle, footerCTA = true }) => (
           className="instagram"
         >
           <FontAwesomeIcon icon={["fab", "instagram"]} />
+          <span className="sr-only">Instagram</span>
         </a>
         <a
           target="_blank"
@@ -46,6 +49,7 @@ const Footer = ({ siteTitle, footerCTA = true }) => (
           className="dribbble"
         >
           <FontAwesomeIcon icon={["fab", "dribbble"]} />
+          <span className="sr-only">dribbble</span>
         </a>
         <a
           target="_blank"
@@ -54,6 +58,7 @@ const Footer = ({ siteTitle, footerCTA = true }) => (
           className="devto"
         >
           <FontAwesomeIcon icon={["fab", "dev"]} />{" "}
+          <span className="sr-only">Dev.to</span>
         </a>
         <a
           target="_blank"
@@ -62,6 +67,7 @@ const Footer = ({ siteTitle, footerCTA = true }) => (
           className="github"
         >
           <FontAwesomeIcon icon={["fab", "github"]} />{" "}
+          <span className="sr-only">GitHub</span>
         </a>
         <a
           target="_blank"
@@ -70,14 +76,17 @@ const Footer = ({ siteTitle, footerCTA = true }) => (
           className="producthunt"
         >
           <FontAwesomeIcon icon={["fab", "product-hunt"]} />
+          <span className="sr-only">Product Hunt</span>
         </a>
       </section>
       <section className="copyright">
-        &copy; 2020 - 2023 Jack Harner |{" "}
+        &copy; 2015 - 2023 Jack Harner |{" "}
         <a href="https://github.com/harnerdesigns/jackharner-gatsby">
           {" "}
           Built With Gatsby
         </a>
+        <br />
+        <span>Denver, CO Freelance Web Developer & E-Commerce Consultant</span>
       </section>
     </MenuGrid>
   </footer>

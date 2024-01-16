@@ -1,10 +1,11 @@
 module.exports = {
-siteMetadata: {
+  siteMetadata: {
     title: `Jack Harner`,
     description: `Jack Harner is a Freelance Web Developer & E-Commerce Consultant based in Denver, Colorado. Shopify, BigCommerce, WordPress Dev & More.`,
     author: `@jackharner`,
     siteUrl: "https://jackharner.com",
   },
+  trailingSlash: `always`,
   plugins: [
     "gatsby-plugin-catch-links",
     `gatsby-plugin-react-helmet`,
@@ -76,8 +77,9 @@ siteMetadata: {
         trackingId: "UA-65838121-9",
       },
     },
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
@@ -181,35 +183,38 @@ siteMetadata: {
               })
             },
             query: `{
-              allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {fileAbsolutePath: {glob: "**/content/blog/**/*.md"}, frontmatter: {published: {eq: true}}}, limit: 1000) {
-                edges {
-                  node {
-                    excerpt(pruneLength: 250)
-                    id
-                    html
-                    frontmatter {
-                      title
-                      subtitle
-                      date(formatString: "MMMM DD, YYYY")
-                      featuredImage {
-                        childImageSharp {
-                          resize(width: 500, height: 500, cropFocus: CENTER) {
-                            src
-                          }
-                        }
-                      }
-                    }
-                    fields {
-                      slug
-                      collection
-                      externalLink
-                      published
-                    }
-                  }
-                }
+  allMarkdownRemark(
+    sort: {frontmatter: {date: DESC}}
+    filter: {fileAbsolutePath: {glob: "**/content/blog/**/*.md"}, frontmatter: {published: {eq: true}}}
+    limit: 1000
+  ) {
+    edges {
+      node {
+        excerpt(pruneLength: 250)
+        id
+        html
+        frontmatter {
+          title
+          subtitle
+          date(formatString: "MMMM DD, YYYY")
+          featuredImage {
+            childImageSharp {
+              resize(width: 500, height: 500, cropFocus: CENTER) {
+                src
               }
             }
-            `,
+          }
+        }
+        fields {
+          slug
+          collection
+          externalLink
+          published
+        }
+      }
+    }
+  }
+}`,
           },
         ],
       },

@@ -4,7 +4,7 @@ import React from "react";
 const ReadyToGo = () => {
 
     return (
-        <section className="ready-to-go__wrapper half white grid grid--2 content--centered">
+        <section className="ready-to-go__wrapper half white grid grid--2 grid--mobile-1 content--centered">
             <div className="ready-to-go__block">
                 <Link to="/hire-me"></Link>
                 <h2>Ready to go?</h2>

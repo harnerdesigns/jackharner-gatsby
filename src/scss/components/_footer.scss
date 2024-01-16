@@ -10,11 +10,15 @@ footer.main_footer {
 
   @include breakpoint(laptop) {
     flex-direction: column;
-    margin-top: 0;
   }
 
   .copyright {
     margin: 1rem auto;
+    text-align: center;
+
+    & > span{
+      font-size: 0.8em;
+    }
   }
 }
 

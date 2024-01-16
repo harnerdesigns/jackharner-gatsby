@@ -31,7 +31,7 @@ const WhyMe = ({ data, pageContext }) => {
           <img src={shopifyLogo} style={{ maxHeight: "25vh", display: "block", margin: "0 auto" }} />
 
           <div>
-            <h2>Custom Shopify Themes Tailored For Your Brand or Small Business</h2>
+            <h2>Custom Shopify Themes Tailored For Your Brand</h2>
           </div>
         </div>
       </section>
@@ -40,13 +40,13 @@ const WhyMe = ({ data, pageContext }) => {
         <h2>Shopify Powers Millions of E-Commerce Businesses In 150+ Countries.</h2>
       </section>
 
-      <section className="project-grid half black grid grid--3">
+      <section className="project-grid half black grid grid--3 grid--mobile-1">
         <h2>My Recent Shopify Projects:</h2>
         {posts.map(({ node: post }, index) => {
           return <ProjectCard post={post} index={index} />
         })}
       </section>
-      <section className="brand-perks__grid white half content--centered grid grid--2">
+      <section className="brand-perks__grid white half content--centered grid grid--2 grid--mobile-1">
         <div>
           <h2 style={{fontSize: "6rem", width: "50%", textAlign: "right" }}>How I Can Help:</h2>
         </div>
@@ -80,22 +80,11 @@ const WhyMe = ({ data, pageContext }) => {
 
 export default WhyMe
 
-export const pageQuery = graphql`
-query ShopifyPagQuery {
+export const pageQuery = graphql`query ShopifyPagQuery {
   projects: allMarkdownRemark(
     limit: 5
-    sort: {
-      order: [DESC, DESC]
-      fields: [fields___weight, fields___date]
-    }
-    filter: {
-      frontmatter: { tags: { in: ["Shopify"] } }
-      fields: {
-        published: { eq: true }
-        unlisted: { ne: true }
-        collection: { eq: "portfolio" }
-      }
-    }
+    sort: [{fields: {weight: DESC}}, {fields: {date: DESC}}]
+    filter: {frontmatter: {tags: {in: ["Shopify"]}}, fields: {published: {eq: true}, unlisted: {ne: true}, collection: {eq: "portfolio"}}}
   ) {
     totalCount
     edges {
@@ -111,9 +100,7 @@ query ShopifyPagQuery {
           description
           featuredImage {
             childImageSharp {
-              resize(width: 500, height: 500, cropFocus: CENTER) {
-                src
-              }
+              gatsbyImageData(layout: CONSTRAINED, height: 350, transformOptions: {fit: COVER})
             }
           }
           logo {
@@ -134,7 +121,7 @@ query ShopifyPagQuery {
       }
     }
   }
-  testimonies: markdownRemark(frontmatter: { title: { eq: "Testimonies" } }) {
+  testimonies: markdownRemark(frontmatter: {title: {eq: "Testimonies"}}) {
     fields {
       slug
     }
@@ -149,5 +136,4 @@ query ShopifyPagQuery {
       }
     }
   }
-}
-`
+}`

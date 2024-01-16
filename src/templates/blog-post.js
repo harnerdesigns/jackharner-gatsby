@@ -6,7 +6,6 @@ import BlogTitle from "../components/blog/blogTitle"
 import Button from "../components/atoms/button"
 import BlogCard from "../components/blog/blogCard"
 import ShareLinks from "../components/social/shareLinks"
-import Shuffler from "../components/verts/shuffler"
 import NewsletterLink from "../components/blog/NewsletterLink"
 import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
 
@@ -19,7 +18,6 @@ export default function Template(props) {
     identifier: post.id,
     title: post.frontmatter.title
   }
-  console.log({disqusConfig})
   const { related, newsletter } = props.pageContext
   let postContent = post.html
   postContent = postContent.replace(
@@ -30,26 +28,23 @@ export default function Template(props) {
 
   let postContentMap = postContentArray.map((content, index) => {
     return (
-      <>
-        <main
-          className={"post__body " + post.fields.slug}
-          dangerouslySetInnerHTML={{ __html: content }}
-        ></main>
-        {postContentArray.length - 1 > index ? <Shuffler /> : ""}
-      </>
+      <main
+        key={index}
+        className={"post__body " + post.fields.slug}
+        dangerouslySetInnerHTML={{ __html: content }}
+      ></main>
     )
   })
   return (
     <Layout>
       <SEO
-        title={`${post.frontmatter.title}${
-          post.frontmatter.subtitle ? " | " + post.frontmatter.subtitle : ""
-        }`}
+        title={`${post.frontmatter.title}${post.frontmatter.subtitle ? " | " + post.frontmatter.subtitle : ""
+          }`}
         description={post.excerpt}
         image={
           post.fields.ogImage
-            ? post.frontmatter.ogImage.childImageSharp.original.src
-            : post.frontmatter.featuredImage.childImageSharp.original.src
+            ? post.frontmatter.ogImage.childImageSharp.gatsbyImageData.images.fallback.src
+            : post.frontmatter.featuredImage.childImageSharp.gatsbyImageData.images.fallback.src
         }
       />
       <BlogTitle post={post} />
@@ -64,9 +59,9 @@ export default function Template(props) {
               post.fields.externalLinkLabel
                 ? post.fields.externalLinkLabel
                 : " <strong>See Full Post</strong> @ " +
-                  post.fields.externalLink.match(
-                    /^https?:\/\/([^/?#]+)(?:[/?#]|$)/i
-                  )[1]
+                post.fields.externalLink.match(
+                  /^https?:\/\/([^/?#]+)(?:[/?#]|$)/i
+                )[1]
             }
             size="large"
             extraStyle={{ width: "80%", zIndex: 2 }}
@@ -83,7 +78,6 @@ export default function Template(props) {
         <Disqus config={disqusConfig} />
       </section>
       <section className="slim black row" style={{ gridGap: "3rem" }}>
-        <Shuffler />
         <section className="post__post-content">
           <nav className="postNavigation">
             <h3>Want More?</h3>
@@ -129,22 +123,14 @@ export const pageQuery = graphql`
         featuredImage {
           absolutePath
           childImageSharp {
-            original {
-              
-              src
-              
-            }
+            gatsbyImageData(layout: FULL_WIDTH,  transformOptions: {fit: COVER})
           }
         }
 
         ogImage {
           absolutePath
           childImageSharp {
-            original {
-              
-              src
-              
-            }
+            gatsbyImageData(layout: CONSTRAINED, height: 630, width:1200, transformOptions: {fit: COVER})
           }
         }
       }

@@ -97,7 +97,6 @@ const CanvasBG = ({ children, footerCTA }) => {
   const canvasClick = e => {
     let cursorX = e.pageX
     let cursorY = e.pageY
-    // console.log(particles)
     setParticles([
       ...particles,
       {
@@ -114,7 +113,6 @@ const CanvasBG = ({ children, footerCTA }) => {
   const canvasHover = e => {
     let cursorX = e.pageX
     let cursorY = e.pageY
-    // console.log(particles)
     if (particles.length < 1) {
       setParticles([
         ...particles,

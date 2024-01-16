@@ -36,7 +36,7 @@ function isPortfolioNode(node) {
 function randomNum(min, max, currentIndex = null, arrayLength = 4) {
   var n = []
   var i = 0
-  
+
   while (i < arrayLength) {
     var num = Math.floor(Math.random() * max) + min
     if (num !== currentIndex && n.indexOf(num) === -1) {
@@ -162,98 +162,83 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   var sortedTopPortfolioTags = {}
   var sortedTopBlogTags = {}
 
-  return graphql(`
-    query Everything($drafts: [Boolean]){
-      blog: allMarkdownRemark(
-        sort: { order: DESC, fields: [fields___weight, fields___date] }
-        filter: {
-          fileAbsolutePath: { glob: "**/content/blog/**/*.md" }
-          fields: { published: { in: $drafts } }
+  return graphql(`query Everything($drafts: [Boolean]) {
+  blog: allMarkdownRemark(
+    sort: [{fields: {weight: DESC}}, {fields: {date: ASC}}]
+    filter: {fileAbsolutePath: {glob: "**/content/blog/**/*.md"}, fields: {published: {in: $drafts}}}
+    limit: 1000
+  ) {
+    edges {
+      node {
+        id
+        excerpt
+        fields {
+          date
+          slug
+          collection
+          published
+          externalLink
+          externalLinkLabel
         }
-        limit: 1000
-      ) {
-        edges {
-          node {
-            id
-            excerpt
-            fields {
-              date
-              slug
-              collection
-              published
-              externalLink
-              externalLinkLabel
-            }
-            frontmatter {
-              title
-              subtitle
-              tags
-              published
-              featuredImage {
-                childImageSharp {
-                  resize(width: 500, height: 500, cropFocus: CENTER) {
-                    src
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-
-      portfolio: allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        filter: {
-          fileAbsolutePath: { glob: "**/content/portfolio/**/*.md" }
-          fields: { published: { eq: true } }
-        }
-        limit: 1000
-      ) {
-        edges {
-          node {
-            fields {
-              slug
-              collection
-              published
-            }
-            frontmatter {
-              color
-              title
-              description
-              tags
-              logo {
-                publicURL
-              }
-            }
-          }
-        }
-      }
-      newsletter: allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        filter: {
-          fileAbsolutePath: { glob: "**/content/blog/**/*.md" }
-          fields: { published: { eq: true }, unlisted: { eq: false } }
-          frontmatter: { tags: { in: "Newsletter" } }
-        }
-        limit: 1000
-      ) {
-        edges {
-          node {
-            fields {
-              slug
-              collection
-              published
-            }
-            frontmatter {
-              title
-              subtitle
-              tags
+        frontmatter {
+          title
+          subtitle
+          tags
+          published
+          featuredImage {
+            childImageSharp {
+              gatsbyImageData(layout: CONSTRAINED, height: 350, transformOptions: {fit: COVER})
             }
           }
         }
       }
     }
-  `, {drafts: NODE_ENV === "development" ? [true, false] : [true]}).then(async result => {
+  }
+  portfolio: allMarkdownRemark(
+    sort: {frontmatter: {date: DESC}}
+    filter: {fileAbsolutePath: {glob: "**/content/portfolio/**/*.md"}, fields: {published: {eq: true}}}
+    limit: 1000
+  ) {
+    edges {
+      node {
+        fields {
+          slug
+          collection
+          published
+        }
+        frontmatter {
+          color
+          title
+          description
+          tags
+          logo {
+            publicURL
+          }
+        }
+      }
+    }
+  }
+  newsletter: allMarkdownRemark(
+    sort: {frontmatter: {date: DESC}}
+    filter: {fileAbsolutePath: {glob: "**/content/blog/**/*.md"}, fields: {published: {eq: true}, unlisted: {eq: false}}, frontmatter: {tags: {in: "Newsletter"}}}
+    limit: 1000
+  ) {
+    edges {
+      node {
+        fields {
+          slug
+          collection
+          published
+        }
+        frontmatter {
+          title
+          subtitle
+          tags
+        }
+      }
+    }
+  }
+}`, { drafts: NODE_ENV === "development" ? [true, false] : [true] }).then(async result => {
     if (result.errors) {
       reporter.panicOnBuild(
         `Error while running GraphQL query.` + result.errors
@@ -300,7 +285,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     // console.log(blogTags)
 
     // Count Tags To Get Top Tags
-    var topBlogTags = blogTags.reduce(function(p, c) {
+    var topBlogTags = blogTags.reduce(function (p, c) {
       p[c] = (p[c] || 0) + 1
       return p
     }, {})
@@ -312,11 +297,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       sortedTopBlogTagsArray.push([tag, topBlogTags[tag]])
     }
 
-    sortedTopBlogTagsArray.sort(function(a, b) {
+    sortedTopBlogTagsArray.sort(function (a, b) {
       return b[1] - a[1]
     })
 
-    sortedTopBlogTagsArray.forEach(function(item) {
+    sortedTopBlogTagsArray.forEach(function (item) {
       sortedTopBlogTags[item[0]] = item[1]
     })
 
@@ -342,9 +327,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
       },
     })
-    if(NODE_ENV === "development"){
+    if (NODE_ENV === "development") {
       createPage({
-        path: "/blog/drafts",
+        path: "/blog/drafts/",
         component: path.resolve(`src/templates/blog.js`),
         context: {
           topTags: sortedTopBlogTags,
@@ -356,7 +341,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     // Make tag pages
 
     blogTags.forEach(tag => {
-      const tagPath = (tag === 'WordPress' ? `/blog/tags/wordpress/` :  `/blog/tags/${_.kebabCase(tag)}/`)
+      const tagPath = (tag === 'WordPress' ? `/blog/tags/wordpress/` : `/blog/tags/${_.kebabCase(tag)}/`)
 
       createPage({
         path: tagPath,
@@ -390,7 +375,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     //   console.log({wpblog: listedPosts})
 
     //   createPage({
-    //     path: `${edge.node.slug}`,
+    //     path: `${edge.node.slug}/`,
     //     component: path.resolve("./src/templates/blog-post.js"),
     //     context: {
     //       slug: edge.node.slug,
@@ -398,7 +383,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     //     },
     //   })
     // })
-    
+
 
     //////////////////////
     // Portfolio Pages //
@@ -438,7 +423,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     // console.log(portfolioTags)
 
     // Count Tags To Get Top Tags
-    var topPortfolioTags = portfolioTags.reduce(function(p, c) {
+    var topPortfolioTags = portfolioTags.reduce(function (p, c) {
       p[c] = (p[c] || 0) + 1
       return p
     }, {})
@@ -450,11 +435,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       sortedTopPortfolioTagsArray.push([tag, topPortfolioTags[tag]])
     }
 
-    sortedTopPortfolioTagsArray.sort(function(a, b) {
+    sortedTopPortfolioTagsArray.sort(function (a, b) {
       return b[1] - a[1]
     })
 
-    sortedTopPortfolioTagsArray.forEach(function(item) {
+    sortedTopPortfolioTagsArray.forEach(function (item) {
       sortedTopPortfolioTags[item[0]] = item[1]
     })
 
@@ -482,8 +467,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     // Make tag pages
 
     portfolioTags.forEach(tag => {
-      const tagPath = (tag === 'WordPress' ? `/portfolio/tags/wordpress/` :  `/portfolio/tags/${_.kebabCase(tag)}/`)
-      
+      const tagPath = (tag === 'WordPress' ? `/portfolio/tags/wordpress/` : `/portfolio/tags/${_.kebabCase(tag)}/`)
+
       createPage({
         path: tagPath,
         component: path.resolve(`src/templates/tag.js`),
@@ -506,7 +491,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       ]
 
       createPage({
-        path: `${edge.node.fields.slug}`,
+        path: `${edge.node.fields.slug}/`,
         component: path.resolve("./src/templates/blog-post.js"),
         context: {
           slug: edge.node.fields.slug,
@@ -540,15 +525,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         subscriberCount: subscriberCount,
       },
     })
-  })
+  });
 }
 
 async function getSubscriberCount(convertkit_secret, convertkit_key) {
   return fetch(
     "https://api.convertkit.com/v3/subscribers?api_key=" +
-      convertkit_key +
-      "&api_secret=" +
-      convertkit_secret
+    convertkit_key +
+    "&api_secret=" +
+    convertkit_secret
   )
     .then(response => response.json())
     .then(data => {
