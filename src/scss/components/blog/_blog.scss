@@ -1,6 +1,6 @@
 .blog-posts {
   margin: 2em auto;
- 
+
   display: flex;
   flex-direction: column;
 
@@ -71,7 +71,7 @@
 
     @include card(-1);
 
-    .gatsby-image-wrapper{
+    .gatsby-image-wrapper {
       width: 100%;
       height: 100%;
     }
@@ -92,7 +92,7 @@
     flex-direction: column;
     width: 100%;
     color: var(--text-color);
-    padding:  1.5rem 1rem;
+    padding: 1.5rem 1rem;
 
     @include breakpoint(laptop) {
       justify-content: flex-start;
@@ -372,8 +372,13 @@
     padding: 0.25rem 3.5rem;
     font-family: "Roboto";
     text-transform: uppercase;
-    width: 110%;
-    margin-left: -5%;
+    width: 100%;
+
+
+    @include breakpoint(laptop) {
+      width: 110%;
+      margin-left: -5%;
+    }
   }
 
   hr {
@@ -401,7 +406,8 @@
     width: auto;
     font-size: 1.5rem;
 
-    &, * {
+    &,
+    * {
       color: #fff;
     }
 
@@ -425,8 +431,8 @@
     list-style: decimal;
 
     li {
-    list-style: decimal;
-    margin-bottom: 0.25em;
+      list-style: decimal;
+      margin-bottom: 0.25em;
       p {
         margin: 0;
       }
@@ -451,11 +457,11 @@
     }
   }
 
-  .gatsby-resp-image-figure{
+  .gatsby-resp-image-figure {
     width: 100%;
-    figcaption{
+    figcaption {
       color: #fff;
-      text-align: center; 
+      text-align: center;
       font-style: italic;
       font-size: 1rem;
     }
@@ -469,16 +475,15 @@
     border: 5px solid #fff;
     overflow: hidden;
 
-    .gatsby-resp-image-background-image{
+    .gatsby-resp-image-background-image {
       max-height: 100%;
     }
-    
+
     @include breakpoint(laptop) {
       width: 75%;
     }
 
-
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: contain;
@@ -560,6 +565,56 @@ nav.postNavigation {
     color: #fff;
     font-weight: 900;
     margin: 0.25em;
+  }
+}
+
+.table-of-contents {
+  width: 100%;
+  max-width: 400px;
+  border: 2px solid var(--color);
+  padding: 1rem;
+  display: inline-block;
+  position: relative;
+  @include breakpoint(laptop) {
+    width: 60%;
+  max-width: 100%;
+
+  }
+  &:after {
+    content: "In This Post";
+    background: var(--color);
+    color: var(--text-color);
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    padding: 0 1rem;
+    font-weight: 900;
+  }
+
+  ul {
+    width: 100%;
+    max-width: 100%;
+    list-style: none;
+    margin: 0;
+  }
+
+  li {
+    margin: 0;
+    a {
+      padding: 1rem 0.5rem;
+      display: block;
+      border-bottom: 1px dashed var(--darker-color);
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        padding-left: 1rem;
+      }
+    }
+    &:last-of-type {
+      a {
+        border-bottom: none;
+      }
+    }
   }
 }
 
