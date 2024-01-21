@@ -1,5 +1,5 @@
 ---
-date: 2022-08-28T01:31:07.167Z
+date: 2024-01-19T01:31:07.167Z
 title: "How to Run GitHub Actions on a Schedule" 
 subtitle: "Using Cron with GitHub Actions"
 featuredImage: "./chuttersnap-mytSmcgVHRE-unsplash.jpg"
@@ -9,7 +9,12 @@ externalLink: ""
 published: true
 ---
 
-If you use GitHub actions to build and deploy (CI/CD) a project, you can schedule those actions to automatically run on a specific time interval using cron. This is sweet if you're building a pseudo-static site with data that doesn't change all the time, but does change often enough to want to automate the build process. I initially implemented cron into my GitHub Actions to build my side project [Live Music Forecast](https://livemusicforecast.com) every 6 hours. 
+If you use GitHub actions to build and deploy (CI/CD) a project, you can schedule those actions to automatically run on a specific time interval using cron. This is sweet if you're building a pseudo-static site with data that doesn't change all the time, but does change often enough to want to automate the build process. 
+
+I initially implemented cron into my GitHub Actions to build my side project [Live Music Forecast](https://livemusicforecast.com) every 6 hours, but have also used this to automate all kinds of different GitHub actions. 
+
+```toc
+```
 
 ## What is Cron?
 
@@ -73,7 +78,7 @@ For the full list of things that can trigger your GitHub Workflows, check out th
 
 GitHub Actions run in UTC time, so you'll need to adjust your cron schedule based on your timezone if you want it to run at a specific time. 
 
-The other thing GitHub mentions is that your cron schedule is when the action will be queued to run. This doesn't mean your action will run at that exact time, depending on server availability. If that slight timing ambiguity is going to cause issues with your workflow, [Contact Me](/contact) for a free consultation call to look at other alternatives.
+The other thing GitHub mentions is that your cron schedule is when the action will be queued to run. This doesn't mean your action will run at that exact time, depending on server availability. If that slight timing ambiguity is going to cause issues with your workflow, [Contact Me](/contact) for a free consultation call to look at more time-specific alternatives.
 
 --
 

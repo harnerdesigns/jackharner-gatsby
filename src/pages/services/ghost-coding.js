@@ -31,6 +31,7 @@ const GhostCoding = ({ data, pageContext }) => {
           <div>
             <h2>Your clients will never even know I'm there...</h2>
             <h3>Need an extra <span style={{ color: "var(--text-color--inverted)", textShadow: "0 0 15px #fff, 0 0 10px #fff" }}>invisible</span> set of hands for your web development agency?</h3><Link to="/hire-me" className="button button--primary button--large">Let's Chat &raquo;</Link>
+            <h5><Link to="/blog/what-is-ghost-coding/">What is Ghost Coding?</Link></h5>
           </div>
       </section>
 

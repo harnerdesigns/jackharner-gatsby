@@ -235,7 +235,7 @@ ul {
   }
 
   &.content {
-    padding: 2em;
+    padding: 2em 1em;
 
     @include breakpoint(laptop) {
       padding: 2rem 25vw 2rem;

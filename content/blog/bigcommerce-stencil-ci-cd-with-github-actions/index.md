@@ -18,6 +18,9 @@ Basically, GitHub Actions allow you to program things to happen when other thing
 
 Today I'm going to walk you through using GitHub Actions to publish your BigCommerce Stencil Theme automatically.
 
+```toc
+```
+
 ## What is CI/CD?
 
 CI/CD stands for Continuous Integration / Continuous Delivery. CI/CD is a coding philosophy that allows teams to publish changes often, without the daunting task of pushing to production manually.  Setting up a solid CI/CD Pipeline will save you and your team plenty of hours over the course of the project to make up for the initial time setting it up. 
