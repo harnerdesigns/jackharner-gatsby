@@ -145,7 +145,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#9C27B0`,
         theme_color: `#9C27B0`,
-        display: `fullscreen`,
+        display: `minimal`,
         icon: `src/images/jackharner-icon.svg`, // This path is relative to the root of the site.
       },
     },
