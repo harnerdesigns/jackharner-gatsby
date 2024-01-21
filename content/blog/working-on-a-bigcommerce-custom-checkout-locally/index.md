@@ -4,14 +4,14 @@ title: "Working On A BigCommerce Custom Checkout Locally"
 subtitle: "Without Breaking Your Store's Live Checkout"
 featuredImage: "./ramiro-mendes-sMCBEI5zkqc-unsplash.jpg"
 ogImage: "./working-on-a-bigcommerce-custom-checkout-og-image.png"
-tags: ["BigCommerce"]
+tags: ["BigCommerce", "React"]
 externalLink: ""
 published: true
 ---
 
 When building or modifying BigCommerce's Open Source checkout-js, the only way [the docs claim](https://developer.bigcommerce.com/docs/storefront/cart-checkout/open-checkouts/guide) you can access the locally running version of your custom checkout is by changing the Checkout Script URL setting directly on the site settings. This breaks that store's checkout for anyone except the developer. BigCommerce obviously recommends only working on a custom checkout on a staging store, but that doesn't always work. It's nice to be able to work with live data while testing and developing the checkout locally.
 
-Modifying the Open Source checkout for a BigCommerce store is no simple task. Doing so for a production site without completely nuking the live site's actual checkout seemed impossible. Thanks to the BigCommerceDevs Slack (see credits section at the end), it turns out it is actually possible!
+Modifying the Open Source checkout for a BigCommerce store is no simple task (it's a highly sophisticated React application). Doing so for a production site without completely nuking the live site's actual checkout seemed impossible. Thanks to the BigCommerceDevs Slack (see credits section at the end), it turns out it is actually possible!
 
 Let's jump into how:
 
