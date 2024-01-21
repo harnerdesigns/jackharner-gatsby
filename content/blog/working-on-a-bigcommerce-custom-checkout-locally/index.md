@@ -1,6 +1,6 @@
 ---
 date: 2024-01-21T05:10:04.544Z
-title: "Working On A BigCommerce Custom Checkout"
+title: "Working On A BigCommerce Custom Checkout Locally"
 subtitle: "Without Breaking Your Store's Live Checkout"
 featuredImage: "./ramiro-mendes-sMCBEI5zkqc-unsplash.jpg"
 ogImage: "./working-on-a-bigcommerce-custom-checkout-og-image.png"
