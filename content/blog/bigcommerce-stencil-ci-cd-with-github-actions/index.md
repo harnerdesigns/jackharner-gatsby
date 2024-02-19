@@ -1,6 +1,6 @@
 ---
 date: 2020-08-01T21:22:11Z
-updated: 2022-11-21T11:43:40Z
+updated: 2024-02-19T11:55:40Z
 title: "BigCommerce Stencil CI/CD with GitHub Actions" 
 subtitle: "Publish Your Theme on Every Commit to Main"
 featuredImage: "./martin-adams-a_PDPUPuNZ8-unsplash.jpg"
