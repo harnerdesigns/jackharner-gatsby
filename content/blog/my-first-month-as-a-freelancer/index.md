@@ -123,7 +123,7 @@ I'm getting the hang of it, but it's definitely something to get used to.
 
 > ### My Income Is Now Like An Arcade High Score
 
-Since going fulltime freelance I switched my invoicing and time tracking software over to [Bonsai](https://www.hellobonsai.com/invite?fp_ref=jackharner). I wanted something that could handle both time tracking as well as invoicing and payments. I'm going to write up a full review here soon, but so far I love it.
+Since going fulltime freelance I switched my invoicing and time tracking software over to [Bonsai](https://bonsai.jackharner.com). I wanted something that could handle both time tracking as well as invoicing and payments. I'm going to write up a full review here soon, but so far I love it.
 
 One thing it does, is it puts both your unbilled hours and the money expected from those unbilled hours right on the dashboard. I'm working with a couple of clients in a "do work. invoice twice a month" capacity, so I'm directly incentivized to get that unbilled hours number as high as possible.
 

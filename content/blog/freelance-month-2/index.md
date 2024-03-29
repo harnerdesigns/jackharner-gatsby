@@ -20,7 +20,7 @@ I basically just wake up whenever, take my time enjoying my coffee, and then set
 
 Now that I'm freelancing full time, instead of living Paycheck to Paycheck, I'm living Invoice to Invoice. It's an interesting difference because instead of 2 "big" paychecks a month, I'm getting a dozen or so small to medium sized payments. Spreading myself out across these multiple part time jobs has allowed me to stay busy even when there's nothing from one job, because there's plenty to do from the rest.
 
-> Managing all of that sounds complicated, right? It doesn't have to be. I'm working on writing up an in-depth review of [Bonsai](https://www.hellobonsai.com/invite?fp_ref=jackharner), the freelance accounting tool I've been using to manage my time tracking and invoices. It's definitely making payday easier, so stay tuned for that! 
+> Managing all of that sounds complicated, right? It doesn't have to be. I'm working on writing up an in-depth review of [Bonsai](https://bonsai.jackharner.com), the freelance accounting tool I've been using to manage my time tracking and invoices. It's definitely making payday easier, so stay tuned for that! 
 
 Working with multiple clients at once is great because if I'm running into a productivity brick wall on one client, I can get up, take a little walk, and sit down fresh on a different project. Switching it up multiple times a day keeps my mind fresh and it never feels monotonous.
 
