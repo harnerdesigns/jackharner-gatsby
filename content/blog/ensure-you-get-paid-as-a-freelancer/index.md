@@ -63,7 +63,7 @@ If your an artist or a writer of some kind where work samples you send over for 
 
 ## Automate Payment Reminders
 
-I use [Bonsai](https://www.hellobonsai.com/invite?fp_ref=jackharner) to manage all of my invoicing and time tracking. It makes it insanely easy to charge late fees,send out email reminders. Bonsai helps manage pretty much every step of the freelance process from Proposals to Contracts to Getting Paid. [Check 'em out](https://www.hellobonsai.com/invite?fp_ref=jackharner) if you need help automating your freelance business.
+I use [Bonsai](https://bonsai.jackharner.com) to manage all of my invoicing and time tracking. It makes it insanely easy to charge late fees,send out email reminders. Bonsai helps manage pretty much every step of the freelance process from Proposals to Contracts to Getting Paid. [Check 'em out](https://bonsai.jackharner.com) if you need help automating your freelance business.
 
 ---
 
