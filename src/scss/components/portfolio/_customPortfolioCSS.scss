@@ -43,6 +43,15 @@
     }
 }
 
+.project__card.project--midtownMetal{
+    .logo__wrapper{
+        .logo{
+            height: calc(100% + 5rem);
+            z-index: 1;
+        }
+    }
+}
+
 
 .project__card.project--nationalRoofing{
 
