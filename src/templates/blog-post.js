@@ -72,10 +72,10 @@ export default function Template(props) {
         {newsletter ? <NewsletterLink /> : ""}
 
         {postContentMap}
-      </section>
-      <section className="slim black content">
+      </section> 
+      {/* <section className="slim black content">
         <Disqus config={disqusConfig} />
-      </section>
+      </section> */}
       <section className="slim black row" style={{ gridGap: "3rem" }}>
         <section className="post__post-content">
           <nav className="postNavigation">
