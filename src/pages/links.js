@@ -21,13 +21,16 @@ const Links = ({ data }) => {
       <section className="slim black">
         <LinksGrid>
           <Link to="/portfolio" className="button button--large">
-            See My Portfolio
+            My Web Development Portfolio
           </Link>
           <Link to="/newsletter" className="button button--large">
-            Join My Newsletter
+            Subscribe To My Newsletter
           </Link>
           <a className="button button--large" href="https://houseplanthomie.com" style={{backgroundColor: "#009688"}}>
             The Houseplant Homie
+          </a>
+          <a className="button button--large" href="https://shaklee.jackharner.com" style={{backgroundColor: "#133e35"}}>
+            Check Out Shaklee
           </a>
           <a className="button button--large" href="/Jack-Harner--Renrah-LTD.vcf" target="_blank" rel="noopener noreferrer">
             Save My Contact Info

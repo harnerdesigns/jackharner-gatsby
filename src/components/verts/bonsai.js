@@ -3,7 +3,7 @@ import bonsaiIcon from "../../images/bonsai-logo.png"
 import Vert from "./vert"
 
 const Bonsai = () => {
-  const link = "https://www.hellobonsai.com/invite?fp_ref=jackharner"
+  const link = "https://bonsai.jackharner.com"
   return (
     <Vert
       link={link}

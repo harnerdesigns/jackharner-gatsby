@@ -5,7 +5,6 @@ import SEO from "../components/seo"
 import BlogTitle from "../components/blog/blogTitle"
 import Button from "../components/atoms/button"
 import BlogCard from "../components/blog/blogCard"
-import ShareLinks from "../components/social/shareLinks"
 import NewsletterLink from "../components/blog/NewsletterLink"
 import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
 
@@ -90,7 +89,6 @@ export default function Template(props) {
                 )
               })}
             </ul>
-            <ShareLinks post={post} />
           </nav>
         </section>
       </section>

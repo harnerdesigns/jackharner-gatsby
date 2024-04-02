@@ -91,6 +91,18 @@ module.exports = {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
+                    {
+            resolve: `gatsby-remark-table-of-contents`,
+            options: {
+              exclude: "Table of Contents",
+              tight: false,
+              ordered: false,
+              fromHeading: 2,
+              toHeading: 2,
+              className: "table-of-contents"
+            },
+          },
+          `gatsby-remark-autolink-headers`,
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
@@ -133,7 +145,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#9C27B0`,
         theme_color: `#9C27B0`,
-        display: `fullscreen`,
+        display: `minimal-ui`,
         icon: `src/images/jackharner-icon.svg`, // This path is relative to the root of the site.
       },
     },

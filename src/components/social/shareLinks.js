@@ -16,7 +16,6 @@ export default class ShareLinks extends Component {
 
     render() {
         let postPermalink = "https://jackharner.com" + this.post.fields.slug;
-        let postImage = "https://jackharner.com" + (this.post.frontmatter.featuredImage ? this.post.frontmatter.featuredImage.childImageSharp.original.src : defaultOGImage)
         return (
             <aside className="share-buttons">
                 <h4 className="shareThis"><FontAwesomeIcon icon="share-alt" />&nbsp;Share This Post:</h4>
@@ -27,10 +26,6 @@ export default class ShareLinks extends Component {
                 <a href={"https://twitter.com/intent/tweet?url=" + postPermalink + "&text=" + this.post.frontmatter.title + "&via=jackharner"}
                     className="share-button twitter" title={"Share " + this.post.frontmatter.title + " on Twitter"} alt={"Share " + this.post.frontmatter.title + " on Twitter"}
                     target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fab", "twitter"]} /> Twitter</a>
-
-                <a href={"https://pinterest.com/pin/create/button/?url=" + postPermalink + "&description=" + this.post.frontmatter.title + "%20-%20Jack%20Harner&media=" + postImage}
-                    className="share-button pinterest" title={"Share " + this.post.frontmatter.title + " on Pinterest"}
-                    target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fab", "pinterest"]} /> Pinterest</a>
 
                 <a href={"https://tumblr.com/widgets/share/tool?canonicalUrl=" + postPermalink + "&tags=HarnerDesigns&caption=" + this.post.frontmatter.title + "%20-%20Jack%20Harner"}
                     className="share-button tumblr" title={"Share " + this.post.frontmatter.title + " on Tumblr"}

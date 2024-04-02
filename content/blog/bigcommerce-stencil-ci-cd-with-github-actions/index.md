@@ -1,6 +1,6 @@
 ---
 date: 2020-08-01T21:22:11Z
-updated: 2022-11-21T11:43:40Z
+updated: 2024-02-19T11:55:40Z
 title: "BigCommerce Stencil CI/CD with GitHub Actions" 
 subtitle: "Publish Your Theme on Every Commit to Main"
 featuredImage: "./martin-adams-a_PDPUPuNZ8-unsplash.jpg"
@@ -17,6 +17,9 @@ Back in November 2019, GitHub released GitHub Actions. An ["API for cause and ef
 Basically, GitHub Actions allow you to program things to happen when other things happen to your repo. For example, running tests on Pull Requests as they come in, or [updating your GitHub Profile Readme with your latest DEV posts](https://dev.to/gautamkrishnar/show-your-latest-dev-to-posts-automatically-in-your-github-profile-readme-3nk8). 
 
 Today I'm going to walk you through using GitHub Actions to publish your BigCommerce Stencil Theme automatically.
+
+```toc
+```
 
 ## What is CI/CD?
 
@@ -134,7 +137,7 @@ steps:
 
 > Update as of 2022: `stencil init` now has all of the flags available to run through CI. The original setup involved storing the entire contents of the .stencil file as a secret in the repo. 
 
-We need to add a couple secrets to the repo to keep our Stencil CLI Access Token secure. Open up your Repo and click Settings > Secrets > Actions > New secret. Name the first one `STENCIL_STORE_URL` and paste in your store's mybigcommerce.com url (i.e. `https://store-xxxxxxxxxx.mybigcommerce.com` ). Save that secret and add a second one called `STENCIL_ACCESS_TOKEN` with your Stencil CLI Access Token as the value. GitHub Secrets allow you to use sensitive data in your Actions without exposing it to the world. 
+We need to add a couple secrets to the repo to keep our Stencil CLI Access Token secure. Open up your Repo and click `Settings > Secrets & Variables > Actions > New Repository Secret`. Name the first one `STENCIL_STORE_URL` and paste in your store's mybigcommerce.com url (i.e. `https://store-xxxxxxxxxx.mybigcommerce.com` ). Save that secret and add a second one called `STENCIL_ACCESS_TOKEN` with your Stencil CLI Access Token as the value. GitHub Secrets allow you to use sensitive data in your Actions without exposing it to the world. 
 
 Once again we'll use Step Environment Variables to send our secrets to the `stencil init` command to generate the `secrets.stencil.json` and `config.stencil.json` files used connect the CI runner to our specific BigCommerce store:
 
