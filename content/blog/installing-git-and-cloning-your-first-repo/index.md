@@ -11,7 +11,9 @@ unlisted: false
 ---
 # Getting Started with Git: Installing and Cloning Repositories from GitHub
 
-This guide will help you get Git installed on your computer, clone repositories from GitHub, and switch branches. Whether you're new to Git or need a quick refresher, this guide will get you up and running in no time. It does assume you have at least some familiarity within a terminal or command-line environment. Linux & Linux-based OSs (Mac) make it easy; You just open up the Terminal app and away you go. With Windows it's slightly more challenging, although they've gotten better in recent years (and settting up a terminal environment on Windows is out of scope of this article).
+This guide will help you get Git installed on your computer, clone your first repo from GitHub, and switch branches. 
+
+Whether you're brand new to Git or need a quick refresher, this guide will get you up and running in no time. It does assume you have at least *some* familiarity within a terminal or command-line environment. Linux & Linux-based OSs (Mac) make it easy; You just open up the Terminal app and away you go. With Windows it's slightly more challenging, although I've heard it's improved in recent years (but setting up a terminal environment on Windows is out of scope of this article).
 
 Either way, crack your terminal open and let's get git-ing!
 
@@ -25,13 +27,13 @@ Here are a few terms to keep on top of your mind as you read through this.
 
 | Term         | Definition                                                                                   |
 |--------------|----------------------------------------------------------------------------------------------|
+| Terminal     | A command-line interface used to interact with the computer's operating system.               |
 | Git          | A piece of software used to track changes in source code during development. |
 | GitHub       | A web-based platform that hosts Git repositories and provides tools for collaboration.        |
 | Repository   | A folder of files with some special files to allow Git to track changes inside the folder.        |
 | Branch       | A parallel version of a repository, allowing for separate development work to be done.        |
-| Clone        | A copy of a repository that is downloaded to your local machine from a remote server.         |
-| Terminal     | A command-line interface used to interact with the computer's operating system.               |
-| Remote       | A version of a repository hosted on a server, often used for collaboration.                   |
+| Remote       | A version of a repository hosted on a server, used for collaboration.                         |
+| Clone        | A copy of a repository that is downloaded to your local computer from a remote server (mainly GitHub).   |
 
 ## Step 1: Installing Git
 
@@ -51,10 +53,7 @@ Here are a few terms to keep on top of your mind as you read through this.
 
 #### **Using Homebrew (recommended)**:
    - Open the Terminal.
-   - Install Homebrew if you don't have it: 
-     ```sh
-     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-     ```
+   - Install [Homebrew](https://brew.sh/) if you don't have it.
    - Install Git with Homebrew:
      ```sh
      brew install git
@@ -83,13 +82,13 @@ Here are a few terms to keep on top of your mind as you read through this.
 
 ## Step 2: Configuring Git
 
-After installing Git, you'll need to configure your username and email. This is necessary for tracking changes and contributions.
+After installing Git, you'll need to configure your Github username and email. This is necessary for tracking changes and contributions.
 
 1. Open your Terminal (or Git Bash on Windows).
 
-2. Configure your name in git:
+2. Add your GitHub account username to your git config:
    ```sh
-   git config --global user.name "Your Name"
+   git config --global user.name "username"
    ```
 
 3. Add your GitHub account email to your git config:
@@ -121,7 +120,7 @@ To clone a repository, you'll need the repository URL. This can be found on the 
 
 ## Step 4: Switching Branches
 
-Once you have cloned the repository, you might need to switch to a different branch.
+Once you have cloned the repository, you'll need to know how to switch to different branches.
 
 1. **List available branches**:
    - Navigate to the cloned repository:
@@ -132,7 +131,7 @@ Once you have cloned the repository, you might need to switch to a different bra
      ```sh
      git fetch --all
      ```
-   - List all branches:
+   - List all the available branches:
      ```sh
      git branch -a
      ```
@@ -149,7 +148,7 @@ Once you have cloned the repository, you might need to switch to a different bra
      ```sh
      git pull
      ```
-     - While `git fetch` and `git pull` seem like similar commands, they are quite different. Think of `git fetch` as getting the notification that there are changes, and `git pull` is getting the actual changes and applying them to your local copy of the repo. `fetch` is getting the email that your package has been delivered, `pull` is going to the mailbox to actually get the package. 
+     - While `git fetch` and `git pull` seem like similar commands, they are quite different. Think of `git fetch` as getting the notification that there *are* changes, and `git pull` is getting the actual changes and applying them to your local copy of the repo. `fetch` is getting the email that your package has been delivered, `pull` is going to the mailbox to actually get the package. 
 
 By following these steps, you can switch to any branch and ensure you are always previewing the latest code from that branch.
 
