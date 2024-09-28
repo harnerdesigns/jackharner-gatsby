@@ -21,7 +21,7 @@ externalLinkLabel: Let's Get Some Shoes
 
 This included: 
 
-* Maintaining and updating our custom BigCommerce Stencil Theme
+* Maintaining and updating our custom [BigCommerce Stencil](/blog/bigcommerce-stencil-ci-cd-with-github-actions/) Theme
 * Managing PPC Ad campaigns across multiple platforms
 * Developing Social Media Marketing materials and content
 * Generating Email campaigns and maintaining the marketing automation

@@ -140,7 +140,7 @@ export default Newsletter
 
 All this is doing is destructuring the `pageContext` variable out of the Props, and then further destructuring `pageContext` to get the `subscriberCount` variable we passed in earlier. 
 
-You can further simplify this with a process called nested destructuring:
+You can further simplify this with a process called [nested destructuring](/blog/destructuring-and-nested-destructuring-in-es6/):
 
 ```js{4}
 import React from "react"

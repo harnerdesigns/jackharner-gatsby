@@ -121,6 +121,13 @@
                 width: 70%;
                 text-align: right;
             }
+
+            & span {
+                display: block;
+                font-size: 1.25rem;
+                font-style: italic;
+                font-weight: 400;
+            }
         }
     }
 
