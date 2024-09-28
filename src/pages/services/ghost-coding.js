@@ -71,7 +71,9 @@ const GhostCoding = ({ data, pageContext }) => {
       </section>
 
       <section className="project-grid slim black grid grid--3 grid--mobile-1">
-        <h2>Recent Web Development Projects:</h2>
+        <h2>Recent Web Development Projects:
+          <span>These obviously aren't my ghost coding clients since that would defeat the purpose.</span>
+        </h2>
         {posts.map(({ node: post }, index) => {
           return <ProjectCard post={post} index={index} />
         })}

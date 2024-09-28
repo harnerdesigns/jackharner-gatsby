@@ -1,6 +1,7 @@
 .service {
     .brand-perks__grid {
         gap: 2rem;
+
         div {
             display: flex;
             flex-direction: column;
@@ -8,6 +9,7 @@
             justify-content: stretch;
             padding: 0 0.5rem;
         }
+
         a {
             display: flex;
             flex-direction: column;
@@ -17,6 +19,7 @@
             img {
                 margin-bottom: auto;
             }
+
             h3 {
                 display: block;
                 font-size: 1.5rem;
@@ -118,6 +121,13 @@
                 width: 70%;
                 text-align: right;
             }
+
+            & span {
+                display: block;
+                font-size: 1.25rem;
+                font-style: italic;
+                font-weight: 400;
+            }
         }
     }
 
@@ -142,17 +152,26 @@
         gap: 1rem;
         margin-bottom: 1rem;
         grid-auto-rows: 1fr;
+
         a {
             padding: 0.5rem 1rem;
             display: flex;
             align-items: center;
             justify-content: center;
             border: 1px solid #fff;
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.1);
+                color: #fff;
+                opacity: 0.8;
+            }
+
             &.big {
                 font-size: 2rem;
                 @include card(1);
                 background: #fff;
                 color: var(--color);
+
                 &:hover {
                     color: var(--darker-color);
                 }

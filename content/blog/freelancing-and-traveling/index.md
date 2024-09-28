@@ -28,7 +28,7 @@ I hadn't paid close enough attention and some of the configuration options had c
 
 You definitely want to make sure you'll have access to everything you need and that everything is correct BEFORE you leave. My recommendation here would be to take your laptop to a nearby coffee shop and go through your entire client list, double checking you can get to everything with just your laptop. 
 
-As a web developer, for me that involved checking Github access, SSH access, BigCommerce Stencil CLI, Shopify's CLI, and more.
+As a web developer, for me that involved checking Github access, SSH access, [BigCommerce Stencil CLI](/blog/bigcommerce-stencil-ci-cd-with-github-actions/), Shopify's CLI, and more.
 
 Taking that time to do this ahead of time will save you tons of headache while abroad.
 
