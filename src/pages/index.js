@@ -105,9 +105,9 @@ const IndexPage = ({ data, pageContext }) => {
       </section>
       <section className="half black">
         <h2>If you made it this far, here's a really big button you should click on:</h2>
-        <Link to="/hire-me" className="button button--primary button--x-x-large">HIRE JACK&nbsp;HARNER&nbsp;&raquo;</Link>
+        <Link to="/hire-me" className="button button--primary button--x-x-large">HIRE JACK HARNER&nbsp;&raquo;</Link>
 
-        <h3>Or if that's too much, here it is again, but smaller.</h3>
+        <h3 style={{textAlign: "center"}}>Or if that's too much, here it is again, but smaller.</h3>
         <Link to="/hire-me" className="button button--primary">HIRE JACK&nbsp;HARNER&nbsp;&raquo;</Link>
 
       </section>

@@ -412,7 +412,7 @@
     }
 
     @include breakpoint(laptop) {
-      max-width: 75%;
+      max-width: 95%;
     }
 
     li > p {
@@ -446,6 +446,20 @@
     width: 80%;
     border-bottom: 2px solid #fff;
     margin-bottom: 1rem;
+
+    &:has(th + th + th) {
+      width: 100%;
+
+      @include breakpoint(laptop) {
+        --extraWidth: 10vw;
+        width: calc(100% + var(--extraWidth));
+        max-width: 100vw;
+      }
+    }
+
+    &,* {
+      color: #fff;
+    }
     thead {
       border-bottom: 2px solid #fff;
       text-align: left;
@@ -454,6 +468,10 @@
     tr > td {
       border-bottom: 1px solid #ccc;
       padding: 0.25em;
+    }
+
+    code[class*="language-"] {
+      white-space: nowrap;
     }
   }
 
