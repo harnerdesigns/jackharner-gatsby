@@ -7,7 +7,7 @@ import Headroom from "react-headroom"
 import logo from "./../../images/jackharner-logo-white-text.svg"
 
 const Header = ({ siteTitle }) => (
-  <Headroom calcHeightOnResize upTolerance={50}>
+  <Headroom calcHeightOnResize upTolerance={100} >
     <header className="main_head main_head--min">
       <Link to="/" className="logo">
         <img src={logo} alt="Jack Harner Logo" />

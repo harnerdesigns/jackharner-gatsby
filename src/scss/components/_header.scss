@@ -7,14 +7,29 @@
   align-items: center;
   grid-template-columns: 3fr 1fr;
 
-  background: rgba(0, 0, 0, 0.6);
   transition: 300ms;
   z-index: 99999;
-  backdrop-filter: blur(1px);
   @include card(4);
 
   @include breakpoint(laptop) {
     grid-template-columns: 300px 1fr;
+  }
+
+  &:after {
+    content: '';
+    width: 100%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    backdrop-filter: var(--filter);
+    z-index: -1;
+    background: var(--background);
+    mask-image: linear-gradient(to bottom,
+        black 0% 50%,
+        transparent 50% 100%);
+    transition: 300ms;
+    pointer-events: none;
+
   }
 
 
@@ -27,6 +42,7 @@
     color: #fff;
     max-width: 35vw;
     width: 100%;
+
     @include breakpoint(tablet) {
       max-width: 25vw;
     }
@@ -44,6 +60,7 @@
 
   &--min {
     grid-template-columns: 1fr;
+
     .logo {
       margin: 0 auto;
       height: 6rem;
@@ -55,10 +72,15 @@
 .headroom {
   z-index: 40 !important;
   width: 100%;
+  position: fixed!important;
+  --filter: none;
+  --background: none;
 
   &--unfixed {
     .main_head {
-      background: none;
+      --filter: none;
+      --background: none;
+
       box-shadow: none;
 
       a.button,
@@ -66,22 +88,42 @@
         background: #000;
       }
 
-      &:hover{
-        background: rgba(0,0,0,0.5);
-      backdrop-filter: blur(5px);
+      &:hover {
+        --filter: blur(5px);
+        --background: rgba(0, 0, 0, 0.5);
 
+      }
+    }
+  }
+
+  &--unpinned {
+    transform: none !important;
+
+    .main_head {
+      --filter: blur(50px);
+      --background: rgba(0, 0, 0, 0.5);
+
+      @include breakpoint(laptop) {
+        grid-template-columns: 200px 1fr;
+        padding: 0rem 1rem;
+
+        .main_nav {
+          padding: 0 1rem;
+        }
       }
     }
   }
 
   &--scrolled {
     .main_head {
-      background: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(15px);
+      --filter: blur(50px);
+      --background: rgba(0, 0, 0, 0.5);
+
       @include breakpoint(laptop) {
         grid-template-columns: 200px 1fr;
         padding: 0rem 1rem;
-        .main_nav{
+
+        .main_nav {
           padding: 0 1rem;
         }
       }

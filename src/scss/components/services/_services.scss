@@ -148,16 +148,30 @@
             align-items: center;
             justify-content: center;
             border: 1px solid #fff;
+            &:hover{
+                color: rgba(255,255,255,0.8);
+                transition: 100ms;
+
+            }
             &.big {
                 font-size: 2rem;
                 @include card(1);
                 background: #fff;
                 color: var(--color);
                 &:hover {
-                    color: var(--darker-color);
+                background: var(--darker-color);
+
+                    color: var(--text-color);
                 }
             }
         }
+    }
+
+}
+.content:has(.service__links){
+
+    @include breakpoint(laptop) {
+        padding-inline: 25vw;
     }
 }
 
