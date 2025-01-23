@@ -206,7 +206,7 @@ Some suggestions for taking this tutorial further:
 * An alternative option to explore if you need that number _all over_ would be adding it as a node on your GraphQL tree instead of using Page Context. Then you could request it in any GraphQl Query you make.
 * Automate your CI/CD process to either rebuild the site daily or listen for a ConverKit Webhook to rebuild the site on every new subscriber.
 
-Let me know on Twitter [@JackHarner](https://twitter.com/jackharner) if you have any questions or implemented any part of this yourself! I'd love to see it!
+Let me know on BlueSky [@JackHarner](https://bsky.app/profile/jackharner.com) if you have any questions or implemented any part of this yourself! I'd love to see it!
 ---
 
 #### Featured Image by <a href="https://unsplash.com/@nhillier?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Nick Hillier</a> on <a href="https://unsplash.com/s/photos/number?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>

@@ -60,4 +60,4 @@ If running your freelance business depends on you having internet, having a solu
 
 ## Where To Next?
 
-I don't think I'm quite ready to commit to the whole Digital Nomad lifestyle yet (I missed my cats a little too much), but I definitely want to get out and travel more since I have the location freedom to do so. My partner and I are thinking Costa Rica next. If you have any travel recommendations or other things to consider before my next adventure, let me know down in the comments or hit me up on twitter [@JackHarner](https://twitter.com/jackharner)!
+I don't think I'm quite ready to commit to the whole Digital Nomad lifestyle yet (I missed my cats a little too much), but I definitely want to get out and travel more since I have the location freedom to do so. My partner and I are thinking Costa Rica next. If you have any travel recommendations or other things to consider before my next adventure, let me know down in the comments or hit me up on twitter [@JackHarner](https://bsky.app/profile/jackharner.com)!

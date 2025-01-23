@@ -6,7 +6,7 @@ const tagIcons = {
   Firefox: ["fab", "firefox-browser"],
   WordPress: ["fab", "wordpress"],
   React: ["fab", "react"],
-  Twitter: ["fab", "twitter"],
+  BlueSky: ["fab", "bluesky"],
   "Raspberry Pi": ["fab", "raspberry-pi"],
   Linux: ["fab", "linux"],
   "#DevDiscuss": ["fab", "dev"],

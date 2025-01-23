@@ -60,4 +60,4 @@ If you need to screenshot the full page, you just need to add the `--fullpage` f
 
 ![Show Me What You Got](https://media.giphy.com/media/26DOs997h6fgsCthu/giphy.gif)
 
-Go get them nice & fat portfolio screenshots of your work and send me a link on Twitter, [@JackHarner](https://twitter.com/jackharner). I'd love to see what you're working on!
+Go get them nice & fat portfolio screenshots of your work and send me a link on BlueSky, [@JackHarner](https://bsky.app/profile/jackharner.com). I'd love to see what you're working on!

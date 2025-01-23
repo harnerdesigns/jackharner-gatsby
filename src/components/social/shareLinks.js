@@ -23,10 +23,6 @@ export default class ShareLinks extends Component {
                     className="share-button facebook"
                     target="_blank" rel="noopener noreferrer" title={"Share " + this.post.frontmatter.title + " on Facebook"} alt={"Share " + this.post.frontmatter.title + " on Facebook"}><FontAwesomeIcon icon={["fab", "facebook"]} /> Facebook</a>
 
-                <a href={"https://twitter.com/intent/tweet?url=" + postPermalink + "&text=" + this.post.frontmatter.title + "&via=jackharner"}
-                    className="share-button twitter" title={"Share " + this.post.frontmatter.title + " on Twitter"} alt={"Share " + this.post.frontmatter.title + " on Twitter"}
-                    target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fab", "twitter"]} /> Twitter</a>
-
                 <a href={"https://tumblr.com/widgets/share/tool?canonicalUrl=" + postPermalink + "&tags=HarnerDesigns&caption=" + this.post.frontmatter.title + "%20-%20Jack%20Harner"}
                     className="share-button tumblr" title={"Share " + this.post.frontmatter.title + " on Tumblr"}
                     target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fab", "tumblr"]} /> Tumblr</a>

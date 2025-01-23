@@ -13,7 +13,7 @@ import Drips from "../components/atoms/drips"
 const Contact = () => (
   <Layout>
     <SEO title="Get In Touch"
-      description="Links to send me an email or a Twitter DM. Ya baby, slide into my DMs"
+      description="Links to send me an email or a BlueSky DM. Ya baby, slide into my DMs"
     />
 
     <PageTitle>Get In Touch</PageTitle>
@@ -23,17 +23,6 @@ const Contact = () => (
     <section className="slim black" style={{background: "var(--gradient)", boxShadow: "inset 0 3px 3px  rgba(0,0,0,0.8)"}}>
 
       <section className="buttons">
-        <Button
-          href="https://twitter.com/messages/compose?recipient_id=246555108&text=Hi%20Jack!"
-          target="_blank"
-          rel="noopener noreferrer"
-          icon={["fab", "twitter"]}
-          label={"Twitter DM"}
-          size="large"
-          extraStyle={{ width: "80%" }}
-          white
-        />
-        <div className="or wide">OR</div>
         <Button
           href="mailto:hello@jackharner.com"
           target="_blank"
@@ -68,11 +57,11 @@ const Contact = () => (
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://twitter.com/jackharner"
-          className="twitter"
+          href="https://bsky.app/profile/jackharner.com"
+          className="bluesky"
         >
-          <FontAwesomeIcon icon={["fab", "twitter"]} />
-          Twitter
+          <FontAwesomeIcon icon={["fab", "bluesky"]} />
+          BlueSky
         </a>
         <a
           target="_blank"

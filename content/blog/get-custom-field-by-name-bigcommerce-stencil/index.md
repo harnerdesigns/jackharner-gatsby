@@ -54,4 +54,4 @@ There's a Handlebars block tag available called `filter` which allows you to fil
 
 Biggest downside is trying to do things around your theme based on that value, you have to wrap your `{{#if}}` blocks in the `{{#filter}}` block. It doesn't look very intuitive and feels very hacky, but it works so it's what we get. 
 
-If you have a better way of doing this, please please please let me know on [Twitter](https://twitter.com/jackharner).
+If you have a better way of doing this, please please please let me know on [BlueSky](https://bsky.app/profile/jackharner.com).

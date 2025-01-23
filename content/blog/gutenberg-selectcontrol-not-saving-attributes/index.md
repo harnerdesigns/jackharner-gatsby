@@ -48,4 +48,4 @@ attributes: {
 
 ## Conclusion
 
-Make sure you're saving your attributes as the appropriate type, (Number, String, Boolean, etc.) and WordPress Gutenberg should stop giving you issues. Hit me up on Twitter [@JackHarner](https://twitter.com/jackharner) if you have any other WordPress related questions.
+Make sure you're saving your attributes as the appropriate type, (Number, String, Boolean, etc.) and WordPress Gutenberg should stop giving you issues. Hit me up on BlueSky [@JackHarner](https://bsky.app/profile/jackharner.com) if you have any other WordPress related questions.

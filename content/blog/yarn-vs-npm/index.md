@@ -74,4 +74,4 @@ npm install --global yarn
 
 ## Are you going to make the switch?
 
-> Let me know on twitter [@JackHarner](https://twitter.com/jackharner) if you do and which package manager you prefer! Thanks for reading!!
+> Let me know on twitter [@JackHarner](https://bsky.app/profile/jackharner.com) if you do and which package manager you prefer! Thanks for reading!!

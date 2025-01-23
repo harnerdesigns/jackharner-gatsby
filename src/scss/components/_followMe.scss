@@ -1,5 +1,6 @@
 $facebook: #3b5999;
 $twitter: #55acee;
+$bluesky: rgb(32, 139, 254);
 $polywork: #40be88;
 $patreon: #ff424d;
 $instagram: #e4405f;
@@ -10,7 +11,10 @@ $devto: #000;
 $producthunt: #da552f;
 
 @mixin gradient($color) {
-  background: $color;
+  background: linear-gradient(120deg, lighten($color, 20), lighten($color, 10), darken($color, 10));
+  svg { 
+    filter: drop-shadow(0px 3px 5px rgba(0,0,0,0.3));
+  }
 }
 
 .socials {
@@ -116,8 +120,8 @@ $producthunt: #da552f;
       }
     }
 
-    &.twitter {
-      color: $twitter;
+    &.bluesky {
+      color: $bluesky;
 
       &:before {
         content: "My Favorite";
@@ -132,7 +136,7 @@ $producthunt: #da552f;
       }
 
       &:hover {
-        @include gradient($twitter);
+        @include gradient($bluesky);
 
         &:before {
           color: #fff;
@@ -213,7 +217,7 @@ $producthunt: #da552f;
       }
     }
 
-    &.twitter {
+    &.bluesky {
       &:before {
         content: none;
       }

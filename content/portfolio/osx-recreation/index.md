@@ -22,10 +22,10 @@ I cracked open [CodePen](https://codepen.io/jackharner) and got to work.
 
 ## All Done, Time To Publish
 
-After putting the finishing touches on all the details. I hit save, took it off private, and bolted to Twitter to share my new masterpiece. I was super proud. The menus were all pixel perfect, the desktop icons could be multi selected, the dock bounced it's classic bounce. 
+After putting the finishing touches on all the details. I hit save, took it off private, and bolted to BlueSky to share my new masterpiece. I was super proud. The menus were all pixel perfect, the desktop icons could be multi selected, the dock bounced it's classic bounce. 
 
 ## Straight To The Top!
 
-I tagged @codepen on Twitter in hopes that they might retweet me, but they actually picked my Pen to be featured on the Front Page of CodePen! I was shocked and honored. I worked hard and now I was being recognized for it. As of writing it still has almost 40 Thousand Views. It's probably my most viewed piece of work to date and I still love looking back at it and clicking the icons and flipping through the menus.  
+I tagged @codepen on BlueSky in hopes that they might retweet me, but they actually picked my Pen to be featured on the Front Page of CodePen! I was shocked and honored. I worked hard and now I was being recognized for it. As of writing it still has almost 40 Thousand Views. It's probably my most viewed piece of work to date and I still love looking back at it and clicking the icons and flipping through the menus.  
 
 

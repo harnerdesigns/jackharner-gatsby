@@ -80,11 +80,11 @@ Agencies are going to want to see that you can handle a variety of different typ
 
 Just because you can't talk about the specific work you've done or the clients you've worked with, that doesn't mean you can't shout from the roof tops that you do Ghost Coding. Someone in your circle or your circle's circle runs a development agency and has a whole backlog of work (aka 💸💸💸💸) waiting to be knocked out.
 
-Two of my current Ghost Coding clients came from social media, and content I created online. Who knew [💩-posting on Twitter](https://twitter.com/jackharner) would actually be part of my job? 
+Two of my current Ghost Coding clients came from social media, and content I created online. Who knew [💩-posting on BlueSky](https://bsky.app/profile/jackharner.com) would actually be part of my job? 
 
 ### Just Ask
 
-Find an agency that specializes in the thing you specialize ( or have a decent enough grasp ) in. Find their main contact email, or their CEO on Twitter, and Just Ask.
+Find an agency that specializes in the thing you specialize ( or have a decent enough grasp ) in. Find their main contact email, or their CEO on BlueSky, and Just Ask.
 
 "Hey there! My name is Jack Harner and I'm a freelance <insert tech stack> Developer. How's your backlog looking? If you need, I'm more than happy to hop in on a part-time contract basis and help clear that out. How's that sound? My portfolio is available @ [JackHarner.com](https://jackharner.com). Have a great day!"
 
@@ -94,6 +94,6 @@ By maintaining a few solid relationships you can multiply your pool of potential
 
 You probably should be a little ways into your freelance career already. The real-life work experience is what agency owners are looking for. That's not to say don't ask if you're just starting out! The worst that's going to happen is they say no. They might just bring you on for a one off project to start, and if it doesn't work out more long term, at least you got a little more real-life work experience to help you land the next gig.
 
-Leave me a comment below or [hit me up on Twitter (@JackHarner)](https://twitter.com/jackharner) if you have any questions!
+Leave me a comment below or [hit me up on BlueSky (@JackHarner)](https://bsky.app/profile/jackharner.com) if you have any questions!
 
 _[P.S. Let's chat if you want to hire me to Ghost Code for your agency](/hire-me/)_

@@ -50,4 +50,4 @@ I really appreciate it.
 
 I plan on re-posting every email I send on JackHarner.com 7 days after it gets sent to the list. Make sure to sign up to get my posts as soon as possible.
 
-If you have any questions feel free to respond to this email or hit me up on Twitter: [@JackHarner](https://twitter.com/jackharner). Happy Coding!
+If you have any questions feel free to respond to this email or hit me up on BlueSky: [@JackHarner](https://bsky.app/profile/jackharner.com). Happy Coding!

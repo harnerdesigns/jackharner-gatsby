@@ -192,7 +192,7 @@ var herName = person.married.spouse.name
 
 ## Keep It Clean, and Keep It Simple
 
-Using Destructuring allows you to cleanly and simply extract properties from objects in ES6 JavaScript into variables to be manipulated and modified. Keep It Simple Stupid and hit me up on Twitter [@JackHarner](https://twitter.com/jackharner) if you learned something!
+Using Destructuring allows you to cleanly and simply extract properties from objects in ES6 JavaScript into variables to be manipulated and modified. Keep It Simple Stupid and hit me up on BlueSky [@JackHarner](https://bsky.app/profile/jackharner.com) if you learned something!
 
 ---
 

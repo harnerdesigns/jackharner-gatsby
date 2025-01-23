@@ -18,11 +18,11 @@ const Footer = ({ siteTitle, footerCTA = true }) => (
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://twitter.com/jackharner"
-          className="twitter"
+          href="https://bsky.app/profile/jackharner.com"
+          className="bluesky"
         >
-          <FontAwesomeIcon icon={["fab", "twitter"]} />
-          <span className="sr-only">Twitter</span>
+          <FontAwesomeIcon icon={["fab", "bluesky"]} />
+          <span className="sr-only">BlueSky</span>
         </a>
         <a
           target="_blank"

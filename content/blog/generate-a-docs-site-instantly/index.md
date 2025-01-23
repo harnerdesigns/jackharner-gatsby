@@ -111,4 +111,4 @@ Since all it uses is Python, it's probably super simple to combine MkDocs with G
 ---
 
 ### Let me know what you think about MkDocs
-Send me the Docs sites you setup over on Twitter: [@JackHarner](https://twitter.com/jackharner). I'd love to see them!
+Send me the Docs sites you setup over on BlueSky: [@JackHarner](https://bsky.app/profile/jackharner.com). I'd love to see them!

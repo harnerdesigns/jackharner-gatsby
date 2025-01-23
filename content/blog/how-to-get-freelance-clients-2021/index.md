@@ -28,7 +28,7 @@ I will caveat this technique with the fact that it is not an efficient client ga
 
 # Tweeting & 💩 Posting
 
-Being active on Twitter has brought me so many opportunities, and is partially responsible for my ability to do this full time.
+Being active on BlueSky has brought me so many opportunities, and is partially responsible for my ability to do this full time.
 
 I'm constantly searching around for people wishing something existed. I picked up one of my first steady clients by responding to this tweet:
 
@@ -56,6 +56,6 @@ More tweeting. More blog posts. More, more, more.
 
 At this point things are snowballing for me. Clients are coming in on their own. I've done hardly anything that really counts as "client outreach", and yet I'm able to sustain myself off just the freelancing. (HOW COOL IS THAT?!?) My existing clients keep getting happier with my work, and we're already planning out new work for the start of the new year.
 
-A big thing for me, going into 2022, is to grow my [Twitter](https://twitter.com/jackharner) & [Newsletter](../../newsletter) audiences ([follow](https://twitter.com/jackharner) and [subscribe](../../newsletter) if you're not 🙏🏽). Both platforms have the ability to generate massive amounts of upside, and I need to actively dedicate the time & energy to growing both.
+A big thing for me, going into 2022, is to grow my [BlueSky](https://bsky.app/profile/jackharner.com) & [Newsletter](../../newsletter) audiences ([follow](https://bsky.app/profile/jackharner.com) and [subscribe](../../newsletter) if you're not 🙏🏽). Both platforms have the ability to generate massive amounts of upside, and I need to actively dedicate the time & energy to growing both.
 
 For now, I'm going to keep this freelance thing going as long as I can, keep working for clients, keep getting new ones dropped in my lap, and keep working on my side projects to develop passive income. The ultimate goal is to stop trading time for money. I may be self-employed, but my income is still tied to how long my butt is in my computer chair. I'm trying to get on that "Make Money While You Sleep" level. I know I can, I just need to put in the time upfront.

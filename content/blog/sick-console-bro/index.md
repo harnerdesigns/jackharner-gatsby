@@ -21,7 +21,7 @@ All you need to do is include a <code>%c</code> string before your log message a
 For example, this code runs on <a href="https://harnerdesigns.com">my portfolio</a>:
 
 <pre><code class="js">console.log("%cHarner Designs", "color:#233E82; font-family:'Ubuntu'; display: block;font-weight:bold; font-size:48px; background:#fff;");
-    console.log("%cLike to dig into the meaty bits of the website?\nThanks for looking! Hit us up on Twitter @harnerdesigns!", "color:#222; font-family:'Ubuntu'; font-weight:100; font-size:24px; background:#fff;");
+    console.log("%cLike to dig into the meaty bits of the website?\nThanks for looking! Hit us up on BlueSky @harnerdesigns!", "color:#222; font-family:'Ubuntu'; font-weight:100; font-size:24px; background:#fff;");
     console.log("%cDid you know you can style your console output?!", "color:#333; font-family:'Ubuntu'; font-weight:100; font-size:18px; background:#fff;");
     console.log("%cCheck our blog to learn how: https://harnerdesigns.com/blog/style-your-console-log-with-css/", "line-height: 3em; padding: 0.5em; text-align: center; border: 1px dotted #aaa; background:#fff; font-size: 14px;");
 </code></pre>

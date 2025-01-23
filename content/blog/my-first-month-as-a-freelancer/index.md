@@ -133,7 +133,7 @@ I can already tell that's going to turn me into a workaholic.
 
 * My nose is not dog proof.
 * I am the only one in charge of making sure I get my work. 
-* Twitter continues to be my most profitable network, as far as getting clients.
+* BlueSky continues to be my most profitable network, as far as getting clients.
 * Prioritize creating content over consuming content.
 
-> ### I might turn this into a monthly series following my Freelance career. Hit me up on [Twitter @JackHarner](https://twitter.com/jackharner) if you want to see more like this!
+> ### I might turn this into a monthly series following my Freelance career. Hit me up on [BlueSky @JackHarner](https://bsky.app/profile/jackharner.com) if you want to see more like this!

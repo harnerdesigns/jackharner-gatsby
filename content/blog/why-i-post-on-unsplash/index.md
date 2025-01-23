@@ -49,4 +49,4 @@ I contribute to Unsplash because without it, my sites and campaigns would be way
 
 I contribute to Unsplash because I use the site almost daily, and it's my way of giving back to the people who gave first.
 
-Check me out on [Unsplash](https://unsplash.com/@jackharner), or give me a follow on [Twitter](https://twitter.com/jackharner) and let me know if you've used on of my photos or hit me with your Unsplash username and I'll give you a follow!
+Check me out on [Unsplash](https://unsplash.com/@jackharner), or give me a follow on [BlueSky](https://bsky.app/profile/jackharner.com) and let me know if you've used on of my photos or hit me with your Unsplash username and I'll give you a follow!

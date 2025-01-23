@@ -29,7 +29,7 @@ I've been meaning to buy my own router/modem for a while now, and this might be 
 
 ## What's Next
 
-* I've got a couple different [Twitter bots](https://twitter.com/git_shit) and such running on different servers that I might try to consolidate to the Pi. I got the 2Gb Memory version so it's not SUPER powerful, but for simple cron tasks and things it could save me some money.
+* I've got a couple different [BlueSky bots](https://twitter.com/git_shit) and such running on different servers that I might try to consolidate to the Pi. I got the 2Gb Memory version so it's not SUPER powerful, but for simple cron tasks and things it could save me some money.
 * Buy a new Modem/Router combo. 
 * Buy a set of [Raspberry Pi Fans](https://www.amazon.com/Raspberry-iUniker-30x30x7mm-Brushless-RetroFlag/dp/B076H3TKBP/ref=as_li_ss_tl?crid=1UZQNS98RC9CW&dchild=1&keywords=raspberry+pi+4+fan&qid=1590980965&sprefix=raspberr,aps,211&sr=8-3&linkCode=ll1&tag=harner-20&linkId=88de087ae5089f3b764b5d3775643efc&language=en_US) to help deal with the heat. It hovers right around 66&deg;C. with just PiHole running, but I'm sure that will jump up once I start using it for other things.
 * I also had an idea for a lightweight web app that I could host on the Pi and use QR codes to track how often I water my plants. This one's probably way down the line, but could be a cool open source project to work on. 

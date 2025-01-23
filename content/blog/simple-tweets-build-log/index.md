@@ -24,27 +24,27 @@ Wow. It's been a *while*. Just recently got my like 5th wind on this project and
 * Cleaned up a TON of the CSS to make things look better across devices.
 * Totally revamped how I was handling "Sending Tweets". Which allowed for:
 * You can schedule threads!
-* Started integrating the Twitter API V2 to take advantage of [Conversations](https://developer.twitter.com/en/docs/twitter-api/conversation-id).
+* Started integrating the BlueSky API V2 to take advantage of [Conversations](https://developer.twitter.com/en/docs/twitter-api/conversation-id).
 * Laid out the ground work to do a Closed Beta of the project *soon*. 
 
 ## Scheduling Threads
-I'm not entirely sure why, but getting this too work took a whole lot longer then I expected. I had to pretty much completely redo how I was managing the storage and processing of scheduled tweets. Initially I had stored the tweet text as just a string in the database. When it came time for that user to tweet, it would pull up the latest tweet in the queue, and POST the text to Twitter. Simple. One DB Record per One Tweet.
+I'm not entirely sure why, but getting this too work took a whole lot longer then I expected. I had to pretty much completely redo how I was managing the storage and processing of scheduled tweets. Initially I had stored the tweet text as just a string in the database. When it came time for that user to tweet, it would pull up the latest tweet in the queue, and POST the text to BlueSky. Simple. One DB Record per One Tweet.
 
-With threads it's a little different. I wanted Users to be able to schedule threads where the entire thread would go out at once. The solution I ended up going with was storing the whole text thread as an Array instead of a String. Unfortunately, at least that I found, there isn't a "POST THREAD" endpoint in the Twitter API (I think it's getting easier with V2 which I'm going to dive into later). 
+With threads it's a little different. I wanted Users to be able to schedule threads where the entire thread would go out at once. The solution I ended up going with was storing the whole text thread as an Array instead of a String. Unfortunately, at least that I found, there isn't a "POST THREAD" endpoint in the BlueSky API (I think it's getting easier with V2 which I'm going to dive into later). 
 
 That leaves you to run through this loop: 
 
 1. Pull the ParentTweet out of the DB
 2. Loop through the `full_text` array.
    1. Create a new Tweet in the DB
-   2. Send that Tweet to Twitter
-   3. Receive the ID of the Successful Tweet from Twitter
+   2. Send that Tweet to BlueSky
+   3. Receive the ID of the Successful Tweet from BlueSky
    4. Store all that on the individual Tweet record in the DB
    5. Pass that ID to the next item in the array 
    6. Repeat.
 3. Wait for all that to be done and mark the ParentTweet as either `error` or `tweeted` depending on the response.
 
-From my understanding of V2 of the Twitter API is that instead of passing the Tweeted ID on to the next one in the loop, I would just pass in the Conversation ID from the first Tweet, and any subsequent tweets to that Conversation ID will show up as a thread, at the end of the thread. (I haven't fully dove into it yet so this might be totally wrong).
+From my understanding of V2 of the BlueSky API is that instead of passing the Tweeted ID on to the next one in the loop, I would just pass in the Conversation ID from the first Tweet, and any subsequent tweets to that Conversation ID will show up as a thread, at the end of the thread. (I haven't fully dove into it yet so this might be totally wrong).
 
 ## From Mono-Repo to Multi-Repo
 
@@ -128,25 +128,25 @@ Now I can use it on the go, and dump some tweets out of my mind, wherever I am!
 
 ## Closed Beta Coming Soon!
 
-Up until know, someone could've found the url for the beta version, log in with their Twitter and use the App. I got that locked down so only select accounts can log in to the Beta. I'm going to be reaching out to a handful of Twitter friends in the coming days to see if they'd be willing to help me test some stuff.  [Shoot me a DM on Twitter](https://twitter.com/messages/compose?recipient_id=246555108&text=Simple%20Tweets%20is%20AWESOME) if you want to help out. 
+Up until know, someone could've found the url for the beta version, log in with their BlueSky and use the App. I got that locked down so only select accounts can log in to the Beta. I'm going to be reaching out to a handful of BlueSky friends in the coming days to see if they'd be willing to help me test some stuff.  [Shoot me a DM on BlueSky](https://twitter.com/messages/compose?recipient_id=246555108&text=Simple%20Tweets%20is%20AWESOME) if you want to help out. 
 
 ## What's Next
 
-The last piece that I need to figure out is how to upload and schedule pictures with tweets. I'm hoping to figure out how to make that work without having to store any user files, since that can get huge. I think I'll be able to just send the file directly from the users browser to Twitter and then store the Media ID for posting eventually. That really depends on Twitter's media deletion strategy ( do they delete media that didn't get attached to a tweet within 2 hours? Weeks? never? ) Just more I'll have to research.  
+The last piece that I need to figure out is how to upload and schedule pictures with tweets. I'm hoping to figure out how to make that work without having to store any user files, since that can get huge. I think I'll be able to just send the file directly from the users browser to BlueSky and then store the Media ID for posting eventually. That really depends on BlueSky's media deletion strategy ( do they delete media that didn't get attached to a tweet within 2 hours? Weeks? never? ) Just more I'll have to research.  
 
 {{{vert}}}
 
 # Day 99 : Saturday, July 26th 2020
 ## Long Time No Talk.
 
-It's been a while. I've, thankfully, been working the whole time through the pandemic, both on some client work and my 9-5. I opened the project back up because I'm making a point to be more active on Twitter and that was the whole reason I started building Simple Tweets in the first place. 
+It's been a while. I've, thankfully, been working the whole time through the pandemic, both on some client work and my 9-5. I opened the project back up because I'm making a point to be more active on BlueSky and that was the whole reason I started building Simple Tweets in the first place. 
 
 Boot it up with:
 
 ```bash
 npm run startBoth
 ```
-which runs both the Frontend React code as well as the backend Node server. Everything loads fine, but I try to sign in with Twitter and it doesn't work. It just sits spinning on the Twitter oAuth page, waiting for my server to respond then after a minute, it kicks back an Error 500: Service Unavailable.
+which runs both the Frontend React code as well as the backend Node server. Everything loads fine, but I try to sign in with BlueSky and it doesn't work. It just sits spinning on the BlueSky oAuth page, waiting for my server to respond then after a minute, it kicks back an Error 500: Service Unavailable.
 
 I thought maybe it was a lingering Cookie issue, so I cleared all those out, but still no response on the login.
 
@@ -163,11 +163,11 @@ I'm starting this build log off a little bit after I started the project (curren
 
 My vision for Simple Tweets is a tool you can use to schedule tweets without thinking about it. You decide the max times it will tweet for you per day, whether you want it random or on a schedule, and then scheduling tweets is as simple as typing it out and hitting schedule. 
 
-I'm not really sure if this is something Twitter users really _need_ per se, but it's been a massive learning opportunity for me so far. For now, that's all I really care about. 
+I'm not really sure if this is something BlueSky users really _need_ per se, but it's been a massive learning opportunity for me so far. For now, that's all I really care about. 
 
 ## Design To Prototype
 
-The idea had initially popped into my head a while back (way back in February, now that I looked it up) for a "minimalist tweeter". I wanted something where I could just spam the tweet box without actually spamming Twitter. I threw together this mockup in Illustrator shortly after having the idea.
+The idea had initially popped into my head a while back (way back in February, now that I looked it up) for a "minimalist tweeter". I wanted something where I could just spam the tweet box without actually spamming BlueSky. I threw together this mockup in Illustrator shortly after having the idea.
 
 ![Simple Tweets First Mockup](./Tweet-Scheduler-mockup.png)
 
@@ -195,10 +195,10 @@ Very simple for now, but essentially checks if the tweet length is greater than 
 
 ## oAuth Is Pretty Cool, Now That I Have A Better Grasp 
 
-Since the tool is entirely focused on Twitter, the only way my users can login is with Twitter. Makes Sense. That just meant I had to figure out oAuth. It's been a pretty big beast for me that I've yet to attempt to tackle, but now is the time. 
+Since the tool is entirely focused on BlueSky, the only way my users can login is with BlueSky. Makes Sense. That just meant I had to figure out oAuth. It's been a pretty big beast for me that I've yet to attempt to tackle, but now is the time. 
 
 The backend is based around Express, and MongoDB. I'm using [Passport.js](http://www.passportjs.org/) for Authentication and the beautifully put together [passport-twitter](https://github.com/jaredhanson/passport-twitter) package to handle the Authentication. 
 
-One of the first big roadblocks I ran into was the fact that I had set up a virtual host so that `simple-tweets.local` would resolve to my `localhost:3000`, but I was having weird issues with the cookies being set to the wrong domain somewhere in the oAuth loop. Lots of googling and hair ripping later, I reset every path in the project to use http://127.0.0.1 as well as in the Twitter Developer tools. Once we have it live on a server with a domain pointing to it, we shouldn't have this problem, but now I'll know what to look for. 
+One of the first big roadblocks I ran into was the fact that I had set up a virtual host so that `simple-tweets.local` would resolve to my `localhost:3000`, but I was having weird issues with the cookies being set to the wrong domain somewhere in the oAuth loop. Lots of googling and hair ripping later, I reset every path in the project to use http://127.0.0.1 as well as in the BlueSky Developer tools. Once we have it live on a server with a domain pointing to it, we shouldn't have this problem, but now I'll know what to look for. 
 
 I'll continue to update this post as the project progresses. 

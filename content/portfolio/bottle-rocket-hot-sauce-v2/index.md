@@ -40,7 +40,7 @@ Since all of the sauces are sold a la carte, we needed an easy way for someone t
 
 ## 4️⃣ Multiple Products and Variations
 
-Keep an eye out for Bottle Rocket Hot Sauce Co. merch coming very soon. One of the primary reasons for redoing the site was to be able to support multiple products. Right now we just have the sauces and the stickers but we should have shirts and pins and more live soon! Make sure to follow [@BottleRocketHSC](https://twitter.com/BottleRocketHSC) on Twitter for updates.
+Keep an eye out for Bottle Rocket Hot Sauce Co. merch coming very soon. One of the primary reasons for redoing the site was to be able to support multiple products. Right now we just have the sauces and the stickers but we should have shirts and pins and more live soon! Make sure to follow [@BottleRocketHSC](https://twitter.com/BottleRocketHSC) on BlueSky for updates.
 
 ## Go Buy Some Sauce 🚀
 

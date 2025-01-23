@@ -51,10 +51,10 @@ Just gotta keep working, keep finding new clients, and spend less than I make. E
 
 ## Create More. Consume Less.
 
-I spend hours scrolling through Twitter, how come I struggle writing tweets? It's because I'm consuming more than I create. The only way to get better at anything is to JUST DO IT. I need to blog more, I need to tweet more. The more you create, the more you can share, and the more you feed the algorithm, the more it regurgitates your stuff to other people. Feed the beast, but be the bait, not the meal.
+I spend hours scrolling through BlueSky, how come I struggle writing tweets? It's because I'm consuming more than I create. The only way to get better at anything is to JUST DO IT. I need to blog more, I need to tweet more. The more you create, the more you can share, and the more you feed the algorithm, the more it regurgitates your stuff to other people. Feed the beast, but be the bait, not the meal.
 
 > ### Creation > Consumption.
 
 ### 👋 See you Next Month
 
-#### But in the meantime, [Follow me on Twitter](https://www.twitter.com/jackharner)!
+#### But in the meantime, [Follow me on BlueSky](https://www.twitter.com/jackharner)!

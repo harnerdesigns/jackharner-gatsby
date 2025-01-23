@@ -57,7 +57,7 @@ Make sure to match the formatting of the date and the moment helper format, (11/
 
 ## Go Forth & Automate!
 
-Now you no longer need to try and publish your [BigCommerce Stencil](/blog/bigcommerce-stencil-ci-cd-with-github-actions/) theme right at midnight when you start a sale. You can schedule the banners and sale content early, publish the site, and then the content will only display during your specified dates. Hit me up on [Twitter](https://twitter.com/jackharner) if you have any questions!
+Now you no longer need to try and publish your [BigCommerce Stencil](/blog/bigcommerce-stencil-ci-cd-with-github-actions/) theme right at midnight when you start a sale. You can schedule the banners and sale content early, publish the site, and then the content will only display during your specified dates. Hit me up on [BlueSky](https://bsky.app/profile/jackharner.com) if you have any questions!
 
 ---
 

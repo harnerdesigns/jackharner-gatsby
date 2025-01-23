@@ -6,7 +6,7 @@
   "author": "Jack Harner <hello@jackharner.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
-    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
     "@mdx-js/react": "^1.6.22",

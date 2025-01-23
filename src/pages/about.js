@@ -99,8 +99,8 @@ const About = () => {
         </p>
         <h2>If You Want More Of Me...</h2>
         <p>
-          Give me a follow on Twitter,{" "}
-          <a href="https://twitter.com/jackharner">@JackHarner</a>, Instagram,{" "}
+          Give me a follow on BlueSky,{" "}
+          <a href="https://bsky.app/profile/jackharner.com">@JackHarner</a>, Instagram,{" "}
           <a href="https://instagram.com/jackharner">@JackHarner</a>, or check
           out my <Link to="/blog">Blog</Link>.{" "}
         </p>

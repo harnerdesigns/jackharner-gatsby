@@ -228,7 +228,7 @@ If you wanted to take this script a few steps further, here are some ideas to ge
 * Refactor the script to be able to handle any post type you throw at it. `readline-sync` has a whole lot of options for taking in user input. 
 * Create as much content as possible, and automate as many things as possible.
 
-[Hit me up on Twitter](https://twitter.com/jackharner) if you implement this script in your Gatsby site! I'd love to hear your suggestions.
+[Hit me up on BlueSky](https://bsky.app/profile/jackharner.com) if you implement this script in your Gatsby site! I'd love to hear your suggestions.
 
 ## If You're Lazy, Here's the full script: 
 
