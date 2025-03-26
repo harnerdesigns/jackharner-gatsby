@@ -9,9 +9,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v4
         with:
           node-version: 18
 
@@ -20,7 +20,7 @@ jobs:
         run: echo "::set-output name=dir::$(yarn cache dir)"
 
       - name: Yarn cache
-        uses: actions/cache@v1
+        uses: actions/cache@v4
         id: yarn-cache
         with:
           path: ${{ steps.yarn-cache-dir.outputs.dir }}
@@ -31,7 +31,7 @@ jobs:
       # In order to make gatsby incremental build works, it's necessary .cache
       # and public folder.
       - name: Gatsby Cache Folder
-        uses: actions/cache@v1
+        uses: actions/cache@v4
         id: gatsby-cache-folder
         with:
           path: .cache
@@ -40,7 +40,7 @@ jobs:
             ${{ runner.os }}-cache-gatsby
 
       - name: Gatsby Public Folder
-        uses: actions/cache@v1
+        uses: actions/cache@v4
         id: gatsby-public-folder
         with:
           path: public/
