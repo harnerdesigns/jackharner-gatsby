@@ -7,6 +7,7 @@ const tagIcons = {
   WordPress: ["fab", "wordpress"],
   React: ["fab", "react"],
   BlueSky: ["fab", "bluesky"],
+  ATProto: "at",
   "Raspberry Pi": ["fab", "raspberry-pi"],
   Linux: ["fab", "linux"],
   "#DevDiscuss": ["fab", "dev"],
