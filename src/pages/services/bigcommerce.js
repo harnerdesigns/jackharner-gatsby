@@ -50,7 +50,7 @@ const BigCommerce = ({ data, pageContext }) => {
         </div>
       </section>
       <section className="project-grid slim black grid grid--3 grid--mobile-1">
-        <h2><Link to="/portfolio/tags/big-commerce">Recent BigCommerce Projects:</Link></h2>
+        <h2><Link to="/portfolio/tags/bigcommerce">Recent BigCommerce Projects:</Link></h2>
         {posts.map(({ node: post }, index) => {
           return <ProjectCard post={post} index={index} />
         })}

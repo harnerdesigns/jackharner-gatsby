@@ -45,12 +45,12 @@ const GhostCoding = ({ data, pageContext }) => {
           <p>My skills and abilities with Shopify Liquid flow like water.</p>
           <Link to="/portfolio/tags/shopify">View My Shopify Work &raquo;</Link>
         </Link>
-        <Link to="/portfolio/tags/big-commerce">
+        <Link to="/portfolio/tags/bigcommerce">
           <img src={bigcommerceLogo} style={{ maxHeight: "25vh", display: "block", margin: "0 auto", filter: "invert(1)" }} />
 
           <h3>BigCommerce</h3>
           <p>Let me help your clients with their pesky Stencil, Handlebars, and GraphQL issues.</p>
-          <Link to="/portfolio/tags/big-commerce">View My BigCommerce Work &raquo;</Link>
+          <Link to="/portfolio/tags/bigcommerce">View My BigCommerce Work &raquo;</Link>
         </Link>
         <Link to="/portfolio/tags/wordpress">
           <img src={wordpressLogo} style={{ maxHeight: "25vh", display: "block", width: "100%", margin: "0 auto", filter: "invert(1)" }} />

@@ -34,7 +34,7 @@ const MainMenu = (props) => {
                 { link: "/blog", text: "All Posts", extraSettings: { partiallyActive: false } },
                 { link: "/blog/tags/freelance", text: "Freelance", icon: 'bacon' }, { link: "/blog/tags/wordpress", text: "WordPress", icon: ['fab', "wordpress"] },
                 { link: "/blog/tags/shopify", text: "Shopify", icon: ['fab', "shopify"] },
-                { link: "/blog/tags/big-commerce", text: "BigCommerce", icon: 'shopping-cart' },
+                { link: "/blog/tags/bigcommerce", text: "BigCommerce", icon: 'shopping-cart' },
                 { link: "/blog/tags/atproto", text: "ATProto", icon: 'at' },
                 { link: "/blog/tags/automation", text: "Automation", icon: 'cog' }
             ]} subMenuOpen={subMenuOpen} setSubMenuOpen={setSubMenuOpen} />
