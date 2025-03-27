@@ -341,8 +341,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     // Make tag pages
 
     blogTags.forEach(tag => {
-      const tagPath = (tag === 'WordPress' ? `/blog/tags/wordpress/` : `/blog/tags/${_.kebabCase(tag)}/`)
 
+      const slugOverrides = {
+        WordPress: 'wordpress',
+        ATProto: 'atproto',
+        BigCommerce: 'bigcommerce'
+      }
+      
+      const slug = slugOverrides[tag] || _.kebabCase(tag)
+      const tagPath = `/blog/tags/${slug}/`
+    
       createPage({
         path: tagPath,
         component: path.resolve(`src/templates/tag.js`),
