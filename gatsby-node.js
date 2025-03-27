@@ -339,18 +339,18 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
 
     // Make tag pages
+    const slugOverrides = {
+      WordPress: 'wordpress',
+      ATProto: 'atproto',
+      BigCommerce: 'bigcommerce'
+    }
+
+    const getTagSlug = tag => slugOverrides[tag] || _.kebabCase(tag)
 
     blogTags.forEach(tag => {
 
-      const slugOverrides = {
-        WordPress: 'wordpress',
-        ATProto: 'atproto',
-        BigCommerce: 'bigcommerce'
-      }
-      
-      const slug = slugOverrides[tag] || _.kebabCase(tag)
-      const tagPath = `/blog/tags/${slug}/`
-    
+      const tagPath = `/blog/tags/${getTagSlug(tag)}/`
+
       createPage({
         path: tagPath,
         component: path.resolve(`src/templates/tag.js`),
@@ -362,35 +362,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       })
     })
 
-    // /////////////////////
-    // // New Blog Pages //
-    // ///////////////////
-
-    // _.each(result.data.wpblog.edges, (edge, index) => {
-    //   let listedPosts = result.data.blog.edges.filter(({ node }) =>
-    //     node.fields.unlisted ? false : true
-    //   )
-    //   const edgeCount = listedPosts.length
-    //   const relatedIndexes = randomNum(0, edgeCount, index, 4)
-
-    //   const related = [
-    //     listedPosts[relatedIndexes[0]].node,
-    //     listedPosts[relatedIndexes[1]].node,
-    //     listedPosts[relatedIndexes[2]].node,
-    //     listedPosts[relatedIndexes[3]].node,
-    //   ]
-
-    //   console.log({wpblog: listedPosts})
-
-    //   createPage({
-    //     path: `${edge.node.slug}/`,
-    //     component: path.resolve("./src/templates/blog-post.js"),
-    //     context: {
-    //       slug: edge.node.slug,
-    //       related,
-    //     },
-    //   })
-    // })
 
 
     //////////////////////
@@ -475,7 +446,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     // Make tag pages
 
     portfolioTags.forEach(tag => {
-      const tagPath = (tag === 'WordPress' ? `/portfolio/tags/wordpress/` : `/portfolio/tags/${_.kebabCase(tag)}/`)
+
+      const tagPath = `/portfolio/tags/${getTagSlug(tag)}/`
 
       createPage({
         path: tagPath,
