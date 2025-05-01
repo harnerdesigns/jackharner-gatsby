@@ -61,7 +61,10 @@ const About = () => {
           content, accessible by all levels of tech-savvy users.
         </p>
       </section>
-      <FreelanceCountdown drips={"var(--color)"} />
+      
+      <section class="slim content">
+        <FreelanceCountdown drips={"var(--color)"} />
+      </section>
 
 
       <section className="content full pink">
