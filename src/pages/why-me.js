@@ -8,7 +8,6 @@ import FreelanceCountdown from "../components/freelanceCountdown"
 import Grid from "../components/testimonies/grid"
 import Drips from "../components/atoms/drips"
 
-import MT from "../images/logos/MT_Script_White.svg"
 import BD from "../images/logos/Buck-and-Doe-Logo.svg"
 import NR from "../images/logos/national-roofing-logo.svg"
 import Shoolu from "../images/logos/shoolu-logo.svg"
@@ -57,7 +56,6 @@ const WhyMe = ({ data, pageContext }) => {
       <section class="full pink">
         <h1>#3 Big & Small Companies Alike Trust Me:</h1>
         <div className="client-logo-list">
-          <img src={MT} />
           <img src={BD} />
           <img src={NR} />
           <img src={Shoolu} />
