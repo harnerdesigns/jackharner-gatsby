@@ -21,7 +21,7 @@ export default function Template(props) {
   let postContent = post.html
   postContent = postContent.replace(
     "</p>",
-    '</p><script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CE7ITK7W&placement=jackharnercom" id="_carbonads_js"></script>'
+    '</p><script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CE7ITK7W&placement=jackharnercom&format=cover" id="_carbonads_js"></script>'
   )
   let postContentArray = postContent.split("{{{vert}}}")
 
@@ -30,7 +30,7 @@ export default function Template(props) {
       <main
         key={index}
         className={"post__body " + post.fields.slug}
-        dangerouslySetInnerHTML={{ __html: content }}
+        dangerouslySetInnerHTML={{ __html: content + `<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CE7ITK7W&placement=jackharnercom&format=cover" id="_carbonads_js"></script>` }}
       ></main>
     )
   })

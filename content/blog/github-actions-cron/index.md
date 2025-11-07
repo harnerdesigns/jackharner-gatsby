@@ -1,5 +1,6 @@
 ---
 date: 2024-01-19T01:31:07.167Z
+updated: 2025-11-06T22:55:07.167Z
 title: "How to Run GitHub Actions on a Schedule" 
 subtitle: "Using Cron with GitHub Actions"
 featuredImage: "./chuttersnap-mytSmcgVHRE-unsplash.jpg"
@@ -76,9 +77,9 @@ For the full list of things that can trigger your GitHub Workflows, check out th
 
 ## Heads Up, The Timing Isn't Going To Be Exact
 
-GitHub Actions run in UTC time, so you'll need to adjust your cron schedule based on your timezone if you want it to run at a specific time. 
+GitHub Actions all run in UTC time, so you'll need to adjust your cron schedule based on your timezone if you want it to run at a specific time relative to where you live. 
 
-The other thing GitHub mentions is that your cron schedule is when the action will be queued to run. This doesn't mean your action will run at that exact time, depending on server availability. If that slight timing ambiguity is going to cause issues with your workflow, [Contact Me](/contact) for a free consultation call to look at more time-specific alternatives.
+The other thing GitHub calls out is that your cron-schedule'd action time is ONLY when the action will be QUEUED to run. This doesn't mean your action will run at that exact time, depending on server availability. If that slight timing ambiguity is going to cause issues with your workflow, [Contact Me](/contact) for a free consultation call to look at more time-specific alternatives to solve 
 
 --
 
