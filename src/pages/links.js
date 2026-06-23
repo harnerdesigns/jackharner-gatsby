@@ -26,6 +26,8 @@ const Links = ({ data }) => {
           <Link to="/newsletter" className="button button--large">
             Subscribe To My Newsletter
           </Link>
+
+          <a className="button button--large" style={{backgroundColor: "#fb4e00"}} href="https://amzn.to/4vuyBsF">Amazon Shop</a>
           <a className="button button--large" href="https://houseplanthomie.com" style={{backgroundColor: "#009688"}}>
             The Houseplant Homie
           </a>
